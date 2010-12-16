@@ -1,7 +1,7 @@
-ver 0.49
-1. data structure, read/check data
-2. special Auto-guard(+10), survivor(N/A) (take care of it later)
-3. 3-slot weapon, low score;  low rank , 3-slot weapon , very low score
+ver 0.1
+1.ok,need to check data structure, read/check data
+***2. special Auto-guard(+10), survivor(N/A) (take care of it later)
+3.(later) 3-slot weapon, low score;  low rank , 3-slot weapon , very low score
 4.ok, two c, two b or two a charm, can't be same skill
 5.ok  torso up
 
@@ -9,16 +9,19 @@ to do list:
 1. IO
 (1) two mode, use argument and input files
     predined armor sets
-    ! ver 0.5
+    ! ver 0.2
 (2) output html
-    ! ver 0.6
+    ! ver 0.3
 (3) maybe better user interface?
-    ! ver 0.7
+    ! ver 0.4
 
 2. Generator
-    ! ver 0.8
+    ! ver 0.5
 
 release...
 
 3. Rate
 
+todo now:
+1)check data
+2) write html outputs
