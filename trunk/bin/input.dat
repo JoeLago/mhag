@@ -11,11 +11,11 @@ blade or gunner : blade
 set name : Medic's Set
 !  head/body/arm/waist/leg part id
 !  please read id from reference file "out_armor"
-head part : 116
-chest part : 79
-arm part : 72
-waist part : 80
-leg part : 78
+head part : 112
+chest part : 80
+arm part : 73
+waist part : 81
+leg part : 79
 !  jewel id list (maximum 3 ids for each part)
 !  please read id from reference file "out_jewel"
 head jewel : 0

@@ -125,12 +125,12 @@ contains
       integer :: i
       character(len=255) :: arg,arg2
       character(len=255),parameter :: filein_default=('input.dat')
-      character(len=255),parameter :: fileout_default=('result.dat')
+      character(len=255),parameter :: fileout_default=('result')
 
       method=1
       outform=1
       filein=filein_default
-      fileout=fileout_default
+      fileout=''
       fileinfo=''
       if_info=.true.
       i=0
@@ -166,7 +166,7 @@ contains
             case ("info","Info","INFO")
                i=i+1
                call getarg(i,fileinfo)
-            case ("outform","Outform","OUTFORM")
+            case ("format","Format","FORMAT")
                i=i+1
                call getarg(i,arg2)
                select case(trim(arg2))
@@ -185,7 +185,13 @@ contains
       enddo
 
       if(filein.eq."")filein=filein_default
-      if(fileout.eq."")fileout=fileout_default
+      if(fileout.eq."")then
+         if(outform.eq.1)then
+            fileout=trim(fileout_default)//'.txt'
+         else
+            fileout=trim(fileout_default)//'.html'
+         endif
+      endif
       open(unit=3,file=trim(fileout),status='replace')
 
       select case (trim(fileinfo))
@@ -204,7 +210,7 @@ contains
    subroutine mhag_usage
       write(6,"(A)")"Usage: ./mhag method <cal/bat/gen/ref> in &
          <input.dat> out <result.dat> &
-         info <''/info/off> outform <text/html>"
+         info <''/info/off> format <text/html>"
       stop
    end subroutine mhag_usage
 
@@ -1716,7 +1722,7 @@ contains
       character(len=20) :: effect_name
       integer :: skill_points(8,100),skill_ids(100),value5(5)
 
-      if(if_info)write(io_unit,"(A)")"Save Armor Set to File..."
+      if(if_info)write(io_unit,"(A)")"Save Armor Set in TEXT Format..."
       write(3,"(80A)")("=",i=1,80) 
 
       ! Part 1 :  Setup information
@@ -1855,6 +1861,155 @@ contains
    ! output armor set info in html format, sort effective skills
    subroutine armor_output_html(armor_set)
       type(set_type),intent(inout) :: armor_set
+
+      integer :: i,j,k,rank_ind,pos
+      integer :: armor_id,jewel_id,num_slot_weapon
+      integer :: num_row
+      character(len=3) :: slots
+      character(len=255) :: armor_name,title,title2,title5(5)
+      character(len=10) :: jewel(3)
+      character(len=20) :: effect_name
+      integer :: skill_points(8,100),skill_ids(100),value5(5)
+
+      if(if_info)write(io_unit,"(A)")"Save Armor Set in HTML Format..."
+!     write(3,"(80A)")("=",i=1,80) 
+      call gen_html_head
+
+      num_row=15+armor_set%num_skill
+
+!     call gen_html_end
+!     stop
+
+      ! Part 1 :  Setup information
+
+      ! set name,low/high rank, melee/range
+      if(armor_set%lowrank)then
+         title="Low Rank"
+      else
+         title="High Rank"
+      endif
+      if(armor_set%blade_or_gunner.eq."B")then
+         title2="Blademaster"
+      else
+         title2="Gunner"
+      endif
+      write(3,1000)armor_set%set_name,title,title2
+      write(3,"(80A)")("-",i=1,80) 
+!     title="Equipment"
+!     title2="Jewels"
+!     print 1000,title,"Slots",trim(title2)
+!     print "(80A)",("-",i=1,80) 
+      ! weapon
+      call cal_weapon_slots(armor_set,num_slot_weapon)
+      call gen_slot_word(num_slot_weapon,slots)
+      jewel(:)=''
+      k=0
+      do j=1,3
+         jewel_id=armor_set%jewel_id(j,6)
+         if(jewel_id.eq.0)cycle
+         k=k+1
+         call jewel_name_cut(jewel_list(jewel_id)%jewel_name,jewel(k)) 
+      enddo
+      title="Weapon"
+      write(3,1001)title,slots,jewel(:)
+      !armor
+      do i=1,5
+         armor_id=armor_set%armor_id(i)
+         if(armor_id.eq.0)then   ! emptry armor piece
+            write(3,1001)empty_name
+            cycle
+         endif
+         armor_name=armor_list(armor_id,i)%armor_name
+         call gen_slot_word(armor_list(armor_id,i)%num_slot,slots) 
+         jewel(:)=''
+         k=0
+         do j=1,3
+            jewel_id=armor_set%jewel_id(j,i)
+            if(jewel_id.eq.0)cycle
+            k=k+1
+            call jewel_name_cut(jewel_list(jewel_id)%jewel_name,jewel(k)) 
+         enddo
+         write(3,1001)armor_name,slots,jewel(:)
+      enddo
+      !charm
+      call write_charm2(armor_set%charm_id,armor_set%charm_skill_id(:),title)
+      title="CHARM: "//trim(title)
+      call gen_slot_word(charm_list(armor_set%charm_id)%num_slot,slots) 
+      jewel(:)=''
+      k=0
+      do j=1,3
+         jewel_id=armor_set%jewel_id(j,7)
+         if(jewel_id.eq.0)cycle
+         k=k+1
+         call jewel_name_cut(jewel_list(jewel_id)%jewel_name,jewel(k)) 
+      enddo
+      write(3,1001)title,slots,jewel(:)
+      write(3,"(80A)")("-",i=1,80) 
+
+      ! Part 2 : Table (defense,elements,skills)
+      write(3,1002)"WEP","HEA","CHE","ARM","WAI","LEG","CHA","TOT"
+!     print "(80A)",("-",i=1,80) 
+
+      !defense
+      if(armor_set%lowrank)then
+         rank_ind=1   ! low rank index
+      else
+         rank_ind=2   ! high rank inddex
+      endif
+      title="Defense"
+      do i=1,5
+         if(armor_set%armor_id(i).eq.0)then
+            value5(i)=0
+         else
+            value5(i)=armor_list(armor_set%armor_id(i),i)%defense(rank_ind)
+         endif
+      enddo
+      write(3,1003)title,"---",value5(:),"---",armor_set%defense
+
+      !resist
+      title5(1)="Resist: Fire"
+      title5(2)="        Water"
+      title5(3)="        Ice"
+      title5(4)="        Thunder"
+      title5(5)="        Dragon"
+      do j=1,5
+         do i=1,5
+            if(armor_set%armor_id(i).eq.0)then
+               value5(i)=0
+            else
+               value5(i)=armor_list(armor_set%armor_id(i),i)%resist(j)
+            endif
+         enddo
+         write(3,1004)title5(j),"---",value5(:),"---",armor_set%resist(j)
+      enddo
+      write(3,"(80A)")("-",i=1,80) 
+
+      call gen_list_skill_point(armor_set,skill_points,skill_ids)
+
+      do j=1,armor_set%num_skill
+         if(j.le.armor_set%num_effect)then
+            effect_name=effect_list(armor_set%effect_id(j))
+         else
+            effect_name='---'
+         endif
+         if(j.eq.1)then
+            title="Skills: "//skill_list(skill_ids(j))%skill_name
+         else
+            title="        "//skill_list(skill_ids(j))%skill_name
+         endif
+         write(3,1005)title,skill_points(:,j),effect_name
+      enddo
+
+      write(3,"(80A)")("=",i=1,80) 
+1000  format(A40,2A12)
+!1000  format(A38,A5,3X,A)
+1001  format(A40,A3,3X,3(A,X))
+1002  format(20X,8(A3,1X))
+1003  format(A20,A3,1X,5(I3,1X),A3,1X,I3)
+1004  format(A20,A3,1X,5(I3,1X),A3,1X,I3)
+1005  format(A20,8(I3,1X),A)
+
+      if(if_info)write(io_unit,"(A)")"Armor Set Saved!"
 
    end subroutine armor_output_html
 
@@ -2149,4 +2304,23 @@ contains
       endif
 
    end subroutine mhag_input_cal_simple
+
+   ! generate simple html head
+   subroutine gen_html_head
+
+      write(3,"(A)")'<!DOCTYPE HTML PUBLIC "-//W3C//&
+         DTD HTML 4.0 Transitional//EN">'
+      write(3,"(A)")'<HTML>'
+      write(3,"(A)")'<HEAD>'
+      write(3,"(A)")'<TITLE> Monster Hunter Armor Generator</TITLE>'
+      write(3,"(A)")'</HEAD>'
+      write(3,"(A)")'<BODY>'
+
+   end subroutine gen_html_head
+
+   subroutine gen_html_end
+      write(3,"(A)")'</BODY>'
+      write(3,"(A)")'</HTML>'
+   end subroutine gen_html_end
+
 end module mhag
