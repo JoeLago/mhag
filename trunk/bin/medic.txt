@@ -1,0 +1,77 @@
+====================================================================================================
+MHAG: ver 0.1 
+Monster Hunter Armor Generator
+By Tifa@mh3, Dec, 2010
+http://www.youtube.com/mh3journey
+====================================================================================================
+
+Checking Data....
+   Data Found!
+Reading Data...
+   Number of skills:   83
+   Number of Skill Effects:  200
+   Number of Jewels:  131
+   Number of Armor Pierces:  122 117 106 112 111
+   Number of Charms:   17
+Reading User Inputs...
+   Launch Armor Calculator
+   High Rank
+   Blade Master
+   Set Name : Medic's Set
+   Head Piece  : Grace Earring  
+   Chest Piece : Gobul Mail+  o
+   Arm Piece   : Gobul Vambraces+  o
+   Waist Piece:  Gobul Faulds+  o
+   Leg Piece   : Gobul Greaves+  ooo
+   Head Jewel  : 
+   Chest Jewel  : Steadfast Jewel+  
+   Arm Jewel   : Medicine Jewel  
+   Waist Jewel : Medicine Jewel  
+   Leg Jewel   : Voracious Jewel  
+   Weapon Jewel: Steadfast Jewel+  Recovery Jewel  
+   Charm Jewel : Panacea Jewel  
+   Charm       : Rec Level + 7    oo
+Checking if the Armor Setup is consistent ...
+   No Error Detected!
+Calulating Armor Stats...
+   Total Defense :   306
+   Total Resist  :    -8   16    0  -16    8
+   Skill List : 
+       1     Wide-Range        20
+       2     Eating            15
+       3     Expert             8
+       4     Stun              16
+       5     Rec Speed         -9
+       6     Rec Level         10
+   Effect List : 
+       1     Wide-Range +2       
+       2     Speed Eating +2     
+       3     Negate Stun         
+       4     Recovery Up         
+Armor Set Summary : 
+================================================================================
+Medic's Set                             High Rank           Blademaster         
+--------------------------------------------------------------------------------
+Weapon                                  OO-   Steadfast+ Recovery             
+Grace Earring                           ---                                   
+Gobul Mail+                             O--   Steadfast+                      
+Gobul Vambraces+                        O--   Medicine                        
+Gobul Faulds+                           O--   Medicine                        
+Gobul Greaves+                          OOO   Voracious                       
+CHARM: Rec Level + 7                    OO-   Panacea                         
+--------------------------------------------------------------------------------
+                    WEP HEA CHE ARM WAI LEG CHA TOT
+Defense             ---  10  74  74  74  74 --- 306
+Resist: Fire        ---   0  -2  -2  -2  -2 ---  -8
+        Water       ---   0   4   4   4   4 ---  16
+        Ice         ---   0   0   0   0   0 ---   0
+        Thunder     ---   0  -4  -4  -4  -4 --- -16
+        Dragon      ---   0   2   2   2   2 ---   8
+--------------------------------------------------------------------------------
+Skills: Wide-Range    0  20   0   0   0   0   0  20 Wide-Range +2       
+        Eating       -1   0   2   4   5   5   0  15 Speed Eating +2     
+        Stun          2   0   4   4   4   2   0  16 Negate Stun         
+        Rec Level     0   0   0   1   1  -2  10  10 Recovery Up         
+        Expert        0   0   3   2   1   2   0   8 ---                 
+        Rec Speed     1   0  -2  -3  -2  -2  -1  -9 ---                 
+================================================================================

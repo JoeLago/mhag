@@ -1,0 +1,200 @@
+    1    Anti-Theft          
+    2    Attack Down (L)     
+    3    Attack Down (M)     
+    4    Attack Down (S)     
+    5    Attack Up (S)       
+    6    Attack Up (M)       
+    7    Attack Up (L)       
+    8    Auto-Guard          
+    9    BBQ Expert          
+   10    Blightproof         
+   11    Bombardier          
+   12    Carving Pro         
+   13    Carving Master      
+   14    Clust S Lv1 Up      
+   15    Clust S All Up      
+   16    Cold Surge (Hi)     
+   17    Cold Surge (Lo)     
+   18    Cold Cancel (Lo)    
+   19    Cold Cancel (Hi)    
+   20    Combination Pro     
+   21    Combination -15%    
+   22    Combination -10%    
+   23    Combination -5%     
+   24    Combination +15%    
+   25    Combination +25%    
+   26    Combination +45%    
+   27    Constitution -2     
+   28    Constitution -1     
+   29    Constitution +1     
+   30    Constitution +2     
+   31    Crag S Lv1 Up       
+   32    Crag S All Up       
+   33    Critical Draw       
+   34    CurrentRes (Lo)     
+   35    CurrentRes (Hi)     
+   36    Defense Down (L)    
+   37    Defense Down (M)    
+   38    Defense Down (S)    
+   39    Defense Up (S)      
+   40    Defense Up (M)      
+   41    Defense Up (L)      
+   42    Dragon Res -15      
+   43    Dragon Res -10      
+   44    Dragon Res +10      
+   45    Dragon Res + 15     
+   46    Dragon Res + 20     
+   47    Dung Bomb Expert    
+   48    Slow Eater          
+   49    Speed Eating +1     
+   50    Speed Eating +2     
+   51    Elemental Atk Down  
+   52    Elemental Atk Up    
+   53    Evasion Up          
+   54    Evasion +1          
+   55    Evasion +2          
+   56    Critical Eye -3     
+   57    Critical Eye -2     
+   58    Critical Eye -1     
+   59    Critical Eye +1     
+   60    Critical Eye +2     
+   61    Critical Eye +3     
+   62    Distraction         
+   63    Focus               
+   64    Horrible Luck       
+   65    Bad Luck            
+   66    Good Luck           
+   67    Great Luck          
+   68    Mind's Eye          
+   69    Fire Res -15        
+   70    Fire Res -10        
+   71    Fire Res +10        
+   72    Fire Res +15        
+   73    Fire Res +20        
+   74    Fishing Expert      
+   75    Flaming Aura        
+   76    Awaken              
+   77    Gather -3           
+   78    Gather -2           
+   79    Gather -1           
+   80    Gather +1           
+   81    Gather +2           
+   82    Gather +3           
+   83    Scavenger           
+   84    Gourmand            
+   85    Guard -1            
+   86    Guard +1            
+   87    Guard +2            
+   88    Guard Boost         
+   89    Sharpness +1        
+   90    Health -30          
+   91    Health -10          
+   92    Health +20          
+   93    Health +50          
+   94    Earplugs            
+   95    HG Earplugs         
+   96    Heat Surge (Hi)     
+   97    Heat Surge (Lo)     
+   98    Heat Cancel (Lo)    
+   99    Heat Cancel (Hi)    
+  100    Double Hunger       
+  101    Raise Hunger        
+  102    Halve Hunger        
+  103    Negate Hunger       
+  104    Ice Res -15         
+  105    Ice Res -10         
+  106    Ice Res +10         
+  107    Ice Res +15         
+  108    Ice Res +20         
+  109    Item Use Down       
+  110    Item Use Up         
+  111    Load Up             
+  112    Nearsight           
+  113    Farsight            
+  114    Mud/Snow            
+  115    NormalS Boost       
+  116    NormalS All Up      
+  117    Oxygen Down         
+  118    Oxygen Up           
+  119    Double Paralysis    
+  120    Negate Paralysis    
+  121    PelletS Lv1 Up      
+  122    PelletS All Up      
+  123    PelletS Boost       
+  124    Capture Guru        
+  125    PierceS Boost       
+  126    PierceS Lv1 Up      
+  127    PierceS All Up      
+  128    Double Poison       
+  129    Negate Posion       
+  130    Worrywart           
+  131    Adrenaline +1       
+  132    Adrenaline +2       
+  133    Steadiness -1       
+  134    Steadiness +1       
+  135    Steadiness +2       
+  136    Demonic Blessing    
+  137    Divine Blessing     
+  138    Detect              
+  139    Autotracker         
+  140    Punishing Draw      
+  141    Bonus Shot          
+  142    Recovery Down       
+  143    Recovery Up         
+  144    Recovery Spd -2     
+  145    Recovery Spd -1     
+  146    Recovery Spd +1     
+  147    Recovery Spd +2     
+  148    Recoil Down -3      
+  149    Recoil Down -2      
+  150    Recoil Down -1      
+  151    Recoil Down +1      
+  152    Recoil Down +2      
+  153    Recoil Down +3      
+  154    Reload Speed -3     
+  155    Reload Speed -2     
+  156    Reload Speed -1     
+  157    Reload Speed +1     
+  158    Reload Speed +2     
+  159    Reload Speed +3     
+  160    Taunt               
+  161    Sneak               
+  162    Slow Sharpening     
+  163    Speed Sharpening    
+  164    Blunt Edge          
+  165    Razor Sharp         
+  166    Double Sleep        
+  167    Negate Sleep        
+  168    Speed Gatherer      
+  169    Trap Master         
+  170    Short Sprinter      
+  171    Marathon Runner     
+  172    Status Atk Down     
+  173    Status Atk Up       
+  174    Double Stun         
+  175    Halve Stun          
+  176    Negate Stun         
+  177    Fortify             
+  178    Doggy Paddler       
+  179    Olympic Swimmer     
+  180    Thunder Res -15     
+  181    Thunder Res -10     
+  182    Thunder Res +10     
+  183    Thunder Res +15     
+  184    Thunder Res +20     
+  185    Capture Expert      
+  186    Pro Transporter     
+  187    Tremor-Proof        
+  188    Water Res -15       
+  189    Water Res -10       
+  190    Water Res +10       
+  191    Water Res +15       
+  192    Water Res +20       
+  193    Spectre's Whim      
+  194    Devil's Whim        
+  195    Spirit's Whim       
+  196    Divine Whim         
+  197    Wide-Range +1       
+  198    Wide-Range +2       
+  199    Windproof (Lo)      
+  200    Windproof (Hi)      

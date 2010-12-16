@@ -1,0 +1,20 @@
+#Talisman List
+#Format ^Charmm Class 1/2/3 : # of slots : L/H rank : Skill Class 1 : Skill Max Point 1 : Skill Class 2 : Skill Max Point 2 
+#Charm Class 1: Mystery Charmm; 2: Chining Charm; 3: Timeworn Charm
+1 : 1 : L 
+1 : 0 : L : C : 10 
+2 : 2 : L
+2 : 1 : L : B :  6
+2 : 1 : L : C : 10
+2 : 0 : L : B :  6 
+2 : 0 : L : C : 10 : C :  5 
+3 : 3 : H
+3 : 2 : H : B :  7
+3 : 2 : H : C : 10
+3 : 1 : H : A :  3
+3 : 1 : H : B :  7 : B :  3
+3 : 1 : H : C : 10 : B :  3
+3 : 0 : H : A :  4 : B :-10
+3 : 0 : H : A :  3 : A :  1
+3 : 0 : H : A :  2 : A :  2
+3 : 0 : H : B :  7 : C : 10
