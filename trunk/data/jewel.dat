@@ -39,9 +39,9 @@ Pierce Jewel+ : H : 3 : PierceS Up : 4 : Recoil : -2
 Pellet Jewel : L : 1 : PelletS Up : 1 : Recoil : -1
 Pellet Jewel+ : H : 3 : PelletS Up : 4 : Recoil : -2
 ShotPlus Jewel : L : 1 : Normal S+ : 1 : Reload Spd : -1
-ShotPlus Jewel+ : H : 2 : Normal S+ : 3 : Reload Spd : -2
+ShotPlus Jewel+ : H : 2 : Normal S+ : 3 : Reload Spd : -1
 PiercPlus Jewel : L : 1 : Pierce S+ : 1 : Reload Spd : -1
-PiercPlus Jewel+ : H : 2 : Pierce S+ : 3 : Reload Spd : -2
+PiercPlus Jewel+ : H : 2 : Pierce S+ : 3 : Reload Spd : -1
 PelletPlus Jewel : L : 1 : Pellet S+ : 2
 CragPlus Jewel : L : 1 : Crag S+ : 2
 ClustPlus Jewel : L : 1 : Clust S+ : 1 : Reload Spd : -1

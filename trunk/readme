@@ -18,10 +18,13 @@ to do list:
 2. Generator
     ! ver 0.5
 
+3. add flexible charm skill points
+4. torso up
+
 release...
 
 3. Rate
 
-todo now:
-1)check data
-2) write html outputs
+1. add argument to specify data directory
+2. add html output 
+3. add batch calculation

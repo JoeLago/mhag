@@ -84,6 +84,7 @@ module mhag
    character(len=255),save :: filein    !input file
    character(len=255),save :: fileout   !output(result) file
    character(len=255),save :: fileinfo  !information file
+   character(len=255),save :: data_dir  !data file folder
    ! method
    integer,save :: method   !cal/bat/gen/ref
    integer,save :: outform  !1:txt,2:html
@@ -132,6 +133,7 @@ contains
       filein=filein_default
       fileout=''
       fileinfo=''
+      data_dir='./'
       if_info=.true.
       i=0
       do
@@ -175,6 +177,14 @@ contains
                case ("html")
                   outform=2
                end select
+            case ("data","Data","DATA")
+               i=i+1
+               call getarg(i,arg2)
+               if(trim(arg2).eq."")then
+                  data_dir="./"
+               else
+                  data_dir=trim(arg2)//"/"
+               endif
             case ("--help","/h","-h")
                call mhag_usage
             case default
@@ -212,7 +222,7 @@ contains
    subroutine mhag_usage
       write(6,"(A)")"Usage: ./mhag method <cal/bat/gen/ref> in &
          <input.dat> out <result.dat> &
-         info <''/info/off> format <text/html>"
+         info <''/info/off> format <text/html> data <./dir>"
       stop
    end subroutine mhag_usage
 
@@ -420,19 +430,24 @@ contains
       if(if_info)write(io_unit,"(A)")"Checking Data...."
 
       if_stop=.false.
-      inquire(file=trim(file_skill),exist=fexist)
+      inquire(file=trim(data_dir)//trim(file_skill),exist=fexist)
       if(.not.fexist)then
          if(if_info)write(io_unit,"(A)")"Error!,Cannot find Skill Data!"
          if_stop=.true.
       endif
-      inquire(file=trim(file_armor),exist=fexist)
+      inquire(file=trim(data_dir)//trim(file_armor),exist=fexist)
       if(.not.fexist)then
          if(if_info)write(io_unit,"(A)")"Error!,Cannot find Armor Data!"
          if_stop=.true.
       endif
-      inquire(file=trim(file_jewel),exist=fexist)
+      inquire(file=trim(data_dir)//trim(file_jewel),exist=fexist)
       if(.not.fexist)then
          if(if_info)write(io_unit,"(A)")"Error!,Cannot find Jewel Data!"
+         if_stop=.true.
+      endif
+      inquire(file=trim(data_dir)//trim(file_charm),exist=fexist)
+      if(.not.fexist)then
+         if(if_info)write(io_unit,"(A)")"Error!,Cannot find Charm Data!"
          if_stop=.true.
       endif
       if(if_stop)then
@@ -459,7 +474,7 @@ contains
       integer :: eof,i,j,k
       character(len=255) :: line
 
-      open(unit=1,file=trim(file_skill),status='old')
+      open(unit=1,file=trim(data_dir)//trim(file_skill),status='old')
       num_skill=0
       num_effect=0
       do
@@ -513,7 +528,7 @@ contains
       integer :: eof,i,j,k
       character(len=255) :: line
 
-      open(unit=1,file=trim(file_jewel),status='old')
+      open(unit=1,file=trim(data_dir)//trim(file_jewel),status='old')
       num_jewel=0
       do
          read(1,"(A255)",iostat=eof)line
@@ -551,7 +566,7 @@ contains
       integer :: eof,i,j,k,armor_type,i_5(5)
       character(len=255) :: line
 
-      open(unit=1,file=trim(file_armor),status='old')
+      open(unit=1,file=trim(data_dir)//trim(file_armor),status='old')
       num_armor=0
       do
          read(1,"(A255)",iostat=eof)line
@@ -591,7 +606,7 @@ contains
       integer :: eof,i
       character(len=255) :: line
 
-      open(unit=1,file=trim(file_charm),status='old')
+      open(unit=1,file=trim(data_dir)//trim(file_charm),status='old')
       num_charm=0
       do
          read(1,"(A255)",iostat=eof)line
@@ -856,13 +871,13 @@ contains
       ! Read Resist
       do i=1,5
          call extract_word(line,pos,word,if_end)
+         read(word,*)armor_entry%resist(i)
          if(if_end)then
             if(i.eq.5)return
             if(if_info)write(io_unit,"(A)") &
                "Error!, Armor Data is incorrect!"
             stop
          endif
-         read(word,*)armor_entry%resist(i)
       enddo
 !     print *,armor_entry%resist(:)
 
@@ -1878,6 +1893,7 @@ contains
       character(len=20) :: effect_name
       integer :: skill_points(8,100),skill_ids(100),value5(5)
       character(len=3) :: point_word(8,100)
+      logical :: if_neg
 
       if(if_info)write(io_unit,"(A)")"Save Armor Set in HTML Format..."
 
@@ -1979,8 +1995,12 @@ contains
       call point_to_word(armor_set,skill_points,point_word)
 
       do j=1,armor_set%num_skill
+         if_neg=.false.
          if(j.le.armor_set%num_effect)then
             effect_name=effect_list(armor_set%effect_id(j))
+            if(skill_points(8,j).lt.0)then
+               if_neg=.true.
+            endif
          else
             effect_name='---'
          endif
@@ -1991,7 +2011,7 @@ contains
          endif
 !        write(3,1005)title,skill_points(:,j),effect_name
          call gen_html_skill_line(armor_set%num_skill,j,title, &
-            skill_points(:,j),effect_name)
+            skill_points(:,j),effect_name,if_neg)
       enddo
       write(3,"(A)")'</table>'  !finish table
 
@@ -2295,7 +2315,11 @@ contains
 
          num=num+1
          if(if_info)write(io_unit,"(A,I4)")"Set # : ",num
-         write(3,"(A,I4)")"Set # : ",num
+         if(outform.eq.2)then
+            write(3,"(A,I4,A)")"<p>Set # : ",num,'</p>'  !html form
+         else
+            write(3,"(A,I4)")"Set # : ",num  !text form
+         endif
 
          call init_set_data(armor_set)
          call mhag_input_cal_simple(armor_set,line)
@@ -2344,6 +2368,14 @@ contains
       write(3,"(A)")'<HTML>'
       write(3,"(A)")'<HEAD>'
       write(3,"(A)")'<TITLE> Monster Hunter Armor Generator</TITLE>'
+      write(3,"(A)")'<STYLE TYPE="text/css">'
+      write(3,"(A)")'<!--'
+      write(3,"(A)")'BODY'
+      write(3,"(A)")'   {'
+      write(3,"(A)")'   background-color:lightyellow;'
+      write(3,"(A)")'   }'
+      write(3,"(A)")'-->'
+      write(3,"(A)")'</STYLE>'
       write(3,"(A)")'</HEAD>'
       write(3,"(A)")'<BODY>'
 
@@ -2411,7 +2443,7 @@ contains
 
       write(3,"(A)")'</table></td></tr>'
 
-      write(3,"(A)")'<tr align="center" style="font-size:7pt"><td colspan="2"></td>'
+      write(3,"(A)")'<tr align="right" style="font-size:7pt"><td colspan="2"></td>'
       write(3,"(A)")'<td height="20">WEP</td><td>HEAD</td><td>CHEST</td><td>ARM</td><td>WAIST</td><td>LEG</td>'
       write(3,"(A)")'<td>CHM</td><td>TOT</td><td colspan="2"></td></tr>'
 
@@ -2421,11 +2453,11 @@ contains
    subroutine gen_html_defense_line(title,value5,defense)
       character(len=255),intent(in) :: title
       integer,intent(in) :: value5(5),defense
+      integer :: i
 
-      write(3,"(3A)")'<tr align="center"><td colspan="2" align="left">',trim(title),'</td>'
-      write(3,"(6(A,I3),A)")'<td>---</td><td>',value5(1),'</td><td>',value5(2),'</td><td>', &
-         value5(3),'</td><td>',value5(4),'</td><td>',value5(5),'</td><td>---</td><td>',&
-         defense,'</td>'
+      write(3,"(3A)")'<tr align="right"><td colspan="2" align="left">',trim(title),'</td>'
+      write(3,"(A,6(A,I3),A)")'<td>---',('</td><td>',value5(i),i=1,5), &
+         '</td><td>---</td><td>',defense,'</td>'
       write(3,"(A)")'<td colspan="2" rowspan="6"></td></tr>'
 
    end subroutine gen_html_defense_line
@@ -2434,14 +2466,14 @@ contains
    subroutine gen_html_resist_line(ind,value5,resist)
       integer,intent(in) :: ind,value5(5),resist
       character(len=255):: title,color
+      integer :: i
 
       select case (ind) !element type
       case (1) !fire
-         write(3,"(A)")'<tr style="color:red" align="center"><td rowspan="5" valign="top" align="left">'
+         write(3,"(A)")'<tr style="color:red" align="right"><td rowspan="5" valign="top" align="left">'
          write(3,"(A)")'<font color="black">Resist</font></td><td align="left"><font color="red">Fire</color></td>'
-         write(3,"(6(A,I3),A)")'<td>---</td><td>',value5(1),'</td><td>',value5(2),'</td><td>', &
-            value5(3),'</td><td>',value5(4),'</td><td>',value5(5),'</td><td>---</td><td>', &
-            resist,'</td></tr>'
+         write(3,"(A,6(A,I3),A)")'<td>---',('</td><td>',value5(i),i=1,5), &
+            '</td><td>---</td><td>',resist,'</td></tr>'
       case default
          select case(ind)
          case (2) ! water
@@ -2457,10 +2489,9 @@ contains
             title="Dragon"
             color="purple"
          end select
-         write(3,"(5A)"),'<tr style="color:',trim(color),'" align="center"><td align="left">', &
-            trim(title),'</td><td>---</td>'
-         write(3,"(6(A,I3),A)")'<td>',value5(1),'</td><td>',value5(2),'</td><td>',value5(3), &
-            '</td><td>',value5(4),'</td><td>',value5(4),'</td><td>---</td><td>',&
+         write(3,"(5A)"),'<tr style="color:',trim(color),'" align="right"><td align="left">', &
+            trim(title),'</td><td>---'
+         write(3,"(6(A,I3),A)")('</td><td>',value5(i),i=1,5),'</td><td>---</td><td>',&
             resist,'</td></tr>'
 
       end select
@@ -2468,21 +2499,33 @@ contains
    end subroutine gen_html_resist_line
 
    ! add skill line (including 1st line, format whole table)
-   subroutine gen_html_skill_line(num_skill,ind,title,skill_points,effect_name)
+   subroutine gen_html_skill_line(num_skill,ind,title, &
+      skill_points,effect_name,if_neg)
       integer,intent(in) :: num_skill,ind,skill_points(8)
       character(len=255),intent(in) :: title*255
       character(len=20),intent(in) :: effect_name*20
+      logical,intent(in) :: if_neg
       integer :: i
 
       if(ind.eq.1)then  ! format table, add 1st line
-         write(3,"(A,I3,A)")'<tr align="center"><td width="50" rowspan="',num_skill,'" valign="top" align="left">Skill</td>'
+         write(3,"(A,I3,A)")'<tr align="right"><td width="50" rowspan="',num_skill,'" valign="top" align="left">Skill</td>'
          write(3,"(2A)")'<td width="100" align="left">',trim(title)
          write(3,"(8(A,I3))")('</td><td width="30">',skill_points(i),i=1,8)
-         write(3,"(3A)")'</td><td width="20"></td><td align="left">',trim(effect_name),'</td></tr>'
+         if(if_neg)then
+            write(3,"(4A)")'</td><td width="20"></td><td align="left">' &
+               ,'<font color=red>',trim(effect_name),'</font></td></tr>'
+         else
+            write(3,"(3A)")'</td><td width="20"></td><td align="left">',trim(effect_name),'</td></tr>'
+         endif
       else
-         write(3,"(2A,8(A,I3))")'<tr align="center"><td align="left">',trim(title), &
+         write(3,"(2A,8(A,I3))")'<tr align="right"><td align="left">',trim(title), &
             ('</td><td>',skill_points(i),i=1,8)
-         write(3,"(A)")'</td><td></td><td align="left">',trim(effect_name),'</td></tr>'
+         if(if_neg)then
+            write(3,"(4A)")'</td><td></td><td align="left">' &
+               ,'<font color=red>',trim(effect_name),'</font></td></tr>'
+         else
+            write(3,"(3A)")'</td><td></td><td align="left">',trim(effect_name),'</td></tr>'
+         endif
       endif
 
    end subroutine gen_html_skill_line

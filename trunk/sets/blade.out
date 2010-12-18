@@ -18,9 +18,9 @@ Resist: Fire        ---  -2   0   0  -2  -2 ---  -6
         Thunder     ---  -3   0   0  -3  -3 ---  -9
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: CurrentRes    0   1   0   0   9   1   0  11 CurrentRes (Lo)     
-        Oxygen        0  10   0   0   0   0   0  10 Oxygen Up           
-        Swimming      0   0   0   0   2   8   0  10 Olympic Swimmer     
+Skills: CurrentRes  ---   1 --- ---   9   1 ---  11 CurrentRes (Lo)     
+        Oxygen      ---  10 --- --- --- --- ---  10 Oxygen Up           
+        Swimming    --- --- --- ---   2   8 ---  10 Olympic Swimmer     
 ================================================================================
 Set # :    2
 ================================================================================
@@ -42,10 +42,10 @@ Resist: Fire        ---  -1  -1  -1  -1  -1 ---  -5
         Thunder     ---   3   3   3   3   3 ---  15
         Dragon      ---   2   2   2   2   2 ---  10
 --------------------------------------------------------------------------------
-Skills: Whim          0   3   2   4   1   3   0  13 Spirit's Whim       
-        Gathering     0   2   2   1   4   3   0  12 Gather +1           
-        Spd Gather    0   2   3   2   2   1   0  10 Speed Gatherer      
-        Attack        0   1   0   1   1   1   0   4 ---                 
+Skills: Whim        ---   3   2   4   1   3 ---  13 Spirit's Whim       
+        Gathering   ---   2   2   1   4   3 ---  12 Gather +1           
+        Spd Gather  ---   2   3   2   2   1 ---  10 Speed Gatherer      
+        Attack      ---   1 ---   1   1   1 ---   4 ---                 
 ================================================================================
 Set # :    3
 ================================================================================
@@ -54,7 +54,7 @@ Chainmail Set (All)                     High Rank   Blademaster
 Weapon                                  ---                                   
 Chainmail Headgear                      O--                                   
 Chainmail Vest                          ---                                   
-Chainmail Golves                        O--                                   
+Chainmail Gloves                        O--                                   
 Chainmail Belt                          O--                                   
 Chainmail Pants                         O--                                   
 CHARM:                                  ---                                   
@@ -67,10 +67,10 @@ Resist: Fire        ---  -1  -1  -1  -1  -1 ---  -5
         Thunder     ---  -1  -1  -1  -1  -1 ---  -5
         Dragon      ---   1   1   1   1   1 ---   5
 --------------------------------------------------------------------------------
-Skills: Combo Rate    0   2   6   4   2   1   0  15 Combination +25%    
-        Combo Plus    0   1   1   2   4   2   0  10 Combination Pro     
-        Fishing       0   1   1   2   2   4   0  10 Fishing Expert      
-        Health        0   1   3   3   1   2   0  10 Health +20          
+Skills: Combo Rate  ---   6   4   2   2   1 ---  15 Combination +25%    
+        Combo Plus  ---   1   1   2   4   2 ---  10 Combination Pro     
+        Fishing     ---   1   1   2   2   4 ---  10 Fishing Expert      
+        Health      ---   1   3   3   1   2 ---  10 Health +20          
 ================================================================================
 Set # :    4
 ================================================================================
@@ -92,9 +92,9 @@ Resist: Fire        ---   0   4   0   4   4 ---  12
         Thunder     ---   0   2   0   2   2 ---   6
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Heat Res      0   0   5   0   3   3   0  11 Heat Cancel (Lo)    
-        Rec Speed     0   0   2   0   5   3   0  10 Recovery Spd +1     
-        Transportr    0   0   2   0   3   5   0  10 Pro Transporter     
+Skills: Heat Res    --- ---   5 ---   3   3 ---  11 Heat Cancel (Lo)    
+        Rec Speed   --- ---   2 ---   5   3 ---  10 Recovery Spd +1     
+        Transportr  --- ---   2 ---   3   5 ---  10 Pro Transporter     
 ================================================================================
 Set # :    5
 ================================================================================
@@ -116,11 +116,11 @@ Resist: Fire        ---  -1  -1  -1  -1  -1 ---  -5
         Thunder     ---  -1  -1  -1  -1  -1 ---  -5
         Dragon      ---  -1  -1  -1  -1  -1 ---  -5
 --------------------------------------------------------------------------------
-Skills: Psychic       0   4   3   5   1   2   0  15 Autotracker         
-        Map           0   2   1   1   2   4   0  10 Farsight            
-        BBQ           0   1   1   2   4   2   0  10 BBQ Expert          
-        Attack        0   0   1   0   1   0   0   2 ---                 
-        Water Res     0  -2  -1  -1  -1  -1   0  -6 ---                 
+Skills: Psychic     ---   4   3   5   1   2 ---  15 Autotracker         
+        Map         ---   2   1   1   2   4 ---  10 Farsight            
+        BBQ         ---   1   1   2   4   2 ---  10 BBQ Expert          
+        Attack      --- ---   1 ---   1 --- ---   2 ---                 
+        Water Res   ---  -2  -1  -1  -1  -1 ---  -6 ---                 
 ================================================================================
 Set # :    6
 ================================================================================
@@ -131,7 +131,7 @@ Bone Helm                               O--
 Bone Mail                               O--                                   
 Bone Vambraces                          O--                                   
 Bone Faulds                             O--                                   
-Bone Greave                             O--                                   
+Bone Greaves                            O--                                   
 CHARM:                                  ---                                   
 --------------------------------------------------------------------------------
                     WEP HEA CHE ARM WAI LEG CHA TOT
@@ -142,11 +142,11 @@ Resist: Fire        ---   2   2   2   2   2 ---  10
         Thunder     ---   2   2   2   2   2 ---  10
         Dragon      ---   3   3   3   3   3 ---  15
 --------------------------------------------------------------------------------
-Skills: Hunger        0   4   4   4   2   1   0  15 Negate Hunger       
-        LastingPwr    0   1   1   2   4   2   0  10 Item Use Up         
-        Perception    0   2   1   1   2   4   0  10 Capture Guru        
-        Attack        0   0   0   1   0   1   0   2 ---                 
-        Sleep         0  -2  -1  -1  -1  -1   0  -6 ---                 
+Skills: Hunger      ---   4   4   4   2   1 ---  15 Negate Hunger       
+        LastingPwr  ---   1   1   2   4   2 ---  10 Item Use Up         
+        Perception  ---   2   1   1   2   4 ---  10 Capture Guru        
+        Attack      --- --- ---   1 ---   1 ---   2 ---                 
+        Sleep       ---  -2  -1  -1  -1  -1 ---  -6 ---                 
 ================================================================================
 Set # :    7
 ================================================================================
@@ -157,26 +157,21 @@ Alloy Helm                              OO-
 Alloy Mail                              O--                                   
 Alloy Vambraces                         O--                                   
 Alloy Coil                              O--                                   
-Bone Greave                             O--                                   
+Alloy Greaves                           ---                                   
 CHARM:                                  ---                                   
 --------------------------------------------------------------------------------
                     WEP HEA CHE ARM WAI LEG CHA TOT
 Defense             ---  62  62  62  62  62 --- 310
-Resist: Fire        ---   1   1   1   1   2 ---   6
-        Water       ---   1   1   1   1  -2 ---   2
+Resist: Fire        ---   1   1   1   1   1 ---   5
+        Water       ---   1   1   1   1   1 ---   5
         Ice         ---  -1  -1  -1  -1  -1 ---  -5
-        Thunder     ---  -2  -2  -2  -2   2 ---  -6
-        Dragon      ---  -1  -1  -1  -1   3 ---  -1
+        Thunder     ---  -2  -2  -2  -2  -2 --- -10
+        Dragon      ---  -1  -1  -1  -1  -1 ---  -5
 --------------------------------------------------------------------------------
-Skills: SpeedSetup    0   1   1   4   3   0   0   9 ---                 
-        Expert        0   1   3   2   3   0   0   9 ---                 
-        Sharpener     0   3   2   2   1   0   0   8 ---                 
-        Perception    0   0   0   0   0   4   0   4 ---                 
-        LastingPwr    0   0   0   0   0   2   0   2 ---                 
-        Hunger        0   0   0   0   0   1   0   1 ---                 
-        Attack        0   0   0   0   0   1   0   1 ---                 
-        Sleep         0   0   0   0   0  -1   0  -1 ---                 
-        Oxygen        0  -2  -1  -1  -2   0   0  -6 ---                 
+Skills: Expert      ---   1   6   2   3   E ---  12 Critical Eye +1     
+        SpeedSetup  ---   1   2   4   3   E ---  10 Trap Master         
+        Sharpener   ---   3   4   2   1   E ---  10 Speed Sharpening    
+        Oxygen      ---  -2  -2  -1  -2   E ---  -7 ---                 
 ================================================================================
 Set # :    8
 ================================================================================
@@ -198,10 +193,10 @@ Resist: Fire        ---  -3  -3  -3  -3  -3 --- -15
         Thunder     ---  -1  -1  -1  -1  -1 ---  -5
         Dragon      ---   1   1   1   1   1 ---   5
 --------------------------------------------------------------------------------
-Skills: Stun          0   2   1   3   3   2   0  11 Halve Stun          
-        Attack        0   3   2   2   1   3   0  11 Attack Up (S)       
-        Gluttony      0   2   1   1   4   2   0  10 Scavenger           
-        Cold Res      0  -2  -3  -1  -1  -2   0  -9 ---                 
+Skills: Stun        ---   2   1   3   3   2 ---  11 Halve Stun          
+        Attack      ---   3   2   2   1   3 ---  11 Attack Up (S)       
+        Gluttony    ---   2   1   1   4   2 ---  10 Scavenger           
+        Cold Res    ---  -2  -3  -1  -1  -2 ---  -9 ---                 
 ================================================================================
 Set # :    9
 ================================================================================
@@ -223,9 +218,9 @@ Resist: Fire        ---   0  -4   0  -4  -4 --- -12
         Thunder     ---   0   2   0   2   2 ---   6
         Dragon      ---   0   5   0   5   5 ---  15
 --------------------------------------------------------------------------------
-Skills: Status        0   0   4   0   3   4   0  11 Status Atk Up       
-        Sharpness     0   0   3   0   3   4   0  10 Razor Sharp         
-        Poison        0   0  -2   0  -5  -3   0 -10 Double Poison       
+Skills: Status      --- ---   4 ---   3   4 ---  11 Status Atk Up       
+        Sharpness   --- ---   3 ---   3   4 ---  10 Razor Sharp         
+        Poison      --- ---  -2 ---  -5  -3 --- -10 Double Poison       
 ================================================================================
 Set # :   10
 ================================================================================
@@ -247,11 +242,11 @@ Resist: Fire        ---   2   2   2   2   2 ---  10
         Thunder     ---  -1  -1  -1  -1  -1 ---  -5
         Dragon      ---   2   2   2   2   2 ---  10
 --------------------------------------------------------------------------------
-Skills: Wind Res      0   3   2   1   2   3   0  11 Windproof (Lo)      
-        Eating        0   1   2   2   4   2   0  11 Speed Eating +1     
-        Mud/Snow      0   2   2   3   1   3   0  11 Mud/Snow            
-        Attack        0   1   1   0   0   0   0   2 ---                 
-        ThunderRes    0  -2  -1  -1  -1  -1   0  -6 ---                 
+Skills: Eating      ---   1   2   2   4   2 ---  11 Speed Eating +1     
+        Wind Res    ---   3   2   1   2   3 ---  11 Windproof (Lo)      
+        Mud/Snow    ---   2   1   3   1   3 ---  10 Mud/Snow            
+        Attack      ---   1   1 ---   1 --- ---   3 ---                 
+        ThunderRes  ---  -2  -1  -1  -1  -1 ---  -6 ---                 
 ================================================================================
 Set # :   11
 ================================================================================
@@ -273,11 +268,11 @@ Resist: Fire        ---   2   2   2   2   2 ---  10
         Thunder     ---   0   0   0   0   0 ---   0
         Dragon      ---   1   1   1   1   1 ---   5
 --------------------------------------------------------------------------------
-Skills: Defense       0   4   2   3   1   1   0  11 Defense Up (S)      
-        Evasion       0   1   2   2   2   3   0  10 Evasion +1          
-        Rec Level     0   1   2   1   2   4   0  10 Recovery Up         
-        Attack        0   0   0   2   2   0   0   4 ---                 
-        Ice Res       0  -3  -1  -1  -2  -1   0  -8 ---                 
+Skills: Defense     ---   4   2   3   1   1 ---  11 Defense Up (S)      
+        Evasion     ---   1   2   2   2   3 ---  10 Evasion +1          
+        Rec Level   ---   1   2   1   2   4 ---  10 Recovery Up         
+        Attack      --- --- ---   2   2 --- ---   4 ---                 
+        Ice Res     ---  -3  -1  -1  -2  -1 ---  -8 ---                 
 ================================================================================
 Set # :   12
 ================================================================================
@@ -299,11 +294,11 @@ Resist: Fire        ---  -3  -3  -3  -3  -3 --- -15
         Thunder     ---  -1  -1  -1  -1  -1 ---  -5
         Dragon      ---   1   1   1   1   1 ---   5
 --------------------------------------------------------------------------------
-Skills: Constitutn    0   3   1   2   3   2   0  11 Constitution +1     
-        CurrentRes    0   1   1   2   4   2   0  10 CurrentRes (Lo)     
-        Protection    0   1   2   4   1   2   0  10 Divine Blessing     
-        Attack        0   0   2   0   0   2   0   4 ---                 
-        Fire Res      0  -4  -1  -1  -1  -1   0  -8 ---                 
+Skills: Constitutn  ---   3   1   2   3   2 ---  11 Constitution +1     
+        CurrentRes  ---   1   1   2   4   2 ---  10 CurrentRes (Lo)     
+        Protection  ---   1   2   4   1   2 ---  10 Divine Blessing     
+        Attack      --- ---   2 --- ---   2 ---   4 ---                 
+        Fire Res    ---  -4  -1  -1  -1  -1 ---  -8 ---                 
 ================================================================================
 Set # :   13
 ================================================================================
@@ -325,9 +320,9 @@ Resist: Fire        ---   0  -1  -1  -1   0 ---  -3
         Thunder     ---   0  -1  -1  -1   0 ---  -3
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Guard         0   0   4   3   3   0   0  10 Guard +1            
-        Sharpener     0   0   3   4   3   0   0  10 Speed Sharpening    
-        Swimming      0   0  -3  -4  -3   0   0 -10 Doggy Paddler       
+Skills: Guard       --- ---   4   3   3 --- ---  10 Guard +1            
+        Sharpener   --- ---   3   4   3 --- ---  10 Speed Sharpening    
+        Swimming    --- ---  -3  -4  -3 --- --- -10 Doggy Paddler       
 ================================================================================
 Set # :   14
 ================================================================================
@@ -349,11 +344,11 @@ Resist: Fire        ---  -3  -3  -3  -3  -3 --- -15
         Thunder     ---  -1  -1  -1  -1  -1 ---  -5
         Dragon      ---   1   1   1   1   1 ---   5
 --------------------------------------------------------------------------------
-Skills: Tranquilzr    0   4   1   3   3   4   0  15 Capture Expert      
-        FastCharge    0   2   1   2   2   3   0  10 Focus               
-        Ice Res       0   2   1   3   3   1   0  10 Ice Res +10         
-        Attack        0   1   1   0   0   0   0   2 ---                 
-        Stun          0  -2  -1  -1  -1  -1   0  -6 ---                 
+Skills: Tranquilzr  ---   4   1   3   3   4 ---  15 Capture Expert      
+        FastCharge  ---   2   1   2   2   3 ---  10 Focus               
+        Ice Res     ---   2   1   3   3   1 ---  10 Ice Res +10         
+        Attack      ---   1   1 --- --- --- ---   2 ---                 
+        Stun        ---  -2  -1  -1  -1  -1 ---  -6 ---                 
 ================================================================================
 Set # :   15
 ================================================================================
@@ -375,10 +370,10 @@ Resist: Fire        ---   0  -4  -4   4   4 ---   0
         Thunder     ---   3   3   3   3   3 ---  15
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Attack        0   4   3   4   1   1   0  13 Attack Up (S)       
-        Stamina       0   2   1   1   3   4   0  11 Marathon Runner     
-        Potential     0   1   2   3   3   2   0  11 Adrenaline +1       
-        Expert        0  -2  -3  -1  -2  -2   0 -10 Critical Eye -1     
+Skills: Attack      ---   4   3   4   1   1 ---  13 Attack Up (S)       
+        Stamina     ---   2   1   1   3   4 ---  11 Marathon Runner     
+        Potential   ---   1   2   3   3   2 ---  11 Adrenaline +1       
+        Expert      ---  -2  -3  -1  -2  -2 --- -10 Critical Eye -1     
 ================================================================================
 Set # :   16
 ================================================================================
@@ -400,11 +395,11 @@ Resist: Fire        ---  -2  -2  -2  -2  -2 --- -10
         Thunder     ---  -3  -3  -3  -3  -3 --- -15
         Dragon      ---   2   2   2   2   2 ---  10
 --------------------------------------------------------------------------------
-Skills: Eating        0   3   2   2   4   4   0  15 Speed Eating +2     
-        Water Res     0   1   3   3   2   1   0  10 Water Res +10       
-        Stun          0   1   2   1   4   2   0  10 Halve Stun          
-        Attack        0   0   1   0   0   1   0   2 ---                 
-        Rec Speed     0  -2  -1  -1  -1  -1   0  -6 ---                 
+Skills: Eating      ---   3   2   2   4   4 ---  15 Speed Eating +2     
+        Water Res   ---   1   3   3   2   1 ---  10 Water Res +10       
+        Stun        ---   1   2   1   4   2 ---  10 Halve Stun          
+        Attack      --- ---   1 --- ---   1 ---   2 ---                 
+        Rec Speed   ---  -2  -1  -1  -1  -1 ---  -6 ---                 
 ================================================================================
 Set # :   17
 ================================================================================
@@ -426,10 +421,10 @@ Resist: Fire        ---   3   3   3   3   3 ---  15
         Thunder     ---  -2  -2  -2  -2  -2 --- -10
         Dragon      ---  -4  -4  -4  -4  -4 --- -20
 --------------------------------------------------------------------------------
-Skills: Fire Res      0   4   2   3   2   2   0  13 Fire Res +10        
-        Health        0   2   2   2   2   2   0  10 Health +20          
-        Hearing       0   1   1   1   3   2   0   8 ---                 
-        Protection    0  -2  -2  -1  -2  -1   0  -8 ---                 
+Skills: Fire Res    ---   4   2   3   2   2 ---  13 Fire Res +10        
+        Health      ---   2   2   2   2   2 ---  10 Health +20          
+        Hearing     ---   1   1   1   3   2 ---   8 ---                 
+        Protection  ---  -2  -2  -1  -2  -1 ---  -8 ---                 
 ================================================================================
 Set # :   18
 ================================================================================
@@ -451,10 +446,10 @@ Resist: Fire        ---  -4  -4  -4  -4  -4 --- -20
         Thunder     ---   2   2   2   2   2 ---  10
         Dragon      ---  -1  -1  -1  -1  -1 ---  -5
 --------------------------------------------------------------------------------
-Skills: Constitutn    0   3   4   3   3   2   0  15 Constitution +2     
-        Poison        0   2   2   1   3   2   0  10 Negate Posion       
-        Status        0   2   1   1   2   4   0  10 Status Atk Up       
-        Health        0  -2  -2  -2  -1  -1   0  -8 ---                 
+Skills: Constitutn  ---   3   4   3   3   2 ---  15 Constitution +2     
+        Poison      ---   2   2   1   3   2 ---  10 Negate Posion       
+        Status      ---   2   1   1   2   4 ---  10 Status Atk Up       
+        Health      ---  -2  -2  -2  -1  -1 ---  -8 ---                 
 ================================================================================
 Set # :   19
 ================================================================================
@@ -476,10 +471,10 @@ Resist: Fire        ---  -2  -2  -2  -2  -2 --- -10
         Thunder     ---   3   3   3   3   3 ---  15
         Dragon      ---   1   1   1   1   1 ---   5
 --------------------------------------------------------------------------------
-Skills: Wind Res      0   4   3   5   1   2   0  15 Windproof (Hi)      
-        Guard Up      0   2   1   1   3   3   0  10 Guard Boost         
-        ThunderRes    0   1   1   2   3   3   0  10 Thunder Res +10     
-        Sharpener     0  -2  -2  -1  -2  -1   0  -8 ---                 
+Skills: Wind Res    ---   4   3   5   1   2 ---  15 Windproof (Hi)      
+        Guard Up    ---   2   1   1   3   3 ---  10 Guard Boost         
+        ThunderRes  ---   1   1   2   3   3 ---  10 Thunder Res +10     
+        Sharpener   ---  -2  -2  -1  -2  -1 ---  -8 ---                 
 ================================================================================
 Set # :   20
 ================================================================================
@@ -501,10 +496,10 @@ Resist: Fire        ---  -3  -3  -3  -3  -3 --- -15
         Thunder     ---   4   4   4   4   4 ---  20
         Dragon      ---  -2  -2  -2  -2  -2 --- -10
 --------------------------------------------------------------------------------
-Skills: Sharpness     0   2   1   3   2   2   0  10 Razor Sharp         
-        Elemental     0   1   3   2   1   3   0  10 Elemental Atk Up    
-        Swimming      0   3   1   2   3   1   0  10 Olympic Swimmer     
-        Status        0  -2  -3  -1  -2  -2   0 -10 Status Atk Down     
+Skills: Sharpness   ---   2   1   3   2   2 ---  10 Razor Sharp         
+        Elemental   ---   1   3   2   1   3 ---  10 Elemental Atk Up    
+        Swimming    ---   3   1   2   3   1 ---  10 Olympic Swimmer     
+        Status      ---  -2  -3  -1  -2  -2 --- -10 Status Atk Down     
 ================================================================================
 Set # :   21
 ================================================================================
@@ -526,10 +521,10 @@ Resist: Fire        ---   3   3   3   3   3 ---  15
         Thunder     ---  -2  -2  -2  -2  -2 --- -10
         Dragon      ---  -4  -4  -4  -4  -4 --- -20
 --------------------------------------------------------------------------------
-Skills: Attack        0   1   2   5   5   2   0  15 Attack Up (M)       
-        Expert        0   2   1   2   3   2   0  10 Critical Eye +1     
-        Heat Res      0   2   2   3   1   2   0  10 Heat Cancel (Lo)    
-        Defense       0  -4  -2  -1  -2  -1   0 -10 Defense Down (S)    
+Skills: Attack      ---   1   2   5   5   2 ---  15 Attack Up (M)       
+        Expert      ---   2   1   2   3   2 ---  10 Critical Eye +1     
+        Heat Res    ---   2   2   3   1   2 ---  10 Heat Cancel (Lo)    
+        Defense     ---  -4  -2  -1  -2  -1 --- -10 Defense Down (S)    
 ================================================================================
 Set # :   22
 ================================================================================
@@ -551,10 +546,10 @@ Resist: Fire        ---  -4  -4  -4  -4  -4 --- -20
         Thunder     ---  -3  -3  -3  -3  -3 --- -15
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Evasion       0   3   2   5   2   3   0  15 Evasion +2          
-        Cold Res      0   1   1   2   4   2   0  10 Cold Cancel (Lo)    
-        Stamina       0   1   2   2   4   1   0  10 Marathon Runner     
-        Heat Res      0  -4  -2  -2  -1  -1   0 -10 Heat Surge (Lo)     
+Skills: Evasion     ---   3   2   5   2   3 ---  15 Evasion +2          
+        Cold Res    ---   1   1   2   4   2 ---  10 Cold Cancel (Lo)    
+        Stamina     ---   1   2   2   4   1 ---  10 Marathon Runner     
+        Heat Res    ---  -4  -2  -2  -1  -1 --- -10 Heat Surge (Lo)     
 ================================================================================
 Set # :   23
 ================================================================================
@@ -576,9 +571,9 @@ Resist: Fire        ---   2   2   2   0   0 ---   6
         Thunder     ---  -1  -1  -1   0   0 ---  -3
         Dragon      ---  -1  -1  -1   0   0 ---  -3
 --------------------------------------------------------------------------------
-Skills: Crit Draw     0   2   3   5   0   0   0  10 Critical Draw       
-        Tremor Res    0   4   3   3   0   0   0  10 Tremor-Proof        
-        Elemental     0  -3  -4  -3   0   0   0 -10 Elemental Atk Down  
+Skills: Crit Draw   ---   2   3   5 --- --- ---  10 Critical Draw       
+        Tremor Res  ---   4   3   3 --- --- ---  10 Tremor-Proof        
+        Elemental   ---  -3  -4  -3 --- --- --- -10 Elemental Atk Down  
 ================================================================================
 Set # :   24
 ================================================================================
@@ -600,10 +595,10 @@ Resist: Fire        ---   3   3   3   3   3 ---  15
         Thunder     ---   1   1   1   1   1 ---   5
         Dragon      ---  -2  -2  -2  -2  -2 --- -10
 --------------------------------------------------------------------------------
-Skills: Defense       0   2   6   4   3   0   0  15 Defense Up (M)      
-        PunishDraw    0   2   6   1   2   0   0  11 Punishing Draw      
-        Bomb Boost    0   2   4   2   2   0   0  10 Bombardier          
-        Eating        0  -3  -2  -2  -2   0   0  -9 ---                 
+Skills: Defense     ---   2   6   4   3   E ---  15 Defense Up (M)      
+        PunishDraw  ---   2   6   1   2   E ---  11 Punishing Draw      
+        Bomb Boost  ---   2   4   2   2   E ---  10 Bombardier          
+        Eating      ---  -3  -2  -2  -2   E ---  -9 ---                 
 ================================================================================
 Set # :   25
 ================================================================================
@@ -625,10 +620,10 @@ Resist: Fire        ---   4   4   4   4   4 ---  20
         Thunder     ---   1   1   1   1   1 ---   5
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Guard         0   3   3   2   2   5   0  15 Guard +2            
-        Flame Aura    0   3   1   3   1   2   0  10 Flaming Aura        
-        Guard Up      0   2   1   3   2   2   0  10 Guard Boost         
-        Stamina       0  -3  -2  -1  -2  -2   0 -10 Short Sprinter      
+Skills: Guard       ---   3   3   2   2   5 ---  15 Guard +2            
+        Flame Aura  ---   3   1   3   1   2 ---  10 Flaming Aura        
+        Guard Up    ---   2   1   3   2   2 ---  10 Guard Boost         
+        Stamina     ---  -3  -2  -1  -2  -2 --- -10 Short Sprinter      
 ================================================================================
 Set # :   26
 ================================================================================
@@ -637,7 +632,7 @@ Helios/Selne Set (Blade)                High Rank   Blademaster
 Weapon                                  ---                                   
 Helios Helm/Selene Helm                 ---                                   
 Helios Mail/Selene Mail                 ---                                   
-Helios Vambraces/Selene Vambraces       ---                                   
+Helios Vambraces/Selene Vambraces       O--                                   
 Helios Coil/Selene Coil                 ---                                   
 Helios Greaves/Selene Greaves           ---                                   
 CHARM:                                  ---                                   
@@ -650,10 +645,10 @@ Resist: Fire        ---   0   0   0   0   0 ---   0
         Thunder     ---  -3  -3  -3  -3  -3 --- -15
         Dragon      ---  -4  -4  -4  -4  -4 --- -20
 --------------------------------------------------------------------------------
-Skills: Handicraft    0   2   2   3   3   5   0  15 Sharpness +1        
-        Hearing       0   3   2   2   5   3   0  15 HG Earplugs         
-        Protection    0  -4  -2  -1  -1  -2   0 -10 Demonic Blessing    
-        Sharpness     0  -2  -3  -3  -2  -1   0 -11 Blunt Edge          
+Skills: Handicraft  ---   2   2   3   3   5 ---  15 Sharpness +1        
+        Hearing     ---   3   2   2   5   3 ---  15 HG Earplugs         
+        Protection  ---  -4  -2  -1  -1  -2 --- -10 Demonic Blessing    
+        Sharpness   ---  -2  -3  -3  -2  -1 --- -11 Blunt Edge          
 ================================================================================
 Set # :   27
 ================================================================================
@@ -675,10 +670,10 @@ Resist: Fire        ---   3   3   3   3   3 ---  15
         Thunder     ---   0   0   0   0   0 ---   0
         Dragon      ---  -3  -3  -3  -3  -3 --- -15
 --------------------------------------------------------------------------------
-Skills: FastCharge    0   1   2   3   1   3   0  10 Focus               
-        Sharpness     0   1   1   1   4   3   0  10 Razor Sharp         
-        Rec Speed     0   2   3   1   2   2   0  10 Recovery Spd +1     
-        Combo Rate    0  -5  -1  -2  -2  -1   0 -11 Combination -5%     
+Skills: FastCharge  ---   1   2   3   1   3 ---  10 Focus               
+        Sharpness   ---   1   1   1   4   3 ---  10 Razor Sharp         
+        Rec Speed   ---   2   3   1   2   2 ---  10 Recovery Spd +1     
+        Combo Rate  ---  -5  -1  -2  -2  -1 --- -11 Combination -5%     
 ================================================================================
 Set # :   28
 ================================================================================
@@ -686,7 +681,7 @@ Guild bard/Scholar Set (Blade)          High Rank   Blademaster
 --------------------------------------------------------------------------------
 Weapon                                  ---                                   
 Guild Bard Lobos/Scholar's Beret        ---                                   
-Guild Bard Bolero/Scholar's Clouse      ---                                   
+Guild Bard Bolero/Scholar's Blouse      ---                                   
 Guild Bard Braces/Scholar's Gloves      ---                                   
 Guild Bard Coil/Scholar's Skirt         ---                                   
 Guild Bard Boots/Scholar's Socks        ---                                   
@@ -700,10 +695,10 @@ Resist: Fire        ---   0   0   0   0   0 ---   0
         Thunder     ---   0   0   0   0   0 ---   0
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Psychic       0   2   4   5   4   0   0  15 Autotracker         
-        Evasion       0   4   6   3   2   0   0  15 Evasion +2          
-        Fate          0   2   2   2   4   0   0  10 Good Luck           
-        Sense         0  -3  -6  -1  -1   0   0 -11 Taunt               
+Skills: Psychic     ---   2   4   5   4   E ---  15 Autotracker         
+        Evasion     ---   4   6   3   2   E ---  15 Evasion +2          
+        Fate        ---   2   2   2   4   E ---  10 Good Luck           
+        Sense       ---  -3  -6  -1  -1   E --- -11 Taunt               
 ================================================================================
 Set # :   29
 ================================================================================
@@ -725,10 +720,10 @@ Resist: Fire        ---   0   0   0   0   0 ---   0
         Thunder     ---   0   0   0   0   0 ---   0
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Wide-Range    0   5   2   2   4   3   0  16 Wide-Range +1       
-        Carving       0   2   1   5   4   3   0  15 Carving Master      
-        Spd Gather    0   2   4   1   2   1   0  10 Speed Gatherer      
-        Fate          0  -3  -3  -4  -2  -3   0 -15 Horrible Luck       
+Skills: Wide-Range  ---   5   2   2   4   3 ---  16 Wide-Range +1       
+        Carving     ---   2   1   5   4   3 ---  15 Carving Master      
+        Spd Gather  ---   2   4   1   2   1 ---  10 Speed Gatherer      
+        Fate        ---  -3  -3  -4  -2  -3 --- -15 Horrible Luck       
 ================================================================================
 Set # :   30
 ================================================================================
@@ -750,9 +745,9 @@ Resist: Fire        ---  -3   0   0  -3  -3 ---  -9
         Thunder     ---  -4   0   0  -4  -4 --- -12
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: CurrentRes    0   1   0   0  13   1   0  15 CurrentRes (Hi)     
-        Oxygen        0  10   0   0   0   0   0  10 Oxygen Up           
-        Swimming      0   0   0   0   0  10   0  10 Olympic Swimmer     
+Skills: CurrentRes  ---   1 --- ---  13   1 ---  15 CurrentRes (Hi)     
+        Oxygen      ---  10 --- --- --- --- ---  10 Oxygen Up           
+        Swimming    --- --- --- --- ---  10 ---  10 Olympic Swimmer     
 ================================================================================
 Set # :   31
 ================================================================================
@@ -774,9 +769,9 @@ Resist: Fire        ---  -2  -2  -2  -2  -2 --- -10
         Thunder     ---   3   3   3   3   3 ---  15
         Dragon      ---   2   2   2   2   2 ---  10
 --------------------------------------------------------------------------------
-Skills: Whim          0   4   2   3   4   2   0  15 Divine Whim         
-        Gathering     0   2   5   2   3   3   0  15 Gather +2           
-        Spd Gather    0   2   1   3   1   3   0  10 Speed Gatherer      
+Skills: Whim        ---   4   2   3   4   2 ---  15 Divine Whim         
+        Gathering   ---   2   5   2   3   3 ---  15 Gather +2           
+        Spd Gather  ---   2   1   3   1   3 ---  10 Speed Gatherer      
 ================================================================================
 Set # :   32
 ================================================================================
@@ -785,7 +780,7 @@ Chainmail+ Set (Blade)                  High Rank   Blademaster
 Weapon                                  ---                                   
 Chainmail Helm+                         OO-                                   
 Chainmail Mail+                         OO-                                   
-Chainmail Vambrace+                     OO-                                   
+Chainmail Vambraces+                    OO-                                   
 Chainmail Faulds+                       OO-                                   
 Chainmail Greaves+                      OO-                                   
 CHARM:                                  ---                                   
@@ -798,9 +793,9 @@ Resist: Fire        ---  -1  -1  -1  -1  -1 ---  -5
         Thunder     ---  -1  -1  -1  -1  -1 ---  -5
         Dragon      ---   1   1   1   1   1 ---   5
 --------------------------------------------------------------------------------
-Skills: Health        0   2   5   3   2   3   0  15 Health +50          
-        Combo Rate    0   4   1   4   2   4   0  15 Combination +25%    
-        Combo Plus    0   3   1   1   4   1   0  10 Combination Pro     
+Skills: Health      ---   2   5   3   2   3 ---  15 Health +50          
+        Combo Rate  ---   4   1   4   2   4 ---  15 Combination +25%    
+        Combo Plus  ---   3   1   1   4   1 ---  10 Combination Pro     
 ================================================================================
 Set # :   33
 ================================================================================
@@ -822,9 +817,9 @@ Resist: Fire        ---   0   5   0   5   5 ---  15
         Thunder     ---   0   2   0   2   2 ---   6
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Heat Res      0   0   6   0   5   4   0  15 Heat Cancel (Hi)    
-        Rec Speed     0   0   2   0   6   2   0  10 Recovery Spd +1     
-        Transportr    0   0   3   0   2   5   0  10 Pro Transporter     
+Skills: Heat Res    --- ---   6 ---   5   4 ---  15 Heat Cancel (Hi)    
+        Rec Speed   --- ---   2 ---   6   2 ---  10 Recovery Spd +1     
+        Transportr  --- ---   3 ---   2   5 ---  10 Pro Transporter     
 ================================================================================
 Set # :   34
 ================================================================================
@@ -846,11 +841,11 @@ Resist: Fire        ---   0   0   0   0   0 ---   0
         Thunder     ---   0   0   0   0   0 ---   0
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Psychic       0   3   5   2   4   1   0  15 Autotracker         
-        Map           0   2   1   1   1   5   0  10 Farsight            
-        Evasion       0   1   1   3   3   2   0  10 Evasion +1          
-        Expert        0   0   1   2   0   0   0   3 ---                 
-        Water Res     0  -3  -1  -1  -1  -1   0  -7 ---                 
+Skills: Psychic     ---   3   5   2   4   1 ---  15 Autotracker         
+        Map         ---   2   1   1   1   5 ---  10 Farsight            
+        Evasion     ---   1   1   3   3   2 ---  10 Evasion +1          
+        Expert      --- ---   1   2 --- --- ---   3 ---                 
+        Water Res   ---  -3  -1  -1  -1  -1 ---  -7 ---                 
 ================================================================================
 Set # :   35
 ================================================================================
@@ -861,7 +856,7 @@ Bone Helm+                              OO-
 Bone Mail+                              O--                                   
 Bone Vambraces+                         OO-                                   
 Bone Faulds+                            OO-                                   
-Bone Greave+                            OO-                                   
+Bone Greaves+                           OO-                                   
 CHARM:                                  ---                                   
 --------------------------------------------------------------------------------
                     WEP HEA CHE ARM WAI LEG CHA TOT
@@ -872,11 +867,11 @@ Resist: Fire        ---   3   3   3   3   3 ---  15
         Thunder     ---   2   2   2   2   2 ---  10
         Dragon      ---   3   3   3   3   3 ---  15
 --------------------------------------------------------------------------------
-Skills: Hunger        0   3   1   5   4   2   0  15 Negate Hunger       
-        Stamina       0   1   1   2   3   3   0  10 Marathon Runner     
-        Perception    0   1   4   1   1   3   0  10 Capture Guru        
-        Expert        0   2   2   0   0   0   0   4 ---                 
-        Sleep         0  -2  -1  -1  -1  -1   0  -6 ---                 
+Skills: Hunger      ---   3   1   5   4   2 ---  15 Negate Hunger       
+        Stamina     ---   1   1   2   3   3 ---  10 Marathon Runner     
+        Perception  ---   1   4   1   1   3 ---  10 Capture Guru        
+        Expert      ---   2   2 --- --- --- ---   4 ---                 
+        Sleep       ---  -2  -1  -1  -1  -1 ---  -6 ---                 
 ================================================================================
 Set # :   36
 ================================================================================
@@ -898,10 +893,10 @@ Resist: Fire        ---   1   1   1   1   1 ---   5
         Thunder     ---  -2  -2  -2  -2  -2 --- -10
         Dragon      ---  -1  -1  -1  -1  -1 ---  -5
 --------------------------------------------------------------------------------
-Skills: Expert        0   3   6   4   2   0   0  15 Critical Eye +2     
-        SpeedSetup    0   3   2   3   2   0   0  10 Trap Master         
-        Sharpener     0   2   4   1   3   0   0  10 Speed Sharpening    
-        Oxygen        0  -1  -2  -1  -2   0   0  -6 ---                 
+Skills: Expert      ---   3   6   4   2   E ---  15 Critical Eye +2     
+        SpeedSetup  ---   3   2   3   2   E ---  10 Trap Master         
+        Sharpener   ---   2   4   1   3   E ---  10 Speed Sharpening    
+        Oxygen      ---  -1  -2  -1  -2   E ---  -6 ---                 
 ================================================================================
 Set # :   37
 ================================================================================
@@ -923,11 +918,11 @@ Resist: Fire        ---  -3  -3  -3  -3  -3 --- -15
         Thunder     ---  -1  -1  -1  -1  -1 ---  -5
         Dragon      ---   2   2   2   2   2 ---  10
 --------------------------------------------------------------------------------
-Skills: Attack        0   4   4   3   2   2   0  15 Attack Up (M)       
-        Stun          0   2   3   4   3   3   0  15 Negate Stun         
-        Gluttony      0   2   1   3   3   1   0  10 Scavenger           
-        Expert        0   0   2   0   0   2   0   4 ---                 
-        Cold Res      0  -3  -1  -1  -1  -1   0  -7 ---                 
+Skills: Attack      ---   4   4   3   2   2 ---  15 Attack Up (M)       
+        Stun        ---   2   3   4   3   3 ---  15 Negate Stun         
+        Gluttony    ---   2   1   3   3   1 ---  10 Scavenger           
+        Expert      --- ---   2 --- ---   2 ---   4 ---                 
+        Cold Res    ---  -3  -1  -1  -1  -1 ---  -7 ---                 
 ================================================================================
 Set # :   38
 ================================================================================
@@ -949,9 +944,9 @@ Resist: Fire        ---   0  -5   0  -5  -5 --- -15
         Thunder     ---   0   2   0   2   2 ---   6
         Dragon      ---   0   6   0   6   6 ---  18
 --------------------------------------------------------------------------------
-Skills: Status        0   0   3   0   6   2   0  11 Status Atk Up       
-        Sharpness     0   0   1   0   3   6   0  10 Razor Sharp         
-        Poison        0   0  -5   0  -2  -3   0 -10 Double Poison       
+Skills: Status      --- ---   3 ---   6   2 ---  11 Status Atk Up       
+        Sharpness   --- ---   1 ---   3   6 ---  10 Razor Sharp         
+        Poison      --- ---  -5 ---  -2  -3 --- -10 Double Poison       
 ================================================================================
 Set # :   39
 ================================================================================
@@ -973,11 +968,11 @@ Resist: Fire        ---   3   3   3   3   3 ---  15
         Thunder     ---  -2  -2  -2  -2  -2 --- -10
         Dragon      ---   2   2   2   2   2 ---  10
 --------------------------------------------------------------------------------
-Skills: Wind Res      0   3   4   1   6   1   0  15 Windproof (Hi)      
-        Mud/Snow      0   2   1   1   1   5   0  10 Mud/Snow            
-        Eating        0   1   1   5   1   2   0  10 Speed Eating +1     
-        Expert        0   1   2   1   0   0   0   4 ---                 
-        ThunderRes    0  -2  -1  -1  -1  -1   0  -6 ---                 
+Skills: Wind Res    ---   3   4   1   6   1 ---  15 Windproof (Hi)      
+        Mud/Snow    ---   2   1   1   1   5 ---  10 Mud/Snow            
+        Eating      ---   1   1   5   1   2 ---  10 Speed Eating +1     
+        Expert      ---   1   2   1 --- --- ---   4 ---                 
+        ThunderRes  ---  -2  -1  -1  -1  -1 ---  -6 ---                 
 ================================================================================
 Set # :   40
 ================================================================================
@@ -999,11 +994,11 @@ Resist: Fire        ---   4   4   4   4   4 ---  20
         Thunder     ---   0   0   0   0   0 ---   0
         Dragon      ---   1   1   1   1   1 ---   5
 --------------------------------------------------------------------------------
-Skills: Wide-Range    0   3   4   6   5   2   0  20 Wide-Range +2       
-        Defense       0   2   2   3   2   1   0  10 Defense Up (S)      
-        Rec Level     0   3   1   3   2   1   0  10 Recovery Up         
-        Expert        0   1   1   0   1   0   0   3 ---                 
-        Ice Res       0  -2  -1  -1  -1  -3   0  -8 ---                 
+Skills: Wide-Range  ---   3   4   6   5   2 ---  20 Wide-Range +2       
+        Defense     ---   2   2   3   2   1 ---  10 Defense Up (S)      
+        Rec Level   ---   3   1   3   2   1 ---  10 Recovery Up         
+        Expert      ---   1   1 ---   1 --- ---   3 ---                 
+        Ice Res     ---  -2  -1  -1  -1  -3 ---  -8 ---                 
 ================================================================================
 Set # :   41
 ================================================================================
@@ -1025,11 +1020,11 @@ Resist: Fire        ---  -4  -4  -4  -4  -4 --- -20
         Thunder     ---  -1  -1  -1  -1  -1 ---  -5
         Dragon      ---   1   1   1   1   1 ---   5
 --------------------------------------------------------------------------------
-Skills: Constitutn    0   4   4   2   2   3   0  15 Constitution +2     
-        CurrentRes    0   2   2   2   1   3   0  10 CurrentRes (Lo)     
-        Protection    0   2   1   4   1   2   0  10 Divine Blessing     
-        Expert        0   1   1   2   0   0   0   4 ---                 
-        Hunger        0  -2  -1  -1  -3  -1   0  -8 ---                 
+Skills: Constitutn  ---   4   4   2   2   3 ---  15 Constitution +2     
+        CurrentRes  ---   2   2   2   1   3 ---  10 CurrentRes (Lo)     
+        Protection  ---   2   1   4   1   2 ---  10 Divine Blessing     
+        Expert      ---   1   1   2 --- --- ---   4 ---                 
+        Hunger      ---  -2  -1  -1  -3  -1 ---  -8 ---                 
 ================================================================================
 Set # :   42
 ================================================================================
@@ -1051,9 +1046,9 @@ Resist: Fire        ---   0  -1  -1  -1   0 ---  -3
         Thunder     ---   0  -1  -1  -1   0 ---  -3
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Guard         0   0   2   5   4   0   0  11 Guard +1            
-        Sharpener     0   0   2   4   4   0   0  10 Speed Sharpening    
-        Swimming      0   0  -5  -2  -3   0   0 -10 Doggy Paddler       
+Skills: Guard       --- ---   2   5   4 --- ---  11 Guard +1            
+        Sharpener   --- ---   2   4   4 --- ---  10 Speed Sharpening    
+        Swimming    --- ---  -5  -2  -3 --- --- -10 Doggy Paddler       
 ================================================================================
 Set # :   43
 ================================================================================
@@ -1075,11 +1070,11 @@ Resist: Fire        ---  -4  -4  -4  -4  -4 --- -20
         Thunder     ---  -1  -1  -1  -1  -1 ---  -5
         Dragon      ---   1   1   1   1   1 ---   5
 --------------------------------------------------------------------------------
-Skills: Ice Res       0   1   4   4   4   7   0  20 Ice Res +20         
-        Tranquilzr    0   1   2   2   2   3   0  10 Capture Expert      
-        FastCharge    0   2   1   4   1   2   0  10 Focus               
-        Expert        0   0   2   0   1   0   0   3 ---                 
-        Stun          0  -3  -2  -1  -1  -1   0  -8 ---                 
+Skills: Ice Res     ---   1   4   4   4   7 ---  20 Ice Res +20         
+        Tranquilzr  ---   1   2   2   2   3 ---  10 Capture Expert      
+        FastCharge  ---   2   1   4   1   2 ---  10 Focus               
+        Expert      --- ---   2 ---   1 --- ---   3 ---                 
+        Stun        ---  -3  -2  -1  -1  -1 ---  -8 ---                 
 ================================================================================
 Set # :   44
 ================================================================================
@@ -1101,10 +1096,10 @@ Resist: Fire        ---   0  -5  -5   5   5 ---   0
         Thunder     ---   4   4   4   4   4 ---  20
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Potential     0   2   2   2   5   4   0  15 Adrenaline +2       
-        Attack        0   3   6   1   2   1   0  13 Attack Up (S)       
-        Stamina       0   1   1   1   3   4   0  10 Marathon Runner     
-        Expert        0  -3  -2  -3  -1  -2   0 -11 Critical Eye -1     
+Skills: Potential   ---   2   2   2   5   4 ---  15 Adrenaline +2       
+        Attack      ---   3   6   1   2   1 ---  13 Attack Up (S)       
+        Stamina     ---   1   1   1   3   4 ---  10 Marathon Runner     
+        Expert      ---  -3  -2  -3  -1  -2 --- -11 Critical Eye -1     
 ================================================================================
 Set # :   45
 ================================================================================
@@ -1126,10 +1121,10 @@ Resist: Fire        ---  -2  -2  -2  -2  -2 --- -10
         Thunder     ---  -4  -4  -4  -4  -4 --- -20
         Dragon      ---   2   2   2   2   2 ---  10
 --------------------------------------------------------------------------------
-Skills: Eating        0   3   2   4   5   1   0  15 Speed Eating +2     
-        Stun          0   3   2   4   4   2   0  15 Negate Stun         
-        Expert        0   3   3   2   1   2   0  11 Critical Eye +1     
-        Rec Speed     0  -2  -2  -2  -1  -2   0  -9 ---                 
+Skills: Eating      ---   3   2   4   5   1 ---  15 Speed Eating +2     
+        Stun        ---   3   2   4   4   2 ---  15 Negate Stun         
+        Expert      ---   3   3   2   1   2 ---  11 Critical Eye +1     
+        Rec Speed   ---  -2  -2  -1  -1  -2 ---  -8 ---                 
 ================================================================================
 Set # :   46
 ================================================================================
@@ -1151,10 +1146,10 @@ Resist: Fire        ---   4   4   4   4   4 ---  20
         Thunder     ---  -2  -2  -2  -2  -2 --- -10
         Dragon      ---  -4  -4  -4  -4  -4 --- -20
 --------------------------------------------------------------------------------
-Skills: Health        0   1   3   4   4   3   0  15 Health +50          
-        Fire Res      0   2   1   4   3   3   0  13 Fire Res +10        
-        Protection    0  -3  -3  -2  -2  -3   0 -13 Demonic Blessing    
-        Hearing       0   1   2   1   2   2   0   8 ---                 
+Skills: Health      ---   1   3   4   4   3 ---  15 Health +50          
+        Fire Res    ---   2   1   4   3   3 ---  13 Fire Res +10        
+        Protection  ---  -3  -3  -2  -2  -3 --- -13 Demonic Blessing    
+        Hearing     ---   1   2   1   2   2 ---   8 ---                 
 ================================================================================
 Set # :   47
 ================================================================================
@@ -1176,10 +1171,10 @@ Resist: Fire        ---  -4  -4  -4  -4  -4 --- -20
         Thunder     ---   3   3   3   3   3 ---  15
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Constitutn    0   3   4   2   4   2   0  15 Constitution +2     
-        Poison        0   3   2   1   3   1   0  10 Negate Posion       
-        Status        0   2   2   1   3   2   0  10 Status Atk Up       
-        Health        0  -3  -1  -3  -1  -2   0 -10 Health -10          
+Skills: Constitutn  ---   3   4   2   4   2 ---  15 Constitution +2     
+        Poison      ---   3   2   1   3   1 ---  10 Negate Posion       
+        Status      ---   2   2   1   3   2 ---  10 Status Atk Up       
+        Health      ---  -3  -1  -3  -1  -2 --- -10 Health -10          
 ================================================================================
 Set # :   48
 ================================================================================
@@ -1201,10 +1196,10 @@ Resist: Fire        ---  -2  -2  -2  -2  -2 --- -10
         Thunder     ---   3   3   3   3   3 ---  15
         Dragon      ---   2   2   2   2   2 ---  10
 --------------------------------------------------------------------------------
-Skills: Wind Res      0   3   4   2   1   5   0  15 Windproof (Hi)      
-        ThunderRes    0   4   2   1   1   3   0  11 Thunder Res +10     
-        Guard Up      0   3   2   1   2   2   0  10 Guard Boost         
-        Sharpener     0  -1  -1  -3  -3  -1   0  -9 ---                 
+Skills: Wind Res    ---   3   4   2   1   5 ---  15 Windproof (Hi)      
+        ThunderRes  ---   4   2   1   1   3 ---  11 Thunder Res +10     
+        Guard Up    ---   3   2   1   2   2 ---  10 Guard Boost         
+        Sharpener   ---  -1  -1  -3  -3  -1 ---  -9 ---                 
 ================================================================================
 Set # :   49
 ================================================================================
@@ -1226,10 +1221,10 @@ Resist: Fire        ---  -2  -2  -2  -2  -2 --- -10
         Thunder     ---   1   1   1   1   1 ---   5
         Dragon      ---   5   5   5   5   5 ---  25
 --------------------------------------------------------------------------------
-Skills: Dragon Res    0   1   2   5   5   2   0  15 Dragon Res + 15     
-        Stamina       0   2   2   3   3   1   0  11 Marathon Runner     
-        Crit Draw     0   1   4   2   2   1   0  10 Critical Draw       
-        Potential     0  -3  -1  -1  -1  -3   0  -9 ---                 
+Skills: Dragon Res  ---   1   2   5   5   2 ---  15 Dragon Res + 15     
+        Stamina     ---   2   2   3   3   1 ---  11 Marathon Runner     
+        Crit Draw   ---   1   4   2   2   1 ---  10 Critical Draw       
+        Potential   ---  -3  -1  -1  -1  -3 ---  -9 ---                 
 ================================================================================
 Set # :   50
 ================================================================================
@@ -1251,10 +1246,10 @@ Resist: Fire        ---  -4  -4  -4  -4  -4 --- -20
         Thunder     ---   5   5   5   5   5 ---  25
         Dragon      ---  -2  -2  -2  -2  -2 --- -10
 --------------------------------------------------------------------------------
-Skills: FreeElemnt    0   3   1   5   2   4   0  15 Awaken              
-        Swimming      0   3   1   2   2   2   0  10 Olympic Swimmer     
-        Elemental     0   2   1   2   2   3   0  10 Elemental Atk Up    
-        Status        0  -3  -2  -2  -3  -2   0 -12 Status Atk Down     
+Skills: FreeElemnt  ---   3   1   5   2   4 ---  15 Awaken              
+        Swimming    ---   3   1   2   2   2 ---  10 Olympic Swimmer     
+        Elemental   ---   2   1   2   2   3 ---  10 Elemental Atk Up    
+        Status      ---  -3  -2  -2  -3  -2 --- -12 Status Atk Down     
 ================================================================================
 Set # :   51
 ================================================================================
@@ -1276,10 +1271,10 @@ Resist: Fire        ---   4   4   4   4   4 ---  20
         Thunder     ---  -2  -2  -2  -2  -2 --- -10
         Dragon      ---  -4  -4  -4  -4  -4 --- -20
 --------------------------------------------------------------------------------
-Skills: Heat Res      0   1   1   5   3   5   0  15 Heat Cancel (Hi)    
-        Expert        0   2   2   3   5   3   0  15 Critical Eye +2     
-        Fencing       0   1   3   1   2   3   0  10 Mind's Eye          
-        Defense       0  -3  -3  -2  -1  -2   0 -11 Defense Down (S)    
+Skills: Heat Res    ---   1   1   5   3   5 ---  15 Heat Cancel (Hi)    
+        Expert      ---   2   2   3   5   3 ---  15 Critical Eye +2     
+        Fencing     ---   1   3   1   2   3 ---  10 Mind's Eye          
+        Defense     ---  -3  -3  -2  -1  -2 --- -11 Defense Down (S)    
 ================================================================================
 Set # :   52
 ================================================================================
@@ -1301,10 +1296,10 @@ Resist: Fire        ---  -4  -4  -4  -4  -4 --- -20
         Thunder     ---  -3  -3  -3  -3  -3 --- -15
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Evade Dist    0   3   3   4   1   4   0  15 Evasion Up          
-        Evasion       0   2   4   4   2   3   0  15 Evasion +2          
-        Cold Res      0   3   2   2   1   4   0  12 Cold Cancel (Lo)    
-        Heat Res      0  -3  -2  -1  -3  -2   0 -11 Heat Surge (Lo)     
+Skills: Evade Dist  ---   3   3   4   1   4 ---  15 Evasion Up          
+        Evasion     ---   2   4   4   2   3 ---  15 Evasion +2          
+        Cold Res    ---   3   2   2   1   4 ---  12 Cold Cancel (Lo)    
+        Heat Res    ---  -3  -2  -1  -3  -2 --- -11 Heat Surge (Lo)     
 ================================================================================
 Set # :   53
 ================================================================================
@@ -1326,9 +1321,9 @@ Resist: Fire        ---   3   3   3   0   0 ---   9
         Thunder     ---  -1  -1  -1   0   0 ---  -3
         Dragon      ---  -1  -1  -1   0   0 ---  -3
 --------------------------------------------------------------------------------
-Skills: Crit Draw     0   5   3   2   0   0   0  10 Critical Draw       
-        Tremor Res    0   5   4   1   0   0   0  10 Tremor-Proof        
-        Elemental     0  -3  -4  -4   0   0   0 -11 Elemental Atk Down  
+Skills: Crit Draw   ---   5   3   2 --- --- ---  10 Critical Draw       
+        Tremor Res  ---   5   4   1 --- --- ---  10 Tremor-Proof        
+        Elemental   ---  -3  -4  -4 --- --- --- -11 Elemental Atk Down  
 ================================================================================
 Set # :   54
 ================================================================================
@@ -1350,10 +1345,10 @@ Resist: Fire        ---   4   4   4   4   4 ---  20
         Thunder     ---   1   1   1   1   1 ---   5
         Dragon      ---  -2  -2  -2  -2  -2 --- -10
 --------------------------------------------------------------------------------
-Skills: Defense       0   4   2   2   6   1   0  15 Defense Up (M)      
-        Bomb Boost    0   2   3   2   2   1   0  10 Bombardier          
-        PunishDraw    0   2   3   1   2   2   0  10 Punishing Draw      
-        Eating        0  -3  -1  -2  -1  -3   0 -10 Slow Eater          
+Skills: Defense     ---   4   2   2   6   1 ---  15 Defense Up (M)      
+        Bomb Boost  ---   2   3   2   2   1 ---  10 Bombardier          
+        PunishDraw  ---   2   3   1   2   2 ---  10 Punishing Draw      
+        Eating      ---  -3  -1  -2  -1  -3 --- -10 Slow Eater          
 ================================================================================
 Set # :   55
 ================================================================================
@@ -1375,10 +1370,10 @@ Resist: Fire        ---   5   5   5   5   5 ---  25
         Thunder     ---   1   1   1   1   1 ---   5
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Guard         0   5   5   2   1   2   0  15 Guard +2            
-        Flame Aura    0   3   1   1   1   4   0  10 Flaming Aura        
-        Sharpness     0   3   2   1   2   2   0  10 Razor Sharp         
-        Stamina       0  -2  -1  -3  -3  -1   0 -10 Short Sprinter      
+Skills: Guard       ---   5   5   2   1   2 ---  15 Guard +2            
+        Flame Aura  ---   3   1   1   1   4 ---  10 Flaming Aura        
+        Sharpness   ---   3   2   1   2   2 ---  10 Razor Sharp         
+        Stamina     ---  -2  -1  -3  -3  -1 --- -10 Short Sprinter      
 ================================================================================
 Set # :   56
 ================================================================================
@@ -1400,10 +1395,10 @@ Resist: Fire        ---  -2  -2  -2  -2  -2 --- -10
         Thunder     ---  -2  -2  -2  -2  -2 --- -10
         Dragon      ---   3   3   3   3   3 ---  15
 --------------------------------------------------------------------------------
-Skills: Health        0   1   1   5   4   5   0  16 Health +50          
-        Guard Up      0   1   1   3   3   3   0  11 Guard Boost         
-        PunishDraw    0   2   1   3   3   2   0  11 Punishing Draw      
-        Stamina       0  -3  -2  -2  -1  -1   0  -9 ---                 
+Skills: Health      ---   1   1   5   4   5 ---  16 Health +50          
+        Guard Up    ---   1   1   3   3   3 ---  11 Guard Boost         
+        PunishDraw  ---   2   1   3   3   2 ---  11 Punishing Draw      
+        Stamina     ---  -3  -2  -2  -1  -1 ---  -9 ---                 
 ================================================================================
 Set # :   57
 ================================================================================
@@ -1425,10 +1420,10 @@ Resist: Fire        ---   0   0   0   0   0 ---   0
         Thunder     ---  -3  -3  -3  -3  -3 --- -15
         Dragon      ---  -4  -4  -4  -4  -4 --- -20
 --------------------------------------------------------------------------------
-Skills: Handicraft    0   1   5   3   2   4   0  15 Sharpness +1        
-        Hearing       0   2   3   5   1   4   0  15 HG Earplugs         
-        Sharpness     0  -1  -2  -1  -3  -3   0 -10 Blunt Edge          
-        Protection    0  -3  -1  -4  -1  -2   0 -11 Demonic Blessing    
+Skills: Handicraft  ---   1   5   3   2   4 ---  15 Sharpness +1        
+        Hearing     ---   2   3   5   1   4 ---  15 HG Earplugs         
+        Sharpness   ---  -1  -2  -1  -3  -3 --- -10 Blunt Edge          
+        Protection  ---  -3  -1  -4  -1  -2 --- -11 Demonic Blessing    
 ================================================================================
 Set # :   58
 ================================================================================
@@ -1450,10 +1445,10 @@ Resist: Fire        ---   4   4   4   4   4 ---  20
         Thunder     ---   0   0   0   0   0 ---   0
         Dragon      ---  -4  -4  -4  -4  -4 --- -20
 --------------------------------------------------------------------------------
-Skills: Rec Speed     0   2   4   1   3   5   0  15 Recovery Spd +2     
-        Sharpness     0   1   1   1   5   2   0  10 Razor Sharp         
-        FastCharge    0   1   2   2   2   3   0  10 Focus               
-        Combo Rate    0  -3  -2  -3  -1  -3   0 -12 Combination -5%     
+Skills: Rec Speed   ---   2   4   1   3   5 ---  15 Recovery Spd +2     
+        Sharpness   ---   1   1   1   5   2 ---  10 Razor Sharp         
+        FastCharge  ---   1   2   2   2   3 ---  10 Focus               
+        Combo Rate  ---  -3  -2  -3  -1  -3 --- -12 Combination -5%     
 ================================================================================
 Set # :   59
 ================================================================================
@@ -1475,10 +1470,10 @@ Resist: Fire        ---   0   0   0   0   0 ---   0
         Thunder     ---   0   0   0   0   0 ---   0
         Dragon      ---   0   0   0   0   0 ---   0
 --------------------------------------------------------------------------------
-Skills: Fate          0   1   6   3   2   0   0  12 Good Luck           
-        Carving       0   1   4   2   3   0   0  10 Carving Pro         
-        Tranquilzr    0   4   4   1   1   0   0  10 Capture Expert      
-        Protection    0  -5  -8  -5  -5   0   0 -23 Demonic Blessing    
+Skills: Fate        ---   1   6   3   2   E ---  12 Good Luck           
+        Carving     ---   1   4   2   3   E ---  10 Carving Pro         
+        Tranquilzr  ---   4   4   1   1   E ---  10 Capture Expert      
+        Protection  ---  -5  -8  -5  -5   E --- -23 Demonic Blessing    
 ================================================================================
 Set # :   60
 ================================================================================
@@ -1500,10 +1495,10 @@ Resist: Fire        ---   0   0   0   0   0 ---   0
         Thunder     ---  -4  -4  -4  -4  -4 --- -20
         Dragon      ---  -4  -4  -4  -4  -4 --- -20
 --------------------------------------------------------------------------------
-Skills: Psychic       0   4   6   4   0   1   0  15 Autotracker         
-        Attack        0   3   6   5   0   1   0  15 Attack Up (M)       
-        Handicraft    0   4   6   3   0   2   0  15 Sharpness +1        
-        Hunger        0  -2  -4  -1   0  -3   0 -10 Raise Hunger        
+Skills: Psychic     ---   4   6   4   E   1 ---  15 Autotracker         
+        Attack      ---   3   6   5   E   1 ---  15 Attack Up (M)       
+        Handicraft  ---   4   6   3   E   2 ---  15 Sharpness +1        
+        Hunger      ---  -2  -4  -1   E  -3 --- -10 Raise Hunger        
 ================================================================================
 Set # :   61
 ================================================================================
@@ -1525,10 +1520,10 @@ Resist: Fire        ---  -1  -1  -1  -1  -1 ---  -5
         Thunder     ---   0   0   0   0   0 ---   0
         Dragon      ---  -5  -5  -5  -5  -5 --- -25
 --------------------------------------------------------------------------------
-Skills: Evade Dist    0   2   2   4   3   4   0  15 Evasion Up          
-        FreeElemnt    0   1   2   5   2   5   0  15 Awaken              
-        Blight Res    0   3   2   1   2   2   0  10 Blightproof         
-        Rec Level     0  -3  -1  -3  -2  -2   0 -11 Recovery Down       
+Skills: Evade Dist  ---   2   2   4   3   4 ---  15 Evasion Up          
+        FreeElemnt  ---   1   2   5   2   5 ---  15 Awaken              
+        Blight Res  ---   3   2   1   2   2 ---  10 Blightproof         
+        Rec Level   ---  -3  -1  -3  -2  -2 --- -11 Recovery Down       
 ================================================================================
 Set # :   62
 ================================================================================
@@ -1548,6 +1543,6 @@ Resist: Fire        --- -10   0   0  10   0 ---   0
         Water       ---   0  10   0   0 -10 ---   0
         Ice         ---   0   0  10 -10   0 ---   0
         Thunder     ---   0 -10   0   0  10 ---   0
-        Dragon      ---   0   0   0   0   0 ---   0
+        Dragon      ---  10   0 -10   0   0 ---   0
 --------------------------------------------------------------------------------
 ================================================================================
