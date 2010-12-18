@@ -2411,11 +2411,15 @@ contains
          if(line.eq."")cycle
 
          num=num+1
-         if(if_info)write(io_unit,"(A,I4)")"Set # : ",num
+         if(if_info)write(io_unit,"(A,I4)")"Set : ",num
          if(outform.eq.2)then
-            write(3,"(A,I4,A)")"<p>Set # : ",num,'</p>'  !html form
+            if(num.eq.1)then
+               write(3,"(A,I4,A)")"<p>Set ",num,'</p>'  !html form
+            else
+               write(3,"(A,I4,A)")'<p style="page-break-before:always">Set ',num,'</p>'  !html form
+            endif
          else
-            write(3,"(A,I4)")"Set # : ",num  !text form
+            write(3,"(A,I4)")"Set : ",num  !text form
          endif
 
          call init_set_data(armor_set)
