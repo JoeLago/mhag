@@ -1,6 +1,6 @@
 ver 0.1
-1.ok,need to check data structure, read/check data
-***2. special Auto-guard(+10), survivor(N/A) (take care of it later)
+1 ok.ok,need to check data structure, read/check data
+2. ok  special Auto-guard(+10), survivor(N/A) (take care of it later)
 3.(later) 3-slot weapon, low score;  low rank , 3-slot weapon , very low score
 4.ok, two c, two b or two a charm, can't be same skill
 5.ok  torso up
@@ -18,8 +18,8 @@ to do list:
 2. Generator
     ! ver 0.5
 
-3. add flexible charm skill points
-4. torso up
+3. (no need)add flexible charm skill points
+4. (ko)torso up
 
 release...
 
@@ -28,3 +28,5 @@ release...
 1. add argument to specify data directory
 2. add html output 
 3. add batch calculation
+4. change to a better charm system, add support to guard+10
+5. add outputs for Torso Up 

@@ -922,7 +922,7 @@ contains
       pos=0
       call extract_word(line,pos,word,if_end)
       read(word,*)i
-      if(if_end.or.(i.lt.1).or.(i.gt.3))then
+      if(if_end.or.(i.lt.1).or.(i.gt.4))then
          if(if_info)write(io_unit,"(A)") &
             "Error!, Charm Data is incorrect!"
          stop
@@ -962,7 +962,7 @@ contains
       ! read percentage point
       call extract_word(line,pos,word,if_end)
       read(word,*)i
-      if((i.lt.0).or.(i.gt.99))then
+      if((i.lt.0).or.(i.gt.100))then
          if(if_info)write(io_unit,"(A)") &
             "Error!, Charm Data is incorrect!"
          stop
@@ -1783,7 +1783,7 @@ contains
       character(len=10) :: jewel(3)
       character(len=20) :: effect_name
       integer :: skill_points(8,100),skill_ids(100),value5(5)
-      character(len=3) :: point_word(8,100)
+      character(len=3) :: point_word(8,100),word_torso(8)
 
       if(if_info)write(io_unit,"(A)")"Save Armor Set in TEXT Format..."
       write(3,"(80A)")("=",i=1,80) 
@@ -1895,13 +1895,20 @@ contains
       call gen_list_skill_point(armor_set,skill_points,skill_ids)
       call point_to_word(armor_set,skill_points,point_word)
 
+      ! add Torso Up if available
+      if(armor_set%num_torso.ne.1)then
+         call gen_list_torso_up(armor_set,word_torso)
+         title="Skills: Torso Up"
+         write(3,1005)title,word_torso(:),''
+      endif
+
       do j=1,armor_set%num_skill
          if(j.le.armor_set%num_effect)then
             effect_name=effect_list(armor_set%effect_id(j))
          else
             effect_name='---'
          endif
-         if(j.eq.1)then
+         if((j.eq.1).and.(armor_set%num_torso.eq.1))then
             title="Skills: "//skill_list(skill_ids(j))%skill_name
          else
             title="        "//skill_list(skill_ids(j))%skill_name
@@ -1936,7 +1943,7 @@ contains
       character(len=10) :: jewel(3)
       character(len=20) :: effect_name
       integer :: skill_points(8,100),skill_ids(100),value5(5)
-      character(len=3) :: point_word(8,100)
+      character(len=3) :: point_word(8,100),word_torso(8)
       logical :: if_neg
 
       if(if_info)write(io_unit,"(A)")"Save Armor Set in HTML Format..."
@@ -2038,6 +2045,13 @@ contains
       call gen_list_skill_point(armor_set,skill_points,skill_ids)
       call point_to_word(armor_set,skill_points,point_word)
 
+      ! add Torso Up if available
+      if(armor_set%num_torso.ne.1)then
+         call gen_list_torso_up_clean(armor_set,word_torso)
+         call gen_html_torso_line(armor_set%num_skill,word_torso)
+!        write(3,1005)title,word_torso(:),trim(empty_name)
+      endif
+
       do j=1,armor_set%num_skill
          if_neg=.false.
          if(j.le.armor_set%num_effect)then
@@ -2048,14 +2062,15 @@ contains
          else
             effect_name=trim(empty_name)
          endif
-         if(j.eq.1)then
-            title=skill_list(skill_ids(j))%skill_name
+         title=skill_list(skill_ids(j))%skill_name
+         if((j.eq.1).and.(armor_set%num_torso.eq.1))then
+            call gen_html_skill_line(armor_set%num_skill,j,title, &
+               skill_points(:,j),effect_name,if_neg)
          else
-            title=skill_list(skill_ids(j))%skill_name
+            call gen_html_skill_line(armor_set%num_skill,j+1,title, &
+               skill_points(:,j),effect_name,if_neg)
          endif
 !        write(3,1005)title,skill_points(:,j),effect_name
-         call gen_html_skill_line(armor_set%num_skill,j,title, &
-            skill_points(:,j),effect_name,if_neg)
       enddo
 
       ! if no skill portion, add 'empty' row to key table format
@@ -2314,6 +2329,45 @@ contains
 
    end subroutine extract_points
 
+   ! gen list for display Torso Up
+   subroutine gen_list_torso_up(armor_set,word_torso)
+      type(set_type),intent(in) :: armor_set
+      character(len=3),intent(out) :: word_torso(8)
+
+      integer :: i
+      type(armor_type) :: armor
+
+      word_torso="---"
+      do i=1,5
+         armor=armor_list(armor_set%armor_id(i),i)
+         if(armor%num_skill.eq.1)then
+            if(armor%skill_id(1).eq.-1)then  ! torso up
+               word_torso(i+1)='  E'
+            endif
+         endif
+      enddo
+
+   end subroutine gen_list_torso_up
+
+   subroutine gen_list_torso_up_clean(armor_set,word_torso)
+      type(set_type),intent(in) :: armor_set
+      character(len=3),intent(out) :: word_torso(8)
+
+      integer :: i
+      type(armor_type) :: armor
+
+      word_torso=""
+      do i=1,5
+         armor=armor_list(armor_set%armor_id(i),i)
+         if(armor%num_skill.eq.1)then
+            if(armor%skill_id(1).eq.-1)then  ! torso up
+               word_torso(i+1)='  E'
+            endif
+         endif
+      enddo
+
+   end subroutine gen_list_torso_up_clean
+
    !convert skill points from number to characters for output
    subroutine point_to_word(armor_set,skill_points,point_word)
       type(set_type),intent(in) :: armor_set
@@ -2324,14 +2378,7 @@ contains
       point_word="---"
       do i=1,armor_set%num_skill
          do j=1,8
-            if(skill_points(j,i).eq.0)then
-               if((j.eq.2).or.(j.ge.4).and.(j.le.6))then
-                  if(armor_list(armor_set%armor_id(j-1),j-1) &
-                     %skill_id(1).eq.-1)then
-                     point_word(j,i)='  E'
-                  endif
-               endif
-            else
+            if(skill_points(j,i).ne.0)then
                write(point_word(j,i),"(I3)")skill_points(j,i)
             endif
          enddo
@@ -2579,6 +2626,19 @@ contains
       endif
 
    end subroutine gen_html_skill_line
+
+   ! add Torso Up line ,formate whole table
+   subroutine gen_html_torso_line(num_skill,word_torso)
+      integer,intent(in) :: num_skill
+      character(len=3),intent(in) :: word_torso(8)
+      integer :: i
+
+      write(3,"(A,I3,A)")'<tr align="right"><td width="50" rowspan="',num_skill+1,'" valign="top" align="left">Skill</td>'
+      write(3,"(A)")'<td width="100" align="left">Torso Up'
+      write(3,"(8(A,A3,A))")('</td><td width="30"><font color="green">',word_torso(i),'</font>',i=1,8)
+      write(3,"(A)")'</td><td width="20"></td><td align="left"></td></tr>'
+
+   end subroutine gen_html_torso_line
 
    subroutine gen_html_skill_line_null
       integer :: i

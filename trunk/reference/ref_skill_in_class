@@ -58,35 +58,35 @@ Class  2:
 
 Class  3:
     3    1    Anti-Theft
-    3    2    Auto-Guard
-    3    3    BBQ       
-    3    4    Cold Res  
-    3    5    Combo Plus
-    3    6    Combo Rate
-    3    7    CurrentRes
-    3    8    Dragon Res
-    3    9    Fire Res  
-    3   10    Fishing   
-    3   11    Gluttony  
-    3   12    Heat Res  
-    3   13    Ice Res   
-    3   14    LastingPwr
-    3   15    Map       
-    3   16    Mud/Snow  
-    3   17    Oxygen    
-    3   18    Paralysis 
-    3   19    Perception
-    3   20    Precision 
-    3   21    Sense     
-    3   22    Sleep     
-    3   23    SpeedSetup
-    3   24    Stun      
-    3   25    ThunderRes
-    3   26    Transportr
-    3   27    Water Res 
-    3   28    Whim      
+    3    2    BBQ       
+    3    3    Cold Res  
+    3    4    Combo Plus
+    3    5    Combo Rate
+    3    6    CurrentRes
+    3    7    Dragon Res
+    3    8    Fire Res  
+    3    9    Fishing   
+    3   10    Gluttony  
+    3   11    Heat Res  
+    3   12    Ice Res   
+    3   13    LastingPwr
+    3   14    Map       
+    3   15    Mud/Snow  
+    3   16    Oxygen    
+    3   17    Paralysis 
+    3   18    Perception
+    3   19    Precision 
+    3   20    Sense     
+    3   21    Sleep     
+    3   22    SpeedSetup
+    3   23    Stun      
+    3   24    ThunderRes
+    3   25    Transportr
+    3   26    Water Res 
+    3   27    Whim      
 
 Class  4:
+    4    1    Auto-Guard
 
 Class  5:
     5    1    Survivor  

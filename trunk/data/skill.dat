@@ -4,7 +4,7 @@
 #        2. Class : A, B, C, N (not exist)
 Anti-Theft : C : Anti-Theft : 10
 Attack : B : Attack Down (L) : -20 : Attack Down (M) : -15 : Attack Down (S) : -10 : Attack Up (S) : 10 : Attack Up (M) : 15 : Attack Up (L) : 20
-Auto-Guard : C : Auto-Guard : 10
+Auto-Guard : D : Auto-Guard : 10
 BBQ : C : BBQ Expert : 10
 Blight Res : A : Blightproof : 10
 Bomb Boost : B : Bombardier : 10
