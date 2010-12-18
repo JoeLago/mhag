@@ -193,6 +193,8 @@ contains
          endif
       endif
       open(unit=3,file=trim(fileout),status='replace')
+      if(outform.eq.2)call gen_html_head  !html head 
+      
 
       select case (trim(fileinfo))
       case ("")
@@ -216,6 +218,7 @@ contains
 
    subroutine mhag_clean
       if(io_unit.eq.99)close(io_unit)
+      if(outform.eq.2)call gen_html_end
       close(3)
       if(allocated(effect_list))deallocate(effect_list)
       if(allocated(skill_list))deallocate(skill_list)
@@ -1721,6 +1724,7 @@ contains
       character(len=10) :: jewel(3)
       character(len=20) :: effect_name
       integer :: skill_points(8,100),skill_ids(100),value5(5)
+      character(len=3) :: point_word(8,100)
 
       if(if_info)write(io_unit,"(A)")"Save Armor Set in TEXT Format..."
       write(3,"(80A)")("=",i=1,80) 
@@ -1830,6 +1834,7 @@ contains
       write(3,"(80A)")("-",i=1,80) 
 
       call gen_list_skill_point(armor_set,skill_points,skill_ids)
+      call point_to_word(armor_set,skill_points,point_word)
 
       do j=1,armor_set%num_skill
          if(j.le.armor_set%num_effect)then
@@ -1842,7 +1847,8 @@ contains
          else
             title="        "//skill_list(skill_ids(j))%skill_name
          endif
-         write(3,1005)title,skill_points(:,j),effect_name
+!        write(3,1005)title,skill_points(:,j),effect_name
+         write(3,1005)title,point_word(:,j),effect_name
       enddo
 
       write(3,"(80A)")("=",i=1,80) 
@@ -1852,7 +1858,8 @@ contains
 1002  format(20X,8(A3,1X))
 1003  format(A20,A3,1X,5(I3,1X),A3,1X,I3)
 1004  format(A20,A3,1X,5(I3,1X),A3,1X,I3)
-1005  format(A20,8(I3,1X),A)
+!1005  format(A20,8(I3,1X),A)
+1005  format(A20,8(A3,1X),A)
 
       if(if_info)write(io_unit,"(A)")"Armor Set Saved!"
 
@@ -1870,9 +1877,9 @@ contains
       character(len=10) :: jewel(3)
       character(len=20) :: effect_name
       integer :: skill_points(8,100),skill_ids(100),value5(5)
+      character(len=3) :: point_word(8,100)
 
       if(if_info)write(io_unit,"(A)")"Save Armor Set in HTML Format..."
-      call gen_html_head
 
       num_row=15+armor_set%num_skill
 
@@ -1969,6 +1976,7 @@ contains
       enddo
 
       call gen_list_skill_point(armor_set,skill_points,skill_ids)
+      call point_to_word(armor_set,skill_points,point_word)
 
       do j=1,armor_set%num_skill
          if(j.le.armor_set%num_effect)then
@@ -1985,11 +1993,9 @@ contains
          call gen_html_skill_line(armor_set%num_skill,j,title, &
             skill_points(:,j),effect_name)
       enddo
-
-      call gen_html_end
+      write(3,"(A)")'</table>'  !finish table
 
       if(if_info)write(io_unit,"(A)")"Armor Set Saved!"
-      stop
 
    end subroutine armor_output_html
 
@@ -2238,6 +2244,31 @@ contains
 
    end subroutine extract_points
 
+   !convert skill points from number to characters for output
+   subroutine point_to_word(armor_set,skill_points,point_word)
+      type(set_type),intent(in) :: armor_set
+      integer,intent(in) :: skill_points(8,100)
+      character(len=3),intent(out) :: point_word(8,100)
+
+      integer :: i,j
+      point_word="---"
+      do i=1,armor_set%num_skill
+         do j=1,8
+            if(skill_points(j,i).eq.0)then
+               if((j.eq.2).or.(j.ge.4).and.(j.le.6))then
+                  if(armor_list(armor_set%armor_id(j-1),j-1) &
+                     %skill_id(1).eq.-1)then
+                     point_word(j,i)='  E'
+                  endif
+               endif
+            else
+               write(point_word(j,i),"(I3)")skill_points(j,i)
+            endif
+         enddo
+      enddo
+
+   end subroutine point_to_word
+
    ! Batch Process of MHAG Calculator
    subroutine mhag_cal_batch
       type(set_type) :: armor_set
@@ -2319,7 +2350,6 @@ contains
    end subroutine gen_html_head
 
    subroutine gen_html_end
-      write(3,"(A)")'</table>'
       write(3,"(A)")'</BODY>'
       write(3,"(A)")'</HTML>'
    end subroutine gen_html_end
