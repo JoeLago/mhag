@@ -68,6 +68,7 @@ module mhag
       integer :: charm_class
       integer :: num_slot
       logical :: lowrank                      ! lr Y / hr N
+      integer :: percentage                   ! percentage rate
       integer :: num_skill                    ! # of skills
       character(len=1),dimension(2) :: skill_class     ! A/B/C 
       integer,dimension(2) :: skill_point     ! max points
@@ -941,6 +942,12 @@ contains
       ! read rl/hr (L/H)
       call extract_word(line,pos,word,if_end)
 
+      if(if_end)then
+         if(if_info)write(io_unit,"(A)") &
+            "Error!, Jewel Data is incorrect!"
+         stop
+      endif
+
       select case(trim(word))
       case ("L")
          charm_entry%lowrank=.true.
@@ -951,6 +958,16 @@ contains
             "Error!, Jewel Data is incorrect!"
          stop
       end select
+
+      ! read percentage point
+      call extract_word(line,pos,word,if_end)
+      read(word,*)i
+      if((i.lt.0).or.(i.gt.99))then
+         if(if_info)write(io_unit,"(A)") &
+            "Error!, Charm Data is incorrect!"
+         stop
+      endif
+      charm_entry%percentage=i
       if(if_end)then
          return
       endif
@@ -1104,6 +1121,7 @@ contains
          charm_list(i)%charm_class=0
          charm_list(i)%num_slot=0
          charm_list(i)%lowrank=.true.
+         charm_list(i)%percentage=0
          charm_list(i)%num_skill=0
          charm_list(i)%skill_class=''
          charm_list(i)%skill_point=0
@@ -1135,6 +1153,7 @@ contains
    ! 1. generate skill list for each class (A/B/C...)
    subroutine data_pre_proc
       integer :: i,j,class_id
+      integer :: nums(10) !,percentages(10)
 
       num_skill_in_class(:)=0
       allocate(skill_in_class_list(num_skill,5))
@@ -1156,6 +1175,29 @@ contains
          num_skill_in_class(class_id)=num_skill_in_class(class_id)+1
          skill_in_class_list(num_skill_in_class(class_id),class_id)=i
       enddo
+
+  ! 1. process charm percentage data
+      nums(:)=0
+!     percentages(:)=0
+      do i=1,num_charm
+         j=charm_list(i)%charm_class
+         nums(j)=nums(j)+1
+!        percentages(j)=percentages(j)+charm_list(i)%percentage
+      enddo
+!      do i=1,10
+!         print *,i,nums(i),percentages(i)
+!      enddo
+!      stop
+
+      ! take average number for imcomplete data
+      do i=1,num_charm
+         j=charm_list(i)%charm_class
+         if(charm_list(i)%percentage.eq.0)then
+            charm_list(i)%percentage=100/nums(j)
+         endif
+      enddo
+
+   ! 3. show reference data
 
       if(method.eq.4)then
          call show_skill_list
@@ -1183,11 +1225,13 @@ contains
    end subroutine show_skill_list
 
    subroutine show_jewel_list
-      integer :: i
+      integer :: i,j
 
       open(unit=2,file='ref_jewel',status='replace')
       do i=1,num_jewel
-         write(2,"(I5,4X,A)")i,jewel_list(i)%jewel_name
+         write(2,"(I5,4X,A,2(4X,A,3X,I4))")i,jewel_list(i)%jewel_name, &
+            (skill_list(jewel_list(i)%skill_id(j))%skill_name, &
+            jewel_list(i)%skill_point(j),j=1,jewel_list(i)%num_skill)
       enddo 
       close(2)
 
@@ -2002,7 +2046,7 @@ contains
                if_neg=.true.
             endif
          else
-            effect_name='---'
+            effect_name=trim(empty_name)
          endif
          if(j.eq.1)then
             title=skill_list(skill_ids(j))%skill_name
@@ -2013,6 +2057,12 @@ contains
          call gen_html_skill_line(armor_set%num_skill,j,title, &
             skill_points(:,j),effect_name,if_neg)
       enddo
+
+      ! if no skill portion, add 'empty' row to key table format
+      if(armor_set%num_skill.eq.0)then
+         call gen_html_skill_line_null
+      endif
+
       write(3,"(A)")'</table>'  !finish table
 
       if(if_info)write(io_unit,"(A)")"Armor Set Saved!"
@@ -2529,5 +2579,15 @@ contains
       endif
 
    end subroutine gen_html_skill_line
+
+   subroutine gen_html_skill_line_null
+      integer :: i
+      
+      write(3,"(A)")'<tr align="right"><td width="50" align="left">Skill</td>'
+      write(3,"(2A)")'<td width="100" align="left">','No Skill'
+      write(3,"(8(A,A3))")('</td><td width="30">','---',i=1,8)
+      write(3,"(3A)")'</td><td width="20"></td><td align="left">',trim(empty_name),'</td></tr>'
+
+   end subroutine gen_html_skill_line_null
 
 end module mhag

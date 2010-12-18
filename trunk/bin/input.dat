@@ -28,7 +28,7 @@ charm jewel : 85
 !  charm id 
 !  please read id from reference file "out_charm"
 !  please read id from
-charm : 9
+charm : 69
 !  charm skill id (maximum 2 ids)
 !  please read id from reference file "out_skill"
 charm skill : 61
