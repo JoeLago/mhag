@@ -1872,36 +1872,18 @@ contains
       integer :: skill_points(8,100),skill_ids(100),value5(5)
 
       if(if_info)write(io_unit,"(A)")"Save Armor Set in HTML Format..."
-!     write(3,"(80A)")("=",i=1,80) 
       call gen_html_head
 
       num_row=15+armor_set%num_skill
 
-!     call gen_html_end
-!     stop
-
       ! Part 1 :  Setup information
 
       ! set name,low/high rank, melee/range
-      if(armor_set%lowrank)then
-         title="Low Rank"
-      else
-         title="High Rank"
-      endif
-      if(armor_set%blade_or_gunner.eq."B")then
-         title2="Blademaster"
-      else
-         title2="Gunner"
-      endif
-      write(3,1000)armor_set%set_name,title,title2
-      write(3,"(80A)")("-",i=1,80) 
-!     title="Equipment"
-!     title2="Jewels"
-!     print 1000,title,"Slots",trim(title2)
-!     print "(80A)",("-",i=1,80) 
+      call gen_html_headline(armor_set)
+
       ! weapon
       call cal_weapon_slots(armor_set,num_slot_weapon)
-      call gen_slot_word(num_slot_weapon,slots)
+      call gen_slot_word_short(num_slot_weapon,slots)
       jewel(:)=''
       k=0
       do j=1,3
@@ -1911,16 +1893,20 @@ contains
          call jewel_name_cut(jewel_list(jewel_id)%jewel_name,jewel(k)) 
       enddo
       title="Weapon"
-      write(3,1001)title,slots,jewel(:)
+      call gen_html_weapon_line(title,slots,jewel)
+
       !armor
       do i=1,5
          armor_id=armor_set%armor_id(i)
          if(armor_id.eq.0)then   ! emptry armor piece
-            write(3,1001)empty_name
+            slots=''
+            jewel(:)=''
+            armor_name=trim(empty_name)
+            call gen_html_setup_line(armor_name,slots,jewel)
             cycle
          endif
          armor_name=armor_list(armor_id,i)%armor_name
-         call gen_slot_word(armor_list(armor_id,i)%num_slot,slots) 
+         call gen_slot_word_short(armor_list(armor_id,i)%num_slot,slots) 
          jewel(:)=''
          k=0
          do j=1,3
@@ -1929,12 +1915,12 @@ contains
             k=k+1
             call jewel_name_cut(jewel_list(jewel_id)%jewel_name,jewel(k)) 
          enddo
-         write(3,1001)armor_name,slots,jewel(:)
+         call gen_html_setup_line(armor_name,slots,jewel)
       enddo
       !charm
       call write_charm2(armor_set%charm_id,armor_set%charm_skill_id(:),title)
       title="CHARM: "//trim(title)
-      call gen_slot_word(charm_list(armor_set%charm_id)%num_slot,slots) 
+      call gen_slot_word_short(charm_list(armor_set%charm_id)%num_slot,slots) 
       jewel(:)=''
       k=0
       do j=1,3
@@ -1943,12 +1929,10 @@ contains
          k=k+1
          call jewel_name_cut(jewel_list(jewel_id)%jewel_name,jewel(k)) 
       enddo
-      write(3,1001)title,slots,jewel(:)
-      write(3,"(80A)")("-",i=1,80) 
+      call gen_html_setup_line(title,slots,jewel)
 
       ! Part 2 : Table (defense,elements,skills)
-      write(3,1002)"WEP","HEA","CHE","ARM","WAI","LEG","CHA","TOT"
-!     print "(80A)",("-",i=1,80) 
+      call gen_html_2nd_headline
 
       !defense
       if(armor_set%lowrank)then
@@ -1964,14 +1948,15 @@ contains
             value5(i)=armor_list(armor_set%armor_id(i),i)%defense(rank_ind)
          endif
       enddo
-      write(3,1003)title,"---",value5(:),"---",armor_set%defense
+!     write(3,1003)title,"---",value5(:),"---",armor_set%defense
+      call gen_html_defense_line(title,value5(:),armor_set%defense)
 
       !resist
-      title5(1)="Resist: Fire"
-      title5(2)="        Water"
-      title5(3)="        Ice"
-      title5(4)="        Thunder"
-      title5(5)="        Dragon"
+      title5(1)="Fire"
+      title5(2)="Water"
+      title5(3)="Ice"
+      title5(4)="Thunder"
+      title5(5)="Dragon"
       do j=1,5
          do i=1,5
             if(armor_set%armor_id(i).eq.0)then
@@ -1980,9 +1965,8 @@ contains
                value5(i)=armor_list(armor_set%armor_id(i),i)%resist(j)
             endif
          enddo
-         write(3,1004)title5(j),"---",value5(:),"---",armor_set%resist(j)
+         call gen_html_resist_line(j,value5(:),armor_set%resist(j))
       enddo
-      write(3,"(80A)")("-",i=1,80) 
 
       call gen_list_skill_point(armor_set,skill_points,skill_ids)
 
@@ -1993,23 +1977,19 @@ contains
             effect_name='---'
          endif
          if(j.eq.1)then
-            title="Skills: "//skill_list(skill_ids(j))%skill_name
+            title=skill_list(skill_ids(j))%skill_name
          else
-            title="        "//skill_list(skill_ids(j))%skill_name
+            title=skill_list(skill_ids(j))%skill_name
          endif
-         write(3,1005)title,skill_points(:,j),effect_name
+!        write(3,1005)title,skill_points(:,j),effect_name
+         call gen_html_skill_line(armor_set%num_skill,j,title, &
+            skill_points(:,j),effect_name)
       enddo
 
-      write(3,"(80A)")("=",i=1,80) 
-1000  format(A40,2A12)
-!1000  format(A38,A5,3X,A)
-1001  format(A40,A3,3X,3(A,X))
-1002  format(20X,8(A3,1X))
-1003  format(A20,A3,1X,5(I3,1X),A3,1X,I3)
-1004  format(A20,A3,1X,5(I3,1X),A3,1X,I3)
-1005  format(A20,8(I3,1X),A)
+      call gen_html_end
 
       if(if_info)write(io_unit,"(A)")"Armor Set Saved!"
+      stop
 
    end subroutine armor_output_html
 
@@ -2034,6 +2014,26 @@ contains
       end select
 
    end subroutine gen_slot_word
+
+   subroutine gen_slot_word_short(num_slot,str_slot)
+      integer,intent(in) :: num_slot
+      character(len=3),intent(out) :: str_slot
+
+      select case(num_slot)
+      case(0)
+         str_slot=""
+      case(1)
+         str_slot="O"
+      case(2)
+         str_slot="OO"
+      case(3)
+         str_slot="OOO"
+      case default
+         if(if_info)write(io_unit,"(A)")"Error!, incorrect # of slots!"
+         stop
+      end select
+
+   end subroutine gen_slot_word_short
 
    ! calculate # of slots based on weapon jewels
 
@@ -2319,8 +2319,142 @@ contains
    end subroutine gen_html_head
 
    subroutine gen_html_end
+      write(3,"(A)")'</table>'
       write(3,"(A)")'</BODY>'
       write(3,"(A)")'</HTML>'
    end subroutine gen_html_end
+
+   subroutine gen_html_headline(armor_set)
+      type(set_type),intent(in) :: armor_set
+
+      character(len=255) :: title,title2,color
+
+      if(armor_set%lowrank)then
+         title="Low Rank"
+         color="orange"
+      else
+         title="High Rank"
+         color="orangered"
+      endif
+      if(armor_set%blade_or_gunner.eq."B")then
+         title2="Blademaster"
+      else
+         title2="Gunner"
+      endif
+      write(3,"(A)")'<table border="1" cellpadding="2" width="650" rules="rows" frame="box">'
+      write(3,"(3A)")'<tr><td colspan="8"><b>',trim(armor_set%set_name),'</b></td>'
+      write(3,"(7A)")'<td colspan="3"><font color="',trim(color),'">', &
+         trim(title),'</font></td><td>',trim(title2),'</td></tr>'
+
+   end subroutine gen_html_headline
+
+   ! start a new embedded table, add weapon line
+   subroutine gen_html_weapon_line(title,slots,jewel)
+      character(len=255),intent(in) :: title
+      character(len=3),intent(in) :: slots
+      character(len=10),intent(in) :: jewel(3)
+      integer :: i
+
+      write(3,"(A)")'<tr><td colspan="12"><table border="0" cellpadding="0" width="650" rules="none">'
+
+      write(3,"(12A)")'<tr><td width=300>',trim(title),'</td><td align="center" width="30"><font size="2">', &
+         trim(slots),'</font></td><td width="30"></td><td width=240>', &
+         (trim(jewel(i)),' &nbsp ',i=1,3),'</td></tr>'
+
+   end subroutine gen_html_weapon_line  
+
+   ! add armor/jewel setup line
+   subroutine gen_html_setup_line(title,slots,jewel)
+      character(len=255),intent(in) :: title
+      character(len=3),intent(in) :: slots
+      character(len=10),intent(in) :: jewel(3)
+      integer :: i
+
+      write(3,"(12A)")'<tr><td>',trim(title),'</td><td align="center"><font size="2">',&
+         trim(slots),'</font></td><td></td><td>', &
+         (trim(jewel(i)),' &nbsp ',i=1,3),'</td></tr>'
+
+   end subroutine gen_html_setup_line
+
+   ! close embedded table, add 2nd headline
+   subroutine gen_html_2nd_headline
+
+      write(3,"(A)")'</table></td></tr>'
+
+      write(3,"(A)")'<tr align="center" style="font-size:7pt"><td colspan="2"></td>'
+      write(3,"(A)")'<td height="20">WEP</td><td>HEAD</td><td>CHEST</td><td>ARM</td><td>WAIST</td><td>LEG</td>'
+      write(3,"(A)")'<td>CHM</td><td>TOT</td><td colspan="2"></td></tr>'
+
+   end subroutine gen_html_2nd_headline
+
+   ! add defense line
+   subroutine gen_html_defense_line(title,value5,defense)
+      character(len=255),intent(in) :: title
+      integer,intent(in) :: value5(5),defense
+
+      write(3,"(3A)")'<tr align="center"><td colspan="2" align="left">',trim(title),'</td>'
+      write(3,"(6(A,I3),A)")'<td>---</td><td>',value5(1),'</td><td>',value5(2),'</td><td>', &
+         value5(3),'</td><td>',value5(4),'</td><td>',value5(5),'</td><td>---</td><td>',&
+         defense,'</td>'
+      write(3,"(A)")'<td colspan="2" rowspan="6"></td></tr>'
+
+   end subroutine gen_html_defense_line
+
+   ! various element line( including 1st line)
+   subroutine gen_html_resist_line(ind,value5,resist)
+      integer,intent(in) :: ind,value5(5),resist
+      character(len=255):: title,color
+
+      select case (ind) !element type
+      case (1) !fire
+         write(3,"(A)")'<tr style="color:red" align="center"><td rowspan="5" valign="top" align="left">'
+         write(3,"(A)")'<font color="black">Resist</font></td><td align="left"><font color="red">Fire</color></td>'
+         write(3,"(6(A,I3),A)")'<td>---</td><td>',value5(1),'</td><td>',value5(2),'</td><td>', &
+            value5(3),'</td><td>',value5(4),'</td><td>',value5(5),'</td><td>---</td><td>', &
+            resist,'</td></tr>'
+      case default
+         select case(ind)
+         case (2) ! water
+            title="Water"
+            color="blue"
+         case (3) ! Ice
+            title="Ice"
+            color="darkcyan"
+         case (4) ! Thunder
+            title="Thunder"
+            color="orange"
+         case (5) ! Dragon 
+            title="Dragon"
+            color="purple"
+         end select
+         write(3,"(5A)"),'<tr style="color:',trim(color),'" align="center"><td align="left">', &
+            trim(title),'</td><td>---</td>'
+         write(3,"(6(A,I3),A)")'<td>',value5(1),'</td><td>',value5(2),'</td><td>',value5(3), &
+            '</td><td>',value5(4),'</td><td>',value5(4),'</td><td>---</td><td>',&
+            resist,'</td></tr>'
+
+      end select
+
+   end subroutine gen_html_resist_line
+
+   ! add skill line (including 1st line, format whole table)
+   subroutine gen_html_skill_line(num_skill,ind,title,skill_points,effect_name)
+      integer,intent(in) :: num_skill,ind,skill_points(8)
+      character(len=255),intent(in) :: title*255
+      character(len=20),intent(in) :: effect_name*20
+      integer :: i
+
+      if(ind.eq.1)then  ! format table, add 1st line
+         write(3,"(A,I3,A)")'<tr align="center"><td width="50" rowspan="',num_skill,'" valign="top" align="left">Skill</td>'
+         write(3,"(2A)")'<td width="100" align="left">',trim(title)
+         write(3,"(8(A,I3))")('</td><td width="30">',skill_points(i),i=1,8)
+         write(3,"(3A)")'</td><td width="20"></td><td align="left">',trim(effect_name),'</td></tr>'
+      else
+         write(3,"(2A,8(A,I3))")'<tr align="center"><td align="left">',trim(title), &
+            ('</td><td>',skill_points(i),i=1,8)
+         write(3,"(A)")'</td><td></td><td align="left">',trim(effect_name),'</td></tr>'
+      endif
+
+   end subroutine gen_html_skill_line
 
 end module mhag
