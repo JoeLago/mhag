@@ -3,7 +3,7 @@
 # ARCHICTECTURE = linux 
 #
 
-FCOMPLR   =  ifort
+FCOMPLR   =  gfortran
 #gfortran
 #ifort 
 FCFLAGS   =  -O2

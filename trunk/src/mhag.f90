@@ -166,7 +166,7 @@ contains
             case ("out","Out","OUT")
                i=i+1
                call getarg(i,fileout)
-            case ("info","Info","INFO")
+            case ("log","Log","LOG")
                i=i+1
                call getarg(i,fileinfo)
             case ("format","Format","FORMAT")
@@ -223,7 +223,7 @@ contains
    subroutine mhag_usage
       write(6,"(A)")"Usage: ./mhag method <cal/bat/gen/ref> in &
          <input.dat> out <result.dat> &
-         info <''/info/off> format <text/html> data <./dir>"
+         log <''/log/off> format <text/html> data <./dir>"
       stop
    end subroutine mhag_usage
 
@@ -320,50 +320,61 @@ contains
                if(if_info)write(io_unit,"(A)")"   Error in Input File!"
                stop
             endif
-            if(if_info)write(io_unit,"(6A)")"   Head Piece  : ", &
-               trim(armor_list(id,1)%armor_name),  &
-               "  ",("o",i=1,armor_list(id,1)%num_slot)
-            armor_set%armor_id(1)=id
+            if(id.gt.0)then
+               if(if_info)write(io_unit,"(6A)")"   Head Piece  : ", &
+                  trim(armor_list(id,1)%armor_name),  &
+                  "  ",("o",i=1,armor_list(id,1)%num_slot)
+               armor_set%armor_id(1)=id
+            endif
          case ("chest part")
             read(arg,*,iostat=error)id
             if(error.lt.0)then
                if(if_info)write(io_unit,"(A)")"   Error in Input File!"
                stop
             endif
-            if(if_info)write(io_unit,"(6A)")"   Chest Piece : ", &
-               trim(armor_list(id,2)%armor_name),  &
-               "  ",("o",i=1,armor_list(id,2)%num_slot)
-            armor_set%armor_id(2)=id
+            if(id.gt.0)then
+               if(if_info)write(io_unit,"(6A)")"   Chest Piece : ", &
+                  trim(armor_list(id,2)%armor_name),  &
+                  "  ",("o",i=1,armor_list(id,2)%num_slot)
+               armor_set%armor_id(2)=id
+            endif
          case ("arm part")
             read(arg,*,iostat=error)id
             if(error.lt.0)then
                if(if_info)write(io_unit,"(A)")"   Error in Input File!"
                stop
             endif
-            if(if_info)write(io_unit,"(6A)")"   Arm Piece   : ", &
-               trim(armor_list(id,3)%armor_name),  &
-               "  ",("o",i=1,armor_list(id,3)%num_slot)
-            armor_set%armor_id(3)=id
+            if(id.gt.0)then
+               if(if_info)write(io_unit,"(6A)")"   Arm Piece   : ", &
+                  trim(armor_list(id,3)%armor_name),  &
+                  "  ",("o",i=1,armor_list(id,3)%num_slot)
+               endif
+               armor_set%armor_id(3)=id
+            endif
          case ("waist part")
             read(arg,*,iostat=error)id
             if(error.lt.0)then
                if(if_info)write(io_unit,"(A)")"   Error in Input File!"
                stop
             endif
-            if(if_info)write(io_unit,"(6A)")"   Waist Piece:  ", &
-               trim(armor_list(id,4)%armor_name),  &
-               "  ",("o",i=1,armor_list(id,4)%num_slot)
-            armor_set%armor_id(4)=id
+            if(id.gt.0)then
+               if(if_info)write(io_unit,"(6A)")"   Waist Piece:  ", &
+                  trim(armor_list(id,4)%armor_name),  &
+                  "  ",("o",i=1,armor_list(id,4)%num_slot)
+               armor_set%armor_id(4)=id
+            endif
          case ("leg part")
             read(arg,*,iostat=error)id
             if(error.lt.0)then
                if(if_info)write(io_unit,"(A)")"   Error in Input File!"
                stop
             endif
-            if(if_info)write(io_unit,"(6A)")"   Leg Piece   : ", &
-               trim(armor_list(id,5)%armor_name),  &
-               "  ",("o",i=1,armor_list(id,5)%num_slot)
-            armor_set%armor_id(5)=id
+            if(id.gt.0)then
+               if(if_info)write(io_unit,"(6A)")"   Leg Piece   : ", &
+                  trim(armor_list(id,5)%armor_name),  &
+                  "  ",("o",i=1,armor_list(id,5)%num_slot)
+               armor_set%armor_id(5)=id
+            endif
          case ("head jewel")
             call extract_numbers(arg,3,nnum,nums)
             if(if_info)write(io_unit,"(7A)")"   Head Jewel  : ", &
@@ -1167,7 +1178,7 @@ contains
             class_id=2
          case ("C")
             class_id=3
-         case ("D")    !reserved for mhf3
+         case ("D")    !reserved for mhf3,auto-guard
             class_id=4
          case default
             class_id=5
@@ -1500,6 +1511,7 @@ contains
       !slots check
       ! armor slots
       do i=1,5
+         if(armor_set%armor_id(i).eq.0)cycle
          nslots=0
          do j=1,3
             if(armor_set%jewel_id(j,i).ne.0)then
@@ -1512,35 +1524,38 @@ contains
             stop
          endif
       enddo
+
+      if(armor_set%charm_id.ne.0)then
       ! charm slots
-      nslots=0
-      do j=1,3
-         if(armor_set%jewel_id(j,7).ne.0)then
-            nslots=nslots+jewel_list(armor_set%jewel_id(j,7))%num_slot
+         nslots=0
+         do j=1,3
+            if(armor_set%jewel_id(j,7).ne.0)then
+               nslots=nslots+jewel_list(armor_set%jewel_id(j,7))%num_slot
+            endif
+         enddo
+         if(nslots.gt.charm_list(armor_set%charm_id)%num_slot)then
+            if(if_info)write(io_unit,"(A)") &
+               "   Error! Jewels require too many slots!"
+            stop
          endif
-      enddo
-      if(nslots.gt.charm_list(armor_set%charm_id)%num_slot)then
-         if(if_info)write(io_unit,"(A)") &
-            "   Error! Jewels require too many slots!"
-         stop
-      endif
       ! charm skills
-      do i=1,2
-         id=armor_set%charm_skill_id(i)
-         if(id.ne.0)then
-            if(skill_list(id)%skill_class.ne. &
-               charm_list(armor_set%charm_id)%skill_class(i))then
-               if(if_info)write(io_unit,"(A)") &
-                  "   Error! Charm skill Class incorrect!"
-               stop
+         do i=1,2
+            id=armor_set%charm_skill_id(i)
+            if(id.ne.0)then
+               if(skill_list(id)%skill_class.ne. &
+                  charm_list(armor_set%charm_id)%skill_class(i))then
+                  if(if_info)write(io_unit,"(A)") &
+                     "   Error! Charm skill Class incorrect!"
+                  stop
+               endif
+               if((i.eq.2).and.(id.eq.armor_set%charm_skill_id(1)))then
+                  if(if_info)write(io_unit,"(A)") &
+                     "   Error! Charm skills should be different!"
+                  stop
+               endif
             endif
-            if((i.eq.2).and.(id.eq.armor_set%charm_skill_id(1)))then
-               if(if_info)write(io_unit,"(A)") &
-                  "   Error! Charm skills should be different!"
-               stop
-            endif
-         endif
-      enddo
+         enddo
+      endif
 
       if(if_info)write(io_unit,"(A)")"   No Error Detected!"
 
@@ -1842,7 +1857,11 @@ contains
       !charm
       call write_charm2(armor_set%charm_id,armor_set%charm_skill_id(:),title)
       title="CHARM: "//trim(title)
-      call gen_slot_word(charm_list(armor_set%charm_id)%num_slot,slots) 
+      if(armor_set%charm_id.ne.0)then
+         call gen_slot_word(charm_list(armor_set%charm_id)%num_slot,slots) 
+      else
+         slots=''
+      endif
       jewel(:)=''
       k=0
       do j=1,3
@@ -1864,7 +1883,7 @@ contains
       else
          rank_ind=2   ! high rank inddex
       endif
-      title="Defense"
+      title="Max Defense"
       do i=1,5
          if(armor_set%armor_id(i).eq.0)then
             value5(i)=0
@@ -1994,7 +2013,12 @@ contains
       !charm
       call write_charm2(armor_set%charm_id,armor_set%charm_skill_id(:),title)
       title="CHARM: "//trim(title)
-      call gen_slot_word_short(charm_list(armor_set%charm_id)%num_slot,slots) 
+
+      if(armor_set%charm_id.ne.0)then
+         call gen_slot_word_short(charm_list(armor_set%charm_id)%num_slot,slots) 
+      else
+         slots=''
+      endif
       jewel(:)=''
       k=0
       do j=1,3
@@ -2014,7 +2038,7 @@ contains
       else
          rank_ind=2   ! high rank inddex
       endif
-      title="Defense"
+      title="Max Defense"
       do i=1,5
          if(armor_set%armor_id(i).eq.0)then
             value5(i)=0
@@ -2339,6 +2363,7 @@ contains
 
       word_torso="---"
       do i=1,5
+         if(armor_set%armor_id(i).eq.0)cycle
          armor=armor_list(armor_set%armor_id(i),i)
          if(armor%num_skill.eq.1)then
             if(armor%skill_id(1).eq.-1)then  ! torso up
@@ -2358,6 +2383,7 @@ contains
 
       word_torso=""
       do i=1,5
+         if(armor_set%armor_id(i).eq.0)cycle
          armor=armor_list(armor_set%armor_id(i),i)
          if(armor%num_skill.eq.1)then
             if(armor%skill_id(1).eq.-1)then  ! torso up
@@ -2644,6 +2670,7 @@ contains
 
    end subroutine gen_html_torso_line
 
+   ! gen empty line in empty if there's no skill 
    subroutine gen_html_skill_line_null
       integer :: i
       
