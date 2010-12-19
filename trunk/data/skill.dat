@@ -18,7 +18,7 @@ Crag S+ : B : Crag S Lv1 Up : 10 : Crag S All Up :15
 Crit Draw : B : Critical Draw : 10	
 CurrentRes : C : CurrentRes (Lo) : 10 : CurrentRes (Hi) : 15
 Defense : B : Defense Down (L) : -20 : Defense Down (M) : -15 : Defense Down (S) : -10 : Defense Up (S) : 10 : Defense Up (M) : 15 : Defense Up (L) : 20
-Dragon Res : C : Dragon Res -15 : -15 : Dragon Res -10 : -10 : Dragon Res +10 : 10 : Dragon Res + 15 : 15 : Dragon Res + 20 : 20
+Dragon Res : C : Dragon Res -15 : -15 : Dragon Res -10 : -10 : Dragon Res +10 : 10 : Dragon Res +15 : 15 : Dragon Res +20 : 20
 Dungmaster : B : Dung Bomb Expert : 10
 Eating : B : Slow Eater : -10 : Speed Eating +1 : 10 : Speed Eating +2 : 15
 Elemental : A : Elemental Atk Down : -10 : Elemental Atk Up : 10
