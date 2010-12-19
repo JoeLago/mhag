@@ -348,7 +348,6 @@ contains
                if(if_info)write(io_unit,"(6A)")"   Arm Piece   : ", &
                   trim(armor_list(id,3)%armor_name),  &
                   "  ",("o",i=1,armor_list(id,3)%num_slot)
-               endif
                armor_set%armor_id(3)=id
             endif
          case ("waist part")
