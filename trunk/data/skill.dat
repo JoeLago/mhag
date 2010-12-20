@@ -82,6 +82,6 @@ Tranquilzr : A : Capture Expert : 10
 Transportr : C : Pro Transporter : 10
 Tremor Res : B : Tremor-Proof : 10
 Water Res : C : Water Res -15 : -15 : Water Res -10 : -10 : Water Res +10 : 10 : Water Res +15 : 15 : Water Res +20 : 20
-Whim : C : Spectre's Whim : -15 : Devil's Whim : -10 : Spirit's Whim : 10 : Divine Whim : 15
+Whim : C : Devil's Whim : -15 : Spectre's Whim : -10 : Spirit's Whim : 10 : Divine Whim : 15
 Wide-Range : B : Wide-Range +1 : 10 : Wide-Range +2 : 20
 Wind Res : B : Windproof (Lo) : 10 : Windproof (Hi) : 15

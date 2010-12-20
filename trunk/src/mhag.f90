@@ -1798,6 +1798,9 @@ contains
       character(len=20) :: effect_name
       integer :: skill_points(8,100),skill_ids(100),value5(5)
       character(len=3) :: point_word(8,100),word_torso(8)
+      logical :: if_bonus
+      integer :: bonus(6)
+      character(len=4) :: bonus_title
 
       if(if_info)write(io_unit,"(A)")"Save Armor Set in TEXT Format..."
       write(3,"(80A)")("=",i=1,80) 
@@ -1876,6 +1879,9 @@ contains
       write(3,1002)"WEP","HEA","CHE","ARM","WAI","LEG","CHA","TOT"
 !     print "(80A)",("-",i=1,80) 
 
+      ! check possible skill bonus
+      call check_skill_bonus(armor_set,if_bonus,bonus)
+
       !defense
       if(armor_set%lowrank)then
          rank_ind=1   ! low rank index
@@ -1890,7 +1896,16 @@ contains
             value5(i)=armor_list(armor_set%armor_id(i),i)%defense(rank_ind)
          endif
       enddo
-      write(3,1003)title,"---",value5(:),"---",armor_set%defense
+      bonus_title=""
+      if(if_bonus.and.(bonus(6).ne.0))then
+         armor_set%defense=armor_set%defense+bonus(6)
+         if(bonus(6).gt.0)then
+            bonus_title="Up"
+         else
+            bonus_title="Down"
+         endif
+      endif
+      write(3,1003)title,"---",value5(:),"---",armor_set%defense,bonus_title
 
       !resist
       title5(1)="Resist: Fire"
@@ -1906,7 +1921,16 @@ contains
                value5(i)=armor_list(armor_set%armor_id(i),i)%resist(j)
             endif
          enddo
-         write(3,1004)title5(j),"---",value5(:),"---",armor_set%resist(j)
+         bonus_title=""
+         if(if_bonus.and.(bonus(j).ne.0))then
+            armor_set%resist(j)=armor_set%resist(j)+bonus(j)
+            if(bonus(j).gt.0)then
+               bonus_title="Up"
+            else
+               bonus_title="Down"
+            endif
+         endif
+         write(3,1004)title5(j),"---",value5(:),"---",armor_set%resist(j),bonus_title
       enddo
       write(3,"(80A)")("-",i=1,80) 
 
@@ -1940,8 +1964,8 @@ contains
 !1000  format(A38,A5,3X,A)
 1001  format(A40,A3,3X,3(A,X))
 1002  format(20X,8(A3,1X))
-1003  format(A20,A3,1X,5(I3,1X),A3,1X,I3)
-1004  format(A20,A3,1X,5(I3,1X),A3,1X,I3)
+1003  format(A20,A3,1X,5(I3,1X),A3,1X,I3,1X,A)
+1004  format(A20,A3,1X,5(I3,1X),A3,1X,I3,1X,A)
 !1005  format(A20,8(I3,1X),A)
 1005  format(A20,8(A3,1X),A)
 
@@ -1962,7 +1986,8 @@ contains
       character(len=20) :: effect_name
       integer :: skill_points(8,100),skill_ids(100),value5(5)
       character(len=3) :: point_word(8,100),word_torso(8)
-      logical :: if_neg
+      logical :: if_neg,if_bonus
+      integer :: bonus(6)
 
       if(if_info)write(io_unit,"(A)")"Save Armor Set in HTML Format..."
 
@@ -2031,6 +2056,9 @@ contains
       ! Part 2 : Table (defense,elements,skills)
       call gen_html_2nd_headline
 
+      ! check possible skill bonus
+      call check_skill_bonus(armor_set,if_bonus,bonus)
+
       !defense
       if(armor_set%lowrank)then
          rank_ind=1   ! low rank index
@@ -2046,7 +2074,11 @@ contains
          endif
       enddo
 !     write(3,1003)title,"---",value5(:),"---",armor_set%defense
-      call gen_html_defense_line(title,value5(:),armor_set%defense)
+
+      if(if_bonus.and.(bonus(6).ne.0))then
+         armor_set%defense=armor_set%defense+bonus(6)
+      endif
+      call gen_html_defense_line(title,value5(:),armor_set%defense,if_bonus,bonus)
 
       !resist
       title5(1)="Fire"
@@ -2062,6 +2094,10 @@ contains
                value5(i)=armor_list(armor_set%armor_id(i),i)%resist(j)
             endif
          enddo
+
+         if(if_bonus.and.(bonus(j).ne.0))then
+            armor_set%resist(j)=armor_set%resist(j)+bonus(j)
+         endif
          call gen_html_resist_line(j,value5(:),armor_set%resist(j))
       enddo
 
@@ -2547,7 +2583,7 @@ contains
 
       write(3,"(12A)")'<tr><td width=300>',trim(title),'</td><td align="center" width="30"><font size="2">', &
          trim(slots),'</font></td><td width="30"></td><td width=240>', &
-         (trim(jewel(i)),' &nbsp ',i=1,3),'</td></tr>'
+         (trim(jewel(i)),' &nbsp; ',i=1,3),'</td></tr>'
 
    end subroutine gen_html_weapon_line  
 
@@ -2560,7 +2596,7 @@ contains
 
       write(3,"(12A)")'<tr><td>',trim(title),'</td><td align="center"><font size="2">',&
          trim(slots),'</font></td><td></td><td>', &
-         (trim(jewel(i)),' &nbsp ',i=1,3),'</td></tr>'
+         (trim(jewel(i)),' &nbsp; ',i=1,3),'</td></tr>'
 
    end subroutine gen_html_setup_line
 
@@ -2575,16 +2611,39 @@ contains
 
    end subroutine gen_html_2nd_headline
 
-   ! add defense line
-   subroutine gen_html_defense_line(title,value5,defense)
+   ! add defense line, add bonus embedded table
+   subroutine gen_html_defense_line(title,value5,defense,if_bonus,bonus)
       character(len=255),intent(in) :: title
       integer,intent(in) :: value5(5),defense
+      logical,intent(in) :: if_bonus
+      integer,intent(in) :: bonus(6)
       integer :: i
 
       write(3,"(3A)")'<tr align="right"><td colspan="2" align="left">',trim(title),'</td>'
       write(3,"(A,6(A,I3),A)")'<td>---',('</td><td>',value5(i),i=1,5), &
          '</td><td>---</td><td>',defense,'</td>'
-      write(3,"(A)")'<td colspan="2" rowspan="6"></td></tr>'
+      write(3,"(A)")'<td align="left" colspan="2" rowspan="6">'
+      write(3,"(A)")'<table width="20" border="0" cellpadding="2" rules="none">'
+      ! add bonus table
+      if(if_bonus)then
+         if(bonus(6).gt.0)then
+            write(3,"(A)")'<tr align="center"><td>&nbsp;&uarr;</td></tr>'
+         elseif(bonus(6).lt.0)then
+            write(3,"(A)")'<tr align="center"><td>&nbsp;&darr;</td></tr>'
+         else
+            write(3,"(A)")'<tr><td>&nbsp</td></tr>'
+         endif
+         do i=1,5
+            if(bonus(i).gt.0)then
+               write(3,"(A)")'<tr align="center"><td>&nbsp;&uarr;</td></tr>'
+            elseif(bonus(i).lt.0)then
+               write(3,"(A)")'<tr align="center"><td>&nbsp;&darr;</td></tr>'
+            else
+               write(3,"(A)")'<tr><td>&nbsp;</td></tr>'
+            endif
+         enddo
+      endif
+      write(3,"(A)")'</table></td></tr>'
 
    end subroutine gen_html_defense_line
 
@@ -2632,25 +2691,43 @@ contains
       character(len=20),intent(in) :: effect_name*20
       logical,intent(in) :: if_neg
       integer :: i
+      character(len=6) :: arrow
+      logical :: null_skill
+
+      if(trim(effect_name).eq.trim(empty_name))then
+         arrow="&nbsp;"
+         null_skill=.true.
+      else
+         arrow="&rarr;"
+         null_skill=.false.
+      endif
 
       if(ind.eq.1)then  ! format table, add 1st line
          write(3,"(A,I3,A)")'<tr align="right"><td width="50" rowspan="',num_skill,'" valign="top" align="left">Skill</td>'
          write(3,"(2A)")'<td width="100" align="left">',trim(title)
          write(3,"(8(A,I3))")('</td><td width="30">',skill_points(i),i=1,8)
-         if(if_neg)then
-            write(3,"(4A)")'</td><td width="20"></td><td align="left">' &
-               ,'<font color=red>',trim(effect_name),'</font></td></tr>'
-         else
-            write(3,"(3A)")'</td><td width="20"></td><td align="left">',trim(effect_name),'</td></tr>'
+         if(if_neg)then !neagive skills
+            write(3,"(6A)")'</td><td width="20" color=darkred>',arrow,'</td><td align="left">' &
+               ,'<font color=darkred>',trim(effect_name),'</font></td></tr>'
+         elseif(null_skill)then !inactive skills
+            write(3,"(5A)")'</td><td width="20">',arrow,'</td> &
+               <td align="left">',trim(effect_name),'</td></tr>'
+         else !positive skills
+            write(3,"(5A)")'</td><td width="20"><font color=darkblue>',arrow,'</font></td> &
+               <td align="left"><font color=darkblue>',trim(effect_name),'</font></td></tr>'
          endif
       else
          write(3,"(2A,8(A,I3))")'<tr align="right"><td align="left">',trim(title), &
             ('</td><td>',skill_points(i),i=1,8)
-         if(if_neg)then
-            write(3,"(4A)")'</td><td></td><td align="left">' &
-               ,'<font color=red>',trim(effect_name),'</font></td></tr>'
-         else
-            write(3,"(3A)")'</td><td></td><td align="left">',trim(effect_name),'</td></tr>'
+         if(if_neg)then !neagive skills
+            write(3,"(6A)")'</td><td><font color=darkred>',arrow,'</font></td><td align="left">' &
+               ,'<font color=darkred>',trim(effect_name),'</font></td></tr>'
+         elseif(null_skill)then !inactive skills
+            write(3,"(5A)")'</td><td width="20">',arrow,'</td> &
+               <td align="left">',trim(effect_name),'</td></tr>'
+         else !positive skills
+            write(3,"(5A)")'</td><td><font color=darkblue>',arrow,'</font></td> &
+               <td align="left"><font color=darkblue>',trim(effect_name),'</font></td></tr>'
          endif
       endif
 
@@ -2679,5 +2756,66 @@ contains
       write(3,"(3A)")'</td><td width="20"></td><td align="left">',trim(empty_name),'</td></tr>'
 
    end subroutine gen_html_skill_line_null
+
+   ! check stat bonus from activated skills
+   subroutine check_skill_bonus(armor_set,if_bonus,bonus)
+      type(set_type),intent(in) :: armor_set
+      logical,intent(out) :: if_bonus
+      integer,intent(out) :: bonus(6)    ! 1-5 resist,6, defense
+      integer :: i,effect_id,pos,id
+      character(len=20) :: effect_name
+
+      if_bonus=.false.
+      bonus=0
+      do i=1,armor_set%num_effect
+         effect_id=armor_set%effect_id(i)
+         if(effect_id.eq.0)cycle
+         effect_name=effect_list(effect_id)
+         
+         ! check defense skills
+         if(index(effect_name,"Defense").ne.0)then
+            if_bonus=.true.
+            if(index(effect_name,"(L)").ne.0)then
+               bonus(6)=20
+            elseif(index(effect_name,"(M)").ne.0)then
+               bonus(6)=15
+            elseif(index(effect_name,"(S)").ne.0)then
+               bonus(6)=10
+            endif
+            if(index(effect_name,"Down").ne.0)then
+               bonus(6)=-bonus(6)
+            endif
+         endif
+            
+         ! check element resist skills
+         id=0
+         if(index(effect_name,"Fire Res").ne.0)then
+            id=1
+         elseif(index(effect_name,"Water Res").ne.0)then
+            id=2
+         elseif(index(effect_name,"Ice Res").ne.0)then
+            id=3
+         elseif(index(effect_name,"Thunder Res").ne.0)then
+            id=4
+         elseif(index(effect_name,"Dragon Res").ne.0)then
+            id=5
+         endif
+         if(id.ne.0)then
+            if_bonus=.true.
+            if(index(effect_name,"-15").ne.0)then
+               bonus(id)=-15
+            elseif(index(effect_name,"-10").ne.0)then
+               bonus(id)=-10
+            elseif(index(effect_name,"+10").ne.0)then
+               bonus(id)=10
+            elseif(index(effect_name,"+15").ne.0)then
+               bonus(id)=15
+            elseif(index(effect_name,"+20").ne.0)then
+               bonus(id)=20
+            endif
+         endif
+      enddo
+
+   end subroutine check_skill_bonus
 
 end module mhag
