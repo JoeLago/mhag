@@ -30,3 +30,4 @@ release...
 3. add batch calculation
 4. change to a better charm system, add support to guard+10
 5. add outputs for Torso Up 
+6. add java interface, command-line only
