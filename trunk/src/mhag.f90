@@ -1373,6 +1373,32 @@ contains
       armor_set%effect_skill_index(:)=0
       armor_set%rate=0
    end subroutine init_set_data
+   
+   ! save charm class info in a line
+   subroutine write_charm_class(charm_id,line)
+      integer,intent(in) :: charm_id
+      character(len=255),intent(out) :: line
+      integer :: i,j
+      character(len=3) :: points(2)
+
+      line=''
+      if(charm_id.eq.0)return
+
+      do i=1,charm_list(charm_id)%num_skill
+         j=charm_list(charm_id)%skill_point(i)
+         if(j.gt.0)then
+            write(points(i),"(A,I2)")"+",j
+         else
+            write(points(i),"(I3)")j
+         endif
+      enddo
+      
+      write(line,"(8A)")(charm_list(charm_id)%skill_class(i), &
+         " ",points(i),"  ",i=1,charm_list(charm_id)%num_skill)
+
+!     print *,trim(line)
+
+   end subroutine write_charm_class
 
    ! save charm information in a line
 

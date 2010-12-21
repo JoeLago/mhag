@@ -6,17 +6,21 @@ BIN_DIR = ../bin_gui
 OBJ_DIR = ../bin_gui/obj
 
 OBJECT = \
-			$(OBJ_DIR)/mhag.o \
 			$(OBJ_DIR)/mhag_cpp.o \
+			$(OBJ_DIR)/mhag.o \
+			$(OBJ_DIR)/mhag_gui.o \
 			$(OBJ_DIR)/main.o 
 
-default: Mhag.class $(BIN_DIR)/libMhag.so mv_class
+default: Mhag.class mhagFrame.class $(BIN_DIR)/libMhag.so mv_class
+
+mhagFrame.class : mhagFrame.java
+	javac -g mhagFrame.java 
 
 Mhag.class : Mhag.java
 	javac -g Mhag.java 
 
 mv_class :
-	mv Mhag.class $(BIN_DIR)
+	mv *.class $(BIN_DIR)
 
 $(BIN_DIR)/libMhag.so : $(OBJECT) 
 		g++ -lgfortran $(LIBFLAGS) $(OBJECT) -o $(BIN_DIR)/libMhag.so 
@@ -26,6 +30,9 @@ $(OBJ_DIR)/mhag_cpp.o : Mhag.cpp
 
 $(OBJ_DIR)/mhag.o  : mhag.f90 
 		gfortran $(FCLAGS) mhag.f90 -o $(OBJ_DIR)/mhag.o
+
+$(OBJ_DIR)/mhag_gui.o  : mhag_gui.f90 
+		gfortran $(FCLAGS) mhag_gui.f90 -o $(OBJ_DIR)/mhag_gui.o
 
 $(OBJ_DIR)/main.o  : main.f90 
 		gfortran $(FCLAGS) main.f90 -o $(OBJ_DIR)/main.o

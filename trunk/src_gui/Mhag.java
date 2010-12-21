@@ -17,8 +17,10 @@ public class Mhag implements Runnable
 
    public static void main(String [] args)
    {
-      Mhag mhag = new Mhag();
-      mhag.init();
+
+
+
+
 
 //      mhag.run();
    }
