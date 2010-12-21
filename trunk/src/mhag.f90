@@ -432,7 +432,7 @@ contains
    subroutine read_data
       call check_file
       call read_file
-   end subroutine
+   end subroutine read_data
 
    subroutine check_file ! check if data files exist
       logical :: fexist

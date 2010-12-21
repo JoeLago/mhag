@@ -10,10 +10,17 @@ public class Mhag implements Runnable
      // mhagProc();
    }
 
+   public void init()
+   {
+	   mhagInit();
+   }
+
    public static void main(String [] args)
    {
       Mhag mhag = new Mhag();
-      mhag.run();
+      mhag.init();
+
+//      mhag.run();
    }
 
    public native void mhagInit();

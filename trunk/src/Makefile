@@ -15,6 +15,7 @@ OBJ_DIR= ../bin/obj
 
 OBJECT = \
 			$(OBJ_DIR)/mhag.o \
+			$(OBJ_DIR)/mhag_gui.o \
 			$(OBJ_DIR)/main.o 
 
 default: all
@@ -26,6 +27,9 @@ $(BIN_DIR)/mhag : $(OBJECT)
 
 $(OBJ_DIR)/mhag.o : mhag.f90
 	$(FCOMPLR) $(FCFLAGS) -c -o $(OBJ_DIR)/mhag.o $<
+
+$(OBJ_DIR)/mhag_gui.o : mhag_gui.f90
+	$(FCOMPLR) $(FCFLAGS) -c -o $(OBJ_DIR)/mhag_gui.o $<
 
 $(OBJ_DIR)/main.o : main.f90
 	$(FCOMPLR) $(FCFLAGS) -c -o $(OBJ_DIR)/main.o $<
