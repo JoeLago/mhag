@@ -10,12 +10,12 @@ Gobul Greaves+                          OOO   Voracious
 CHARM: Rec Level + 7                    OO-   Panacea                         
 --------------------------------------------------------------------------------
                     WEP HEA CHE ARM WAI LEG CHA TOT
-Max Defense         ---  10  74  74  74  74 --- 306
-Resist: Fire        ---   0  -2  -2  -2  -2 ---  -8
-        Water       ---   0   4   4   4   4 ---  16
-        Ice         ---   0   0   0   0   0 ---   0
-        Thunder     ---   0  -4  -4  -4  -4 --- -16
-        Dragon      ---   0   2   2   2   2 ---   8
+Max Defense         ---  10  74  74  74  74 --- 306       
+Resist: Fire        ---   0  -2  -2  -2  -2 ---  -8       
+        Water       ---   0   4   4   4   4 ---  16       
+        Ice         ---   0   0   0   0   0 ---   0       
+        Thunder     ---   0  -4  -4  -4  -4 --- -16       
+        Dragon      ---   0   2   2   2   2 ---   8       
 --------------------------------------------------------------------------------
 Skills: Wide-Range  ---  20 --- --- --- --- ---  20 Wide-Range +2       
         Stun          2 ---   4   4   4   2 ---  16 Negate Stun         

@@ -6,8 +6,8 @@ public class Mhag implements Runnable
 
    public void run()
    {
-      mhagInit();
-      mhagProc();
+     // mhagInit();
+     // mhagProc();
    }
 
    public static void main(String [] args)
