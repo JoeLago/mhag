@@ -1800,7 +1800,7 @@ contains
       character(len=3) :: point_word(8,100),word_torso(8)
       logical :: if_bonus
       integer :: bonus(6)
-      character(len=4) :: bonus_title
+      character(len=6) :: bonus_title
 
       if(if_info)write(io_unit,"(A)")"Save Armor Set in TEXT Format..."
       write(3,"(80A)")("=",i=1,80) 
@@ -1900,9 +1900,9 @@ contains
       if(if_bonus.and.(bonus(6).ne.0))then
          armor_set%defense=armor_set%defense+bonus(6)
          if(bonus(6).gt.0)then
-            bonus_title="Up"
+            bonus_title="<up>"
          else
-            bonus_title="Down"
+            bonus_title="<down>"
          endif
       endif
       write(3,1003)title,"---",value5(:),"---",armor_set%defense,bonus_title
@@ -1925,9 +1925,9 @@ contains
          if(if_bonus.and.(bonus(j).ne.0))then
             armor_set%resist(j)=armor_set%resist(j)+bonus(j)
             if(bonus(j).gt.0)then
-               bonus_title="Up"
+               bonus_title="<up>"
             else
-               bonus_title="Down"
+               bonus_title="<down>"
             endif
          endif
          write(3,1004)title5(j),"---",value5(:),"---",armor_set%resist(j),bonus_title
