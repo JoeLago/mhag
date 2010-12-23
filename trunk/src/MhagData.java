@@ -65,7 +65,7 @@ public class MhagData {
 
 
 	// Constants for file names
-	private final String dir = "../data/";
+	private final String dir = "data/";
 	private final String fileArmor = dir+"armor.dat";
 	private final String fileJewel = dir+"jewel.dat";
 	private final String fileSkill = dir+"skill.dat";
