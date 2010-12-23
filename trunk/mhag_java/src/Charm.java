@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class Charm {
 
-	public void Charm()
+	public Charm()
 	{
 		skillClass = new String[2];
 		skillPoint = new int[2];
@@ -18,12 +18,15 @@ public class Charm {
 		return charmName;
 	}
 
-	private int charmID = 0;
-	private String charmName = "";
-	private boolean lowrank = false;
-	private int numSlot=0, numSkill = 0, charmClass = 0, pecentage = 0;
-	private String[] skillClass;
-	private int[] skillPoint;
+	private int charmID = 0; // Charm ID
+	private String charmName = ""; // skillClass + skillPoint
+	private int charmClass = 0; // 1,2,3 for mh3
+	private int numSlot = 0; // 0-3 slots
+	private boolean lowrank = false;  // lr Y / hr N
+	private int pecentage = 0;  //percentage rate for the current charmClass
+	private int numSkill = 0;  // two skills max
+	private String[] skillClass; // A/B/C/D
+	private int[] skillPoint;  // -10 : 10
 
 	static int charmIDTot = 0;
 }

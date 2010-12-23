@@ -1,9 +1,10 @@
 
 import java.util.Arrays;
+import java.lang.Math;
 
 public class Armor {
 
-	public void Armor()
+	public Armor()
 	{
 		defense = new int[2];
 		resist = new int[5];
@@ -22,12 +23,31 @@ public class Armor {
 		return armorName;
 	}
 
-	private int armorID = 0;
-	private String armorName = "";
-	private String bladerOrGunner = "A";
-	private boolean lowRank = false;
-	private int bodyPart = 0, numSlot = 0, numSkill = 0;
-	private int[] defense, resist, skillID, skillPoint;
+	// calculate max possible armor pieces for one part
+	public int getArmorMax()
+	{
+		int num = 0;
+		for(int i = 0; i < 5 ; i++)
+		{
+			if(armorIDTot[i] > num)
+			{
+				num = armorIDTot[i];
+			}
+		}
+		return num;
+	}
+
+	private int armorID = 0;  // Armor ID
+	private String armorName = "";   // Armor Piece Name
+	private String bladerOrGunner = "";  // Blader/Gunner/All
+	private boolean lowRank = false; //lr Y / hr N
+	private int bodyPart = 0;  // Head/Chest/Arms/Waist/Legs
+	private int numSlot = 0;   // # of slots: 0 - 3
+	private int[] defense;  // 0: lr, 1: hr defense
+	private int[] resist;  // 0-4: Fire/Water/Ice/Thunder/Dragon
+	private int numSkill = 0;  // # of Skill types (max 5 for all mh3 armor)
+	private int[] skillID;  // Skill ID
+	private int[] skillPoint; // Skill Points
 
 	static int[] armorIDTot;
 	static

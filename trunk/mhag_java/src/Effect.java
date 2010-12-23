@@ -1,7 +1,7 @@
 
 public class Effect {
 
-	public void Effect()
+	public Effect()
 	{
 	}
 
@@ -11,9 +11,10 @@ public class Effect {
 		return effectName;
 	}
 
-	private int effectID = 0;
-	private String effectName = "";
-	private int skillID = 0, effectTrigger = 0;
+	private int effectID = 0;  // Effect ID
+	private String effectName = "";   // Effect Name
+	private int skillID = 0;  // SKill ID
+	private int effectTrigger = 0; // Trigger Point
 
 	static int effectIDTot = 0;
 }

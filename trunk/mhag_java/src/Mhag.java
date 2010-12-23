@@ -1,6 +1,7 @@
 
-import java.io.*;
-import java.lang.String.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 
 public class Mhag
 {
@@ -154,13 +155,34 @@ public class Mhag
 	}
 
 	//init process
-	public void init(Mhag mhag, String[] args) throws FileNotFoundException
+	public static void init(Mhag mhag, String[] args)
+		throws FileNotFoundException
 	{
 		mhag.procArg(args);
 		mhag.prepareLogFile();
 
 		mhag.showMhagInfo();
 		mhag.showMhagArgs();
+
+		MhagData mhagData = new MhagData();
+		mhagData.readFile(mhag);
+	}
+
+	// get log option
+	public int getLogOpt()
+	{
+		return logOpt;
+	}
+
+	// get out object for log outputs
+	public PrintStream getOutLog()
+	{
+		return outLog;
+	}
+
+	public String getFileOut()
+	{
+		return fileOut;
 	}
 
 	public static void main(String[] args) throws FileNotFoundException
@@ -179,9 +201,11 @@ public class Mhag
 				 // 2: generator; 3: reference;
 	private String fileIn = "input.dat";  // MHAG default input file
 	private String fileOut = "result";  // MHAG default output file
+	private String fileLog = "log";  // MHAG default log file
 	private int logOpt = 0 ;  //log information option "": screen
 			         // "log": file 2: "off" : off
-	private String fileLog = "log";  // MHAG default log file
 	private int outFormat = 0; // Output Format 0: text; 1: html
 	private PrintStream outLog = null;  // object for writing log
+
+	// set to public for io access
 }

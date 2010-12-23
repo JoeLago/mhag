@@ -12,3 +12,5 @@ FileOut: result.txt
 FileLog: log
 LogOPT flag: 1
 OutFormat flag: 0
+
+Total Number of Skills : 83

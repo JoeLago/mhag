@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class Set {
 
-	public void Set()
+	public Set()
 	{
 		armorID = new int[5];
 		jewelID = new int[7][3];
