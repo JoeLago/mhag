@@ -151,7 +151,7 @@ public class Mhag
 			head=head+"=";
 		}
 		outLog.println(head);
-		outLog.println("MHAG: ver 0.5");
+		outLog.println("MHAG: ver 1.0");
 		outLog.println("Monster Hunter Armor Generator");
 		outLog.println("By Tifa@mh3, Dec 2010");
 		outLog.println("http://www.youtube.com/mh3journey");
