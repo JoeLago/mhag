@@ -15,8 +15,21 @@ extern "C" {
 JNIEXPORT void JNICALL Java_Mhag_mhagInit
   (JNIEnv *, jobject);
 
+/*
+ * Class:     Mhag
+ * Method:    mhagProc
+ * Signature: ()V
+ */
 JNIEXPORT void JNICALL Java_Mhag_mhagProc
   (JNIEnv *, jobject);
+
+/*
+ * Class:     Mhag
+ * Method:    genMenuList
+ * Signature: (ZZ[I[[Ljava/lang/String;[[I)V
+ */
+JNIEXPORT void JNICALL Java_Mhag_genMenuList
+  (JNIEnv *, jobject, jboolean, jboolean, jintArray, jobjectArray, jobjectArray);
 
 #ifdef __cplusplus
 }

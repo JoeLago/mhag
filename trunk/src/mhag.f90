@@ -22,7 +22,7 @@ module mhag
       integer :: charm_skill_id(2) !two skill ids
       ! outputs
       integer :: defense      !total defense
-      integer :: resist(5)    !total defense
+      integer :: resist(5)    !total resist 
       integer :: num_skill    !all skills involved
       integer :: skill_id(100)       !all skill id
       integer :: skill_point(100)    !all skill points
@@ -1393,8 +1393,9 @@ contains
          endif
       enddo
       
-      write(line,"(8A)")(charm_list(charm_id)%skill_class(i), &
-         " ",points(i),"  ",i=1,charm_list(charm_id)%num_skill)
+      write(line,"(11A)")(charm_list(charm_id)%skill_class(i), &
+         " ",points(i),"  ",i=1,charm_list(charm_id)%num_skill),&
+         ("o",i=1,charm_list(charm_id)%num_slot)
 
 !     print *,trim(line)
 
@@ -1453,6 +1454,38 @@ contains
 !     print *,trim(line)
 
    end subroutine write_charm2
+!
+   subroutine gen_jewel_name_short(jewel,line)
+      type(jewel_type),intent(in) :: jewel
+      character(len=255),intent(out) :: line
+      integer :: i,j,pos
+      character(len=3) :: points(2)
+      character(len=20) :: jewel_short
+
+      line=''
+
+      do i=1,jewel%num_skill
+         j=jewel%skill_point(i)
+         if(j.gt.0)then
+            write(points(i),"(A,I2)")"+",j
+         else
+            write(points(i),"(I3)")j
+         endif
+      enddo
+
+      pos=index(jewel%jewel_name,"Jewel")
+      jewel_short=jewel%jewel_name(1:pos-1)
+      if(index(jewel%jewel_name,"+").ne.0)then
+         jewel_short=trim(jewel_short)//"+"
+      endif
+      
+      write(line,"(7A)")trim(jewel_short)," (", &
+         trim(skill_list(jewel%skill_id(1))%skill_name), &
+         ")  ",("o",i=1,jewel%num_slot)
+
+!     print *,trim(line)
+
+   end subroutine gen_jewel_name_short
 
    ! Main subroutine !!! armor skill calculator
 
@@ -2713,8 +2746,8 @@ contains
    subroutine gen_html_skill_line(num_skill,ind,title, &
       skill_points,effect_name,if_neg)
       integer,intent(in) :: num_skill,ind,skill_points(8)
-      character(len=255),intent(in) :: title*255
-      character(len=20),intent(in) :: effect_name*20
+      character(len=255),intent(in) :: title
+      character(len=20),intent(in) :: effect_name
       logical,intent(in) :: if_neg
       integer :: i
       character(len=6) :: arrow
