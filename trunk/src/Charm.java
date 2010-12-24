@@ -17,7 +17,7 @@ public class Charm {
 		Arrays.fill(skillPoint, 0);
 	}
 
-	// get armor name
+	// get charm name
 	public String getCharmName()
 	{
 		return charmName;

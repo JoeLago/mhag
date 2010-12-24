@@ -19,7 +19,7 @@ public class Set {
 		Arrays.fill(charmSkillID, 0);
 	}
 
-	// get armor name
+	// get set name
 	public String getSetName()
 	{
 		return setName;

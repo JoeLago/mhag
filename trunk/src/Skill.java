@@ -18,15 +18,13 @@ public class Skill {
 		Arrays.fill(effectTrigger, 0);
 		Arrays.fill(effectName, "");
 
-		skillID = skillIDTot;  // skillID  start from 1
-		skillIDTot++;
 	}
 
     	// read skill entry from a line
 	public static int readSkillLine(String line, Skill skill)
 	{
 		// skill id
-		skill.skillID = skillIDTot;
+ 		skill.skillID = skillIDTot++;
 
 		int startPos = 0;
 		int endPos = 0;
@@ -80,17 +78,35 @@ public class Skill {
 		return 0;
 	}
 
+	// get Skill ID
+	public int getSkillID()
+	{
+		return skillID;
+	}
 
-	// get armor name
+
+	// get skill name
 	public String getSkillName()
 	{
 		return skillName;
+	}
+
+	// get number of effects
+	public int getNumEffect()
+	{
+		return numEffect;
 	}
 
 	// get Effect Name
 	public String[] getEffectName()
 	{
 		return effectName;
+	}
+
+	// get Effect Trigger Points
+	public int[] getEffectTrigger()
+	{
+		return effectTrigger;
 	}
 
 	private int skillID = 0; // Skill ID
