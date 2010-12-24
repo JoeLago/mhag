@@ -1,4 +1,5 @@
-/* @program MHAG
+/**
+ * @program MHAG
  * @ Main Mhag Class
  * @version 1.0
  * @author Tifa@mh3
@@ -166,11 +167,14 @@ public class Mhag
 		mhag.procArg(args);
 		mhag.prepareLogFile();
 
-		mhag.showMhagInfo();
-		mhag.showMhagArgs();
+		mhag.showMhagInfo(); //display MHAG welcome info
+		mhag.showMhagArgs(); //display MHAG arguments
 
 		MhagData mhagData = new MhagData();
-		mhagData.readFile(mhag);
+		mhagData.readFile(mhag);  //read file
+		mhagData.dataPreProc();  //pre process
+
+		if(mhag.method == 3)mhagData.showReference(mhag); //show ref
 	}
 
 	// get log option

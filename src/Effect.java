@@ -1,4 +1,5 @@
-/* @program MHAG
+/**
+ * @program MHAG
  * @ Effect Class
  * @version 1.0
  * @author Tifa@mh3
@@ -11,12 +12,13 @@ public class Effect {
 	}
 
 	// get effect list
-	public void getEffectFromSkill(Skill skill, int ithEffect)
+	public void setEffectFromSkill(Skill skill, int ithEffect)
 	{
-		effectID = effectIDTot;
+		effectID = effectIDTot++;  //start from 1
 		effectName = skill.getEffectName()[ithEffect];
 		effectTrigger =skill.getEffectTrigger()[ithEffect];
-		effectIDTot++;
+		skillID = skill.getSkillID();
+		skillName = skill.getSkillName();
 		//System.out.printf("%d\n", effectIDTot);
 	}
 
@@ -32,10 +34,16 @@ public class Effect {
 		return effectName;
 	}
 
+	// get effect Trigger
+	public int getEffectTrigger()
+	{
+		return effectTrigger;
+	}
 
 	private int effectID = 0;  // Effect ID
 	private String effectName = "";   // Effect Name
 	private int skillID = 0;  // SKill ID
+	private String skillName = "";  // Skill Name
 	private int effectTrigger = 0; // Trigger Point
 
 	static int effectIDTot = 0;

@@ -1,4 +1,5 @@
-/* @program MHAG
+/**
+ * @program MHAG
  * @ Set Class , a set & stats
  * @version 1.0
  * @author Tifa@mh3
