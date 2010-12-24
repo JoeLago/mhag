@@ -1,4 +1,5 @@
-/* @program MHAG
+/**
+ * @program MHAG
  * @ MhagUtil Class , static shared methods
  * @version 1.0
  * @author Tifa@mh3
@@ -21,7 +22,7 @@ public class MhagUtil {
 		}
 		else
 		{
-			word = line.substring(startPos, endPos - 1);
+			word = line.substring(startPos, endPos);
 		}
 		return word.trim();
 	}

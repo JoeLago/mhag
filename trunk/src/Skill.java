@@ -1,4 +1,5 @@
-/* @program MHAG
+/**
+ * @program MHAG
  * @ Skill Class
  * @version 1.0
  * @author Tifa@mh3
@@ -21,10 +22,10 @@ public class Skill {
 	}
 
     	// read skill entry from a line
-	public static int readSkillLine(String line, Skill skill)
+	public static int setSkillFromLine(String line, Skill skill)
 	{
 		// skill id
- 		skill.skillID = skillIDTot++;
+ 		skill.skillID = skillIDTot++;  //start from 1;
 
 		int startPos = 0;
 		int endPos = 0;
@@ -53,7 +54,10 @@ public class Skill {
 			}
 			else
 			{
-				if(endPos == -1)return 1;
+				// read effects name/trigger points
+
+				if(endPos == -1)return 1; //error no skill point
+				if(skill.numEffect == 6)return 1; // effect <= 6
 
 				// read effects
 				skill.effectName[skill.numEffect] = word;
@@ -66,10 +70,9 @@ public class Skill {
 				skill.numEffect++;
 			}
 
-
 			if(endPos  == -1)
 			{
-				if(wordIndex <= 2)return 1;
+				if(wordIndex <= 2)return 1;  // error no effect
 				break;
 			}
 			startPos = endPos + 1;
@@ -84,11 +87,16 @@ public class Skill {
 		return skillID;
 	}
 
-
 	// get skill name
 	public String getSkillName()
 	{
 		return skillName;
+	}
+
+	// get skill class
+	public String getSkillClass()
+	{
+		return skillClass;
 	}
 
 	// get number of effects
