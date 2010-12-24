@@ -111,6 +111,12 @@ public class Skill {
 		return effectName;
 	}
 
+	// get Effect ID
+	public int[] getEffectID()
+	{
+		return effectID;
+	}
+
 	// get Effect Trigger Points
 	public int[] getEffectTrigger()
 	{

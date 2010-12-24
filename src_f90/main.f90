@@ -17,17 +17,13 @@ subroutine init
    call read_data
    call data_pre_proc
 
-   call gen_menu_list(.false.,.true.,num_list,menus,slots)
-
-   do i=1,9
-      do j=1,num_list(i)
-         print "(2I4,4X,A40,I4)",i,j,menus(j,i),slots(j,i)
-      enddo
-   enddo
-
-   stop
-
-
+!  call gen_menu_list(.false.,.true.,num_list,menus,slots)
+!   do i=1,9
+!      do j=1,num_list(i)
+!         print "(2I4,4X,A40,I4)",i,j,menus(j,i),slots(j,i)
+!      enddo
+!   enddo
+!   stop
 
 end subroutine init
 
