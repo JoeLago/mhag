@@ -148,6 +148,11 @@ public class Jewel {
 		return lowRank;
 	}
 
+	// get # of slots
+	public int getNumSlot()
+	{
+		return numSlot;
+	}
 	// set skill ID in a jewel
 	public void setSkillID(int[] id)
 	{

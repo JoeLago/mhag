@@ -90,7 +90,7 @@ public class Armor {
 			else if(wordIndex == 3)
 			{
 				//Body Part (check)
-				if( nBodyPart == getBodyPartIndex(word))
+				if( nBodyPart == convertBodyPart(word))
 				{
 					armor.bodyPart = nBodyPart;
 				}
@@ -269,11 +269,54 @@ public class Armor {
 		}
 	}
 
+	// get blader/gunner info
+	public String getBladerOrGunner()
+	{
+		return bladerOrGunner;
+	}
+
+	// get body part
+	public int getBodyPart()
+	{
+		return bodyPart;
+	}
+
+	// get # of slots
+	public int getNumSlot()
+	{
+		return numSlot;
+	}
+
+	// get lowrank defense
+	public int getDefenseLowRank()
+	{
+		return defense[0];
+	}
+
+	// get highrank defense
+	public int getDefenseHighRank()
+	{
+		return defense[1];
+	}
+
+	// get resist
+	public int[] getResist()
+	{
+		return resist;
+	}
+
 	// convert armor part character to index
-	public static int getBodyPartIndex(String aBodyPart)
+	public static int convertBodyPart(String aBodyPart)
 	{
 		String partFull = "HCAWL";
 		return partFull.indexOf(aBodyPart);
+	}
+
+	// convert armor part index to character
+	public static String convertBodyPart(int index)
+	{
+		String partFull = "HCAWL";
+		return partFull.substring(index,index);
 	}
 
 	private int armorID = 0;  // Armor ID

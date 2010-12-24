@@ -19,8 +19,9 @@ public class Mhag
 	// MHAG command-line help
 	public static void showHelp()
 	{
-		System.out.println("Usage: javac Mhag <cal/bat/gen/ref> in " +
-			"<input.dat> out <result.dat> log <''/log/off>" +
+		System.out.println("Usage: javac Mhag method " +
+			"<cal/bat/gen/ref> in <input.dat> " +
+			"out <result.dat> log <''/log/off> " +
 			"format <text/html>");
 		System.exit(0);
 	}

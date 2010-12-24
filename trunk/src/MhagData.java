@@ -292,7 +292,7 @@ public class MhagData {
 			line = in.nextLine();
 			if(line.startsWith("#"))continue;
 			String word = Armor.getBodyPartFromLine(line);
-			nBodyPart = Armor.getBodyPartIndex(word);
+			nBodyPart = Armor.convertBodyPart(word);
 			nMax[nBodyPart] += 1;
 		}
 		if(mhag.getLogOpt() != 2)
@@ -334,7 +334,7 @@ public class MhagData {
 			// System.out.println(line);
 
 			String word = Armor.getBodyPartFromLine(line);
-			nBodyPart = Armor.getBodyPartIndex(word);
+			nBodyPart = Armor.convertBodyPart(word);
 
 			ioErr = Armor.setArmorFromLine(line, nBodyPart,
 				armorList[nBodyPart][armorIndex[nBodyPart]]);

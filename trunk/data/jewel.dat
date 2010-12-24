@@ -10,7 +10,7 @@ Steadfast Jewel : L : 1 : Stun : 1 : Paralysis : -1
 Steadfast Jewel+ : L : 1 : Stun : 2
 Weather Jewel : L : 1 : Mud/Snow : 1 : Sleep : -1
 Weather Jewel+ : L : 1 : Mud/Snow : 2
-Ninja Jewel : L : 1 : Sense : 2
+Ninja Jewel : L : 1: Sense : 2
 Vitality Jewel : L : 1 : Health : 2
 Recovery Jewel : L : 1 : Rec Speed : 1 : Eating : -1
 Resurgence Jewel : L : 2 : Rec Speed : 3 : Eating : -1
@@ -28,7 +28,7 @@ Stone Wall Jewel : L : 1 : Guard : 1 : Stamina : -1
 Iron Wall Jewel : H : 2 : Guard : 3 : Stamina : -1
 Shield Jewel : L : 1 : Guard Up : 1 : Stamina : -1
 Aegis Jewel : H : 2 : Guard Up : 3 : Stamina : -1
-Quickload Jewel : L : 1: Reload Spd : 1 : Recoil : -1
+Quickload Jewel : L : 1 : Reload Spd : 1 : Recoil : -1
 Flashload Jewel : H : 2 : Reload Spd : 3 : Recoil : -1
 Absorber Jewel : L : 1 : Recoil : 1 : Reload Spd : -1
 FlinchFree Jewel : H : 3 : Recoil : 4 : Reload Spd : -2
