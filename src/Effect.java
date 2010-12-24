@@ -10,11 +10,28 @@ public class Effect {
 	{
 	}
 
-	// get armor name
-	public String getEffeectName()
+	// get effect list
+	public void getEffectFromSkill(Skill skill, int ithEffect)
+	{
+		effectID = effectIDTot;
+		effectName = skill.getEffectName()[ithEffect];
+		effectTrigger =skill.getEffectTrigger()[ithEffect];
+		effectIDTot++;
+		//System.out.printf("%d\n", effectIDTot);
+	}
+
+	// get effect ID
+	public int getEffectID()
+	{
+		return effectID;
+	}
+
+	// get effect name
+	public String getEffectName()
 	{
 		return effectName;
 	}
+
 
 	private int effectID = 0;  // Effect ID
 	private String effectName = "";   // Effect Name

@@ -17,7 +17,7 @@ public class Jewel {
 		Arrays.fill(skillPoint, 0);
 	}
 
-	// get armor name
+	// get jewel name
 	public String getJewelName()
 	{
 		return jewelName;
