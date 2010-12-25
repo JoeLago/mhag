@@ -139,18 +139,19 @@ public class Charm {
 	// set charm name
 	public void setCharmName()
 	{
-		String name = "";
+		StringBuffer name = new StringBuffer("");
+
 		String line = "";
 
 		for (int i = 0; i < numSkill; i++)
 		{
 			line=String.format("%s%+d, ",
 				skillClass[i],skillPoint[i]);
-			name += line;
+			name.append(line);
 		}
 		for (int i = 0; i < numSlot; i++)
 		{
-			name += "O";
+			name.append("O");
 		}
 		if(numSlot == 0)
 		{
@@ -158,7 +159,7 @@ public class Charm {
 		}
 		else
 		{
-			charmName = name;
+			charmName = name.toString();
 		}
 	}
 
