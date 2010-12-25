@@ -36,11 +36,17 @@ public class MhagUtil {
 		Arrays.fill(values, 0);
 		String[] numArray = line.split(" ");
 
-		if(numArray[0].equals(""))return 0;
+		if(numArray[0].trim().equals(""))return 0;
 
-		int num = numArray.length;
-		for (int i = 0; i < Math.min(num, nMax); i++)
-  			values[i] = Integer.parseInt(numArray[i]);
+		int num = 0;
+		for (int i = 0; i < numArray.length; i++)
+		{
+			if(numArray[i].trim().equals(""))continue;
+  			values[num] = Integer.valueOf(numArray[i].trim());
+			num++;
+
+			if(num == nMax) return nMax;
+		}
 		return num;
 	}
 
@@ -49,6 +55,34 @@ public class MhagUtil {
 	{
 		if(mhag.getLogOpt() != 2)
 			mhag.getOutLog().println(line);
+	}
+
+	// simple bubble sort, return sorted array by index;
+	public static int[] sortIndex(int length, int[] values)
+	{
+		int[] index = new int[length];
+		for(int i = 0; i < length; i++)
+		{
+			index[i] = i;
+		}
+
+		int jmax = length -1;
+		for (int i = 0; i < length -1; i++)
+		{
+			boolean change = false;
+			for (int j = 0; j < jmax; j++)
+			{
+				if(values[index[j]] <= values[index[j+1]])
+				{
+					change = true;
+					int temp = index[j];
+					index[j] = index[j+1];
+					index[j+1] = temp;
+				}
+			}
+			if(!change) break;
+		}
+		return index;
 	}
 
 }

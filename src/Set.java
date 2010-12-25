@@ -373,7 +373,9 @@ public class Set {
 			else if(opt.equals("charm skill"))  //charm skill
 			{
 				numCharmSkill =
-					MhagUtil.extractInt(args, 2,charmSkillID);
+					MhagUtil.extractInt(args, 2, values);
+				for (int i = 0; i < numCharmSkill; i++)
+					charmSkillID[i] = values[i];
 			}
 		}
 	}
@@ -468,6 +470,19 @@ public class Set {
 		Arrays.fill(charmSkillID, 0);
 		Arrays.fill(inUse, false);
 		Arrays.fill(numJewel, 0);
+
+		// outputs
+		resist = new int[5];
+		skillID = new int[100];
+		skillPoint = new int[100];
+		effectID = new int[8];
+		effectSkillIndex = new int[8];
+		Arrays.fill(resist, 0);
+		Arrays.fill(skillID, 0);
+		Arrays.fill(skillPoint, 0);
+		Arrays.fill(effectID, 0);
+		Arrays.fill(effectSkillIndex, 0);
+
 	}
 	// set a set from code (batch version)
 	public void setSetFromCode(Mhag mhag, String line)
@@ -570,6 +585,493 @@ public class Set {
 
 	}
 
+	// check set consistency
+	public boolean checkSet(Mhag mhag, MhagData mhagData)
+	{
+		MhagUtil.logLine(mhag, "Checking Set Consistentcy...");
+
+		//low rank check
+		if(lowRank)
+		{
+			String  errLine = "   Error! not low rank armor piece";
+
+			// armor
+			for(int i = 0; i < 5; i++)
+			{
+				if(!inUse[i])continue;
+				Armor armor = mhagData.getArmor(i, armorID[i]);
+				if(!armor.getLowRank())
+				{
+					MhagUtil.logLine(mhag,errLine);
+					return false;
+				}
+			}
+
+			// jewel
+			for(int i = 0; i < 7; i++)
+			{
+				if(!inUse[i])continue;
+				if(numJewel[i] == 0)continue;
+				for(int j = 0; j < numJewel[i]; j++)
+				{
+					Jewel jewel = mhagData.
+						getJewel(jewelID[i][j]);
+					if(!jewel.getLowRank())
+					{
+						MhagUtil.logLine(mhag,errLine);
+						return false;
+					}
+				}
+			}
+
+			// charm
+			if(inUse[6])
+			{
+				Charm charm = mhagData.getCharm(charmID);
+				if(!charm.getLowRank())
+				{
+					MhagUtil.logLine(mhag,errLine);
+					return false;
+				}
+			}
+		}
+
+		// B/G check
+		if(blade)
+		{
+			String errLine2  = "   Error! not for Blademaster!";
+			for(int i = 0; i < 5; i++)
+			{
+				if(!inUse[i])continue;
+				Armor armor = mhagData.getArmor(i, armorID[i]);
+				if(armor.getBladeOrGunner().equals("G"))
+				{
+					MhagUtil.logLine(mhag,errLine2);
+					return false;
+				}
+			}
+		}
+		else
+		{
+			String errLine3  = "   Error! not for Gunner!";
+			for(int i = 0; i < 5; i++)
+			{
+				if(!inUse[i])continue;
+				Armor armor = mhagData.getArmor(i, armorID[i]);
+				if(armor.getBladeOrGunner().equals("B"))
+				{
+					MhagUtil.logLine(mhag,errLine3);
+					return false;
+				}
+			}
+
+		}
+
+		// slots check
+
+		int nSlot = 0;
+		int nSlotArmor = 0;
+		String  errLine4 = "   Error! Jewels require too many slots";
+
+		//armor slots
+		for(int i = 0; i < 5; i++)
+		{
+			if(!inUse[i])continue;
+			Armor armor = mhagData.getArmor(i, armorID[i]);
+			nSlotArmor = armor.getNumSlot();
+
+			nSlot = 0;
+			for(int j = 0; j < numJewel[i]; j++)
+			{
+				Jewel jewel = mhagData.
+					getJewel(jewelID[i][j]);
+				nSlot += jewel.getNumSlot();
+			}
+			if(nSlot > nSlotArmor)
+			{
+				MhagUtil.logLine(mhag,errLine4);
+				return false;
+			}
+		}
+
+		// weapon slots  < 3
+		if( numJewel[5] != 0)
+		{
+			nSlot = 0;
+			for(int j = 0; j < numJewel[5]; j++)
+			{
+				Jewel jewel = mhagData.
+					getJewel(jewelID[5][j]);
+				nSlot += jewel.getNumSlot();
+			}
+			if(nSlot > 3)
+			{
+				MhagUtil.logLine(mhag,errLine4);
+				return false;
+			}
+		}
+
+		//charm slots
+		if(inUse[6])
+		{
+			Charm charm = mhagData.getCharm(charmID);
+
+			int nSlotCharm = charm.getNumSlot();
+
+			nSlot = 0;
+			for(int j = 0; j < numJewel[6]; j++)
+			{
+				Jewel jewel = mhagData.
+					getJewel(jewelID[6][j]);
+				nSlot += jewel.getNumSlot();
+			}
+			if(nSlot > nSlotArmor)
+			{
+				MhagUtil.logLine(mhag,errLine4);
+				return false;
+			}
+		}
+
+		//charm skills
+		if(inUse[6])
+		{
+			Charm charm = mhagData.getCharm(charmID);
+			for (int i = 0; i < numCharmSkill; i++)
+			{
+				Skill skill = mhagData.getSkill(charmSkillID[i]);
+				String sClass1 = skill.getSkillClass();
+				if(!charm.getSkillClass()[i].equals(sClass1))
+				{
+					MhagUtil.logLine(mhag,
+						"   Error! Charm Skill Class incorrect!");
+					return false;
+				}
+				if((i == 1) &&
+					(charmSkillID[0] == charmSkillID[1]))
+				{
+					MhagUtil.logLine(mhag,
+						"   Error! Charm Skill should be different!");
+					return false;
+				}
+			}
+		}
+
+		MhagUtil.logLine(mhag,"   Pass!");
+		return true;
+	}
+
+	// calculate set stats
+	public void calcSet(Mhag mhag, MhagData mhagData)
+	{
+		MhagUtil.logLine(mhag, "Calulating Armor Stats...");
+
+		// defense
+		defense = 0;
+		if(lowRank)
+		{
+			for(int i = 0; i < 5; i++)
+			{
+				if(!inUse[i])continue;
+				Armor armor = mhagData.getArmor(i, armorID[i]);
+				defense += armor.getDefenseLowRank();
+			}
+		}
+		else
+		{
+			for(int i = 0; i < 5; i++)
+			{
+				if(!inUse[i])continue;
+				Armor armor = mhagData.getArmor(i, armorID[i]);
+				defense += armor.getDefenseHighRank();
+			}
+		}
+		String line = String.format("   Total Defense : %d",defense);
+		MhagUtil.logLine(mhag, line);
+
+		// element resistance
+		Arrays.fill(resist, 0);
+		for(int i = 0; i < 5; i++)
+		{
+			if(!inUse[i])continue;
+			Armor armor = mhagData.getArmor(i, armorID[i]);
+			for(int j = 0; j < 5; j++)
+				resist[j] += armor.getResist()[j];
+		}
+		String line2 = "   Total Resist : " +
+			Arrays.toString(resist);
+		MhagUtil.logLine(mhag, line2);
+
+		// add skills
+		addSkills(mhag, mhagData);
+		MhagUtil.logLine(mhag, "   Skill List : ");
+		for (int i =0; i < numSkill; i++)
+		{
+			Skill skill = mhagData.getSkill(skillID[i]);
+			String line3 = String.format("%3d : %-10s  %+3d",
+				i, skill.getSkillName(),skillPoint[i]);
+			MhagUtil.logLine(mhag, line3);
+		}
+
+		// check skill effects
+		checkEffects(mhagData);
+		MhagUtil.logLine(mhag, "   Effect List : ");
+		for (int i =0; i < numEffect; i++)
+		{
+			Effect effect = mhagData.getEffect(effectID[i]);
+			String line4 = String.format("%3d : %-10s",
+				i, effect.getEffectName());
+			MhagUtil.logLine(mhag, line4);
+		}
+	}
+
+	// add skill points for a set, calcualte stats
+	public void addSkills(Mhag mhag, MhagData mhagData)
+	{
+		// check number of torso up
+		numTorso = 0;
+		for (int i = 0; i < 5; i++)
+		{
+			if( i == 2)continue;
+			if(!inUse[i])continue;
+			Armor armor = mhagData.getArmor(i, armorID[i]);
+			if(( armor.getNumSkill() == 1) &&
+				( armor.getSkillID()[0] == -1))
+				numTorso++;
+		}
+		String line = String.format("   # of Torso Up : %d",numTorso);
+		MhagUtil.logLine(mhag, line);
+
+		// check skills
+		int[] listMapping  = new int[Skill.skillIDTot];
+		boolean[] ifMapping = new boolean[Skill.skillIDTot];
+		Arrays.fill(listMapping, 0);
+		Arrays.fill(ifMapping, false);
+		numSkill = 0;
+		Arrays.fill(skillID, 0);
+		Arrays.fill(skillPoint, 0);
+
+		// add armor pieces
+		for (int i = 0; i < 5; i++)
+		{
+			if(!inUse[i])continue;
+			Armor armor = mhagData.getArmor(i, armorID[i]);
+			for (int j =0; j < armor.getNumSkill(); j++)
+			{
+				int id = armor.getSkillID()[j];
+				int pos;
+				// check skill index
+				if(!ifMapping[id])  // not assigned
+				{
+					pos = numSkill++;
+					listMapping[id] = pos;
+					ifMapping[id] = true;
+					skillID[pos] = id;
+				}
+				else
+				{
+					pos = listMapping[id];
+				}
+
+				// add ppints
+
+				if((i == 2)&&(numTorso != 0))
+				{
+					skillPoint[pos] += armor.getSkillPoint
+						()[j] * (numTorso + 1);
+				}
+				else
+				{
+					skillPoint[pos] += armor.getSkillPoint
+						()[j];
+				}
+
+			}
+		}
+
+
+		// add jewels
+		for (int i = 0; i < 7; i++){
+		for (int k = 0; k < numJewel[i]; k++)
+		{
+			Jewel jewel = mhagData.getJewel(jewelID[i][k]);
+			for (int j =0; j < jewel.getNumSkill(); j++)
+			{
+				int id = jewel.getSkillID()[j];
+				int pos;
+				// check skill index
+				if(!ifMapping[id])  // not assigned
+				{
+					pos = numSkill++;
+					listMapping[id] = pos;
+					ifMapping[id] = true;
+					skillID[pos] = id;
+				}
+				else
+				{
+					pos = listMapping[id];
+				}
+
+				// add ppints
+
+				if((i == 2)&&(numTorso != 0))
+				{
+					skillPoint[pos] += jewel.getSkillPoint
+						()[j] * (numTorso + 1);
+				}
+				else
+				{
+					skillPoint[pos] += jewel.getSkillPoint
+						()[j];
+				}
+
+			}
+		}
+		}
+
+		// add charm points
+		if( inUse[6]){
+			Charm charm = mhagData.getCharm(charmID);
+
+			for (int j =0; j < numCharmSkill; j++)
+			{
+				int id = charmSkillID[j];
+				int pos;
+				// check skill index
+				if(!ifMapping[id])  // not assigned
+				{
+					pos = numSkill++;
+					listMapping[id] = pos;
+					ifMapping[id] = true;
+					skillID[pos] = id;
+				}
+				else
+				{
+					pos = listMapping[id];
+				}
+
+				// add ppints
+
+				{
+					skillPoint[pos] += charm.getSkillPoint
+						()[j];
+				}
+
+			}
+		}
+
+	}
+
+	// check skill effects
+	public void checkEffects(MhagData mhagData)
+	{
+		numEffect = 0;
+		Arrays.fill(effectID, 0);
+		Arrays.fill(effectSkillIndex, 0);
+
+		for(int i =0; i < numSkill; i++)
+		{
+			int id = skillID[i];
+			int point = skillPoint[i];
+			Skill skill = mhagData.getSkill(id);
+			int nEffect = skill.getNumEffect();
+
+			if(point >= 10 ) //positive skills
+			{
+				for(int j = nEffect -1; j > -1; j--)
+				{
+					int trigger = skill.getEffectTrigger()[j];
+					if((trigger > 0) && (trigger <= point))
+					{
+						effectID[numEffect] =
+							skill.getEffectID()[j];
+						effectSkillIndex[numEffect] = i;
+						numEffect++;
+						break;
+					}
+				}
+			}
+			else if (point <= -10) //nagative skills
+			{
+				for(int j = 1; j < nEffect; j++)
+				{
+					int trigger = skill.getEffectTrigger()[j];
+					if((trigger < 0) && (trigger >= point))
+					{
+						effectID[numEffect] =
+							skill.getEffectID()[j];
+						effectSkillIndex[numEffect] = i;
+						numEffect++;
+						break;
+					}
+				}
+
+			}
+
+		}
+
+	}
+
+	// sort skills based on points & effects, only used for outputs
+	public void sortSkill(Mhag mhag, MhagData mhagData)
+	{
+		int[] index = new int[numSkill];
+		index =	MhagUtil.sortIndex(numSkill, skillPoint);
+
+		// temp skill/effect data
+		int[] sPoint = new int[100];
+		int[] sID = new int[100];
+		int[] eID = new int[8];
+		int[] eSkillInd = new int[8];
+		boolean[] active = new boolean[numSkill];
+
+		Arrays.fill(sPoint, 0);
+		Arrays.fill(sID, 0);
+		Arrays.fill(eID, 0);
+		Arrays.fill(eSkillInd, 0);
+		Arrays.fill(active, false);
+
+		// effect skills
+		int num = 0;
+		for (int i = 0; i < numSkill; i++)
+		{
+			for (int j = 0; j < numEffect; j++)
+			{
+				int ind = effectSkillIndex[j];
+				if(index[i] != ind)continue;
+
+				eID[num] = effectID[j];
+				eSkillInd[num] = ind;
+				sID[num] = skillID[ind];
+				sPoint[num] = skillPoint[ind];
+				active[ind] = true;
+				num++;
+			}
+		}
+
+		effectID = eID;
+		effectSkillIndex = eSkillInd;
+
+		// other skills
+		for (int i = 0; i < numSkill; i++)
+		{
+			int ind = index[i];
+			if(active[ind])continue;
+			sID[num] = skillID[ind];
+			sPoint[num] = skillPoint[ind];
+			num++;
+		}
+		skillID = sID;
+		skillPoint = sPoint;
+
+	}
+
+	public void save(Mhag mhag, MhagData mhagData)
+	{
+		sortSkill(mhag, mhagData);  //sort Skill for outputs
+
+
+	}
+
 	//Inputs
 	private String setName = unNamedSet;  // User-defined Set Name
 	private boolean lowRank = false; // lr T / hr F
@@ -595,4 +1097,5 @@ public class Set {
 	private int rate = 0; // # Reserved for sets Evaluation
 
 	static final String unNamedSet = "Unnamed Set";
+
 }

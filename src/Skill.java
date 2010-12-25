@@ -117,6 +117,12 @@ public class Skill {
 		return effectID;
 	}
 
+	// set Effect ID
+	public void setEffectID(int index, int id)
+	{
+		effectID[index] = id;
+	}
+
 	// get Effect Trigger Points
 	public int[] getEffectTrigger()
 	{

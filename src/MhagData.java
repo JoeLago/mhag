@@ -120,6 +120,7 @@ public class MhagData {
 			for (int j = 0; j < skill.getNumEffect(); j++)
 			{
 				effectList[n].setEffectFromSkill(skill, j);
+				skill.setEffectID(j,n);
 				n++;
 			}
 		}
@@ -172,11 +173,11 @@ public class MhagData {
 	// pre process skill list (genate skill list in class)
 	public void preProcessSkillList()
 	{
-		indexSkillClass = new int[5][Skill.skillIDTot];
-		numSkillClass = new int[5];
-		Arrays.fill(numSkillClass, 0);
+		indexSkillInClass = new int[5][Skill.skillIDTot];
+		numSkillInClass = new int[5];
+		Arrays.fill(numSkillInClass, 0);
 		for (int i = 0; i < 5; i++)
-			Arrays.fill(indexSkillClass[i], 0);
+			Arrays.fill(indexSkillInClass[i], 0);
 		String classStr = "ABCD";
 		String className = "";
 		int classID = 0;
@@ -189,7 +190,7 @@ public class MhagData {
 			{
 				classID = 4;
 			}
-			indexSkillClass[classID][numSkillClass[classID]++] =
+			indexSkillInClass[classID][numSkillInClass[classID]++] =
 				skillList[i].getSkillID();
 		}
 
@@ -500,10 +501,10 @@ public class MhagData {
 
 		for (int i = 0; i < 5; i++)
 		{
-			for (int j = 0; j < numSkillClass[i]; j++)
+			for (int j = 0; j < numSkillInClass[i]; j++)
 			{
 				out.printf("%3d %3d: %s\n",i,j,
-					skillList[indexSkillClass[i][j]].
+					skillList[indexSkillInClass[i][j]].
 					getSkillName());
 			}
 		}
@@ -523,8 +524,53 @@ public class MhagData {
 		String code = aSet.getSetCode();   //get set code
 		MhagUtil.logLine(mhag, code);
 
+		aSet.checkSet(mhag, this);  //check set
+		aSet.calcSet(mhag, this);   //calculate set
+
+		aSet.save(mhag, this);  // save results
 	}
 
+	// get armor class
+	public Armor getArmor(int bodyPart, int armorID)
+	{
+		return armorList[bodyPart][armorID];
+	}
+
+	// get jewel class
+	public Jewel getJewel(int jewelID)
+	{
+		return jewelList[jewelID];
+	}
+
+	// get effect class
+	public Effect getEffect(int effectID)
+	{
+		return effectList[effectID];
+	}
+
+	// get Skill class
+	public Skill getSkill(int skillID)
+	{
+		return skillList[skillID];
+	}
+
+	// get charm class
+	public Charm getCharm(int charmID)
+	{
+		return charmList[charmID];
+	}
+
+	// get number of skill in a class
+	public int getNumSkillInClass(int nClass)
+	{
+		return numSkillInClass[nClass];
+	}
+
+	// get skills in a class
+	public int[] getSkillInClass(int nClass)
+	{
+		return indexSkillInClass[nClass];
+	}
 
 	// Constants for file names
 	private final String dirData = "data/";
@@ -551,6 +597,6 @@ public class MhagData {
 	private Effect[] effectList;
 
 	// indeces
-	private int[][] indexSkillClass;  // skill id list
-	private int[] numSkillClass;  // number skill class
+	private int[][] indexSkillInClass;  // skill id list
+	private int[] numSkillInClass;  // number skill in class
 }
