@@ -39,9 +39,7 @@ public class MhagData {
 	// process data right after access
 	public void showReference(Mhag mhag) throws FileNotFoundException
 	{
-		if(mhag.getLogOpt() != 2)
-			mhag.getOutLog().printf
-				("Generate Reference Files\n");
+		MhagUtil.logLine(mhag, "Gernerate Reference Files");
 		genRefSkill();
 		genRefEffect();
 		genRefJewel();
@@ -64,9 +62,9 @@ public class MhagData {
 			if(line.startsWith("#"))continue;
 			nMax++;
 		}
-		if(mhag.getLogOpt() != 2)
-			mhag.getOutLog().printf
-				("Total Number of Skills : %d\n",nMax);
+		String logLine =  String.format
+			("Total Number of Skills : %d",nMax);
+		MhagUtil.logLine(mhag, logLine);
 
 		in.close();
 
@@ -91,9 +89,8 @@ public class MhagData {
 				(line, skillList[skillIndex]);
 			if(ioErr != 0)
 			{
-				if(mhag.getLogOpt() != 2)
-					mhag.getOutLog().printf
-						("Error Found in Skill File\n");
+				MhagUtil.logLine(mhag,
+					"Error Found in Skill File");
 				return;
 			}
 			skillIndex++;
@@ -239,9 +236,9 @@ public class MhagData {
 			if(line.startsWith("#"))continue;
 			nMax++;
 		}
-		if(mhag.getLogOpt() != 2)
-			mhag.getOutLog().printf
-				("Total Number of Jewels : %d\n",nMax);
+		String logLine = String.format
+			("Total Number of Jewels : %d",nMax);
+		MhagUtil.logLine(mhag,logLine);
 
 		in.close();
 
@@ -266,9 +263,8 @@ public class MhagData {
 				(line, jewelList[jewelIndex]);
 			if(ioErr != 0)
 			{
-				if(mhag.getLogOpt() != 2)
-					mhag.getOutLog().printf
-						("Error Found in Jewel File\n");
+				MhagUtil.logLine(mhag,
+					"Error Found in Jewel File");
 				return;
 			}
 			jewelIndex++;
@@ -295,10 +291,10 @@ public class MhagData {
 			nBodyPart = Armor.convertBodyPart(word);
 			nMax[nBodyPart] += 1;
 		}
-		if(mhag.getLogOpt() != 2)
-			mhag.getOutLog().println("Total Number of Armors"
-				+" : "+Arrays.toString(nMax));
-
+		String logLine = String.format
+			("Total Number of Armors : "
+				+Arrays.toString(nMax));
+		MhagUtil.logLine(mhag, logLine);
 		in.close();
 
 		// find max # of pieces of one part
@@ -340,9 +336,8 @@ public class MhagData {
 				armorList[nBodyPart][armorIndex[nBodyPart]]);
 			if(ioErr != 0)
 			{
-				if(mhag.getLogOpt() != 2)
-					mhag.getOutLog().printf
-						("Error Found in Armor File\n");
+				MhagUtil.logLine(mhag,
+					"Error Found in Armor File");
 				return;
 			}
 			armorIndex[nBodyPart]++;
@@ -364,10 +359,10 @@ public class MhagData {
 			if(line.startsWith("#"))continue;
 			nMax++;
 		}
-		if(mhag.getLogOpt() != 2)
-			mhag.getOutLog().printf
-				("Total Number of Jewels : %d\n",nMax);
 
+		String logLine = String.format
+			("Total Number of Jewels : %d",nMax);
+		MhagUtil.logLine(mhag,logLine);
 		in.close();
 
 		charmList = new Charm[nMax];
@@ -391,9 +386,8 @@ public class MhagData {
 				(line, charmList[charmIndex]);
 			if(ioErr != 0)
 			{
-				if(mhag.getLogOpt() != 2)
-					mhag.getOutLog().printf
-						("Error Found in Jewel File\n");
+				MhagUtil.logLine(mhag,
+					"Error Found in Jewel File");
 				return;
 			}
 			charmIndex++;
@@ -493,9 +487,9 @@ public class MhagData {
 		PrintStream out = new PrintStream(fileRefCharm);
 		for (int i = 0; i < Charm.charmIDTot; i++)
 		{
-			out.printf("%3d: %s %3d%%\n",charmList[i].getCharmID(),
-				charmList[i].getCharmName(),
-				charmList[i].getPercentage());
+			out.printf("%3d: %s\n",charmList[i].getCharmID(),
+				charmList[i].getCharmName());
+			//	charmList[i].getPercentage());
 		}
 	}
 
@@ -513,6 +507,21 @@ public class MhagData {
 					getSkillName());
 			}
 		}
+
+	}
+
+	// calculator (one input version)
+	public void calculator(Mhag mhag) throws FileNotFoundException
+	{
+		MhagUtil.logLine(mhag, "");
+		MhagUtil.logLine(mhag, "Method: MHAG Set Calcualtor");
+
+		Set aSet = new Set();  //create a new set
+		aSet.setSetFromFile(mhag, mhag.getFileIn()); //read set
+
+		MhagUtil.logLine(mhag, "Set Code:");
+		String code = aSet.getSetCode();   //get set code
+		MhagUtil.logLine(mhag, code);
 
 	}
 

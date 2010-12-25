@@ -80,7 +80,7 @@ public class Armor {
 				String strBGA = "BGA";
 				if(strBGA.indexOf(word) != -1)
 				{
-					armor.bladerOrGunner = word;
+					armor.bladeOrGunner = word;
 				}
 				else
 				{
@@ -270,9 +270,9 @@ public class Armor {
 	}
 
 	// get blader/gunner info
-	public String getBladerOrGunner()
+	public String getBladeOrGunner()
 	{
-		return bladerOrGunner;
+		return bladeOrGunner;
 	}
 
 	// get body part
@@ -308,20 +308,18 @@ public class Armor {
 	// convert armor part character to index
 	public static int convertBodyPart(String aBodyPart)
 	{
-		String partFull = "HCAWL";
-		return partFull.indexOf(aBodyPart);
+		return Armor.partFull.indexOf(aBodyPart);
 	}
 
 	// convert armor part index to character
 	public static String convertBodyPart(int index)
 	{
-		String partFull = "HCAWL";
 		return partFull.substring(index,index);
 	}
 
 	private int armorID = 0;  // Armor ID
 	private String armorName = "";   // Armor Piece Name
-	private String bladerOrGunner = "";  // Blader/Gunner/All
+	private String bladeOrGunner = "";  // Blade/Gunner/All
 	private boolean lowRank = false; //lr Y / hr N
 	private int bodyPart = 0;  // Head/Chest/Arms/Waist/Legs
 	private int numSlot = 0;   // # of slots: 0 - 3
@@ -333,6 +331,7 @@ public class Armor {
 	private int[] skillPoint; // Skill Points
 
 	static int[] armorIDTot;
+	static final String partFull = "HCAWL";
 	static
 	{
 		armorIDTot = new int[5];

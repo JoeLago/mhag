@@ -11,24 +11,24 @@ blade or gunner : blade
 set name : Medic's Set
 !  head/body/arm/waist/leg part id
 !  please read id from reference file "out_armor"
-head part : 112
-chest part : 80
-arm part : 73
-waist part : 81
-leg part : 79
+head part : 111
+chest part : 79
+arm part : 72
+waist part : 80
+leg part : 78
 !  jewel id list (maximum 3 ids for each part)
 !  please read id from reference file "out_jewel"
-head jewel : 0
-chest jewel : 8
-arm jewel : 84 
-waist jewel : 84
-leg jewel : 99
-weapon jewel : 8 13
-charm jewel : 85 
+head jewel :
+chest jewel : 7
+arm jewel : 83 
+waist jewel : 83
+leg jewel : 98
+weapon jewel : 7 12
+charm jewel : 84 
 !  charm id 
 !  please read id from reference file "out_charm"
 !  please read id from
-charm : 69
+charm : 68
 !  charm skill id (maximum 2 ids)
 !  please read id from reference file "out_skill"
-charm skill : 61
+charm skill : 60
