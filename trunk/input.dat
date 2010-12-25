@@ -4,7 +4,7 @@
 ! or a GUI later.
 !
 !   rank: high/low
-rank : high
+rank : high 
 !  blade or gunner : blade/gunner
 blade or gunner : blade
 !  set name
@@ -23,12 +23,12 @@ chest jewel : 7
 arm jewel : 83 
 waist jewel : 83
 leg jewel : 98
-weapon jewel : 7 12
-charm jewel : 84 
+weapon jewel : 7 12 
+charm jewel : 84
 !  charm id 
 !  please read id from reference file "out_charm"
 !  please read id from
-charm : 68
+charm : 68 
 !  charm skill id (maximum 2 ids)
 !  please read id from reference file "out_skill"
 charm skill : 60
