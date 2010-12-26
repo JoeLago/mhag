@@ -524,7 +524,13 @@ public class MhagData {
 		String code = aSet.getSetCode();   //get set code
 		MhagUtil.logLine(mhag, code);
 
-		aSet.checkSet(mhag, this);  //check set
+		boolean pass = aSet.checkSet(mhag, this);  //check set
+		if(!pass)
+		{
+			MhagUtil.logLine(mhag, "Error! Please Check!");
+			System.exit(0);
+		}
+
 		aSet.calcSet(mhag, this);   //calculate set
 
 		aSet.save(mhag, this);  // save results
@@ -586,9 +592,6 @@ public class MhagData {
 	private final String fileRefEffect = dirRef+"ref_effect.dat";
 	private final String fileRefSkillClass = dirRef+"ref_skill_class.dat";
 
-	// Some Constants
-	private final String emptyName = "-----";
-
 	// data
 	private Armor[][] armorList;
 	private Skill[] skillList;
@@ -599,4 +602,8 @@ public class MhagData {
 	// indeces
 	private int[][] indexSkillInClass;  // skill id list
 	private int[] numSkillInClass;  // number skill in class
+
+	// Some Constants
+	static String emptyName = "-----";
+
 }

@@ -112,6 +112,17 @@ public class Jewel {
 		return jewelName;
 	}
 
+	// get jewel name short
+	public String getJewelNameShort()
+	{
+		int pos = jewelName.indexOf("Jewel");
+		String jewelShort = jewelName.substring(0, pos - 1).trim();
+		if(jewelName.indexOf("+") != -1)
+			return jewelShort+("+");
+		else
+			return jewelShort;
+	}
+
 	// get jewel ID
 	public int getJewelID()
 	{

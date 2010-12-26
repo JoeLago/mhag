@@ -147,17 +147,12 @@ public class Mhag
 	public void showMhagInfo()
 	{
 		if(logOpt == 2)return;
-		String head = "";
-		for (int i = 0; i < 80; i++)
-		{
-			head=head+"=";
-		}
-		outLog.println(head);
+		outLog.println(Output.splitter1);
 		outLog.println("MHAG: ver 1.0");
 		outLog.println("Monster Hunter Armor Generator");
 		outLog.println("By Tifa@mh3, Dec 2010");
 		outLog.println("http://www.youtube.com/mh3journey");
-		outLog.println(head);
+		outLog.println(Output.splitter1);
 		outLog.println("");
 	}
 
