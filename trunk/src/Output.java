@@ -318,6 +318,26 @@ public class Output {
 
 	}
 
+	// output header for batch output
+	public static void batchHead(int outForm, PrintStream outSave, int num)
+	{
+		if(outForm == 0)
+			batchHeadTEXT(outSave, num);
+		else
+			batchHeadHTML(outSave, num);
+	}
+
+	public static void batchHeadTEXT(PrintStream outSave, int num)
+	{
+		outSave.printf("Set : %d\n", num);
+	}
+
+	public static void batchHeadHTML(PrintStream outSave, int num)
+	{
+
+	}
+
+
 	public static String splitter1 = "========================================" +
 		"========================================";
 	public static String splitter2 = "----------------------------------------" +

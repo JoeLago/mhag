@@ -422,6 +422,7 @@ public class MhagData {
 			out.printf("%3d: %s\n",skillList[i].getSkillID(),
 				skillList[i].getSkillName());
 		}
+		out.close();
 	}
 
 	// write effect reference file
@@ -433,6 +434,7 @@ public class MhagData {
 			out.printf("%3d: %s\n",effectList[i].getEffectID(),
 				effectList[i].getEffectName());
 		}
+		out.close();
 	}
 
 	// write jewel reference file
@@ -461,6 +463,7 @@ public class MhagData {
 					jewelList[i].getSkillPoint()[0]);
 			}
 		}
+		out.close();
 	}
 
 	// write Armor reference file
@@ -480,6 +483,7 @@ public class MhagData {
   				armorNames[0],armorNames[1],armorNames[2],
   				armorNames[3],armorNames[4]);
 		}
+		out.close();
 	}
 
 	// write charm reference file
@@ -492,6 +496,7 @@ public class MhagData {
 				charmList[i].getCharmName());
 			//	charmList[i].getPercentage());
 		}
+		out.close();
 	}
 
 	// write skill class file
@@ -508,7 +513,7 @@ public class MhagData {
 					getSkillName());
 			}
 		}
-
+		out.close();
 	}
 
 	// calculator (one input version)
@@ -533,7 +538,50 @@ public class MhagData {
 
 		aSet.calcSet(mhag, this);   //calculate set
 
-		aSet.save(mhag, this);  // save results
+		// prepare output file
+		PrintStream outSave = new PrintStream(mhag.getFileOut());
+		aSet.save(mhag, this, outSave);  // save results
+		outSave.close();
+	}
+
+	// batach galcualator (multiple code input)
+	public void batchCalc(Mhag mhag) throws FileNotFoundException
+	{
+		MhagUtil.logLine(mhag, "");
+		MhagUtil.logLine(mhag, "Method: MHAG Batch Calcualtor");
+
+		Set aSet = new Set();  //create set data
+
+		Scanner in = new Scanner(new File(mhag.getFileIn()));
+		PrintStream outSave = new PrintStream(mhag.getFileOut());
+
+		int num = 0;
+		while (in.hasNext())
+		{
+			num++;
+			MhagUtil.logLine(mhag, "");
+			MhagUtil.logLine(mhag, String.format("Set: %d", num));
+
+			String line = in.nextLine();
+
+			aSet.setSetFromCode(mhag, line); //read set
+
+			boolean pass = aSet.checkSet(mhag, this);  //check set
+			if(!pass)
+			{
+				MhagUtil.logLine(mhag, "Error! Please Check!");
+				System.exit(0);
+			}
+
+			aSet.calcSet(mhag, this);   //calculate set
+
+
+			Output.batchHead(mhag.getOutFormat(), outSave, num);
+			aSet.save(mhag, this, outSave);  // save results
+
+		}
+		outSave.close();
+
 	}
 
 	// get armor class
