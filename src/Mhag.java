@@ -215,6 +215,7 @@ public class Mhag
 		}
 		else if(mhag.method == 1)
 		{
+			mhagData.batchCalc(mhag);
 		}
 		else if(mhag.method == 2)
 		{

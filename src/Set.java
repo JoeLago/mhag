@@ -567,9 +567,9 @@ public class Set {
 		else if(wordArray[0].equals("L"))
 			lowRank = true;
 
-		if(wordArray[1].equals("B"))
+		if(wordArray[1].equals("G"))
 			blade = false;
-		else if(wordArray[1].equals("G"))
+		else if(wordArray[1].equals("B"))
 			blade = true;
 
 		int wordIndex = 2;  //start from the 3rd word
@@ -1324,7 +1324,7 @@ public class Set {
 		return torsoList;
 	}
 
-	public void save(Mhag mhag, MhagData mhagData) throws FileNotFoundException
+	public void save(Mhag mhag, MhagData mhagData, PrintStream outSave)
 	{
 		sortSkill(mhag, mhagData);  //sort Skill for outputs
 
@@ -1333,8 +1333,6 @@ public class Set {
 		else
 			MhagUtil.logLine(mhag, "Save Armor Set in HTML Format");
 
-		// prepare output file
-		PrintStream outSave = new PrintStream(mhag.getFileOut());
 		// int numRow = 15 + numSkill;  // # of rows for HTML output
 
 		// part 1 :  Setup Inforamtion
@@ -1366,21 +1364,30 @@ public class Set {
 			else
 			{
 				title = MhagData.emptyName;
-				slots="";
-				Arrays.fill(jewels, 0);
+				slots = "";
+				Arrays.fill(jewels, "");
 			}
 			Output.armor(mhag.getOutFormat(), outSave, i,
 				title, slots, jewels);
 		}
 
-		// jewel line
+		// charm line
 
-		String title = getCharmNameWithSkill(mhagData);
-		Charm charm =  mhagData.getCharm(charmID);
-		int nSlotCharm = charm.getNumSlot();
-		slots = Output.slotWord(mhag.getOutFormat(), nSlotCharm);
-		jewels = getJewelNameShort(mhagData, 6);
-
+		String title = "";
+		if(inUse[6])
+		{
+			title = getCharmNameWithSkill(mhagData);
+			Charm charm =  mhagData.getCharm(charmID);
+			int nSlotCharm = charm.getNumSlot();
+			slots = Output.slotWord(mhag.getOutFormat(), nSlotCharm);
+			jewels = getJewelNameShort(mhagData, 6);
+		}
+		else
+		{
+			title = MhagData.emptyName;
+			slots = "";
+			Arrays.fill(jewels, "");
+		}
 		Output.charm(mhag.getOutFormat(), outSave,
 				title, slots, jewels);
 
