@@ -46,6 +46,7 @@ public class MhagData {
 		genRefArmor();
 		genRefCharm();
 		genRefSkillClass();
+		genRefCompleteSet();
 	}
 
 	// read skill from skill file
@@ -516,6 +517,148 @@ public class MhagData {
 		out.close();
 	}
 
+	// write input file for complete set
+	public void genRefCompleteSet() throws FileNotFoundException
+	{
+		int nMax = Armor.getArmorMax();
+		String[] codeBook = new String[nMax];
+		int[] defenseList = new int[nMax];
+		boolean[] blade = new boolean[nMax];
+
+		Arrays.fill(codeBook, "");
+		Arrays.fill(defenseList, 0);
+		Arrays.fill(blade, false) ;
+
+		boolean[][] checked = new boolean[5][nMax];
+		for(int i =0; i < 5; i++)
+			Arrays.fill(checked[i], false);
+
+		int num = 0; // total number of full set
+		int[] armorID = new int[5];  //armor IDs
+
+		for(int i = 0; i < 5; i++) // from head piece first
+		{
+			for(int j = 0; j< Armor.armorIDTot[i]; j++)
+			{
+				if(checked[i][j])continue;
+				Arrays.fill(armorID, -1);
+				armorID[i] = j;
+				Armor armor = armorList[i][j];
+				String armorName = armor.getArmorName();
+				int pos = armorName.indexOf(" ");
+				if(pos == -1)
+				{
+					System.out.println("Error!");
+					continue;
+				}
+
+				String armor1stWord = armorName.
+					substring(0,pos).trim();
+				boolean plusSet = true;
+				if(armorName.indexOf("+") == -1)
+					plusSet = false;
+				int defense = armor.getDefenseHighRank();
+
+				// check chest/arm/waist/leg
+
+				for(int k = 1; k < 5; k++)
+				{
+					for(int jk =0; jk < armor.armorIDTot[k]; jk++)
+					{
+						if(checked[k][jk])continue;
+						Armor armor2 = armorList[k][jk];
+						String armor2Name = armor2.getArmorName();
+						if(!armor2Name.contains(armor1stWord))continue;
+						if((!plusSet) && armor2Name.contains("+"))continue;
+						if((plusSet) && (!armor2Name.contains("+")))continue;
+						if(armor2.getDefenseHighRank() != defense)continue;
+						armorID[k] = jk;
+						break;
+					}
+				}
+
+				int numFound = 0;
+				for(int k =0; k < 5; k++)
+				{
+					if(armorID[k] != -1)
+						numFound++;
+				}
+				if(numFound <= 1)continue;  //armor set has at least 2 pieces
+
+				// add set
+
+				StringBuffer code = new StringBuffer("");
+				String setName = armor.getSetName();
+
+				code.append(setName + " :");
+
+				if(armor.getDefenseLowRank() == 0) // high rank
+				{
+					defenseList[num] = defense;
+					code.append(" H");
+
+				}
+				else
+				{
+					defenseList[num] = armor.getDefenseLowRank();
+					code.append(" L");
+				}
+
+				for(int k = 1; k < 5; k++) // other than head piece
+				{
+					if(armorID[k] != -1)
+					{
+						Armor armor2 = armorList[k][armorID[k]];
+						if(armor2.getBladeOrGunner().equals("G"))
+						{
+							code.append(" G");
+							blade[num] = false;
+						}
+						else
+						{
+							code.append(" B");
+							blade[num] = true;
+						}
+						break;
+					}
+				}
+
+				for(int k = 0; k < 5; k++)
+				{
+					if(armorID[k] == -1)continue;
+					checked[k][armorID[k]] = true;
+					code.append(" "+Armor.partFull.charAt(k));
+					code.append(" "+String.valueOf(armorID[k]));
+					code.append(" 0");
+				}
+
+				codeBook[num] = new String(code.toString());
+
+				//System.out.println(code.toString());
+				num++;
+
+			}
+		}
+
+		//sort based on defense
+		int[] index = MhagUtil.sortIndex(num, defenseList);
+
+		PrintStream outBlade = new PrintStream(fileCompleteBlade);
+		PrintStream outGunner = new PrintStream(fileCompleteGunner);
+
+		for(int i = num - 1; i > -1 ; i--)
+		{
+			int j = index[i];
+			if(blade[j])
+				outBlade.println(codeBook[j]);
+			else
+				outGunner.println(codeBook[j]);
+		}
+		outBlade.close();
+		outGunner.close();
+
+	}
+
 	// calculator (one input version)
 	public void calculator(Mhag mhag) throws FileNotFoundException
 	{
@@ -580,14 +723,12 @@ public class MhagData {
 
 			aSet.calcSet(mhag, this);   //calculate set
 
-
 			Output.batchHead(mhag.getOutFormat(), outSave, num);
 			aSet.save(mhag, this, outSave);  // save results
 
 		}
 		Output.close(mhag.getOutFormat(), outSave);
 		outSave.close();
-
 	}
 
 	// get armor class
@@ -645,6 +786,8 @@ public class MhagData {
 	private final String fileRefCharm = dirRef+"ref_charm.dat";
 	private final String fileRefEffect = dirRef+"ref_effect.dat";
 	private final String fileRefSkillClass = dirRef+"ref_skill_class.dat";
+	private final String fileCompleteBlade = dirRef+"blade_sets.input";
+	private final String fileCompleteGunner = dirRef+"gunner_sets.input";
 
 	// data
 	private Armor[][] armorList;

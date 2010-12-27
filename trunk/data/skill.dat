@@ -33,7 +33,7 @@ Fishing : C : Fishing Expert : 10
 Flame Aura : B : Flaming Aura : 10
 FreeElemnt : A : Awaken : 15
 Gathering : B : Gather -3 : -20 : Gather -2 : -15 : Gather -1 : -10 : Gather +1 : 10 : Gather +2 : 15 : Gather +3 : 20
-Gluttony : C : Scavenger : 10 : Gourmand : 15
+Gluttony : C : Gourmand : 10 : Scavenger : 15
 Guard : B : Guard -1 : -10 : Guard +1 : 10 : Guard +2 : 15
 Guard Up : B : Guard Boost : 10
 Handicraft : A : Sharpness +1 : 15
