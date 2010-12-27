@@ -518,7 +518,7 @@ public class Set {
 		lowRank = false;
 		blade = true;
 		Arrays.fill(armorID, 0);
-		for(int i = 1; i < 7; i++)
+		for(int i = 0; i < 7; i++)
 			Arrays.fill(jewelID[i], 0);
 		charmID = 0;
 		numCharmSkill = 0;
@@ -1043,7 +1043,7 @@ public class Set {
 			}
 			else if (point <= -10) //nagative skills
 			{
-				for(int j = 1; j < nEffect; j++)
+				for(int j = 0; j < nEffect; j++)
 				{
 					int trigger = skill.getEffectTrigger()[j];
 					if((trigger < 0) && (trigger >= point))

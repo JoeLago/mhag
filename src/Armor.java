@@ -223,6 +223,34 @@ public class Armor {
 		return armorName;
 	}
 
+	// get set name
+	public String getSetName()
+	{
+		int pos;
+		if(!armorName.contains("/"))  //no multiple name
+		{
+			pos = armorName.lastIndexOf(" ");
+			if(armorName.contains("+"))
+				return  armorName.substring(0, pos).trim() + "+ Set";
+			else
+				return  armorName.substring(0, pos).trim() + " Set";
+		}
+		else
+		{
+			int posSplit =  armorName.indexOf("/");
+			String name1 = armorName.substring(0, posSplit-1).trim();
+			int pos1 = name1.lastIndexOf(" ");
+			String name2 = armorName.substring(posSplit+1).trim();
+			int pos2 = name2.lastIndexOf(" ");
+			if(armorName.contains("+"))
+				return name1.substring(0, pos1).trim() + "/" +
+					name2.substring(0, pos2).trim() + "+ Set";
+			else
+				return name1.substring(0, pos1).trim() + "/" +
+					name2.substring(0, pos2).trim() + " Set";
+		}
+	}
+
 	// get armor ID
 	public int getArmorID()
 	{
