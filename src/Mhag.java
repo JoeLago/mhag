@@ -21,7 +21,7 @@ public class Mhag
 	{
 		System.out.println("Usage: javac Mhag method " +
 			"<cal/bat/gen/ref> in <input.dat> " +
-			"out <result.dat> log <''/log/off> " +
+			"out <result> log <''/log/off> " +
 			"format <text/html>");
 		System.exit(0);
 	}
@@ -107,11 +107,13 @@ public class Mhag
 		}
 		if( outFormat == 0)
 		{
-			fileOut = fileOut +".txt";
+			if(!fileOut.endsWith(".txt"))
+				fileOut = fileOut +".txt";
 		}
 		else
 		{
-			fileOut = fileOut + ".html";
+			if(!fileOut.endsWith(".html"))
+				fileOut = fileOut + ".html";
 		}
 
 	}

@@ -1333,8 +1333,6 @@ public class Set {
 		else
 			MhagUtil.logLine(mhag, "Save Armor Set in HTML Format");
 
-		// int numRow = 15 + numSkill;  // # of rows for HTML output
-
 		// part 1 :  Setup Inforamtion
 		// head line
 		Output.head(mhag.getOutFormat(), outSave, setName, lowRank, blade);
@@ -1367,7 +1365,7 @@ public class Set {
 				slots = "";
 				Arrays.fill(jewels, "");
 			}
-			Output.armor(mhag.getOutFormat(), outSave, i,
+			Output.armor(mhag.getOutFormat(), outSave, 
 				title, slots, jewels);
 		}
 
@@ -1421,14 +1419,13 @@ public class Set {
 		{
 			defense += bonus[5];
 			if(bonus[5] > 0)
-				bonusTitle = new String("<up>");
+				bonusTitle = new String(" \u2191");
 			else if(bonus[5] < 0)
-				bonusTitle = new String("<down>");
+				bonusTitle = new String(" \u2193");
 		}
 
-
 		Output.defense(mhag.getOutFormat(), outSave, title,
-			values, defense, bonusTitle);
+			values, defense, bonusTitle, bonus);
 
 		// resistence
 		String[] title5 = new String[5];
@@ -1470,19 +1467,25 @@ public class Set {
 		if(numTorso > 0)
 		{
 			String[] torsoList = getListTorsoUp(mhagData);
-  			Output.torso(mhag.getOutFormat(), outSave, torsoList);
+  			Output.torso(mhag.getOutFormat(), outSave, torsoList,
+				numSkill);
 		}
 
 		// skill points
 		String effectName = "---";
 		for(int i = 0; i < numSkill; i++)
 		{
+			int ifEff = 0;
 			//skill effects
 			if(i < numEffect)
 			{
 				Effect effect = mhagData.getEffect(effectID[i]);
 				effectName = new String("\u2192 "+
 					effect.getEffectName());
+				if(skillPoint[i] > 0)
+					ifEff = 1;
+				else
+					ifEff = -1;
 			}
 			else
 				effectName = new String("  ---");
@@ -1493,17 +1496,25 @@ public class Set {
 			//skill title
 			Skill skill = mhagData.getSkill(skillID[i]);
 			if((i == 0)&&(numTorso == 0))
+			{
 				title = "SKills: "+skill.getSkillName();
+				Output.skill(mhag.getOutFormat(), outSave, true, title,
+					values, effectName, ifEff, numSkill);
+			}
 			else
+			{
 				title = "        "+skill.getSkillName();
+				Output.skill(mhag.getOutFormat(), outSave, false, title,
+					values, effectName, ifEff, numSkill);
+			}
 
-  			Output.skill(mhag.getOutFormat(), outSave, i, title,
-				values, effectName);
 
 		}
 
 		// end
 		Output.end(mhag.getOutFormat(), outSave);
+
+		MhagUtil.logLine(mhag, "Armor Set Saved!");
 
 	}
 

@@ -540,7 +540,11 @@ public class MhagData {
 
 		// prepare output file
 		PrintStream outSave = new PrintStream(mhag.getFileOut());
+		Output.init(mhag.getOutFormat(), outSave);
+
 		aSet.save(mhag, this, outSave);  // save results
+
+		Output.close(mhag.getOutFormat(), outSave);
 		outSave.close();
 	}
 
@@ -554,6 +558,7 @@ public class MhagData {
 
 		Scanner in = new Scanner(new File(mhag.getFileIn()));
 		PrintStream outSave = new PrintStream(mhag.getFileOut());
+		Output.init(mhag.getOutFormat(), outSave);
 
 		int num = 0;
 		while (in.hasNext())
@@ -580,6 +585,7 @@ public class MhagData {
 			aSet.save(mhag, this, outSave);  // save results
 
 		}
+		Output.close(mhag.getOutFormat(), outSave);
 		outSave.close();
 
 	}
