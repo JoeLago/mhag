@@ -72,7 +72,34 @@ public class MhagUtil {
 			boolean change = false;
 			for (int j = 0; j < jmax; j++)
 			{
-				if(values[index[j]] <= values[index[j+1]])
+				if(values[index[j]] < values[index[j+1]])
+				{
+					change = true;
+					int temp = index[j];
+					index[j] = index[j+1];
+					index[j+1] = temp;
+				}
+			}
+			if(!change) break;
+		}
+		return index;
+	}
+
+	public static int[] sortIndex(int length, String[] values)
+	{
+		int[] index = new int[length];
+		for(int i = 0; i < length; i++)
+		{
+			index[i] = i;
+		}
+
+		int jmax = length -1;
+		for (int i = 0; i < length -1; i++)
+		{
+			boolean change = false;
+			for (int j = 0; j < jmax; j++)
+			{
+				if(values[index[j]].compareTo(values[index[j+1]]) < 0)
 				{
 					change = true;
 					int temp = index[j];

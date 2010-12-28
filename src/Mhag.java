@@ -159,19 +159,31 @@ public class Mhag
 	}
 
 	//init process
-	public static void init(Mhag mhag, MhagData mhagData, String[] args)
+	public void init(MhagData mhagData, String[] args)
 		throws FileNotFoundException
 	{
-		mhag.procArg(args);
-		mhag.prepareLogFile();
+		procArg(args);
+		prepareLogFile();
 
-		mhag.showMhagInfo(); //display MHAG welcome info
-		mhag.showMhagArgs(); //display MHAG arguments
+		showMhagInfo(); //display MHAG welcome info
+		showMhagArgs(); //display MHAG arguments
 
-		mhagData.readFile(mhag);  //read file
+		mhagData.readFile(this);  //read file
 		mhagData.dataPreProc();  //pre process
 
-		if(mhag.method == 3)mhagData.showReference(mhag); //show ref
+		if(method == 3)mhagData.showReference(this); //show ref
+	}
+
+	// get method
+	public int getMethod()
+	{
+		return method;
+	}
+
+	// set method
+	public void setMethod(int opt)
+	{
+		method = opt;
 	}
 
 	// get log option
@@ -180,10 +192,22 @@ public class Mhag
 		return logOpt;
 	}
 
+	// set log option
+	public void setLogOpt(int log)
+	{
+		logOpt = log;
+	}
+
 	// get output format
 	public int getOutFormat()
 	{
 		return outFormat;
+	}
+
+	// set output format
+	public void setOutFormat(int formatOpt)
+	{
+		outFormat = formatOpt;
 	}
 
 	// get out object for log outputs
@@ -192,14 +216,30 @@ public class Mhag
 		return outLog;
 	}
 
+	// set out object for log outputs
+	public void setOutLog(PrintStream logObj)
+	{
+		outLog = logObj;
+	}
+
 	public String getFileOut()
 	{
 		return fileOut;
 	}
 
+	public void setFileOut(String file)
+	{
+		fileOut = file;
+	}
+
 	public String getFileIn()
 	{
 		return fileIn;
+	}
+
+	public void setFileIn(String file)
+	{
+		fileIn = file;
 	}
 
 	// get log file
@@ -208,18 +248,23 @@ public class Mhag
 		return fileLog;
 	}
 
-	// main process method
-	public static void proc(Mhag mhag, MhagData mhagData) throws FileNotFoundException
+	public void setFileLog(String file)
 	{
-		if(mhag.method == 0)
+		fileLog = file;
+	}
+
+	// main process method
+	public void proc(MhagData mhagData) throws FileNotFoundException
+	{
+		if(method == 0)
 		{
-			mhagData.calculator(mhag);
+			mhagData.calculator(this);
 		}
-		else if(mhag.method == 1)
+		else if(method == 1)
 		{
-			mhagData.batchCalc(mhag);
+			mhagData.batchCalc(this);
 		}
-		else if(mhag.method == 2)
+		else if(method == 2)
 		{
 		}
 	}
@@ -230,9 +275,9 @@ public class Mhag
 		Mhag mhag = new Mhag();
 		MhagData mhagData = new MhagData();
 
-		init(mhag, mhagData, args);
+		mhag.init(mhagData, args);
 
-		proc(mhag, mhagData);
+		mhag.proc(mhagData);
 
 //		String dir = System.getProperty("user.dir");
 //		System.out.println(dir);

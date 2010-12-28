@@ -773,6 +773,165 @@ public class MhagData {
 		return indexSkillInClass[nClass];
 	}
 
+	// get armor list (index copy, name can be got from armorList)
+	// sorted by armorName;
+	public int[] getArmorList(boolean lowRank, boolean blade, 
+		boolean female, int bodyPart)
+	{
+		int nMax = Armor.armorIDTot[bodyPart];
+		int[] index = new int[nMax];
+		int num = 0;
+		for (int i = 0; i < nMax; i++)
+		{
+			Armor armor = armorList[bodyPart][i];
+			if(lowRank && (!armor.getLowRank()))continue;
+			if(blade && (armor.getBladeOrGunner().equals("G")))continue;
+			if((!blade) && (armor.getBladeOrGunner().equals("B")))continue;
+
+			index[num] = i;
+			num++;
+		}
+
+		String[] nameStr =  getArmorListName(bodyPart, female, num, index);
+
+		int[] indNew = MhagUtil.sortIndex(num, nameStr);
+
+		int[] indFinal = new int[num + 1]; // add null
+		indFinal[0] = -1;
+		for(int i = 0; i < num; i++)
+			indFinal[i + 1] = index[indNew[num - 1 - i]];
+
+		return indFinal;
+	}
+
+	public String[] getArmorListName(int bodyPart, boolean female,
+		int num, int[] index)
+	{
+		String[] nameStr = new String[num];
+		for(int i = 0; i < num; i++)
+		{
+			String armorName  = armorList[bodyPart][index[i]].getArmorName();
+
+			int pos = armorName.indexOf("/");
+			if(pos == - 1)
+				nameStr[i] = new String(armorName);
+			else
+			{
+				if(female)
+					nameStr[i] = new String(armorName.substring(pos+1).trim());
+				else
+					nameStr[i] = new String(armorName.substring(0,pos-1).trim());
+			}
+		}
+		return nameStr;
+	}
+
+//	generate menu list
+	public String[] getArmorListMenu(int bodyPart, boolean female,
+		int num, int[] index)
+	{
+		String[] nameStr = new String[num];
+		nameStr[0] = new String("---");
+		for(int i = 1; i < num ; i++)  //first 1 is null;
+		{
+			String armorName  = armorList[bodyPart][index[i]].getArmorName();
+
+			int pos = armorName.indexOf("/");
+			if(pos == - 1)
+				nameStr[i] = new String(armorName);
+			else
+			{
+				if(female)
+					nameStr[i] = new String(armorName.substring(pos+1).trim());
+				else
+					nameStr[i] = new String(armorName.substring(0,pos-1).trim());
+			}
+		}
+		return nameStr;
+	}
+
+	public int[] getJewelList(boolean lowRank, int nSlot)
+	{
+		int nMax = Jewel.jewelIDTot;
+		int[] index = new int[nMax];
+		String[] nameStr =  new String[nMax];
+		int num = 0;
+		for (int i = 0; i < nMax; i++)
+		{
+			Jewel jewel = jewelList[i];
+			if(lowRank && (!jewel.getLowRank()))continue;
+			if(jewel.getNumSlot() > nSlot)continue;
+
+			index[num] = i;
+			nameStr[num] = jewel.getJewelNameShort();
+			num++;
+		}
+
+
+		int[] indNew = MhagUtil.sortIndex(num, nameStr);
+
+		int[] indFinal = new int[num + 1]; // add null
+		indFinal[0] = -1;
+		for(int i = 0; i < num; i++)
+			indFinal[i + 1] = index[indNew[num - 1 - i]];
+
+		return indFinal;
+	}
+
+	public int[] getSkillList(String skillClass)
+	{
+		int nMax = Skill.skillIDTot;
+		int[] index = new int[nMax];
+		String[] nameStr =  new String[nMax];
+		int num = 0;
+		for (int i = 0; i < nMax; i++)
+		{
+			Skill skill = skillList[i];
+			if(!skill.getSkillClass().equals(skillClass))continue;
+
+			index[num] = i;
+			nameStr[num] = skill.getSkillName();
+			num++;
+		}
+
+
+		int[] indNew = MhagUtil.sortIndex(num, nameStr);
+
+		int[] indFinal = new int[num + 1]; // add null
+		indFinal[0] = -1;
+		for(int i = 0; i < num; i++)
+			indFinal[i + 1] = index[indNew[num - 1 - i]];
+
+		return indFinal;
+	}
+
+	public int[] getCharmList(boolean lowRank)
+	{
+		int nMax = Charm.charmIDTot;
+		int[] index = new int[nMax];
+		String[] nameStr =  new String[nMax];
+		int num = 0;
+		for (int i = 0; i < nMax; i++)
+		{
+			Charm charm = charmList[i];
+			if(lowRank && (!charm.getLowRank()))continue;
+
+			index[num] = i;
+			nameStr[num] = charm.getCharmName();
+			num++;
+		}
+
+
+		int[] indNew = MhagUtil.sortIndex(num, nameStr);
+
+		int[] indFinal = new int[num + 1]; // add null
+		indFinal[0] = -1;
+		for(int i = 0; i < num; i++)
+			indFinal[i + 1] = index[indNew[num - 1 - i]];
+
+		return indFinal;
+	}
+
 	// Constants for file names
 	private final String dirData = "data/";
 	private final String fileArmor = dirData+"armor.dat";
