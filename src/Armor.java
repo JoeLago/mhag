@@ -218,10 +218,7 @@ public class Armor {
 
 
 	// get armor name
-	public String getArmorName()
-	{
-		return armorName;
-	}
+	public String getArmorName() {return armorName;}
 
 	// get set name
 	public String getSetName()
@@ -252,40 +249,22 @@ public class Armor {
 	}
 
 	// get armor ID
-	public int getArmorID()
-	{
-		return armorID;
-	}
+	public int getArmorID() {return armorID;}
 
 	// get number of skill
-	public int getNumSkill()
-	{
-		return numSkill;
-	}
+	public int getNumSkill() {return numSkill;}
 
 	// get skill names
-	public String[] getSkillName()
-	{
-		return skillName;
-	}
+	public String[] getSkillName() {return skillName;}
 
 	// get skill points
-	public int[] getSkillPoint()
-	{
-		return skillPoint;
-	}
+	public int[] getSkillPoint() {return skillPoint;}
 
 	// get skill IDs
-	public int[] getSkillID()
-	{
-		return skillID;
-	}
+	public int[] getSkillID() {return skillID;}
 
 	// geta low rank
-	public boolean getLowRank()
-	{
-		return lowRank;
-	}
+	public boolean getLowRank() {return lowRank;}
 
 	// set skill ID in an armor
 	public void setSkillID(int[] id)
@@ -297,40 +276,22 @@ public class Armor {
 	}
 
 	// get blader/gunner info
-	public String getBladeOrGunner()
-	{
-		return bladeOrGunner;
-	}
+	public String getBladeOrGunner() {return bladeOrGunner;}
 
 	// get body part
-	public int getBodyPart()
-	{
-		return bodyPart;
-	}
+	public int getBodyPart() {return bodyPart;}
 
 	// get # of slots
-	public int getNumSlot()
-	{
-		return numSlot;
-	}
+	public int getNumSlot() {return numSlot;}
 
 	// get lowrank defense
-	public int getDefenseLowRank()
-	{
-		return defense[0];
-	}
+	public int getDefenseLowRank() {return defense[0];}
 
 	// get highrank defense
-	public int getDefenseHighRank()
-	{
-		return defense[1];
-	}
+	public int getDefenseHighRank() {return defense[1];}
 
 	// get resist
-	public int[] getResist()
-	{
-		return resist;
-	}
+	public int[] getResist() {return resist;}
 
 	// convert armor part character to index
 	public static int convertBodyPart(String aBodyPart)

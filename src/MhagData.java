@@ -820,7 +820,7 @@ public class MhagData {
 				if(female)
 					nameStr[i] = new String(armorName.substring(pos+1).trim());
 				else
-					nameStr[i] = new String(armorName.substring(0,pos-1).trim());
+					nameStr[i] = new String(armorName.substring(0,pos).trim());
 			}
 		}
 		return nameStr;
@@ -844,7 +844,7 @@ public class MhagData {
 				if(female)
 					nameStr[i] = new String(armorName.substring(pos+1).trim());
 				else
-					nameStr[i] = new String(armorName.substring(0,pos-1).trim());
+					nameStr[i] = new String(armorName.substring(0,pos).trim());
 			}
 		}
 		return nameStr;
@@ -863,7 +863,8 @@ public class MhagData {
 			if(jewel.getNumSlot() > nSlot)continue;
 
 			index[num] = i;
-			nameStr[num] = jewel.getJewelNameShort();
+			//nameStr[num] = jewel.getJewelNameShort();
+			nameStr[num] = jewel.getJewelNameSkill();
 			num++;
 		}
 

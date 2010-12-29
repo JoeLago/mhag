@@ -107,10 +107,7 @@ public class Jewel {
 	}
 
 	// get jewel name
-	public String getJewelName()
-	{
-		return jewelName;
-	}
+	public String getJewelName() {return jewelName;}
 
 	// get jewel name short
 	public String getJewelNameShort()
@@ -123,47 +120,42 @@ public class Jewel {
 			return jewelShort;
 	}
 
-	// get jewel ID
-	public int getJewelID()
+	// get jewel name with only positive skill
+	public String getJewelNameSkill()
 	{
-		return jewelID;
+		for (int i = 0; i < numSkill; i++)
+		{
+			if(skillPoint[i] > 0)
+			{
+				return skillName[i]+" +"+
+					String.valueOf(skillPoint[i]);
+			}
+		}
+		return "---";
 	}
+
+
+	// get jewel ID
+	public int getJewelID() {return jewelID;}
 
 	// get # of skills in a jewel
-	public int getNumSkill()
-	{
-		return numSkill;
-	}
+	public int getNumSkill() {return numSkill;}
 
 	// get skill names in a jewel
-	public String[] getSkillName()
-	{
-		return skillName;
-	}
+	public String[] getSkillName() {return skillName;}
 
 	// get skill IDs in a jewel
-	public int[] getSkillID()
-	{
-		return skillID;
-	}
+	public int[] getSkillID() {return skillID;}
 
 	// get skill points in a jewel
-	public int[] getSkillPoint()
-	{
-		return skillPoint;
-	}
+	public int[] getSkillPoint() {return skillPoint;}
 
 	// geta low rank
-	public boolean getLowRank()
-	{
-		return lowRank;
-	}
+	public boolean getLowRank() {return lowRank;}
 
 	// get # of slots
-	public int getNumSlot()
-	{
-		return numSlot;
-	}
+	public int getNumSlot() {return numSlot;}
+
 	// set skill ID in a jewel
 	public void setSkillID(int[] id)
 	{
