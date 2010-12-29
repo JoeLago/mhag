@@ -125,16 +125,10 @@ public class Charm {
 	}
 
 	// get charm name
-	public String getCharmName()
-	{
-		return charmName;
-	}
+	public String getCharmName() {return charmName;}
 
 	// get charm ID
-	public int getCharmID()
-	{
-		return charmID;
-	}
+	public int getCharmID() {return charmID;}
 
 	// set charm name
 	public void setCharmName()
@@ -164,52 +158,28 @@ public class Charm {
 	}
 
 	// get # of skills
-	public int getNumSkill()
-	{
-		return numSkill;
-	}
+	public int getNumSkill() {return numSkill;}
 
 	// get skill class
-	public String[] getSkillClass()
-	{
-		return skillClass;
-	}
+	public String[] getSkillClass() {return skillClass;}
 
 	// get skill point
-	public int[] getSkillPoint()
-	{
-		return skillPoint;
-	}
+	public int[] getSkillPoint() {return skillPoint;}
 
 	// get charm class
-	public int getCharmClass()
-	{
-		return charmClass;
-	}
+	public int getCharmClass() {return charmClass;}
 
 	// get percentage
-	public int getPercentage()
-	{
-		return percentage;
-	}
+	public int getPercentage() {return percentage;}
 
 	// geta # of Slot
-	public int getNumSlot()
-	{
-		return numSlot;
-	}
+	public int getNumSlot() {return numSlot;}
 
 	// geta low rank
-	public boolean getLowRank()
-	{
-		return lowRank;
-	}
+	public boolean getLowRank() {return lowRank;}
 
 	// set charm class
-	public void setPercentage(int value)
-	{
-		percentage = value;
-	}
+	public void setPercentage(int value) {percentage = value;}
 
 	private int charmID = 0; // Charm ID
 	private String charmName = ""; // skillClass + skillPoint

@@ -23,22 +23,13 @@ public class Effect {
 	}
 
 	// get effect ID
-	public int getEffectID()
-	{
-		return effectID;
-	}
+	public int getEffectID() {return effectID;}
 
 	// get effect name
-	public String getEffectName()
-	{
-		return effectName;
-	}
+	public String getEffectName() {return effectName;}
 
 	// get effect Trigger
-	public int getEffectTrigger()
-	{
-		return effectTrigger;
-	}
+	public int getEffectTrigger() {return effectTrigger;}
 
 	private int effectID = 0;  // Effect ID
 	private String effectName = "";   // Effect Name

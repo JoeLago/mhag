@@ -175,83 +175,41 @@ public class Mhag
 	}
 
 	// get method
-	public int getMethod()
-	{
-		return method;
-	}
+	public int getMethod() {return method;}
 
 	// set method
-	public void setMethod(int opt)
-	{
-		method = opt;
-	}
+	public void setMethod(int opt) {method = opt;}
 
 	// get log option
-	public int getLogOpt()
-	{
-		return logOpt;
-	}
+	public int getLogOpt() {return logOpt;}
 
 	// set log option
-	public void setLogOpt(int log)
-	{
-		logOpt = log;
-	}
+	public void setLogOpt(int log) {logOpt = log;}
 
 	// get output format
-	public int getOutFormat()
-	{
-		return outFormat;
-	}
+	public int getOutFormat() {return outFormat;}
 
 	// set output format
-	public void setOutFormat(int formatOpt)
-	{
-		outFormat = formatOpt;
-	}
+	public void setOutFormat(int formatOpt) {outFormat = formatOpt;}
 
 	// get out object for log outputs
-	public PrintStream getOutLog()
-	{
-		return outLog;
-	}
+	public PrintStream getOutLog() {return outLog;}
 
 	// set out object for log outputs
-	public void setOutLog(PrintStream logObj)
-	{
-		outLog = logObj;
-	}
+	public void setOutLog(PrintStream logObj) {outLog = logObj;}
 
-	public String getFileOut()
-	{
-		return fileOut;
-	}
+	public String getFileOut() {return fileOut;}
 
-	public void setFileOut(String file)
-	{
-		fileOut = file;
-	}
+	public void setFileOut(String file) {fileOut = file;}
 
-	public String getFileIn()
-	{
-		return fileIn;
-	}
+	public String getFileIn() {return fileIn;}
 
-	public void setFileIn(String file)
-	{
-		fileIn = file;
-	}
+	public void setFileIn(String file) {fileIn = file;}
 
 	// get log file
-	public String getFileLog()
-	{
-		return fileLog;
-	}
+	public String getFileLog() {return fileLog;}
 
-	public void setFileLog(String file)
-	{
-		fileLog = file;
-	}
+	public void setFileLog(String file) {fileLog = file;}
 
 	// main process method
 	public void proc(MhagData mhagData) throws FileNotFoundException

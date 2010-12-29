@@ -75,7 +75,9 @@ public class Output {
 			title2 = "Gunner";
 
 		outSave.println(splitter1);
-		outSave.printf("%-40s%-12s%-12s\n", setName, title, title2);
+		String line = String.format(
+			" %-40s%-12s%-12s", setName, title, title2);
+		outSave.println(line);
 		outSave.println(splitter2);
 
 	}
@@ -170,8 +172,10 @@ public class Output {
 	public static void weaponTEXT(PrintStream outSave, String slots,
 		String[] jewels)
 	{
-		outSave.printf("%-40s%3s   %s %s %s\n","Weapon",slots,
+		String line = String.format
+			(" %-40s%3s   %s %s %s","Weapon",slots,
 			jewels[0],jewels[1],jewels[2]);
+		outSave.println(line);
 	}
 
 	public static void weaponHTML(PrintStream outSave, String slots,
@@ -197,8 +201,10 @@ public class Output {
 	public static void armorTEXT(PrintStream outSave, 
 		String title, String slots, String[] jewels)
 	{
-		outSave.printf("%-40s%3s   %s %s %s\n",title,slots,
+		String line = String.format
+			(" %-40s%3s   %s %s %s",title,slots,
 			jewels[0],jewels[1],jewels[2]);
+		outSave.println(line);
 	}
 
 	public static void armorHTML(PrintStream outSave,
@@ -224,8 +230,10 @@ public class Output {
 	public static void charmTEXT(PrintStream outSave,
 		String title, String slots, String[] jewels)
 	{
-		outSave.printf("%-40s%3s   %s %s %s\n",title,slots,
+		String line = String.format
+			(" %-40s%3s   %s %s %s",title,slots,
 			jewels[0],jewels[1],jewels[2]);
+		outSave.println(line);
 		outSave.println(splitter2);
 	}
 
@@ -246,8 +254,10 @@ public class Output {
 
 	public static void head2ndTEXT(PrintStream outSave)
 	{
-		outSave.printf("%20s%3s %3s %3s %3s %3s %3s %3s %3s\n",
+		String line = String.format
+			(" %20s%3s %3s %3s %3s %3s %3s %3s %3s",
 			" ","WEP","HEA","CHE","ARM","WAI","LEG","CHA","TOT");
+		outSave.println(line);
 	}
 
 	public static void head2ndHTML(PrintStream outSave)
@@ -273,9 +283,11 @@ public class Output {
 	public static void defenseTEXT(PrintStream outSave, String title,
 		int[] values, int def, String bonusTitle)
 	{
-		outSave.printf("%-20s%3s %3d %3d %3d %3d %3d %3s %3d %s\n",
+		String line = String.format
+			(" %-20s%3s %3d %3d %3d %3d %3d %3s %3d %s",
 			title,nan,values[0],values[1],values[2],values[3],values[4],
 			nan,def,bonusTitle);
+		outSave.println(line);
 	}
 
 	public static void defenseHTML(PrintStream outSave, String title,
@@ -336,9 +348,11 @@ public class Output {
 	public static void resistTEXT(PrintStream outSave, int resistInd, String title,
 		int[] values, int res, String bonusTitle)
 	{
-		outSave.printf("%-20s%3s %3d %3d %3d %3d %3d %3s %3d %s\n",
+		String line = String.format
+			(" %-20s%3s %3d %3d %3d %3d %3d %3s %3d %s",
 			title,nan,values[0],values[1],values[2],values[3],values[4],
 			nan,res,bonusTitle);
+		outSave.println(line);
 		if(resistInd == 4)
 			outSave.println(splitter2);
 	}
@@ -407,9 +421,11 @@ public class Output {
 
 	public static void torsoTEXT(PrintStream outSave, String[] list)
 	{
-		outSave.printf("%-20s%3s %3s %3s %3s %3s %3s %3s %3s\n",
+		String line = String.format
+			(" %-20s%3s %3s %3s %3s %3s %3s %3s %3s",
 			"Skills: Torso Up",list[0],list[1],list[2],list[3],
 			list[4],list[5],list[6],list[7]);
+		outSave.println(line);
 	}
 
 	public static void torsoHTML(PrintStream outSave, String[] torsoupList
@@ -451,9 +467,11 @@ public class Output {
 				str[i] = String.valueOf(values[i]);
 		}
 
-		outSave.printf("%-20s%3s %3s %3s %3s %3s %3s %3s %3s %s\n",
+		String line = String.format
+			(" %-20s%3s %3s %3s %3s %3s %3s %3s %3s %s",
 			title,str[0],str[1],str[2],str[3],str[4],str[5],
 			str[6],str[7],effectName);
+		outSave.println(line);
 	}
 
 	public static void skillHTML(PrintStream outSave, boolean firstline, String title,
@@ -552,7 +570,7 @@ public class Output {
 
 	public static void batchHeadTEXT(PrintStream outSave, int num)
 	{
-		outSave.printf("Set : %d\n", num);
+		outSave.printf(" Set : %d\n", num);
 	}
 
 	public static void batchHeadHTML(PrintStream outSave, int num)

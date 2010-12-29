@@ -82,52 +82,28 @@ public class Skill {
 	}
 
 	// get Skill ID
-	public int getSkillID()
-	{
-		return skillID;
-	}
+	public int getSkillID() {return skillID;}
 
 	// get skill name
-	public String getSkillName()
-	{
-		return skillName;
-	}
+	public String getSkillName() {return skillName;}
 
 	// get skill class
-	public String getSkillClass()
-	{
-		return skillClass;
-	}
+	public String getSkillClass() {return skillClass;}
 
 	// get number of effects
-	public int getNumEffect()
-	{
-		return numEffect;
-	}
+	public int getNumEffect() {return numEffect;}
 
 	// get Effect Name
-	public String[] getEffectName()
-	{
-		return effectName;
-	}
+	public String[] getEffectName() {return effectName;}
 
 	// get Effect ID
-	public int[] getEffectID()
-	{
-		return effectID;
-	}
+	public int[] getEffectID() {return effectID;}
 
 	// set Effect ID
-	public void setEffectID(int index, int id)
-	{
-		effectID[index] = id;
-	}
+	public void setEffectID(int index, int id) {effectID[index] = id;}
 
 	// get Effect Trigger Points
-	public int[] getEffectTrigger()
-	{
-		return effectTrigger;
-	}
+	public int[] getEffectTrigger() {return effectTrigger;}
 
 	private int skillID = 0; // Skill ID
 	private String skillName = "";  // Skill Name

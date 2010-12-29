@@ -42,82 +42,60 @@ public class Set {
 	// get/set inputs
 
 	// get set name
-	public String getSetName()
-	{
-		return setName;
-	}
+	public String getSetName() {return setName;}
 
 	// set set name
-	public void setSetName(String aSetName)
-	{
-		 setName = aSetName;
-	}
+	public void setSetName(String aSetName) {setName = aSetName;}
 
 	// get low/high rank
-	public boolean getLowRank()
-	{
-		return lowRank;
-	}
+	public boolean getLowRank() {return lowRank;}
 
 	// set low/high rank
-	public void setLowRank(boolean aLowRank)
-	{
-		lowRank = aLowRank;
-	}
+	public void setLowRank(boolean aLowRank) {lowRank = aLowRank;}
 
 	// get blader/gunner info
-	public boolean getBlade()
-	{
-		return blade;
-	}
+	public boolean getBlade() {return blade;}
 
 	// set blader/gunner info
-	public void sedBlade(boolean aBlade)
-	{
-		blade = aBlade;
-	}
+	public void setBlade(boolean aBlade) {blade = aBlade;}
 
 	// get armor id
-	public int[] getArmorID()
-	{
-		return armorID;
-	}
+	public int[] getArmorID() {return armorID;}
 
 	// set armor id
-	public void setArmorID(int[] aArmorID)
+	public void setArmorID(int[] aArmorID) {armorID = aArmorID;}
+
+	// set armor id for one bodyPart
+	public void setArmorID(int bodyPart, int aArmorID)
 	{
-		armorID = aArmorID;
+		armorID[bodyPart] = aArmorID;
 	}
 
 	// get jewel id
-	public int[][] getJewelID()
-	{
-		return jewelID;
-	}
+	public int[][] getJewelID() {return jewelID;}
 
 	// set jewel id
-	public void setJewelID(int[][] aJewelID)
+	public void setJewelID(int[][] aJewelID) {jewelID = aJewelID;}
+
+	public void setJewelID(int bodyPart, int[] aJewelID)
 	{
-		jewelID = aJewelID;
+		for(int i = 0; i < 3; i++)
+			jewelID[bodyPart][i] = aJewelID[i];
+	}
+
+	public void setJewelID(int bodyPart, int slotInd, int aJewelID)
+	{
+		jewelID[bodyPart][slotInd] = aJewelID;
 	}
 
 	// get charm id
-	public int getCharmID()
-	{
-		return charmID;
-	}
+	public int getCharmID() {return charmID;}
 
 	// set charm id
-	public void setCharmID(int aCharmID)
-	{
-		charmID = aCharmID;
-	}
+	public void setCharmID(int aCharmID) {charmID = aCharmID;}
 
 	// get charm # of Skill
-	public int getNumCharmSkill()
-	{
-		return numCharmSkill;
-	}
+	public int getNumCharmSkill() {return numCharmSkill;}
 
 	// set charm # of skill
 	public void setNumCharmSKill(int aNumCharmSkill)
@@ -126,10 +104,7 @@ public class Set {
 	}
 
 	// get charm Skill id
-	public int[] getCharmSkillID()
-	{
-		return charmSkillID;
-	}
+	public int[] getCharmSkillID() {return charmSkillID;}
 
 	// set charm skill id
 	public void setCharmSKillID(int[] aCharmSkillID)
@@ -164,10 +139,7 @@ public class Set {
 	}
 
 	// get in use set pieces
-	public boolean getInUse(int part)
-	{
-		return inUse[part];
-	}
+	public boolean getInUse(int part) {return inUse[part];}
 
 	// set in use set pieces
 	public void setInUse(int part, boolean useOrNot)
@@ -176,13 +148,10 @@ public class Set {
 	}
 
 	// get number of slots
-	public int getNumSlot(int part)
-	{
-		return numJewel[part];
-	}
+	public int getNumJewel(int part) {return numJewel[part];}
 
 	// get number of slots
-	public void setNumSlot(int part, int value)
+	public void setNumJewel(int part, int value)
 	{
 		numJewel[part] = value;
 	}
@@ -190,64 +159,40 @@ public class Set {
 	// get outputs
 
 	// get set defense
-	public int getDefense()
-	{
-		return defense;
-	}
+	public int getDefense() {return defense;}
 
 	// get set resist
-	public int[] getResist()
-	{
-		return resist;
-	}
+	public int[] getResist() {return resist;}
 
 	// get num of Skills of the set
-	public int getNumSkill()
-	{
-		return numSkill;
-	}
+	public int getNumSkill() {return numSkill;}
 
 	// get Skill IDs of the set
-	public int[] getSkillID()
-	{
-		return skillID;
-	}
+	public int[] getSkillID() {return skillID;}
 
 	// get Skill Points of the set
-	public int[] getSkillPoint()
-	{
-		return skillPoint;
-	}
+	public int[] getSkillPoint() {return skillPoint;}
 
 	// get num of effects (activated skills) of the set
-	public int getNumEffect()
-	{
-		return numEffect;
-	}
+	public int getNumEffect() {return numEffect;}
 
 	// get effects ID(activated skills) of the set
-	public int[] getEffectID()
-	{
-		return effectID;
-	}
+	public int[] getEffectID() {return effectID;}
 
 	// get effect skill index (map effect list to skillID of the set)
-	public int[] getEffectSkillIndex()
-	{
-		return effectSkillIndex;
-	}
+	public int[] getEffectSkillIndex() {return effectSkillIndex;}
 
 	// get number of troso up of the set
-	public int getNumTorso()
-	{
-		return numTorso;
-	}
+	public int getNumTorso() {return numTorso;}
 
 	// get set rate
-	public int getRate()
-	{
-		return rate;
-	}
+	public int getRate() {return rate;}
+
+	// get gender
+	public boolean getFemale() {return female;}
+
+	// set gender
+	public void setFemale(boolean ifFemale) {female = ifFemale;}
 
 	// get jewel name
 	public String[] getJewelName(MhagData mhagData, int bodyPart)
@@ -537,6 +482,9 @@ public class Set {
 		Arrays.fill(skillPoint, 0);
 		Arrays.fill(effectID, 0);
 		Arrays.fill(effectSkillIndex, 0);
+
+		// hidden
+		female = false;
 
 	}
 	// set a set from code (batch version)
@@ -1541,6 +1489,9 @@ public class Set {
 	private int[] effectSkillIndex; // Skill Indeces in the List skillID
 	private int  numTorso = 0; // # of Torso Up
 	private int rate = 0; // # Reserved for sets Evaluation
+
+	// hidden variable
+	private boolean female = false;  //gender, only used in GUI
 
 	static final String unNamedSet = "Unnamed Set";
 
