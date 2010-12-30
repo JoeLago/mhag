@@ -98,7 +98,7 @@ public class MhagGui extends javax.swing.JFrame {
                 jTextPreview = new javax.swing.JTextArea();
                 setNamePanel = new javax.swing.JPanel();
                 jTextSetName = new javax.swing.JTextField();
-                batch = new javax.swing.JPanel();
+                Viewer = new javax.swing.JPanel();
                 generator = new javax.swing.JPanel();
                 about = new javax.swing.JPanel();
 
@@ -830,18 +830,18 @@ public class MhagGui extends javax.swing.JFrame {
 
                 jTabbedPane1.addTab("Calculator", calculator);
 
-                javax.swing.GroupLayout batchLayout = new javax.swing.GroupLayout(batch);
-                batch.setLayout(batchLayout);
-                batchLayout.setHorizontalGroup(
-                        batchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                javax.swing.GroupLayout ViewerLayout = new javax.swing.GroupLayout(Viewer);
+                Viewer.setLayout(ViewerLayout);
+                ViewerLayout.setHorizontalGroup(
+                        ViewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGap(0, 1226, Short.MAX_VALUE)
                 );
-                batchLayout.setVerticalGroup(
-                        batchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                ViewerLayout.setVerticalGroup(
+                        ViewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGap(0, 535, Short.MAX_VALUE)
                 );
 
-                jTabbedPane1.addTab("Batch", batch);
+                jTabbedPane1.addTab("Viewer", Viewer);
 
                 javax.swing.GroupLayout generatorLayout = new javax.swing.GroupLayout(generator);
                 generator.setLayout(generatorLayout);
@@ -1855,13 +1855,13 @@ public class MhagGui extends javax.swing.JFrame {
 	//renderer for slot menu tooltips
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
+        private javax.swing.JPanel Viewer;
         private javax.swing.JPanel about;
         private javax.swing.JComboBox armSlot1;
         private javax.swing.JComboBox armSlot2;
         private javax.swing.JComboBox armSlot3;
         private javax.swing.JLabel armsLabel;
         private javax.swing.JComboBox armsMenu;
-        private javax.swing.JPanel batch;
         private javax.swing.JRadioButton blade;
         private javax.swing.JPanel calculator;
         private javax.swing.JLabel charmLabel;
