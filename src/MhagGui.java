@@ -105,6 +105,8 @@ public class MhagGui extends javax.swing.JFrame {
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
                 setResizable(false);
 
+                jTabbedPane1.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 14)); // NOI18N
+
                 rank.setBorder(javax.swing.BorderFactory.createTitledBorder("Rank"));
 
                 rankGroup.add(lowRank);
@@ -1205,12 +1207,12 @@ public class MhagGui extends javax.swing.JFrame {
 }//GEN-LAST:event_codeActionPerformed
 
     private void saveOutputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveOutputActionPerformed
-		try {
-			appendData();
-		} catch (FileNotFoundException ex) {
-			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
-		}
-    }//GEN-LAST:event_saveOutputActionPerformed
+	    try {
+		    appendData();
+	    } catch (FileNotFoundException ex) {
+		    Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
+	    }
+}//GEN-LAST:event_saveOutputActionPerformed
 
     private void appendData() throws FileNotFoundException
     {
@@ -1221,7 +1223,7 @@ public class MhagGui extends javax.swing.JFrame {
 	    {
 		    if(!saveData.endsWith(".txt"))
 			    saveData = saveData + ".txt";
-		    saveStream = new PrintStream(saveData);
+		    saveStream = MhagUtil.streamAppendFile(saveData);
 		    mhag.setOutFormat(0);
 		    set.save(mhag, mhagData, saveStream);  // save results
 
@@ -1230,9 +1232,13 @@ public class MhagGui extends javax.swing.JFrame {
 	    {
 		    if(!saveData.endsWith(".html"))
 			    saveData = saveData + ".html";
-		    saveStream = new PrintStream(saveData);
+		    saveStream = MhagUtil.streamAppendFile(saveData);
 		    mhag.setOutFormat(1);
+
+		    saveStream.printf("<p style=\"page-break-before:always\">" +
+				"Set :</p>\n");
 		    set.save(mhag, mhagData, saveStream);  // save results
+
 		    mhag.setOutFormat(0);
 
 	    }
@@ -1240,9 +1246,9 @@ public class MhagGui extends javax.swing.JFrame {
 	    {
 		    if(!saveData.endsWith(".code"))
 			    saveData = saveData + ".code";
-		    saveStream = new PrintStream(saveData);
+		    saveStream = MhagUtil.streamAppendFile(saveData);
 		    String codeline = set.getSetCode();   //get set code
-		    saveStream.append(codeline);
+		    saveStream.println(codeline);
 	    }
 	    saveStream.close();
 
@@ -1743,6 +1749,7 @@ public class MhagGui extends javax.swing.JFrame {
 		    }
 	    }
 
+	    weaponMenu.setSelectedIndex(0);  //reset Weapon menu
 
 	    changeCharmMenu(lowRank);
 
@@ -1795,10 +1802,6 @@ public class MhagGui extends javax.swing.JFrame {
 	   stream.reset();
   	   set.save(mhag, mhagData, stream);  // save results
 	   stream.rewind();
-    }
-
-    public void setupSystemOut(JTextArea area)
-    {
     }
 
     public static void main(String args[]) {
