@@ -134,6 +134,17 @@ public class Jewel {
 		return "---";
 	}
 
+	// get jewel toolTips for menu : jewelName + slots
+	public String getJewelToolTips()
+	{
+		StringBuffer tips = new StringBuffer(jewelName);
+		tips.append(" ");
+
+		for (int i = 0; i < numSlot; i++)
+			tips.append("O");
+
+		return tips.toString();
+	}
 
 	// get jewel ID
 	public int getJewelID() {return jewelID;}
