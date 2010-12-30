@@ -1,12 +1,12 @@
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
-import javax.swing.JTextArea;
 
 /**
  * @program MHAG
@@ -105,12 +105,12 @@ public class MhagGui extends javax.swing.JFrame {
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
                 setResizable(false);
 
-                jTabbedPane1.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 14)); // NOI18N
+                jTabbedPane1.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 14));
 
                 rank.setBorder(javax.swing.BorderFactory.createTitledBorder("Rank"));
 
                 rankGroup.add(lowRank);
-                lowRank.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                lowRank.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 lowRank.setText("Low Rank");
                 lowRank.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,7 +119,7 @@ public class MhagGui extends javax.swing.JFrame {
                 });
 
                 rankGroup.add(highRank);
-                highRank.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                highRank.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 highRank.setSelected(true);
                 highRank.setText("High Rank");
                 highRank.addActionListener(new java.awt.event.ActionListener() {
@@ -150,7 +150,7 @@ public class MhagGui extends javax.swing.JFrame {
                 hunterType.setBorder(javax.swing.BorderFactory.createTitledBorder("Hunter Type"));
 
                 hunterTypeGroup.add(blade);
-                blade.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                blade.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 blade.setSelected(true);
                 blade.setText("Blademaster");
                 blade.addActionListener(new java.awt.event.ActionListener() {
@@ -160,7 +160,7 @@ public class MhagGui extends javax.swing.JFrame {
                 });
 
                 hunterTypeGroup.add(gunner);
-                gunner.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                gunner.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 gunner.setText("Gunner");
                 gunner.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +191,7 @@ public class MhagGui extends javax.swing.JFrame {
                 sex.setBorder(javax.swing.BorderFactory.createTitledBorder("Gender"));
 
                 sexGroup.add(male);
-                male.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                male.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 male.setSelected(true);
                 male.setText("Male");
                 male.addActionListener(new java.awt.event.ActionListener() {
@@ -201,7 +201,7 @@ public class MhagGui extends javax.swing.JFrame {
                 });
 
                 sexGroup.add(female);
-                female.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                female.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 female.setText("Female");
                 female.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -231,7 +231,7 @@ public class MhagGui extends javax.swing.JFrame {
                 setup.setBorder(javax.swing.BorderFactory.createTitledBorder("Setup"));
                 setup.setPreferredSize(new java.awt.Dimension(625, 390));
 
-                weaponMenu.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                weaponMenu.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
                 weaponMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No Slot", "1 Slot", "2 Slots", "3 Slots" }));
                 weaponMenu.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -342,7 +342,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                weaponSlot3.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                weaponSlot3.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
                 weaponSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 weaponSlot3.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -543,7 +543,7 @@ public class MhagGui extends javax.swing.JFrame {
                                                                 .addComponent(weaponSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addComponent(weaponSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addGap(6, 6, 6)
                                                                 .addComponent(weaponSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                         .addGroup(setupLayout.createSequentialGroup()
                                                 .addComponent(headLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -601,7 +601,7 @@ public class MhagGui extends javax.swing.JFrame {
                                                 .addComponent(charmMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(charmSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(6, 6, 6)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(charmSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(charmSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -623,10 +623,10 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(headMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(headSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(headSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(headSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(headMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(headSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addComponent(headLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -640,10 +640,10 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(armsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                .addComponent(armSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(armSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(armsMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(armSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(armSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(armSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(armSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
                                 .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -671,10 +671,10 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(charmSkillLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(charmSkill1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(skillPoint1)
-                                        .addComponent(charmSkill2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(skillPoint2))
+                                        .addComponent(skillPoint2)
+                                        .addComponent(charmSkill1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(charmSkill2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap(25, Short.MAX_VALUE))
                 );
 
@@ -708,7 +708,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                saveOutput.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+                saveOutput.setFont(new java.awt.Font("Monospaced", 0, 12));
                 saveOutput.setText("Save");
                 saveOutput.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -719,7 +719,7 @@ public class MhagGui extends javax.swing.JFrame {
                 jTextData.setText("MyData");
                 jTextData.setToolTipText("input your save data ");
 
-                jLabel1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                jLabel1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 jLabel1.setText("Data File");
 
                 javax.swing.GroupLayout outputLayout = new javax.swing.GroupLayout(output);
@@ -758,7 +758,7 @@ public class MhagGui extends javax.swing.JFrame {
 
                 jTextPreview.setColumns(20);
                 jTextPreview.setEditable(false);
-                jTextPreview.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                jTextPreview.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 jTextPreview.setForeground(new java.awt.Color(1, 1, 1));
                 jTextPreview.setRows(5);
                 jTextPreview.setText("================================================================================\n Medic's Set                             High Rank   Blademaster \n--------------------------------------------------------------------------------\n Weapon                                  OO-   Steadfast+ Recovery \n Grace Earring                           ---     \n Gobul Mail+                             O--   Steadfast+  \n Gobul Vambraces+                        O--   Medicine  \n Gobul Faulds+                           O--   Medicine  \n Gobul Greaves+                          OOO   Voracious  \n Rec Level +7                            OO-   Panacea  \n--------------------------------------------------------------------------------\n                     WEP HEA CHE ARM WAI LEG CHA TOT\n Max Defense         ---  10  74  74  74  74 --- 306 \n Resist: Fire        ---   0  -2  -2  -2  -2 ---  -8 \n         Water       ---   0   4   4   4   4 ---  16 \n         Ice         ---   0   0   0   0   0 ---   0 \n         Thunder     ---   0  -4  -4  -4  -4 --- -16 \n         Dragon      ---   0   2   2   2   2 ---   8 \n--------------------------------------------------------------------------------\n SKills: Wide-Range  ---  20 --- --- --- --- ---  20 → Wide-Range +2\n         Stun          2 ---   4   4   4   2 ---  16 → Negate Stun\n         Eating       -1 ---   2   4   5   5 ---  15 → Speed Eating +2\n         Rec Level   --- --- ---   1   1  -2  10  10 → Recovery Up\n         Expert      --- ---   3   2   1   2 ---   8   ---\n         Rec Speed     1 ---  -2  -2  -2  -2  -1  -8   ---\n================================================================================");
@@ -768,7 +768,7 @@ public class MhagGui extends javax.swing.JFrame {
 
                 setNamePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Set Name"));
 
-                jTextSetName.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                jTextSetName.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 jTextSetName.setText("Unnamed Set");
                 jTextSetName.setToolTipText("input your save data ");
 
@@ -1469,6 +1469,17 @@ public class MhagGui extends javax.swing.JFrame {
 		Arrays.fill(jewelMenuType[i],0);   // init jewel IDs as null
 	}
 
+	//initialize renderer
+	for(int i = 0; i < 7; i++)
+	{
+		for(int j = 0; j < 3; j++)
+		{
+			renderer[i][j] = new ComboboxToolTipRenderer();
+		        JComboBox jewelSlot = getJewelSlotObj(i, j);
+			jewelSlot.setRenderer(renderer[i][j]);
+		}
+	}
+
     }
 
     /**
@@ -1648,13 +1659,17 @@ public class MhagGui extends javax.swing.JFrame {
 	    int num = ind.length;
 
 	    jewelSlot.removeAllItems();
+	    ArrayList toolTips = new ArrayList();
 
 	    jewelSlot.addItem("---"); //1st null item
+	    toolTips.add("---");
 	    for(int i = 1; i < num; i++)
 	    {
  		    Jewel jewel = mhagData.getJewel(ind[i]);
 		    jewelSlot.addItem(jewel.getJewelNameSkill());
+		    toolTips.add(jewel.getJewelToolTips());
 	    }
+	    renderer[bodyPart][slotInd].setTooltips(toolTips);
 	    jewelSlot.setVisible(true);
 
 	    // keep the jewel ID if previously active
@@ -1835,6 +1850,9 @@ public class MhagGui extends javax.swing.JFrame {
 	private int[][] jewelMenuType = new int[7][3]; //menu type in each jewel button position
 	private boolean adjust = false; // adjust menu, don't perform calculation
 	int saveOpt =0;  //save option for GUI
+
+	private ComboboxToolTipRenderer[][] renderer = new ComboboxToolTipRenderer[7][3];
+	//renderer for slot menu tooltips
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
         private javax.swing.JPanel about;

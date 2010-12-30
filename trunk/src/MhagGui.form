@@ -342,7 +342,7 @@
                                           <Component id="weaponSlot1" min="-2" pref="120" max="-2" attributes="1"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="weaponSlot2" min="-2" pref="120" max="-2" attributes="1"/>
-                                          <EmptySpace max="-2" attributes="0"/>
+                                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                                           <Component id="weaponSlot3" min="-2" pref="120" max="-2" attributes="1"/>
                                       </Group>
                                   </Group>
@@ -353,9 +353,9 @@
                                   <Component id="headMenu" min="-2" pref="170" max="-2" attributes="1"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="headSlot1" min="-2" pref="120" max="-2" attributes="1"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="headSlot2" min="-2" pref="120" max="-2" attributes="1"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="headSlot3" min="-2" pref="120" max="-2" attributes="1"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -364,7 +364,7 @@
                                   <Component id="chestMenu" min="-2" pref="170" max="-2" attributes="1"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="chestSlot1" min="-2" pref="120" max="-2" attributes="1"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="chestSlot2" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="chestSlot3" min="-2" pref="120" max="-2" attributes="1"/>
@@ -375,7 +375,7 @@
                                   <Component id="armsMenu" min="-2" pref="170" max="-2" attributes="1"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="armSlot1" min="-2" pref="120" max="-2" attributes="1"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="armSlot2" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="armSlot3" min="-2" pref="120" max="-2" attributes="1"/>
@@ -386,7 +386,7 @@
                                   <Component id="waistMenu" min="-2" pref="170" max="-2" attributes="1"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="waistSlot1" min="-2" pref="120" max="-2" attributes="1"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="waistSlot2" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="waistSlot3" min="-2" pref="120" max="-2" attributes="1"/>
@@ -397,7 +397,7 @@
                                   <Component id="legsMenu" min="-2" pref="170" max="-2" attributes="1"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="legSlot1" min="-2" pref="120" max="-2" attributes="1"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="legSlot2" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="legSlot3" min="-2" pref="120" max="-2" attributes="1"/>
@@ -408,7 +408,7 @@
                                   <Component id="charmMenu" min="-2" pref="170" max="-2" attributes="1"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="charmSlot1" min="-2" pref="120" max="-2" attributes="1"/>
-                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="charmSlot2" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="charmSlot3" min="-2" pref="120" max="-2" attributes="1"/>
@@ -437,10 +437,10 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="headMenu" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="headSlot1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="headSlot2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="headSlot3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                  <Component id="headMenu" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               </Group>
                               <Component id="headLabel" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
@@ -458,10 +458,10 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="armsLabel" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="armSlot2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                  <Component id="armSlot3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="armsMenu" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="armSlot1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="armSlot2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="armSlot3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
@@ -497,10 +497,10 @@
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="charmSkillLabel" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                              <Component id="charmSkill1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               <Component id="skillPoint1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="charmSkill2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               <Component id="skillPoint2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="charmSkill1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="charmSkill2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="25" max="32767" attributes="0"/>
                       </Group>
@@ -525,6 +525,9 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="weaponMenuActionPerformed"/>
                   </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="MhagGui_weaponMenu"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="headMenu">
                   <Properties>
