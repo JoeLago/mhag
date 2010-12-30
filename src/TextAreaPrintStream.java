@@ -6,6 +6,7 @@ import javax.swing.JTextArea;
 /**
  * @program MHAG
  * @ extend PrintStream Class for TextArea
+ * @ contains method println, printf, print, and specialized reset & rewind
  * @version 1.0
  * @author Tifa@mh3
  */
@@ -26,6 +27,14 @@ public class TextAreaPrintStream extends PrintStream
 	}
 
 	@Override
+	public PrintStream printf(String string, Object... args)
+	{
+		String line = String.format(string, args);
+		textArea.append(line);
+		return this;
+	}
+
+	@Override
 	public void print(String string)
 	{
 		textArea.append(string);
@@ -34,6 +43,11 @@ public class TextAreaPrintStream extends PrintStream
 	public void reset()
 	{
 		textArea.setText("");
+	}
+
+	public void rewind()
+	{
+		textArea.setCaretPosition(0);
 	}
 
 }

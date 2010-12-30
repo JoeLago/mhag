@@ -98,7 +98,7 @@ public class Set {
 	public int getNumCharmSkill() {return numCharmSkill;}
 
 	// set charm # of skill
-	public void setNumCharmSKill(int aNumCharmSkill)
+	public void setNumCharmSkill(int aNumCharmSkill)
 	{
 		numCharmSkill = aNumCharmSkill;
 	}
@@ -107,9 +107,14 @@ public class Set {
 	public int[] getCharmSkillID() {return charmSkillID;}
 
 	// set charm skill id
-	public void setCharmSKillID(int[] aCharmSkillID)
+	public void setCharmSkillID(int[] aCharmSkillID)
 	{
 		charmSkillID = aCharmSkillID;
+	}
+
+	public void setCharmSkillID(int skillNo, int aCharmSkillID)
+	{
+		charmSkillID[skillNo] = aCharmSkillID;
 	}
 
 	// get charm name (with skill)
@@ -1236,7 +1241,8 @@ public class Set {
 				if(charmSkillID[i] == index)
 				{
 					points[6] += charm.getSkillPoint()[i];
-					break;
+					//break;  (it's actually not correct,
+					//have two same skills in a jewel
 				}
 			}
 		}
