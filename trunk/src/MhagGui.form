@@ -33,15 +33,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+          <Component id="jTabbedPane1" alignment="1" pref="1238" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jTabbedPane1" min="-2" pref="565" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
+          <Component id="jTabbedPane1" min="-2" pref="578" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -65,43 +62,44 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Component id="output" alignment="0" max="32767" attributes="1"/>
+                          <Group type="102" alignment="0" attributes="0">
                               <Component id="rank" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="hunterType" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="sex" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="output" min="-2" max="-2" attributes="0"/>
+                              <Component id="setNamePanel" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="setup" min="-2" pref="610" max="-2" attributes="1"/>
+                          <Component id="setup" alignment="0" pref="622" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPreview" pref="575" max="32767" attributes="0"/>
+                      <Component id="jScrollPreview" min="-2" pref="586" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="jScrollPreview" alignment="0" max="32767" attributes="1"/>
                           <Group type="102" alignment="0" attributes="0">
+                              <Component id="output" min="-2" pref="57" max="-2" attributes="1"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPreview" pref="495" max="32767" attributes="1"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="output" alignment="0" min="0" pref="89" max="32767" attributes="1"/>
-                                  <Component id="sex" alignment="0" max="32767" attributes="1"/>
-                                  <Component id="hunterType" alignment="0" max="32767" attributes="1"/>
-                                  <Component id="rank" alignment="0" max="32767" attributes="1"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="setNamePanel" min="-2" max="-2" attributes="1"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="sex" alignment="0" min="0" max="32767" attributes="1"/>
+                                      <Component id="hunterType" alignment="0" min="0" max="32767" attributes="1"/>
+                                      <Component id="rank" alignment="0" max="32767" attributes="1"/>
+                                  </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="setup" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -125,17 +123,16 @@
                               <Component id="lowRank" min="-2" max="-2" attributes="0"/>
                               <Component id="highRank" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="14" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Component id="lowRank" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="highRank" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -185,22 +182,22 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="blade" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="gunner" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="blade" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="gunner" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="35" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Component id="blade" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="gunner" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -255,17 +252,16 @@
                               <Component id="male" min="-2" max="-2" attributes="0"/>
                               <Component id="female" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="17" max="32767" attributes="0"/>
+                          <EmptySpace pref="30" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Component id="male" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="female" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -308,6 +304,9 @@
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                     <TitledBorder title="Setup"/>
                   </Border>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[625, 390]"/>
                 </Property>
               </Properties>
 
@@ -410,7 +409,7 @@
                                   <Component id="charmSlot3" min="-2" pref="120" max="-2" attributes="1"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="18" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -438,18 +437,12 @@
                                   <Component id="headSlot3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="headMenu" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="headLabel" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <EmptySpace min="5" pref="5" max="5" attributes="0"/>
-                              </Group>
+                              <Component id="headLabel" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="chestMenu" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="chestLabel" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <EmptySpace min="5" pref="5" max="5" attributes="0"/>
-                              </Group>
+                              <Component id="chestLabel" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="chestSlot1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="chestSlot2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -458,10 +451,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="armsLabel" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <EmptySpace min="5" pref="5" max="5" attributes="0"/>
-                              </Group>
+                              <Component id="armsLabel" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="armSlot2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="armSlot3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -477,10 +467,7 @@
                                   <Component id="waistSlot2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="waistSlot3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="waistLabel" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <EmptySpace min="5" pref="5" max="5" attributes="0"/>
-                              </Group>
+                              <Component id="waistLabel" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -490,10 +477,7 @@
                                   <Component id="legSlot2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="legSlot3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="legsLabel" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <EmptySpace min="5" pref="5" max="5" attributes="0"/>
-                              </Group>
+                              <Component id="legsLabel" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -762,6 +746,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="weaponSlot2ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="weaponSlot3">
                   <Properties>
@@ -774,6 +761,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="weaponSlot3ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="headSlot1">
                   <Properties>
@@ -786,6 +776,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="headSlot1ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="headSlot2">
                   <Properties>
@@ -798,6 +791,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="headSlot2ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="headSlot3">
                   <Properties>
@@ -810,6 +806,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="headSlot3ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="chestSlot1">
                   <Properties>
@@ -822,6 +821,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chestSlot1ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="chestSlot2">
                   <Properties>
@@ -834,6 +836,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chestSlot2ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="chestSlot3">
                   <Properties>
@@ -846,6 +851,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chestSlot3ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="armSlot1">
                   <Properties>
@@ -858,6 +866,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="armSlot1ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="armSlot2">
                   <Properties>
@@ -870,6 +881,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="armSlot2ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="armSlot3">
                   <Properties>
@@ -882,6 +896,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="armSlot3ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="waistSlot1">
                   <Properties>
@@ -894,6 +911,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="waistSlot1ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="waistSlot2">
                   <Properties>
@@ -906,6 +926,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="waistSlot2ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="waistSlot3">
                   <Properties>
@@ -918,6 +941,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="waistSlot3ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="legSlot1">
                   <Properties>
@@ -930,6 +956,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="legSlot1ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="legSlot2">
                   <Properties>
@@ -942,6 +971,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="legSlot2ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="legSlot3">
                   <Properties>
@@ -954,6 +986,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="legSlot3ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="charmSlot1">
                   <Properties>
@@ -966,6 +1001,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="charmSlot1ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="charmSlot2">
                   <Properties>
@@ -978,6 +1016,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="charmSlot2ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="charmSlot3">
                   <Properties>
@@ -990,6 +1031,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="charmSlot3ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="charmSkill1">
                   <Properties>
@@ -1002,6 +1046,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="charmSkill1ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="charmSkill2">
                   <Properties>
@@ -1014,6 +1061,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="charmSkill2ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="skillPoint1">
                   <Properties>
@@ -1047,19 +1097,18 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="text" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="html" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="code" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="saveOutput" min="-2" pref="72" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="text" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="html" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="code" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="jTextData" min="-2" pref="175" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="saveOutput" pref="97" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1069,13 +1118,12 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="text" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="html" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="code" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="saveOutput" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextData" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1092,6 +1140,9 @@
                     <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" value="TEXT"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="html">
                   <Properties>
@@ -1117,6 +1168,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Code"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="codeActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="saveOutput">
                   <Properties>
@@ -1125,10 +1179,32 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Save"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveOutputActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextData">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="MyData"/>
+                    <Property name="toolTipText" type="java.lang.String" value="input your save data "/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Lucida Sans Typewriter" size="12" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Data File"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JScrollPane" name="jScrollPreview">
+              <Properties>
+                <Property name="horizontalScrollBar" type="javax.swing.JScrollBar" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="null"/>
+                </Property>
+              </Properties>
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
@@ -1145,7 +1221,6 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="1" green="1" red="1" type="rgb"/>
                     </Property>
-                    <Property name="lineWrap" type="boolean" value="true"/>
                     <Property name="rows" type="int" value="5"/>
                     <Property name="text" type="java.lang.String" value="================================================================================&#xa; Medic&apos;s Set                             High Rank   Blademaster &#xa;--------------------------------------------------------------------------------&#xa; Weapon                                  OO-   Steadfast+ Recovery &#xa; Grace Earring                           ---     &#xa; Gobul Mail+                             O--   Steadfast+  &#xa; Gobul Vambraces+                        O--   Medicine  &#xa; Gobul Faulds+                           O--   Medicine  &#xa; Gobul Greaves+                          OOO   Voracious  &#xa; Rec Level +7                            OO-   Panacea  &#xa;--------------------------------------------------------------------------------&#xa;                     WEP HEA CHE ARM WAI LEG CHA TOT&#xa; Max Defense         ---  10  74  74  74  74 --- 306 &#xa; Resist: Fire        ---   0  -2  -2  -2  -2 ---  -8 &#xa;         Water       ---   0   4   4   4   4 ---  16 &#xa;         Ice         ---   0   0   0   0   0 ---   0 &#xa;         Thunder     ---   0  -4  -4  -4  -4 --- -16 &#xa;         Dragon      ---   0   2   2   2   2 ---   8 &#xa;--------------------------------------------------------------------------------&#xa; SKills: Wide-Range  ---  20 --- --- --- --- ---  20 &#x2192; Wide-Range +2&#xa;         Stun          2 ---   4   4   4   2 ---  16 &#x2192; Negate Stun&#xa;         Eating       -1 ---   2   4   5   5 ---  15 &#x2192; Speed Eating +2&#xa;         Rec Level   --- --- ---   1   1  -2  10  10 &#x2192; Recovery Up&#xa;         Expert      --- ---   3   2   1   2 ---   8   ---&#xa;         Rec Speed     1 ---  -2  -2  -2  -2  -1  -8   ---&#xa;================================================================================"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1154,6 +1229,47 @@
                       </Border>
                     </Property>
                     <Property name="opaque" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="setNamePanel">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Set Name"/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextSetName" pref="194" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextSetName" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JTextField" name="jTextSetName">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Lucida Sans Typewriter" size="12" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Unnamed Set"/>
+                    <Property name="toolTipText" type="java.lang.String" value="input your save data "/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -1172,12 +1288,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1203" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1226" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="522" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="535" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -1194,12 +1310,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1203" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1226" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="522" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="535" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -1216,12 +1332,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1203" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1226" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="522" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="535" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>

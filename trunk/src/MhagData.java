@@ -898,10 +898,10 @@ public class MhagData {
 
 		int[] indNew = MhagUtil.sortIndex(num, nameStr);
 
-		int[] indFinal = new int[num + 1]; // add null
-		indFinal[0] = -1;
+		int[] indFinal = new int[num];  //num + 1]; // don't add null
+//		indFinal[0] = -1;
 		for(int i = 0; i < num; i++)
-			indFinal[i + 1] = index[indNew[num - 1 - i]];
+			indFinal[i] = index[indNew[num - 1 - i]];
 
 		return indFinal;
 	}
