@@ -906,6 +906,35 @@ public class MhagData {
 		return indFinal;
 	}
 
+	// get list and exclude one exception
+	public int[] getSkillList(String skillClass, int exception)
+	{
+		int nMax = Skill.skillIDTot;
+		int[] index = new int[nMax];
+		String[] nameStr =  new String[nMax];
+		int num = 0;
+		for (int i = 0; i < nMax; i++)
+		{
+			Skill skill = skillList[i];
+			if(!skill.getSkillClass().equals(skillClass))continue;
+			if(skill.getSkillID() == exception)continue;
+
+			index[num] = i;
+			nameStr[num] = skill.getSkillName();
+			num++;
+		}
+
+
+		int[] indNew = MhagUtil.sortIndex(num, nameStr);
+
+		int[] indFinal = new int[num];  //num + 1]; // don't add null
+//		indFinal[0] = -1;
+		for(int i = 0; i < num; i++)
+			indFinal[i] = index[indNew[num - 1 - i]];
+
+		return indFinal;
+	}
+
 	public int[] getCharmList(boolean lowRank)
 	{
 		int nMax = Charm.charmIDTot;
