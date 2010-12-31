@@ -231,7 +231,7 @@ public class MhagGui extends javax.swing.JFrame {
                 setup.setBorder(javax.swing.BorderFactory.createTitledBorder("Setup"));
                 setup.setPreferredSize(new java.awt.Dimension(625, 390));
 
-                weaponMenu.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                weaponMenu.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 weaponMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No Slot", "1 Slot", "2 Slots", "3 Slots" }));
                 weaponMenu.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -287,7 +287,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                weaponLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                weaponLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
                 weaponLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/weapon.png"))); // NOI18N
                 weaponLabel.setLabelFor(weaponMenu);
                 weaponLabel.setToolTipText("Weapon");
@@ -317,7 +317,7 @@ public class MhagGui extends javax.swing.JFrame {
                 legsLabel.setLabelFor(legsMenu);
                 legsLabel.setToolTipText("Legs");
 
-                charmLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                charmLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
                 charmLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/charm.png"))); // NOI18N
                 charmLabel.setLabelFor(charmMenu);
                 charmLabel.setToolTipText("Charm");
@@ -326,7 +326,7 @@ public class MhagGui extends javax.swing.JFrame {
                 charmSkillLabel.setLabelFor(charmSkill1);
                 charmSkillLabel.setText("Charm Skill");
 
-                weaponSlot1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                weaponSlot1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 weaponSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 weaponSlot1.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -334,7 +334,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                weaponSlot2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                weaponSlot2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 weaponSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 weaponSlot2.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -342,7 +342,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                weaponSlot3.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                weaponSlot3.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 weaponSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 weaponSlot3.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1008,7 +1008,8 @@ public class MhagGui extends javax.swing.JFrame {
 		   for (int i = 0; i < 3; i++)   //change charm jewel
 			   changeJewelSlot(bodyPart, i, set.getLowRank(), 0, false);
 		   for (int i = 0; i < 2; i++)  //change charm skill
-			   changeCharmSkill(i, "C", false);
+			   changeCharmSkill(i, "D", false);
+		   charmSkillLabel.setVisible(false);
 		   skillPoint1.setText("");
 		   skillPoint2.setText("");
 		   set.setCharmID(-1);
@@ -1049,16 +1050,18 @@ public class MhagGui extends javax.swing.JFrame {
 
 		   if(nSkill == 1)
 		   {
+			   charmSkillLabel.setVisible(true);
 			   String skillClass = charm.getSkillClass()[0];
 			   changeCharmSkill(0, skillClass, true);
 			   skillPoint1.setText(String.format(
 				   "%+d",charm.getSkillPoint()[0]));
-			   changeCharmSkill(1, "C", false);
+			   changeCharmSkill(1, "D", false);
 			   skillPoint2.setText("");
 
 		   }
 		   else if(nSkill == 2)
 		   {
+			   charmSkillLabel.setVisible(true);
 			   String skillClass = charm.getSkillClass()[0];
 			   changeCharmSkill(0, skillClass, true);
 			   skillPoint1.setText(String.format(
@@ -1070,9 +1073,10 @@ public class MhagGui extends javax.swing.JFrame {
 		   }
 		   else
 		   {
-			   changeCharmSkill(0, "C", false);
+			   charmSkillLabel.setVisible(false);
+			   changeCharmSkill(0, "D", false);
 			   skillPoint1.setText("");
-			   changeCharmSkill(1, "C", false);
+			   changeCharmSkill(1, "D", false);
 			   skillPoint2.setText("");
 		   }
 
@@ -1082,29 +1086,46 @@ public class MhagGui extends javax.swing.JFrame {
 
     private void charmSkill1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_charmSkill1ActionPerformed
 	    //charm skill 1
+	   if(adjust)return;
 	   int ind = charmSkill1.getSelectedIndex();
 	   if(ind < 0) return;
 
 	   Charm charm = mhagData.getCharm(set.getCharmID());
-	   int[] list = mhagData.getSkillList(charm.getSkillClass()[0]);
+	   int[] list = mhagData.getSkillList(charm.getSkillClass()[0],
+		   set.getCharmSkillID()[1]);
 
 	   set.setCharmSkillID(0,list[ind]);
-	   set.setNumCharmSkill(charm.getNumSkill());
 
+	   if(set.getNumCharmSkill() == 2)
+	   {
+		   adjust = true;
+		   Charm charm2 =  mhagData.getCharm(set.getCharmID());
+    		   changeCharmSkill(1, charm2.getSkillClass()[1], true);
+		   adjust = false;
+	   }
 	   calSetGUI();
 
     }//GEN-LAST:event_charmSkill1ActionPerformed
 
     private void charmSkill2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_charmSkill2ActionPerformed
 	    //charm skill 2
+	   if(adjust)return;
 	   int ind = charmSkill2.getSelectedIndex();
 	   if(ind < 0) return;
 
 	   Charm charm = mhagData.getCharm(set.getCharmID());
-	   int[] list = mhagData.getSkillList(charm.getSkillClass()[1]);
+	   int[] list = mhagData.getSkillList(charm.getSkillClass()[1],
+		   set.getCharmSkillID()[0]);
 
 	   set.setCharmSkillID(1,list[ind]);
-	   set.setNumCharmSkill(2);
+
+	   if(set.getNumCharmSkill() == 2)
+	   {
+		   adjust = true;
+		   Charm charm2 =  mhagData.getCharm(set.getCharmID());
+    		   changeCharmSkill(0, charm2.getSkillClass()[0], true);
+		   adjust = false;
+	   }
 
 	   calSetGUI();
 
@@ -1697,17 +1718,21 @@ public class MhagGui extends javax.swing.JFrame {
 
     public void changeCharmSkill(int skillNo,String skillClass, boolean active)
     {
+
 	    JComboBox skillSlot;
 	    JLabel skillLabel;
+	    int exception;
 	    if(skillNo == 0)
 	    {
 		    skillSlot = charmSkill1;
 		    skillLabel = skillPoint1;
+		    exception = set.getCharmSkillID()[1];
 	    }
 	    else
 	    {
 		    skillSlot = charmSkill2;
 		    skillLabel = skillPoint2;
+		    exception = set.getCharmSkillID()[0];
 	    }
 
 	    if(!active)
@@ -1717,20 +1742,27 @@ public class MhagGui extends javax.swing.JFrame {
 		    return;
 	    }
 
-		int[] ind = mhagData.getSkillList(skillClass);
+		int[] ind = mhagData.getSkillList(skillClass, exception);
 		int num = ind.length;
 
 		skillSlot.removeAllItems();
 		//skillSlot.addItem("---"); //No 1st null item
+		int selectedInd = 0;
 		for(int i = 0; i < num; i++)
 		{
 			Skill skill = mhagData.getSkill(ind[i]);
 			skillSlot.addItem(skill.getSkillName());
+			if(skill.getSkillID() == set.getCharmSkillID()[skillNo])
+			{
+				skillSlot.setSelectedIndex(i);
+				selectedInd = i;
+			}
 		}
 
 	    skillSlot.setVisible(true);
 	    skillLabel.setVisible(true);
-	    set.setCharmSkillID(skillNo,ind[0]);
+	    set.setCharmSkillID(skillNo,ind[selectedInd]);
+
     }
 
     public void changeCharmMenu(boolean lowRank)
@@ -1769,7 +1801,7 @@ public class MhagGui extends javax.swing.JFrame {
 	    changeCharmMenu(lowRank);
 
 	    for(int i = 0; i < 2; i++)
-		    changeCharmSkill(i, "C", false);
+		    changeCharmSkill(i, "D", false);
 
     }
 
