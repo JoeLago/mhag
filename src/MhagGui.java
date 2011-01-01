@@ -138,14 +138,14 @@ public class MhagGui extends javax.swing.JFrame {
                 setTitle("MHAG: Monster Hunter Armor Generator   Ver 1.0 beta");
                 setResizable(false);
 
-                jTabbedPane1.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 14)); // NOI18N
+                jTabbedPane1.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
                 jTabbedPane1.setOpaque(true);
 
                 rank.setBorder(javax.swing.BorderFactory.createTitledBorder("Rank"));
                 rank.setToolTipText("Change rank type, reset set");
 
                 rankGroup.add(lowRank);
-                lowRank.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                lowRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 lowRank.setText("Low Rank");
                 lowRank.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,7 +154,7 @@ public class MhagGui extends javax.swing.JFrame {
                 });
 
                 rankGroup.add(highRank);
-                highRank.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                highRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 highRank.setSelected(true);
                 highRank.setText("High Rank");
                 highRank.addActionListener(new java.awt.event.ActionListener() {
@@ -186,7 +186,7 @@ public class MhagGui extends javax.swing.JFrame {
                 hunterType.setToolTipText("Change hunter type, reset set");
 
                 hunterTypeGroup.add(blade);
-                blade.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                blade.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 blade.setSelected(true);
                 blade.setText("Blademaster");
                 blade.addActionListener(new java.awt.event.ActionListener() {
@@ -196,7 +196,7 @@ public class MhagGui extends javax.swing.JFrame {
                 });
 
                 hunterTypeGroup.add(gunner);
-                gunner.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                gunner.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 gunner.setText("Gunner");
                 gunner.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,7 +228,7 @@ public class MhagGui extends javax.swing.JFrame {
                 sex.setToolTipText("Switch armor names");
 
                 sexGroup.add(male);
-                male.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                male.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 male.setSelected(true);
                 male.setText("Male");
                 male.addActionListener(new java.awt.event.ActionListener() {
@@ -238,7 +238,7 @@ public class MhagGui extends javax.swing.JFrame {
                 });
 
                 sexGroup.add(female);
-                female.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                female.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 female.setText("Female");
                 female.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -268,7 +268,7 @@ public class MhagGui extends javax.swing.JFrame {
                 setup.setBorder(javax.swing.BorderFactory.createTitledBorder("Setup"));
                 setup.setPreferredSize(new java.awt.Dimension(625, 390));
 
-                weaponMenu.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                weaponMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 weaponMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No Slot", "1 Slot", "2 Slots", "3 Slots" }));
                 weaponMenu.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -276,7 +276,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                headMenu.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                headMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 headMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 headMenu.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -284,7 +284,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                chestMenu.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                chestMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 chestMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 chestMenu.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -292,7 +292,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                armsMenu.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                armsMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 armsMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 armsMenu.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -300,7 +300,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                waistMenu.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                waistMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 waistMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 waistMenu.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -308,7 +308,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                legsMenu.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                legsMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 legsMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 legsMenu.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -316,7 +316,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                charmMenu.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                charmMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 charmMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 charmMenu.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -359,11 +359,11 @@ public class MhagGui extends javax.swing.JFrame {
                 charmLabel.setLabelFor(charmMenu);
                 charmLabel.setToolTipText("Charm");
 
-                charmSkillLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                charmSkillLabel.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 charmSkillLabel.setLabelFor(charmSkill1);
                 charmSkillLabel.setText("Charm Skill");
 
-                weaponSlot1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                weaponSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 weaponSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 weaponSlot1.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -371,7 +371,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                weaponSlot2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                weaponSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 weaponSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 weaponSlot2.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -379,7 +379,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                weaponSlot3.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                weaponSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 weaponSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 weaponSlot3.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -387,7 +387,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                headSlot1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                headSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 headSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 headSlot1.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -395,7 +395,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                headSlot2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                headSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 headSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 headSlot2.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -403,7 +403,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                headSlot3.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                headSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 headSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 headSlot3.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -411,7 +411,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                chestSlot1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                chestSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 chestSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 chestSlot1.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -419,7 +419,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                chestSlot2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                chestSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 chestSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 chestSlot2.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -427,7 +427,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                chestSlot3.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                chestSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 chestSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 chestSlot3.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -435,7 +435,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                armSlot1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                armSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 armSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 armSlot1.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -443,7 +443,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                armSlot2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                armSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 armSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 armSlot2.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -451,7 +451,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                armSlot3.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                armSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 armSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 armSlot3.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -459,7 +459,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                waistSlot1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                waistSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 waistSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 waistSlot1.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -467,7 +467,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                waistSlot2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                waistSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 waistSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 waistSlot2.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -475,7 +475,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                waistSlot3.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                waistSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 waistSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 waistSlot3.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -483,7 +483,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                legSlot1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                legSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 legSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 legSlot1.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -491,7 +491,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                legSlot2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                legSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 legSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 legSlot2.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -499,7 +499,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                legSlot3.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                legSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 legSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 legSlot3.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -507,7 +507,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                charmSlot1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                charmSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 charmSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 charmSlot1.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -515,7 +515,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                charmSlot2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                charmSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 charmSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 charmSlot2.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -523,7 +523,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                charmSlot3.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                charmSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 charmSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 charmSlot3.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -531,7 +531,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                charmSkill1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                charmSkill1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 charmSkill1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 charmSkill1.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -539,7 +539,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                charmSkill2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 charmSkill2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 charmSkill2.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -547,9 +547,11 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
+                skillPoint1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 skillPoint1.setLabelFor(charmSkill1);
                 skillPoint1.setText("+10");
 
+                skillPoint2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 skillPoint2.setLabelFor(charmSkill2);
                 skillPoint2.setText("-10");
 
@@ -718,7 +720,7 @@ public class MhagGui extends javax.swing.JFrame {
                 output.setBorder(javax.swing.BorderFactory.createTitledBorder("Output"));
 
                 outputGroup.add(text);
-                text.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                text.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 text.setSelected(true);
                 text.setText("TEXT");
                 text.addActionListener(new java.awt.event.ActionListener() {
@@ -728,7 +730,7 @@ public class MhagGui extends javax.swing.JFrame {
                 });
 
                 outputGroup.add(html);
-                html.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                html.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 html.setText("HTML");
                 html.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -737,7 +739,7 @@ public class MhagGui extends javax.swing.JFrame {
                 });
 
                 outputGroup.add(code);
-                code.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                code.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 code.setText("Code");
                 code.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -745,7 +747,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                saveOutput.setFont(new java.awt.Font("Monospaced", 1, 12));
+                saveOutput.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
                 saveOutput.setText("Save");
                 saveOutput.setToolTipText("Append set to data file");
                 saveOutput.addActionListener(new java.awt.event.ActionListener() {
@@ -754,10 +756,11 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
+                jTextData.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 jTextData.setText("MyData");
                 jTextData.setToolTipText("Input your save data ");
 
-                jLabel1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                jLabel1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 jLabel1.setText("Data File");
 
                 javax.swing.GroupLayout outputLayout = new javax.swing.GroupLayout(output);
@@ -793,11 +796,12 @@ public class MhagGui extends javax.swing.JFrame {
                 );
 
                 jScrollPreview.setForeground(javax.swing.UIManager.getDefaults().getColor("Panel.background"));
+                jScrollPreview.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 jScrollPreview.setHorizontalScrollBar(null);
 
                 jTextPreview.setColumns(20);
                 jTextPreview.setEditable(false);
-                jTextPreview.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 jTextPreview.setForeground(new java.awt.Color(1, 1, 1));
                 jTextPreview.setRows(5);
                 jTextPreview.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview"));
@@ -806,7 +810,7 @@ public class MhagGui extends javax.swing.JFrame {
 
                 setNamePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Set Name"));
 
-                jTextSetName.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                jTextSetName.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 jTextSetName.setText("Unnamed Set");
                 jTextSetName.setToolTipText("Input set name, use enter to preview it now");
                 jTextSetName.addActionListener(new java.awt.event.ActionListener() {
@@ -873,11 +877,12 @@ public class MhagGui extends javax.swing.JFrame {
 
                 jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;Calculator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/pic/calculator.png")), calculator, ""); // NOI18N
 
+                jScrollPreview2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 jScrollPreview2.setHorizontalScrollBar(null);
 
                 jTextPreview2.setColumns(20);
                 jTextPreview2.setEditable(false);
-                jTextPreview2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                jTextPreview2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 jTextPreview2.setForeground(new java.awt.Color(1, 1, 1));
                 jTextPreview2.setRows(5);
                 jTextPreview2.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview"));
@@ -886,10 +891,10 @@ public class MhagGui extends javax.swing.JFrame {
 
                 codeBook.setBorder(javax.swing.BorderFactory.createTitledBorder("Code Book"));
 
-                codeBookName.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                codeBookName.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 codeBookName.setText("MyData");
 
-                codeBookLoad.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12));
+                codeBookLoad.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
                 codeBookLoad.setText("Load");
                 codeBookLoad.setToolTipText("Load code book");
                 codeBookLoad.addActionListener(new java.awt.event.ActionListener() {
@@ -898,7 +903,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                codeBookSave.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12));
+                codeBookSave.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
                 codeBookSave.setText("Save");
                 codeBookSave.setToolTipText("Save code  book, overwrite the old file");
                 codeBookSave.addActionListener(new java.awt.event.ActionListener() {
@@ -930,10 +935,10 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
 
-                convert.setBorder(javax.swing.BorderFactory.createTitledBorder("Output Sets"));
+                convert.setBorder(javax.swing.BorderFactory.createTitledBorder("Export Sets"));
 
                 buttonGroup1.add(convertTEXT);
-                convertTEXT.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                convertTEXT.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 convertTEXT.setSelected(true);
                 convertTEXT.setText("TEXT");
                 convertTEXT.addActionListener(new java.awt.event.ActionListener() {
@@ -943,7 +948,7 @@ public class MhagGui extends javax.swing.JFrame {
                 });
 
                 buttonGroup1.add(convertHTML);
-                convertHTML.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                convertHTML.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 convertHTML.setText("HTML");
                 convertHTML.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -951,8 +956,8 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                Output.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12));
-                Output.setText("Save & Output");
+                Output.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+                Output.setText("Save & Export");
                 Output.setToolTipText("Save code book, and output sets");
                 Output.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -983,10 +988,10 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
 
-                jScrollPane1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                jScrollPane1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
 
                 codeList.setBorder(javax.swing.BorderFactory.createTitledBorder("Code List"));
-                codeList.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                codeList.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 codeList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
                 codeList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
                         public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
@@ -995,7 +1000,7 @@ public class MhagGui extends javax.swing.JFrame {
                 });
                 jScrollPane1.setViewportView(codeList);
 
-                loadSetInteract.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12));
+                loadSetInteract.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
                 loadSetInteract.setText("Load to Calculator");
                 loadSetInteract.setToolTipText("Load the selected set");
                 loadSetInteract.addActionListener(new java.awt.event.ActionListener() {
@@ -1004,7 +1009,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                getSetInteract.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12));
+                getSetInteract.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
                 getSetInteract.setText("Add from Calculator");
                 getSetInteract.setToolTipText("Add the set below");
                 getSetInteract.addActionListener(new java.awt.event.ActionListener() {
@@ -1013,7 +1018,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                deleteInteract.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12));
+                deleteInteract.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
                 deleteInteract.setText("Remove/Cut");
                 deleteInteract.setToolTipText("Remvoe/cut the selected set (max 5) ");
                 deleteInteract.addActionListener(new java.awt.event.ActionListener() {
@@ -1022,7 +1027,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                undoInteract.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12));
+                undoInteract.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
                 undoInteract.setText("Paste");
                 undoInteract.setToolTipText("Append the recently removed set (max 5)");
                 undoInteract.addActionListener(new java.awt.event.ActionListener() {
@@ -1110,7 +1115,7 @@ public class MhagGui extends javax.swing.JFrame {
                 jTextUsage.setColumns(20);
                 jTextUsage.setLineWrap(true);
                 jTextUsage.setRows(5);
-                jTextUsage.setText("History:\nv.1.0 beta 01/01/2011: initial release for test.\n\nRequirement:\n1.OS: any OS with JRE\n2.Screen Resolution: best for 720p or higher (1280 pixels in width)\n3.CPU: (not sure, let me know if you feel slow or have any problems)\n4.Browser: Google Chrome/Mozilla Firefox/Safari, Internet Explorer is not recommended\n\nThere are three components: a calculator, a viewer and a generator.\n1. Calculator:\nOutput Panel: three output options (text/html/code)\n     TEXT :(.txt) plain text format, save format as shown in preview panel.\n     HTML :(.html) html format table, viewed in a browser.\n     CODE :(.code) set code used to store set information for future use.\n     Data File: file name of save data.  If file name doesn't contain file type extension, MHAG automatically add it.\n     Save Button: APPENDs set to the save data.  If save file does not exist, a new file will be created.\n\nRank/Hunter Type/Gender Options:\n     Rank : low/high Rank, reset setup once rank option is swtiched.\n     Hunter Type : blademaster/gunner. reset setup once hunter type option is swtiched.\n     Gender : male/female.  It only affects the armor pieces that are ony for male/female.  The corresponding armor name and its position in the menu wil be changed (not reset) when gender is switched.\n     Set Name : Armor set name. \"Unnamed Set\" by default. It can be changed to any words (best less than 40 characters).  It is not immediately shown in the preview panel until ENTER key is pressed or other setup otions are selected.\n\nSetup Panel: setup details\n     At beginning, only the first column of dropdown boxes are available.  They can be used to change the armor pieces/weapon/charm.  When any of them is selected, some additional boxes will appear on the right, depending on the number of jewel slots.  MHAG can prevent users from using too many jewels on one set.  When a charm is selected, users can also choose charm skills for the right skill classes.  If the charm allows two charm skills, MHAG can prevent users from choosing two same skills.\n     Jewel menus only show the positive skill name and skill points. They also contain tool tips for jewel names and number of slots.\n     All menu lists are sorted by alphatical order, so users can use keyboard to quickly locate the right stuffs.\n\nPreview Panel: preview the armor set.  It changes along with the setup.\n\n2. Viewer: \nCode Book Panel: \n     Load: load code book to Code List Panel.  It ONLY works for existing data file.  It is not recommended to frequently create new code book .(If you really want to create a new code book in MHAG, you can use output panel in the calcuatlor.)\n     Save: save all the items in the code list to code book.  Warning! all the old code data in the orginal file will be lost.  MHAG automatically prevent user from saving code book if the code list is empty.\n\nOutput Sets Panel: This is the batch mode of calculator.  It first save the code book, then output sets in text or html format.  It is desgined to generate a set book.  The html codes are designed to print one set on each page.\n\nCode List Panel: display code list. Mouse click or up/down key can be used to nevigate sets from the preview panel.\n\nLoad to Calculator Button: load the selected set to the calculator, so they can be manually modified.\n\nAdd from Calcutalor Button: append the set after the selected set, and move selection to the new set.  It won't delete any set.\n\nRemove/Cut Button: remove the selected set. meanwhile the last five set inforamtions are stored.\n\nPaste Button: append the DELETED set after the selected set, and move selection to the new set. It can only retrieve at most five deleted sets.\n\nTips:\n1). modify a set: select the set -> load to calculator -> modify it -> add from calcualtor -> select the old set (move up) -> remove \n2). swap two adjacent sets: select the upper set -> remove -> paste\n3). other set rearrangement : combine remove/paste options. Warning! only 5 sets can be stored.\n\n3. Generator: (TBD)");
+                jTextUsage.setText("Usage:\nThere are three components: a calculator, a viewer and a generator.\n1. Calculator:\nOutput Panel: three output options (text/html/code)\n     TEXT :(.txt) plain text format, same as the one shown in preview panel.\n     HTML :(.html) html format table; it can be viewed in a browser.  MHAG HTML codes were tweaked in Google Chrome, and it also works fine in Mozilla Firefox and Safari, but not Internet Explorer.\n     CODE :(.code) set code used to save set information for future use.\n     Data File: file name of save data.  If file name doesn't contain file type extension, MHAG AUTOMATICALLY add it.\n     Save Button: APPEND set to the save data.  If save file does not exist, a NEW file will be created.\n\nRank/Hunter Type/Gender Options:\n     Rank : low/high Rank; it resets setup once rank option is swtiched.  The low rank option limits setup to low rank stuffs.\n     Hunter Type : blademaster/gunner; it resets setup once hunter type option is swtiched.\n     Gender : male/female; it only affects the armor pieces that are only for male/female.  The corresponding armor name and its position in the menu wil be changed (not reset) when gender is switched.\n     Set Name : armor set name, \"Unnamed Set\" by default. It can be changed to any words (best less than 40 characters).  It is not immediately shown in the preview panel until ENTER key is pressed or other setup otions are selected afterwards.\n\nSetup Panel: setup details\n     At beginning, only the first column of dropdown boxes are available.  They can be used to change the armor pieces/weapon slot/charm.  When any of them is selected, some additional boxes will appear on the right, depending on the number of jewel slots.  MHAG can prevent users from using too many jewels on one set.  When a charm is selected, users can also choose charm skills for the right skill classes.  If the charm allows two charm skills, MHAG can prevent users from choosing two same skills.\n     To make it concise and save space, jewel menus only show the positive skill name and skill point.  But meanwhile, each jewel option also has tool tip for jewel names and number of slots.  Put mouse over a jewel option to show the tip.\n     All menu lists are sorted by alphatical order, so users can use keyboard to quickly locate the right stuffs.\n\nPreview Panel: preview the armor set.  It changes along with the setup.  Use the vertical scroll bar if the armor set involves too many armor skills.\n\n2. Viewer: \nCode Book Panel: \n     Load: load code book to Code List Panel.  It ONLY works for existing data file.  I didn't design a \"New Book\" button, because I don't want to encourage people to create a lot of  new code book .(If you really want to create one in MHAG, you can use output panel in the calcuatlor.)\n     Save: save all the items in the code list to code book.  Warning! all the old code data in the orginal file will be lost.  MHAG prevent user from saving code book if the code list is empty.\n\nExport Sets Panel: This is the batch calculator.  It first saves the code book, then exports sets in text or html format.  It can be used to generate a easy-to-read set book, so users can print the sets or further convert it to PDF format.(print/PDF functions are not included)   The html codes are designed to print one set per page.\n\nCode List Panel: display code list; mouse click or up/down key can be used to nevigate sets from the (2nd) preview panel.\n\nLoad to Calculator Button: load the selected set to the calculator, so they can be manually modified there.\n\nAdd from Calcutalor Button: append the set after the selected set, and move selection to the new set.  It does not delete any set.\n\nRemove/Cut Button: remove the selected set, and move selection to the next set.  The last five removed sets can be retrieved later.\n\nPaste Button: append the DELETED set after the selected set, and move selection to the new set. It can only retrieve at most five deleted sets.\n\nTips:\n1). modify a set: select the set -> load to calculator -> modify it -> add from calcualtor -> select the old set (move up) -> remove \n2). swap two adjacent sets: select the upper set -> remove -> paste\n3). Set rearrangement : combine remove/paste options. Warning! only 5 sets can be stored.\n4). Don't FORGET to SAVE code book before exit the program!\n\n3. Generator: (TBD)");
                 jTextUsage.setWrapStyleWord(true);
                 jTextUsage.setOpaque(false);
                 jScrollUsage.setViewportView(jTextUsage);
@@ -1456,6 +1461,7 @@ public class MhagGui extends javax.swing.JFrame {
 		} catch (FileNotFoundException ex) {
 			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
 		}
+	    mhag.setOutFormat(0); //back to text format
 
     }//GEN-LAST:event_OutputActionPerformed
 
@@ -1745,7 +1751,7 @@ public class MhagGui extends javax.swing.JFrame {
 			    //redo 1st skill
 
 			    list2 = mhagData.getSkillList(charm.getSkillClass()[0],
-				   set.getCharmSkillID()[1]);
+				   aSet.getCharmSkillID()[1]);
 			    for (int j = 0; j < list2.length; j++)
 			    {
 				    if(list2[j] == aSet.getCharmSkillID()[0])
@@ -1755,21 +1761,20 @@ public class MhagGui extends javax.swing.JFrame {
 					    break;
 				    }
 			    }
+		    }
 
-			    //check 2st skill
+		    //check 2st skill
 
-			    list2 = mhagData.getSkillList(charm.getSkillClass()[1],
-				   set.getCharmSkillID()[0]);
-			    for (int j = 0; j < list2.length; j++)
+		    list2 = mhagData.getSkillList(charm.getSkillClass()[1],
+			   aSet.getCharmSkillID()[0]);
+		    for (int j = 0; j < list2.length; j++)
+		    {
+			    if(list2[j] == aSet.getCharmSkillID()[1])
 			    {
-				    if(list2[j] == aSet.getCharmSkillID()[1])
-				    {
-					    charmSkill2.setSelectedIndex(j);
-					    charmSkillAction(1);
-					    break;
-				    }
+				    charmSkill2.setSelectedIndex(j);
+				    charmSkillAction(1);
+				    break;
 			    }
-
 		    }
 
 	    }
