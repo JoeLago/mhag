@@ -1384,9 +1384,9 @@ public class Set {
 		{
 			defense += bonus[5];
 			if(bonus[5] > 0)
-				bonusTitle = new String(" \u2191");
+				bonusTitle = new String("<up>");
 			else if(bonus[5] < 0)
-				bonusTitle = new String(" \u2193");
+				bonusTitle = new String("<down>");
 		}
 
 		Output.defense(mhag.getOutFormat(), outSave, title,
@@ -1417,9 +1417,9 @@ public class Set {
 			{
 				resist[i] += bonus[i];
 				if(bonus[i] > 0)
-					bonusTitle = new String(" \u2191");
+					bonusTitle = new String("<up>");
 				else if(bonus[i] < 0)
-					bonusTitle = new String(" \u2193");
+					bonusTitle = new String("<down>");
 			}
 
 			Output.resist(mhag.getOutFormat(), outSave, i, title5[i],
@@ -1445,7 +1445,7 @@ public class Set {
 			if(i < numEffect)
 			{
 				Effect effect = mhagData.getEffect(effectID[i]);
-				effectName = new String("\u2192 "+
+				effectName = new String("*"+
 					effect.getEffectName());
 				if(skillPoint[i] > 0)
 					ifEff = 1;
