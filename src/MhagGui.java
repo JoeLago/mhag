@@ -1,12 +1,22 @@
 
+import java.awt.Desktop;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintStream;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
+import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.ListModel;
+import javax.swing.event.HyperlinkEvent;
 
 /**
  * @program MHAG
@@ -35,6 +45,7 @@ public class MhagGui extends javax.swing.JFrame {
                 hunterTypeGroup = new javax.swing.ButtonGroup();
                 sexGroup = new javax.swing.ButtonGroup();
                 outputGroup = new javax.swing.ButtonGroup();
+                buttonGroup1 = new javax.swing.ButtonGroup();
                 jTabbedPane1 = new javax.swing.JTabbedPane();
                 calculator = new javax.swing.JPanel();
                 rank = new javax.swing.JPanel();
@@ -98,16 +109,40 @@ public class MhagGui extends javax.swing.JFrame {
                 jTextPreview = new javax.swing.JTextArea();
                 setNamePanel = new javax.swing.JPanel();
                 jTextSetName = new javax.swing.JTextField();
-                Viewer = new javax.swing.JPanel();
+                viewer = new javax.swing.JPanel();
+                jScrollPreview2 = new javax.swing.JScrollPane();
+                jTextPreview2 = new javax.swing.JTextArea();
+                codeBook = new javax.swing.JPanel();
+                codeBookName = new javax.swing.JTextField();
+                codeBookLoad = new javax.swing.JButton();
+                codeBookSave = new javax.swing.JButton();
+                convert = new javax.swing.JPanel();
+                convertTEXT = new javax.swing.JRadioButton();
+                convertHTML = new javax.swing.JRadioButton();
+                Output = new javax.swing.JButton();
+                jScrollPane1 = new javax.swing.JScrollPane();
+                codeList = new javax.swing.JList();
+                loadSetInteract = new javax.swing.JButton();
+                getSetInteract = new javax.swing.JButton();
+                deleteInteract = new javax.swing.JButton();
+                undoInteract = new javax.swing.JButton();
                 generator = new javax.swing.JPanel();
                 about = new javax.swing.JPanel();
+                jScrollAbout = new javax.swing.JScrollPane();
+                jEditorAbout = new javax.swing.JEditorPane();
+                jLabel2 = new javax.swing.JLabel();
+                jScrollUsage = new javax.swing.JScrollPane();
+                jTextUsage = new javax.swing.JTextArea();
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+                setTitle("MHAG: Monster Hunter Armor Generator   Ver 1.0 beta");
                 setResizable(false);
 
-                jTabbedPane1.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 14));
+                jTabbedPane1.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 14)); // NOI18N
+                jTabbedPane1.setOpaque(true);
 
                 rank.setBorder(javax.swing.BorderFactory.createTitledBorder("Rank"));
+                rank.setToolTipText("Change rank type, reset set");
 
                 rankGroup.add(lowRank);
                 lowRank.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
@@ -148,6 +183,7 @@ public class MhagGui extends javax.swing.JFrame {
                 );
 
                 hunterType.setBorder(javax.swing.BorderFactory.createTitledBorder("Hunter Type"));
+                hunterType.setToolTipText("Change hunter type, reset set");
 
                 hunterTypeGroup.add(blade);
                 blade.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
@@ -189,6 +225,7 @@ public class MhagGui extends javax.swing.JFrame {
                 );
 
                 sex.setBorder(javax.swing.BorderFactory.createTitledBorder("Gender"));
+                sex.setToolTipText("Switch armor names");
 
                 sexGroup.add(male);
                 male.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
@@ -287,7 +324,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                weaponLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                weaponLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 weaponLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/weapon.png"))); // NOI18N
                 weaponLabel.setLabelFor(weaponMenu);
                 weaponLabel.setToolTipText("Weapon");
@@ -317,7 +354,7 @@ public class MhagGui extends javax.swing.JFrame {
                 legsLabel.setLabelFor(legsMenu);
                 legsLabel.setToolTipText("Legs");
 
-                charmLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                charmLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 charmLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/charm.png"))); // NOI18N
                 charmLabel.setLabelFor(charmMenu);
                 charmLabel.setToolTipText("Charm");
@@ -708,8 +745,9 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                saveOutput.setFont(new java.awt.Font("Monospaced", 0, 12));
+                saveOutput.setFont(new java.awt.Font("Monospaced", 1, 12));
                 saveOutput.setText("Save");
+                saveOutput.setToolTipText("Append set to data file");
                 saveOutput.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 saveOutputActionPerformed(evt);
@@ -717,7 +755,7 @@ public class MhagGui extends javax.swing.JFrame {
                 });
 
                 jTextData.setText("MyData");
-                jTextData.setToolTipText("input your save data ");
+                jTextData.setToolTipText("Input your save data ");
 
                 jLabel1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 jLabel1.setText("Data File");
@@ -754,6 +792,7 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addGap(117, 117, 117))
                 );
 
+                jScrollPreview.setForeground(javax.swing.UIManager.getDefaults().getColor("Panel.background"));
                 jScrollPreview.setHorizontalScrollBar(null);
 
                 jTextPreview.setColumns(20);
@@ -761,7 +800,6 @@ public class MhagGui extends javax.swing.JFrame {
                 jTextPreview.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 jTextPreview.setForeground(new java.awt.Color(1, 1, 1));
                 jTextPreview.setRows(5);
-                jTextPreview.setText("================================================================================\n Medic's Set                             High Rank   Blademaster \n--------------------------------------------------------------------------------\n Weapon                                  OO-   Steadfast+ Recovery \n Grace Earring                           ---     \n Gobul Mail+                             O--   Steadfast+  \n Gobul Vambraces+                        O--   Medicine  \n Gobul Faulds+                           O--   Medicine  \n Gobul Greaves+                          OOO   Voracious  \n Rec Level +7                            OO-   Panacea  \n--------------------------------------------------------------------------------\n                     WEP HEA CHE ARM WAI LEG CHA TOT\n Max Defense         ---  10  74  74  74  74 --- 306 \n Resist: Fire        ---   0  -2  -2  -2  -2 ---  -8 \n         Water       ---   0   4   4   4   4 ---  16 \n         Ice         ---   0   0   0   0   0 ---   0 \n         Thunder     ---   0  -4  -4  -4  -4 --- -16 \n         Dragon      ---   0   2   2   2   2 ---   8 \n--------------------------------------------------------------------------------\n SKills: Wide-Range  ---  20 --- --- --- --- ---  20 → Wide-Range +2\n         Stun          2 ---   4   4   4   2 ---  16 → Negate Stun\n         Eating       -1 ---   2   4   5   5 ---  15 → Speed Eating +2\n         Rec Level   --- --- ---   1   1  -2  10  10 → Recovery Up\n         Expert      --- ---   3   2   1   2 ---   8   ---\n         Rec Speed     1 ---  -2  -2  -2  -2  -1  -8   ---\n================================================================================");
                 jTextPreview.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview"));
                 jTextPreview.setOpaque(false);
                 jScrollPreview.setViewportView(jTextPreview);
@@ -770,7 +808,12 @@ public class MhagGui extends javax.swing.JFrame {
 
                 jTextSetName.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
                 jTextSetName.setText("Unnamed Set");
-                jTextSetName.setToolTipText("input your save data ");
+                jTextSetName.setToolTipText("Input set name, use enter to preview it now");
+                jTextSetName.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                jTextSetNameActionPerformed(evt);
+                        }
+                });
 
                 javax.swing.GroupLayout setNamePanelLayout = new javax.swing.GroupLayout(setNamePanel);
                 setNamePanel.setLayout(setNamePanelLayout);
@@ -825,23 +868,214 @@ public class MhagGui extends javax.swing.JFrame {
                                                                 .addComponent(rank, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(setup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap())
+                );
+
+                jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;Calculator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/pic/calculator.png")), calculator, ""); // NOI18N
+
+                jScrollPreview2.setHorizontalScrollBar(null);
+
+                jTextPreview2.setColumns(20);
+                jTextPreview2.setEditable(false);
+                jTextPreview2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                jTextPreview2.setForeground(new java.awt.Color(1, 1, 1));
+                jTextPreview2.setRows(5);
+                jTextPreview2.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview"));
+                jTextPreview2.setOpaque(false);
+                jScrollPreview2.setViewportView(jTextPreview2);
+
+                codeBook.setBorder(javax.swing.BorderFactory.createTitledBorder("Code Book"));
+
+                codeBookName.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                codeBookName.setText("MyData");
+
+                codeBookLoad.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12));
+                codeBookLoad.setText("Load");
+                codeBookLoad.setToolTipText("Load code book");
+                codeBookLoad.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                codeBookLoadActionPerformed(evt);
+                        }
+                });
+
+                codeBookSave.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12));
+                codeBookSave.setText("Save");
+                codeBookSave.setToolTipText("Save code  book, overwrite the old file");
+                codeBookSave.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                codeBookSaveActionPerformed(evt);
+                        }
+                });
+
+                javax.swing.GroupLayout codeBookLayout = new javax.swing.GroupLayout(codeBook);
+                codeBook.setLayout(codeBookLayout);
+                codeBookLayout.setHorizontalGroup(
+                        codeBookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(codeBookLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(codeBookName, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(codeBookLoad, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(codeBookSave, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12))
+                );
+                codeBookLayout.setVerticalGroup(
+                        codeBookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(codeBookLayout.createSequentialGroup()
+                                .addGroup(codeBookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(codeBookName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(codeBookLoad)
+                                        .addComponent(codeBookSave))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
 
-                jTabbedPane1.addTab("Calculator", calculator);
+                convert.setBorder(javax.swing.BorderFactory.createTitledBorder("Output Sets"));
 
-                javax.swing.GroupLayout ViewerLayout = new javax.swing.GroupLayout(Viewer);
-                Viewer.setLayout(ViewerLayout);
-                ViewerLayout.setHorizontalGroup(
-                        ViewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 1226, Short.MAX_VALUE)
+                buttonGroup1.add(convertTEXT);
+                convertTEXT.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                convertTEXT.setSelected(true);
+                convertTEXT.setText("TEXT");
+                convertTEXT.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                convertTEXTActionPerformed(evt);
+                        }
+                });
+
+                buttonGroup1.add(convertHTML);
+                convertHTML.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+                convertHTML.setText("HTML");
+                convertHTML.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                convertHTMLActionPerformed(evt);
+                        }
+                });
+
+                Output.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12));
+                Output.setText("Save & Output");
+                Output.setToolTipText("Save code book, and output sets");
+                Output.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                OutputActionPerformed(evt);
+                        }
+                });
+
+                javax.swing.GroupLayout convertLayout = new javax.swing.GroupLayout(convert);
+                convert.setLayout(convertLayout);
+                convertLayout.setHorizontalGroup(
+                        convertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(convertLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(convertTEXT)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(convertHTML)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Output, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                                .addContainerGap())
                 );
-                ViewerLayout.setVerticalGroup(
-                        ViewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 535, Short.MAX_VALUE)
+                convertLayout.setVerticalGroup(
+                        convertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(convertLayout.createSequentialGroup()
+                                .addGroup(convertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(convertTEXT)
+                                        .addComponent(convertHTML)
+                                        .addComponent(Output))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
 
-                jTabbedPane1.addTab("Viewer", Viewer);
+                jScrollPane1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+
+                codeList.setBorder(javax.swing.BorderFactory.createTitledBorder("Code List"));
+                codeList.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                codeList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+                codeList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+                        public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                                codeListValueChanged(evt);
+                        }
+                });
+                jScrollPane1.setViewportView(codeList);
+
+                loadSetInteract.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12));
+                loadSetInteract.setText("Load to Calculator");
+                loadSetInteract.setToolTipText("Load the selected set");
+                loadSetInteract.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                loadSetInteractActionPerformed(evt);
+                        }
+                });
+
+                getSetInteract.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12));
+                getSetInteract.setText("Add from Calculator");
+                getSetInteract.setToolTipText("Add the set below");
+                getSetInteract.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                getSetInteractActionPerformed(evt);
+                        }
+                });
+
+                deleteInteract.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12));
+                deleteInteract.setText("Remove/Cut");
+                deleteInteract.setToolTipText("Remvoe/cut the selected set (max 5) ");
+                deleteInteract.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                deleteInteractActionPerformed(evt);
+                        }
+                });
+
+                undoInteract.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12));
+                undoInteract.setText("Paste");
+                undoInteract.setToolTipText("Append the recently removed set (max 5)");
+                undoInteract.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                undoInteractActionPerformed(evt);
+                        }
+                });
+
+                javax.swing.GroupLayout viewerLayout = new javax.swing.GroupLayout(viewer);
+                viewer.setLayout(viewerLayout);
+                viewerLayout.setHorizontalGroup(
+                        viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewerLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewerLayout.createSequentialGroup()
+                                                .addComponent(codeBook, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(convert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(viewerLayout.createSequentialGroup()
+                                                .addComponent(loadSetInteract, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(getSetInteract, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(deleteInteract, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(undoInteract, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 633, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPreview2, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE))
+                );
+                viewerLayout.setVerticalGroup(
+                        viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(viewerLayout.createSequentialGroup()
+                                .addGroup(viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, viewerLayout.createSequentialGroup()
+                                                .addGap(12, 12, 12)
+                                                .addGroup(viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(convert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(codeBook, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(loadSetInteract)
+                                                        .addComponent(getSetInteract)
+                                                        .addComponent(deleteInteract)
+                                                        .addComponent(undoInteract)))
+                                        .addComponent(jScrollPreview2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                );
+
+                jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;Viewer</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/pic/viewer.png")), viewer, ""); // NOI18N
 
                 javax.swing.GroupLayout generatorLayout = new javax.swing.GroupLayout(generator);
                 generator.setLayout(generatorLayout);
@@ -854,30 +1088,73 @@ public class MhagGui extends javax.swing.JFrame {
                         .addGap(0, 535, Short.MAX_VALUE)
                 );
 
-                jTabbedPane1.addTab("Generator", generator);
+                jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;Generator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/pic/generator.png")), generator, ""); // NOI18N
+
+                jScrollAbout.setBorder(javax.swing.BorderFactory.createTitledBorder("About"));
+
+                jEditorAbout.setContentType("text/html");
+                jEditorAbout.setEditable(false);
+                jEditorAbout.setText("<html>\n  <head>\n\n  </head>\n  <body>\n    <h2 align = \"center\">\n      MHAG :\n    </h2>\n  <h2 align = \"center\">\n       Monster Hunter Armor Generator\n    </h2>\n <p align = \"center\">v1.0 Beta</p>\n <p align = \"center\">Release Date: 01/01/2011</p>\n<p align = \"center\">MHAG Project: <a href=\"http://code.google.com/p/mhag/\">code.google.com/p/mhag</a></p>\n<p align = \"center\">Proposed MHAG Set Database: <a href=\"http://mhag.wetpaint.com\">mhag.wetpaint.com</p>\n<p></p>\n<p align = \"center\">by Tifa@mh3</p>\n<p align = \"center\">Unity Member: <a href=\"http://www.capcom-unity.com/tifa@mh3\">www.capcom-unity.com/tifa@mh3</a></p>\n<p align = \"center\">Youtube Channel: <a href=\"http://www.youtube.com/mh3journey\">www.youtube.com/mh3journey</a></p>\n\n  </body>\n\n");
+                jEditorAbout.setOpaque(false);
+                jEditorAbout.addHyperlinkListener(new javax.swing.event.HyperlinkListener() {
+                        public void hyperlinkUpdate(javax.swing.event.HyperlinkEvent evt) {
+                                jEditorAboutHyperlinkUpdate(evt);
+                        }
+                });
+                jScrollAbout.setViewportView(jEditorAbout);
+
+                jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/logo_bw_180.jpg"))); // NOI18N
+
+                jScrollUsage.setBorder(javax.swing.BorderFactory.createTitledBorder("Usage"));
+
+                jTextUsage.setColumns(20);
+                jTextUsage.setLineWrap(true);
+                jTextUsage.setRows(5);
+                jTextUsage.setText("History:\nv.1.0 beta 01/01/2011: initial release for test.\n\nRequirement:\n1.OS: any OS with JRE\n2.Screen Resolution: best for 720p or higher (1280 pixels in width)\n3.CPU: (not sure, let me know if you feel slow or have any problems)\n4.Browser: Google Chrome/Mozilla Firefox/Safari, Internet Explorer is not recommended\n\nThere are three components: a calculator, a viewer and a generator.\n1. Calculator:\nOutput Panel: three output options (text/html/code)\n     TEXT :(.txt) plain text format, save format as shown in preview panel.\n     HTML :(.html) html format table, viewed in a browser.\n     CODE :(.code) set code used to store set information for future use.\n     Data File: file name of save data.  If file name doesn't contain file type extension, MHAG automatically add it.\n     Save Button: APPENDs set to the save data.  If save file does not exist, a new file will be created.\n\nRank/Hunter Type/Gender Options:\n     Rank : low/high Rank, reset setup once rank option is swtiched.\n     Hunter Type : blademaster/gunner. reset setup once hunter type option is swtiched.\n     Gender : male/female.  It only affects the armor pieces that are ony for male/female.  The corresponding armor name and its position in the menu wil be changed (not reset) when gender is switched.\n     Set Name : Armor set name. \"Unnamed Set\" by default. It can be changed to any words (best less than 40 characters).  It is not immediately shown in the preview panel until ENTER key is pressed or other setup otions are selected.\n\nSetup Panel: setup details\n     At beginning, only the first column of dropdown boxes are available.  They can be used to change the armor pieces/weapon/charm.  When any of them is selected, some additional boxes will appear on the right, depending on the number of jewel slots.  MHAG can prevent users from using too many jewels on one set.  When a charm is selected, users can also choose charm skills for the right skill classes.  If the charm allows two charm skills, MHAG can prevent users from choosing two same skills.\n     Jewel menus only show the positive skill name and skill points. They also contain tool tips for jewel names and number of slots.\n     All menu lists are sorted by alphatical order, so users can use keyboard to quickly locate the right stuffs.\n\nPreview Panel: preview the armor set.  It changes along with the setup.\n\n2. Viewer: \nCode Book Panel: \n     Load: load code book to Code List Panel.  It ONLY works for existing data file.  It is not recommended to frequently create new code book .(If you really want to create a new code book in MHAG, you can use output panel in the calcuatlor.)\n     Save: save all the items in the code list to code book.  Warning! all the old code data in the orginal file will be lost.  MHAG automatically prevent user from saving code book if the code list is empty.\n\nOutput Sets Panel: This is the batch mode of calculator.  It first save the code book, then output sets in text or html format.  It is desgined to generate a set book.  The html codes are designed to print one set on each page.\n\nCode List Panel: display code list. Mouse click or up/down key can be used to nevigate sets from the preview panel.\n\nLoad to Calculator Button: load the selected set to the calculator, so they can be manually modified.\n\nAdd from Calcutalor Button: append the set after the selected set, and move selection to the new set.  It won't delete any set.\n\nRemove/Cut Button: remove the selected set. meanwhile the last five set inforamtions are stored.\n\nPaste Button: append the DELETED set after the selected set, and move selection to the new set. It can only retrieve at most five deleted sets.\n\nTips:\n1). modify a set: select the set -> load to calculator -> modify it -> add from calcualtor -> select the old set (move up) -> remove \n2). swap two adjacent sets: select the upper set -> remove -> paste\n3). other set rearrangement : combine remove/paste options. Warning! only 5 sets can be stored.\n\n3. Generator: (TBD)");
+                jTextUsage.setWrapStyleWord(true);
+                jTextUsage.setOpaque(false);
+                jScrollUsage.setViewportView(jTextUsage);
 
                 javax.swing.GroupLayout aboutLayout = new javax.swing.GroupLayout(about);
                 about.setLayout(aboutLayout);
                 aboutLayout.setHorizontalGroup(
                         aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 1226, Short.MAX_VALUE)
+                        .addGroup(aboutLayout.createSequentialGroup()
+                                .addGroup(aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(aboutLayout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jScrollAbout, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(aboutLayout.createSequentialGroup()
+                                                .addGap(147, 147, 147)
+                                                .addComponent(jLabel2)))
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollUsage, javax.swing.GroupLayout.DEFAULT_SIZE, 740, Short.MAX_VALUE)
+                                .addContainerGap())
                 );
                 aboutLayout.setVerticalGroup(
                         aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 535, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, aboutLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jScrollUsage, javax.swing.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE)
+                                        .addGroup(aboutLayout.createSequentialGroup()
+                                                .addComponent(jScrollAbout, javax.swing.GroupLayout.DEFAULT_SIZE, 391, Short.MAX_VALUE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel2)))
+                                .addContainerGap())
                 );
 
-                jTabbedPane1.addTab("About", about);
+                jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;About</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/pic/help-browser.png")), about); // NOI18N
 
                 javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
                 getContentPane().setLayout(layout);
                 layout.setHorizontalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1238, Short.MAX_VALUE)
+                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1238, javax.swing.GroupLayout.PREFERRED_SIZE)
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 625, javax.swing.GroupLayout.PREFERRED_SIZE)
                 );
 
                 pack();
@@ -956,179 +1233,19 @@ public class MhagGui extends javax.swing.JFrame {
     }//GEN-LAST:event_legsMenuActionPerformed
 
     private void weaponMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_weaponMenuActionPerformed
-
-	   int ind = weaponMenu.getSelectedIndex();
-	   int bodyPart = 5;
-
-	   if(ind <= 0 )
-	   {
-		   set.setInUse(bodyPart, false);
-		   set.setNumJewel(bodyPart, 0);  //initiate jewel
-		   Arrays.fill(jewelInd[bodyPart], 0);  // inititate jewelInd
-		   Arrays.fill(jewelMenuType[bodyPart], 0);  // inititate menu type
-		   for (int i = 0; i < 3; i++)
-		   {
-			   changeJewelSlot(bodyPart, i, set.getLowRank(), 0, false);
-		   }
-		   calSetGUI();
-	   }
-	   else
-	   {
-		   set.setInUse(bodyPart, true);
-
-		   // get number of slots
-		   int nSlot = ind;
-		   //initialiate jewel menu lists
-		   set.setNumJewel(bodyPart, nSlot);
-		   Arrays.fill(jewelInd[bodyPart], 0);  // inititate jewelInd
-		   for (int i = 0; i < nSlot; i++)  //start from 1
-		   {
-			   changeJewelSlot(bodyPart, i, set.getLowRank(), nSlot, true);
-		   }
-		   for (int i = nSlot; i < 3; i++)
-		   {
-			   changeJewelSlot(bodyPart, i, set.getLowRank(), 0, false);
-		   }
-
-	   }
-
+	    weaponMenuAction();
     }//GEN-LAST:event_weaponMenuActionPerformed
 
     private void charmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_charmMenuActionPerformed
-
-	   int ind = charmMenu.getSelectedIndex();
-	   int bodyPart = 6;
-
-	   if(ind <= 0 )
-	   {
-		   set.setInUse(bodyPart, false);
-		   set.setNumJewel(bodyPart, 0);  //initiate jewel
-		   Arrays.fill(jewelInd[bodyPart], 0);  // inititate jewelInd
-		   Arrays.fill(jewelMenuType[bodyPart], 0);  // inititate menu type
-		   for (int i = 0; i < 3; i++)   //change charm jewel
-			   changeJewelSlot(bodyPart, i, set.getLowRank(), 0, false);
-		   for (int i = 0; i < 2; i++)  //change charm skill
-			   changeCharmSkill(i, "D", false);
-		   charmSkillLabel.setVisible(false);
-		   skillPoint1.setText("");
-		   skillPoint2.setText("");
-		   set.setCharmID(-1);
-		   set.setNumCharmSkill(0);
-	   }
-	   else
-	   {
-		   //obtain list value
-		   int[] list = mhagData.getCharmList(set.getLowRank());
-		   int charmID = list[ind];
-		   if(set.getCharmID() == charmID)return; // no change
-
-		   // set Jewel id
-		   set.setInUse(bodyPart, true);
-		   set.setCharmID(charmID);
-
-		   // get number of slots
-		   Charm charm = mhagData.getCharm(charmID);
-		   int nSlot = charm.getNumSlot();
-		   //initialiate jewel menu lists
-		   set.setNumJewel(bodyPart, nSlot);
-		   Arrays.fill(jewelInd[bodyPart], 0);  // inititate jewelInd
-		   for (int i = 0; i < 3; i++) //start from 1
-		   {
-			   if(i < nSlot)
-			   {
-				   changeJewelSlot(bodyPart, i, set.getLowRank(), nSlot, true);
-			   }
-			   else
-			   {
-				   changeJewelSlot(bodyPart, i, set.getLowRank(), 0, false);
-			   }
-		   }
-		   //change charmSkill
-
-		   int nSkill = charm.getNumSkill();
-		   set.setNumCharmSkill(nSkill);
-
-		   if(nSkill == 1)
-		   {
-			   charmSkillLabel.setVisible(true);
-			   String skillClass = charm.getSkillClass()[0];
-			   changeCharmSkill(0, skillClass, true);
-			   skillPoint1.setText(String.format(
-				   "%+d",charm.getSkillPoint()[0]));
-			   changeCharmSkill(1, "D", false);
-			   skillPoint2.setText("");
-
-		   }
-		   else if(nSkill == 2)
-		   {
-			   charmSkillLabel.setVisible(true);
-			   String skillClass = charm.getSkillClass()[0];
-			   changeCharmSkill(0, skillClass, true);
-			   skillPoint1.setText(String.format(
-				   "%+d",charm.getSkillPoint()[0]));
-			   skillClass = charm.getSkillClass()[1];
-			   changeCharmSkill(1, skillClass, true);
-			   skillPoint2.setText(String.format(
-				   "%+d",charm.getSkillPoint()[1]));
-		   }
-		   else
-		   {
-			   charmSkillLabel.setVisible(false);
-			   changeCharmSkill(0, "D", false);
-			   skillPoint1.setText("");
-			   changeCharmSkill(1, "D", false);
-			   skillPoint2.setText("");
-		   }
-
-	   }
-	   calSetGUI();
+	    charmMenuAction();
     }//GEN-LAST:event_charmMenuActionPerformed
 
     private void charmSkill1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_charmSkill1ActionPerformed
-	    //charm skill 1
-	   if(adjust)return;
-	   int ind = charmSkill1.getSelectedIndex();
-	   if(ind < 0) return;
-
-	   Charm charm = mhagData.getCharm(set.getCharmID());
-	   int[] list = mhagData.getSkillList(charm.getSkillClass()[0],
-		   set.getCharmSkillID()[1]);
-
-	   set.setCharmSkillID(0,list[ind]);
-
-	   if(set.getNumCharmSkill() == 2)
-	   {
-		   adjust = true;
-		   Charm charm2 =  mhagData.getCharm(set.getCharmID());
-    		   changeCharmSkill(1, charm2.getSkillClass()[1], true);
-		   adjust = false;
-	   }
-	   calSetGUI();
-
+	    charmSkillAction(0);
     }//GEN-LAST:event_charmSkill1ActionPerformed
 
     private void charmSkill2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_charmSkill2ActionPerformed
-	    //charm skill 2
-	   if(adjust)return;
-	   int ind = charmSkill2.getSelectedIndex();
-	   if(ind < 0) return;
-
-	   Charm charm = mhagData.getCharm(set.getCharmID());
-	   int[] list = mhagData.getSkillList(charm.getSkillClass()[1],
-		   set.getCharmSkillID()[0]);
-
-	   set.setCharmSkillID(1,list[ind]);
-
-	   if(set.getNumCharmSkill() == 2)
-	   {
-		   adjust = true;
-		   Charm charm2 =  mhagData.getCharm(set.getCharmID());
-    		   changeCharmSkill(0, charm2.getSkillClass()[0], true);
-		   adjust = false;
-	   }
-
-	   calSetGUI();
-
+	    charmSkillAction(1);
     }//GEN-LAST:event_charmSkill2ActionPerformed
 
     private void weaponSlot1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_weaponSlot1ActionPerformed
@@ -1235,6 +1352,431 @@ public class MhagGui extends javax.swing.JFrame {
 	    }
 }//GEN-LAST:event_saveOutputActionPerformed
 
+    private void codeBookLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codeBookLoadActionPerformed
+
+	    String codeFile = codeBookName.getText();
+	    if(!codeFile.endsWith(".code"))
+		    codeFile = codeFile+".code";
+
+	    Scanner codeIn;
+
+		try {
+			codeIn = new Scanner(new File(codeFile));
+		} catch (FileNotFoundException ex) {
+			String message = String.format("Code File %s doesnot exist!\n",codeFile);
+			jTextPreview2.append(message);
+			message = String.format("create a new Code Book %s, or choose another Code File\n",codeFile);
+			jTextPreview2.append(message);
+			return;
+		}
+
+	    listModel.clear();
+	    while(codeIn.hasNext())
+	    {
+		    String codeLine = codeIn.nextLine();
+		    listModel.addElement(codeLine);
+	    }
+
+	    adjust = true;
+	    codeList.setModel(listModel);
+	    codeList.clearSelection();
+	    adjust = false;
+
+	    codeIn.close();
+	    codeBookInUse = true;
+    }//GEN-LAST:event_codeBookLoadActionPerformed
+
+    private void codeBookSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codeBookSaveActionPerformed
+
+	    //ListModel listModel =  codeList.getModel();
+	    int num = listModel.getSize();
+	    if(num == 0)
+	    {
+		    jTextPreview2.setText("Don't have any code! Why save it?!\n");
+		    return;
+	    }
+
+	    String codeFile = codeBookName.getText();
+	    PrintStream codeOut;
+	    if(!codeFile.endsWith(".code"))
+		    codeFile = codeFile+".code";
+
+		try {
+			codeOut = new PrintStream(codeFile);
+
+		    for(int i = 0; i < num; i++)
+		    {
+			    String codeLine = (String) listModel.getElementAt(i);
+			    codeOut.println(codeLine);
+		    }
+
+		} catch (FileNotFoundException ex) {
+			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
+		}
+
+    }//GEN-LAST:event_codeBookSaveActionPerformed
+
+    private void convertTEXTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertTEXTActionPerformed
+	    saveOpt = 0;
+    }//GEN-LAST:event_convertTEXTActionPerformed
+
+    private void convertHTMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertHTMLActionPerformed
+	    saveOpt = 1;
+    }//GEN-LAST:event_convertHTMLActionPerformed
+
+    private void OutputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OutputActionPerformed
+	    String codeFile = codeBookName.getText();
+	    String saveFile = "";
+	    PrintStream codeOut;
+	    if(!codeFile.endsWith(".code"))
+	    {
+		    if(saveOpt == 0)
+			    saveFile = codeFile+".txt";
+		    else
+			    saveFile = codeFile+".html";
+
+		    codeFile = codeFile+".code";
+	    }
+	    else
+	    {
+		    int pos = codeFile.indexOf(".code");
+		    String codePart = codeFile.substring(0,pos);
+		    if(saveOpt == 0)
+			    saveFile = codePart+".txt";
+		    else
+			    saveFile = codePart+".html";
+	    }
+
+	    mhag.setFileIn(codeFile);
+	    mhag.setFileOut(saveFile);
+	    mhag.setOutFormat(saveOpt);
+
+		try {
+			mhagData.batchCalc(mhag);  //use batch calculator module
+		} catch (FileNotFoundException ex) {
+			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
+		}
+
+    }//GEN-LAST:event_OutputActionPerformed
+
+    private void codeListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_codeListValueChanged
+	    if(!evt.getValueIsAdjusting()) //solve the problem of running twice !
+		    codePreview();
+    }//GEN-LAST:event_codeListValueChanged
+
+    private void loadSetInteractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadSetInteractActionPerformed
+	    if(!codeBookInUse)return;
+	    String setCode = (String) codeList.getSelectedValue();
+	    loadSet2Calc(setCode);
+    }//GEN-LAST:event_loadSetInteractActionPerformed
+
+    private void getSetInteractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getSetInteractActionPerformed
+	    String codeLine = set.getSetCode();
+	    int ind = codeList.getSelectedIndex();
+	    listModel.insertElementAt(codeLine, ind+1);
+	    codeList.setSelectedIndex(ind+1);
+    }//GEN-LAST:event_getSetInteractActionPerformed
+
+    private void deleteInteractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteInteractActionPerformed
+	    int ind = codeList.getSelectedIndex();
+
+	    //save deleted code;
+	    String codeLine = (String) codeList.getSelectedValue();
+	    for(int i = 4; i > 0; i--)
+		    deletedCodes[i] = deletedCodes[i-1];
+	    deletedCodes[0] = codeLine;
+
+	    //remove code element
+	    listModel.removeElementAt(ind);
+
+	    //move index
+	    int indNext;
+	    if(listModel.size() == ind)
+		    indNext = ind - 1;
+	    else
+		    indNext = ind;
+	    codeList.setSelectedIndex(indNext);
+
+    }//GEN-LAST:event_deleteInteractActionPerformed
+
+    private void jTextSetNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextSetNameActionPerformed
+	    String setName = jTextSetName.getText();
+	    set.setSetName(setName);
+	    calSetGUI();
+    }//GEN-LAST:event_jTextSetNameActionPerformed
+
+    private void undoInteractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_undoInteractActionPerformed
+	    //append deleted code
+	    String codeLine = deletedCodes[0];
+	    if(codeLine.equals(""))return; // Don't append empty code
+
+	    int ind = codeList.getSelectedIndex();
+	    listModel.insertElementAt(codeLine, ind+1);
+	    codeList.setSelectedIndex(ind+1);
+
+	    //remove the code from the list ofdeleted codes
+	    for(int i = 0; i < 4; i++)
+		    deletedCodes[i] = deletedCodes[i+1];
+	    deletedCodes[4] = "";
+
+	    for(int i = 0; i < 5; i++)
+		    System.out.println("here:"+deletedCodes[i]);
+	    System.out.println("========================");
+
+    }//GEN-LAST:event_undoInteractActionPerformed
+
+    private void jEditorAboutHyperlinkUpdate(javax.swing.event.HyperlinkEvent evt) {//GEN-FIRST:event_jEditorAboutHyperlinkUpdate
+		try {
+			launchBrowser(evt);
+		} catch (URISyntaxException ex) {
+			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
+		} catch (IOException ex) {
+			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
+		}
+    }//GEN-LAST:event_jEditorAboutHyperlinkUpdate
+
+    private void launchBrowser(HyperlinkEvent evt) throws URISyntaxException, IOException
+    {
+	    HyperlinkEvent.EventType type = evt.getEventType();
+	    if (type == HyperlinkEvent.EventType.ACTIVATED)
+	    {
+		    StringTokenizer st = new StringTokenizer(evt.getDescription());
+		    if(st.hasMoreTokens())
+		    {
+			    String urlString = st.nextToken();
+			    if(Desktop.isDesktopSupported())
+			    {
+				    URI uri = new URI(urlString);
+				    Desktop.getDesktop().browse(uri);
+			    }
+		    }
+	    }
+
+    }
+
+    private void codePreview()
+    {
+	    if(adjust) return; //when loading code book
+	    streamView.reset();
+
+	    String setCode = (String) codeList.getSelectedValue();
+
+	    Set aSet = new Set();
+
+	    boolean pass = true;
+	    pass = aSet.setSetFromCode(mhag, setCode); //read set
+
+	    if(pass)
+		    pass = aSet.checkSet(mhag, mhagData);  //check set
+	    if(!pass)
+	    {
+		    jTextPreview2.setText("Error in set code!\n");
+		    return;
+	    }
+	    aSet.calcSet(mhag, mhagData);   //calculate set
+
+	    mhag.setOutFormat(0);
+	    aSet.save(mhag, mhagData, streamView);  // save results
+	    streamView.rewind();
+
+    }
+
+
+    private void loadSet2Calc(String setCode)
+    {
+	    Set aSet = new Set();
+
+	    boolean pass = true;
+	    pass = aSet.setSetFromCode(mhag, setCode); //read set
+
+	    if(pass)
+		    pass = aSet.checkSet(mhag, mhagData);  //check set
+
+	    if(!pass)
+	    {
+		    jTextPreview2.append("Forbid loading wrong code to calculator!\n");
+		    return;
+	    }
+
+	    initGUISet();
+
+
+	    // start load
+	    jTextSetName.setText(aSet.getSetName());
+
+	    if(aSet.getLowRank())
+	    {
+		    lowRank.setSelected(true);
+		    highRank.setSelected(false);
+	    }
+	    else
+	    {
+		    lowRank.setSelected(false);
+		    highRank.setSelected(true);
+	    }
+
+	    if(aSet.getBlade())
+	    {
+		    blade.setSelected(true);
+		    gunner.setSelected(false);
+	    }
+	    else
+	    {
+		    blade.setSelected(false);
+		    gunner.setSelected(true);
+	    }
+
+	    male.setSelected(true);
+	    female.setSelected(false);
+
+	    set.setBlade(aSet.getBlade());
+	    set.setLowRank(aSet.getLowRank());
+	    set.setFemale(aSet.getLowRank());
+
+	    initSetup(aSet.getLowRank(), aSet.getBlade(), false);
+
+	    //weapon menu
+	    int nJewel = aSet.getNumJewel(5);
+	    int nSlot = 0;
+	    for(int i = 0; i < nJewel; i++)
+		    nSlot += mhagData.getJewel(aSet.getJewelID()[5][i]).getNumSlot();
+
+	    weaponMenu.setSelectedIndex(nSlot);
+	    weaponMenuAction();
+
+	    //body menu
+	    for (int i = 0; i < 5; i++)
+	    {
+		    int armorID = aSet.getArmorID()[i];
+		    JComboBox bodyMenu = getArmorMenuObj(i);
+		    int[] list = mhagData.getArmorList(aSet.getLowRank(),
+			   aSet.getBlade(), false, i);
+		    for (int j = 0; j < list.length; j++)
+		    {
+			    if(list[j] == armorID)
+			    {
+				    bodyMenu.setSelectedIndex(j);
+				    armorMenuAction(i);
+				    break;
+			    }
+		    }
+	    }
+
+	    //charm menu
+	    int[] list2 = mhagData.getCharmList(aSet.getLowRank());
+
+	    for (int j = 0; j < list2.length; j++)
+	    {
+		    if(list2[j] == aSet.getCharmID())
+		    {
+			    charmMenu.setSelectedIndex(j);
+			    charmMenuAction();
+			    break;
+		    }
+	    }
+
+	    //jewel menu
+	    for(int i = 0; i< 7; i++)
+	    {
+		    for(int j = 0; j < aSet.getNumJewel(i); j++)
+		    {
+			    int jewelID = aSet.getJewelID()[i][j];
+			    JComboBox jewelSlot = getJewelSlotObj(i,j);
+
+			    int[] list = mhagData.getJewelList(aSet.getLowRank(),
+				    jewelMenuType[i][j]);
+			    for (int k = 0; k < list.length; k++)
+			    {
+				    if(list[k] == jewelID)
+				    {
+					    jewelSlot.setSelectedIndex(k);
+					    jewelSlotAction(i,j);
+					    break;
+				    }
+			    }
+
+		    }
+	    }
+
+	    //jewel skill
+	    int nSkill = aSet.getNumCharmSkill();
+	    if(nSkill == 1)
+	    {
+		    Charm charm = mhagData.getCharm(aSet.getCharmID());
+		    list2 = mhagData.getSkillList(charm.getSkillClass()[0],
+			   set.getCharmSkillID()[1]);
+
+		    for (int j = 0; j < list2.length; j++)
+		    {
+			    if(list2[j] == aSet.getCharmSkillID()[0])
+			    {
+				    charmSkill1.setSelectedIndex(j);
+				    charmSkillAction(0);
+				    break;
+			    }
+		    }
+	    }
+	    else if(nSkill == 2)
+	    {
+		    Charm charm = mhagData.getCharm(aSet.getCharmID());
+		    //check the 1st skill, if not available, move 2nd skill
+
+		    list2 = mhagData.getSkillList(charm.getSkillClass()[0],
+			   set.getCharmSkillID()[1]);
+
+		    boolean found = false;
+		    for (int j = 0; j < list2.length; j++)
+		    {
+			    if(list2[j] == aSet.getCharmSkillID()[0])
+			    {
+				    charmSkill1.setSelectedIndex(j);
+				    charmSkillAction(0);
+				    found = true;
+				    break;
+			    }
+		    }
+
+		    if(!found)
+		    {
+			    int ind = charmSkill2.getSelectedIndex();
+			    charmSkill2.setSelectedIndex(ind + 1);
+			    charmSkillAction(1);
+
+			    //redo 1st skill
+
+			    list2 = mhagData.getSkillList(charm.getSkillClass()[0],
+				   set.getCharmSkillID()[1]);
+			    for (int j = 0; j < list2.length; j++)
+			    {
+				    if(list2[j] == aSet.getCharmSkillID()[0])
+				    {
+					    charmSkill1.setSelectedIndex(j);
+					    charmSkillAction(0);
+					    break;
+				    }
+			    }
+
+			    //check 2st skill
+
+			    list2 = mhagData.getSkillList(charm.getSkillClass()[1],
+				   set.getCharmSkillID()[0]);
+			    for (int j = 0; j < list2.length; j++)
+			    {
+				    if(list2[j] == aSet.getCharmSkillID()[1])
+				    {
+					    charmSkill2.setSelectedIndex(j);
+					    charmSkillAction(1);
+					    break;
+				    }
+			    }
+
+		    }
+
+	    }
+
+
+    }
+
     private void appendData() throws FileNotFoundException
     {
 	    calSetGUI();
@@ -1268,10 +1810,49 @@ public class MhagGui extends javax.swing.JFrame {
 		    if(!saveData.endsWith(".code"))
 			    saveData = saveData + ".code";
 		    saveStream = MhagUtil.streamAppendFile(saveData);
-		    String codeline = set.getSetCode();   //get set code
-		    saveStream.println(codeline);
+		    String codeLine = set.getSetCode();   //get set code
+		    saveStream.println(codeLine);
 	    }
 	    saveStream.close();
+
+    }
+
+    private void weaponMenuAction()
+    {
+	   int ind = weaponMenu.getSelectedIndex();
+	   int bodyPart = 5;
+
+	   if(ind <= 0 )
+	   {
+		   set.setInUse(bodyPart, false);
+		   set.setNumJewel(bodyPart, 0);  //initiate jewel
+		   Arrays.fill(jewelInd[bodyPart], 0);  // inititate jewelInd
+		   Arrays.fill(jewelMenuType[bodyPart], 0);  // inititate menu type
+		   for (int i = 0; i < 3; i++)
+		   {
+			   changeJewelSlot(bodyPart, i, set.getLowRank(), 0, false);
+		   }
+		   calSetGUI();
+	   }
+	   else
+	   {
+		   set.setInUse(bodyPart, true);
+
+		   // get number of slots
+		   int nSlot = ind;
+		   //initialiate jewel menu lists
+		   set.setNumJewel(bodyPart, nSlot);
+		   Arrays.fill(jewelInd[bodyPart], 0);  // inititate jewelInd
+		   for (int i = 0; i < nSlot; i++)  //start from 1
+		   {
+			   changeJewelSlot(bodyPart, i, set.getLowRank(), nSlot, true);
+		   }
+		   for (int i = nSlot; i < 3; i++)
+		   {
+			   changeJewelSlot(bodyPart, i, set.getLowRank(), 0, false);
+		   }
+
+	   }
 
     }
 
@@ -1322,6 +1903,147 @@ public class MhagGui extends javax.swing.JFrame {
 
 		   if(nSlot == 0)calSetGUI();
 	   }
+    }
+
+    private void charmMenuAction()
+    {
+	   int ind = charmMenu.getSelectedIndex();
+	   int bodyPart = 6;
+
+	   if(ind <= 0 )
+	   {
+		   set.setInUse(bodyPart, false);
+		   set.setNumJewel(bodyPart, 0);  //initiate jewel
+		   Arrays.fill(jewelInd[bodyPart], 0);  // inititate jewelInd
+		   Arrays.fill(jewelMenuType[bodyPart], 0);  // inititate menu type
+		   for (int i = 0; i < 3; i++)   //change charm jewel
+			   changeJewelSlot(bodyPart, i, set.getLowRank(), 0, false);
+		   for (int i = 0; i < 2; i++)  //change charm skill
+			   changeCharmSkill(i, "D", false);
+		   charmSkillLabel.setVisible(false);
+		   skillPoint1.setText("");
+		   skillPoint2.setText("");
+		   set.setCharmID(-1);
+		   set.setNumCharmSkill(0);
+		   set.setCharmSkillID(0, -1);
+		   set.setCharmSkillID(1, -1);
+	   }
+	   else
+	   {
+		   //obtain list value
+		   int[] list = mhagData.getCharmList(set.getLowRank());
+		   int charmID = list[ind];
+		   if(set.getCharmID() == charmID)return; // no change
+
+		   // set Jewel id
+		   set.setInUse(bodyPart, true);
+		   set.setCharmID(charmID);
+
+		   // get number of slots
+		   Charm charm = mhagData.getCharm(charmID);
+		   int nSlot = charm.getNumSlot();
+		   //initialiate jewel menu lists
+		   set.setNumJewel(bodyPart, nSlot);
+		   Arrays.fill(jewelInd[bodyPart], 0);  // inititate jewelInd
+		   for (int i = 0; i < 3; i++) //start from 1
+		   {
+			   if(i < nSlot)
+			   {
+				   changeJewelSlot(bodyPart, i, set.getLowRank(), nSlot, true);
+			   }
+			   else
+			   {
+				   changeJewelSlot(bodyPart, i, set.getLowRank(), 0, false);
+			   }
+		   }
+		   //change charmSkill
+
+		   int nSkill = charm.getNumSkill();
+		   set.setNumCharmSkill(nSkill);
+
+		   if(nSkill == 1)
+		   {
+			   charmSkillLabel.setVisible(true);
+			   String skillClass = charm.getSkillClass()[0];
+			   changeCharmSkill(0, skillClass, true);
+			   skillPoint1.setText(String.format(
+				   "%+d",charm.getSkillPoint()[0]));
+			   changeCharmSkill(1, "D", false);
+			   skillPoint2.setText("");
+			   set.setCharmSkillID(1, -1);
+
+		   }
+		   else if(nSkill == 2)
+		   {
+			   charmSkillLabel.setVisible(true);
+			   String skillClass = charm.getSkillClass()[0];
+			   changeCharmSkill(0, skillClass, true);
+			   skillPoint1.setText(String.format(
+				   "%+d",charm.getSkillPoint()[0]));
+			   skillClass = charm.getSkillClass()[1];
+			   changeCharmSkill(1, skillClass, true);
+			   skillPoint2.setText(String.format(
+				   "%+d",charm.getSkillPoint()[1]));
+		   }
+		   else
+		   {
+			   charmSkillLabel.setVisible(false);
+			   changeCharmSkill(0, "D", false);
+			   skillPoint1.setText("");
+			   changeCharmSkill(1, "D", false);
+			   skillPoint2.setText("");
+			   set.setCharmSkillID(0, -1);
+			   set.setCharmSkillID(1, -1);
+		   }
+
+	   }
+	   calSetGUI();
+    }
+
+    private void charmSkillAction(int slotInd)
+    {
+	    if(adjust)return;
+	    if(slotInd == 0)
+	    {
+		   //charm skill 1
+		   int ind = charmSkill1.getSelectedIndex();
+		   if(ind < 0) return;
+
+		   Charm charm = mhagData.getCharm(set.getCharmID());
+		   int[] list = mhagData.getSkillList(charm.getSkillClass()[0],
+			   set.getCharmSkillID()[1]);
+
+		   set.setCharmSkillID(0,list[ind]);
+
+		   if(set.getNumCharmSkill() == 2)
+		   {
+			   adjust = true;
+			   Charm charm2 =  mhagData.getCharm(set.getCharmID());
+			   changeCharmSkill(1, charm2.getSkillClass()[1], true);
+			   adjust = false;
+		   }
+	    }
+	    else
+	    {
+		    //charm skill 2
+		   int ind = charmSkill2.getSelectedIndex();
+		   if(ind < 0) return;
+
+		   Charm charm = mhagData.getCharm(set.getCharmID());
+		   int[] list = mhagData.getSkillList(charm.getSkillClass()[1],
+			   set.getCharmSkillID()[0]);
+
+		   set.setCharmSkillID(1,list[ind]);
+
+		   if(set.getNumCharmSkill() == 2)
+		   {
+			   adjust = true;
+			   Charm charm2 =  mhagData.getCharm(set.getCharmID());
+			   changeCharmSkill(0, charm2.getSkillClass()[0], true);
+			   adjust = false;
+		   }
+	    }
+	    calSetGUI();
     }
 
     private void jewelSlotAction(int bodyPart, int slotInd)
@@ -1483,6 +2205,14 @@ public class MhagGui extends javax.swing.JFrame {
 	mhagData.readFile(mhag); //read file
 	mhagData.dataPreProc();  //pre process
 
+	Arrays.fill(deletedCodes, ""); //initiate deleted codes
+
+	initGUISet();
+
+    }
+
+    private void initGUISet()
+    {
 	set.init();
 	for (int i = 0; i < 7; i++)
 	{
@@ -1864,10 +2594,14 @@ public class MhagGui extends javax.swing.JFrame {
 		}
 
 		mhagGui.stream = new TextAreaPrintStream(mhagGui.jTextPreview, System.out);
+	        mhagGui.streamView = new TextAreaPrintStream(mhagGui.jTextPreview2, System.out);
 
 		mhagGui.setVisible(true);
 
 		mhagGui.initSetup(false, true, false); // by default
+
+		mhagGui.jTextUsage.setCaretPosition(0);
+		mhagGui.jTabbedPane1.setEnabledAt(2, false);
 
             }
         });
@@ -1877,7 +2611,7 @@ public class MhagGui extends javax.swing.JFrame {
     	private Mhag mhag = new Mhag();
     	private Set set = new Set();
     	private MhagData mhagData = new MhagData();
-	private TextAreaPrintStream stream;
+	private TextAreaPrintStream stream, streamView;
 	private int[][] jewelInd = new int[7][3]; //jewel index in each jewel button list
 	private int[][] jewelMenuType = new int[7][3]; //menu type in each jewel button position
 	private boolean adjust = false; // adjust menu, don't perform calculation
@@ -1886,8 +2620,13 @@ public class MhagGui extends javax.swing.JFrame {
 	private ComboboxToolTipRenderer[][] renderer = new ComboboxToolTipRenderer[7][3];
 	//renderer for slot menu tooltips
 
+	private boolean codeBookInUse = false;
+	private DefaultListModel listModel =  new DefaultListModel(); //viewer code list
+
+	private String[] deletedCodes = new String[5]; //store deleted codes;
+
         // Variables declaration - do not modify//GEN-BEGIN:variables
-        private javax.swing.JPanel Viewer;
+        private javax.swing.JButton Output;
         private javax.swing.JPanel about;
         private javax.swing.JComboBox armSlot1;
         private javax.swing.JComboBox armSlot2;
@@ -1895,6 +2634,7 @@ public class MhagGui extends javax.swing.JFrame {
         private javax.swing.JLabel armsLabel;
         private javax.swing.JComboBox armsMenu;
         private javax.swing.JRadioButton blade;
+        private javax.swing.ButtonGroup buttonGroup1;
         private javax.swing.JPanel calculator;
         private javax.swing.JLabel charmLabel;
         private javax.swing.JComboBox charmMenu;
@@ -1910,8 +2650,18 @@ public class MhagGui extends javax.swing.JFrame {
         private javax.swing.JComboBox chestSlot2;
         private javax.swing.JComboBox chestSlot3;
         private javax.swing.JRadioButton code;
+        private javax.swing.JPanel codeBook;
+        private javax.swing.JButton codeBookLoad;
+        private javax.swing.JTextField codeBookName;
+        private javax.swing.JButton codeBookSave;
+        private javax.swing.JList codeList;
+        private javax.swing.JPanel convert;
+        private javax.swing.JRadioButton convertHTML;
+        private javax.swing.JRadioButton convertTEXT;
+        private javax.swing.JButton deleteInteract;
         private javax.swing.JRadioButton female;
         private javax.swing.JPanel generator;
+        private javax.swing.JButton getSetInteract;
         private javax.swing.JRadioButton gunner;
         private javax.swing.JLabel headLabel;
         private javax.swing.JComboBox headMenu;
@@ -1922,17 +2672,26 @@ public class MhagGui extends javax.swing.JFrame {
         private javax.swing.JRadioButton html;
         private javax.swing.JPanel hunterType;
         private javax.swing.ButtonGroup hunterTypeGroup;
+        private javax.swing.JEditorPane jEditorAbout;
         private javax.swing.JLabel jLabel1;
+        private javax.swing.JLabel jLabel2;
+        private javax.swing.JScrollPane jScrollAbout;
+        private javax.swing.JScrollPane jScrollPane1;
         private javax.swing.JScrollPane jScrollPreview;
+        private javax.swing.JScrollPane jScrollPreview2;
+        private javax.swing.JScrollPane jScrollUsage;
         private javax.swing.JTabbedPane jTabbedPane1;
         private javax.swing.JTextField jTextData;
         private javax.swing.JTextArea jTextPreview;
+        private javax.swing.JTextArea jTextPreview2;
         private javax.swing.JTextField jTextSetName;
+        private javax.swing.JTextArea jTextUsage;
         private javax.swing.JComboBox legSlot1;
         private javax.swing.JComboBox legSlot2;
         private javax.swing.JComboBox legSlot3;
         private javax.swing.JLabel legsLabel;
         private javax.swing.JComboBox legsMenu;
+        private javax.swing.JButton loadSetInteract;
         private javax.swing.JRadioButton lowRank;
         private javax.swing.JRadioButton male;
         private javax.swing.JPanel output;
@@ -1947,6 +2706,8 @@ public class MhagGui extends javax.swing.JFrame {
         private javax.swing.JLabel skillPoint1;
         private javax.swing.JLabel skillPoint2;
         private javax.swing.JRadioButton text;
+        private javax.swing.JButton undoInteract;
+        private javax.swing.JPanel viewer;
         private javax.swing.JLabel waistLabel;
         private javax.swing.JComboBox waistMenu;
         private javax.swing.JComboBox waistSlot1;

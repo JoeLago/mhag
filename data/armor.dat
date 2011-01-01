@@ -528,26 +528,26 @@ Guild Bard Vest+/Scholar's Vest+       : G : C :  -- :  34 : 0 :  0 :  0 :  0 : 
 Guild Bard Sleeves+/Scholar's Sleeves+ : G : A :  -- :  34 : 1 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  2 : Carving :  2 : Fate :  2 : Protection : -5
 Guild Bard Coat+/Scholar's Mini+       : G : W :  -- :  34 : 1 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  2 : Carving :  2 : Fate :  2 : Protection : -5
 Guild Bard Gaiters+/Scholar's Sandals+ : G : L :  -- :  34 : 0 :  0 :  0 :  0 :   0 :   0 : Torso Up
-Deviljho Helm         : A : H :  -- :  80 : 0 :  0 :  0 :  3 : -4 : -4 : Psychic :  4 : Attack :  3 : Handicraft :  4 : Hunger : -2
-Deviljho Mail         : B : C :  -- :  80 : 0 :  0 :  0 :  3 : -4 : -4 : Psychic :  3 : Attack :  3 : Handicraft :  3 : Hunger : -2
-Deviljho Vambraces    : B : A :  -- :  80 : 0 :  0 :  0 :  3 : -4 : -4 : Psychic :  4 : Attack :  5 : Handicraft :  3 : Hunger : -1
-Deviljho Coil         : B : W :  -- :  80 : 0 :  0 :  0 :  3 : -4 : -4 : Torso Up
-Deviljho Greaves      : B : L :  -- :  80 : 3 :  0 :  0 :  3 : -4 : -4 : Psychic :  1 : Attack :  1 : Handicraft :  2 : Hunger : -3
-Deviljho Cap          : A : H :  -- :  46 : 0 :  5 :  5 :  3 : -4 : -4 : Psychic :  5 : Attack :  2 : Loading :  5 : Hunger : -1
-Deviljho Vest         : G : C :  -- :  46 : 0 :  0 :  0 :  3 : -4 : -4 : Psychic :  3 : Attack :  3 : Loading :  3 : Hunger : -2
-Deviljho Guards       : G : A :  -- :  46 : 0 :  0 :  0 :  3 : -4 : -4 : Psychic :  3 : Attack :  6 : Loading :  2 : Hunger : -2
-Deviljho Cost         : G : W :  -- :  46 : 0 :  0 :  0 :  3 : -4 : -4 : Torso Up
-Deviljho Leggings     : G : L :  -- :  46 : 3 :  0 :  0 :  3 : -4 : -4 : Psychic :  1 : Attack :  1 : Loading :  2 : Hunger : -3
-Alatreon Wisdom       : A : H :  -- :  82 : 2 : -1 : -1 : -1 :  0 : -5 : FreeElemnt :  1 : Evade Dist :  2 : Blight Res :  3 : Rec Level : -3
-Alatreon Soul         : B : C :  -- :  82 : 2 : -1 : -1 : -1 :  0 : -5 : FreeElemnt :  2 : Evade Dist :  2 : Blight Res :  2 : Rec Level : -1
-Alatreon Arms         : B : A :  -- :  82 : 0 : -1 : -1 : -1 :  0 : -5 : FreeElemnt :  5 : Evade Dist :  4 : Blight Res :  1 : Rec Level : -3
-Alatreon Might        : B : W :  -- :  82 : 2 : -1 : -1 : -1 :  0 : -5 : FreeElemnt :  2 : Evade Dist :  3 : Blight Res :  2 : Rec Level : -2
-Alatreon Scale        : B : L :  -- :  82 : 0 : -1 : -1 : -1 :  0 : -5 : FreeElemnt :  5 : Evade Dist :  4 : Blight Res :  2 : Rec Level : -2
-Alatreon Sagesse      : A : H :  -- :  48 : 2 :  4 :  4 :  4 :  0 : -5 : Rapid Fire :  1 : Evade Dist :  2 : Blight Res :  3 : Rec Level : -3
-Alatreon Seele        : G : C :  -- :  48 : 2 : -1 : -1 : -1 :  0 : -5 : Rapid Fire :  2 : Evade Dist :  2 : Blight Res :  2 : Rec Level : -1
-Alatreon Arma         : G : A :  -- :  48 : 1 : -1 : -1 : -1 :  0 : -5 : Rapid Fire :  3 : Evade Dist :  4 : Blight Res :  1 : Rec Level : -3
-Alatreon Force        : G : W :  -- :  48 : 2 : -1 : -1 : -1 :  0 : -5 : Rapid Fire :  2 : Evade Dist :  3 : Blight Res :  2 : Rec Level : -2
-Alatreon Scala        : G : L :  -- :  48 : 1 : -1 : -1 : -1 :  0 : -5 : Rapid Fire :  3 : Evade Dist :  4 : Blight Res :  2 : Rec Level : -2
+Vangis Helm           : A : H :  -- :  80 : 0 :  0 :  0 :  3 : -4 : -4 : Psychic :  4 : Attack :  3 : Handicraft :  4 : Hunger : -2
+Vangis Mail           : B : C :  -- :  80 : 0 :  0 :  0 :  3 : -4 : -4 : Psychic :  3 : Attack :  3 : Handicraft :  3 : Hunger : -2
+Vangis Vambraces      : B : A :  -- :  80 : 0 :  0 :  0 :  3 : -4 : -4 : Psychic :  4 : Attack :  5 : Handicraft :  3 : Hunger : -1
+Vangis Coil           : B : W :  -- :  80 : 0 :  0 :  0 :  3 : -4 : -4 : Torso Up
+Vangis Greaves        : B : L :  -- :  80 : 3 :  0 :  0 :  3 : -4 : -4 : Psychic :  1 : Attack :  1 : Handicraft :  2 : Hunger : -3
+Vangis Cap            : A : H :  -- :  46 : 0 :  5 :  5 :  3 : -4 : -4 : Psychic :  5 : Attack :  2 : Loading :  5 : Hunger : -1
+Vangis Vest           : G : C :  -- :  46 : 0 :  0 :  0 :  3 : -4 : -4 : Psychic :  3 : Attack :  3 : Loading :  3 : Hunger : -2
+Vangis Guards         : G : A :  -- :  46 : 0 :  0 :  0 :  3 : -4 : -4 : Psychic :  3 : Attack :  6 : Loading :  2 : Hunger : -2
+Vangis Cost           : G : W :  -- :  46 : 0 :  0 :  0 :  3 : -4 : -4 : Torso Up
+Vangis Leggings       : G : L :  -- :  46 : 3 :  0 :  0 :  3 : -4 : -4 : Psychic :  1 : Attack :  1 : Loading :  2 : Hunger : -3
+Escadora Wisdom       : A : H :  -- :  82 : 2 : -1 : -1 : -1 :  0 : -5 : FreeElemnt :  1 : Evade Dist :  2 : Blight Res :  3 : Rec Level : -3
+Escadora Soul         : B : C :  -- :  82 : 2 : -1 : -1 : -1 :  0 : -5 : FreeElemnt :  2 : Evade Dist :  2 : Blight Res :  2 : Rec Level : -1
+Escadora Arms         : B : A :  -- :  82 : 0 : -1 : -1 : -1 :  0 : -5 : FreeElemnt :  5 : Evade Dist :  4 : Blight Res :  1 : Rec Level : -3
+Escadora Might        : B : W :  -- :  82 : 2 : -1 : -1 : -1 :  0 : -5 : FreeElemnt :  2 : Evade Dist :  3 : Blight Res :  2 : Rec Level : -2
+Escadora Scale        : B : L :  -- :  82 : 0 : -1 : -1 : -1 :  0 : -5 : FreeElemnt :  5 : Evade Dist :  4 : Blight Res :  2 : Rec Level : -2
+Escadora Sagesse      : A : H :  -- :  48 : 2 :  4 :  4 :  4 :  0 : -5 : Rapid Fire :  1 : Evade Dist :  2 : Blight Res :  3 : Rec Level : -3
+Escadora Seele        : G : C :  -- :  48 : 2 : -1 : -1 : -1 :  0 : -5 : Rapid Fire :  2 : Evade Dist :  2 : Blight Res :  2 : Rec Level : -1
+Escadora Arma         : G : A :  -- :  48 : 1 : -1 : -1 : -1 :  0 : -5 : Rapid Fire :  3 : Evade Dist :  4 : Blight Res :  1 : Rec Level : -3
+Escadora Force        : G : W :  -- :  48 : 2 : -1 : -1 : -1 :  0 : -5 : Rapid Fire :  2 : Evade Dist :  3 : Blight Res :  2 : Rec Level : -2
+Escadora Scala        : G : L :  -- :  48 : 1 : -1 : -1 : -1 :  0 : -5 : Rapid Fire :  3 : Evade Dist :  4 : Blight Res :  2 : Rec Level : -2
 Chakra Earring        : A : H :  -- :  32 : 3 :-10 :  0 :  0 :  0 : 10
 Chakra Necklace       : A : C :  -- :  32 : 3 :  0 : 10 :  0 :-10 :  0
 Chakra Bracelet       : A : A :  -- :  32 : 3 :  0 :  0 : 10 :  0 :-10

@@ -493,14 +493,19 @@ public class Set {
 
 	}
 	// set a set from code (batch version)
-	public void setSetFromCode(Mhag mhag, String line)
+	public boolean setSetFromCode(Mhag mhag, String line)
 	{
+		if(line == null)return false;
 		init();
 		String errorLine = "    Error in Batch Inputs, Please Check!";
 
 		// first word before : set name
 		int splitPos = MhagUtil.extractWordPos(line, 0);
-		if( splitPos == -1)  MhagUtil.logLine(mhag, errorLine);
+		if( splitPos == -1) 
+		{
+			MhagUtil.logLine(mhag, errorLine);
+			return false;
+		}
 		String word = MhagUtil.extractWord(line, 0, splitPos);
 		if(word.equals(""))
 			setName = unNamedSet;
@@ -513,7 +518,11 @@ public class Set {
 		String[] wordArray = word.split(" ");
 		int numWords = wordArray.length;
 
-		if(numWords < 2) MhagUtil.logLine(mhag, errorLine);
+		if(numWords < 2)
+		{
+			MhagUtil.logLine(mhag, errorLine);
+			return false;
+		}
 
 		if(wordArray[0].equals("H"))
 			lowRank = false;
@@ -586,10 +595,12 @@ public class Set {
 			{
 
 				MhagUtil.logLine(mhag, errorLine);
+				return false;
 			}
 			wordIndex++;
 
 		}
+		return true;
 
 	}
 
@@ -1044,7 +1055,7 @@ public class Set {
 				if(index[i] != ind)continue;
 
 				eID[num] = effectID[j];
-				eSkillInd[num] = ind;
+				eSkillInd[num] = num;
 				sID[num] = skillID[ind];
 				sPoint[num] = skillPoint[ind];
 				active[ind] = true;

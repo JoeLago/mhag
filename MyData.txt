@@ -1,0 +1,431 @@
+ Set : 1
+================================================================================
+ Darasu's GS/Hammer Set                  High Rank   Blademaster 
+--------------------------------------------------------------------------------
+ Weapon                                  OO-   Gambit Tranq 
+ Baggi Helm+                             OOO   Checkmate  
+ Dober Mail                              O--   Gambit  
+ Baggi Vambraces+                        O--   Gambit  
+ Baggi Coil+                             OO-   Gambit Gambit 
+ Baggi Greaves                           O--   Gambit  
+ Crit Draw +6                            ---     
+--------------------------------------------------------------------------------
+                     WEP HEA CHE ARM WAI LEG CHA TOT
+ Max Defense         ---  68  78  68  68  68 --- 350 
+ Resist: Fire        ---  -4  -2  -4  -4  -3 --- -17 
+         Water       ---  -1  -2  -1  -1  -1 ---  -6 
+         Ice         ---   4   1   4   4   3 ---  26  ↑
+         Thunder     ---  -1   1  -1  -1  -1 ---  -3 
+         Dragon      ---   1   5   1   1   1 ---   9 
+--------------------------------------------------------------------------------
+ SKills: Tranquilzr    1   1 ---   2   2   4 ---  10 → Capture Expert
+         FastCharge  ---   2 ---   4   1   3 ---  10 → Focus
+         Ice Res     ---   1 ---   4   4   1 ---  10 → Ice Res +10
+         Crit Draw   --- ---   4 --- --- ---   6  10 → Critical Draw
+         PunishDraw    1   4   1   1   2   1 ---  10 → Punishing Draw
+         Dragon Res  --- ---   2 --- --- --- ---   2   ---
+         Stamina     --- ---   2 --- --- --- ---   2   ---
+         Expert      --- --- --- ---   1 --- ---   1   ---
+         Potential   --- ---  -1 --- --- --- ---  -1   ---
+         Fate         -1 --- --- --- --- --- ---  -1   ---
+         Stun        ---  -3 ---  -1  -1  -1 ---  -6   ---
+         Sharpness    -1  -2  -1  -1  -2  -1 ---  -8   ---
+================================================================================
+ Set : 2
+================================================================================
+ Oz78's sharp Set                        High Rank   Blademaster 
+--------------------------------------------------------------------------------
+ Weapon                                  ---     
+ Sword Saint Earring                     ---     
+ Helios Mail+/Selene Mail+               ---     
+ Agnaktor Vambraces+                     OOO   Earplug  
+ Vangis Coil                             ---     
+ Alloy Greaves+                          ---     
+ -----                                           
+--------------------------------------------------------------------------------
+                     WEP HEA CHE ARM WAI LEG CHA TOT
+ Max Defense         ---  10  82  78  80  62 --- 312 
+ Resist: Fire        ---   0   0   5   0   1 ---   6 
+         Water       ---   0   5  -4   0   2 ---   3 
+         Ice         ---   0   3  -2   3  -1 ---   3 
+         Thunder     ---   0  -3   1  -4  -2 ---  -8 
+         Dragon      ---   0  -4   0  -4  -1 ---  -9 
+--------------------------------------------------------------------------------
+ Skills: Torso Up    --- --- --- ---   E   E --- ---
+         Handicraft  --- ---  15 --- --- --- ---  15 → Sharpness +1
+         Fencing     ---  10 --- --- --- --- ---  10 → Mind's Eye
+         Hearing     --- ---   9   1 --- --- ---  10 → Earplugs
+         Guard       --- --- ---   2 --- --- ---   2   ---
+         Flame Aura  --- --- ---   1 --- --- ---   1   ---
+         Stamina     --- --- ---  -3 --- --- ---  -3   ---
+         Protection  --- ---  -3  -1 --- --- ---  -4   ---
+         Sharpness   --- ---  -6   1 --- --- ---  -5   ---
+================================================================================
+ Set : 3
+================================================================================
+ Uzi's bear Set                          High Rank   Blademaster 
+--------------------------------------------------------------------------------
+ Weapon                                  ---     
+ Rhenoplos Helm+                         OO-   Tectonic  
+ Rhenoplos Mail+                         O--   Evade  
+ Rhenoplos Vambraces+                    OO-   Lightfoot  
+ Rhenoplos Coil+                         OO-   Lightfoot  
+ Rhenoplos Greaves+                      OO-   Lightfoot  
+ Tremor Res +7, Fire Res+10              ---     
+--------------------------------------------------------------------------------
+                     WEP HEA CHE ARM WAI LEG CHA TOT
+ Max Defense         ---  66  66  66  66  66 --- 330 
+ Resist: Fire        ---   3   3   3   3   3 ---  25  ↑
+         Water       ---  -1  -1  -1  -1  -1 ---  -5 
+         Ice         ---  -1  -1  -1  -1  -1 ---  -5 
+         Thunder     ---  -2  -2  -2  -2  -2 --- -10 
+         Dragon      ---   2   2   2   2   2 ---  10 
+--------------------------------------------------------------------------------
+ SKills: Wind Res    ---   3   4   1   6   1 ---  15 → Windproof (Hi)
+         Mud/Snow    ---   2   1   1   1   5 ---  10 → Mud/Snow
+         Eating      ---   1   1   5   1   2 ---  10 → Speed Eating +1
+         Tremor Res  ---   3 --- --- --- ---   7  10 → Tremor-Proof
+         Evasion     --- ---   1   3   3   3 ---  10 → Evasion +1
+         Fire Res    --- --- --- --- --- ---  10  10 → Fire Res +10
+         Expert      ---   1   2   1 --- --- ---   4   ---
+         Sleep       ---  -1 --- --- --- --- ---  -1   ---
+         Health      --- ---  -1  -1  -1  -1 ---  -4   ---
+         ThunderRes  ---  -2  -1  -1  -1  -1 ---  -6   ---
+================================================================================
+ Set : 4
+================================================================================
+ MidnightManiac's Set                    High Rank   Blademaster 
+--------------------------------------------------------------------------------
+ Weapon                                  O--   Evade  
+ Helios Helm+/Selene Helm+               OOO   Lightfoot Evade 
+ Helios Mail+/Selene Mail+               ---     
+ Helios Vambraces/Selene Vambraces       O--   Evade  
+ Helios Coil/Selene Coil                 ---     
+ Helios Greaves/Selene Greaves           ---     
+ Evasion +6                              OO-   Lightfoot  
+--------------------------------------------------------------------------------
+                     WEP HEA CHE ARM WAI LEG CHA TOT
+ Max Defense         ---  82  82  82  82  82 --- 410 
+ Resist: Fire        ---   0   0   0   0   0 ---   0 
+         Water       ---   5   5   4   4   4 ---  22 
+         Ice         ---   3   3   3   3   3 ---  15 
+         Thunder     ---  -3  -3  -3  -3  -3 --- -15 
+         Dragon      ---  -4  -4  -4  -4  -4 --- -20 
+--------------------------------------------------------------------------------
+ SKills: Handicraft  ---   1   5   3   3   5 ---  17 → Sharpness +1
+         Hearing     ---   2   3   2   5   3 ---  15 → HG Earplugs
+         Evasion       1   4 ---   1 --- ---   9  15 → Evasion +2
+         Health       -1  -2 ---  -1 --- ---  -1  -5   ---
+         Protection  ---  -3  -1  -1  -1  -2 ---  -8   ---
+         Sharpness   ---  -1  -2  -3  -2  -1 ---  -9   ---
+================================================================================
+ Set : 5
+================================================================================
+ Tifa's Medic Set                        High Rank   Blademaster 
+--------------------------------------------------------------------------------
+ Weapon                                  OO-   Panacea  
+ Grace Earring                           ---     
+ Gobul Mail+                             O--   Steadfast+  
+ Gobul Vambraces+                        O--   Steadfast+  
+ Gobul Faulds+                           O--     
+ Gobul Greaves+                          OOO   Voracious  
+ Rec Level +7                            OO-   Panacea  
+--------------------------------------------------------------------------------
+                     WEP HEA CHE ARM WAI LEG CHA TOT
+ Max Defense         ---  10  74  74  74  74 --- 306 
+ Resist: Fire        ---   0  -2  -2  -2  -2 ---  -8 
+         Water       ---   0   4   4   4   4 ---  16 
+         Ice         ---   0   0   0   0   0 ---   0 
+         Thunder     ---   0  -4  -4  -4  -4 --- -16 
+         Dragon      ---   0   2   2   2   2 ---   8 
+--------------------------------------------------------------------------------
+ SKills: Wide-Range  ---  20 --- --- --- --- ---  20 → Wide-Range +2
+         Eating      --- ---   2   4   5   5 ---  16 → Speed Eating +2
+         Stun        --- ---   4   6   4   2 ---  16 → Negate Stun
+         Rec Level     3 --- --- --- ---  -2  10  11 → Recovery Up
+         Expert      --- ---   3   2   1   2 ---   8   ---
+         Rec Speed    -1 ---  -2  -1  -1  -2  -1  -8   ---
+================================================================================
+ Set : 6
+================================================================================
+ Moropa's GS Draw Set                    High Rank   Blademaster 
+--------------------------------------------------------------------------------
+ Weapon                                  O--   Earplug  
+ Damacrus Helm                           OOO   Checkmate  
+ Helios Mail+/Selene Mail+               ---     
+ Diablos Vambraces+                      OOO   Checkmate  
+ Vangis Coil                             ---     
+ Helios Greaves/Selene Greaves           ---     
+ Crit Draw +7, Poison +3                 O--   Draw  
+--------------------------------------------------------------------------------
+                     WEP HEA CHE ARM WAI LEG CHA TOT
+ Max Defense         ---  78  82  78  80  82 --- 400 
+ Resist: Fire        ---  -2   0   3   0   0 ---   1 
+         Water       ---   0   5  -1   0   4 ---   8 
+         Ice         ---   2   3  -4   3   3 ---   7 
+         Thunder     ---  -2  -3  -1  -4  -3 --- -13 
+         Dragon      ---   3  -4  -1  -4  -4 --- -10 
+--------------------------------------------------------------------------------
+ Skills: Torso Up    --- --- --- ---   E --- --- ---
+         Handicraft  --- ---  10 --- ---   5 ---  15 → Sharpness +1
+         PunishDraw  ---   6 ---   4 --- --- ---  10 → Punishing Draw
+         Hearing       1 ---   6 --- ---   3 ---  10 → Earplugs
+         Crit Draw   --- --- ---   2 --- ---   8  10 → Critical Draw
+         Poison      --- --- --- --- --- ---   3   3   ---
+         Health      ---   1 --- --- --- --- ---   1   ---
+         Guard Up    ---   1 --- --- --- --- ---   1   ---
+         Tremor Res  --- --- ---   1 --- --- ---   1   ---
+         Expert      --- --- --- --- --- ---  -1  -1   ---
+         Stamina     ---  -3 --- --- --- --- ---  -3   ---
+         Elemental   --- --- ---  -4 --- --- ---  -4   ---
+         Protection   -1 ---  -2 --- ---  -2 ---  -5   ---
+         Sharpness   ---  -2  -4  -2 ---  -1 ---  -9   ---
+================================================================================
+ Set : 7
+================================================================================
+ Moropa's Ala Sleep Bombing Set          High Rank   Blademaster 
+--------------------------------------------------------------------------------
+ Weapon                                  ---     
+ Uragaan Helm+                           O--   Breeze  
+ Bnahabra Suit+                          O--   Breeze  
+ Uragaan Vambraces+                      OOO   Breeze Breeze Breeze
+ Bnahabra Coil+                          O--   Bombardier  
+ Bnahabra Boots+                         O--   Bombardier  
+ SpeedSetup+10                           O--   Bombardier  
+--------------------------------------------------------------------------------
+                     WEP HEA CHE ARM WAI LEG CHA TOT
+ Max Defense         ---  78  66  78  66  66 --- 354 
+ Resist: Fire        ---   4  -5   4  -5  -5 ---  -7 
+         Water       ---  -4   0  -4   0   0 ---  -8 
+         Ice         ---  -1   0  -1   0   0 ---  -2 
+         Thunder     ---   1   2   1   2   2 ---   8 
+         Dragon      ---  -2   6  -2   6   6 ---  14 
+--------------------------------------------------------------------------------
+ SKills: Status      --- ---   3 ---   6   2 ---  11 → Status Atk Up
+         Bomb Boost  ---   2 ---   2   2   2   2  10 → Bombardier
+         Sharpness   --- ---   1 ---   3   6 ---  10 → Razor Sharp
+         Heat Res    ---   2   2   6 --- --- ---  10 → Heat Cancel (Lo)
+         SpeedSetup  --- --- --- --- --- ---  10  10 → Trap Master
+         Poison      --- ---  -5 ---  -2  -3 --- -10 → Double Poison
+         Defense     ---   4 ---   2 --- --- ---   6   ---
+         PunishDraw  ---   2 ---   1 --- --- ---   3   ---
+         Eating      ---  -3 ---  -2 --- --- ---  -5   ---
+================================================================================
+ Set : 8
+================================================================================
+ Moropa's Speed Bombing Set              High Rank   Blademaster 
+--------------------------------------------------------------------------------
+ Weapon                                  ---     
+ Shadow Shade                            OOO   Bombardier Bombardier Bombardier
+ Helios Mail+/Selene Mail+               ---     
+ Helios Vambraces+/Selene Vambraces+     ---     
+ Helios Coil/Selene Coil                 ---     
+ Helios Greaves/Selene Greaves           ---     
+ SpeedSetup+10                           OO-   Bombardier Bombardier 
+--------------------------------------------------------------------------------
+                     WEP HEA CHE ARM WAI LEG CHA TOT
+ Max Defense         ---  40  82  82  82  82 --- 368 
+ Resist: Fire        ---   2   0   0   0   0 ---   2 
+         Water       ---   2   5   5   4   4 ---  20 
+         Ice         ---   2   3   3   3   3 ---  14 
+         Thunder     ---   2  -3  -3  -3  -3 --- -10 
+         Dragon      ---   2  -4  -4  -4  -4 --- -14 
+--------------------------------------------------------------------------------
+ SKills: Hearing     --- ---   3   5   5   3 ---  16 → HG Earplugs
+         Handicraft  --- ---   5   3   3   5 ---  16 → Sharpness +1
+         Bomb Boost  ---   6 --- --- --- ---   4  10 → Bombardier
+         SpeedSetup  --- --- --- --- --- ---  10  10 → Trap Master
+         Stun        ---   7 --- --- --- --- ---   7   ---
+         Sharpness   --- ---  -2  -1  -2  -1 ---  -6   ---
+         Protection  --- ---  -1  -4  -1  -2 ---  -8   ---
+================================================================================
+ Set : 9
+================================================================================
+ Moropa's Gunner Sleep Bombing Set       High Rank   Gunner      
+--------------------------------------------------------------------------------
+ Weapon                                  O--   Breeze  
+ Uragaan Cap+                            O--   Breeze  
+ Uragaan Vest+                           O--   Breeze  
+ Uragaan Guards+                         OOO   Disabler+ Breeze 
+ Uragaan Coat+                           O--   Breeze  
+ Uragaan Leggings+                       OOO   Disabler+ Disabler 
+ SpeedSetup+10                           OO-   Disabler+  
+--------------------------------------------------------------------------------
+                     WEP HEA CHE ARM WAI LEG CHA TOT
+ Max Defense         ---  45  45  45  45  45 --- 235  ↑
+ Resist: Fire        ---   9   4   4   4   4 ---  25 
+         Water       ---  -4  -4  -4  -4  -4 --- -20 
+         Ice         ---  -1  -1  -1  -1  -1 ---  -5 
+         Thunder     ---   1   1   1   1   1 ---   5 
+         Dragon      ---  -2  -2  -2  -2  -2 --- -10 
+--------------------------------------------------------------------------------
+ SKills: Recoil      ---   6   1   1   6   1 ---  15 → Recoil Down +2
+         Defense     ---   3   2   1   2   2 ---  10 → Defense Up (S)
+         Bomb Boost  ---   1   4   2   2   1 ---  10 → Bombardier
+         Heat Res      2   2   2   2   2 --- ---  10 → Heat Cancel (Lo)
+         Status      --- --- ---   3 ---   4   3  10 → Status Atk Up
+         SpeedSetup  --- --- --- --- --- ---  10  10 → Trap Master
+         Eating      ---  -1  -2  -3  -1  -3 --- -10 → Slow Eater
+         Elemental   --- --- ---  -1 ---  -2  -1  -4   ---
+================================================================================
+ Set : 10
+================================================================================
+ No's Lance Set                          High Rank   Blademaster 
+--------------------------------------------------------------------------------
+ Weapon                                  O--   Attack  
+ Vangis Helm                             ---     
+ Agnaktor Mail+                          O--   Psychic  
+ Vangis Vambraces                        ---     
+ Helios Coil+/Selene Coil+               OOO   Architect  
+ Vangis Greaves                          OOO   Onslaught  
+ Guard +7                                OO-   Iron Wall  
+--------------------------------------------------------------------------------
+                     WEP HEA CHE ARM WAI LEG CHA TOT
+ Max Defense         ---  80  78  80  82  80 --- 400 
+ Resist: Fire        ---   0   5   0   0   0 ---   5 
+         Water       ---   0  -4   0   5   0 ---   1 
+         Ice         ---   3  -2   3   3   3 ---  10 
+         Thunder     ---  -4   1  -4  -3  -4 --- -14 
+         Dragon      ---  -4   0  -4  -4  -4 --- -16 
+--------------------------------------------------------------------------------
+ SKills: Attack        1   3 ---   5 ---   6 ---  15 → Attack Up (M)
+         Handicraft  ---   4 ---   3   6   2 ---  15 → Sharpness +1
+         Guard       --- ---   5 --- --- ---  10  15 → Guard +2
+         Psychic     ---   4   2   4 ---   1 ---  11 → Detect
+         Flame Aura  --- ---   1 --- --- --- ---   1   ---
+         Hearing     --- --- --- ---   1 --- ---   1   ---
+         Protection  --- --- --- ---  -1 --- ---  -1   ---
+         Defense     --- --- --- --- ---  -1 ---  -1   ---
+         Stamina     --- ---  -1 --- --- ---  -1  -2   ---
+         Sharpness   --- ---   2 ---  -5 --- ---  -3   ---
+         Hunger      ---  -2 ---  -1 ---  -3 ---  -6   ---
+================================================================================
+ Set : 11
+================================================================================
+ No's Hammer Set                         High Rank   Blademaster 
+--------------------------------------------------------------------------------
+ Weapon                                  O--   Handicraft  
+ Helios Helm+/Selene Helm+               OOO   Dynamo  
+ Helios Mail+/Selene Mail+               ---     
+ Yamato Kote+/Hinata Kote+               OOO   Dynamo  
+ Helios Coil/Selene Coil                 ---     
+ Helios Greaves/Selene Greaves           ---     
+ SpeedSetup+10                           OO-   Earplug Earplug 
+--------------------------------------------------------------------------------
+                     WEP HEA CHE ARM WAI LEG CHA TOT
+ Max Defense         ---  82  82  82  82  82 --- 410 
+ Resist: Fire        ---   0   0   4   0   0 ---   4 
+         Water       ---   5   5   0   4   4 ---  18 
+         Ice         ---   3   3  -3   3   3 ---   9 
+         Thunder     ---  -3  -3   0  -3  -3 --- -12 
+         Dragon      ---  -4  -4  -4  -4  -4 --- -20 
+--------------------------------------------------------------------------------
+ SKills: Hearing     ---   2   3 ---   5   3   2  15 → HG Earplugs
+         Handicraft    1   1   5 ---   3   5 ---  15 → Sharpness +1
+         FastCharge  ---   4 ---   6 --- --- ---  10 → Focus
+         SpeedSetup  --- --- --- --- --- ---  10  10 → Trap Master
+         Rec Speed   --- --- ---   1 --- --- ---   1   ---
+         Combo Rate  --- --- ---  -3 --- --- ---  -3   ---
+         Constitutn  ---  -2 ---  -2 --- --- ---  -4   ---
+         Sharpness    -1  -1  -2   1  -2  -1 ---  -6   ---
+         Protection  ---  -3  -1 ---  -1  -2  -2  -9   ---
+================================================================================
+ Set : 12
+================================================================================
+ dr00's burning offer Set                High Rank   Blademaster 
+--------------------------------------------------------------------------------
+ Weapon                                  ---     
+ Sword Saint Earring                     ---     
+ Yamato Muneate+/Hinata Muneate+         O--   Razor  
+ Yamato Kote+/Hinata Kote+               OOO   Tectonic  
+ Yamato Koshiate+/Hinata Koshiate+       O--   Charger  
+ Yamato Gusoku+/Hinata Hakama+           ---     
+ Tremor Res +6, Rec Speed +3             O--   Footing  
+--------------------------------------------------------------------------------
+                     WEP HEA CHE ARM WAI LEG CHA TOT
+ Max Defense         ---  10  82  82  82  82 --- 338 
+ Resist: Fire        ---   0   4   4   4   4 ---  16 
+         Water       ---   0   0   0   0   0 ---   0 
+         Ice         ---   0  -3  -3  -3  -3 --- -12 
+         Thunder     ---   0   0   0   0   0 ---   0 
+         Dragon      ---   0  -4  -4  -4  -4 --- -16 
+--------------------------------------------------------------------------------
+ SKills: Rec Speed   --- ---   4   1   3   5   3  16 → Recovery Spd +2
+         Fencing     ---  10 --- --- --- --- ---  10 → Mind's Eye
+         FastCharge  --- ---   2   2   3   3 ---  10 → Focus
+         Sharpness   --- ---   2   1   5   2 ---  10 → Razor Sharp
+         Tremor Res  --- --- ---   3 --- ---   7  10 → Tremor-Proof
+         Handicraft  --- ---  -1 --- --- --- ---  -1   ---
+         Constitutn  --- --- --- ---  -1 --- ---  -1   ---
+         Sleep       --- --- ---  -1 --- ---  -1  -2   ---
+         Combo Rate  --- ---  -2  -3  -1  -3 ---  -9   ---
+================================================================================
+ Set : 13
+================================================================================
+ Yuffie's Naked Set                      High Rank   Blademaster 
+--------------------------------------------------------------------------------
+ Weapon                                  ---     
+ Yamato Kabuto+/Hinata Hachigane+        OOO   Critical Charger 
+ Chakra Necklace                         OOO   Dynamo  
+ Chakra Bracelet                         OOO   Grinder Grinder Grinder
+ Vangis Coil                             ---     
+ Barroth Greaves+                        O--   Grinder  
+ Crit Draw +7, Bomb Boost +3             O--   Grinder  
+--------------------------------------------------------------------------------
+                     WEP HEA CHE ARM WAI LEG CHA TOT
+ Max Defense         ---  82  32  32  80  72 --- 298 
+ Resist: Fire        ---   4   0   0   0   5 ---   9 
+         Water       ---   0  10   0   0  -5 ---   5 
+         Ice         ---  -3   0  10   3  -4 ---   6 
+         Thunder     ---   0 -10   0  -4   4 --- -10 
+         Dragon      ---  -4   0 -10  -4   0 --- -18 
+--------------------------------------------------------------------------------
+ Skills: Torso Up    --- --- --- ---   E --- --- ---
+         FastCharge  ---   2   8 --- --- --- ---  10 → Focus
+         Crit Draw   ---   3 --- --- --- ---   7  10 → Critical Draw
+         Sharpener   --- --- ---   6 ---   2   2  10 → Speed Sharpening
+         Potential   --- --- --- --- ---   4 ---   4   ---
+         Stamina     --- --- --- --- ---   4 ---   4   ---
+         Bomb Boost  --- --- --- --- --- ---   3   3   ---
+         Rec Speed   ---   2 --- --- --- --- ---   2   ---
+         Sharpness   ---   1 --- --- --- --- ---   1   ---
+         Attack      --- --- --- --- ---   1 ---   1   ---
+         Combo Rate  ---  -3 --- --- --- --- ---  -3   ---
+         Expert      ---  -1 --- --- ---  -2 ---  -3   ---
+         Constitutn  ---  -1  -4 --- --- --- ---  -5   ---
+================================================================================
+ Set : 14
+================================================================================
+ Yuffie's Fav Set                        High Rank   Blademaster 
+--------------------------------------------------------------------------------
+ Weapon                                  ---     
+ Yamato Kabuto+/Hinata Hachigane+        OOO   Dynamo  
+ Ranger's Girdle                         ---     
+ Yamato Kote+/Hinata Kote+               OOO   Grinder Grinder Grinder
+ Steel Faulds+                           O--   Recovery  
+ Yamato Gusoku+/Hinata Hakama+           ---     
+ SpeedSetup+10                           OO-   Recovery  
+--------------------------------------------------------------------------------
+                     WEP HEA CHE ARM WAI LEG CHA TOT
+ Max Defense         ---  82  72  82  66  82 --- 384 
+ Resist: Fire        ---   4   0   4  -1   4 ---  11 
+         Water       ---   0   0   0   1   0 ---   1 
+         Ice         ---  -3   0  -3   1  -3 ---  -8 
+         Thunder     ---   0   0   0  -1   0 ---  -1 
+         Dragon      ---  -4   0  -4   0  -4 --- -12 
+--------------------------------------------------------------------------------
+ SKills: FastCharge  ---   5 ---   2 ---   3 ---  10 → Focus
+         Rec Speed   ---   2 ---   1   1   5   1  10 → Recovery Spd +1
+         Sharpener   --- --- ---   6   4 --- ---  10 → Speed Sharpening
+         SpeedSetup  --- --- --- --- --- ---  10  10 → Trap Master
+         Sharpness   ---   1 ---   1 ---   2 ---   4   ---
+         Spd Gather  --- ---   4 --- --- --- ---   4   ---
+         Guard       --- --- --- ---   4 --- ---   4   ---
+         Wide-Range  --- ---   2 --- --- --- ---   2   ---
+         Carving     --- ---   1 --- --- --- ---   1   ---
+         Constitutn  ---  -2 --- --- --- --- ---  -2   ---
+         Eating      --- --- --- ---  -1 ---  -1  -2   ---
+         Fate        --- ---  -3 --- --- --- ---  -3   ---
+         Swimming    --- --- --- ---  -3 --- ---  -3   ---
+         Combo Rate  ---  -3 ---  -3 ---  -3 ---  -9   ---
+================================================================================

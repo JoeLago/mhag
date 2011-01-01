@@ -712,13 +712,13 @@ public class MhagData {
 
 			String line = in.nextLine();
 
-			aSet.setSetFromCode(mhag, line); //read set
+			boolean pass = aSet.setSetFromCode(mhag, line); //read set
 
-			boolean pass = aSet.checkSet(mhag, this);  //check set
+			if(pass) pass = aSet.checkSet(mhag, this);  //check set
 			if(!pass)
 			{
 				MhagUtil.logLine(mhag, "Error! Please Check!");
-				System.exit(0);
+				continue;
 			}
 
 			aSet.calcSet(mhag, this);   //calculate set

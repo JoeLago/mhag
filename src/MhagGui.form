@@ -10,9 +10,12 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="outputGroup">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="MHAG: Monster Hunter Armor Generator   Ver 1.0 beta"/>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
@@ -33,12 +36,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" alignment="1" pref="1238" max="32767" attributes="0"/>
+          <Component id="jTabbedPane1" min="-2" pref="1238" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" min="-2" pref="578" max="-2" attributes="0"/>
+          <Component id="jTabbedPane1" min="-2" pref="625" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -48,6 +51,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Lucida Sans Typewriter" size="14" style="1"/>
         </Property>
+        <Property name="opaque" type="boolean" value="true"/>
       </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
@@ -55,8 +59,12 @@
         <Container class="javax.swing.JPanel" name="calculator">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Calculator">
-                <Property name="tabTitle" type="java.lang.String" value="Calculator"/>
+              <JTabbedPaneConstraints tabName="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;Calculator&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;" toolTip="">
+                <Property name="tabTitle" type="java.lang.String" value="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;Calculator&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;"/>
+                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/pic/calculator.png"/>
+                </Property>
+                <Property name="tabToolTip" type="java.lang.String" value=""/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -104,7 +112,7 @@
                               <Component id="setup" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -117,6 +125,7 @@
                     <TitledBorder title="Rank"/>
                   </Border>
                 </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Change rank type, reset set"/>
               </Properties>
 
               <Layout>
@@ -181,6 +190,7 @@
                     <TitledBorder title="Hunter Type"/>
                   </Border>
                 </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Change hunter type, reset set"/>
               </Properties>
 
               <Layout>
@@ -246,6 +256,7 @@
                     <TitledBorder title="Gender"/>
                   </Border>
                 </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Switch armor names"/>
               </Properties>
 
               <Layout>
@@ -1183,9 +1194,10 @@
                 <Component class="javax.swing.JButton" name="saveOutput">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Monospaced" size="12" style="0"/>
+                      <Font name="Monospaced" size="12" style="1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Save"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Append set to data file"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveOutputActionPerformed"/>
@@ -1194,7 +1206,7 @@
                 <Component class="javax.swing.JTextField" name="jTextData">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="MyData"/>
-                    <Property name="toolTipText" type="java.lang.String" value="input your save data "/>
+                    <Property name="toolTipText" type="java.lang.String" value="Input your save data "/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel1">
@@ -1209,6 +1221,9 @@
             </Container>
             <Container class="javax.swing.JScrollPane" name="jScrollPreview">
               <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e2" green="eb" id="Panel.background" palette="3" red="f0" type="palette"/>
+                </Property>
                 <Property name="horizontalScrollBar" type="javax.swing.JScrollBar" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="null"/>
                 </Property>
@@ -1230,7 +1245,6 @@
                       <Color blue="1" green="1" red="1" type="rgb"/>
                     </Property>
                     <Property name="rows" type="int" value="5"/>
-                    <Property name="text" type="java.lang.String" value="================================================================================&#xa; Medic&apos;s Set                             High Rank   Blademaster &#xa;--------------------------------------------------------------------------------&#xa; Weapon                                  OO-   Steadfast+ Recovery &#xa; Grace Earring                           ---     &#xa; Gobul Mail+                             O--   Steadfast+  &#xa; Gobul Vambraces+                        O--   Medicine  &#xa; Gobul Faulds+                           O--   Medicine  &#xa; Gobul Greaves+                          OOO   Voracious  &#xa; Rec Level +7                            OO-   Panacea  &#xa;--------------------------------------------------------------------------------&#xa;                     WEP HEA CHE ARM WAI LEG CHA TOT&#xa; Max Defense         ---  10  74  74  74  74 --- 306 &#xa; Resist: Fire        ---   0  -2  -2  -2  -2 ---  -8 &#xa;         Water       ---   0   4   4   4   4 ---  16 &#xa;         Ice         ---   0   0   0   0   0 ---   0 &#xa;         Thunder     ---   0  -4  -4  -4  -4 --- -16 &#xa;         Dragon      ---   0   2   2   2   2 ---   8 &#xa;--------------------------------------------------------------------------------&#xa; SKills: Wide-Range  ---  20 --- --- --- --- ---  20 &#x2192; Wide-Range +2&#xa;         Stun          2 ---   4   4   4   2 ---  16 &#x2192; Negate Stun&#xa;         Eating       -1 ---   2   4   5   5 ---  15 &#x2192; Speed Eating +2&#xa;         Rec Level   --- --- ---   1   1  -2  10  10 &#x2192; Recovery Up&#xa;         Expert      --- ---   3   2   1   2 ---   8   ---&#xa;         Rec Speed     1 ---  -2  -2  -2  -2  -1  -8   ---&#xa;================================================================================"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                         <TitledBorder title="Preview"/>
@@ -1277,18 +1291,25 @@
                       <Font name="Lucida Sans Typewriter" size="12" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Unnamed Set"/>
-                    <Property name="toolTipText" type="java.lang.String" value="input your save data "/>
+                    <Property name="toolTipText" type="java.lang.String" value="Input set name, use enter to preview it now"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextSetNameActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="Viewer">
+        <Container class="javax.swing.JPanel" name="viewer">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Viewer">
-                <Property name="tabTitle" type="java.lang.String" value="Viewer"/>
+              <JTabbedPaneConstraints tabName="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Viewer&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;" toolTip="">
+                <Property name="tabTitle" type="java.lang.String" value="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Viewer&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;"/>
+                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/pic/viewer.png"/>
+                </Property>
+                <Property name="tabToolTip" type="java.lang.String" value=""/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -1296,21 +1317,334 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1226" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="codeBook" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="convert" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="loadSetInteract" min="-2" pref="170" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="getSetInteract" min="-2" pref="170" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="deleteInteract" min="-2" pref="130" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="undoInteract" min="-2" pref="130" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane1" alignment="0" pref="633" max="32767" attributes="1"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPreview2" min="-2" pref="586" max="-2" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="535" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="0" attributes="1">
+                              <EmptySpace min="12" pref="12" max="12" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="convert" min="-2" max="-2" attributes="1"/>
+                                  <Component id="codeBook" min="-2" max="-2" attributes="1"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" pref="418" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="loadSetInteract" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="getSetInteract" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="deleteInteract" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="undoInteract" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="jScrollPreview2" alignment="0" min="-2" pref="535" max="-2" attributes="1"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="jScrollPreview2">
+              <Properties>
+                <Property name="horizontalScrollBar" type="javax.swing.JScrollBar" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="null"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextPreview2">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Lucida Sans Typewriter" size="12" style="0"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="1" green="1" red="1" type="rgb"/>
+                    </Property>
+                    <Property name="rows" type="int" value="5"/>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Preview"/>
+                      </Border>
+                    </Property>
+                    <Property name="opaque" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="codeBook">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Code Book"/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="codeBookName" min="-2" pref="175" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="codeBookLoad" min="-2" pref="65" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="codeBookSave" min="-2" pref="65" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="codeBookName" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="codeBookLoad" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="codeBookSave" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JTextField" name="codeBookName">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Lucida Sans Typewriter" size="12" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="MyData"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="codeBookLoad">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Lucida Sans Typewriter" size="12" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Load"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Load code book"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="codeBookLoadActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="codeBookSave">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Lucida Sans Typewriter" size="12" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Save"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Save code  book, overwrite the old file"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="codeBookSaveActionPerformed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="convert">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Output Sets"/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="convertTEXT" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="convertHTML" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="Output" pref="122" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="convertTEXT" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="convertHTML" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="Output" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JRadioButton" name="convertTEXT">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup1"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Lucida Sans Typewriter" size="12" style="0"/>
+                    </Property>
+                    <Property name="selected" type="boolean" value="true"/>
+                    <Property name="text" type="java.lang.String" value="TEXT"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="convertTEXTActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="convertHTML">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup1"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Lucida Sans Typewriter" size="12" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="HTML"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="convertHTMLActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="Output">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Lucida Sans Typewriter" size="12" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Save &amp; Output"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Save code book, and output sets"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OutputActionPerformed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Sans Typewriter" size="12" style="0"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JList" name="codeList">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Code List"/>
+                      </Border>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Lucida Sans Typewriter" size="12" style="0"/>
+                    </Property>
+                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                    <Property name="selectionMode" type="int" value="0"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="valueChanged" listener="javax.swing.event.ListSelectionListener" parameters="javax.swing.event.ListSelectionEvent" handler="codeListValueChanged"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="loadSetInteract">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Sans Typewriter" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Load to Calculator"/>
+                <Property name="toolTipText" type="java.lang.String" value="Load the selected set"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loadSetInteractActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="getSetInteract">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Sans Typewriter" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Add from Calculator"/>
+                <Property name="toolTipText" type="java.lang.String" value="Add the set below"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="getSetInteractActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="deleteInteract">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Sans Typewriter" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Remove/Cut"/>
+                <Property name="toolTipText" type="java.lang.String" value="Remvoe/cut the selected set (max 5) "/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteInteractActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="undoInteract">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Sans Typewriter" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Paste"/>
+                <Property name="toolTipText" type="java.lang.String" value="Append the recently removed set (max 5)"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="undoInteractActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="generator">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Generator">
-                <Property name="tabTitle" type="java.lang.String" value="Generator"/>
+              <JTabbedPaneConstraints tabName="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;&amp;nbsp;Generator&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;" toolTip="">
+                <Property name="tabTitle" type="java.lang.String" value="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;&amp;nbsp;Generator&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;"/>
+                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/pic/generator.png"/>
+                </Property>
+                <Property name="tabToolTip" type="java.lang.String" value=""/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -1331,8 +1665,11 @@
         <Container class="javax.swing.JPanel" name="about">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="About">
-                <Property name="tabTitle" type="java.lang.String" value="About"/>
+              <JTabbedPaneConstraints tabName="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;About&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;">
+                <Property name="tabTitle" type="java.lang.String" value="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;About&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;"/>
+                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/pic/help-browser.png"/>
+                </Property>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -1340,15 +1677,102 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1226" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollAbout" min="-2" pref="444" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jScrollUsage" pref="740" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="535" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jScrollUsage" alignment="1" pref="511" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jScrollAbout" pref="391" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="jScrollAbout">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="About"/>
+                  </Border>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JEditorPane" name="jEditorAbout">
+                  <Properties>
+                    <Property name="contentType" type="java.lang.String" value="text/html"/>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;&#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;h2 align = &quot;center&quot;&gt;&#xa;      MHAG :&#xa;    &lt;/h2&gt;&#xa;  &lt;h2 align = &quot;center&quot;&gt;&#xa;       Monster Hunter Armor Generator&#xa;    &lt;/h2&gt;&#xa; &lt;p align = &quot;center&quot;&gt;v1.0 Beta&lt;/p&gt;&#xa; &lt;p align = &quot;center&quot;&gt;Release Date: 01/01/2011&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;MHAG Project: &lt;a href=&quot;http://code.google.com/p/mhag/&quot;&gt;code.google.com/p/mhag&lt;/a&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Proposed MHAG Set Database: &lt;a href=&quot;http://mhag.wetpaint.com&quot;&gt;mhag.wetpaint.com&lt;/p&gt;&#xa;&lt;p&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;by Tifa@mh3&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Unity Member: &lt;a href=&quot;http://www.capcom-unity.com/tifa@mh3&quot;&gt;www.capcom-unity.com/tifa@mh3&lt;/a&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Youtube Channel: &lt;a href=&quot;http://www.youtube.com/mh3journey&quot;&gt;www.youtube.com/mh3journey&lt;/a&gt;&lt;/p&gt;&#xa;&#xa;  &lt;/body&gt;&#xa;&#xa;"/>
+                    <Property name="opaque" type="boolean" value="false"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="hyperlinkUpdate" listener="javax.swing.event.HyperlinkListener" parameters="javax.swing.event.HyperlinkEvent" handler="jEditorAboutHyperlinkUpdate"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/pic/logo_bw_180.jpg"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollUsage">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Usage"/>
+                  </Border>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextUsage">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="lineWrap" type="boolean" value="true"/>
+                    <Property name="rows" type="int" value="5"/>
+                    <Property name="text" type="java.lang.String" value="History:&#xa;v.1.0 beta 01/01/2011: initial release for test.&#xa;&#xa;Requirement:&#xa;1.OS: any OS with JRE&#xa;2.Screen Resolution: best for 720p or higher (1280 pixels in width)&#xa;3.CPU: (not sure, let me know if you feel slow or have any problems)&#xa;4.Browser: Google Chrome/Mozilla Firefox/Safari, Internet Explorer is not recommended&#xa;&#xa;There are three components: a calculator, a viewer and a generator.&#xa;1. Calculator:&#xa;Output Panel: three output options (text/html/code)&#xa;     TEXT :(.txt) plain text format, save format as shown in preview panel.&#xa;     HTML :(.html) html format table, viewed in a browser.&#xa;     CODE :(.code) set code used to store set information for future use.&#xa;     Data File: file name of save data.  If file name doesn&apos;t contain file type extension, MHAG automatically add it.&#xa;     Save Button: APPENDs set to the save data.  If save file does not exist, a new file will be created.&#xa;&#xa;Rank/Hunter Type/Gender Options:&#xa;     Rank : low/high Rank, reset setup once rank option is swtiched.&#xa;     Hunter Type : blademaster/gunner. reset setup once hunter type option is swtiched.&#xa;     Gender : male/female.  It only affects the armor pieces that are ony for male/female.  The corresponding armor name and its position in the menu wil be changed (not reset) when gender is switched.&#xa;     Set Name : Armor set name. &quot;Unnamed Set&quot; by default. It can be changed to any words (best less than 40 characters).  It is not immediately shown in the preview panel until ENTER key is pressed or other setup otions are selected.&#xa;&#xa;Setup Panel: setup details&#xa;     At beginning, only the first column of dropdown boxes are available.  They can be used to change the armor pieces/weapon/charm.  When any of them is selected, some additional boxes will appear on the right, depending on the number of jewel slots.  MHAG can prevent users from using too many jewels on one set.  When a charm is selected, users can also choose charm skills for the right skill classes.  If the charm allows two charm skills, MHAG can prevent users from choosing two same skills.&#xa;     Jewel menus only show the positive skill name and skill points. They also contain tool tips for jewel names and number of slots.&#xa;     All menu lists are sorted by alphatical order, so users can use keyboard to quickly locate the right stuffs.&#xa;&#xa;Preview Panel: preview the armor set.  It changes along with the setup.&#xa;&#xa;2. Viewer: &#xa;Code Book Panel: &#xa;     Load: load code book to Code List Panel.  It ONLY works for existing data file.  It is not recommended to frequently create new code book .(If you really want to create a new code book in MHAG, you can use output panel in the calcuatlor.)&#xa;     Save: save all the items in the code list to code book.  Warning! all the old code data in the orginal file will be lost.  MHAG automatically prevent user from saving code book if the code list is empty.&#xa;&#xa;Output Sets Panel: This is the batch mode of calculator.  It first save the code book, then output sets in text or html format.  It is desgined to generate a set book.  The html codes are designed to print one set on each page.&#xa;&#xa;Code List Panel: display code list. Mouse click or up/down key can be used to nevigate sets from the preview panel.&#xa;&#xa;Load to Calculator Button: load the selected set to the calculator, so they can be manually modified.&#xa;&#xa;Add from Calcutalor Button: append the set after the selected set, and move selection to the new set.  It won&apos;t delete any set.&#xa;&#xa;Remove/Cut Button: remove the selected set. meanwhile the last five set inforamtions are stored.&#xa;&#xa;Paste Button: append the DELETED set after the selected set, and move selection to the new set. It can only retrieve at most five deleted sets.&#xa;&#xa;Tips:&#xa;1). modify a set: select the set -&gt; load to calculator -&gt; modify it -&gt; add from calcualtor -&gt; select the old set (move up) -&gt; remove &#xa;2). swap two adjacent sets: select the upper set -&gt; remove -&gt; paste&#xa;3). other set rearrangement : combine remove/paste options. Warning! only 5 sets can be stored.&#xa;&#xa;3. Generator: (TBD)"/>
+                    <Property name="wrapStyleWord" type="boolean" value="true"/>
+                    <Property name="opaque" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
         </Container>
       </SubComponents>
     </Container>

@@ -570,7 +570,8 @@ public class Output {
 
 	public static void batchHeadTEXT(PrintStream outSave, int num)
 	{
-		outSave.printf(" Set : %d\n", num);
+		String line = String.format(" Set : %d", num);
+		outSave.println(line);
 	}
 
 	public static void batchHeadHTML(PrintStream outSave, int num)
