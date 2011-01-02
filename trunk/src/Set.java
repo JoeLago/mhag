@@ -1445,7 +1445,7 @@ public class Set {
 			if(i < numEffect)
 			{
 				Effect effect = mhagData.getEffect(effectID[i]);
-				effectName = new String("*"+
+				effectName = new String("* "+
 					effect.getEffectName());
 				if(skillPoint[i] > 0)
 					ifEff = 1;
