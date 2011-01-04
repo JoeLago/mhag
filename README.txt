@@ -27,11 +27,12 @@ History:
 v.1.0 beta 3, 01/03/2011:
    1.new feature : add new tool tips for armor pieces. tools tips contains skill names, skill points and slot information.
    2.Add cover page for HTML output.
-   3.bug: "save & export" button in the viewer doesn't save code book. fixed
-   4.bug: when loading code book in the viewer, MHAG claim code error in preview panel.a fixed
-   5.bug: debug info shows in console when using cut/paste function. deleted
-   6.README.txt and about text is revised.
-   7.error: skill data error found in gathering skill. fixed
+   3.Add code books for blademaster/gunner full set.
+   4.bug: "save & export" button in the viewer doesn't save code book. fixed
+   5.bug: when loading code book in the viewer, MHAG claim code error in preview panel.a fixed
+   6.bug: debug info shows in console when using cut/paste function. deleted
+   7.README.txt and about text is revised.
+   8.error: skill data error found in gathering skill. fixed
 v.1.0 beta 2, 01/01/2011:
    1.bug fixed: in HTML output, the first chracter is missing for the activated skill names
 v.1.0 beta 1, 01/01/2011: 
