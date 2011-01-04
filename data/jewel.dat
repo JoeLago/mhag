@@ -95,7 +95,7 @@ Enduring Jewel : L : 1 : LastingPwr : 2
 Sprinter Jewel : L : 1 : Stamina : 1 : Hunger : -1
 Marathon Jewel : H : 3 : Stamina : 4 : Hunger : -2
 Chamber Jewel : L : 1 : Loading : 1 : Reload Spd : -1
-Magazine  Jewel : H : 3 : Loading : 4 : Reload Spd : -2
+Magazine Jewel : H : 3 : Loading : 4 : Reload Spd : -2
 Sniper Jewel : L : 1 : Precision : 2
 Gobbler Jewel : L : 1 : Eating : 1 : Rec Level : -1
 Voracious Jewel : H : 3 : Eating : 4 : Rec Level : -2

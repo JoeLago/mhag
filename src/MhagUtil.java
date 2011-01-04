@@ -9,8 +9,10 @@ import java.util.Arrays;
 /**
  * @program MHAG
  * @ MhagUtil Class , static shared methods
- * @version 1.0
+ * @version 1.1
  * @author Tifa@mh3
+ *
+ * add static method to enumerate indeces
  */
 
 public class MhagUtil {
@@ -121,6 +123,21 @@ public class MhagUtil {
 	{
 	    return new PrintStream(new BufferedOutputStream(
 		    new FileOutputStream(new File(filename),true)));
+	}
+
+	// get index array from total index
+	static int[] getIndexArray(int indexTot, int[] dimension )
+	{
+		int len = dimension.length;
+		int[] indeces = new int[len];
+		Arrays.fill(indeces, 0);
+
+		for(int i = len -1; i > -1; i--)
+		{
+			indeces[i] = indexTot%dimension[i];
+			indexTot = indexTot / dimension[i];
+		}
+		return indeces;
 	}
 
 }

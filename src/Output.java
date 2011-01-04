@@ -22,16 +22,16 @@ public class Output {
 		outSave.println("<HTML>");
 		outSave.println("<HEAD>");
 		outSave.println("<TITLE> Monster Hunter Armor Generator</TITLE>");
-		outSave.println("<STYLE TYPE=\"text/css\">");
-		outSave.println("<!--");
-		outSave.println("BODY");
-		outSave.println("   {");
-		outSave.println("   background-color:lightyellow;");
-		outSave.println("   }");
-		outSave.println("-->");
-		outSave.println(" </STYLE>");
+		outSave.println("<style type=\"text/css\">");
+		outSave.println("body{background-color:lightyellow; margin:0;padding:0}");
+		outSave.println(" </style>");
 		outSave.println("</HEAD>");
 		outSave.println("<BODY>");
+		outSave.println("<table height=\"100%\" width=600 align=\"center\" vligh=\"top\" border=0>");
+		outSave.println("<tr><td><h1 align=\"center\">Monster Hunter Armor Book</h1>");
+		outSave.println("<p align=\"center\">geneated by MHAG v1.0</p></td></tr>");
+		outSave.println("<tr><td>&nbsp;</td></tr>");
+		outSave.println("</table>");
 	}
 
 	// close html
@@ -576,16 +576,8 @@ public class Output {
 
 	public static void batchHeadHTML(PrintStream outSave, int num)
 	{
-		if(num == 1)
-		{
-			outSave.printf("<p>Set %4d</p>\n", num);
-		}
-		else
-		{
-			outSave.printf("<p style=\"page-break-before:always\">" +
-				"Set %4d</p>\n", num);
-		}
-
+		outSave.printf("<h3 style=\"page-break-before:always\">" +
+			"Set %4d</h3>\n", num);
 	}
 
 

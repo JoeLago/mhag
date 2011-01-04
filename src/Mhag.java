@@ -224,6 +224,7 @@ public class Mhag
 		}
 		else if(method == 2)
 		{
+			Generator.generator(this, mhagData);
 		}
 	}
 
@@ -234,6 +235,8 @@ public class Mhag
 		MhagData mhagData = new MhagData();
 
 		mhag.init(mhagData, args);
+
+		//mhag.method = 2;  //tifa temp
 
 		mhag.proc(mhagData);
 
