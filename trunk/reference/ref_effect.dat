@@ -74,127 +74,124 @@
  73: Fishing Expert
  74: Flaming Aura
  75: Awaken
- 76: Gather -3
- 77: Gather -2
- 78: Gather -1
- 79: Gather +1
- 80: Gather +2
- 81: Gather +3
- 82: Scavenger
- 83: Gourmand
- 84: Guard -1
- 85: Guard +1
- 86: Guard +2
- 87: Guard Boost
- 88: Sharpness +1
- 89: Health -30
- 90: Health -10
- 91: Health +20
- 92: Health +50
- 93: Earplugs
- 94: HG Earplugs
- 95: Heat Surge (Hi)
- 96: Heat Surge (Lo)
- 97: Heat Cancel (Lo)
- 98: Heat Cancel (Hi)
- 99: Double Hunger
-100: Raise Hunger
-101: Halve Hunger
-102: Negate Hunger
-103: Ice Res -15
-104: Ice Res -10
-105: Ice Res +10
-106: Ice Res +15
-107: Ice Res +20
-108: Item Use Down
-109: Item Use Up
-110: Load Up
-111: Nearsight
-112: Farsight
-113: Mud/Snow
-114: NormalS Boost
-115: NormalS All Up
-116: Oxygen Down
-117: Oxygen Up
-118: Double Paralysis
-119: Negate Paralysis
-120: PelletS Lv1 Up
-121: PelletS All Up
-122: PelletS Boost
-123: Capture Guru
-124: PierceS Boost
-125: PierceS Lv1 Up
-126: PierceS All Up
-127: Double Poison
-128: Negate Posion
-129: Worrywart
-130: Adrenaline +1
-131: Adrenaline +2
-132: Steadiness -1
-133: Steadiness +1
-134: Steadiness +2
-135: Demonic Blessing
-136: Divine Blessing
-137: Detect
-138: Autotracker
-139: Punishing Draw
-140: Bonus Shot
-141: Recovery Down
-142: Recovery Up
-143: Recovery Spd -2
-144: Recovery Spd -1
-145: Recovery Spd +1
-146: Recovery Spd +2
-147: Recoil Down -3
-148: Recoil Down -2
-149: Recoil Down -1
-150: Recoil Down +1
-151: Recoil Down +2
-152: Recoil Down +3
-153: Reload Speed -3
-154: Reload Speed -2
-155: Reload Speed -1
-156: Reload Speed +1
-157: Reload Speed +2
-158: Reload Speed +3
-159: Taunt
-160: Sneak
-161: Slow Sharpening
-162: Speed Sharpening
-163: Blunt Edge
-164: Razor Sharp
-165: Double Sleep
-166: Negate Sleep
-167: Speed Gatherer
-168: Trap Master
-169: Short Sprinter
-170: Marathon Runner
-171: Status Atk Down
-172: Status Atk Up
-173: Double Stun
-174: Halve Stun
-175: Negate Stun
-176: Fortify
-177: Doggy Paddler
-178: Olympic Swimmer
-179: Thunder Res -15
-180: Thunder Res -10
-181: Thunder Res +10
-182: Thunder Res +15
-183: Thunder Res +20
-184: Capture Expert
-185: Pro Transporter
-186: Tremor-Proof
-187: Water Res -15
-188: Water Res -10
-189: Water Res +10
-190: Water Res +15
-191: Water Res +20
-192: Devil's Whim
-193: Spectre's Whim
-194: Spirit's Whim
-195: Divine Whim
-196: Wide-Range +1
-197: Wide-Range +2
-198: Windproof (Lo)
-199: Windproof (Hi)
+ 76: Gather -1
+ 77: Gather +1
+ 78: Gather +2
+ 79: Gourmand
+ 80: Scavenger
+ 81: Guard -1
+ 82: Guard +1
+ 83: Guard +2
+ 84: Guard Boost
+ 85: Sharpness +1
+ 86: Health -30
+ 87: Health -10
+ 88: Health +20
+ 89: Health +50
+ 90: Earplugs
+ 91: HG Earplugs
+ 92: Heat Surge (Hi)
+ 93: Heat Surge (Lo)
+ 94: Heat Cancel (Lo)
+ 95: Heat Cancel (Hi)
+ 96: Double Hunger
+ 97: Raise Hunger
+ 98: Halve Hunger
+ 99: Negate Hunger
+100: Ice Res -15
+101: Ice Res -10
+102: Ice Res +10
+103: Ice Res +15
+104: Ice Res +20
+105: Item Use Down
+106: Item Use Up
+107: Load Up
+108: Nearsight
+109: Farsight
+110: Mud/Snow
+111: NormalS Boost
+112: NormalS All Up
+113: Oxygen Down
+114: Oxygen Up
+115: Double Paralysis
+116: Negate Paralysis
+117: PelletS Lv1 Up
+118: PelletS All Up
+119: PelletS Boost
+120: Capture Guru
+121: PierceS Boost
+122: PierceS Lv1 Up
+123: PierceS All Up
+124: Double Poison
+125: Negate Posion
+126: Worrywart
+127: Adrenaline +1
+128: Adrenaline +2
+129: Steadiness -1
+130: Steadiness +1
+131: Steadiness +2
+132: Demonic Blessing
+133: Divine Blessing
+134: Detect
+135: Autotracker
+136: Punishing Draw
+137: Bonus Shot
+138: Recovery Down
+139: Recovery Up
+140: Recovery Spd -2
+141: Recovery Spd -1
+142: Recovery Spd +1
+143: Recovery Spd +2
+144: Recoil Down -3
+145: Recoil Down -2
+146: Recoil Down -1
+147: Recoil Down +1
+148: Recoil Down +2
+149: Recoil Down +3
+150: Reload Speed -3
+151: Reload Speed -2
+152: Reload Speed -1
+153: Reload Speed +1
+154: Reload Speed +2
+155: Reload Speed +3
+156: Taunt
+157: Sneak
+158: Slow Sharpening
+159: Speed Sharpening
+160: Blunt Edge
+161: Razor Sharp
+162: Double Sleep
+163: Negate Sleep
+164: Speed Gatherer
+165: Trap Master
+166: Short Sprinter
+167: Marathon Runner
+168: Status Atk Down
+169: Status Atk Up
+170: Double Stun
+171: Halve Stun
+172: Negate Stun
+173: Fortify
+174: Doggy Paddler
+175: Olympic Swimmer
+176: Thunder Res -15
+177: Thunder Res -10
+178: Thunder Res +10
+179: Thunder Res +15
+180: Thunder Res +20
+181: Capture Expert
+182: Pro Transporter
+183: Tremor-Proof
+184: Water Res -15
+185: Water Res -10
+186: Water Res +10
+187: Water Res +15
+188: Water Res +20
+189: Devil's Whim
+190: Spectre's Whim
+191: Spirit's Whim
+192: Divine Whim
+193: Wide-Range +1
+194: Wide-Range +2
+195: Windproof (Lo)
+196: Windproof (Hi)

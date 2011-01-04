@@ -1,8 +1,10 @@
 /**
  * @program MHAG
  * @ Armor Class
- * @version 1.0
+ * @version 1.1
  * @author Tifa@mh3
+ *
+ * v1.1 add methods to retrieve armorIDTot
  */
 
 import java.util.Arrays;
@@ -248,6 +250,12 @@ public class Armor {
 		}
 	}
 
+	//get armor Total ID
+	public static int[] getArmorIDTot() {return armorIDTot;}
+
+	//get armor Total ID for a part
+	public static int getArmorIDTot(int bodyPart) {return armorIDTot[bodyPart];}
+
 	// get armor ID
 	public int getArmorID() {return armorID;}
 
@@ -304,6 +312,39 @@ public class Armor {
 	{
 		return partFull.substring(index,index);
 	}
+
+	// get armor tips
+	public String getToolTips()
+	{
+		StringBuffer tips = new StringBuffer("");
+
+		int lastPos;
+		if(numSlot == 0)
+			lastPos = numSkill-1;
+		else
+			lastPos = numSkill;
+
+		for (int i = 0; i < numSkill; i++)
+		{
+			String name = getSkillName()[i];
+			if(name.equals("Torso Up"))
+			{
+				tips.append(name);
+				break;
+			}
+			String skillLine = String.format("%s %+d",
+				getSkillName()[i],getSkillPoint()[i]);
+			tips.append(skillLine);
+			if(i != lastPos) tips.append(", ");
+		}
+		for (int i = 0; i < numSlot; i++)
+		{
+			tips.append("O");
+		}
+
+		return tips.toString();
+	}
+
 
 	private int armorID = 0;  // Armor ID
 	private String armorName = "";   // Armor Piece Name
