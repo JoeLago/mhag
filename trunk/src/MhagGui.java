@@ -1624,7 +1624,6 @@ public class MhagGui extends javax.swing.JFrame {
 
 	    initGUISet();
 
-
 	    // start load
 	    jTextSetName.setText(aSet.getSetName());
 
@@ -1655,7 +1654,7 @@ public class MhagGui extends javax.swing.JFrame {
 
 	    set.setBlade(aSet.getBlade());
 	    set.setLowRank(aSet.getLowRank());
-	    set.setFemale(aSet.getLowRank());
+	    set.setFemale(aSet.getFemale());
 
 	    initSetup(aSet.getLowRank(), aSet.getBlade(), false);
 
@@ -1673,29 +1672,47 @@ public class MhagGui extends javax.swing.JFrame {
 	    {
 		    int armorID = aSet.getArmorID()[i];
 		    JComboBox bodyMenu = getArmorMenuObj(i);
-		    int[] list = mhagData.getArmorList(aSet.getLowRank(),
-			   aSet.getBlade(), false, i);
-		    for (int j = 0; j < list.length; j++)
+
+		    if(!aSet.getInUse(i))
 		    {
-			    if(list[j] == armorID)
+			    bodyMenu.setSelectedIndex(0);
+			    armorMenuAction(i);
+		    }
+		    else
+		    {
+			    int[] list = mhagData.getArmorList(aSet.getLowRank(),
+				   aSet.getBlade(), false, i);
+			    for (int j = 0; j < list.length; j++)
 			    {
-				    bodyMenu.setSelectedIndex(j);
-				    armorMenuAction(i);
-				    break;
+				    if(list[j] == armorID)
+				    {
+					    bodyMenu.setSelectedIndex(j);
+					    armorMenuAction(i);
+					    break;
+				    }
 			    }
 		    }
 	    }
 
 	    //charm menu
-	    int[] list2 = mhagData.getCharmList(aSet.getLowRank());
-
-	    for (int j = 0; j < list2.length; j++)
+	    int[] list2;
+	    if(!aSet.getInUse(6))
 	    {
-		    if(list2[j] == aSet.getCharmID())
+		    charmMenu.setSelectedIndex(0);
+		    charmMenuAction();
+	    }
+	    else
+	    {
+		    list2 = mhagData.getCharmList(aSet.getLowRank());
+
+		    for (int j = 0; j < list2.length; j++)
 		    {
-			    charmMenu.setSelectedIndex(j);
-			    charmMenuAction();
-			    break;
+			    if(list2[j] == aSet.getCharmID())
+			    {
+				    charmMenu.setSelectedIndex(j);
+				    charmMenuAction();
+				    break;
+			    }
 		    }
 	    }
 
@@ -1722,7 +1739,7 @@ public class MhagGui extends javax.swing.JFrame {
 		    }
 	    }
 
-	    //jewel skill
+	    //charm skill
 	    int nSkill = aSet.getNumCharmSkill();
 	    if(nSkill == 1)
 	    {
