@@ -1108,7 +1108,7 @@ public class MhagGui extends javax.swing.JFrame {
                 });
                 jScrollAbout.setViewportView(jEditorAbout);
 
-                jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/logo_bw_180.jpg"))); // NOI18N
+                jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/logo.png"))); // NOI18N
 
                 jScrollUsage.setBorder(javax.swing.BorderFactory.createTitledBorder("Usage"));
 
@@ -1130,7 +1130,7 @@ public class MhagGui extends javax.swing.JFrame {
                                                 .addContainerGap()
                                                 .addComponent(jScrollAbout, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(aboutLayout.createSequentialGroup()
-                                                .addGap(147, 147, 147)
+                                                .addGap(171, 171, 171)
                                                 .addComponent(jLabel2)))
                                 .addGap(18, 18, 18)
                                 .addComponent(jScrollUsage, javax.swing.GroupLayout.DEFAULT_SIZE, 740, Short.MAX_VALUE)
@@ -1143,7 +1143,7 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addGroup(aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(jScrollUsage, javax.swing.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE)
                                         .addGroup(aboutLayout.createSequentialGroup()
-                                                .addComponent(jScrollAbout, javax.swing.GroupLayout.DEFAULT_SIZE, 391, Short.MAX_VALUE)
+                                                .addComponent(jScrollAbout, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jLabel2)))
                                 .addContainerGap())
