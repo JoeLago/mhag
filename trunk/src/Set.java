@@ -1145,6 +1145,12 @@ public class Set {
 					bonus[id] = -10;
 				else if(effectName.contains("-15"))
 					bonus[id] = -15;
+            else if(effectName.contains("Down")) //p3
+               bonus[id] = -10;
+            else if(effectName.contains("Up (S)")) //p3
+               bonus[id] =  5;
+            else if(effectName.contains("Up (L)")) //p3
+               bonus[id] = 10;
 			}
 
 		}
