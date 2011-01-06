@@ -605,6 +605,7 @@ contains
          if(line(1:1).eq."#")cycle
          call read_armor_type(line,armor_type)
          i_5(armor_type)=i_5(armor_type)+1
+!         print *,trim(line)
 
          call read_armor_line(line,armor_list(i_5(armor_type), &
             armor_type))

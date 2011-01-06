@@ -3,15 +3,17 @@
 # ARCHICTECTURE = linux 
 #
 
-FCOMPLR   =  gfortran
+FCOMPLR   = ifort 
 #gfortran
 #ifort 
 FCFLAGS   =  -O2
 #FCFLAGS   =  -O2 -axT
 #FCFLAGS   = -p -g -warn all -check all
 
-BIN_DIR= ../bin
-OBJ_DIR= ../bin/obj
+BIN_DIR= .
+#./bin
+OBJ_DIR= .
+#../bin/obj
 
 OBJECT = \
 			$(OBJ_DIR)/mhag.o \
