@@ -16,7 +16,7 @@ Sleep : C : Double Sleep : -10 : Negate Sleep : 10
 Stun : D : Double Stun : -10 : Halve Stun : 10 : Negate Stun : 15
 Mud/Snow : C : Mud/Snow : 10
 Tremor Res : C : Tremor-Proof : 10
-Wind Res : A : Windproof (Lo) : 10 : Windproof (Hi) : 15
+Wind Res : B : Windproof : 10 : High Windproof : 15
 Antiseptic : C : Antiseptic : 10
 Anti-Theft : C : Anti-Theft : 10
 Hearing : A : Earplugs : 10 : HG Earplugs : 15
@@ -58,9 +58,9 @@ Expert : C : Critical Eye -3 : -20 : Critical Eye -2 : -15 : Critical Eye -1 : -
 Status : B : Status Atk Down : -10 : Status Atk +1 : 10 : Status Atk +2 : 15
 Blow : A : Weakness Blow : 10
 Bash : A : Destructor : 10
-Loading : B : Load Up : 15
+Loading : A : Load Up : 15
 FastCharge : A : Distraction : -10 : Focus : 10
-Earnest : B : Power Release +1 : 10 : Power Release +2: 15
+Earnest : A : Power Release +1 : 10 : Power Release +2: 15
 KO : B : KO : 10
 Exhaust : B : Stamina Taker : 10
 Potential : B : Worrywart : -10 : Adrenaline +1 : 10 : Adrenaline +2 : 15
@@ -88,7 +88,7 @@ Heat Res : C : Heat Surge : -10 : Heat Cancel : 10
 Cold Res : C : Cold Surge : -10 : Cold Cancel : 10
 Rec Level : B : Recovery Down : -10 : Recovery Up : 10
 Rec Speed : D : Recovery Spd -2 : -15 : Recovery Spd -1 : -10 : Recovery Spd +1 : 10 : Recovery Spd +2 : 15
-StaminaRec : B : Stamina Rec : -10 : Stamina Rec : 10
+StaminaRec : B : Stamina Rec Down : -10 : Stamina Rec Up : 10
 Wide-Range : D : Wide-Range +1 : 10 : Wide-Range +2 : 20
 LastingPwr : C : Item Use Down : -10 : Item Use Up : 10
 SpeedSetup : C : Trap Master : 10
