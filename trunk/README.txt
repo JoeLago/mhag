@@ -1,5 +1,5 @@
 MHAG: Monster Hunter Armor Generator 
-v.1.0 beta 3
+v.1.0 beta 4
 Author : Tifa@mh3
 MHAG Project: code.google.com/mhag
 Proposed MHAG code/output wiki : mhag.wetpaint.com
@@ -25,9 +25,10 @@ MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is d
 
 History:
 v.1.0 beta 4, 01/06/2011:
-   1.new feature : add support to mhp3rd; a simple version of charm system  
-   2.bug: "load to calcualator" load error for low rank set or sets with empty part(s). fixed
-   3.add new MHAG logo.
+   1.new feature : add support to mhp3rd (experimental); a simple version of charm system  
+   2.add mhp3rd data, tranlation is partly based on www.mhf3.com. include code book for full sets.
+   3.bug: "load to calcualator" load error for low rank set or sets with empty part(s). fixed
+   4.add new MHAG logo.
 v.1.0 beta 3, 01/03/2011:
    1.new feature : add new tool tips for armor pieces. tools tips contains skill names, skill points and slot information.
    2.Add cover page for HTML output.
@@ -102,7 +103,16 @@ Tips:
 2). swap two adjacent sets: select the upper set -> remove -> paste
 3). Set rearrangement : combine remove/paste options. Warning! only 5 sets can be stored.
 4). Don't FORGET to SAVE code book before exiting the program!
-
 3. Generator: (TBD)
 
+Known Issues:
+1). Current support for MHP3.(experimental)
+* Translation : skill/jewels have same name translation as those in www.mhf3.com.  Check the site for the original japanese name.
+* armor pieces : all armor sets are available to all players except for one female-only set.(Nadeshiko/Kikyo set) MHAG doesn't exclude it in male mode.
+* charm: current version is based on "MHP3rd charm formula and information" at google doc made by Holywoodchuck.  But I only used 4 Charm classes, because, imo, the charm system is too complicated to be true.  Let me know if you find problems.
+* Skill class: I changed 4 skills, based my knowledge of MH3.  
+  Wind Res : B;  Earnest : A; Loading : A; Eating : B
 
+
+Acknowledgements
+Many thanks to Capcom unity, Bobo's www.mhf3.com and holywoodchunk's charm information.
