@@ -1,0 +1,11 @@
+#labels Featured,bugs
+Report MHAG bugs
+
+= Introduction =
+
+This Wiki page is used to report bugs. Please make comments on this page if you find a bug. I will add them on this page, and solve the problem as soon as possible.
+
+
+= Details =
+
+TBD
