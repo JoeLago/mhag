@@ -27,7 +27,7 @@
     <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
     <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
-    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="2"/>
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
@@ -72,48 +72,42 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="12" pref="12" max="12" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="output" alignment="0" max="32767" attributes="1"/>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Component id="setup" pref="622" max="32767" attributes="1"/>
+                          <Component id="output" max="32767" attributes="1"/>
+                          <Group type="102" attributes="0">
                               <Component id="rank" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Component id="hunterType" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="sex" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="setNamePanel" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="setup" alignment="0" pref="622" max="32767" attributes="1"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="6" pref="6" max="6" attributes="0"/>
                       <Component id="jScrollPreview" min="-2" pref="586" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jScrollPreview" alignment="0" max="32767" attributes="1"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="output" min="-2" pref="57" max="-2" attributes="1"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="setNamePanel" min="-2" max="-2" attributes="1"/>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="sex" alignment="0" min="0" max="32767" attributes="1"/>
-                                      <Component id="hunterType" alignment="0" min="0" max="32767" attributes="1"/>
-                                      <Component id="rank" alignment="0" max="32767" attributes="1"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="setup" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="output" alignment="0" min="-2" pref="57" max="-2" attributes="1"/>
+                      <EmptySpace min="6" pref="6" max="6" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="rank" alignment="0" min="-2" max="-2" attributes="1"/>
+                          <Component id="hunterType" alignment="0" min="-2" max="-2" attributes="1"/>
+                          <Component id="sex" alignment="0" min="-2" max="-2" attributes="1"/>
+                          <Component id="setNamePanel" min="-2" max="-2" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="setup" pref="378" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
+                  <Component id="jScrollPreview" min="-2" pref="536" max="-2" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -513,7 +507,7 @@
                               <Component id="charmSkill1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               <Component id="charmSkill2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="25" max="32767" attributes="0"/>
+                          <EmptySpace pref="13" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1291,7 +1285,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jTextSetName" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="13" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>

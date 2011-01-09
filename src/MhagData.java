@@ -151,7 +151,6 @@ public class MhagData {
 	// pre process Armor list (skill id from skill name )
 	public void preProcessArmorList()
 	{
-		String armorName = "";
 		for (int i = 0; i < Armor.getArmorMax(); i++)
 		{
 			for (int j = 0; j < 5; j++)
@@ -563,7 +562,7 @@ public class MhagData {
 
 				for(int k = 1; k < 5; k++)
 				{
-					for(int jk =0; jk < armor.armorIDTot[k]; jk++)
+					for(int jk =0; jk < Armor.armorIDTot[k]; jk++)
 					{
 						if(checked[k][jk])continue;
 						Armor armor2 = armorList[k][jk];

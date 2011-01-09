@@ -24,6 +24,8 @@ MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is d
      I will also make source code packages for stable versions. (v1.0, v2.0)
 
 History:
+v.1.0 beta 5, TBD:
+   1.new feature : add backward support to JAVA 1.5 version
 v.1.0 beta 4, 01/06/2011:
    1.new feature : add support to mhp3rd (experimental); a simple version of charm system  
    2.add mhp3rd data, tranlation is partly based on www.mhf3.com. include code book for full sets.

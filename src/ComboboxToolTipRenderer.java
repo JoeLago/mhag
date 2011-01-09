@@ -11,9 +11,10 @@ import javax.swing.JList;
  * @version 1.0
  * @author Tifa@mh3
  */
+@SuppressWarnings("serial")
 public class ComboboxToolTipRenderer extends DefaultListCellRenderer
 {
-	ArrayList tooltips;
+	ArrayList<String> tooltips;
 
 	@Override
 	public Component getListCellRendererComponent(JList list, Object value,
@@ -25,12 +26,12 @@ public class ComboboxToolTipRenderer extends DefaultListCellRenderer
 
 		if (-1 < index && null != value && null != tooltips)
 		{
-			list.setToolTipText((String) tooltips.get(index));
+			list.setToolTipText(tooltips.get(index));
                 }
         return comp;
 	}
 
-    public void setTooltips(ArrayList tooltips)
+    public void setTooltips(ArrayList<String> tooltips)
     {
         this.tooltips = tooltips;
     }

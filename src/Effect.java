@@ -31,6 +31,12 @@ public class Effect {
 	// get effect Trigger
 	public int getEffectTrigger() {return effectTrigger;}
 
+	//get skill ID
+	public int getSkillID() {return skillID;}
+
+	//get skill Name
+	public String getSkillName() {return skillName;}
+
 	private int effectID = 0;  // Effect ID
 	private String effectName = "";   // Effect Name
 	private int skillID = 0;  // SKill ID

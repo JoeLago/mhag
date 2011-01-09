@@ -235,7 +235,6 @@ public class Set {
 
 		String errorLine = "    Error in Input File, Please Check!";
 		Scanner in = new Scanner(new File(file));
-		int num = 0;
 		int[] values = new int[3];
 		Arrays.fill(values, 0);
 
@@ -1027,7 +1026,7 @@ public class Set {
 	}
 
 	// sort skills based on points & effects, only used for outputs
-	public void sortSkill(Mhag mhag, MhagData mhagData)
+	public void sortSkill()
 	{
 		int[] index = new int[numSkill];
 		index =	MhagUtil.sortIndex(numSkill, skillPoint);
@@ -1297,7 +1296,7 @@ public class Set {
 
 	public void save(Mhag mhag, MhagData mhagData, PrintStream outSave)
 	{
-		sortSkill(mhag, mhagData);  //sort Skill for outputs
+		sortSkill();  //sort Skill for outputs
 
 		if(mhag.getOutFormat() == 0)
 			MhagUtil.logLine(mhag, "Save Armor Set in TEXT Format");
@@ -1366,7 +1365,6 @@ public class Set {
 
 		// check possible skill bonus (def up/down, element resist)
 		int[] bonus = checkSkillBonus(mhagData);
-		boolean ifBonus = ifSkillBonus(bonus);
 		String bonusTitle = "";
 
 		// defense line

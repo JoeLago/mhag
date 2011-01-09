@@ -342,7 +342,7 @@ public class Output {
 		if(outForm == 0)
 			resistTEXT(outSave, resistInd, title, values, res, bonusTitle);
 		else
-			resistHTML(outSave, resistInd, title, values, res, bonusTitle);
+			resistHTML(outSave, resistInd, values, res);
 	}
 
 	public static void resistTEXT(PrintStream outSave, int resistInd, String title,
@@ -357,8 +357,8 @@ public class Output {
 			outSave.println(splitter2);
 	}
 
-	public static void resistHTML(PrintStream outSave, int resistInd, String title,
-		int[] value, int res, String bonusTitle)
+	public static void resistHTML(PrintStream outSave, int resistInd,
+		int[] value, int res)
 	{
 		if(resistInd == 0)  // fire
 		{
