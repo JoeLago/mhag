@@ -15,12 +15,15 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="MHAG: Monster Hunter Armor Generator   Ver 1.0 beta"/>
+    <Property name="title" type="java.lang.String" value="MHAG: Monster Hunter Armor Generator   Ver 1.0"/>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
   </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowClosing"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -1697,19 +1700,19 @@
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollUsage" pref="740" max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jPanel1" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jScrollUsage" alignment="1" pref="511" max="32767" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
                               <Component id="jScrollAbout" pref="377" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
@@ -1739,7 +1742,7 @@
                   <Properties>
                     <Property name="contentType" type="java.lang.String" value="text/html"/>
                     <Property name="editable" type="boolean" value="false"/>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;&#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;h2 align = &quot;center&quot;&gt;&#xa;      MHAG :&#xa;    &lt;/h2&gt;&#xa;  &lt;h2 align = &quot;center&quot;&gt;&#xa;       Monster Hunter Armor Generator&#xa;    &lt;/h2&gt;&#xa; &lt;p align = &quot;center&quot;&gt;v1.0 Beta&lt;/p&gt;&#xa; &lt;p align = &quot;center&quot;&gt;Release Date: 01/01/2011&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;MHAG Project: &lt;a href=&quot;http://code.google.com/p/mhag/&quot;&gt;code.google.com/p/mhag&lt;/a&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Proposed MHAG Set Database: &lt;a href=&quot;http://mhag.wetpaint.com&quot;&gt;mhag.wetpaint.com&lt;/p&gt;&#xa;&lt;p&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;by Tifa@mh3&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Unity Member: &lt;a href=&quot;http://www.capcom-unity.com/tifa@mh3&quot;&gt;www.capcom-unity.com/tifa@mh3&lt;/a&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Youtube Channel: &lt;a href=&quot;http://www.youtube.com/mh3journey&quot;&gt;www.youtube.com/mh3journey&lt;/a&gt;&lt;/p&gt;&#xa;&#xa;  &lt;/body&gt;&#xa;&#xa;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;&#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;h2 align = &quot;center&quot;&gt;&#xa;      MHAG :&#xa;    &lt;/h2&gt;&#xa;  &lt;h2 align = &quot;center&quot;&gt;&#xa;       Monster Hunter Armor Generator&#xa;    &lt;/h2&gt;&#xa; &lt;p align = &quot;center&quot;&gt;v1.0 Final Release&lt;/p&gt;&#xa; &lt;p align = &quot;center&quot;&gt;Release Date: 01/10/2011&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;MHAG Project: &lt;a href=&quot;http://code.google.com/p/mhag/&quot;&gt;code.google.com/p/mhag&lt;/a&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Proposed MHAG Set Database: &lt;a href=&quot;http://mhag.wetpaint.com&quot;&gt;mhag.wetpaint.com&lt;/p&gt;&#xa;&lt;p&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;by Tifa@mh3&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Unity Member: &lt;a href=&quot;http://www.capcom-unity.com/tifa@mh3&quot;&gt;www.capcom-unity.com/tifa@mh3&lt;/a&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Youtube Channel: &lt;a href=&quot;http://www.youtube.com/mh3journey&quot;&gt;www.youtube.com/mh3journey&lt;/a&gt;&lt;/p&gt;&#xa;&#xa;  &lt;/body&gt;&#xa;&#xa;"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
                   <Events>
@@ -1755,30 +1758,97 @@
                 </Property>
               </Properties>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollUsage">
+            <Container class="javax.swing.JPanel" name="jPanel1">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Usage"/>
+                    <TitledBorder title="Help"/>
                   </Border>
                 </Property>
               </Properties>
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
 
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jScrollHelpList" min="-2" pref="173" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jScrollHelpText" pref="525" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jScrollHelpText" alignment="1" pref="472" max="32767" attributes="0"/>
+                              <Component id="jScrollHelpList" alignment="1" pref="472" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextUsage">
+                <Container class="javax.swing.JScrollPane" name="jScrollHelpList">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JList" name="helpList">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                            <EtchetBorder/>
+                          </Border>
+                        </Property>
+                        <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                        <Property name="opaque" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="valueChanged" listener="javax.swing.event.ListSelectionListener" parameters="javax.swing.event.ListSelectionEvent" handler="helpListValueChanged"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JScrollPane" name="jScrollHelpText">
                   <Properties>
-                    <Property name="columns" type="int" value="20"/>
-                    <Property name="lineWrap" type="boolean" value="true"/>
-                    <Property name="rows" type="int" value="5"/>
-                    <Property name="text" type="java.lang.String" value="There are three components: a calculator, a viewer and a generator.&#xa;1. Calculator:&#xa;Output Panel: three output options (text/html/code)&#xa;     TEXT :(.txt) plain text format, same as the outputs in preview panel.&#xa;     HTML :(.html) tables in HTML format; it can be viewed in a browser.  MHAG HTML codes were tweaked in Google Chrome, and it also works nicely in Mozilla Firefox and Safari, but not Internet Explorer.&#xa;     CODE :(.code) set code used to save set information for future use.&#xa;     Data File: file name of save data.  If file name doesn&apos;t contain file type extension, MHAG automatically adds it.&#xa;     Save Button: it APPENDs set to the save data.  If save file does not exist, a NEW file will be created.&#xa;&#xa;Rank/Hunter Type/Gender Options:&#xa;     Rank : low/high Rank; it resets all setup menus when rank option is swtiched.  The low rank option limits setup to low rank stuffs.&#xa;     Hunter Type : blademaster/gunner; it resets all setup menus when hunter type option is swtiched.&#xa;     Gender : male/female; it only affects the armor pieces that are only for male/female.  The corresponding armor name and its position in the menu wil be changed (not reset) when gender is switched.&#xa;     Set Name : armor set name; &quot;Unnamed Set&quot; by default. It can be changed to any words (best less than 40 characters).  It is not immediately shown in the preview panel until ENTER key is pressed or other setup otions are selected afterward.&#xa;&#xa;Setup Panel: setup details&#xa;     At beginning, only the first column of drop-down boxes are available.  They can be used to change the armor pieces/weapon slot/charm.  Each armor piece option has tool tip for skill names, skill points and number of slots.  Move mouse over the armor options (but not click on it) to show the tips.&#xa;     When a armor piece, weapon slot or charm is selected, some additional boxes will appear on the right, depending on the number of jewel slots.  MHAG prevents users from gemming too many jewels.  When a charm is selected, users can also choose charm skills from the right skill classes.  If the charm allows two charm skills, MHAG prevents users from choosing two same skills.&#xa;     To make it concise and save space, jewel menus only show the positive skill name and skill point.  But meanwhile, each jewel option also has tool tip for jewel names and number of slots.  Put mouse over a jewel option to show the tip.&#xa;     All menu lists are sorted by alphatical order, so users can use keyboard to quickly locate the right stuffs.&#xa;&#xa;Preview Panel: preview the armor set, when changing armor setup.  Use the vertical scroll bar if the armor set involves a lot of armor skills.&#xa;&#xa;2. Viewer: &#xa;Code Book Panel: &#xa;     Load: load code book to Code List Panel.  It ONLY works for existing data file.  I didn&apos;t design a &quot;New Book&quot; button, because I don&apos;t want to encourage people to create a lot of  new code book .(If you really want to create one in MHAG, you can use output panel in the calcuatlor.)&#xa;     Save: it saves all the items in the code list to code book.  Warning! Mhag overwrites all the old code data. MHAG prevents user from saving code book if the code list is empty.&#xa;&#xa;Export Sets Panel: This is the batch calculator.  It first saves the code book, then exports sets in text or html format.  It can be used to generate an easy-to-read set book, so users can print the sets or further convert it to PDF format.(print/PDF functions are not included)   The html codes are designed to print one set per page.&#xa;&#xa;Code List Panel: displays code list; Use mouse click or up/down key to nevigate sets from the (2nd) preview panel.&#xa;&#xa;Load to Calculator Button: loads the selected set to the calculator, so they can be manually modified there.&#xa;&#xa;Add from Calcutalor Button: appends the set after the selected set, and moves selection to the new set.  It does not delete any set.&#xa;&#xa;Remove/Cut Button: removes the selected set, and moves selection to the next set.  The last five removed sets can be retrieved later.&#xa;&#xa;Paste Button: appends the DELETED set after the selected set, and moves selection to the new set. It can only retrieve at most five deleted sets.&#xa;&#xa;Tips:&#xa;1). modify a set: select the set -&gt; load to calculator -&gt; modify it -&gt; add from calcualtor -&gt; select the old set (move up) -&gt; remove &#xa;2). swap two adjacent sets: select the upper set -&gt; remove -&gt; paste&#xa;3). Set rearrangement : combine remove/paste options. Warning! only 5 sets can be stored.&#xa;4). Don&apos;t FORGET to SAVE code book before exiting the program!&#xa;&#xa;3. Generator: (TBD)"/>
-                    <Property name="wrapStyleWord" type="boolean" value="true"/>
-                    <Property name="opaque" type="boolean" value="false"/>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                        <EtchetBorder/>
+                      </Border>
+                    </Property>
                   </Properties>
-                </Component>
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="helpText">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="DejaVu Sans" size="14" style="0"/>
+                        </Property>
+                        <Property name="lineWrap" type="boolean" value="true"/>
+                        <Property name="rows" type="int" value="5"/>
+                        <Property name="wrapStyleWord" type="boolean" value="true"/>
+                        <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                          <Insets value="[6, 6, 6, 6]"/>
+                        </Property>
+                        <Property name="opaque" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
               </SubComponents>
             </Container>
           </SubComponents>
