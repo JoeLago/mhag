@@ -132,21 +132,29 @@ public class MhagGui extends javax.swing.JFrame {
                 jScrollAbout = new javax.swing.JScrollPane();
                 jEditorAbout = new javax.swing.JEditorPane();
                 jLabel2 = new javax.swing.JLabel();
-                jScrollUsage = new javax.swing.JScrollPane();
-                jTextUsage = new javax.swing.JTextArea();
+                jPanel1 = new javax.swing.JPanel();
+                jScrollHelpList = new javax.swing.JScrollPane();
+                helpList = new javax.swing.JList();
+                jScrollHelpText = new javax.swing.JScrollPane();
+                helpText = new javax.swing.JTextArea();
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-                setTitle("MHAG: Monster Hunter Armor Generator   Ver 1.0 beta");
+                setTitle("MHAG: Monster Hunter Armor Generator   Ver 1.0");
                 setResizable(false);
+                addWindowListener(new java.awt.event.WindowAdapter() {
+                        public void windowClosing(java.awt.event.WindowEvent evt) {
+                                formWindowClosing(evt);
+                        }
+                });
 
-                jTabbedPane1.setFont(new java.awt.Font("Monospaced", 1, 14));
+                jTabbedPane1.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
                 jTabbedPane1.setOpaque(true);
 
                 rank.setBorder(javax.swing.BorderFactory.createTitledBorder("Rank"));
                 rank.setToolTipText("Change rank type, reset set");
 
                 rankGroup.add(lowRank);
-                lowRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+                lowRank.setFont(new java.awt.Font("Monospaced", 0, 12));
                 lowRank.setText("Low Rank");
                 lowRank.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -892,7 +900,7 @@ public class MhagGui extends javax.swing.JFrame {
                 codeBookName.setFont(new java.awt.Font("Monospaced", 0, 12));
                 codeBookName.setText("MyData");
 
-                codeBookLoad.setFont(new java.awt.Font("Monospaced", 1, 12));
+                codeBookLoad.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
                 codeBookLoad.setText("Load");
                 codeBookLoad.setToolTipText("Load code book");
                 codeBookLoad.addActionListener(new java.awt.event.ActionListener() {
@@ -901,7 +909,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                codeBookSave.setFont(new java.awt.Font("Monospaced", 1, 12));
+                codeBookSave.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
                 codeBookSave.setText("Save");
                 codeBookSave.setToolTipText("Save code  book, overwrite the old file");
                 codeBookSave.addActionListener(new java.awt.event.ActionListener() {
@@ -1007,7 +1015,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                getSetInteract.setFont(new java.awt.Font("Monospaced", 1, 12));
+                getSetInteract.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
                 getSetInteract.setText("Add from Calculator");
                 getSetInteract.setToolTipText("Add the set below");
                 getSetInteract.addActionListener(new java.awt.event.ActionListener() {
@@ -1097,7 +1105,7 @@ public class MhagGui extends javax.swing.JFrame {
 
                 jEditorAbout.setContentType("text/html");
                 jEditorAbout.setEditable(false);
-                jEditorAbout.setText("<html>\n  <head>\n\n  </head>\n  <body>\n    <h2 align = \"center\">\n      MHAG :\n    </h2>\n  <h2 align = \"center\">\n       Monster Hunter Armor Generator\n    </h2>\n <p align = \"center\">v1.0 Beta</p>\n <p align = \"center\">Release Date: 01/01/2011</p>\n<p align = \"center\">MHAG Project: <a href=\"http://code.google.com/p/mhag/\">code.google.com/p/mhag</a></p>\n<p align = \"center\">Proposed MHAG Set Database: <a href=\"http://mhag.wetpaint.com\">mhag.wetpaint.com</p>\n<p></p>\n<p align = \"center\">by Tifa@mh3</p>\n<p align = \"center\">Unity Member: <a href=\"http://www.capcom-unity.com/tifa@mh3\">www.capcom-unity.com/tifa@mh3</a></p>\n<p align = \"center\">Youtube Channel: <a href=\"http://www.youtube.com/mh3journey\">www.youtube.com/mh3journey</a></p>\n\n  </body>\n\n");
+                jEditorAbout.setText("<html>\n  <head>\n\n  </head>\n  <body>\n    <h2 align = \"center\">\n      MHAG :\n    </h2>\n  <h2 align = \"center\">\n       Monster Hunter Armor Generator\n    </h2>\n <p align = \"center\">v1.0 Final Release</p>\n <p align = \"center\">Release Date: 01/10/2011</p>\n<p align = \"center\">MHAG Project: <a href=\"http://code.google.com/p/mhag/\">code.google.com/p/mhag</a></p>\n<p align = \"center\">Proposed MHAG Set Database: <a href=\"http://mhag.wetpaint.com\">mhag.wetpaint.com</p>\n<p></p>\n<p align = \"center\">by Tifa@mh3</p>\n<p align = \"center\">Unity Member: <a href=\"http://www.capcom-unity.com/tifa@mh3\">www.capcom-unity.com/tifa@mh3</a></p>\n<p align = \"center\">Youtube Channel: <a href=\"http://www.youtube.com/mh3journey\">www.youtube.com/mh3journey</a></p>\n\n  </body>\n\n");
                 jEditorAbout.setOpaque(false);
                 jEditorAbout.addHyperlinkListener(new javax.swing.event.HyperlinkListener() {
                         public void hyperlinkUpdate(javax.swing.event.HyperlinkEvent evt) {
@@ -1108,15 +1116,48 @@ public class MhagGui extends javax.swing.JFrame {
 
                 jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/logo.png"))); // NOI18N
 
-                jScrollUsage.setBorder(javax.swing.BorderFactory.createTitledBorder("Usage"));
+                jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Help"));
 
-                jTextUsage.setColumns(20);
-                jTextUsage.setLineWrap(true);
-                jTextUsage.setRows(5);
-                jTextUsage.setText("There are three components: a calculator, a viewer and a generator.\n1. Calculator:\nOutput Panel: three output options (text/html/code)\n     TEXT :(.txt) plain text format, same as the outputs in preview panel.\n     HTML :(.html) tables in HTML format; it can be viewed in a browser.  MHAG HTML codes were tweaked in Google Chrome, and it also works nicely in Mozilla Firefox and Safari, but not Internet Explorer.\n     CODE :(.code) set code used to save set information for future use.\n     Data File: file name of save data.  If file name doesn't contain file type extension, MHAG automatically adds it.\n     Save Button: it APPENDs set to the save data.  If save file does not exist, a NEW file will be created.\n\nRank/Hunter Type/Gender Options:\n     Rank : low/high Rank; it resets all setup menus when rank option is swtiched.  The low rank option limits setup to low rank stuffs.\n     Hunter Type : blademaster/gunner; it resets all setup menus when hunter type option is swtiched.\n     Gender : male/female; it only affects the armor pieces that are only for male/female.  The corresponding armor name and its position in the menu wil be changed (not reset) when gender is switched.\n     Set Name : armor set name; \"Unnamed Set\" by default. It can be changed to any words (best less than 40 characters).  It is not immediately shown in the preview panel until ENTER key is pressed or other setup otions are selected afterward.\n\nSetup Panel: setup details\n     At beginning, only the first column of drop-down boxes are available.  They can be used to change the armor pieces/weapon slot/charm.  Each armor piece option has tool tip for skill names, skill points and number of slots.  Move mouse over the armor options (but not click on it) to show the tips.\n     When a armor piece, weapon slot or charm is selected, some additional boxes will appear on the right, depending on the number of jewel slots.  MHAG prevents users from gemming too many jewels.  When a charm is selected, users can also choose charm skills from the right skill classes.  If the charm allows two charm skills, MHAG prevents users from choosing two same skills.\n     To make it concise and save space, jewel menus only show the positive skill name and skill point.  But meanwhile, each jewel option also has tool tip for jewel names and number of slots.  Put mouse over a jewel option to show the tip.\n     All menu lists are sorted by alphatical order, so users can use keyboard to quickly locate the right stuffs.\n\nPreview Panel: preview the armor set, when changing armor setup.  Use the vertical scroll bar if the armor set involves a lot of armor skills.\n\n2. Viewer: \nCode Book Panel: \n     Load: load code book to Code List Panel.  It ONLY works for existing data file.  I didn't design a \"New Book\" button, because I don't want to encourage people to create a lot of  new code book .(If you really want to create one in MHAG, you can use output panel in the calcuatlor.)\n     Save: it saves all the items in the code list to code book.  Warning! Mhag overwrites all the old code data. MHAG prevents user from saving code book if the code list is empty.\n\nExport Sets Panel: This is the batch calculator.  It first saves the code book, then exports sets in text or html format.  It can be used to generate an easy-to-read set book, so users can print the sets or further convert it to PDF format.(print/PDF functions are not included)   The html codes are designed to print one set per page.\n\nCode List Panel: displays code list; Use mouse click or up/down key to nevigate sets from the (2nd) preview panel.\n\nLoad to Calculator Button: loads the selected set to the calculator, so they can be manually modified there.\n\nAdd from Calcutalor Button: appends the set after the selected set, and moves selection to the new set.  It does not delete any set.\n\nRemove/Cut Button: removes the selected set, and moves selection to the next set.  The last five removed sets can be retrieved later.\n\nPaste Button: appends the DELETED set after the selected set, and moves selection to the new set. It can only retrieve at most five deleted sets.\n\nTips:\n1). modify a set: select the set -> load to calculator -> modify it -> add from calcualtor -> select the old set (move up) -> remove \n2). swap two adjacent sets: select the upper set -> remove -> paste\n3). Set rearrangement : combine remove/paste options. Warning! only 5 sets can be stored.\n4). Don't FORGET to SAVE code book before exiting the program!\n\n3. Generator: (TBD)");
-                jTextUsage.setWrapStyleWord(true);
-                jTextUsage.setOpaque(false);
-                jScrollUsage.setViewportView(jTextUsage);
+                helpList.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+                helpList.setOpaque(false);
+                helpList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+                        public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                                helpListValueChanged(evt);
+                        }
+                });
+                jScrollHelpList.setViewportView(helpList);
+
+                jScrollHelpText.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+                helpText.setColumns(20);
+                helpText.setEditable(false);
+                helpText.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
+                helpText.setLineWrap(true);
+                helpText.setRows(5);
+                helpText.setWrapStyleWord(true);
+                helpText.setMargin(new java.awt.Insets(6, 6, 6, 6));
+                helpText.setOpaque(false);
+                jScrollHelpText.setViewportView(helpText);
+
+                org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
+                jPanel1.setLayout(jPanel1Layout);
+                jPanel1Layout.setHorizontalGroup(
+                        jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .add(jScrollHelpList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 173, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                .add(jScrollHelpText, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 525, Short.MAX_VALUE)
+                                .addContainerGap())
+                );
+                jPanel1Layout.setVerticalGroup(
+                        jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                                        .add(jScrollHelpText, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 472, Short.MAX_VALUE)
+                                        .add(jScrollHelpList, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 472, Short.MAX_VALUE))
+                                .addContainerGap())
+                );
 
                 org.jdesktop.layout.GroupLayout aboutLayout = new org.jdesktop.layout.GroupLayout(about);
                 about.setLayout(aboutLayout);
@@ -1130,16 +1171,16 @@ public class MhagGui extends javax.swing.JFrame {
                                         .add(aboutLayout.createSequentialGroup()
                                                 .add(171, 171, 171)
                                                 .add(jLabel2)))
-                                .add(18, 18, 18)
-                                .add(jScrollUsage, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 740, Short.MAX_VALUE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addContainerGap())
                 );
                 aboutLayout.setVerticalGroup(
                         aboutLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                        .add(org.jdesktop.layout.GroupLayout.TRAILING, aboutLayout.createSequentialGroup()
+                        .add(aboutLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .add(aboutLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                                        .add(jScrollUsage, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE)
+                                .add(aboutLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .add(aboutLayout.createSequentialGroup()
                                                 .add(jScrollAbout, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE)
                                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -1350,6 +1391,11 @@ public class MhagGui extends javax.swing.JFrame {
     private void saveOutputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveOutputActionPerformed
 	    try {
 		    appendData();
+		    if(!fileNameData.equals(jTextData.getText())) //name changed,save pref
+		    {
+			    fileNameData = jTextData.getText();
+			    savePref();
+		    }
 	    } catch (FileNotFoundException ex) {
 		    Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
 	    }
@@ -1387,11 +1433,29 @@ public class MhagGui extends javax.swing.JFrame {
 
 	    codeIn.close();
 	    codeBookInUse = true;
+	    jTextPreview2.setText("");  //clear Preview when loading codebook
+
+	    if(!fileNameCodeBook.equals(codeBookName.getText())) //name changed,save pref
+		    try {
+		        fileNameCodeBook = codeBookName.getText();
+			savePref();
+		} catch (FileNotFoundException ex) {
+			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
+		}
+
     }//GEN-LAST:event_codeBookLoadActionPerformed
 
     private void codeBookSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codeBookSaveActionPerformed
 		try {
 			codeBookSave();
+			codeBookChanged = false;  // reset book change status
+
+		        if(!fileNameCodeBook.equals(codeBookName.getText())) //name changed,save pref
+			{
+				fileNameCodeBook = codeBookName.getText();
+				savePref();
+			}
+
 		} catch (FileNotFoundException ex) {
 			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
 		}
@@ -1434,6 +1498,13 @@ public class MhagGui extends javax.swing.JFrame {
 
 		try {
 			codeBookSave();
+			codeBookChanged = false;  // reset book change status
+
+		        if(!fileNameCodeBook.equals(codeBookName.getText())) //name changed,save pref
+			{
+				fileNameCodeBook = codeBookName.getText();
+				savePref();
+			}
 		} catch (FileNotFoundException ex) {
 			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
 		}
@@ -1494,6 +1565,8 @@ public class MhagGui extends javax.swing.JFrame {
 	    int ind = codeList.getSelectedIndex();
 	    listModel.insertElementAt(codeLine, ind+1);
 	    codeList.setSelectedIndex(ind+1);
+
+	    codeBookChanged = true;  //insert the set , so mark it changed
     }//GEN-LAST:event_getSetInteractActionPerformed
 
     private void deleteInteractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteInteractActionPerformed
@@ -1516,6 +1589,7 @@ public class MhagGui extends javax.swing.JFrame {
 		    indNext = ind;
 	    codeList.setSelectedIndex(indNext);
 
+	    codeBookChanged = true;  //delete the set , so mark it changed
     }//GEN-LAST:event_deleteInteractActionPerformed
 
     private void jTextSetNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextSetNameActionPerformed
@@ -1543,6 +1617,7 @@ public class MhagGui extends javax.swing.JFrame {
 	    System.out.println("========================");
 	     */
 
+	    codeBookChanged = true;  //paste the set , so mark it changed
     }//GEN-LAST:event_undoInteractActionPerformed
 
     private void jEditorAboutHyperlinkUpdate(javax.swing.event.HyperlinkEvent evt) {//GEN-FIRST:event_jEditorAboutHyperlinkUpdate
@@ -1554,6 +1629,39 @@ public class MhagGui extends javax.swing.JFrame {
 			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
 		}
     }//GEN-LAST:event_jEditorAboutHyperlinkUpdate
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+	    if(!codeBookChanged)return;
+
+	SaveAndExit dialog = new SaveAndExit(new javax.swing.JFrame(), true);
+	dialog.setLocationRelativeTo(codeBookSave);
+	dialog.setVisible(true);
+
+	if(dialog.getReturnStatus() == 1)
+	{
+		try {
+			codeBookSave();
+		        if(!fileNameCodeBook.equals(codeBookName.getText())) //name changed,save pref
+			{
+				fileNameCodeBook = codeBookName.getText();
+				savePref();
+			}
+		} catch (FileNotFoundException ex) {
+			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+
+    }//GEN-LAST:event_formWindowClosing
+
+    private void helpListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_helpListValueChanged
+
+	    int ind = helpList.getSelectedIndex();
+
+	    if(ind < 0) return; //not initiate;
+
+	    helpText.setText(helpData[ind]);
+
+    }//GEN-LAST:event_helpListValueChanged
 
     private void launchBrowser(HyperlinkEvent evt) throws URISyntaxException, IOException
     {
@@ -2635,6 +2743,75 @@ public class MhagGui extends javax.swing.JFrame {
 	   stream.rewind();
     }
 
+    //check preference file
+    public void checkPref()
+    {
+
+	try {
+		Scanner filein = new Scanner(new File(fileNamePref));
+
+		int count = 0;
+		while (filein.hasNext() && (count < 2))
+		{
+			if(count == 0)
+			{
+				fileNameData = filein.nextLine();
+				jTextData.setText(fileNameData);
+			}
+			else
+			{
+				fileNameCodeBook = filein.nextLine();
+				codeBookName.setText(fileNameCodeBook);
+			}
+			count++;
+		}
+		filein.close();
+
+
+	} catch (FileNotFoundException ex) {
+	}
+
+    }
+
+    // save preference file
+    public void savePref() throws FileNotFoundException
+    {
+	    PrintStream fileout = new PrintStream(new File(fileNamePref));
+	    fileout.println(fileNameData);
+	    fileout.println(fileNameCodeBook);
+	    fileout.close();
+    }
+
+    // read help from USAGE.txt
+    public void readHelp()
+    {
+	try {
+		Scanner filein = new Scanner(new File("USAGE.txt"));
+
+		Arrays.fill(helpData, "");
+		int num = 0;
+
+		    listModelHelp.clear();
+		    while(filein.hasNext())
+		    {
+			    String line = filein.nextLine();
+			    int pos = line.indexOf(":");
+			    if(pos == -1)continue;
+
+			    listModelHelp.addElement(line.substring(0, pos));
+			    helpData[num] = line.substring(pos+1);
+			    num++;
+		    }
+
+		    helpList.setModel(listModelHelp);
+
+
+	} catch (FileNotFoundException ex) {
+		return;
+	}
+
+    }
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -2647,6 +2824,9 @@ public class MhagGui extends javax.swing.JFrame {
 			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
 		}
 
+		mhagGui.checkPref();
+		mhagGui.readHelp();
+
 		mhagGui.stream = new TextAreaPrintStream(mhagGui.jTextPreview, System.out);
 	        mhagGui.streamView = new TextAreaPrintStream(mhagGui.jTextPreview2, System.out);
 
@@ -2654,7 +2834,7 @@ public class MhagGui extends javax.swing.JFrame {
 
 		mhagGui.initSetup(false, true, false); // by default
 
-		mhagGui.jTextUsage.setCaretPosition(0);
+		//mhagGui.jTextUsage.setCaretPosition(0);
 		mhagGui.jTabbedPane1.setEnabledAt(2, false);
 
 				try {
@@ -2672,7 +2852,7 @@ public class MhagGui extends javax.swing.JFrame {
         });
     }
 
-    	// GUI static MHAG
+    	// GUI MHAG variables
     	private Mhag mhag = new Mhag();
     	private Set set = new Set();
     	private MhagData mhagData = new MhagData();
@@ -2690,6 +2870,19 @@ public class MhagGui extends javax.swing.JFrame {
 	private DefaultListModel listModel =  new DefaultListModel(); //viewer code list
 
 	private String[] deletedCodes = new String[5]; //store deleted codes;
+
+	// save code book
+	private boolean codeBookChanged = false;   //save code book dialog
+	SaveAndExit dialogSave = new SaveAndExit(new javax.swing.JFrame(), true);
+
+	// save code book/outputs data file names
+	private final String fileNamePref = "pref";
+	private String fileNameData = "MyData";
+	private String fileNameCodeBook = "MyData";
+
+	//help list
+	private DefaultListModel listModelHelp =  new DefaultListModel(); //viewer help list
+	private String[] helpData = new String[100];  // help data, max 100 entries
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
         private javax.swing.JButton Output;
@@ -2734,6 +2927,8 @@ public class MhagGui extends javax.swing.JFrame {
         private javax.swing.JComboBox headSlot1;
         private javax.swing.JComboBox headSlot2;
         private javax.swing.JComboBox headSlot3;
+        private javax.swing.JList helpList;
+        private javax.swing.JTextArea helpText;
         private javax.swing.JRadioButton highRank;
         private javax.swing.JRadioButton html;
         private javax.swing.JPanel hunterType;
@@ -2741,17 +2936,18 @@ public class MhagGui extends javax.swing.JFrame {
         private javax.swing.JEditorPane jEditorAbout;
         private javax.swing.JLabel jLabel1;
         private javax.swing.JLabel jLabel2;
+        private javax.swing.JPanel jPanel1;
         private javax.swing.JScrollPane jScrollAbout;
+        private javax.swing.JScrollPane jScrollHelpList;
+        private javax.swing.JScrollPane jScrollHelpText;
         private javax.swing.JScrollPane jScrollPane1;
         private javax.swing.JScrollPane jScrollPreview;
         private javax.swing.JScrollPane jScrollPreview2;
-        private javax.swing.JScrollPane jScrollUsage;
         private javax.swing.JTabbedPane jTabbedPane1;
         private javax.swing.JTextField jTextData;
         private javax.swing.JTextArea jTextPreview;
         private javax.swing.JTextArea jTextPreview2;
         private javax.swing.JTextField jTextSetName;
-        private javax.swing.JTextArea jTextUsage;
         private javax.swing.JComboBox legSlot1;
         private javax.swing.JComboBox legSlot2;
         private javax.swing.JComboBox legSlot3;
