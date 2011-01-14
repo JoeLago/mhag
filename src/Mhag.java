@@ -236,7 +236,7 @@ public class Mhag
 
 		mhag.init(mhagData, args);
 
-		//mhag.method = 2;  //tifa temp
+		mhag.method = 2;  //tifa temp
 
 		mhag.proc(mhagData);
 

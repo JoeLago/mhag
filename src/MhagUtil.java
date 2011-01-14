@@ -129,15 +129,15 @@ public class MhagUtil {
 	static int[] getIndexArray(int indexTot, int[] dimension )
 	{
 		int len = dimension.length;
-		int[] indeces = new int[len];
-		Arrays.fill(indeces, 0);
+		int[] indices = new int[len];
+		Arrays.fill(indices, 0);
 
 		for(int i = len -1; i > -1; i--)
 		{
-			indeces[i] = indexTot%dimension[i];
+			indices[i] = indexTot%dimension[i];
 			indexTot = indexTot / dimension[i];
 		}
-		return indeces;
+		return indices;
 	}
 
 }

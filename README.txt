@@ -9,13 +9,13 @@ MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is d
      1. Why MHAG:
      There are a few calculators available online already. So why am I developing MHAG?
      1) MHAG is a light-weighted FREE JAVA program, so once you have it, you have it forever.  Remember our favorite armor database set http://mhdb.xengi.org/mh3/armory.php is gone, together with our armor data.
-     2) MHAG has/will have more functions.  Try MHAG NOW! And, I will complete the generator in v2.0.
+     2) MHAG has/will have more functions.  I will complete the generator in v2.0.
      3) MHAG has/will have most accurate data.  Well, I can't say it is error-free now, but my goal is to make it as perfect as possible.  The data are all in plain text format, so it can be easily modified by anyone.  When I compiled the data, I looked up wikia site, Japanese wiki site and the wii game itself.  Both wiki sites actually have many errors. (about 70% errors are from wikia, 30% from Japanese wiki) 
      4) MHAG data can be SHARED.  With MHAG, users can easily manage and share set data.  I may use the wiki site mhag.wetpaint.com to share code data. (the site is not good to display text/html outputs. I may try to find a better place, or let me know if you know a better place)  With the set data, I will make set books for the community (in PDF). (maybe every week or two)
      5) MHAG is cross-platform, as it's completely written in Java.  Besides, it's open source. (If you are developer, you must know how to get the source code)
 
      2. Why Now:
-     For those who know me in the game, I recently stopped playing MH3 for a while.  That's why I have time to think about doing something interesting.  I know it may be a little late to release a version for MH3.  But it will be great for MHP3/MHF3 once I get data.
+     For those who know me in the game, I recently stopped playing MH3 for a while.  That's why I have time to think about doing something interesting.  I know it may be a little late to release a version for MH3.  But it will be great for MHP3/MHF3 once the game is out.
 
      3. Where to find/follow MHAG:
      1) Capcom Unity , Monster Hunter Tri forum & Tifa's Blogs http://www.capcom-unity.com/tifa@mh3
