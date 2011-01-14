@@ -1,7 +1,8 @@
 /**
  * @program MHAG
  * @ MhagData Class , store MHAG data
- * @version 1.0
+ * @version 2.0
+ * support generator data
  * @author Tifa@mh3
  */
 
@@ -128,7 +129,9 @@ public class MhagData {
 
 	}
 
-	// pre process jewel list (skill id from skill name )
+	// pre process jewel list 
+	// (1.skill id from skill name
+	//  2.jewel id/points for each skill id)
 	public void preProcessJewelList()
 	{
 		for (int i = 0; i < Jewel.jewelIDTot; i++)
@@ -143,6 +146,11 @@ public class MhagData {
 					(aJewel.getSkillName()[j]);
 			}
 			aJewel.setSkillID(id);
+
+			// set jewel id/points for the positive skill (1st one)
+			int point = aJewel.getSkillPoint()[0];
+			skillList[id[0]].setJewelID(aJewel.getNumSlot(), i);
+			skillList[id[0]].setJewelSkillPoint(aJewel.getNumSlot(), point);
 
 		}
 

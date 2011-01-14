@@ -1,7 +1,8 @@
 /**
  * @program MHAG
  * @ Skill Class
- * @version 1.0
+ * @version 2.0
+ * add generator support
  * @author Tifa@mh3
  */
 
@@ -18,6 +19,8 @@ public class Skill {
 		Arrays.fill(effectID, 0);
 		Arrays.fill(effectTrigger, 0);
 		Arrays.fill(effectName, "");
+		Arrays.fill(jewelID, -1);
+		Arrays.fill(jewelSkillPoint, 0);
 
 	}
 
@@ -105,6 +108,29 @@ public class Skill {
 	// get Effect Trigger Points
 	public int[] getEffectTrigger() {return effectTrigger;}
 
+	// get JewelID
+	public int[] getJewelID() {return jewelID;}
+
+	public int getJewelID(int nSlot) {return jewelID[nSlot];}
+
+	// set JewelID
+	public void setJewelID(int[] id) {jewelID = id;}
+
+	public void setJewelID(int nSlot, int id) {jewelID[nSlot] = id;}
+
+	// get JewelSkillPoint
+	public int[] getJewelSkillPoint() {return jewelSkillPoint;}
+
+	public int getJewelSkillPoint(int nSlot) {return jewelSkillPoint[nSlot];}
+
+	// set JewelSkillPoint
+	public void setJewelSkillPoint(int[] points) {jewelSkillPoint = points;}
+
+	public void setJewelSkillPoint(int nSlot, int points)
+	{
+		jewelSkillPoint[nSlot] = points;
+	}
+
 	private int skillID = 0; // Skill ID
 	private String skillName = "";  // Skill Name
 	private String skillClass = "";  // A/B/C/D
@@ -112,6 +138,10 @@ public class Skill {
 	private String[] effectName;   // Effect Name
 	private int[] effectID;   // Effect IDs
 	private int[] effectTrigger;  //skill points to tigger effect
+
+	//generator data
+	private int[] jewelID = new int[4]; //jewelID for the skill
+	private int[] jewelSkillPoint = new int[4]; // skill points on the jewel
 
 	static int skillIDTot = 0;
 }
