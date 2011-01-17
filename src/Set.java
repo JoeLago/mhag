@@ -1631,6 +1631,30 @@ public class Set {
 		rateCharm(gen);  //rate Charm
 	}
 
+	// check gaps of skill points for the generator
+	public int[] checkGap(Generator gen)
+	{
+		int[] gaps = new int[numSkill];
+
+		for(int i = 0; i < numSkill; i++)
+		{
+			int id = skillID[i];
+			int skillInd = matchID(gen.getSkills(),id);
+			if(skillInd == -1)
+			{
+				if(gen.getMhagData().getSkill(id).getHasNegative()) // only nega skills
+					gaps[i] = -skillPoint[i] - 10;
+				//minus number, meaning points left to reach negative effect
+			}
+			else
+			{
+				gaps[i] = gen.getTriggers(skillInd) - skillPoint[i];
+			}
+
+		}
+		return gaps;
+	}
+
 	//Inputs
 	private String setName = unNamedSet;  // User-defined Set Name
 	private boolean lowRank = false; // lr T / hr F
