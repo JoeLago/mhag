@@ -1,0 +1,19 @@
+#mode 0 : jewel opt; 1: charm opt; 2: set search;
+rank : H
+blade or gunner : B
+head part : 114
+chest part : 52
+arm part : 49
+waist part : 53
+leg part : 52
+charm : 45
+charm skill : 
+head jewel : 
+chest jewel : 79
+arm jewel : 76 77
+waist jewel : 78 78
+leg jewel :  78 79
+weapon jewel : 
+charm jewel : 80
+mode : 0 
+effects : 66 78 133 164
