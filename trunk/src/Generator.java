@@ -52,12 +52,16 @@ public class Generator {
 
 	public void setOptimizer(Set aSet, boolean jewelOnly)
 	{
-		//aSet.calcSet(mhag, mhagData);
 		//aSet.save(mhag, mhagData, System.out);
 
 		aSet.setRate(this);
-		System.out.println(aSet.getRate());
 
+		int[] gaps = aSet.checkGap(this);
+
+		System.out.println(aSet.getRate());
+		System.out.println(Arrays.toString(gaps));
+
+		//aSet.calcSet(mhag, mhagData);
 	}
 
 	public void numerateTest()  // only for test
@@ -103,6 +107,9 @@ public class Generator {
 		String errorLine = "    Error in Input File, Please Check!";
 		Scanner in = new Scanner(new File(fileIn));
 		Arrays.fill(effects, -1);
+		Arrays.fill(skills, -2);
+		Arrays.fill(triggers, 0);
+		int[] values = new int[10];
 
 		while (in.hasNext())
 		{
@@ -121,7 +128,7 @@ public class Generator {
 			String args = MhagUtil.extractWord(line, splitPos +1, -1);
 
 			if(opt.equals("effects"))  // effect list
-				numEffect= MhagUtil.extractInt(args, 10, effects);
+				numEffect= MhagUtil.extractInt(args, 10, values);
 			else if(opt.equals("mode")) //generator mode
 			{
 	  			if(args.length() != 0)
@@ -130,7 +137,11 @@ public class Generator {
 		}
 
 		for(int i =0; i < numEffect; i++)
+		{
+			effects[i] = values[i];
 			skills[i] = mhagData.getEffect(effects[i]).getSkillID();
+			triggers[i] = mhagData.getEffect(effects[i]).getEffectTrigger();
+		}
 
 		MhagUtil.logLine(mhag,String.format("Mode: %d",genMode));
 		MhagUtil.logLine(mhag,String.format("# of Effects: %d",numEffect));
@@ -157,6 +168,12 @@ public class Generator {
 	public void setSkills(int[] skillID) {skills = skillID;}
 	public void setSkills(int ind, int skillID) {skills[ind] = skillID;}
 
+	public int[] getTriggers() {return triggers;}
+	public int getTriggers(int ind) {return triggers[ind];}
+
+	public void setTriggers(int[] points) {triggers = points;}
+	public void setTriggers(int ind, int point) {triggers[ind] = point;}
+
 	private Mhag mhag;  //local mhag data
 	private MhagData mhagData;  //local mhagData data
 
@@ -164,6 +181,7 @@ public class Generator {
 
 	//generator data
 	private int numEffect = 0;
-	private int[] effects = new int[10];
-	private int[] skills = new int[10];
+	private int[] effects = new int[10]; //effect list
+	private int[] skills = new int[10];  //skill list for corresponding effects
+	private int[] triggers = new int[10];  //trigger points, for fast access
 }

@@ -6,14 +6,14 @@ chest part : 52
 arm part : 49
 waist part : 53
 leg part : 52
-charm : 45
-charm skill : 
+charm : 51
+charm skill : 24 6
 head jewel : 
-chest jewel : 79
+chest jewel : 78
 arm jewel : 76 77
 waist jewel : 78 78
-leg jewel :  78 79
+leg jewel :  79 79
 weapon jewel : 
-charm jewel : 80
+charm jewel : 
 mode : 0 
-effects : 66 78 133 164
+effects : 66 78 164 192
