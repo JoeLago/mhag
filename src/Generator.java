@@ -1,7 +1,9 @@
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.Arrays;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -19,44 +21,46 @@ public class Generator {
 		gen.mhag = aMhag;
 		gen.mhagData= aMhagData;
 
-		gen.setOptimizer();
+		Set aSet = new Set();
+		aSet.setSetFromFile(gen.mhag, gen.mhag.getFileIn());
+		boolean pass = aSet.checkSet(gen.mhag, gen.mhagData);
+
+		if(!pass)
+		{
+			MhagUtil.logLine(gen.mhag, "Incorrect set read from input file!");
+			return;
+		}
+
+		gen.readGenInput(gen.mhag.getFileIn());
+
+		gen.genMain(aSet);
+
 		//gen.numerateTest();
 
 	}
 
-	private void setOptimizer() throws FileNotFoundException
+	public void genMain(Set aSet)
 	{
-		Set aSet = new Set();
-		aSet.setSetFromFile(mhag, mhag.getFileIn());
+		if(genMode == 0)
+			setOptimizer(aSet, true);
+		else if(genMode == 1)
+			setOptimizer(aSet, false);
+//		else
+//			aSet = setSearch(aSet);
 
-		boolean pass = aSet.checkSet(mhag, mhagData);
-		if(!pass)
-		{
-			MhagUtil.logLine(mhag, "Incorrect set read from input file!");
-			return;
-		}
-
-		aSet.calcSet(mhag, mhagData);
-		aSet.save(mhag, mhagData, System.out);
-
-		for (int i = 0; i < Skill.skillIDTot; i++)
-		{
-			Skill aSkill = mhagData.getSkill(i);
-			System.out.printf("%3d: ",i);
-			for (int j = 1; j <= 3; j++)
-			{
-				int id = aSkill.getJewelID(j);
-				if(id == -1)continue;
-				Jewel aJewel = mhagData.getJewel(id);
-				System.out.printf("%3d %3d %+3d; ",j , id,
-					aSkill.getJewelSkillPoint(j));
-			}
-			System.out.println();
-
-		}
 	}
 
-	private void numerateTest()  // only for test
+	public void setOptimizer(Set aSet, boolean jewelOnly)
+	{
+		//aSet.calcSet(mhag, mhagData);
+		//aSet.save(mhag, mhagData, System.out);
+
+		aSet.setRate(this);
+		System.out.println(aSet.getRate());
+
+	}
+
+	public void numerateTest()  // only for test
 	{
 		mhag.setLogOpt(2); //off log
 
@@ -92,6 +96,74 @@ public class Generator {
 
 	}
 
+	public void readGenInput(String fileIn) throws FileNotFoundException
+	{
+		MhagUtil.logLine(mhag, "Reading Generator Options From Input File ...");
+
+		String errorLine = "    Error in Input File, Please Check!";
+		Scanner in = new Scanner(new File(fileIn));
+		Arrays.fill(effects, -1);
+
+		while (in.hasNext())
+		{
+			String line = in.nextLine();
+			if((line.startsWith("!")) ||
+				(line.startsWith("#")))continue;
+			// System.out.println(line);
+
+			// process a line
+			int splitPos = MhagUtil.extractWordPos(line, 0);
+			if( splitPos == -1)  MhagUtil.logLine(mhag, errorLine);
+
+			// first part: option word
+			String opt = MhagUtil.extractWord(line, 0, splitPos);
+			// second part: arguments
+			String args = MhagUtil.extractWord(line, splitPos +1, -1);
+
+			if(opt.equals("effects"))  // effect list
+				numEffect= MhagUtil.extractInt(args, 10, effects);
+			else if(opt.equals("mode")) //generator mode
+			{
+	  			if(args.length() != 0)
+					genMode = Integer.valueOf(args);
+			}
+		}
+
+		for(int i =0; i < numEffect; i++)
+			skills[i] = mhagData.getEffect(effects[i]).getSkillID();
+
+		MhagUtil.logLine(mhag,String.format("Mode: %d",genMode));
+		MhagUtil.logLine(mhag,String.format("# of Effects: %d",numEffect));
+		MhagUtil.logLine(mhag,"Effects: "+Arrays.toString(effects));
+		MhagUtil.logLine(mhag,"Skills: "+Arrays.toString(skills));
+	}
+
+	public Mhag getMhag() {return mhag;}
+	public MhagData getMhagData() {return mhagData;}
+
+	public int getNumEffect() {return numEffect;}
+
+	public void setNumEffect(int num) {numEffect = num;}
+
+	public int[] getEffects() {return effects;}
+	public int getEffects(int ind) {return effects[ind];}
+
+	public void setEffects(int[] effectID) {effects = effectID;}
+	public void setEffects(int ind, int effectID) {effects[ind] = effectID;}
+
+	public int[] getSkills() {return skills;}
+	public int getSkills(int ind) {return skills[ind];}
+
+	public void setSkills(int[] skillID) {skills = skillID;}
+	public void setSkills(int ind, int skillID) {skills[ind] = skillID;}
+
 	private Mhag mhag;  //local mhag data
 	private MhagData mhagData;  //local mhagData data
+
+	private int genMode = 0; //mode 0: jewl only, 1: jewl+charm onlyh, 2. set search
+
+	//generator data
+	private int numEffect = 0;
+	private int[] effects = new int[10];
+	private int[] skills = new int[10];
 }

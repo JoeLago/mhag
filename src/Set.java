@@ -815,6 +815,9 @@ public class Set {
 
 		// add skills
 		addSkills(mhag, mhagData);
+		line = String.format("   # of Torso Up : %d",numTorso);
+		MhagUtil.logLine(mhag, line);
+
 		MhagUtil.logLine(mhag, "   Skill List : ");
 		for (int i =0; i < numSkill; i++)
 		{
@@ -850,8 +853,6 @@ public class Set {
 				( armor.getSkillID()[0] == -1))
 				numTorso++;
 		}
-		String line = String.format("   # of Torso Up : %d",numTorso);
-		MhagUtil.logLine(mhag, line);
 
 		// check skills
 		int[] listMapping  = new int[Skill.skillIDTot];
@@ -1485,6 +1486,149 @@ public class Set {
 
 		MhagUtil.logLine(mhag, "Armor Set Saved!");
 
+	}
+
+	// calculate set stats (simple version
+	public void quickCalcSet(Mhag mhag, MhagData mhagData)
+	{
+		// defense
+		defense = 0;
+		if(lowRank)
+		{
+			for(int i = 0; i < 5; i++)
+			{
+				if(!inUse[i])continue;
+				Armor armor = mhagData.getArmor(i, armorID[i]);
+				defense += armor.getDefenseLowRank();
+			}
+		}
+		else
+		{
+			for(int i = 0; i < 5; i++)
+			{
+				if(!inUse[i])continue;
+				Armor armor = mhagData.getArmor(i, armorID[i]);
+				defense += armor.getDefenseHighRank();
+			}
+		}
+
+		rate += defense / 8;  //high defense has more bonus
+
+		// add skills
+		addSkills(mhag, mhagData);
+	}
+
+	// check skill effects (for rating)
+	public void rateEffects(Generator gen)
+	{
+		numEffect = 0;
+		Arrays.fill(effectID, 0);
+		Arrays.fill(effectSkillIndex, 0);
+
+		for(int i =0; i < numSkill; i++)
+		{
+			int id = skillID[i];
+			int point = skillPoint[i];
+
+			int skillInd = matchID(gen.getSkills(),id);
+			Skill skill = gen.getMhagData().getSkill(id);
+
+			if(skillInd == -1)
+			{
+				if(skill.getHasNegative()) //always check nagative skills
+				{
+					if(point <= -10) //active negative effects
+						rate -= 20; //punish negative effects
+				}
+			}
+			else //check required skills
+			{
+				Effect effect = gen.getMhagData().getEffect(gen.getEffects(skillInd));
+				int trigger = effect.getEffectTrigger();
+
+				if(trigger <= point) //triggered
+				{
+					if(skillInd <= 3) // first 4 skills
+						rate += 50 + trigger;  //larger bonus
+					else
+						rate += 30 + trigger;  //the rest 6, fewer bonus
+				}
+				else //not triggered, plus the available points;
+				{
+					rate += point;
+				}
+
+			}
+
+		}
+
+	}
+
+	public int matchID(int[] skills, int id)
+	{
+		for(int i = 0; i < skills.length; i++)
+		{
+			if(skills[i] == id)
+				return i;
+		}
+		return -1;
+	}
+
+	public void rateSlots(Generator gen)
+	{
+		int nSlot;
+		for(int i = 0; i < 5; i++)  //armor slots
+		{
+			if(!inUse[i])continue;
+			nSlot = gen.getMhagData().getArmor(i, armorID[i]).getNumSlot();
+			for(int j = 0 ; j < numJewel[i]; j++)
+			{
+				Jewel jewel = gen.getMhagData().getJewel(jewelID[i][j]);
+				nSlot -= jewel.getNumSlot();
+			}
+			if(nSlot > 0)
+				rate += 3; //bonus for unused slots
+		}
+
+		if(inUse[5])  //weapon slots
+		{
+			nSlot = 0;
+			for(int j = 0 ; j < numJewel[5]; j++)
+			{
+				Jewel jewel = gen.getMhagData().getJewel(jewelID[5][j]);
+				nSlot += jewel.getNumSlot();
+			}
+			rate -= 5; //penalty for used slots (less weapon of choice)
+		}
+
+	}
+
+	public void rateCharm(Generator gen)
+	{
+		if(inUse[6])  //charm
+		{
+			// no bonus for unused slots, to encourage easier charm
+			Charm charm = gen.getMhagData().getCharm(charmID);
+			int charmClass = charm.getCharmClass();
+			if(charmClass != 4) //auto-guard no penalty
+			{
+				int percent = charm.getPercentage();
+				if(percent <= 2)
+					rate -= 5*charmClass;  //big penalty for rare charm
+				else
+					rate -= 3*charmClass;  //small penalty for common charm
+			}
+		}
+
+	}
+
+	public void setRate(Generator gen)
+	{
+		rate = 0;
+		quickCalcSet(gen.getMhag(), gen.getMhagData()); //plus rate defense;
+		rateEffects(gen);  // rate skills
+		rateSlots(gen);  //rate slot usage
+		rateCharm(gen);  //rate Charm
 	}
 
 	//Inputs

@@ -68,8 +68,11 @@ public class Skill {
 				endPos = MhagUtil.extractWordPos(line, startPos);
 				word = MhagUtil.extractWord
 					(line, startPos, endPos);
-				skill.effectTrigger[skill.numEffect] =
-					Integer.valueOf(word);
+				int trigger = Integer.valueOf(word);
+				skill.effectTrigger[skill.numEffect] = trigger;
+
+				if(trigger < 0) skill.hasNegative = true;
+
 				skill.numEffect++;
 			}
 
@@ -131,6 +134,11 @@ public class Skill {
 		jewelSkillPoint[nSlot] = points;
 	}
 
+	// get/set hasNegative
+	public boolean getHasNegative() {return hasNegative;}
+
+	public void setHasNegative(boolean ifNeg) {hasNegative = ifNeg;}
+
 	private int skillID = 0; // Skill ID
 	private String skillName = "";  // Skill Name
 	private String skillClass = "";  // A/B/C/D
@@ -142,6 +150,8 @@ public class Skill {
 	//generator data
 	private int[] jewelID = new int[4]; //jewelID for the skill
 	private int[] jewelSkillPoint = new int[4]; // skill points on the jewel
+	private boolean hasNegative = false; // has neragtive effect or not
+
 
 	static int skillIDTot = 0;
 }
