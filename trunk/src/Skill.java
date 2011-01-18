@@ -19,8 +19,11 @@ public class Skill {
 		Arrays.fill(effectID, 0);
 		Arrays.fill(effectTrigger, 0);
 		Arrays.fill(effectName, "");
-		Arrays.fill(jewelID, -1);
-		Arrays.fill(jewelSkillPoint, 0);
+		for(int i = 0; i < 2; i++)
+		{
+			Arrays.fill(jewelID[i], -1);
+			Arrays.fill(jewelSkillPoint[i], 0);
+		}
 
 	}
 
@@ -112,26 +115,55 @@ public class Skill {
 	public int[] getEffectTrigger() {return effectTrigger;}
 
 	// get JewelID
-	public int[] getJewelID() {return jewelID;}
+	public int[] getJewelID(boolean lowRank)
+	{
+		if(lowRank)
+			return jewelID[0];
+		else
+			return jewelID[1];
+	}
 
-	public int getJewelID(int nSlot) {return jewelID[nSlot];}
+	public int getJewelID(boolean lowRank, int nSlot)
+	{
+		if(lowRank)
+			return jewelID[0][nSlot];
+		else
+			return jewelID[1][nSlot];
+	}
 
 	// set JewelID
-	public void setJewelID(int[] id) {jewelID = id;}
-
-	public void setJewelID(int nSlot, int id) {jewelID[nSlot] = id;}
+	public void setJewelID(boolean lowRank, int nSlot, int id)
+	{
+		if(lowRank)
+			jewelID[0][nSlot] = id;
+		else
+			jewelID[1][nSlot] = id;
+	}
 
 	// get JewelSkillPoint
-	public int[] getJewelSkillPoint() {return jewelSkillPoint;}
+	public int[] getJewelSkillPoint(boolean lowRank)
+	{
+		if(lowRank)
+			return jewelSkillPoint[0];
+		else
+			return jewelSkillPoint[1];
+	}
 
-	public int getJewelSkillPoint(int nSlot) {return jewelSkillPoint[nSlot];}
+	public int getJewelSkillPoint(boolean lowRank, int nSlot)
+	{
+		if(lowRank)
+			return jewelSkillPoint[0][nSlot];
+		else
+			return jewelSkillPoint[1][nSlot];
+	}
 
 	// set JewelSkillPoint
-	public void setJewelSkillPoint(int[] points) {jewelSkillPoint = points;}
-
-	public void setJewelSkillPoint(int nSlot, int points)
+	public void setJewelSkillPoint(boolean lowRank, int nSlot, int points)
 	{
-		jewelSkillPoint[nSlot] = points;
+		if(lowRank)
+			jewelSkillPoint[0][nSlot] = points;
+		else
+			jewelSkillPoint[1][nSlot] = points;
 	}
 
 	// get/set hasNegative
@@ -148,8 +180,8 @@ public class Skill {
 	private int[] effectTrigger;  //skill points to tigger effect
 
 	//generator data
-	private int[] jewelID = new int[4]; //jewelID for the skill
-	private int[] jewelSkillPoint = new int[4]; // skill points on the jewel
+	private int[][] jewelID = new int[2][4]; //jewelID for the skill (1st index: lowrank 0, highrank 1)
+	private int[][] jewelSkillPoint = new int[2][4]; // skill points on the jewel
 	private boolean hasNegative = false; // has neragtive effect or not
 
 

@@ -1564,7 +1564,7 @@ public class Set {
 
 	}
 
-	public int matchID(int[] skills, int id)
+	public static int matchID(int[] skills, int id)
 	{
 		for(int i = 0; i < skills.length; i++)
 		{
@@ -1631,29 +1631,21 @@ public class Set {
 		rateCharm(gen);  //rate Charm
 	}
 
-	// check gaps of skill points for the generator
-	public int[] checkGap(Generator gen)
+	public int[] checkSlot(MhagData mhagData)
 	{
-		int[] gaps = new int[numSkill];
-
-		for(int i = 0; i < numSkill; i++)
+		int[] slots = new int[4];
+		Arrays.fill(slots, 0);
+		for(int i = 0; i < 5; i++)
 		{
-			int id = skillID[i];
-			int skillInd = matchID(gen.getSkills(),id);
-			if(skillInd == -1)
-			{
-				if(gen.getMhagData().getSkill(id).getHasNegative()) // only nega skills
-					gaps[i] = -skillPoint[i] - 10;
-				//minus number, meaning points left to reach negative effect
-			}
-			else
-			{
-				gaps[i] = gen.getTriggers(skillInd) - skillPoint[i];
-			}
-
+			if(!inUse[i])continue;
+			Armor armor =  mhagData.getArmor(i, armorID[i]);
+			slots[armor.getNumSlot()]++;
 		}
-		return gaps;
+		Charm charm = mhagData.getCharm(charmID);
+		slots[charm.getNumSlot()]++;
+		return slots;
 	}
+
 
 	//Inputs
 	private String setName = unNamedSet;  // User-defined Set Name
