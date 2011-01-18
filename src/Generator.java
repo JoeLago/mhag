@@ -33,6 +33,9 @@ public class Generator {
 
 		gen.readGenInput(gen.mhag.getFileIn());
 
+		gen.checkCharmLimit();
+	        gen.createCharmLookupTable();
+
 		gen.genMain(aSet);
 
 		//gen.numerateTest();
@@ -149,6 +152,130 @@ public class Generator {
 		MhagUtil.logLine(mhag,"Skills: "+Arrays.toString(skills));
 	}
 
+	public void checkCharmLimit()
+	{
+		//initialize
+		skillClassMax = 0;
+		skillPointMax = 0;
+		numSlotMax = 0;
+
+		for(int i = 0; i < 2; i++)
+		{
+			Arrays.fill(charmPointMax[i], 0);
+			Arrays.fill(charmPoint2nd[i], 0);
+			Arrays.fill(charmSlotMax[i], 0);
+		}
+
+		//check auto-guard
+		for(int i = 0; i < Skill.skillIDTot; i++)
+		{
+			Skill skill = mhagData.getSkill(i);
+			if(skill.getSkillName().equals("Auto-Guard"))
+			{
+				autoGuardID = i;
+				autoGuardClass = skill.getSkillClass();
+			}
+		}
+
+		for(int i = 0; i < Charm.charmIDTot; i++)
+		{
+			Charm charm = mhagData.getCharm(i);
+			if(charm.getSkillClass()[0].equals(autoGuardClass))continue;
+			int[] ind = charm.getCharmInd();
+			int nSlot = charm.getNumSlot();
+			int point = charm.getSkillPoint()[0];
+
+			if(nSlot > charmSlotMax[ind[0]][ind[1]])
+				charmSlotMax[ind[0]][ind[1]] = nSlot;
+
+			if(point > charmPointMax[ind[0]][ind[1]])
+				charmPointMax[ind[0]][ind[1]] = point;
+
+			if(ind[1] > skillClassMax) skillClassMax = ind[1];
+			if(nSlot > numSlotMax) numSlotMax = nSlot;
+			if(point > skillPointMax) skillPointMax = point;
+		}
+
+		for(int i = 0; i < 2; i++)
+		{
+			for(int j = 0; j < 10; j++)
+			{
+				if(charmPointMax[i][j] == 0)
+					limitedMax[i][j] = false;
+				else
+					limitedMax[i][j] = true;
+			}
+		}
+
+		//check 2nd time, to find 2nd max
+		for(int i = 0; i < Charm.charmIDTot; i++)
+		{
+			Charm charm = mhagData.getCharm(i);
+			if(charm.getSkillClass()[0].equals(autoGuardClass))continue;
+			int[] ind = charm.getCharmInd();
+			int point = charm.getSkillPoint()[0];
+
+			if(charm.getNumSlot() == charmSlotMax[ind[0]][ind[1]])
+			{
+				if(point == charmPointMax[ind[0]][ind[1]])
+					limitedMax[ind[0]][ind[1]] = false;
+				else if(point > charmPoint2nd[ind[0]][ind[1]])
+					charmPoint2nd[ind[0]][ind[1]] = point;
+			}
+		}
+
+		for(int i = 0; i < skillClassMax + 1; i++)
+			System.out.printf("%3d: %3d %3d, %3d %3d\n",i,charmPointMax[0][i],
+				charmSlotMax[0][i],charmPointMax[1][i],charmSlotMax[1][i]);
+		for(int i = 0; i < skillClassMax + 1; i++)
+			System.out.printf("%3d: %7s %3d, %7s %3d\n",i,limitedMax[0][i],charmPoint2nd[0][i],
+				limitedMax[1][i],charmPoint2nd[1][i]);
+		System.out.printf("%d, %d, %d\n",skillClassMax,skillPointMax, numSlotMax);
+
+	}
+
+	public void createCharmLookupTable()
+	{
+		// create table, initial it as null (-1)
+		charmLookupTable = new int[skillClassMax + 1][numSlotMax + 1][skillPointMax + 1];
+		for(int i = 0; i < skillClassMax + 1; i++)
+			for(int j = 0; j < numSlotMax + 1; j++)
+				Arrays.fill(charmLookupTable[i][j], -1);
+
+		for(int i = 0; i < Charm.charmIDTot; i++)
+		{
+			Charm charm = mhagData.getCharm(i);
+			if(charm.getSkillClass()[0].equals(autoGuardClass))continue;
+			if((charm.getNumSkill() == 2) &&
+				(charm.getSkillPoint()[1] != -10))continue;  // B-10; A-10 (maybe only in mh3)
+
+			int skillClassInd = charm.getCharmInd()[1];
+			int point = charm.getSkillPoint()[0];
+			int nSlot = charm.getNumSlot();
+
+			charmLookupTable[skillClassInd][nSlot][point] = i;
+		}
+
+		for(int i = 0; i < skillClassMax + 1; i++)
+			for(int j = 0; j < numSlotMax + 1; j++)
+			{
+				System.out.printf("%3d, %3d: ", i,j);
+				for(int k = 0; k < skillPointMax + 1; k++)
+					System.out.printf("%3d ",charmLookupTable[i][j][k]);
+				System.out.println();
+			}
+
+	}
+
+	//get charmID from skill points
+	public static int getCharmID(String skillClass, int skillPoint, int numSlot)
+	{
+		int id = -1;
+
+		return id;
+	}
+
+
 	public Mhag getMhag() {return mhag;}
 	public MhagData getMhagData() {return mhagData;}
 
@@ -184,4 +311,22 @@ public class Generator {
 	private int[] effects = new int[10]; //effect list
 	private int[] skills = new int[10];  //skill list for corresponding effects
 	private int[] triggers = new int[10];  //trigger points, for fast access
+
+	//generator charm data
+	private int[][] charmPointMax = new int[2][10];  //(lr/hr) skill limit
+	private int[][] charmSlotMax = new int[2][10];   //(lr/hr) charm limit
+	private int skillClassMax = 0; //max skill class number
+	private int skillPointMax = 0; //max skill points
+	private int numSlotMax = 0; //max number of slots
+	private boolean[][] limitedMax = new boolean[2][10];
+	// true: max point and max slot can't be obtained together
+	private int[][] charmPoint2nd = new int[2][10]; //max possible point, if max slot
+
+	private int[][][] charmLookupTable;
+	// index: 1st: skillClassMax; 2nd: numSlotMax; 3rd: skillPointMax;
+
+	//for auto-guard skill;
+	private int autoGuardID = -1; 
+	private	String autoGuardClass = "";
+
 }
