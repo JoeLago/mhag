@@ -4,8 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @program MHAG
@@ -59,10 +57,19 @@ public class Generator {
 
 		aSet.setRate(this);
 
-		int[] gaps = aSet.checkGap(this);
+		checkGap(aSet);
+		slots = aSet.checkSlot(mhagData);
 
 		System.out.println(aSet.getRate());
-		System.out.println(Arrays.toString(gaps));
+		for(int i = 0; i < numGap; i++)
+		{
+			Skill skill = mhagData.getSkill(gapSkillID[i]);
+			System.out.printf("%3d: %-10s %3d\n", i, skill.getSkillName(), gapPoint[i]);
+		}
+		for(int i = 0; i < 4; i++)
+			System.out.printf("%3d: %d\n", i, slots[i]);
+
+		optJewel(aSet);
 
 		//aSet.calcSet(mhag, mhagData);
 	}
@@ -152,6 +159,49 @@ public class Generator {
 		MhagUtil.logLine(mhag,"Skills: "+Arrays.toString(skills));
 	}
 
+	// check gaps of skill points for the generator
+	public void checkGap(Set set)
+	{
+		boolean[] skillMatched = new boolean[10];
+		numGap = 0;
+		Arrays.fill(gapPoint, 0);
+		Arrays.fill(gapSkillID, 0);
+		Arrays.fill(skillMatched, false);
+
+		for(int i = 0; i < set.getNumSkill(); i++)
+		{
+			int id = set.getSkillID()[i];
+			int skillInd = Set.matchID(skills,id);
+			if(skillInd == -1)
+			{
+				if(mhagData.getSkill(id).getHasNegative()) // only nega skills
+				{
+					gapPoint[numGap] = -set.getSkillPoint()[i] - 10;
+					gapSkillID[numGap] = id;
+					numGap++;
+				}
+				//minus number, meaning points left to reach negative effect
+			}
+			else
+			{
+				gapPoint[numGap] = triggers[skillInd] - set.getSkillPoint()[i];
+				gapSkillID[numGap] = id;
+				numGap++;
+				skillMatched[skillInd] = true;
+			}
+
+		}
+
+		for(int i = 0; i < skills.length; i++)
+		{
+			if(skills[i] < 0)continue; // not used
+			if(skillMatched[i])continue;
+			gapPoint[numGap] = triggers[i];
+			gapSkillID[numGap] = skills[i];
+			numGap++;
+		}
+	}
+
 	public void checkCharmLimit()
 	{
 		//initialize
@@ -224,6 +274,7 @@ public class Generator {
 			}
 		}
 
+		/* charm limit output
 		for(int i = 0; i < skillClassMax + 1; i++)
 			System.out.printf("%3d: %3d %3d, %3d %3d\n",i,charmPointMax[0][i],
 				charmSlotMax[0][i],charmPointMax[1][i],charmSlotMax[1][i]);
@@ -231,6 +282,7 @@ public class Generator {
 			System.out.printf("%3d: %7s %3d, %7s %3d\n",i,limitedMax[0][i],charmPoint2nd[0][i],
 				limitedMax[1][i],charmPoint2nd[1][i]);
 		System.out.printf("%d, %d, %d\n",skillClassMax,skillPointMax, numSlotMax);
+		 */
 
 	}
 
@@ -242,12 +294,12 @@ public class Generator {
 			for(int j = 0; j < numSlotMax + 1; j++)
 				Arrays.fill(charmLookupTable[i][j], -1);
 
+		//add charm with only 1 skill and any number of slots
 		for(int i = 0; i < Charm.charmIDTot; i++)
 		{
 			Charm charm = mhagData.getCharm(i);
 			if(charm.getSkillClass()[0].equals(autoGuardClass))continue;
-			if((charm.getNumSkill() == 2) &&
-				(charm.getSkillPoint()[1] != -10))continue;  // B-10; A-10 (maybe only in mh3)
+			if(charm.getNumSkill() == 2)continue;
 
 			int skillClassInd = charm.getCharmInd()[1];
 			int point = charm.getSkillPoint()[0];
@@ -256,6 +308,42 @@ public class Generator {
 			charmLookupTable[skillClassInd][nSlot][point] = i;
 		}
 
+		// add charm with 2nd skill
+		for(int i = 0; i < Charm.charmIDTot; i++)
+		{
+			Charm charm = mhagData.getCharm(i);
+			if(charm.getSkillClass()[0].equals(autoGuardClass))continue;
+
+			int skillClassInd = charm.getCharmInd()[1];
+			int point = charm.getSkillPoint()[0];
+			int nSlot = charm.getNumSlot();
+
+			if(charmLookupTable[skillClassInd][nSlot][point] >= 0)continue;
+
+			charmLookupTable[skillClassInd][nSlot][point] = i;
+		}
+
+		//fill others closest charm (better)
+		for(int i = 1; i < skillClassMax + 1; i++)
+			for(int j = 0; j < numSlotMax + 1; j++)
+			{
+				int lowest = 0;
+				for(int k = 1; k < skillPointMax + 1; k++)
+				{
+					if(charmLookupTable[i][j][k] >= 0)
+					{
+						lowest = k;
+						break;
+					}
+				}
+				for(int k = 1; k < lowest; k++)
+				{
+					charmLookupTable[i][j][k] =
+						charmLookupTable[i][j][lowest];
+				}
+			}
+
+		/*  output lookup table
 		for(int i = 0; i < skillClassMax + 1; i++)
 			for(int j = 0; j < numSlotMax + 1; j++)
 			{
@@ -264,6 +352,7 @@ public class Generator {
 					System.out.printf("%3d ",charmLookupTable[i][j][k]);
 				System.out.println();
 			}
+		 */
 
 	}
 
@@ -275,6 +364,41 @@ public class Generator {
 		return id;
 	}
 
+	// show available jewels based on skills
+	public void showJewels()
+	{
+		boolean lowRank = true;
+		for(int i = 0; i < Skill.skillIDTot; i++)
+		{
+			Skill skill = mhagData.getSkill(i);
+			System.out.printf("%3d %-10s: ", i, skill.getSkillName());
+			for(int j = 1; j < 4; j++)
+			{
+				if(skill.getJewelID(lowRank, j) < 0)continue;
+				System.out.printf("(%d) %3d ",j,skill.getJewelSkillPoint(lowRank, j));
+			}
+			System.out.println();
+		}
+		lowRank = false;
+		for(int i = 0; i < Skill.skillIDTot; i++)
+		{
+			Skill skill = mhagData.getSkill(i);
+			System.out.printf("%3d %-10s: ", i, skill.getSkillName());
+			for(int j = 1; j < 4; j++)
+			{
+				if(skill.getJewelID(lowRank, j) < 0)continue;
+				System.out.printf("(%d) %3d ",j,skill.getJewelSkillPoint(lowRank, j));
+			}
+			System.out.println();
+		}
+	}
+
+	// jewel Optimization
+	public void optJewel(Set aSet)
+	{
+
+
+	}
 
 	public Mhag getMhag() {return mhag;}
 	public MhagData getMhagData() {return mhagData;}
@@ -311,6 +435,12 @@ public class Generator {
 	private int[] effects = new int[10]; //effect list
 	private int[] skills = new int[10];  //skill list for corresponding effects
 	private int[] triggers = new int[10];  //trigger points, for fast access
+
+	// optimizer data
+	private int[] gapPoint = new int[100];
+	private int[] gapSkillID = new int[100];
+	private int numGap;
+	private int[] slots = new int[4];
 
 	//generator charm data
 	private int[][] charmPointMax = new int[2][10];  //(lr/hr) skill limit

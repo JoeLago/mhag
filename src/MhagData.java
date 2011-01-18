@@ -149,8 +149,18 @@ public class MhagData {
 
 			// set jewel id/points for the positive skill (1st one)
 			int point = aJewel.getSkillPoint()[0];
-			skillList[id[0]].setJewelID(aJewel.getNumSlot(), i);
-			skillList[id[0]].setJewelSkillPoint(aJewel.getNumSlot(), point);
+			boolean ifLowRank = aJewel.getLowRank();
+			int nSlot = aJewel.getNumSlot();
+			if((skillList[id[0]].getJewelID(ifLowRank, nSlot) >= 0) &&
+				(skillList[id[0]].getJewelSkillPoint(ifLowRank, nSlot) > point))continue;
+			skillList[id[0]].setJewelID(ifLowRank, nSlot, i);
+			skillList[id[0]].setJewelSkillPoint(ifLowRank, nSlot, point);
+
+			if(ifLowRank)
+			{
+				skillList[id[0]].setJewelID(false, nSlot, i);
+				skillList[id[0]].setJewelSkillPoint(false, nSlot, point);
+			}
 
 		}
 
