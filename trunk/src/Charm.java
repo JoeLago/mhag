@@ -1,7 +1,8 @@
 /**
  * @program MHAG
  * @ Charm Class
- * @version 1.0
+ * @version 2.0
+ * add generator functions
  * @author Tifa@mh3
  */
 
@@ -180,6 +181,28 @@ public class Charm {
 
 	// set charm class
 	public void setPercentage(int value) {percentage = value;}
+
+	//char to int
+	public int skillClassToInd(String skillClass)
+	{
+		return (int)skillClass.toCharArray()[0] - 64;
+	}
+
+	//find index of charm general type ; index 1: rank; index 2: skillclass index
+	public int[] getCharmInd()
+	{
+		int[] ind = new int[2];
+		if(lowRank)
+			ind[0] = 0;
+		else
+			ind[0] = 1;
+
+		if(numSkill == 0)
+			ind[1] = 0;
+		else
+			ind[1] = skillClassToInd(skillClass[0]);
+		return ind;
+	}
 
 	private int charmID = 0; // Charm ID
 	private String charmName = ""; // skillClass + skillPoint
