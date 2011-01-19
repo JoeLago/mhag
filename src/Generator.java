@@ -66,7 +66,7 @@ public class Generator {
 			Skill skill = mhagData.getSkill(gapSkillID[i]);
 			System.out.printf("%3d: %-10s %3d\n", i, skill.getSkillName(), gapPoint[i]);
 		}
-		for(int i = 0; i < 4; i++)
+		for(int i = 0; i < 5; i++)
 			System.out.printf("%3d: %d\n", i, slots[i]);
 
 		optJewel(aSet);
@@ -396,8 +396,61 @@ public class Generator {
 	// jewel Optimization
 	public void optJewel(Set aSet)
 	{
+		int nSlotMaxTheory = checkSlotMaxTheory();
+		int[] slotMin = checkSlotsMin(aSet);
 
+		int nSkillMax = checkSkillMax(nSlotMaxTheory, slotMin);
 
+		System.out.println(nSlotMaxTheory);
+		System.out.println(Arrays.toString(slotMin));
+		System.out.println(nSkillMax);
+
+	}
+
+	// check total number of slots ,including weapon slots
+	public int checkSlotMaxTheory()
+	{
+		int nSlot = 3;  //max weapon slot
+		for(int i = 1; i <= 3; i++)
+			nSlot += slots[i] * i;
+		nSlot += slots[4] * slots[0]; //torso up regard as two slots
+		return nSlot;
+	}
+
+	// check minimum possible slots to fill gaps for each skill
+	public int[] checkSlotsMin(Set aSet)
+	{
+		int[] slotMin = new int[numGap];
+		boolean lowRank = aSet.getLowRank();
+
+		for(int i = 0; i < numGap; i++)
+		{
+			slotMin[i] = 0;
+			int point = gapPoint[i];
+			if(point <= 0)continue;
+			Skill skill = mhagData.getSkill(gapSkillID[i]);
+			for(int j = 3; j > 0; j--)
+			{
+				if(skill.getJewelID(lowRank, j) < 0)continue;
+				int pointJewel = skill.getJewelSkillPoint(lowRank, j);
+				slotMin[i] += (point / pointJewel) * j;
+				point = point % pointJewel;
+			}
+		}
+
+		return slotMin;
+	}
+
+	// find the number of skills used in the later optimization
+	public int checkSkillMax(int nSlot, int[] slotMin)
+	{
+		int slotNow = nSlot;
+		for(int i = 0; i < slotMin.length; i++)
+		{
+			slotNow -= slotMin[i];
+			if(slotNow < 0) return i;
+		}
+		return slotMin.length;
 	}
 
 	public Mhag getMhag() {return mhag;}
