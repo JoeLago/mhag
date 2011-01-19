@@ -1633,16 +1633,24 @@ public class Set {
 
 	public int[] checkSlot(MhagData mhagData)
 	{
-		int[] slots = new int[4];
+		int[] slots = new int[5];
 		Arrays.fill(slots, 0);
 		for(int i = 0; i < 5; i++)
 		{
 			if(!inUse[i])continue;
 			Armor armor =  mhagData.getArmor(i, armorID[i]);
-			slots[armor.getNumSlot()]++;
+			if((numTorso != 0) && (i == 2))
+				slots[5] = armor.getNumSlot();
+			else
+				slots[armor.getNumSlot()]++;
+
 		}
 		Charm charm = mhagData.getCharm(charmID);
 		slots[charm.getNumSlot()]++;
+
+		//slots[0] for torso up
+		slots[0] = numTorso;
+
 		return slots;
 	}
 
