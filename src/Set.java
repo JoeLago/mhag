@@ -1640,7 +1640,7 @@ public class Set {
 			if(!inUse[i])continue;
 			Armor armor =  mhagData.getArmor(i, armorID[i]);
 			if((numTorso != 0) && (i == 2))
-				slots[5] = armor.getNumSlot();
+				slots[4] = armor.getNumSlot();
 			else
 				slots[armor.getNumSlot()]++;
 
