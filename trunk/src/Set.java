@@ -1631,27 +1631,32 @@ public class Set {
 		rateCharm(gen);  //rate Charm
 	}
 
-	public int[] checkSlot(MhagData mhagData)
+	public void checkSlot(MhagData mhagData, int[] slots, int[] slotLeft)
 	{
-		int[] slots = new int[5];
 		Arrays.fill(slots, 0);
+		Arrays.fill(slotLeft, 0);
 		for(int i = 0; i < 5; i++)
 		{
 			if(!inUse[i])continue;
 			Armor armor =  mhagData.getArmor(i, armorID[i]);
+			int nSlot = armor.getNumSlot();
 			if((numTorso != 0) && (i == 2))
-				slots[4] = armor.getNumSlot();
+				slots[4] = nSlot;
 			else
-				slots[armor.getNumSlot()]++;
+				slots[nSlot]++;
+
+			slotLeft[i] = nSlot;
 
 		}
 		Charm charm = mhagData.getCharm(charmID);
-		slots[charm.getNumSlot()]++;
+		int nSlot = charm.getNumSlot();
+		slots[nSlot]++;
+		slotLeft[6] =  nSlot;
+		slotLeft[5] = 3; //weapon slots
 
 		//slots[0] for torso up
 		slots[0] = numTorso;
 
-		return slots;
 	}
 
 
