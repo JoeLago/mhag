@@ -58,7 +58,7 @@ public class Generator {
 		aSet.setRate(this);
 
 		checkGap(aSet);
-		slots = aSet.checkSlot(mhagData);
+		aSet.checkSlot(mhagData, slots, slotLeft);
 
 		System.out.println(aSet.getRate());
 		for(int i = 0; i < numGap; i++)
@@ -408,6 +408,8 @@ public class Generator {
 		for(int i = 0; i < nSkillMax; i++)
 			System.out.println(Arrays.toString(slotUsage[i]));
 
+		System.out.println(Arrays.toString(slotLeft));
+
 	 	adjustSlot(aSet, nSkillMax, slotUsage);
 
 	}
@@ -467,11 +469,82 @@ public class Generator {
 			{
 				if(slotUsage[i][slots[4]] >= slots[0])
 				{
+					setJewel(aSet, 1, slots[4], gapSkillID[i], slots[0]);
+					torsoFound = true;
+					break;
+				}
+			}
+			if(!torsoFound && (slots[4] == 3))  // 3 slots, check 2 slot usage once
+			{
+				torsoFound = false;
+				for(int i = 0; i < nSkillMax; i++)
+				{
+					if(slotUsage[i][slots[4] - 1] >= slots[0])
+					{
+						setJewel(aSet, 1, slots[4] - 1, gapSkillID[i], slots[0]);
+						torsoFound = true;
+						break;
+					}
+				}
+			}
+			// no matter it's found or not, torso slot will be used as single slots,
+			// whenever possible,
+			// starting from the 1st skill
+
+		}
+
+		// settle skills starting from the 1st skill
+
+		for(int i = 0; i < nSkillMax; i++)  // each skill
+		{
+			int point =  gapPoint[i];
+			if(point <= 0)continue;
+			Skill skill = mhagData.getSkill(gapSkillID[i]);
+			boolean lowRank = aSet.getLowRank();
+			for(int j = 3; j > 0; j--)
+			{
+				if(skill.getJewelID(lowRank, j) < 0)continue;
+				int pointJewel = skill.getJewelSkillPoint(lowRank, j);
+				int slotNeed = point / pointJewel;
+				for(int k = 0; k < slotNeed; k++)
+				{
+					for(int l = 0; l < 7; l++)
+					{
+						if(slotLeft[l] >= j)
+						{
+							setJewel(aSet, l, j, gapSkillID[i], slots[0]);
+							point -= pointJewel;
+						}
+					}
 
 				}
 
+				//nSlotNow -= slotUsage[i][j] * j;
+				point = point % pointJewel;
 			}
 		}
+
+	}
+
+	// update slot usage
+	public void updateSlotUsage(int maxSlot, int[] slotUsage)
+	{
+
+	}
+
+	// set jewel
+	public void setJewel(Set aSet, int bodyPart, int nSlot, 
+		int skillID, int numTorso)
+	{
+		Skill skill = mhagData.getSkill(skillID);
+		int jewelID = skill.getJewelID(aSet.getLowRank(), nSlot);
+
+		// set jewel
+		int nJewel = aSet.getNumJewel(bodyPart);
+		aSet.setJewelID(bodyPart, nJewel, jewelID);
+		aSet.setNumJewel(bodyPart, ++nJewel);
+
+		slotLeft[bodyPart] -= nSlot;
 
 	}
 
@@ -515,7 +588,8 @@ public class Generator {
 	private int[] gapPoint = new int[100];
 	private int[] gapSkillID = new int[100];
 	private int numGap;
-	private int[] slots = new int[4];
+	private int[] slots = new int[5];    //slots summary based on number of slots
+	private int[] slotLeft = new int[7];  //slots for setups , used when adding jewels
 
 	//generator charm data
 	private int[][] charmPointMax = new int[2][10];  //(lr/hr) skill limit
