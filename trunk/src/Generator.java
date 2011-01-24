@@ -66,8 +66,8 @@ public class Generator {
 			Skill skill = mhagData.getSkill(gapSkillID[i]);
 			System.out.printf("%3d: %-10s %3d\n", i, skill.getSkillName(), gapPoint[i]);
 		}
-		for(int i = 0; i < 5; i++)
-			System.out.printf("%3d: %d\n", i, slots[i]);
+		System.out.println(Arrays.toString(slots));
+		System.out.println(Arrays.toString(slotLeft));
 
 		optJewel(aSet);
 
@@ -397,20 +397,16 @@ public class Generator {
 	public void optJewel(Set aSet)
 	{
 		int nSlotMaxTheory = checkSlotMaxTheory();
+		int nSkillMax = checkSlotMinUsage(aSet, nSlotMaxTheory);
 
-		//int[] slotMin = checkSlotsMin(aSet);
-		//int nSkillMax = checkSkillMax(nSlotMaxTheory, slotMin);
-		int[][] slotUsage = new int[numGap][4];
-		int nSkillMax = checkSlotMinUsage(aSet, nSlotMaxTheory, slotUsage);
+		int[] gapPointNow = new int[numGap];
+		for(int i = 0; i < numGap; i++)
+			gapPointNow[i] = gapPoint[i];
 
-		System.out.println(nSlotMaxTheory);
-		System.out.println(nSkillMax);
-		for(int i = 0; i < nSkillMax; i++)
-			System.out.println(Arrays.toString(slotUsage[i]));
+		System.out.printf("max possible slots: %d\n", nSlotMaxTheory);
+		System.out.printf("max possible skills: %d\n",nSkillMax);
 
-		System.out.println(Arrays.toString(slotLeft));
-
-	 	adjustSlot(aSet, nSkillMax, slotUsage);
+	 	adjustSlot(aSet, nSkillMax);
 
 	}
 
@@ -428,11 +424,9 @@ public class Generator {
 	// return number of max possible activated skills (only these skills are considered later)
 	// nSlotMaxTheory : theoretical max number of slots , including three weapon slots
 	// slotUsage : slot usage for each skill, int[][4]: for 1-3 slots
-	public int checkSlotMinUsage(Set aSet, int nSlotMaxTheory, int[][] slotUsage)
+	public int checkSlotMinUsage(Set aSet, int nSlotMaxTheory)
 	{
 		boolean lowRank = aSet.getLowRank();
-		for(int i = 0; i < numGap; i++)
-			Arrays.fill(slotUsage[i], 0);
 
 		int nSlotNow = nSlotMaxTheory;
 		for(int i = 0; i < numGap; i++)
@@ -444,8 +438,7 @@ public class Generator {
 			{
 				if(skill.getJewelID(lowRank, j) < 0)continue;
 				int pointJewel = skill.getJewelSkillPoint(lowRank, j);
-				slotUsage[i][j] = point / pointJewel;
-				nSlotNow -= slotUsage[i][j] * j;
+				nSlotNow -= point / pointJewel * j;
 				point = point % pointJewel;
 			}
 			if(nSlotNow < 0)
@@ -458,76 +451,7 @@ public class Generator {
 	//adjust slot for the set
 	//int nSkillMax: # of skills considered
 	//slotUsage: # max possible slot usage
-	public void adjustSlot(Set aSet, int nSkillMax, int[][] slotUsage)
-	{
-		//settle torso up first
-
-		if(slots[0]*slots[4] > 0)
-		{
-			boolean torsoFound = false;
-			for(int i = 0; i < nSkillMax; i++)
-			{
-				if(slotUsage[i][slots[4]] >= slots[0])
-				{
-					setJewel(aSet, 1, slots[4], gapSkillID[i], slots[0]);
-					torsoFound = true;
-					break;
-				}
-			}
-			if(!torsoFound && (slots[4] == 3))  // 3 slots, check 2 slot usage once
-			{
-				torsoFound = false;
-				for(int i = 0; i < nSkillMax; i++)
-				{
-					if(slotUsage[i][slots[4] - 1] >= slots[0])
-					{
-						setJewel(aSet, 1, slots[4] - 1, gapSkillID[i], slots[0]);
-						torsoFound = true;
-						break;
-					}
-				}
-			}
-			// no matter it's found or not, torso slot will be used as single slots,
-			// whenever possible,
-			// starting from the 1st skill
-
-		}
-
-		// settle skills starting from the 1st skill
-
-		for(int i = 0; i < nSkillMax; i++)  // each skill
-		{
-			int point =  gapPoint[i];
-			if(point <= 0)continue;
-			Skill skill = mhagData.getSkill(gapSkillID[i]);
-			boolean lowRank = aSet.getLowRank();
-			for(int j = 3; j > 0; j--)
-			{
-				if(skill.getJewelID(lowRank, j) < 0)continue;
-				int pointJewel = skill.getJewelSkillPoint(lowRank, j);
-				int slotNeed = point / pointJewel;
-				for(int k = 0; k < slotNeed; k++)
-				{
-					for(int l = 0; l < 7; l++)
-					{
-						if(slotLeft[l] >= j)
-						{
-							setJewel(aSet, l, j, gapSkillID[i], slots[0]);
-							point -= pointJewel;
-						}
-					}
-
-				}
-
-				//nSlotNow -= slotUsage[i][j] * j;
-				point = point % pointJewel;
-			}
-		}
-
-	}
-
-	// update slot usage
-	public void updateSlotUsage(int maxSlot, int[] slotUsage)
+	public void adjustSlot(Set aSet, int nSkillMax)
 	{
 
 	}
