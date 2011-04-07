@@ -2711,15 +2711,22 @@ public class MhagGui extends javax.swing.JFrame {
 		    int num = ind.length;
 		    String[] name = mhagData.getArmorListMenu(i, female, num, ind);
 
+		    ArrayList<String> toolTips = new ArrayList<String>();
+
 		    bodyMenu.removeAllItems();
-		    for(int j = 0; j < num; j++)
+		    bodyMenu.addItem(name[0]);
+		    toolTips.add("---");
+		    for(int j = 1; j < num; j++)
 		    {
 			    bodyMenu.addItem(name[j]);
 			    if(ind[j] == indOld[entryOld])
 			    {
 				    bodyMenu.setSelectedIndex(j);
 			    }
+			    Armor armor = mhagData.getArmor(i, ind[j]);
+			    toolTips.add(armor.getToolTips());
 		    }
+		    rendererArmor[i].setTooltips(toolTips);
 	    }
 	    adjust = false;
 

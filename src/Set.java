@@ -1467,7 +1467,7 @@ public class Set {
 			Skill skill = mhagData.getSkill(skillID[i]);
 			if((i == 0)&&(numTorso == 0))
 			{
-				title = "SKills: "+skill.getSkillName();
+				title = "Skills: "+skill.getSkillName();
 				Output.skill(mhag.getOutFormat(), outSave, true, title,
 					values, effectName, ifEff, numSkill);
 			}
