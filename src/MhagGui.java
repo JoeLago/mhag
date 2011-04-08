@@ -2109,6 +2109,7 @@ public class MhagGui extends javax.swing.JFrame {
 
 		   if(nSkill == 1)
 		   {
+			   set.setCharmSkillID(1, -1);
 			   charmSkillLabel.setVisible(true);
 			   String skillClass = charm.getSkillClass()[0];
 			   changeCharmSkill(0, skillClass, true);
@@ -2116,7 +2117,6 @@ public class MhagGui extends javax.swing.JFrame {
 				   "%+d",charm.getSkillPoint()[0]));
 			   changeCharmSkill(1, "D", false);
 			   skillPoint2.setText("");
-			   set.setCharmSkillID(1, -1);
 
 		   }
 		   else if(nSkill == 2)
@@ -2133,13 +2133,13 @@ public class MhagGui extends javax.swing.JFrame {
 		   }
 		   else
 		   {
+			   set.setCharmSkillID(0, -1);
+			   set.setCharmSkillID(1, -1);
 			   charmSkillLabel.setVisible(false);
 			   changeCharmSkill(0, "D", false);
 			   skillPoint1.setText("");
 			   changeCharmSkill(1, "D", false);
 			   skillPoint2.setText("");
-			   set.setCharmSkillID(0, -1);
-			   set.setCharmSkillID(1, -1);
 		   }
 
 	   }
