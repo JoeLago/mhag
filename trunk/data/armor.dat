@@ -536,7 +536,7 @@ Vangis Greaves        : B : L :  -- :  80 : 3 :  0 :  0 :  3 : -4 : -4 : Psychic
 Vangis Cap            : A : H :  -- :  46 : 0 :  5 :  5 :  3 : -4 : -4 : Psychic :  5 : Attack :  2 : Loading :  5 : Hunger : -1
 Vangis Vest           : G : C :  -- :  46 : 0 :  0 :  0 :  3 : -4 : -4 : Psychic :  3 : Attack :  3 : Loading :  3 : Hunger : -2
 Vangis Guards         : G : A :  -- :  46 : 0 :  0 :  0 :  3 : -4 : -4 : Psychic :  3 : Attack :  6 : Loading :  2 : Hunger : -2
-Vangis Cost           : G : W :  -- :  46 : 0 :  0 :  0 :  3 : -4 : -4 : Torso Up
+Vangis Coat           : G : W :  -- :  46 : 0 :  0 :  0 :  3 : -4 : -4 : Torso Up
 Vangis Leggings       : G : L :  -- :  46 : 3 :  0 :  0 :  3 : -4 : -4 : Psychic :  1 : Attack :  1 : Loading :  2 : Hunger : -3
 Escadora Wisdom       : A : H :  -- :  82 : 2 : -1 : -1 : -1 :  0 : -5 : FreeElemnt :  1 : Evade Dist :  2 : Blight Res :  3 : Rec Level : -3
 Escadora Soul         : B : C :  -- :  82 : 2 : -1 : -1 : -1 :  0 : -5 : FreeElemnt :  2 : Evade Dist :  2 : Blight Res :  2 : Rec Level : -1
