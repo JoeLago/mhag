@@ -708,7 +708,7 @@ public class MhagData {
 		outSave.close();
 	}
 
-	// batach galcualator (multiple code input)
+	// batch calculator (multiple code input)
 	public void batchCalc(Mhag mhag) throws FileNotFoundException
 	{
 		MhagUtil.logLine(mhag, "");
@@ -747,6 +747,47 @@ public class MhagData {
 		Output.close(mhag.getOutFormat(), outSave);
 		outSave.close();
 	}
+
+	// convert code book (backward support)
+	public void convertCodeBook(Mhag mhag) throws FileNotFoundException
+	{
+		MhagUtil.logLine(mhag, "");
+		MhagUtil.logLine(mhag, "Method: codebook backward converter");
+
+		Set aSet = new Set();  //create set data
+
+		Scanner in = new Scanner(new File(mhag.getFileIn()));
+		PrintStream outSave = new PrintStream(mhag.getFileOut());
+		Output.init(mhag.getOutFormat(), outSave);
+
+		int num = 0;
+		while (in.hasNext())
+		{
+			num++;
+			MhagUtil.logLine(mhag, "");
+			MhagUtil.logLine(mhag, String.format("Set: %d", num));
+
+			String line = in.nextLine();
+
+			boolean pass = aSet.setSetFromCode(mhag, line); //read set
+
+			if(pass) pass = aSet.checkSet(mhag, this);  //check set
+			if(!pass)
+			{
+				MhagUtil.logLine(mhag, "Error! Please Check!");
+				continue;
+			}
+
+			aSet.calcSet(mhag, this);   //calculate set
+
+			String codeLine = aSet.getSetCodeNew(this);   //get new set code
+		        outSave.println(codeLine);
+
+		}
+		Output.close(mhag.getOutFormat(), outSave);
+		outSave.close();
+	}
+
 
 	// get armor class
 	public Armor getArmor(int bodyPart, int armorID)

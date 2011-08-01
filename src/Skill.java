@@ -24,7 +24,6 @@ public class Skill {
 			Arrays.fill(jewelID[i], -1);
 			Arrays.fill(jewelSkillPoint[i], 0);
 		}
-
 	}
 
     	// read skill entry from a line
@@ -171,6 +170,21 @@ public class Skill {
 
 	public void setHasNegative(boolean ifNeg) {hasNegative = ifNeg;}
 
+	// rule out blade/gunner specific negative skills, note: this works for mhtri and mhp3rd
+	public boolean getBGSpec(boolean blade)
+	{
+		if(blade)
+			if("Precision Recoil Reload Spd".contains(skillName))
+				return false;
+			else
+				return true;
+		else
+			if("FastCharge Sharpener Sharpness".contains(skillName))
+				return false;
+			else
+				return true;
+	}
+
 	private int skillID = 0; // Skill ID
 	private String skillName = "";  // Skill Name
 	private String skillClass = "";  // A/B/C/D
@@ -182,8 +196,7 @@ public class Skill {
 	//generator data
 	private int[][] jewelID = new int[2][4]; //jewelID for the skill (1st index: lowrank 0, highrank 1)
 	private int[][] jewelSkillPoint = new int[2][4]; // skill points on the jewel
-	private boolean hasNegative = false; // has neragtive effect or not
-
+	private boolean hasNegative = false; // has negative effect or not
 
 	static int skillIDTot = 0;
 }
