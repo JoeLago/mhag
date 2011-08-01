@@ -384,6 +384,85 @@ public class Set {
 		}
 	}
 
+	// get coding of a set (new code, backward support)
+	public String getSetCodeNew(MhagData mhagData)
+	{
+		StringBuffer line = new StringBuffer(setName);
+
+		line.append(" : ");
+
+		// low/high rank
+		if(lowRank)
+			line.append("L ");
+		else
+			line.append("H ");
+
+		// blade or gunner
+		if(blade)
+			line.append("B ");
+		else
+			line.append("G ");
+
+		// armor part
+		for (int i = 0; i < 5; i++)
+		{
+			if(inUse[i])
+			{
+				String partCode = Armor.partFull.substring(i,i+1);
+				line.append(partCode + " ");
+				line.append(armorID[i]);
+				line.append(" ");
+				line.append(numJewel[i]);
+				line.append(" ");
+				for (int j = 0; j < numJewel[i]; j++)
+				{
+					line.append(jewelID[i][j]);
+					line.append(" ");
+				}
+			}
+		}
+
+		// weapon part
+		if(numJewel[5] != 0)  //weapon in use
+		{
+			line.append("X ");
+			line.append(numJewel[5]);
+			line.append(" ");
+			for (int j = 0; j < numJewel[5]; j++)
+			{
+				line.append(jewelID[5][j]);
+				line.append(" ");
+			}
+		}
+
+		// charm part
+		if(inUse[6])  //charm in use
+		{
+			line.append("Y ");
+			Charm charm = mhagData.getCharm(charmID);
+			line.append(charm.getNumSlot());
+			line.append(" ");
+			line.append(numCharmSkill); // charm skill
+			line.append(" ");
+			for (int j = 0; j < numCharmSkill; j++)
+			{
+				line.append(charmSkillID[j]);
+				line.append(" ");
+				line.append(charm.getSkillPoint()[j]);
+				line.append(" ");
+			}
+			line.append(numJewel[6]);  // charm jewel
+			line.append(" ");
+			for (int j = 0; j < numJewel[6]; j++)
+			{
+				line.append(jewelID[6][j]);
+				line.append(" ");
+			}
+		}
+
+		return line.toString();
+	}
+
 	// get coding of a set (batch version code)
 	public String getSetCode()
 	{
@@ -1488,7 +1567,7 @@ public class Set {
 
 	}
 
-	// calculate set stats (simple version
+	// calculate set stats (simple version)
 	public void quickCalcSet(Mhag mhag, MhagData mhagData)
 	{
 		// defense
@@ -1538,7 +1617,8 @@ public class Set {
 				if(skill.getHasNegative()) //always check nagative skills
 				{
 					if(point <= -10) //active negative effects
-						rate -= 20; //punish negative effects
+						if(skill.getBGSpec(blade))
+							rate -= 20; //punish negative effects
 				}
 			}
 			else //check required skills
@@ -1628,13 +1708,12 @@ public class Set {
 		quickCalcSet(gen.getMhag(), gen.getMhagData()); //plus rate defense;
 		rateEffects(gen);  // rate skills
 		rateSlots(gen);  //rate slot usage
-		rateCharm(gen);  //rate Charm
+		//rateCharm(gen);  //rate Charm , not supported in current mhag
 	}
 
-	public void checkSlot(MhagData mhagData, int[] slots, int[] slotLeft)
+	public void checkSlot(MhagData mhagData, int[] slots)
 	{
 		Arrays.fill(slots, 0);
-		Arrays.fill(slotLeft, 0);
 		for(int i = 0; i < 5; i++)
 		{
 			if(!inUse[i])continue;
@@ -1645,14 +1724,10 @@ public class Set {
 			else
 				slots[nSlot]++;
 
-			slotLeft[i] = nSlot;
-
 		}
 		Charm charm = mhagData.getCharm(charmID);
 		int nSlot = charm.getNumSlot();
 		slots[nSlot]++;
-		slotLeft[6] =  nSlot;
-		slotLeft[5] = 3; //weapon slots
 
 		//slots[0] for torso up
 		slots[0] = numTorso;

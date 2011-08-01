@@ -20,7 +20,7 @@ public class Mhag
 	public static void showHelp()
 	{
 		System.out.println("Usage: javac Mhag method " +
-			"<cal/bat/gen/ref> in <input.dat> " +
+			"<cal/bat/gen/ref/bak> in <input.dat> " +
 			"out <result> log <''/log/off> " +
 			"format <text/html>");
 		System.exit(0);
@@ -52,6 +52,10 @@ public class Mhag
 				else if(args[i].equals("ref"))
 				{
 					method = 3;
+				}
+				else if(args[i].equals("bak"))
+				{
+					method = 4;
 				}
 				else
 				{
@@ -105,15 +109,18 @@ public class Mhag
 			}
 			i++;
 		}
-		if( outFormat == 0)
+		if( method != 4)
 		{
-			if(!fileOut.endsWith(".txt"))
-				fileOut = fileOut +".txt";
-		}
-		else
-		{
-			if(!fileOut.endsWith(".html"))
-				fileOut = fileOut + ".html";
+			if( outFormat == 0)
+			{
+				if(!fileOut.endsWith(".txt"))
+					fileOut = fileOut +".txt";
+			}
+			else
+			{
+				if(!fileOut.endsWith(".html"))
+					fileOut = fileOut + ".html";
+			}
 		}
 
 	}
@@ -172,6 +179,7 @@ public class Mhag
 		mhagData.dataPreProc();  //pre process
 
 		if(method == 3)mhagData.showReference(this); //show ref
+		if(method == 4)mhagData.convertCodeBook(this); //convert codebook
 	}
 
 	// get method
@@ -236,7 +244,7 @@ public class Mhag
 
 		mhag.init(mhagData, args);
 
-		mhag.method = 2;  //tifa temp
+//		mhag.method = 2;  //tifa temp
 
 		mhag.proc(mhagData);
 
@@ -247,6 +255,7 @@ public class Mhag
 
 	private int method = 0;  // MHAG method 0: caluclator; 1: batch;
 				 // 2: generator; 3: reference;
+				 // 4: backward support old code file
 	private String fileIn = "input.dat";  // MHAG default input file
 	private String fileOut = "result";  // MHAG default output file
 	private String fileLog = "log";  // MHAG default log file
