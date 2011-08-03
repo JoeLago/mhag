@@ -2052,7 +2052,6 @@ public class MhagGui extends javax.swing.JFrame {
 	   set.setCharmSkillID(1, -1);
 	   set.setCharmSkillPoint(0, 0);
 	   set.setCharmSkillPoint(1, 0);
-	   System.out.println(nSlot);
 
 	   int bodyPart = 6;
 	   boolean lowRank = set.getLowRank();
