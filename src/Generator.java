@@ -31,8 +31,11 @@ public class Generator {
 
 		gen.readGenInput(gen.mhag.getFileIn());
 
+		/* to simplify the problem
+		 * current version of Mhag doesn't support charm auto search
 		gen.checkCharmLimit();
 	        gen.createCharmLookupTable();
+		 */
 
 		gen.genMain(aSet);
 
@@ -42,23 +45,25 @@ public class Generator {
 
 	public void genMain(Set aSet)
 	{
-		if(genMode == 0)
-			setOptimizer(aSet, true);
-		else if(genMode == 1)
-			setOptimizer(aSet, false);
+		if(genMode == 0)  // jewel optimization
+			setOptimizer(aSet);
+		else if(genMode == 1)  // set search
+			System.exit(0); //not ready yet, tifa
+			//setOptimizer(aSet);
 //		else
 //			aSet = setSearch(aSet);
 
 	}
 
-	public void setOptimizer(Set aSet, boolean jewelOnly)
+	// Jewel Optimization
+	public void setOptimizer(Set aSet)
 	{
 		//aSet.save(mhag, mhagData, System.out);
 
 		aSet.setRate(this);
 
 		checkGap(aSet);
-		aSet.checkSlot(mhagData, slots, slotLeft);
+		aSet.checkSlot(mhagData, slots);
 
 		System.out.println(aSet.getRate());
 		for(int i = 0; i < numGap; i++)
@@ -67,7 +72,6 @@ public class Generator {
 			System.out.printf("%3d: %-10s %3d\n", i, skill.getSkillName(), gapPoint[i]);
 		}
 		System.out.println(Arrays.toString(slots));
-		System.out.println(Arrays.toString(slotLeft));
 
 		optJewel(aSet);
 
@@ -176,9 +180,12 @@ public class Generator {
 			{
 				if(mhagData.getSkill(id).getHasNegative()) // only nega skills
 				{
-					gapPoint[numGap] = -set.getSkillPoint()[i] - 10;
-					gapSkillID[numGap] = id;
-					numGap++;
+					if(mhagData.getSkill(id).getBGSpec(set.getBlade())) //not include b/g specific nega skills
+					{
+						gapPoint[numGap] = -10 - set.getSkillPoint()[i];
+						gapSkillID[numGap] = id;
+						numGap++;
+					}
 				}
 				//minus number, meaning points left to reach negative effect
 			}
@@ -202,6 +209,7 @@ public class Generator {
 		}
 	}
 
+	/*
 	public void checkCharmLimit()
 	{
 		//initialize
@@ -223,7 +231,7 @@ public class Generator {
 			if(skill.getSkillName().equals("Auto-Guard"))
 			{
 				autoGuardID = i;
-				autoGuardClass = skill.getSkillClass();
+//				autoGuardClass = skill.getSkillClass();
 			}
 		}
 
@@ -274,7 +282,7 @@ public class Generator {
 			}
 		}
 
-		/* charm limit output
+		// charm limit output
 		for(int i = 0; i < skillClassMax + 1; i++)
 			System.out.printf("%3d: %3d %3d, %3d %3d\n",i,charmPointMax[0][i],
 				charmSlotMax[0][i],charmPointMax[1][i],charmSlotMax[1][i]);
@@ -282,10 +290,11 @@ public class Generator {
 			System.out.printf("%3d: %7s %3d, %7s %3d\n",i,limitedMax[0][i],charmPoint2nd[0][i],
 				limitedMax[1][i],charmPoint2nd[1][i]);
 		System.out.printf("%d, %d, %d\n",skillClassMax,skillPointMax, numSlotMax);
-		 */
 
 	}
+	*/
 
+	/*
 	public void createCharmLookupTable()
 	{
 		// create table, initial it as null (-1)
@@ -343,7 +352,7 @@ public class Generator {
 				}
 			}
 
-		/*  output lookup table
+		//  output lookup table
 		for(int i = 0; i < skillClassMax + 1; i++)
 			for(int j = 0; j < numSlotMax + 1; j++)
 			{
@@ -352,9 +361,10 @@ public class Generator {
 					System.out.printf("%3d ",charmLookupTable[i][j][k]);
 				System.out.println();
 			}
-		 */
 
 	}
+	*/
+
 
 	//get charmID from skill points
 	public static int getCharmID(String skillClass, int skillPoint, int numSlot)
@@ -396,17 +406,12 @@ public class Generator {
 	// jewel Optimization
 	public void optJewel(Set aSet)
 	{
-		int nSlotMaxTheory = checkSlotMaxTheory();
-		int nSkillMax = checkSlotMinUsage(aSet, nSlotMaxTheory);
+		//int nSlotMaxTheory = checkSlotMaxTheory();
+		//int nSkillMax = checkSlotMinUsage(aSet, nSlotMaxTheory);
+		//System.out.printf("max possible slots: %d\n", nSlotMaxTheory);
+		//System.out.printf("max possible skills: %d\n",nSkillMax);
 
-		int[] gapPointNow = new int[numGap];
-		for(int i = 0; i < numGap; i++)
-			gapPointNow[i] = gapPoint[i];
-
-		System.out.printf("max possible slots: %d\n", nSlotMaxTheory);
-		System.out.printf("max possible skills: %d\n",nSkillMax);
-
-	 	adjustSlot(aSet, nSkillMax);
+	 	adjustSlot(aSet);
 
 	}
 
@@ -450,25 +455,8 @@ public class Generator {
 
 	//adjust slot for the set
 	//int nSkillMax: # of skills considered
-	//slotUsage: # max possible slot usage
-	public void adjustSlot(Set aSet, int nSkillMax)
+	public void adjustSlot(Set aSet)
 	{
-
-	}
-
-	// set jewel
-	public void setJewel(Set aSet, int bodyPart, int nSlot, 
-		int skillID, int numTorso)
-	{
-		Skill skill = mhagData.getSkill(skillID);
-		int jewelID = skill.getJewelID(aSet.getLowRank(), nSlot);
-
-		// set jewel
-		int nJewel = aSet.getNumJewel(bodyPart);
-		aSet.setJewelID(bodyPart, nJewel, jewelID);
-		aSet.setNumJewel(bodyPart, ++nJewel);
-
-		slotLeft[bodyPart] -= nSlot;
 
 	}
 
@@ -513,7 +501,6 @@ public class Generator {
 	private int[] gapSkillID = new int[100];
 	private int numGap;
 	private int[] slots = new int[5];    //slots summary based on number of slots
-	private int[] slotLeft = new int[7];  //slots for setups , used when adding jewels
 
 	//generator charm data
 	private int[][] charmPointMax = new int[2][10];  //(lr/hr) skill limit

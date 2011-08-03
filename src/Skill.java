@@ -1,8 +1,9 @@
 /**
  * @program MHAG
  * @ Skill Class
- * @version 2.0
+ * @version 2.1
  * add generator support
+ * support new talisman system
  * @author Tifa@mh3
  */
 
@@ -23,8 +24,8 @@ public class Skill {
 		{
 			Arrays.fill(jewelID[i], -1);
 			Arrays.fill(jewelSkillPoint[i], 0);
+			Arrays.fill(maxSkillPoint[i], 0);
 		}
-
 	}
 
     	// read skill entry from a line
@@ -55,7 +56,14 @@ public class Skill {
 			else if(wordIndex == 2)
 			{
 				// read Skill Class
-				skill.skillClass = word;
+				int[] numbers = new int [8];
+				int nMax = 0;
+
+				MhagUtil.extractInt(word, nMax, numbers);
+				for ( int i = 0; i < 2; i++)
+					for ( int j = 0; j < 4; j++)
+						skill.maxSkillPoint[i][j] = numbers[i*4+j];
+
 
 			}
 			else
@@ -96,8 +104,16 @@ public class Skill {
 	// get skill name
 	public String getSkillName() {return skillName;}
 
-	// get skill class
-	public String getSkillClass() {return skillClass;}
+	// get max skill point
+	public int[][] getMaxSkillPoint() {return maxSkillPoint;}
+
+	public int getMaxSkillPoint(boolean lowRank, int nSlot)
+	{
+		if(lowRank)
+			return maxSkillPoint[0][nSlot];
+		else
+			return maxSkillPoint[1][nSlot];
+	}
 
 	// get number of effects
 	public int getNumEffect() {return numEffect;}
@@ -171,9 +187,26 @@ public class Skill {
 
 	public void setHasNegative(boolean ifNeg) {hasNegative = ifNeg;}
 
+	// rule out blade/gunner specific negative skills, note: this works for mhtri and mhp3rd
+	public boolean getBGSpec(boolean blade)
+	{
+		if(blade)
+			if("Precision Recoil Reload Spd".contains(skillName))
+				return false;
+			else
+				return true;
+		else
+			if("FastCharge Sharpener Sharpness".contains(skillName))
+				return false;
+			else
+				return true;
+	}
+
 	private int skillID = 0; // Skill ID
 	private String skillName = "";  // Skill Name
-	private String skillClass = "";  // A/B/C/D
+//	private String skillClass = "";  // A/B/C/D  
+	private int[][] maxSkillPoint = new int [2][4]; //max point (1st index: low rank 0, high rank 1)
+							// 2nd index: 0 - 3 slots
 	private int numEffect = 0;  // # Effects , 6 max, 3 pos ,3 neg
 	private String[] effectName;   // Effect Name
 	private int[] effectID;   // Effect IDs
@@ -182,8 +215,7 @@ public class Skill {
 	//generator data
 	private int[][] jewelID = new int[2][4]; //jewelID for the skill (1st index: lowrank 0, highrank 1)
 	private int[][] jewelSkillPoint = new int[2][4]; // skill points on the jewel
-	private boolean hasNegative = false; // has neragtive effect or not
-
+	private boolean hasNegative = false; // has negative effect or not
 
 	static int skillIDTot = 0;
 }

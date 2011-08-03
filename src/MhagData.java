@@ -1,8 +1,9 @@
 /**
  * @program MHAG
  * @ MhagData Class , store MHAG data
- * @version 2.0
+ * @version 2.1
  * support generator data
+ * support new talisman system
  * @author Tifa@mh3
  */
 
@@ -24,7 +25,7 @@ public class MhagData {
 		readSkill(mhag);
 		readJewel(mhag);
 		readArmor(mhag);
-		readCharm(mhag);
+		//readCharm(mhag);
 	}
 
 	// process data right after access
@@ -33,8 +34,8 @@ public class MhagData {
 		genEffectList();
 		preProcessJewelList();
 		preProcessArmorList();
-		preProcessCharmList();
-		preProcessSkillList();
+//		preProcessCharmList();
+//		preProcessSkillList();
 	}
 
 	// process data right after access
@@ -45,8 +46,8 @@ public class MhagData {
 		genRefEffect();
 		genRefJewel();
 		genRefArmor();
-		genRefCharm();
-		genRefSkillClass();
+		//genRefCharm();
+//		genRefSkillClass();
 		genRefCompleteSet();
 	}
 
@@ -188,7 +189,7 @@ public class MhagData {
 
 	}
 
-	// pre process skill list (genate skill list in class)
+	/* pre process skill list (genate skill list in class)
 	public void preProcessSkillList()
 	{
 		indexSkillInClass = new int[5][Skill.skillIDTot];
@@ -213,8 +214,9 @@ public class MhagData {
 		}
 
 	}
+	 */
 
-	// pre process charm list (charm name , percentage )
+	/* pre process charm list (charm name , percentage )
 	public void preProcessCharmList()
 	{
 		int[] numInClass = new int[5];
@@ -240,6 +242,7 @@ public class MhagData {
 		}
 
 	}
+	 */
 
 	// read jewel from jewel file
 	public void readJewel(Mhag mhag) throws FileNotFoundException
@@ -364,7 +367,7 @@ public class MhagData {
 
 	}
 
-	// read charm from charm file
+	/* read charm from charm file
 	public void readCharm(Mhag mhag) throws FileNotFoundException
 	{
 		Scanner in = new Scanner(new File(fileCharm));
@@ -413,6 +416,7 @@ public class MhagData {
 		}
 
 	}
+	 */
 
 	// get Skill ID, from a skill name
 	public int getSkillIDFromName(String skillName)
@@ -504,7 +508,7 @@ public class MhagData {
 		out.close();
 	}
 
-	// write charm reference file
+	/* write charm reference file
 	public void genRefCharm() throws FileNotFoundException
 	{
 		PrintStream out = new PrintStream(fileRefCharm);
@@ -516,8 +520,9 @@ public class MhagData {
 		}
 		out.close();
 	}
+	 */
 
-	// write skill class file
+	/* write skill class file
 	public void genRefSkillClass() throws FileNotFoundException
 	{
 		PrintStream out = new PrintStream(fileRefSkillClass);
@@ -533,6 +538,7 @@ public class MhagData {
 		}
 		out.close();
 	}
+	 */
 
 	// write input file for complete set
 	public void genRefCompleteSet() throws FileNotFoundException
@@ -708,7 +714,7 @@ public class MhagData {
 		outSave.close();
 	}
 
-	// batach galcualator (multiple code input)
+	// batch calculator (multiple code input)
 	public void batchCalc(Mhag mhag) throws FileNotFoundException
 	{
 		MhagUtil.logLine(mhag, "");
@@ -772,13 +778,7 @@ public class MhagData {
 		return skillList[skillID];
 	}
 
-	// get charm class
-	public Charm getCharm(int charmID)
-	{
-		return charmList[charmID];
-	}
-
-	// get number of skill in a class
+	/* get number of skill in a class
 	public int getNumSkillInClass(int nClass)
 	{
 		return numSkillInClass[nClass];
@@ -789,6 +789,7 @@ public class MhagData {
 	{
 		return indexSkillInClass[nClass];
 	}
+	 */
 
 	// get armor list (index copy, name can be got from armorList)
 	// sorted by armorName;
@@ -896,7 +897,7 @@ public class MhagData {
 		return indFinal;
 	}
 
-	public int[] getSkillList(String skillClass)
+	public int[] getSkillList(boolean lowRank, int nSlot)
 	{
 		int nMax = Skill.skillIDTot;
 		int[] index = new int[nMax];
@@ -905,13 +906,12 @@ public class MhagData {
 		for (int i = 0; i < nMax; i++)
 		{
 			Skill skill = skillList[i];
-			if(!skill.getSkillClass().equals(skillClass))continue;
+			if(skill.getMaxSkillPoint(lowRank, nSlot) == 0)continue;
 
 			index[num] = i;
 			nameStr[num] = skill.getSkillName();
 			num++;
 		}
-
 
 		int[] indNew = MhagUtil.sortIndex(num, nameStr);
 
@@ -924,7 +924,7 @@ public class MhagData {
 	}
 
 	// get list and exclude one exception
-	public int[] getSkillList(String skillClass, int exception)
+	public int[] getSkillList(boolean lowRank, int nSlot, int exception)
 	{
 		int nMax = Skill.skillIDTot;
 		int[] index = new int[nMax];
@@ -933,14 +933,13 @@ public class MhagData {
 		for (int i = 0; i < nMax; i++)
 		{
 			Skill skill = skillList[i];
-			if(!skill.getSkillClass().equals(skillClass))continue;
+			if(skill.getMaxSkillPoint(lowRank, nSlot) == 0)continue;
 			if(skill.getSkillID() == exception)continue;
 
 			index[num] = i;
 			nameStr[num] = skill.getSkillName();
 			num++;
 		}
-
 
 		int[] indNew = MhagUtil.sortIndex(num, nameStr);
 
@@ -952,6 +951,7 @@ public class MhagData {
 		return indFinal;
 	}
 
+	/*
 	public int[] getCharmList(boolean lowRank)
 	{
 		int nMax = Charm.charmIDTot;
@@ -978,18 +978,19 @@ public class MhagData {
 
 		return indFinal;
 	}
+	 */
 
 	// Constants for file names
 	private final String dirData = "data/";
 	private final String fileArmor = dirData+"armor.dat";
 	private final String fileJewel = dirData+"jewel.dat";
 	private final String fileSkill = dirData+"skill.dat";
-	private final String fileCharm = dirData+"charm.dat";
+//	private final String fileCharm = dirData+"charm.dat";
 	private final String dirRef = "reference/";
 	private final String fileRefArmor = dirRef+"ref_armor.dat";
 	private final String fileRefJewel = dirRef+"ref_jewel.dat";
 	private final String fileRefSkill = dirRef+"ref_skill.dat";
-	private final String fileRefCharm = dirRef+"ref_charm.dat";
+//	private final String fileRefCharm = dirRef+"ref_charm.dat";
 	private final String fileRefEffect = dirRef+"ref_effect.dat";
 	private final String fileRefSkillClass = dirRef+"ref_skill_class.dat";
 	private final String fileCompleteBlade = dirRef+"blade_sets.input";
@@ -999,12 +1000,12 @@ public class MhagData {
 	private Armor[][] armorList;
 	private Skill[] skillList;
 	private Jewel[] jewelList;
-	private Charm[] charmList;
+//	private Charm[] charmList;
 	private Effect[] effectList;
 
 	// indeces
-	private int[][] indexSkillInClass;  // skill id list
-	private int[] numSkillInClass;  // number skill in class
+//	private int[][] indexSkillInClass;  // skill id list
+//	private int[] numSkillInClass;  // number skill in class
 
 	// Some Constants
 	static String emptyName = "-----";
