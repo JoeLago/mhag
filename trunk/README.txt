@@ -1,5 +1,5 @@
 MHAG: Monster Hunter Armor Generator 
-v.1.0 Final Release
+v.1.1
 Author : Tifa@mh3
 MHAG Project: code.google.com/mhag
 Proposed MHAG code/output wiki : mhag.wetpaint.com
