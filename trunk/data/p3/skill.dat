@@ -1,103 +1,105 @@
 # Complete Armor Skill List (99)
 # Format ^Skill : Class : Skill 1 : Points 1 : Skill 2 : Points 2 ... 
 # Note : 1. Torso up is not included
-#        2. Class : A, B, C, N (not exist)
-Health : D : Health -30 : -15 : Health -10 : -10 : Health +20 : 10 : Health +50 : 15
-Attack : C : Attack Down (L) : -20 : Attack Down (M) : -15 : Attack Down (S) : -10 : Attack Up (S) : 10 : Attack Up (M) : 15 : Attack Up (L) : 20
-Defense : C : Defense Down (L) : -20 : Defense Down (M) : -15 : Defense Down (S) : -10 : Defense Up (S) : 10 : Defense Up (M) : 15 : Defense Up (L) : 20
-Fire Res : D : Fire Res Down : -10 : Fire Res Up (S) : 10 : Fire Res Up (L) : 15
-Water Res : D : Water Res Down : -10 : Water Res Up (S) : 10 : Water Res Up (L) : 15
-Ice Res : D : Ice Res Down : -10 : Ice Res Up (S) : 10 : Ice Res Up (L) : 15
-ThunderRes : D : Thunder Res Down : -10 : Thunder Res Up (S) : 10 : Thunder Res Up (L) : 15
-Dragon Res : D : Dragon Res Down : -10 : Dragon Res Up (S) : 10 : Dragon Res Up (L) : 15
-Poison : C : Double Poison : -10 : Negate Posion : 10
-Paralysis : C : Double Paralysis : -10 : Negate Paralysis : 10
-Sleep : C : Double Sleep : -10 : Negate Sleep : 10
-Stun : D : Double Stun : -10 : Halve Stun : 10 : Negate Stun : 15
-Mud/Snow : C : Mud/Snow : 10
-Tremor Res : C : Tremor-Proof : 10
-Wind Res : B : Windproof : 10 : High Windproof : 15
-Antiseptic : C : Antiseptic : 10
-Anti-Theft : C : Anti-Theft : 10
-Hearing : A : Earplugs : 10 : HG Earplugs : 15
-Solid Def : C : Anti Defense Down : 10
-Blight Res : A : Blightproof : 10
-Handicraft : A : Sharpness +1 : 15
-Fencing : A : Mind's Eye : 10
-Sharpness : A : Blunt Edge : -10 : Razor Sharp : 10
-Crit Draw : A : Critical Draw : 10
-PunishDraw : A : Punishing Draw : 10
-Guard : B : Guard -1 : -10 : Guard +1 : 10 : Guard +2 : 15
-Guard Up : B : Guard Boost : 10
-Sharpener : C : Slow Sharpening : -10 : Speed Sharpening : 10
-Rapid Fire : A : Bonus Shot : 10
-Auto-Guard : E : Auto-Guard : 10
-Reload Spd : B : Reload Speed -3 : -20 : Reload Speed -2 : -15 : Reload Speed -1 : -10 : Reload Speed +1 : 10 : Reload Speed +2 : 15 : Reload Speed +3 : 20
-Recoil : A : Recoil Down -3 : -20 : Recoil Down -2 : -15 : Recoil Down -1 : -10 : Recoil Down +1 : 10 : Recoil Down +2 : 15 : Recoil Down +3 : 20
-Precision : C : Steadiness -2 : -15 : Steadiness -1 : -10 : Steadiness +1 : 10 : Steadiness +2 : 15
-NormalS Up : A : NormalS/RapidBow Boost : 10
-PierceS Up : A : PierceS/PrceBow Boost : 10
-PelletS Up : A : PelletS/ScattBow Boost : 10
-Normal S+ : C : NormalS All Up : 10
-Pierce S+ : C : PierceS Lv1 Up : 10 : PierceS All Up : 15
-Pellet S+ : C : PelletS Lv1 Up : 10 : PelletS All Up : 15
-Crag S+ : C : Crag S Lv1 Up : 10 : Crag S All Up :15
-Clust S+ : C : Clust S Lv1 Up : 10 : Clust S All Up : 15
-Slice S+ : C : Slice S Up : 10
-Para C+ : C : Para C Up : 10
-Sleep C+ : C : Sleep C Up : 10
-Poison C+ : C : Poison C Up : 10
-Power C+ : C : Power C Up : 10
-CloseR C+ : C : CloseR C Up : 10
-Exhaust C+ : C : Exhaust C Up : 10
-Stamina : A : Short Sprinter : -10 : Marathon Runner : 10
-Evade Dist : B : Evasion Up : 15
-Evasion : B : Evasion Down : -10 : Evasion +1 : 10 : Evasion +2 : 15
-Sheathe : B : Speed Sheathe : 10
-Expert : C : Critical Eye -3 : -20 : Critical Eye -2 : -15 : Critical Eye -1 : -10 : Critical Eye +1 : 10 : Critical Eye +2 : 15 : Critical Eye +3 : 20
-Status : B : Status Atk Down : -10 : Status Atk +1 : 10 : Status Atk +2 : 15
-Blow : A : Weakness Blow : 10
-Bash : A : Destructor : 10
-Loading : A : Load Up : 15
-FastCharge : A : Distraction : -10 : Focus : 10
-Earnest : A : Power Release +1 : 10 : Power Release +2: 15
-KO : B : KO : 10
-Exhaust : B : Stamina Taker : 10
-Potential : B : Worrywart : -10 : Adrenaline +1 : 10 : Adrenaline +2 : 15
-Survivor : N : Fortify : 10
-Bomb Boost : C : Bombardier : 10
-Flute : C : Flute Expert : 10
-Gunnery : C : Gunnery Master : 10 : Gunnery King : 15
-Fire Atk : C : Fire Atk Down : -10 : Fire Atk +1 : 10 : Fire Atk +2 : 15
-Water Atk : C : Water Atk Down : -10 : Water Atk +1 : 10 : Water Atk +2 : 15
-Ice Atk : C : Ice Atk Down : -10 : Ice Atk +1 : 10 : Ice Atk +2 : 15
-ThunderAtk : C : Thunder Atk Down : -10 : Thunder Atk +1 : 10 : Thunder Atk +2 : 15
-Dragon Atk : C : Dragon Atk Down : -10 : Dragon Atk +1 : 10 : Dragon Atk +2 : 15
-Elemental : A : Elemental Atk Down : -10 : Elemental Atk Up : 10
-Protection : C : Demonic Blessing : -10 : Divine Blessing : 10
-Constitutn : B : Constitution -2 : -15 : Constitution -1 : -10 : Constitution +1 : 10 : Constitution +2 : 15
-Sense : C : Taunt : -10 : Sneak : 10
-Dungmaster : C : Dung Bomb Expert : 10
-Fate : A : Horrible Luck : -15 : Bad Luck : -10 : Good Luck : 10 : Great Luck : 15
-Psychic : D : Detect : 10 : Autotracker : 15
-Perception : C : Capture Guru : 10
-Tranquilzr : A : Capture Pro : 10 : Capture Expert : 15
-Hunter : C : Hunter Life : 10
-Transportr : C : Pro Transporter : 10
-Heat Res : C : Heat Surge : -10 : Heat Cancel : 10
-Cold Res : C : Cold Surge : -10 : Cold Cancel : 10
-Rec Level : B : Recovery Down : -10 : Recovery Up : 10
-Rec Speed : D : Recovery Spd -2 : -15 : Recovery Spd -1 : -10 : Recovery Spd +1 : 10 : Recovery Spd +2 : 15
-StaminaRec : B : Stamina Rec Down : -10 : Stamina Rec Up : 10
-Wide-Range : D : Wide-Range +1 : 10 : Wide-Range +2 : 20
-LastingPwr : C : Item Use Down : -10 : Item Use Up : 10
-SpeedSetup : C : Trap Master : 10
-Eating : B : Slow Eater : -10 : Speed Eating +1 : 10 : Speed Eating +2 : 15
-Hunger : C :Double Hunger : -15 : Raise Hunger : -10 : Halve Hunger : 10 : Negate Hunger : 15
-Gluttony : D : Gourmand : 10 : Scavenger : 15
-Combo Rate : D : Combination -20% : -15 : Combination -10% : -10 : Combination +20% : 10 : Combination +45% : 15
-Combo Plus : C : Combination Pro : 10
-Gathering : D : Gather -1 : -10 : Gather +1 : 10 : Gather +2 : 15
-Spd Gather : C : Speed Gatherer : 10
-Whim : D : Devil's Whim : -15 : Spectre's Whim : -10 : Spirit's Whim : 10 : Divine Whim : 15
-Carving : A : Carving Pro : 15
+#        2. skill point for lr+0/1/2/3 slots; hr+ 0/1/2/3 slots
+#        3. auto-guard : 10 0 0 0 10 0 0 0 (only no slot 10 max) ; survivor : 0 0 0 0 0 0 0 0 (nonexist)
+#        4. low rank max slot : 2 ; high rank max slot : 3
+Health : 10 10 8 0 13 13 13 11 : Health -30 : -15 : Health -10 : -10 : Health +20 : 10 : Health +50 : 15
+Attack : 7 7 6 0 10 10 10 8 : Attack Down (L) : -20 : Attack Down (M) : -15 : Attack Down (S) : -10 : Attack Up (S) : 10 : Attack Up (M) : 15 : Attack Up (L) : 20
+Defense : 7 7 6 0 10 10 10 8 : Defense Down (L) : -20 : Defense Down (M) : -15 : Defense Down (S) : -10 : Defense Up (S) : 10 : Defense Up (M) : 15 : Defense Up (L) : 20
+Fire Res : 10 10 8 0 13 13 13 11 : Fire Res Down : -10 : Fire Res Up (S) : 10 : Fire Res Up (L) : 15
+Water Res : 10 10 8 0 13 13 13 11 : Water Res Down : -10 : Water Res Up (S) : 10 : Water Res Up (L) : 15
+Ice Res : 10 10 8 0 13 13 13 11 : Ice Res Down : -10 : Ice Res Up (S) : 10 : Ice Res Up (L) : 15
+ThunderRes : 10 10 8 0 13 13 13 11 : Thunder Res Down : -10 : Thunder Res Up (S) : 10 : Thunder Res Up (L) : 15
+Dragon Res : 10 10 8 0 13 13 13 11 : Dragon Res Down : -10 : Dragon Res Up (S) : 10 : Dragon Res Up (L) : 15
+Poison : 7 7 6 0 7 7 6 0 : Double Poison : -10 : Negate Posion : 10
+Paralysis : 7 7 6 0 7 7 6 0 : Double Paralysis : -10 : Negate Paralysis : 10
+Sleep : 7 7 6 0 7 7 6 0 : Double Sleep : -10 : Negate Sleep : 10
+Stun : 10 10 8 0 13 13 13 11 : Double Stun : -10 : Halve Stun : 10 : Negate Stun : 15
+Mud/Snow : 8 8 6 0 8 8 6 0 : Mud/Snow : 10
+Tremor Res : 8 8 6 0 8 8 6 0 : Tremor-Proof : 10
+Wind Res : 4 4 3 0 5 5 5 4 : Windproof : 10 : High Windproof : 15
+Antiseptic : 8 8 6 0 8 8 6 0 : Antiseptic : 10
+Anti-Theft : 10 10 8 0 10 10 8 0 : Anti-Theft : 10
+Hearing : 0 0 0 0 5 5 5 4 : Earplugs : 10 : HG Earplugs : 15
+Solid Def : 8 8 6 0 8 8 6 0 : Anti Defense Down : 10
+Blight Res : 0 0 0 0 5 5 5 4 : Blightproof : 10
+Handicraft : 0 0 0 0 5 5 5 4 : Sharpness +1 : 15
+Fencing : 0 0 0 0 5 5 5 4 : Mind's Eye : 10
+Sharpness : 0 0 0 0 5 5 5 4 : Blunt Edge : -10 : Razor Sharp : 10
+Crit Draw : 0 0 0 0 5 5 5 4 : Critical Draw : 10
+PunishDraw : 0 0 0 0 5 5 5 4 : Punishing Draw : 10
+Guard : 6 6 5 0 6 6 6 5 : Guard -1 : -10 : Guard +1 : 10 : Guard +2 : 15
+Guard Up : 4 4 3 0 6 6 6 5 : Guard Boost : 10
+Sharpener : 4 4 3 0 8 8 8 6 : Slow Sharpening : -10 : Speed Sharpening : 10
+Rapid Fire : 0 0 0 0 5 5 5 4 : Bonus Shot : 10
+Auto-Guard : 10 0 0 0 10 0 0 0 : Auto-Guard : 10
+Reload Spd : 4 4 3 0 6 6 6 5 : Reload Speed -3 : -20 : Reload Speed -2 : -15 : Reload Speed -1 : -10 : Reload Speed +1 : 10 : Reload Speed +2 : 15 : Reload Speed +3 : 20
+Recoil : 0 0 0 0 5 5 5 4 : Recoil Down -3 : -20 : Recoil Down -2 : -15 : Recoil Down -1 : -10 : Recoil Down +1 : 10 : Recoil Down +2 : 15 : Recoil Down +3 : 20
+Precision : 10 10 8 0 10 10 8 0 : Steadiness -2 : -15 : Steadiness -1 : -10 : Steadiness +1 : 10 : Steadiness +2 : 15
+NormalS Up : 0 0 0 0 5 5 5 4 : NormalS/RapidBow Boost : 10
+PierceS Up : 0 0 0 0 5 5 5 4 : PierceS/PrceBow Boost : 10
+PelletS Up : 0 0 0 0 5 5 5 4 : PelletS/ScattBow Boost : 10
+Normal S+ : 8 8 6 0 8 8 6 0 : NormalS All Up : 10
+Pierce S+ : 10 10 8 0 10 10 8 0 : PierceS Lv1 Up : 10 : PierceS All Up : 15
+Pellet S+ : 10 10 8 0 10 10 8 0 : PelletS Lv1 Up : 10 : PelletS All Up : 15
+Crag S+ : 10 10 8 0 10 10 8 0 : Crag S Lv1 Up : 10 : Crag S All Up :15
+Clust S+ : 10 10 8 0 10 10 8 0 : Clust S Lv1 Up : 10 : Clust S All Up : 15
+Slice S+ : 10 10 8 0 10 10 8 0 : Slice S Up : 10
+Para C+ : 10 10 8 0 10 10 8 0 : Para C Up : 10
+Sleep C+ : 10 10 8 0 10 10 8 0 : Sleep C Up : 10
+Poison C+ : 10 10 8 0 10 10 8 0 : Poison C Up : 10
+Power C+ : 10 10 8 0 10 10 8 0 : Power C Up : 10
+CloseR C+ : 10 10 8 0 10 10 8 0 : CloseR C Up : 10
+Exhaust C+ : 10 10 8 0 10 10 8 0 : Exhaust C Up : 10
+Stamina : 0 0 0 0 5 5 5 4 : Short Sprinter : -10 : Marathon Runner : 10
+Evade Dist : 6 6 5 0 6 6 6 5 : Evasion Up : 15
+Evasion : 6 6 5 0 6 6 6 5 : Evasion Down : -10 : Evasion +1 : 10 : Evasion +2 : 15
+Sheathe : 6 6 5 0 6 6 6 5 : Speed Sheathe : 10
+Expert : 7 7 6 0 10 10 10 8 : Critical Eye -3 : -20 : Critical Eye -2 : -15 : Critical Eye -1 : -10 : Critical Eye +1 : 10 : Critical Eye +2 : 15 : Critical Eye +3 : 20
+Status : 4 4 3 0 6 6 6 5 : Status Atk Down : -10 : Status Atk +1 : 10 : Status Atk +2 : 15
+Blow : 0 0 0 0 5 5 5 4 : Weakness Blow : 10
+Bash : 0 0 0 0 5 5 5 4 : Destructor : 10
+Loading : 0 0 0 0 6 6 6 5 : Load Up : 15
+FastCharge : 0 0 0 0 5 5 5 4 : Distraction : -10 : Focus : 10
+Earnest : 0 0 0 0 6 6 6 5 : Power Release +1 : 10 : Power Release +2: 15
+KO : 6 6 5 0 6 6 6 5 : KO : 10
+Exhaust : 6 6 5 0 6 6 6 5 : Stamina Taker : 10
+Potential : 6 6 5 0 6 6 6 5 : Worrywart : -10 : Adrenaline +1 : 10 : Adrenaline +2 : 15
+Survivor : 0 0 0 0 0 0 0 0 : Fortify : 10
+Bomb Boost : 8 8 6 0 10 10 10 8 : Bombardier : 10
+Flute : 8 8 6 0 10 10 10 8 : Flute Expert : 10
+Gunnery : 8 8 6 0 10 10 10 8 : Gunnery Master : 10 : Gunnery King : 15
+Fire Atk : 7 7 6 0 9 9 9 7 : Fire Atk Down : -10 : Fire Atk +1 : 10 : Fire Atk +2 : 15
+Water Atk : 7 7 6 0 9 9 9 7 : Water Atk Down : -10 : Water Atk +1 : 10 : Water Atk +2 : 15
+Ice Atk : 7 7 6 0 9 9 9 7 : Ice Atk Down : -10 : Ice Atk +1 : 10 : Ice Atk +2 : 15
+ThunderAtk : 7 7 6 0 9 9 9 7 : Thunder Atk Down : -10 : Thunder Atk +1 : 10 : Thunder Atk +2 : 15
+Dragon Atk : 7 7 6 0 9 9 9 7 : Dragon Atk Down : -10 : Dragon Atk +1 : 10 : Dragon Atk +2 : 15
+Elemental : 0 0 0 0 5 5 5 4 : Elemental Atk Down : -10 : Elemental Atk Up : 10
+Protection : 7 7 6 0 9 9 9 7 : Demonic Blessing : -10 : Divine Blessing : 10
+Constitutn : 6 6 5 0 6 6 6 5 : Constitution -2 : -15 : Constitution -1 : -10 : Constitution +1 : 10 : Constitution +2 : 15
+Sense : 10 10 8 0 10 10 8 0 : Taunt : -10 : Sneak : 10
+Dungmaster : 10 10 8 0 10 10 8 0 : Dung Bomb Expert : 10
+Fate : 0 0 0 0 5 5 5 4 : Horrible Luck : -15 : Bad Luck : -10 : Good Luck : 10 : Great Luck : 15
+Psychic : 10 10 8 0 12 12 12 10 : Detect : 10 : Autotracker : 15
+Perception : 10 10 8 0 10 10 8 0 : Capture Guru : 10
+Tranquilzr : 0 0 0 0 5 5 5 4 : Capture Pro : 10 : Capture Expert : 15
+Hunter : 10 10 8 0 10 10 8 0 : Hunter Life : 10
+Transportr : 10 10 8 0 10 10 8 0 : Pro Transporter : 10
+Heat Res : 10 10 8 0 10 10 8 0 : Heat Surge : -10 : Heat Cancel : 10
+Cold Res : 10 10 8 0 10 10 8 0 : Cold Surge : -10 : Cold Cancel : 10
+Rec Level : 6 6 5 0 6 6 6 5 : Recovery Down : -10 : Recovery Up : 10
+Rec Speed : 7 7 6 0 12 12 12 10 : Recovery Spd -2 : -15 : Recovery Spd -1 : -10 : Recovery Spd +1 : 10 : Recovery Spd +2 : 15
+StaminaRec : 6 6 5 0 6 6 6 5 : Stamina Rec Down : -10 : Stamina Rec Up : 10
+Wide-Range : 10 10 8 0 12 12 12 10 : Wide-Range +1 : 10 : Wide-Range +2 : 20
+LastingPwr : 10 10 8 0 10 10 8 0 : Item Use Down : -10 : Item Use Up : 10
+SpeedSetup : 10 10 8 0 10 10 8 0 : Trap Master : 10
+Eating : 4 4 3 0 5 5 5 4 : Slow Eater : -10 : Speed Eating +1 : 10 : Speed Eating +2 : 15
+Hunger : 10 10 8 0 10 10 10 8 :Double Hunger : -15 : Raise Hunger : -10 : Halve Hunger : 10 : Negate Hunger : 15
+Gluttony : 13 13 11 0 13 13 11 0 : Gourmand : 10 : Scavenger : 15
+Combo Rate : 13 13 11 0 13 13 11 0 : Combination -20% : -15 : Combination -10% : -10 : Combination +20% : 10 : Combination +45% : 15
+Combo Plus : 10 10 8 0 10 10 8 0 : Combination Pro : 10
+Gathering : 13 13 11 0 13 13 11 0 : Gather -1 : -10 : Gather +1 : 10 : Gather +2 : 15
+Spd Gather : 10 10 8 0 10 10 8 0 : Speed Gatherer : 10
+Whim : 13 13 11 0 13 13 11 0 : Devil's Whim : -15 : Spectre's Whim : -10 : Spirit's Whim : 10 : Divine Whim : 15
+Carving : 0 0 0 0 5 5 5 4 : Carving Pro : 15

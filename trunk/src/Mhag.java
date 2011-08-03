@@ -150,7 +150,7 @@ public class Mhag
 	{
 		if(logOpt == 2)return;
 		outLog.println(Output.splitter1);
-		outLog.println("MHAG: ver 1.0");
+		outLog.println("MHAG: ver 1.1");
 		outLog.println("Monster Hunter Armor Generator");
 		outLog.println("By Tifa@mh3, Dec 2010");
 		outLog.println("http://www.youtube.com/mh3journey");
@@ -236,7 +236,7 @@ public class Mhag
 
 		mhag.init(mhagData, args);
 
-		mhag.method = 2;  //tifa temp
+//		mhag.method = 2;  //tifa temp
 
 		mhag.proc(mhagData);
 
@@ -247,6 +247,7 @@ public class Mhag
 
 	private int method = 0;  // MHAG method 0: caluclator; 1: batch;
 				 // 2: generator; 3: reference;
+				 // 4: backward support old code file
 	private String fileIn = "input.dat";  // MHAG default input file
 	private String fileOut = "result";  // MHAG default output file
 	private String fileLog = "log";  // MHAG default log file

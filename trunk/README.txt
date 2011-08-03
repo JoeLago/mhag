@@ -24,6 +24,13 @@ MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is d
      I will also make source code packages for stable versions. (v1.0, v2.0)
 
 History:
+v.1.1 08/02/2011:
+   1.new feature :  New talisman system (mainly for mhp3rd), max skill point data from official strategy book
+   2.bug : change output typo: SKill to Skill
+   3.bug :  wrong tooltips when swtiching female/male
+   4.bug : backward support to java 1.5 (fixed save & exit window)
+   5.error : guild+ armor data error , vangis coat typo
+
 v.1.0 Final Release, 01/10/2011:
    1.new feature : add backward support to java 1.5 and Mac OS
    2.new feature : add "save before exit" dialog when code list is changed.
@@ -69,10 +76,7 @@ Known Issues:
 1). Current support for MHP3.(experimental)
 * Translation : skill/jewels have same name translation as those in www.mhf3.com.  Check the site for the original Japanese name.
 * armor pieces : all armor sets are available to all players except for one female-only set.(Nadeshiko/Kikyo set) MHAG doesn't exclude it in male mode.
-* charm: current version is based on "MHP3rd charm formula and information" at google doc made by Holywoodchuck.  But I only used 4 Charm classes, because, imo, the charm system is too complicated to be true.  Let me know if you find problems.
-* Skill class: I changed 4 skills, based my knowledge of MH3.  
-  Wind Res : B;  Earnest : A; Loading : A; Eating : B
-
+* charm: current version allows flexible input of charm skill & charm skill point.  The data is based on "MHP3rd Official Strategy Book".
 
 Acknowledgements
 Many thanks to Capcom unity, Bobo's www.mhf3.com and holywoodchunk's charm information.
