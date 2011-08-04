@@ -16,11 +16,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="MHAG: Monster Hunter Armor Generator   Ver 1.1"/>
-    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
-  <AccessibilityProperties>
-    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="MHAG: Monster Hunter Armor Generator   Ver 1.1"/>
-  </AccessibilityProperties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
   </SyntheticProperties>
@@ -48,7 +44,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jTabbedPane1" max="32767" attributes="0"/>
+              <Component id="jTabbedPane1" min="-2" pref="630" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -100,7 +96,7 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="setup" pref="626" max="32767" attributes="1"/>
+                              <Component id="setup" pref="631" max="32767" attributes="1"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -217,7 +213,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="gunner" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="35" max="32767" attributes="0"/>
+                          <EmptySpace pref="36" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -435,7 +431,7 @@
                                   <Component id="skillPoint2" min="-2" pref="60" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="22" max="32767" attributes="0"/>
+                          <EmptySpace pref="37" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1141,7 +1137,7 @@
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                           <Component id="jTextData" min="-2" pref="175" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="saveOutput" pref="95" max="32767" attributes="0"/>
+                          <Component id="saveOutput" pref="111" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1290,7 +1286,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextSetName" pref="192" max="32767" attributes="0"/>
+                          <Component id="jTextSetName" pref="224" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1342,7 +1338,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="codeBook" max="32767" attributes="0"/>
+                              <Component id="codeBook" pref="367" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="convert" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -1355,7 +1351,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="undoInteract" min="-2" pref="130" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jScrollPane1" alignment="0" pref="637" max="32767" attributes="1"/>
+                          <Component id="jScrollPane1" alignment="0" pref="631" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPreview2" min="-2" pref="586" max="-2" attributes="0"/>
@@ -1373,7 +1369,7 @@
                                   <Component id="codeBook" min="-2" max="-2" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" pref="418" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" pref="423" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="loadSetInteract" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1676,7 +1672,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1230" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1233" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -1725,7 +1721,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jScrollAbout" pref="394" max="32767" attributes="0"/>
+                              <Component id="jScrollAbout" pref="396" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -1786,7 +1782,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollHelpList" min="-2" pref="173" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jScrollHelpText" pref="529" max="32767" attributes="0"/>
+                          <Component id="jScrollHelpText" pref="544" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1795,8 +1791,8 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jScrollHelpText" alignment="1" pref="489" max="32767" attributes="0"/>
-                              <Component id="jScrollHelpList" alignment="1" pref="489" max="32767" attributes="0"/>
+                              <Component id="jScrollHelpText" alignment="1" pref="492" max="32767" attributes="0"/>
+                              <Component id="jScrollHelpList" alignment="1" pref="492" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
