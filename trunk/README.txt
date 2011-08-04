@@ -24,6 +24,9 @@ MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is d
      I will also make source code packages for stable versions. (v1.0, v2.0)
 
 History:
+v.1.1a 08/03/2011:
+   1.change charm slot menu (more user friendly)
+   2.adjust gui preview frame
 v.1.1 08/02/2011:
    1.new feature :  New talisman system (mainly for mhp3rd), max skill point data from official strategy book
    2.bug : change output typo: SKill to Skill

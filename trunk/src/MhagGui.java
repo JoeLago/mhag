@@ -140,7 +140,7 @@ public class MhagGui extends javax.swing.JFrame {
                 helpText = new javax.swing.JTextArea();
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-                setTitle("MHAG: Monster Hunter Armor Generator   Ver 1.0");
+                setTitle("MHAG: Monster Hunter Armor Generator   Ver 1.1");
                 setResizable(false);
                 addWindowListener(new java.awt.event.WindowAdapter() {
                         public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -541,7 +541,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                charmSkill1.setFont(new java.awt.Font("Monospaced", 0, 12));
+                charmSkill1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 charmSkill1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 charmSkill1.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -658,7 +658,7 @@ public class MhagGui extends javax.swing.JFrame {
                                                 .add(charmSkill2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                                 .add(18, 18, 18)
                                                 .add(skillPoint2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                                .addContainerGap(24, Short.MAX_VALUE))
+                                .addContainerGap(22, Short.MAX_VALUE))
                 );
                 setupLayout.setVerticalGroup(
                         setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -791,7 +791,7 @@ public class MhagGui extends javax.swing.JFrame {
                                 .add(29, 29, 29)
                                 .add(jTextData, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 175, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(saveOutput, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                                .add(saveOutput, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
                                 .addContainerGap())
                 );
                 outputLayout.setVerticalGroup(
@@ -837,7 +837,7 @@ public class MhagGui extends javax.swing.JFrame {
                         setNamePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                         .add(org.jdesktop.layout.GroupLayout.TRAILING, setNamePanelLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .add(jTextSetName, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                                .add(jTextSetName, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
                                 .addContainerGap())
                 );
                 setNamePanelLayout.setVerticalGroup(
@@ -868,9 +868,9 @@ public class MhagGui extends javax.swing.JFrame {
                                                                 .add(setNamePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                                         .add(calculatorLayout.createSequentialGroup()
                                                 .addContainerGap()
-                                                .add(setup, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE)))
+                                                .add(setup, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)))
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jScrollPreview, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 584, Short.MAX_VALUE))
+                                .add(jScrollPreview, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 586, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 );
                 calculatorLayout.setVerticalGroup(
                         calculatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -892,7 +892,7 @@ public class MhagGui extends javax.swing.JFrame {
 
                 jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;Calculator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/pic/calculator.png")), calculator, ""); // NOI18N
 
-                jScrollPreview2.setFont(new java.awt.Font("Monospaced", 0, 12));
+                jScrollPreview2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 jScrollPreview2.setHorizontalScrollBar(null);
 
                 jTextPreview2.setColumns(20);
@@ -1203,10 +1203,7 @@ public class MhagGui extends javax.swing.JFrame {
                 getContentPane().setLayout(layout);
                 layout.setHorizontalGroup(
                         layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                        .add(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 1238, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 1238, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1214,6 +1211,8 @@ public class MhagGui extends javax.swing.JFrame {
                                 .add(jTabbedPane1)
                                 .addContainerGap())
                 );
+
+                getAccessibleContext().setAccessibleName("MHAG: Monster Hunter Armor Generator   Ver 1.1");
 
                 pack();
         }// </editor-fold>//GEN-END:initComponents
@@ -2705,11 +2704,11 @@ public class MhagGui extends javax.swing.JFrame {
     {
 
 	charmMenu.removeAllItems();
-	charmMenu.addItem("---"); 
-	charmMenu.addItem("o--");
-	charmMenu.addItem("oo-");
+	charmMenu.addItem("No Slot");
+	charmMenu.addItem("1 Slot");
+	charmMenu.addItem("2 Slots");
 	if(!lowRank)
-		charmMenu.addItem("ooo");
+		charmMenu.addItem("3 Slots");
 
 	charmMenu.setSelectedIndex(0);
 	charmMenu.setVisible(true);
