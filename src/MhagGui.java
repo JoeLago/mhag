@@ -141,13 +141,14 @@ public class MhagGui extends javax.swing.JFrame {
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
                 setTitle("MHAG: Monster Hunter Armor Generator   Ver 1.1");
+                setResizable(false);
                 addWindowListener(new java.awt.event.WindowAdapter() {
                         public void windowClosing(java.awt.event.WindowEvent evt) {
                                 formWindowClosing(evt);
                         }
                 });
 
-                jTabbedPane1.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+                jTabbedPane1.setFont(new java.awt.Font("Monospaced", 1, 14));
                 jTabbedPane1.setOpaque(true);
 
                 rank.setBorder(javax.swing.BorderFactory.createTitledBorder("Rank"));
@@ -218,7 +219,7 @@ public class MhagGui extends javax.swing.JFrame {
                 hunterTypeLayout.setHorizontalGroup(
                         hunterTypeLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                         .add(hunterTypeLayout.createSequentialGroup()
-                                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap(13, Short.MAX_VALUE)
                                 .add(blade))
                         .add(hunterTypeLayout.createSequentialGroup()
                                 .addContainerGap()
@@ -657,7 +658,7 @@ public class MhagGui extends javax.swing.JFrame {
                                                 .add(charmSkill2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                                 .add(18, 18, 18)
                                                 .add(skillPoint2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                                .addContainerGap(37, Short.MAX_VALUE))
+                                .addContainerGap(22, Short.MAX_VALUE))
                 );
                 setupLayout.setVerticalGroup(
                         setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -790,7 +791,7 @@ public class MhagGui extends javax.swing.JFrame {
                                 .add(29, 29, 29)
                                 .add(jTextData, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 175, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(saveOutput, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                                .add(saveOutput, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
                                 .addContainerGap())
                 );
                 outputLayout.setVerticalGroup(
@@ -807,12 +808,12 @@ public class MhagGui extends javax.swing.JFrame {
                 );
 
                 jScrollPreview.setForeground(javax.swing.UIManager.getDefaults().getColor("Panel.background"));
-                jScrollPreview.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+                jScrollPreview.setFont(new java.awt.Font("Monospaced", 0, 12));
                 jScrollPreview.setHorizontalScrollBar(null);
 
                 jTextPreview.setColumns(20);
                 jTextPreview.setEditable(false);
-                jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+                jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12));
                 jTextPreview.setForeground(new java.awt.Color(1, 1, 1));
                 jTextPreview.setRows(5);
                 jTextPreview.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview"));
@@ -836,7 +837,7 @@ public class MhagGui extends javax.swing.JFrame {
                         setNamePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                         .add(org.jdesktop.layout.GroupLayout.TRAILING, setNamePanelLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .add(jTextSetName, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                                .add(jTextSetName, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
                                 .addContainerGap())
                 );
                 setNamePanelLayout.setVerticalGroup(
@@ -867,7 +868,7 @@ public class MhagGui extends javax.swing.JFrame {
                                                                 .add(setNamePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                                         .add(calculatorLayout.createSequentialGroup()
                                                 .addContainerGap()
-                                                .add(setup, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)))
+                                                .add(setup, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)))
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                 .add(jScrollPreview, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 586, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 );
@@ -886,7 +887,7 @@ public class MhagGui extends javax.swing.JFrame {
                                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                                                 .add(setup, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 351, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                         .add(jScrollPreview, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 535, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(17, Short.MAX_VALUE))
+                                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
 
                 jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;Calculator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/pic/calculator.png")), calculator, ""); // NOI18N
@@ -989,7 +990,7 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                 .add(convertHTML)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(Output, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 122, Short.MAX_VALUE)
+                                .add(Output, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
                                 .addContainerGap())
                 );
                 convertLayout.setVerticalGroup(
@@ -1058,7 +1059,7 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addContainerGap()
                                 .add(viewerLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                         .add(org.jdesktop.layout.GroupLayout.TRAILING, viewerLayout.createSequentialGroup()
-                                                .add(codeBook, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE)
+                                                .add(codeBook, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                                 .add(convert, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                         .add(viewerLayout.createSequentialGroup()
@@ -1069,7 +1070,7 @@ public class MhagGui extends javax.swing.JFrame {
                                                 .add(deleteInteract, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 130, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                                 .add(undoInteract, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 130, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                        .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE))
+                                        .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE))
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                 .add(jScrollPreview2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 586, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 );
@@ -1083,7 +1084,7 @@ public class MhagGui extends javax.swing.JFrame {
                                                         .add(convert, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                                         .add(codeBook, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 423, Short.MAX_VALUE)
+                                                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE)
                                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                                 .add(viewerLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                                                         .add(loadSetInteract)
@@ -1091,7 +1092,7 @@ public class MhagGui extends javax.swing.JFrame {
                                                         .add(deleteInteract)
                                                         .add(undoInteract)))
                                         .add(org.jdesktop.layout.GroupLayout.LEADING, jScrollPreview2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 535, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(17, Short.MAX_VALUE))
+                                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
 
                 jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;Viewer</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/pic/viewer.png")), viewer, ""); // NOI18N
@@ -1100,11 +1101,11 @@ public class MhagGui extends javax.swing.JFrame {
                 generator.setLayout(generatorLayout);
                 generatorLayout.setHorizontalGroup(
                         generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                        .add(0, 1233, Short.MAX_VALUE)
+                        .add(0, 1230, Short.MAX_VALUE)
                 );
                 generatorLayout.setVerticalGroup(
                         generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                        .add(0, 552, Short.MAX_VALUE)
+                        .add(0, 546, Short.MAX_VALUE)
                 );
 
                 jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;Generator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/pic/generator.png")), generator, ""); // NOI18N
@@ -1155,15 +1156,15 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addContainerGap()
                                 .add(jScrollHelpList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 173, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(jScrollHelpText, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE)
+                                .add(jScrollHelpText, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE)
                                 .addContainerGap())
                 );
                 jPanel1Layout.setVerticalGroup(
                         jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                         .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                                        .add(jScrollHelpText, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 492, Short.MAX_VALUE)
-                                        .add(jScrollHelpList, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 492, Short.MAX_VALUE))
+                                        .add(jScrollHelpText, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
+                                        .add(jScrollHelpList, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE))
                                 .addContainerGap())
                 );
 
@@ -1190,7 +1191,7 @@ public class MhagGui extends javax.swing.JFrame {
                                 .add(aboutLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                         .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .add(aboutLayout.createSequentialGroup()
-                                                .add(jScrollAbout, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
+                                                .add(jScrollAbout, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
                                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                                 .add(jLabel2)))
                                 .addContainerGap())
