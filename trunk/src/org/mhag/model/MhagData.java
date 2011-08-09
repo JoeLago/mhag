@@ -1,3 +1,5 @@
+package org.mhag.model;
+
 /**
  * @program MHAG
  * @ MhagData Class , store MHAG data
@@ -10,7 +12,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
-import java.net.URISyntaxException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -21,7 +22,7 @@ public class MhagData {
 	}
 
 	// read data file
-	public void readFile(Mhag mhag) throws FileNotFoundException, URISyntaxException
+	public void readFile(Mhag mhag) 
 	{
 		readSkill(mhag);
 		readJewel(mhag);
@@ -53,9 +54,9 @@ public class MhagData {
 	}
 
 	// read skill from skill file
-	public void readSkill(Mhag mhag) throws FileNotFoundException, URISyntaxException
+	public void readSkill(Mhag mhag) 
 	{
-		Scanner in = new Scanner(new File(getClass().getClassLoader().getResource(fileSkill).toURI()));
+		Scanner in = new Scanner(getClass().getResourceAsStream(fileSkill));
 
 		// check total # of skills
 		int nMax = 0;
@@ -78,7 +79,7 @@ public class MhagData {
 			skillList[i] = new Skill();
 
 		}
-		Scanner in2 = new Scanner(new File(getClass().getClassLoader().getResource(fileSkill).toURI()));
+		Scanner in2 = new Scanner(getClass().getResourceAsStream(fileSkill));
 
 		// read skill entry
 		int ioErr = 0;
@@ -246,9 +247,9 @@ public class MhagData {
 	 */
 
 	// read jewel from jewel file
-	public void readJewel(Mhag mhag) throws FileNotFoundException, URISyntaxException
+	public void readJewel(Mhag mhag)
 	{
-		Scanner in = new Scanner(new File(getClass().getClassLoader().getResource(fileJewel).toURI()));
+		Scanner in = new Scanner(getClass().getResourceAsStream(fileJewel));
 
 		// check total # of skills
 		int nMax = 0;
@@ -271,7 +272,7 @@ public class MhagData {
 			jewelList[i] = new Jewel();
 
 		}
-		Scanner in2 = new Scanner(new File(getClass().getClassLoader().getResource(fileJewel).toURI()));
+		Scanner in2 = new Scanner(getClass().getResourceAsStream(fileJewel));
 
 		// read Jewel entry
 		int ioErr = 0;
@@ -296,9 +297,9 @@ public class MhagData {
 	}
 
 	// read armor from armor file
-	public void readArmor(Mhag mhag) throws FileNotFoundException, URISyntaxException
+	public void readArmor(Mhag mhag) 
 	{
-		Scanner in = new Scanner(new File(getClass().getClassLoader().getResource(fileArmor).toURI()));
+		Scanner in = new Scanner(getClass().getResourceAsStream(fileArmor));
 
 		// check total # of skills
 		int nMax[] = new int[5];
@@ -339,7 +340,7 @@ public class MhagData {
 			}
 		}
 
-		Scanner in2 = new Scanner(new File(getClass().getClassLoader().getResource(fileArmor).toURI()));
+		Scanner in2 = new Scanner(getClass().getResourceAsStream(fileArmor));
 		// read Armor entry
 		int ioErr = 0;
 		int[] armorIndex = new int[5];
@@ -684,7 +685,7 @@ public class MhagData {
 	}
 
 	// calculator (one input version)
-	public void calculator(Mhag mhag) throws FileNotFoundException, URISyntaxException
+	public void calculator(Mhag mhag) throws FileNotFoundException
 	{
 		MhagUtil.logLine(mhag, "");
 		MhagUtil.logLine(mhag, "Method: MHAG Set Calcualtor");
@@ -716,15 +717,14 @@ public class MhagData {
 	}
 
 	// batch calculator (multiple code input)
-	public void batchCalc(Mhag mhag) throws FileNotFoundException, URISyntaxException
+	public void batchCalc(Mhag mhag) throws FileNotFoundException
 	{
 		MhagUtil.logLine(mhag, "");
 		MhagUtil.logLine(mhag, "Method: MHAG Batch Calcualtor");
 
 		Set aSet = new Set();  //create set data
 
-//		Scanner in = new Scanner(new File(mhag.getFileIn()));
-		Scanner in = new Scanner(new File(getClass().getClassLoader().getResource(mhag.getFileIn()).toURI()));
+  		Scanner in = new Scanner(new File(mhag.getFileIn()));
 
 		PrintStream outSave = new PrintStream(mhag.getFileOut());
 		Output.init(mhag.getOutFormat(), outSave);

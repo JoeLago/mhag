@@ -1,3 +1,5 @@
+package org.mhag.model;
+
 /**
  * @program MHAG
  * @ Main Mhag Class
@@ -8,7 +10,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
-import java.net.URISyntaxException;
 
 public class Mhag
 {
@@ -162,7 +163,7 @@ public class Mhag
 
 	//init process
 	public void init(MhagData mhagData, String[] args)
-		throws FileNotFoundException, URISyntaxException
+		throws FileNotFoundException
 	{
 		procArg(args);
 		prepareLogFile();
@@ -214,7 +215,7 @@ public class Mhag
 	public void setFileLog(String file) {fileLog = file;}
 
 	// main process method
-	public void proc(MhagData mhagData) throws FileNotFoundException, URISyntaxException
+	public void proc(MhagData mhagData) throws FileNotFoundException
 	{
 		if(method == 0)
 		{
@@ -230,7 +231,7 @@ public class Mhag
 		}
 	}
 
-	public static void main(String[] args) throws FileNotFoundException, URISyntaxException
+	public static void main(String[] args) throws FileNotFoundException
 	{
 
 		Mhag mhag = new Mhag();

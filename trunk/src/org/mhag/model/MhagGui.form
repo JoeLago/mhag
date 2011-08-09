@@ -68,7 +68,7 @@
               <JTabbedPaneConstraints tabName="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;Calculator&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;" toolTip="">
                 <Property name="tabTitle" type="java.lang.String" value="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;Calculator&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/pic/calculator.png"/>
+                  <Image iconType="3" name="/org/mhag/model/pic/calculator.png"/>
                 </Property>
                 <Property name="tabToolTip" type="java.lang.String" value=""/>
               </JTabbedPaneConstraints>
@@ -639,7 +639,7 @@
                       <Font name="Lucida Sans Typewriter" size="12" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/pic/weapon.png"/>
+                      <Image iconType="3" name="/org/mhag/model/pic/weapon.png"/>
                     </Property>
                     <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="weaponMenu"/>
@@ -653,7 +653,7 @@
                       <Font name="Lucida Sans Typewriter" size="12" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/pic/head.png"/>
+                      <Image iconType="3" name="/org/mhag/model/pic/head.png"/>
                     </Property>
                     <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="headMenu"/>
@@ -667,7 +667,7 @@
                       <Font name="Lucida Sans Typewriter" size="12" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/pic/chest.png"/>
+                      <Image iconType="3" name="/org/mhag/model/pic/chest.png"/>
                     </Property>
                     <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="chestMenu"/>
@@ -681,7 +681,7 @@
                       <Font name="Lucida Sans Typewriter" size="12" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/pic/arms.png"/>
+                      <Image iconType="3" name="/org/mhag/model/pic/arms.png"/>
                     </Property>
                     <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="armsMenu"/>
@@ -695,7 +695,7 @@
                       <Font name="Lucida Sans Typewriter" size="12" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/pic/waist.png"/>
+                      <Image iconType="3" name="/org/mhag/model/pic/waist.png"/>
                     </Property>
                     <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="waistMenu"/>
@@ -709,7 +709,7 @@
                       <Font name="Lucida Sans Typewriter" size="12" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/pic/legs.png"/>
+                      <Image iconType="3" name="/org/mhag/model/pic/legs.png"/>
                     </Property>
                     <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="legsMenu"/>
@@ -723,7 +723,7 @@
                       <Font name="Lucida Sans Typewriter" size="12" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/pic/charm.png"/>
+                      <Image iconType="3" name="/org/mhag/model/pic/charm.png"/>
                     </Property>
                     <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="charmMenu"/>
@@ -1324,7 +1324,7 @@
               <JTabbedPaneConstraints tabName="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Viewer&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;" toolTip="">
                 <Property name="tabTitle" type="java.lang.String" value="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Viewer&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/pic/viewer.png"/>
+                  <Image iconType="3" name="/org/mhag/model/pic/viewer.png"/>
                 </Property>
                 <Property name="tabToolTip" type="java.lang.String" value=""/>
               </JTabbedPaneConstraints>
@@ -1369,7 +1369,7 @@
                                   <Component id="codeBook" min="-2" max="-2" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" pref="418" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" pref="438" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="loadSetInteract" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1662,7 +1662,7 @@
               <JTabbedPaneConstraints tabName="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;&amp;nbsp;Generator&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;" toolTip="">
                 <Property name="tabTitle" type="java.lang.String" value="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;&amp;nbsp;Generator&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/pic/generator.png"/>
+                  <Image iconType="3" name="/org/mhag/model/pic/generator.png"/>
                 </Property>
                 <Property name="tabToolTip" type="java.lang.String" value=""/>
               </JTabbedPaneConstraints>
@@ -1688,7 +1688,7 @@
               <JTabbedPaneConstraints tabName="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;About&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;">
                 <Property name="tabTitle" type="java.lang.String" value="&lt;html&gt;&lt;body&gt;&lt;table width=&quot;100&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;About&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/pic/help-browser.png"/>
+                  <Image iconType="3" name="/org/mhag/model/pic/help-browser.png"/>
                 </Property>
               </JTabbedPaneConstraints>
             </Constraint>
@@ -1762,7 +1762,7 @@
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/pic/logo.png"/>
+                  <Image iconType="3" name="/org/mhag/model/pic/logo.png"/>
                 </Property>
               </Properties>
             </Component>

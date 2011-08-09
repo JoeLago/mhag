@@ -1,3 +1,5 @@
+package org.mhag.model;
+
 /**
  * @program MHAG
  * @ Set Class , a set & stats
@@ -9,7 +11,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
-import java.net.URISyntaxException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -248,14 +249,13 @@ public class Set {
 	}
 
 	// set a set from input file (simple input version)
-	public void setSetFromFile(Mhag mhag, String file) throws FileNotFoundException, URISyntaxException
+	public void setSetFromFile(Mhag mhag, String file) throws FileNotFoundException
 	{
 		MhagUtil.logLine(mhag, "Reading Set From Input File ...");
 		init();
 
 		String errorLine = "    Error in Input File, Please Check!";
-//		Scanner in = new Scanner(new File(file));
-		Scanner in = new Scanner(new File(getClass().getClassLoader().getResource(file).toURI()));
+  		Scanner in = new Scanner(new File(file));
 		int[] values = new int[3];
 		Arrays.fill(values, 0);
 
