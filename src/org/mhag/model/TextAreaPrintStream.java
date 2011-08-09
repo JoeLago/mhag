@@ -1,3 +1,4 @@
+package org.mhag.model;
 
 import java.io.OutputStream;
 import java.io.PrintStream;

@@ -1,3 +1,4 @@
+package org.mhag.model;
 
 import java.awt.Desktop;
 import java.io.File;
@@ -148,7 +149,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                jTabbedPane1.setFont(new java.awt.Font("Monospaced", 1, 14));
+                jTabbedPane1.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
                 jTabbedPane1.setOpaque(true);
 
                 rank.setBorder(javax.swing.BorderFactory.createTitledBorder("Rank"));
@@ -333,42 +334,42 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                weaponLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
-                weaponLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/weapon.png"))); // NOI18N
+                weaponLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                weaponLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/weapon.png"))); // NOI18N
                 weaponLabel.setLabelFor(weaponMenu);
                 weaponLabel.setToolTipText("Weapon");
 
-                headLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
-                headLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/head.png"))); // NOI18N
+                headLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                headLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/head.png"))); // NOI18N
                 headLabel.setLabelFor(headMenu);
                 headLabel.setToolTipText("Head");
 
-                chestLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
-                chestLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/chest.png"))); // NOI18N
+                chestLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                chestLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/chest.png"))); // NOI18N
                 chestLabel.setLabelFor(chestMenu);
                 chestLabel.setToolTipText("Chest");
 
-                armsLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
-                armsLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/arms.png"))); // NOI18N
+                armsLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                armsLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/arms.png"))); // NOI18N
                 armsLabel.setLabelFor(armsMenu);
                 armsLabel.setToolTipText("Arms");
 
-                waistLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
-                waistLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/waist.png"))); // NOI18N
+                waistLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                waistLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/waist.png"))); // NOI18N
                 waistLabel.setLabelFor(waistMenu);
                 waistLabel.setToolTipText("Waist");
 
-                legsLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
-                legsLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/legs.png"))); // NOI18N
+                legsLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                legsLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/legs.png"))); // NOI18N
                 legsLabel.setLabelFor(legsMenu);
                 legsLabel.setToolTipText("Legs");
 
-                charmLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
-                charmLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/charm.png"))); // NOI18N
+                charmLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+                charmLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/charm.png"))); // NOI18N
                 charmLabel.setLabelFor(charmMenu);
                 charmLabel.setToolTipText("Charm");
 
-                charmSkillLabel.setFont(new java.awt.Font("Monospaced", 0, 12));
+                charmSkillLabel.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 charmSkillLabel.setLabelFor(charmSkill1);
                 charmSkillLabel.setText("Charm Skill");
 
@@ -548,7 +549,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+                charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12));
                 charmSkill2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 charmSkill2.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -812,7 +813,7 @@ public class MhagGui extends javax.swing.JFrame {
 
                 jTextPreview.setColumns(20);
                 jTextPreview.setEditable(false);
-                jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+                jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12));
                 jTextPreview.setForeground(new java.awt.Color(1, 1, 1));
                 jTextPreview.setRows(5);
                 jTextPreview.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview"));
@@ -889,7 +890,7 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
 
-                jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;Calculator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/pic/calculator.png")), calculator, ""); // NOI18N
+                jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;Calculator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/calculator.png")), calculator, ""); // NOI18N
 
                 jScrollPreview2.setFont(new java.awt.Font("Monospaced", 0, 12));
                 jScrollPreview2.setHorizontalScrollBar(null);
@@ -1083,7 +1084,7 @@ public class MhagGui extends javax.swing.JFrame {
                                                         .add(convert, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                                         .add(codeBook, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE)
+                                                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 438, Short.MAX_VALUE)
                                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                                 .add(viewerLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                                                         .add(loadSetInteract)
@@ -1094,7 +1095,7 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
 
-                jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;Viewer</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/pic/viewer.png")), viewer, ""); // NOI18N
+                jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;Viewer</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/viewer.png")), viewer, ""); // NOI18N
 
                 org.jdesktop.layout.GroupLayout generatorLayout = new org.jdesktop.layout.GroupLayout(generator);
                 generator.setLayout(generatorLayout);
@@ -1107,7 +1108,7 @@ public class MhagGui extends javax.swing.JFrame {
                         .add(0, 546, Short.MAX_VALUE)
                 );
 
-                jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;Generator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/pic/generator.png")), generator, ""); // NOI18N
+                jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;Generator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/generator.png")), generator, ""); // NOI18N
 
                 jScrollAbout.setBorder(javax.swing.BorderFactory.createTitledBorder("About"));
 
@@ -1122,7 +1123,7 @@ public class MhagGui extends javax.swing.JFrame {
                 });
                 jScrollAbout.setViewportView(jEditorAbout);
 
-                jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/logo.png"))); // NOI18N
+                jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/logo.png"))); // NOI18N
 
                 jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Help"));
 
@@ -1196,7 +1197,7 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addContainerGap())
                 );
 
-                jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;About</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/pic/help-browser.png")), about); // NOI18N
+                jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;About</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/help-browser.png")), about); // NOI18N
 
                 org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
                 getContentPane().setLayout(layout);
@@ -1548,8 +1549,6 @@ public class MhagGui extends javax.swing.JFrame {
 		try {
 			mhagData.batchCalc(mhag); //use batch calculator module
 		} catch (FileNotFoundException ex) {
-			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
-		} catch (URISyntaxException ex) {
 			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
 		}
 
@@ -2343,7 +2342,7 @@ public class MhagGui extends javax.swing.JFrame {
     }
 
 
-    private void initMhag() throws FileNotFoundException, URISyntaxException
+    private void initMhag() throws FileNotFoundException
     {
 	mhag.setMethod(0);  // default method: calculator
 	//mhag.setLogOpt(0);  // log in console screen
@@ -2881,8 +2880,6 @@ public class MhagGui extends javax.swing.JFrame {
 		try {
 			mhagGui.initMhag(); // initialize mhag
 		} catch (FileNotFoundException ex) {
-			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
-		} catch (URISyntaxException ex) {
 			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
 		}
 

@@ -1,3 +1,4 @@
+package org.mhag.model;
 
 import java.awt.Component;
 import java.util.ArrayList;

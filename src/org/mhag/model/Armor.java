@@ -1,3 +1,5 @@
+package org.mhag.model;
+
 /**
  * @program MHAG
  * @ Armor Class

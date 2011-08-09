@@ -1,8 +1,8 @@
+package org.mhag.model;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
-import java.net.URISyntaxException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class Generator {
 
-	static void generator(Mhag aMhag, MhagData aMhagData) throws FileNotFoundException, URISyntaxException
+	static void generator(Mhag aMhag, MhagData aMhagData) throws FileNotFoundException
 	{
 		Generator gen = new Generator();
 		gen.mhag = aMhag;
@@ -115,13 +115,12 @@ public class Generator {
 
 	}
 
-	public void readGenInput(String fileIn) throws FileNotFoundException, URISyntaxException
+	public void readGenInput(String fileIn) throws FileNotFoundException
 	{
 		MhagUtil.logLine(mhag, "Reading Generator Options From Input File ...");
 
 		String errorLine = "    Error in Input File, Please Check!";
-		//Scanner in = new Scanner(new File(fileIn));
-		Scanner in = new Scanner(new File(getClass().getClassLoader().getResource(mhag.getFileIn()).toURI()));
+		Scanner in = new Scanner(new File(fileIn));
 		Arrays.fill(effects, -1);
 		Arrays.fill(skills, -2);
 		Arrays.fill(triggers, 0);

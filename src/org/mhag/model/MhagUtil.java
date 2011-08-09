@@ -1,3 +1,4 @@
+package org.mhag.model;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
