@@ -8,6 +8,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.net.URISyntaxException;
 
 public class Mhag
 {
@@ -154,13 +155,14 @@ public class Mhag
 		outLog.println("Monster Hunter Armor Generator");
 		outLog.println("By Tifa@mh3, Dec 2010");
 		outLog.println("http://www.youtube.com/mh3journey");
+		outLog.println("http://code.google.com/mhag/");
 		outLog.println(Output.splitter1);
 		outLog.println("");
 	}
 
 	//init process
 	public void init(MhagData mhagData, String[] args)
-		throws FileNotFoundException
+		throws FileNotFoundException, URISyntaxException
 	{
 		procArg(args);
 		prepareLogFile();
@@ -212,7 +214,7 @@ public class Mhag
 	public void setFileLog(String file) {fileLog = file;}
 
 	// main process method
-	public void proc(MhagData mhagData) throws FileNotFoundException
+	public void proc(MhagData mhagData) throws FileNotFoundException, URISyntaxException
 	{
 		if(method == 0)
 		{
@@ -228,7 +230,7 @@ public class Mhag
 		}
 	}
 
-	public static void main(String[] args) throws FileNotFoundException
+	public static void main(String[] args) throws FileNotFoundException, URISyntaxException
 	{
 
 		Mhag mhag = new Mhag();
@@ -236,7 +238,7 @@ public class Mhag
 
 		mhag.init(mhagData, args);
 
-//		mhag.method = 2;  //tifa temp
+  		mhag.method = 2;  //tifa temp
 
 		mhag.proc(mhagData);
 

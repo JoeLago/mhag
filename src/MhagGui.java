@@ -219,18 +219,17 @@ public class MhagGui extends javax.swing.JFrame {
                 hunterTypeLayout.setHorizontalGroup(
                         hunterTypeLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                         .add(hunterTypeLayout.createSequentialGroup()
-                                .addContainerGap(13, Short.MAX_VALUE)
-                                .add(blade))
-                        .add(hunterTypeLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .add(gunner)
-                                .addContainerGap(36, Short.MAX_VALUE))
+                                .add(hunterTypeLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(blade)
+                                        .add(gunner))
+                                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
                 hunterTypeLayout.setVerticalGroup(
                         hunterTypeLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                         .add(hunterTypeLayout.createSequentialGroup()
                                 .add(blade)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .add(gunner))
                 );
 
@@ -549,7 +548,7 @@ public class MhagGui extends javax.swing.JFrame {
                         }
                 });
 
-                charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12));
+                charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 charmSkill2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
                 charmSkill2.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -813,7 +812,7 @@ public class MhagGui extends javax.swing.JFrame {
 
                 jTextPreview.setColumns(20);
                 jTextPreview.setEditable(false);
-                jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12));
+                jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
                 jTextPreview.setForeground(new java.awt.Color(1, 1, 1));
                 jTextPreview.setRows(5);
                 jTextPreview.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview"));
@@ -837,7 +836,7 @@ public class MhagGui extends javax.swing.JFrame {
                         setNamePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                         .add(org.jdesktop.layout.GroupLayout.TRAILING, setNamePanelLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .add(jTextSetName, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
+                                .add(jTextSetName, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                                 .addContainerGap())
                 );
                 setNamePanelLayout.setVerticalGroup(
@@ -845,7 +844,7 @@ public class MhagGui extends javax.swing.JFrame {
                         .add(setNamePanelLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .add(jTextSetName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(13, Short.MAX_VALUE))
+                                .addContainerGap(17, Short.MAX_VALUE))
                 );
 
                 org.jdesktop.layout.GroupLayout calculatorLayout = new org.jdesktop.layout.GroupLayout(calculator);
@@ -879,11 +878,11 @@ public class MhagGui extends javax.swing.JFrame {
                                         .add(calculatorLayout.createSequentialGroup()
                                                 .add(output, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 57, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                                .add(calculatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                                        .add(hunterType, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                                        .add(sex, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                                        .add(rank, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                                        .add(setNamePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                                .add(calculatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                                        .add(hunterType, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .add(sex, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .add(rank, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .add(setNamePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                                                 .add(setup, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 351, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                         .add(jScrollPreview, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 535, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
@@ -1547,10 +1546,13 @@ public class MhagGui extends javax.swing.JFrame {
 	    mhag.setOutFormat(saveOpt);
 
 		try {
-			mhagData.batchCalc(mhag);  //use batch calculator module
+			mhagData.batchCalc(mhag); //use batch calculator module
 		} catch (FileNotFoundException ex) {
 			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
+		} catch (URISyntaxException ex) {
+			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
 		}
+
 	    mhag.setOutFormat(0); //back to text format
 
     }//GEN-LAST:event_OutputActionPerformed
@@ -2144,8 +2146,11 @@ public class MhagGui extends javax.swing.JFrame {
 		   Skill skill = mhagData.getSkill(skillID);
 
 		   int maxPoint = skill.getMaxSkillPoint(lowRank, nSlot);
-
 		   set.setCharmSkillPoint(0,maxPoint - ind);
+
+		   if(skill.getSkillName().equals("Auto-Guard"))
+			   set.setCharmSkillPoint(0,10);
+
 		   if(set.getCharmSkillPoint()[0] != 0)
 		   {
 			   set.setInUse(6, true);
@@ -2338,7 +2343,7 @@ public class MhagGui extends javax.swing.JFrame {
     }
 
 
-    private void initMhag() throws FileNotFoundException
+    private void initMhag() throws FileNotFoundException, URISyntaxException
     {
 	mhag.setMethod(0);  // default method: calculator
 	//mhag.setLogOpt(0);  // log in console screen
@@ -2611,15 +2616,17 @@ public class MhagGui extends javax.swing.JFrame {
 
 	    JComboBox skillSlot;
 	    int exception;
+	    int[] ind;
 	    if(skillNo == 0)
 	    {
 		    skillSlot = charmSkill1;
-		    exception = -1;  //no exception
+	   	    ind = mhagData.getSkillList(lowRank, nSlot);
 	    }
 	    else
 	    {
 		    skillSlot = charmSkill2;
 		    exception = set.getCharmSkillID()[0];
+	   	    ind = mhagData.getSkillList(lowRank, nSlot, exception, "Auto-Guard");
 	    }
 
 	    if(!active)
@@ -2628,7 +2635,6 @@ public class MhagGui extends javax.swing.JFrame {
 		    return;
 	    }
 
-		int[] ind = mhagData.getSkillList(lowRank, nSlot, exception);
 		int num = ind.length;
 
 		skillSlot.removeAllItems();
@@ -2675,6 +2681,8 @@ public class MhagGui extends javax.swing.JFrame {
 		    Skill skill = mhagData.getSkill(skillID);
 		    int maxPoint = skill.getMaxSkillPoint(lowRank, nSlot);
 		    int minPoint = 0;
+		    if(skill.getSkillName().equals("Auto-Guard"))
+			    minPoint = 10;   // fixed skill point for auto-guard
 		    if(skillNo == 1)
 			    minPoint = -10;
 
@@ -2688,9 +2696,18 @@ public class MhagGui extends javax.swing.JFrame {
 				j++;
 
 			}
+		    if(skill.getSkillName().equals("Auto-Guard"))
+		    {
+			    skillPoint.setSelectedIndex(0);
+			    skillPoint.setVisible(true);
+			    set.setCharmSkillPoint(skillNo,10);
+			    set.setNumCharmSkill(1);
+			    return;
+		    }
+
 		    skillPoint.setVisible(true);
+		    set.setCharmSkillPoint(skillNo,0);
 	    }
-	    set.setCharmSkillPoint(skillNo,0);
 	    if(skillNo == 0)
 		    set.setNumCharmSkill(0);
 	    else
@@ -2862,10 +2879,13 @@ public class MhagGui extends javax.swing.JFrame {
                 MhagGui mhagGui = new MhagGui();
 
 		try {
-			mhagGui.initMhag();  // initialize mhag
+			mhagGui.initMhag(); // initialize mhag
 		} catch (FileNotFoundException ex) {
 			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
+		} catch (URISyntaxException ex) {
+			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
 		}
+
 
 		mhagGui.checkPref();
 		mhagGui.readHelp();
