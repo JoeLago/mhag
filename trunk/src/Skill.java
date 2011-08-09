@@ -51,7 +51,6 @@ public class Skill {
 			{
 				// read Skill Name
 				skill.skillName = word;
-
 			}
 			else if(wordIndex == 2)
 			{

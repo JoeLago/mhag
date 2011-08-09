@@ -10,6 +10,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.net.URISyntaxException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -20,7 +21,7 @@ public class MhagData {
 	}
 
 	// read data file
-	public void readFile(Mhag mhag) throws FileNotFoundException
+	public void readFile(Mhag mhag) throws FileNotFoundException, URISyntaxException
 	{
 		readSkill(mhag);
 		readJewel(mhag);
@@ -52,9 +53,9 @@ public class MhagData {
 	}
 
 	// read skill from skill file
-	public void readSkill(Mhag mhag) throws FileNotFoundException
+	public void readSkill(Mhag mhag) throws FileNotFoundException, URISyntaxException
 	{
-		Scanner in = new Scanner(new File(fileSkill));
+		Scanner in = new Scanner(new File(getClass().getClassLoader().getResource(fileSkill).toURI()));
 
 		// check total # of skills
 		int nMax = 0;
@@ -77,7 +78,7 @@ public class MhagData {
 			skillList[i] = new Skill();
 
 		}
-		Scanner in2 = new Scanner(new File(fileSkill));
+		Scanner in2 = new Scanner(new File(getClass().getClassLoader().getResource(fileSkill).toURI()));
 
 		// read skill entry
 		int ioErr = 0;
@@ -245,9 +246,9 @@ public class MhagData {
 	 */
 
 	// read jewel from jewel file
-	public void readJewel(Mhag mhag) throws FileNotFoundException
+	public void readJewel(Mhag mhag) throws FileNotFoundException, URISyntaxException
 	{
-		Scanner in = new Scanner(new File(fileJewel));
+		Scanner in = new Scanner(new File(getClass().getClassLoader().getResource(fileJewel).toURI()));
 
 		// check total # of skills
 		int nMax = 0;
@@ -270,7 +271,7 @@ public class MhagData {
 			jewelList[i] = new Jewel();
 
 		}
-		Scanner in2 = new Scanner(new File(fileJewel));
+		Scanner in2 = new Scanner(new File(getClass().getClassLoader().getResource(fileJewel).toURI()));
 
 		// read Jewel entry
 		int ioErr = 0;
@@ -295,9 +296,9 @@ public class MhagData {
 	}
 
 	// read armor from armor file
-	public void readArmor(Mhag mhag) throws FileNotFoundException
+	public void readArmor(Mhag mhag) throws FileNotFoundException, URISyntaxException
 	{
-		Scanner in = new Scanner(new File(fileArmor));
+		Scanner in = new Scanner(new File(getClass().getClassLoader().getResource(fileArmor).toURI()));
 
 		// check total # of skills
 		int nMax[] = new int[5];
@@ -338,7 +339,7 @@ public class MhagData {
 			}
 		}
 
-		Scanner in2 = new Scanner(new File(fileArmor));
+		Scanner in2 = new Scanner(new File(getClass().getClassLoader().getResource(fileArmor).toURI()));
 		// read Armor entry
 		int ioErr = 0;
 		int[] armorIndex = new int[5];
@@ -683,7 +684,7 @@ public class MhagData {
 	}
 
 	// calculator (one input version)
-	public void calculator(Mhag mhag) throws FileNotFoundException
+	public void calculator(Mhag mhag) throws FileNotFoundException, URISyntaxException
 	{
 		MhagUtil.logLine(mhag, "");
 		MhagUtil.logLine(mhag, "Method: MHAG Set Calcualtor");
@@ -715,14 +716,16 @@ public class MhagData {
 	}
 
 	// batch calculator (multiple code input)
-	public void batchCalc(Mhag mhag) throws FileNotFoundException
+	public void batchCalc(Mhag mhag) throws FileNotFoundException, URISyntaxException
 	{
 		MhagUtil.logLine(mhag, "");
 		MhagUtil.logLine(mhag, "Method: MHAG Batch Calcualtor");
 
 		Set aSet = new Set();  //create set data
 
-		Scanner in = new Scanner(new File(mhag.getFileIn()));
+//		Scanner in = new Scanner(new File(mhag.getFileIn()));
+		Scanner in = new Scanner(new File(getClass().getClassLoader().getResource(mhag.getFileIn()).toURI()));
+
 		PrintStream outSave = new PrintStream(mhag.getFileOut());
 		Output.init(mhag.getOutFormat(), outSave);
 
@@ -951,6 +954,35 @@ public class MhagData {
 		return indFinal;
 	}
 
+	// get list and exclude two exceptions
+	public int[] getSkillList(boolean lowRank, int nSlot, int except1, String skillExcept2)
+	{
+		int nMax = Skill.skillIDTot;
+		int[] index = new int[nMax];
+		String[] nameStr =  new String[nMax];
+		int num = 0;
+		for (int i = 0; i < nMax; i++)
+		{
+			Skill skill = skillList[i];
+			if(skill.getMaxSkillPoint(lowRank, nSlot) == 0)continue;
+			if(skill.getSkillID() == except1)continue;
+			if(skill.getSkillName().equals(skillExcept2))continue;
+
+			index[num] = i;
+			nameStr[num] = skill.getSkillName();
+			num++;
+		}
+
+		int[] indNew = MhagUtil.sortIndex(num, nameStr);
+
+		int[] indFinal = new int[num];  //num + 1]; // don't add null
+//		indFinal[0] = -1;
+		for(int i = 0; i < num; i++)
+			indFinal[i] = index[indNew[num - 1 - i]];
+
+		return indFinal;
+	}
+
 	/*
 	public int[] getCharmList(boolean lowRank)
 	{
@@ -992,7 +1024,7 @@ public class MhagData {
 	private final String fileRefSkill = dirRef+"ref_skill.dat";
 //	private final String fileRefCharm = dirRef+"ref_charm.dat";
 	private final String fileRefEffect = dirRef+"ref_effect.dat";
-	private final String fileRefSkillClass = dirRef+"ref_skill_class.dat";
+//	private final String fileRefSkillClass = dirRef+"ref_skill_class.dat";
 	private final String fileCompleteBlade = dirRef+"blade_sets.input";
 	private final String fileCompleteGunner = dirRef+"gunner_sets.input";
 
