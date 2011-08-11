@@ -154,9 +154,9 @@ public class Mhag
 		outLog.println(Output.splitter1);
 		outLog.println("MHAG: ver 1.1");
 		outLog.println("Monster Hunter Armor Generator");
-		outLog.println("By Tifa@mh3, Dec 2010");
+		outLog.println("By Tifa@mh3, Aug 2011");
 		outLog.println("http://www.youtube.com/mh3journey");
-		outLog.println("http://code.google.com/mhag/");
+		outLog.println("http://code.google.com/p/mhag/");
 		outLog.println(Output.splitter1);
 		outLog.println("");
 	}
