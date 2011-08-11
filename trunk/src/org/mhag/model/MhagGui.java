@@ -2002,6 +2002,7 @@ public class MhagGui extends javax.swing.JFrame {
 	   if(ind <= 0 )
 	   {
 		   set.setInUse(bodyPart, false);
+		   set.setArmorID(bodyPart, 0);  //initial armor id
 		   set.setNumJewel(bodyPart, 0);  //initiate jewel
 		   Arrays.fill(jewelInd[bodyPart], 0);  // inititate jewelInd
 		   Arrays.fill(jewelMenuType[bodyPart], 0);  // inititate menu type
@@ -2015,7 +2016,7 @@ public class MhagGui extends javax.swing.JFrame {
 		   int[] list = mhagData.getArmorList(set.getLowRank(),
 			   set.getBlade(), set.getFemale(), bodyPart);
 		   int armorID = list[ind];
-		   if(armorID == set.getArmorID()[bodyPart])return; //no change, no reset
+		   if(!set.getInUse(bodyPart)&&(armorID == set.getArmorID()[bodyPart]))return; //no change, no reset
 
 		   // set armor id
 		   set.setInUse(bodyPart, true);

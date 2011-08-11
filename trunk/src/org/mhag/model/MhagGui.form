@@ -1369,7 +1369,7 @@
                                   <Component id="codeBook" min="-2" max="-2" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" pref="438" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" pref="418" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="loadSetInteract" alignment="3" min="-2" max="-2" attributes="0"/>

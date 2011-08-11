@@ -179,7 +179,7 @@ public class Generator {
 			int skillInd = Set.matchID(skills,id);
 			if(skillInd == -1)   //possible negative skills
 			{
-				if(mhagData.getSkill(id).getHasNegative()) // only nega skills
+				if(mhagData.getSkill(id).getHasNegative()) // only negative skills
 				{
 					if(mhagData.getSkill(id).getBGSpec(set.getBlade())) //not include b/g specific nega skills
 					{
