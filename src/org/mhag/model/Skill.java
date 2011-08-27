@@ -54,7 +54,12 @@ public class Skill {
 				// read Skill Name
 				skill.skillName = word;
 			}
-			else if(wordIndex == 2)
+			else if (wordIndex == 2)
+			{
+				int id = Integer.valueOf(word);
+				skill.skillType = id;
+			}
+			else if(wordIndex == 3)
 			{
 				// read Skill Class
 				int[] numbers = new int [8];
@@ -97,6 +102,28 @@ public class Skill {
 		}
 
 		return 0;
+	}
+
+	// get skill type index
+	public int getSkillType() {return skillType;}
+
+	// get skill type name
+	public static String getSkillTypeName(int id)
+	{
+		if(id == 1)
+			return "Status Related";
+		else if(id == 2)
+			return "Resistances";
+		else if(id == 3)
+			return "Stamina/Movement";
+		else if(id == 4)
+			return "Item Related";
+		else if(id == 5)
+			return "Blademaster";
+		else if(id == 6)
+			return "Gunner";
+		else
+			return "Miscellaneous";
 	}
 
 	// get Skill ID
@@ -206,6 +233,7 @@ public class Skill {
 	private int skillID = 0; // Skill ID
 	private String skillName = "";  // Skill Name
 //	private String skillClass = "";  // A/B/C/D  
+	private int skillType = 0; // 1 - 7
 	private int[][] maxSkillPoint = new int [2][4]; //max point (1st index: low rank 0, high rank 1)
 							// 2nd index: 0 - 3 slots
 	private int numEffect = 0;  // # Effects , 6 max, 3 pos ,3 neg
@@ -219,4 +247,5 @@ public class Skill {
 	private boolean hasNegative = false; // has negative effect or not
 
 	static int skillIDTot = 0;
+
 }
