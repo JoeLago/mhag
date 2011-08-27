@@ -13,6 +13,7 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListCellRenderer;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -33,6 +34,28 @@ public class MhagGui extends javax.swing.JFrame {
     /** Creates new form MhagGui */
     public MhagGui() {
         initComponents();
+
+		// align list
+		DefaultListCellRenderer renderer = (DefaultListCellRenderer)jListSkillList.getCellRenderer();
+		renderer.setHorizontalAlignment(JLabel.CENTER);
+
+		stream = new TextAreaPrintStream(jTextPreview, System.out);
+		streamView = new TextAreaPrintStream(jTextPreview2, System.out);
+		streamGen = new TextAreaPrintStream(jTextPreview3, System.out);
+
+		setSkillTypeMenu();
+
+		//disable for test
+		jButtonMyCharms.setEnabled(false);
+		jButtonSettings.setEnabled(false);
+		jComboBoxOpt.setEnabled(false);
+		jRadioBlade.setEnabled(false);
+		jRadioGunner.setEnabled(false);
+		jCheckBoxLowRank.setEnabled(false);
+		jCheckBoxHighRank.setEnabled(false);
+		jCheckBoxPiercing.setEnabled(false);
+		jCheckBoxCharm.setEnabled(false);
+
     }
 
     /** This method is called from within the constructor to
@@ -49,7 +72,8 @@ public class MhagGui extends javax.swing.JFrame {
         sexGroup = new javax.swing.ButtonGroup();
         outputGroup = new javax.swing.ButtonGroup();
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        hunterTypeGen = new javax.swing.ButtonGroup();
+        jTabbedPane = new javax.swing.JTabbedPane();
         calculator = new javax.swing.JPanel();
         rank = new javax.swing.JPanel();
         lowRank = new javax.swing.JRadioButton();
@@ -112,6 +136,42 @@ public class MhagGui extends javax.swing.JFrame {
         jTextPreview = new javax.swing.JTextArea();
         setNamePanel = new javax.swing.JPanel();
         jTextSetName = new javax.swing.JTextField();
+        generator = new javax.swing.JPanel();
+        jScrollPreview3 = new javax.swing.JScrollPane();
+        jTextPreview3 = new javax.swing.JTextArea();
+        skillsPanel = new javax.swing.JPanel();
+        skillType = new javax.swing.JComboBox();
+        skillTree = new javax.swing.JComboBox();
+        skillName = new javax.swing.JComboBox();
+        jLabelSkillType = new javax.swing.JLabel();
+        jLabelSkillTree = new javax.swing.JLabel();
+        jLabelSkillName = new javax.swing.JLabel();
+        jButtonAdd = new javax.swing.JButton();
+        jButtonRemove = new javax.swing.JButton();
+        jButtonUp = new javax.swing.JButton();
+        jButtonDown = new javax.swing.JButton();
+        jScrollSkillList = new javax.swing.JScrollPane();
+        jListSkillList = new javax.swing.JList();
+        optionPanel = new javax.swing.JPanel();
+        hunterTypePanel = new javax.swing.JPanel();
+        jRadioBlade = new javax.swing.JRadioButton();
+        jRadioGunner = new javax.swing.JRadioButton();
+        jCheckBoxLowRank = new javax.swing.JCheckBox();
+        jCheckBoxHighRank = new javax.swing.JCheckBox();
+        jLabelWeaponSlot = new javax.swing.JLabel();
+        jComboBoxWeaponSlots = new javax.swing.JComboBox();
+        optLabel = new javax.swing.JLabel();
+        jComboBoxOpt = new javax.swing.JComboBox();
+        jCheckBoxPiercing = new javax.swing.JCheckBox();
+        jCheckBoxCharm = new javax.swing.JCheckBox();
+        jButtonMyCharms = new javax.swing.JButton();
+        jButtonSettings = new javax.swing.JButton();
+        jButtonSearch = new javax.swing.JButton();
+        jProgressOpt = new javax.swing.JProgressBar();
+        loadToCalcGen = new javax.swing.JButton();
+        jScrollOptSets = new javax.swing.JScrollPane();
+        jListOptSets = new javax.swing.JList();
+        jButtonAbort = new javax.swing.JButton();
         viewer = new javax.swing.JPanel();
         jScrollPreview2 = new javax.swing.JScrollPane();
         jTextPreview2 = new javax.swing.JTextArea();
@@ -129,7 +189,6 @@ public class MhagGui extends javax.swing.JFrame {
         getSetInteract = new javax.swing.JButton();
         deleteInteract = new javax.swing.JButton();
         undoInteract = new javax.swing.JButton();
-        generator = new javax.swing.JPanel();
         about = new javax.swing.JPanel();
         jScrollAbout = new javax.swing.JScrollPane();
         jEditorAbout = new javax.swing.JEditorPane();
@@ -141,7 +200,7 @@ public class MhagGui extends javax.swing.JFrame {
         helpText = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MHAG: Monster Hunter Armor Generator   Ver 1.1b");
+        setTitle("MHAG: Monster Hunter Armor Generator   Ver 1.1c");
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -149,14 +208,15 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jTabbedPane1.setFont(new java.awt.Font("Monospaced", 1, 14));
-        jTabbedPane1.setOpaque(true);
+        jTabbedPane.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        jTabbedPane.setOpaque(true);
+        jTabbedPane.setPreferredSize(new java.awt.Dimension(1238, 630));
 
         rank.setBorder(javax.swing.BorderFactory.createTitledBorder("Rank"));
         rank.setToolTipText("Change rank type, reset set");
 
         rankGroup.add(lowRank);
-        lowRank.setFont(new java.awt.Font("Monospaced", 0, 12));
+        lowRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         lowRank.setText("Low Rank");
         lowRank.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,7 +225,7 @@ public class MhagGui extends javax.swing.JFrame {
         });
 
         rankGroup.add(highRank);
-        highRank.setFont(new java.awt.Font("Monospaced", 0, 12));
+        highRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         highRank.setSelected(true);
         highRank.setText("High Rank");
         highRank.addActionListener(new java.awt.event.ActionListener() {
@@ -294,7 +354,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        chestMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        chestMenu.setFont(new java.awt.Font("Monospaced", 0, 12));
         chestMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         chestMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -369,7 +429,7 @@ public class MhagGui extends javax.swing.JFrame {
         charmLabel.setLabelFor(charmMenu);
         charmLabel.setToolTipText("Charm");
 
-        charmSkillLabel.setFont(new java.awt.Font("Monospaced", 0, 12));
+        charmSkillLabel.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmSkillLabel.setLabelFor(charmSkill1);
         charmSkillLabel.setText("Charm Skill");
 
@@ -517,7 +577,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmSlot1.setFont(new java.awt.Font("Monospaced", 0, 12));
+        charmSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSlot1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -533,7 +593,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmSlot3.setFont(new java.awt.Font("Monospaced", 0, 12));
+        charmSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSlot3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -541,7 +601,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmSkill1.setFont(new java.awt.Font("Monospaced", 0, 12));
+        charmSkill1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmSkill1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSkill1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -549,7 +609,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12));
+        charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmSkill2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSkill2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -557,6 +617,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
+        skillPoint1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         skillPoint1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0" }));
         skillPoint1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -564,6 +625,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
+        skillPoint2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         skillPoint2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0" }));
         skillPoint2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -732,7 +794,7 @@ public class MhagGui extends javax.swing.JFrame {
         output.setBorder(javax.swing.BorderFactory.createTitledBorder("Output"));
 
         outputGroup.add(text);
-        text.setFont(new java.awt.Font("Monospaced", 0, 12));
+        text.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         text.setSelected(true);
         text.setText("TEXT");
         text.addActionListener(new java.awt.event.ActionListener() {
@@ -813,10 +875,11 @@ public class MhagGui extends javax.swing.JFrame {
 
         jTextPreview.setColumns(20);
         jTextPreview.setEditable(false);
-        jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12));
+        jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jTextPreview.setForeground(new java.awt.Color(1, 1, 1));
         jTextPreview.setRows(5);
-        jTextPreview.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview"));
+        jTextPreview.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview (Calculator)"));
+        jTextPreview.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jTextPreview.setOpaque(false);
         jScrollPreview.setViewportView(jTextPreview);
 
@@ -890,17 +953,345 @@ public class MhagGui extends javax.swing.JFrame {
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;Calculator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/calculator.png")), calculator, ""); // NOI18N
+        jTabbedPane.addTab("<html><body><table width=\"100\">&nbsp;Calculator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/calculator.png")), calculator, ""); // NOI18N
 
-        jScrollPreview2.setFont(new java.awt.Font("Monospaced", 0, 12));
+        jTextPreview3.setColumns(20);
+        jTextPreview3.setEditable(false);
+        jTextPreview3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jTextPreview3.setForeground(new java.awt.Color(1, 1, 1));
+        jTextPreview3.setRows(5);
+        jTextPreview3.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview (Generator)"));
+        jTextPreview3.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextPreview3.setOpaque(false);
+        jScrollPreview3.setViewportView(jTextPreview3);
+
+        skillsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Skills"));
+
+        skillType.setPreferredSize(new java.awt.Dimension(56, 25));
+
+        skillTree.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        skillTree.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                skillTreeActionPerformed(evt);
+            }
+        });
+
+        skillName.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+
+        jLabelSkillType.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jLabelSkillType.setText("Type");
+        jLabelSkillType.setToolTipText("Skill filter according to skill types");
+
+        jLabelSkillTree.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jLabelSkillTree.setText("Tree");
+
+        jLabelSkillName.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jLabelSkillName.setText("Name");
+
+        jButtonAdd.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonAdd.setText("Add");
+        jButtonAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAddActionPerformed(evt);
+            }
+        });
+
+        jButtonRemove.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonRemove.setText("Remove");
+
+        jButtonUp.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonUp.setText("Move Up");
+
+        jButtonDown.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonDown.setText("Move Down");
+
+        jListSkillList.setBackground(new java.awt.Color(242, 241, 240));
+        jListSkillList.setBorder(javax.swing.BorderFactory.createTitledBorder("Skill List"));
+        jListSkillList.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jListSkillList.setForeground(new java.awt.Color(1, 1, 1));
+        jListSkillList.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "---", "---", "---", "---", "---", "---", "---", "---", "---", "---" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jListSkillList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jListSkillList.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jListSkillList.setFixedCellHeight(20);
+        jListSkillList.setFixedCellWidth(115);
+        jListSkillList.setLayoutOrientation(javax.swing.JList.HORIZONTAL_WRAP);
+        jListSkillList.setOpaque(false);
+        jListSkillList.setVisibleRowCount(2);
+        jScrollSkillList.setViewportView(jListSkillList);
+
+        org.jdesktop.layout.GroupLayout skillsPanelLayout = new org.jdesktop.layout.GroupLayout(skillsPanel);
+        skillsPanel.setLayout(skillsPanelLayout);
+        skillsPanelLayout.setHorizontalGroup(
+            skillsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(skillsPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(skillsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(skillsPanelLayout.createSequentialGroup()
+                        .add(jLabelSkillType)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(skillType, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 145, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jLabelSkillTree)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(skillTree, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 145, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jLabelSkillName)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(skillName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 145, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(skillsPanelLayout.createSequentialGroup()
+                        .add(jButtonAdd, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 141, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jButtonRemove, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 141, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jButtonUp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 141, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jButtonDown, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 141, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, skillsPanelLayout.createSequentialGroup()
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(jScrollSkillList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 589, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        skillsPanelLayout.setVerticalGroup(
+            skillsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(skillsPanelLayout.createSequentialGroup()
+                .add(skillsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabelSkillType)
+                    .add(skillType, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabelSkillTree)
+                    .add(skillTree, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabelSkillName)
+                    .add(skillName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(skillsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jButtonAdd, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonRemove, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonUp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonDown, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jScrollSkillList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        optionPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Options"));
+
+        hunterTypePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Hunter Type"));
+
+        hunterTypeGen.add(jRadioBlade);
+        jRadioBlade.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jRadioBlade.setSelected(true);
+        jRadioBlade.setText("Bladermaster");
+
+        hunterTypeGen.add(jRadioGunner);
+        jRadioGunner.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jRadioGunner.setText("Gunner");
+
+        org.jdesktop.layout.GroupLayout hunterTypePanelLayout = new org.jdesktop.layout.GroupLayout(hunterTypePanel);
+        hunterTypePanel.setLayout(hunterTypePanelLayout);
+        hunterTypePanelLayout.setHorizontalGroup(
+            hunterTypePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jRadioBlade)
+            .add(jRadioGunner)
+        );
+        hunterTypePanelLayout.setVerticalGroup(
+            hunterTypePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(hunterTypePanelLayout.createSequentialGroup()
+                .add(jRadioBlade)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jRadioGunner))
+        );
+
+        jCheckBoxLowRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jCheckBoxLowRank.setSelected(true);
+        jCheckBoxLowRank.setText("Low Rank");
+
+        jCheckBoxHighRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jCheckBoxHighRank.setSelected(true);
+        jCheckBoxHighRank.setText("High Rank");
+        jCheckBoxHighRank.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxHighRankActionPerformed(evt);
+            }
+        });
+
+        jLabelWeaponSlot.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jLabelWeaponSlot.setText("Weapon Slots");
+
+        jComboBoxWeaponSlots.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jComboBoxWeaponSlots.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No Slot", "One Slot", "Two Slots", "Three Slots", "Any" }));
+
+        optLabel.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        optLabel.setText("Search Method");
+
+        jComboBoxOpt.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jComboBoxOpt.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Jewel Opt", "Partial Search", "Full Search" }));
+        jComboBoxOpt.setToolTipText("");
+
+        jCheckBoxPiercing.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jCheckBoxPiercing.setText("Piercing");
+        jCheckBoxPiercing.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxPiercingActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxCharm.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jCheckBoxCharm.setText("My Charms");
+        jCheckBoxCharm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxCharmActionPerformed(evt);
+            }
+        });
+
+        org.jdesktop.layout.GroupLayout optionPanelLayout = new org.jdesktop.layout.GroupLayout(optionPanel);
+        optionPanel.setLayout(optionPanelLayout);
+        optionPanelLayout.setHorizontalGroup(
+            optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(optionPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(optionPanelLayout.createSequentialGroup()
+                        .add(jCheckBoxLowRank)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jCheckBoxHighRank)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jCheckBoxPiercing)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jCheckBoxCharm))
+                    .add(optionPanelLayout.createSequentialGroup()
+                        .add(hunterTypePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(optionPanelLayout.createSequentialGroup()
+                                .add(jLabelWeaponSlot)
+                                .add(18, 18, 18)
+                                .add(jComboBoxWeaponSlots, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 125, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(optionPanelLayout.createSequentialGroup()
+                                .add(optLabel)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(jComboBoxOpt, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 125, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        optionPanelLayout.setVerticalGroup(
+            optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(optionPanelLayout.createSequentialGroup()
+                .add(optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(hunterTypePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(optionPanelLayout.createSequentialGroup()
+                        .add(10, 10, 10)
+                        .add(optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jLabelWeaponSlot)
+                            .add(jComboBoxWeaponSlots, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(optLabel)
+                            .add(jComboBoxOpt, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jCheckBoxLowRank)
+                    .add(jCheckBoxHighRank)
+                    .add(jCheckBoxPiercing)
+                    .add(jCheckBoxCharm)))
+        );
+
+        jButtonMyCharms.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonMyCharms.setText("Charms");
+
+        jButtonSettings.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonSettings.setText("Settings");
+        jButtonSettings.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSettingsActionPerformed(evt);
+            }
+        });
+
+        jButtonSearch.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonSearch.setText("Search");
+
+        jProgressOpt.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+
+        loadToCalcGen.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        loadToCalcGen.setText("Load to Calculator");
+
+        jListOptSets.setBorder(javax.swing.BorderFactory.createTitledBorder("Search Results"));
+        jListOptSets.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jListOptSets.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jScrollOptSets.setViewportView(jListOptSets);
+
+        jButtonAbort.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonAbort.setText("x100,000");
+
+        org.jdesktop.layout.GroupLayout generatorLayout = new org.jdesktop.layout.GroupLayout(generator);
+        generator.setLayout(generatorLayout);
+        generatorLayout.setHorizontalGroup(
+            generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, generatorLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(skillsPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(generatorLayout.createSequentialGroup()
+                        .add(optionPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(loadToCalcGen, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 219, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jProgressOpt, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 219, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(generatorLayout.createSequentialGroup()
+                                .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jButtonMyCharms, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 107, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .add(jButtonSearch, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 107, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jButtonAbort, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 107, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .add(jButtonSettings, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 107, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
+                    .add(jScrollOptSets, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 619, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(12, 12, 12)
+                .add(jScrollPreview3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 586, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+        );
+        generatorLayout.setVerticalGroup(
+            generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(generatorLayout.createSequentialGroup()
+                .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jScrollPreview3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 535, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(generatorLayout.createSequentialGroup()
+                        .add(skillsPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 165, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(generatorLayout.createSequentialGroup()
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(optionPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(generatorLayout.createSequentialGroup()
+                                .add(15, 15, 15)
+                                .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                    .add(jButtonMyCharms, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .add(jButtonSettings, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                    .add(jButtonSearch, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .add(jButtonAbort, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(jProgressOpt, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 15, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(loadToCalcGen, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jScrollOptSets, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)))
+                .add(11, 11, 11))
+        );
+
+        jTabbedPane.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;Generator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/generator.png")), generator, ""); // NOI18N
+
+        jScrollPreview2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jScrollPreview2.setHorizontalScrollBar(null);
 
         jTextPreview2.setColumns(20);
         jTextPreview2.setEditable(false);
-        jTextPreview2.setFont(new java.awt.Font("Monospaced", 0, 12));
+        jTextPreview2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jTextPreview2.setForeground(new java.awt.Color(1, 1, 1));
         jTextPreview2.setRows(5);
-        jTextPreview2.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview"));
+        jTextPreview2.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview (Viewer)"));
+        jTextPreview2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jTextPreview2.setOpaque(false);
         jScrollPreview2.setViewportView(jTextPreview2);
 
@@ -909,7 +1300,7 @@ public class MhagGui extends javax.swing.JFrame {
         codeBookName.setFont(new java.awt.Font("Monospaced", 0, 12));
         codeBookName.setText("MyData");
 
-        codeBookLoad.setFont(new java.awt.Font("Monospaced", 1, 12));
+        codeBookLoad.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         codeBookLoad.setText("Load");
         codeBookLoad.setToolTipText("Load code book");
         codeBookLoad.addActionListener(new java.awt.event.ActionListener() {
@@ -1006,7 +1397,7 @@ public class MhagGui extends javax.swing.JFrame {
         jScrollPane1.setFont(new java.awt.Font("Monospaced", 0, 12));
 
         codeList.setBorder(javax.swing.BorderFactory.createTitledBorder("Code List"));
-        codeList.setFont(new java.awt.Font("Monospaced", 0, 12));
+        codeList.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         codeList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         codeList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
@@ -1024,7 +1415,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        getSetInteract.setFont(new java.awt.Font("Monospaced", 1, 12));
+        getSetInteract.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         getSetInteract.setText("Add from Calculator");
         getSetInteract.setToolTipText("Add the set below");
         getSetInteract.addActionListener(new java.awt.event.ActionListener() {
@@ -1095,26 +1486,13 @@ public class MhagGui extends javax.swing.JFrame {
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;Viewer</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/viewer.png")), viewer, ""); // NOI18N
-
-        org.jdesktop.layout.GroupLayout generatorLayout = new org.jdesktop.layout.GroupLayout(generator);
-        generator.setLayout(generatorLayout);
-        generatorLayout.setHorizontalGroup(
-            generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 1230, Short.MAX_VALUE)
-        );
-        generatorLayout.setVerticalGroup(
-            generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 546, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;Generator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/generator.png")), generator, ""); // NOI18N
+        jTabbedPane.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;Viewer</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/viewer.png")), viewer, ""); // NOI18N
 
         jScrollAbout.setBorder(javax.swing.BorderFactory.createTitledBorder("About"));
 
         jEditorAbout.setContentType("text/html");
         jEditorAbout.setEditable(false);
-        jEditorAbout.setText("<html>\n  <head>\n\n  </head>\n  <body>\n    <h2 align = \"center\">\n      MHAG :\n    </h2>\n  <h2 align = \"center\">\n       Monster Hunter Armor Generator\n    </h2>\n <p align = \"center\">v1.1b </p>\n <p align = \"center\">Release Date: 08/11/2011</p>\n<p align = \"center\">MHAG Project: <a href=\"http://code.google.com/p/mhag/\">code.google.com/p/mhag</a></p>\n\n<p></p>\n<p align = \"center\">by Tifa@mh3</p>\n<p align = \"center\">Unity Member: <a href=\"http://www.capcom-unity.com/tifa@mh3\">www.capcom-unity.com/tifa@mh3</a></p>\n<p align = \"center\">Youtube Channel: <a href=\"http://www.youtube.com/mh3journey\">www.youtube.com/mh3journey</a></p>\n\n  </body>\n\n");
+        jEditorAbout.setText("<html>\n  <head>\n\n  </head>\n  <body>\n    <h2 align = \"center\">\n      MHAG :\n    </h2>\n  <h2 align = \"center\">\n       Monster Hunter Armor Generator\n    </h2>\n <p align = \"center\">v1.1c </p>\n <p align = \"center\">Release Date: 08/11/2011</p>\n<p align = \"center\">MHAG Project: <a href=\"http://code.google.com/p/mhag/\">code.google.com/p/mhag</a></p>\n\n<p></p>\n<p align = \"center\">by Tifa@mh3</p>\n<p align = \"center\">Unity Member: <a href=\"http://www.capcom-unity.com/tifa@mh3\">www.capcom-unity.com/tifa@mh3</a></p>\n<p align = \"center\">Youtube Channel: <a href=\"http://www.youtube.com/mh3journey\">www.youtube.com/mh3journey</a></p>\n\n  </body>\n\n");
         jEditorAbout.setOpaque(false);
         jEditorAbout.addHyperlinkListener(new javax.swing.event.HyperlinkListener() {
             public void hyperlinkUpdate(javax.swing.event.HyperlinkEvent evt) {
@@ -1197,20 +1575,22 @@ public class MhagGui extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;About</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/help-browser.png")), about); // NOI18N
+        jTabbedPane.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;About</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/help-browser.png")), about); // NOI18N
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 1238, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(jTabbedPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 1238, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
-                .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 630, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jTabbedPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 630, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
+
+        jTabbedPane.getAccessibleContext().setAccessibleName("<html><body><table width=\"300\">&nbsp;Calculator</table></body></html>");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1683,6 +2063,30 @@ public class MhagGui extends javax.swing.JFrame {
 	    charmPointAction(1);
     }//GEN-LAST:event_skillPoint2ActionPerformed
 
+	private void skillTreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_skillTreeActionPerformed
+		// TODO add your handling code here:
+	}//GEN-LAST:event_skillTreeActionPerformed
+
+	private void jButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddActionPerformed
+		// TODO add your handling code here:
+	}//GEN-LAST:event_jButtonAddActionPerformed
+
+	private void jCheckBoxHighRankActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxHighRankActionPerformed
+		// TODO add your handling code here:
+	}//GEN-LAST:event_jCheckBoxHighRankActionPerformed
+
+	private void jCheckBoxCharmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxCharmActionPerformed
+		// TODO add your handling code here:
+	}//GEN-LAST:event_jCheckBoxCharmActionPerformed
+
+	private void jCheckBoxPiercingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxPiercingActionPerformed
+		// TODO add your handling code here:
+	}//GEN-LAST:event_jCheckBoxPiercingActionPerformed
+
+	private void jButtonSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSettingsActionPerformed
+		// TODO add your handling code here:
+	}//GEN-LAST:event_jButtonSettingsActionPerformed
+
     private void launchBrowser(HyperlinkEvent evt) throws URISyntaxException, IOException
     {
 	    HyperlinkEvent.EventType type = evt.getEventType();
@@ -1890,7 +2294,7 @@ public class MhagGui extends javax.swing.JFrame {
 	    {
 		    skillID2 = aSet.getCharmSkillID()[1];
 
-		    list2 = mhagData.getSkillList(lowRank, nCharmSlot, skillID);
+		    list2 = mhagData.getSkillList(lowRank, nCharmSlot, skillID, "Auto-Guard");
 		    for (int j = 0; j < list2.length; j++)
 		    {
 			    if(list2[j] == skillID2)
@@ -2114,7 +2518,7 @@ public class MhagGui extends javax.swing.JFrame {
 			   return;
 		   }
 
-		   int[] list = mhagData.getSkillList(lowRank, nSlot, set.getCharmSkillID()[0]);
+		   int[] list = mhagData.getSkillList(lowRank, nSlot, set.getCharmSkillID()[0], "Auto-Guard");
 		   set.setCharmSkillID(1,list[ind-1]);
 		   set.setNumCharmSkill(1);  // only the 1st charm skill determined
 
@@ -2872,6 +3276,17 @@ public class MhagGui extends javax.swing.JFrame {
 
     }
 
+	public void setSkillTypeMenu()
+	{
+		skillType.addItem("Any");
+	    for(int i = 1; i < 7; i++)
+	    {
+			String name = Skill.getSkillTypeName(i);
+		    skillType.addItem(name);
+	    }
+		skillType.setSelectedIndex(0);
+	}
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -2888,15 +3303,12 @@ public class MhagGui extends javax.swing.JFrame {
 		mhagGui.checkPref();
 		mhagGui.readHelp();
 
-		mhagGui.stream = new TextAreaPrintStream(mhagGui.jTextPreview, System.out);
-	        mhagGui.streamView = new TextAreaPrintStream(mhagGui.jTextPreview2, System.out);
-
 		mhagGui.setVisible(true);
 
 		mhagGui.initSetup(false, true, false); // by default
 
 		//mhagGui.jTextUsage.setCaretPosition(0);
-		mhagGui.jTabbedPane1.setEnabledAt(2, false);
+		mhagGui.jTabbedPane.setEnabledAt(1, false); //diable generator panel
 
 				try {
 					UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
@@ -2913,11 +3325,12 @@ public class MhagGui extends javax.swing.JFrame {
         });
     }
 
-    	// GUI MHAG variables
-    	private Mhag mhag = new Mhag();
-    	private Set set = new Set();
-    	private MhagData mhagData = new MhagData();
-	private TextAreaPrintStream stream, streamView;
+	// GUI MHAG variables
+	private Mhag mhag = new Mhag();
+	private Set set = new Set();
+	private MhagData mhagData = new MhagData();
+
+	private TextAreaPrintStream stream, streamView, streamGen;
 	private int[][] jewelInd = new int[7][3]; //jewel index in each jewel button list
 	private int[][] jewelMenuType = new int[7][3]; //menu type in each jewel button position
 	private boolean adjust = false; // adjust menu, don't perform calculation
@@ -2993,21 +3406,50 @@ public class MhagGui extends javax.swing.JFrame {
     private javax.swing.JRadioButton highRank;
     private javax.swing.JRadioButton html;
     private javax.swing.JPanel hunterType;
+    private javax.swing.ButtonGroup hunterTypeGen;
     private javax.swing.ButtonGroup hunterTypeGroup;
+    private javax.swing.JPanel hunterTypePanel;
+    private javax.swing.JButton jButtonAbort;
+    private javax.swing.JButton jButtonAdd;
+    private javax.swing.JButton jButtonDown;
+    private javax.swing.JButton jButtonMyCharms;
+    private javax.swing.JButton jButtonRemove;
+    private javax.swing.JButton jButtonSearch;
+    private javax.swing.JButton jButtonSettings;
+    private javax.swing.JButton jButtonUp;
+    private javax.swing.JCheckBox jCheckBoxCharm;
+    private javax.swing.JCheckBox jCheckBoxHighRank;
+    private javax.swing.JCheckBox jCheckBoxLowRank;
+    private javax.swing.JCheckBox jCheckBoxPiercing;
+    private javax.swing.JComboBox jComboBoxOpt;
+    private javax.swing.JComboBox jComboBoxWeaponSlots;
     private javax.swing.JEditorPane jEditorAbout;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabelSkillName;
+    private javax.swing.JLabel jLabelSkillTree;
+    private javax.swing.JLabel jLabelSkillType;
+    private javax.swing.JLabel jLabelWeaponSlot;
+    private javax.swing.JList jListOptSets;
+    private javax.swing.JList jListSkillList;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JProgressBar jProgressOpt;
+    private javax.swing.JRadioButton jRadioBlade;
+    private javax.swing.JRadioButton jRadioGunner;
     private javax.swing.JScrollPane jScrollAbout;
     private javax.swing.JScrollPane jScrollHelpList;
     private javax.swing.JScrollPane jScrollHelpText;
+    private javax.swing.JScrollPane jScrollOptSets;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPreview;
     private javax.swing.JScrollPane jScrollPreview2;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JScrollPane jScrollPreview3;
+    private javax.swing.JScrollPane jScrollSkillList;
+    private javax.swing.JTabbedPane jTabbedPane;
     private javax.swing.JTextField jTextData;
     private javax.swing.JTextArea jTextPreview;
     private javax.swing.JTextArea jTextPreview2;
+    private javax.swing.JTextArea jTextPreview3;
     private javax.swing.JTextField jTextSetName;
     private javax.swing.JComboBox legSlot1;
     private javax.swing.JComboBox legSlot2;
@@ -3015,8 +3457,11 @@ public class MhagGui extends javax.swing.JFrame {
     private javax.swing.JLabel legsLabel;
     private javax.swing.JComboBox legsMenu;
     private javax.swing.JButton loadSetInteract;
+    private javax.swing.JButton loadToCalcGen;
     private javax.swing.JRadioButton lowRank;
     private javax.swing.JRadioButton male;
+    private javax.swing.JLabel optLabel;
+    private javax.swing.JPanel optionPanel;
     private javax.swing.JPanel output;
     private javax.swing.ButtonGroup outputGroup;
     private javax.swing.JPanel rank;
@@ -3026,8 +3471,12 @@ public class MhagGui extends javax.swing.JFrame {
     private javax.swing.JPanel setup;
     private javax.swing.JPanel sex;
     private javax.swing.ButtonGroup sexGroup;
+    private javax.swing.JComboBox skillName;
     private javax.swing.JComboBox skillPoint1;
     private javax.swing.JComboBox skillPoint2;
+    private javax.swing.JComboBox skillTree;
+    private javax.swing.JComboBox skillType;
+    private javax.swing.JPanel skillsPanel;
     private javax.swing.JRadioButton text;
     private javax.swing.JButton undoInteract;
     private javax.swing.JPanel viewer;

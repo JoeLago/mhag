@@ -30,7 +30,7 @@ public class Output {
 		outSave.println("<BODY>");
 		outSave.println("<table height=\"100%\" width=600 align=\"center\" vligh=\"top\" border=0>");
 		outSave.println("<tr><td><h1 align=\"center\">Monster Hunter Armor Book</h1>");
-		outSave.println("<p align=\"center\">geneated by MHAG v1.0</p></td></tr>");
+		outSave.println("<p align=\"center\">geneated by MHAG v1.1</p></td></tr>");
 		outSave.println("<tr><td>&nbsp;</td></tr>");
 		outSave.println("</table>");
 	}

@@ -3,8 +3,9 @@ package org.mhag.model;
 /**
  * @program MHAG
  * @ Set Class , a set & stats
- * @version 1.1
+ * @version 1.2
  * support new talisman system
+ * jewel optimization support (data//operators)
  * @author Tifa@mh3
  */
 
@@ -42,6 +43,11 @@ public class Set {
 				jewelID[i][j] = 0;
 			}
 		}
+
+		Arrays.fill(gapPoint, 0);
+		Arrays.fill(slots, 0);
+		Arrays.fill(slotInfo, 0);
+
 	}
 
 	// get/set inputs
@@ -78,6 +84,8 @@ public class Set {
 
 	// get jewel id
 	public int[][] getJewelID() {return jewelID;}
+	public int[] getJewelID(int bodyPart) {return jewelID[bodyPart];}
+	public int getJewelID(int bodyPart, int ind) {return jewelID[bodyPart][ind];}
 
 	// set jewel id
 	public void setJewelID(int[][] aJewelID) {jewelID = aJewelID;}
@@ -174,6 +182,7 @@ public class Set {
 	}
 
 	// get number of slots
+	public int[] getNumJewel() {return numJewel;}
 	public int getNumJewel(int part) {return numJewel[part];}
 
 	// get number of slots
@@ -798,6 +807,27 @@ public class Set {
 					MhagUtil.logLine(mhag,
 						"   Error! Charm Skill should be different!");
 					return false;
+				}
+				if(skill.getSkillName().equals("Auto-Guard"))
+				{
+					if((i == 0) && (charmSkillPoint[i] != 10))
+					{
+						MhagUtil.logLine(mhag,
+							"   Error! Auto-Guard Point should be 10!");
+						return false;
+					}
+					else if(i == 1)
+					{
+						MhagUtil.logLine(mhag,
+							"   Error! Auto-guard can't be the 2nd skill!");
+						return false;
+					}
+					if(numCharmSkill == 2)
+					{
+						MhagUtil.logLine(mhag,
+							"   Error! Auto-guard talisman can't have 2nd skill!");
+						return false;
+					}
 				}
 			}
 		}
@@ -1635,7 +1665,64 @@ public class Set {
 		//rateCharm(gen);  //rate Charm , not supported in current mhag
 	}
 
-	public void checkSlot(MhagData mhagData, int[] slots)
+	// get gapPoint
+	public int[] getGapPoint() {return gapPoint;}
+	public int getGapPoint(int index) {return gapPoint[index];}
+
+	// set gapPoint
+	// check gaps of skill points for the generator
+	public void setGapPoint(Generator gen)
+	{
+		//boolean[] skillMatched = new boolean[10];
+		//numGap = 0;
+		Arrays.fill(gapPoint, 0);
+		//Arrays.fill(gapSkillID, 0);
+
+		// default skills
+		for(int i = 0; i < gen.getNumEffectOpt(); i++)
+			gapPoint[i] = gen.getTriggers(i);
+
+		for(int i = 0; i < numSkill; i++)
+		{
+			int id = skillID[i];
+			int skillInd = Set.matchID(gen.getSkills(),id);
+			/*   ignore negative skills
+			 if(skillInd == -1)   //possible negative skills
+			{
+				if(mhagData.getSkill(id).getHasNegative()) // only negative skills
+				{
+					if(mhagData.getSkill(id).getBGSpec(set.getBlade())) //not include b/g specific nega skills
+					{
+						gapPoint[numGap] = -10 - set.getSkillPoint()[i]; //negative skill trigger always at -10
+						gapSkillID[numGap] = id;
+						numGap++;
+					}
+				}
+				//minus number, meaning points left to reach negative effect
+			}
+			 */
+			if (skillInd != -1)  //matched query skills
+			{
+				Skill skill = gen.getMhagData().getSkill(id);
+				if(skill.getSkillName().equals("Auto-Guard"))  //skip auto-guard
+					gapPoint[skillInd] = 0;
+				else
+					gapPoint[skillInd] = gen.getTriggers(skillInd) - skillPoint[i];
+				//gapSkillID[skillInd] = id;
+				//numGap++;
+			}
+
+		}
+
+	}
+
+	public int[] getSlots() {return slots;}
+	public int getSlots(int index) {return slots[index];}
+	public int[] getSlotInfo() {return slotInfo;}
+	public int getSlotInfo(int part) {return slotInfo[part];}
+
+	// set slots info
+	public void setSlots(MhagData mhagData, int numWeaponSlot)
 	{
 		Arrays.fill(slots, 0);
 		for(int i = 0; i < 5; i++)
@@ -1643,6 +1730,7 @@ public class Set {
 			if(!inUse[i])continue;
 			Armor armor =  mhagData.getArmor(i, armorID[i]);
 			int nSlot = armor.getNumSlot();
+			slotInfo[i] =  nSlot;
 			if((numTorso != 0) && (i == 2))
 				slots[4] = nSlot;
 			else
@@ -1650,10 +1738,27 @@ public class Set {
 
 		}
 		slots[numCharmSlot]++;
+		slots[numWeaponSlot]++;
+		slotInfo[5] =  numWeaponSlot;
+		slotInfo[6] =  numCharmSlot;
 
-		//slots[0] for torso up
+		//slots[0] for torso up  , overwrite number of 0-slot pierces
 		slots[0] = numTorso;
 	}
+
+
+
+	/*
+	public void setJewelUseTheory(int skillID, int numSlot, int numJewel)
+	{
+		jewelUseTheory[skillID][numSlot] = numJewel;
+	}
+
+	public int getJewelUseTheory(int skillID, int numSlot)
+	{
+		return jewelUseTheory[skillID][numSlot];
+	}
+	*/
 
 	//Inputs
 	private String setName = unNamedSet;  // User-defined Set Name
@@ -1688,4 +1793,10 @@ public class Set {
 
 	static final String unNamedSet = "Unnamed Set";
 
+	//optimization data (for jewel optimization)
+	private int[] gapPoint = new int[10];
+	private int[] slots = new int[5];    //slots summary based on number of slots
+	// 0: num_torso; 1-3: # of x-slot pieces; 4: # of slots for torso up pierce
+	//private int[][] jewelUseTheory = new int[10][4];  //optimal jewel use for each skill (theoretical, slot info independent)
+	private int[] slotInfo = new int[7];
 }
