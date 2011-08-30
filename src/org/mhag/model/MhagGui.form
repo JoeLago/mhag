@@ -17,7 +17,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="MHAG: Monster Hunter Armor Generator   Ver 1.1c"/>
+    <Property name="title" type="java.lang.String" value="MHAG: Monster Hunter Armor Generator   Ver 1.2 beta 1"/>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
@@ -32,7 +32,7 @@
     <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
     <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
-    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
@@ -46,10 +46,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jTabbedPane" min="-2" pref="630" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
+          <Component id="jTabbedPane" min="-2" pref="630" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -1526,6 +1523,9 @@
               <SubComponents>
                 <Component class="javax.swing.JComboBox" name="skillType">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Monospaced" size="12" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
                     </Property>
@@ -1533,9 +1533,15 @@
                       <Dimension value="[56, 25]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="skillTypeActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="skillTree">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Monospaced" size="12" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="1">
                         <StringItem index="0" value="---"/>
@@ -1548,6 +1554,9 @@
                 </Component>
                 <Component class="javax.swing.JComboBox" name="skillName">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Monospaced" size="12" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="1">
                         <StringItem index="0" value="---"/>
@@ -1598,6 +1607,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Remove"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRemoveActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButtonUp">
                   <Properties>
@@ -1606,6 +1618,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Move Up"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonUpActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButtonDown">
                   <Properties>
@@ -1614,6 +1629,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Move Down"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonDownActionPerformed"/>
+                  </Events>
                 </Component>
                 <Container class="javax.swing.JScrollPane" name="jScrollSkillList">
                   <AuxValues>
@@ -1633,7 +1651,7 @@
                           </Border>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Monospaced" size="12" style="0"/>
+                          <Font name="Ubuntu" size="12" style="0"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="1" green="1" red="1" type="rgb"/>
@@ -1780,6 +1798,9 @@
                         <Property name="selected" type="boolean" value="true"/>
                         <Property name="text" type="java.lang.String" value="Bladermaster"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioBladeActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="jRadioGunner">
                       <Properties>
@@ -1791,6 +1812,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Gunner"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioGunnerActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1799,20 +1823,21 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Monospaced" size="12" style="0"/>
                     </Property>
-                    <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" value="Low Rank"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxLowRankItemStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBoxHighRank">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Monospaced" size="12" style="0"/>
                     </Property>
-                    <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" value="High Rank"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxHighRankActionPerformed"/>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxHighRankItemStateChanged"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabelWeaponSlot">
@@ -1838,6 +1863,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxWeaponSlotsActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="optLabel">
                   <Properties>
@@ -1861,6 +1889,9 @@
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxOptActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBoxPiercing">
                   <Properties>
@@ -1870,7 +1901,7 @@
                     <Property name="text" type="java.lang.String" value="Piercing"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxPiercingActionPerformed"/>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxPiercingItemStateChanged"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBoxCharm">
@@ -1881,7 +1912,7 @@
                     <Property name="text" type="java.lang.String" value="My Charms"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxCharmActionPerformed"/>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxCharmItemStateChanged"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -1912,12 +1943,16 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Search"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JProgressBar" name="jProgressOpt">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Monospaced" size="12" style="0"/>
                 </Property>
+                <Property name="maximum" type="int" value="20"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="loadToCalcGen">
@@ -1927,6 +1962,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Load to Calculator"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loadToCalcGenActionPerformed"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollOptSets">
               <AuxValues>
@@ -1950,6 +1988,9 @@
                     </Property>
                     <Property name="selectionMode" type="int" value="0"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="valueChanged" listener="javax.swing.event.ListSelectionListener" parameters="javax.swing.event.ListSelectionEvent" handler="jListOptSetsValueChanged"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1960,6 +2001,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="x100,000"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAbortActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -2372,7 +2416,7 @@
                   <Properties>
                     <Property name="contentType" type="java.lang.String" value="text/html"/>
                     <Property name="editable" type="boolean" value="false"/>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;&#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;h2 align = &quot;center&quot;&gt;&#xa;      MHAG :&#xa;    &lt;/h2&gt;&#xa;  &lt;h2 align = &quot;center&quot;&gt;&#xa;       Monster Hunter Armor Generator&#xa;    &lt;/h2&gt;&#xa; &lt;p align = &quot;center&quot;&gt;v1.1c &lt;/p&gt;&#xa; &lt;p align = &quot;center&quot;&gt;Release Date: 08/11/2011&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;MHAG Project: &lt;a href=&quot;http://code.google.com/p/mhag/&quot;&gt;code.google.com/p/mhag&lt;/a&gt;&lt;/p&gt;&#xa;&#xa;&lt;p&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;by Tifa@mh3&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Unity Member: &lt;a href=&quot;http://www.capcom-unity.com/tifa@mh3&quot;&gt;www.capcom-unity.com/tifa@mh3&lt;/a&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Youtube Channel: &lt;a href=&quot;http://www.youtube.com/mh3journey&quot;&gt;www.youtube.com/mh3journey&lt;/a&gt;&lt;/p&gt;&#xa;&#xa;  &lt;/body&gt;&#xa;&#xa;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;&#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;h2 align = &quot;center&quot;&gt;&#xa;      MHAG :&#xa;    &lt;/h2&gt;&#xa;  &lt;h2 align = &quot;center&quot;&gt;&#xa;       Monster Hunter Armor Generator&#xa;    &lt;/h2&gt;&#xa; &lt;p align = &quot;center&quot;&gt;v1.2 beta 1 &lt;/p&gt;&#xa; &lt;p align = &quot;center&quot;&gt;Release Date: 09/01/2011&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;MHAG Project: &lt;a href=&quot;http://code.google.com/p/mhag/&quot;&gt;code.google.com/p/mhag&lt;/a&gt;&lt;/p&gt;&#xa;&#xa;&lt;p&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;by Tifa@mh3&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Unity Member: &lt;a href=&quot;http://www.capcom-unity.com/tifa@mh3&quot;&gt;www.capcom-unity.com/tifa@mh3&lt;/a&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Youtube Channel: &lt;a href=&quot;http://www.youtube.com/mh3journey&quot;&gt;www.youtube.com/mh3journey&lt;/a&gt;&lt;/p&gt;&#xa;&#xa;  &lt;/body&gt;&#xa;&#xa;"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
                   <Events>

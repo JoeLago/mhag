@@ -74,7 +74,6 @@
         <target name="-post-jar">
            <jar jarfile="Mhag.jar">
               <zipfileset src="dist/Mhag.jar" excludes="META-INF/*" />
-              <zipfileset src="dist/lib/swing-layout-1.0.4.jar" excludes="META-INF/*" />
               <manifest>
                  <attribute name="Main-Class" value="MhagGui" />
                  </manifest>

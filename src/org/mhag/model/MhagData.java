@@ -983,6 +983,57 @@ public class MhagData {
 		return indFinal;
 	}
 
+	// get skill tree list based on skill type
+	public int[] getSkillList(int typeID)
+	{
+		int nMax = Skill.skillIDTot;
+		int[] index = new int[nMax];
+		String[] nameStr =  new String[nMax];
+		int num = 0;
+		for (int i = 0; i < nMax; i++)
+		{
+			Skill skill = skillList[i];
+			if((typeID == 0) || (skill.getSkillType() == typeID))
+			{
+				index[num] = i;
+				nameStr[num] = skill.getSkillName();
+				num++;
+			}
+		}
+
+		int[] indNew = MhagUtil.sortIndex(num, nameStr);
+
+		int[] indFinal = new int[num];
+
+		for(int i = 0; i < num; i++)
+			indFinal[i] = index[indNew[num - 1 - i]];
+
+		return indFinal;
+	}
+
+	// get skill (effect) list based on skill type
+	public int[] getEffectList(int id)
+	{
+		Skill skill = skillList[id];
+		int num = skill.getNumEffect();
+		int numNow = 0;
+		for(int i = 0; i < num; i++)
+		{
+			if(skill.getEffectTrigger(i) < 0)continue;
+			numNow++;
+		}
+		int[] ind = new int[numNow];
+		numNow = 0;
+		for(int i = 0; i < num; i++)
+		{
+			if(skill.getEffectTrigger(i) < 0)continue;
+			ind[numNow] = skill.getEffectID(i);
+			numNow++;
+		}
+
+		return ind;
+	}
+
 	/*
 	public int[] getCharmList(boolean lowRank)
 	{

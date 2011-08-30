@@ -148,15 +148,18 @@ public class Skill {
 
 	// get Effect Name
 	public String[] getEffectName() {return effectName;}
+	public String getEffectName(int ind) {return effectName[ind];}
 
 	// get Effect ID
 	public int[] getEffectID() {return effectID;}
+	public int getEffectID(int ind) {return effectID[ind];}
 
 	// set Effect ID
 	public void setEffectID(int index, int id) {effectID[index] = id;}
 
 	// get Effect Trigger Points
 	public int[] getEffectTrigger() {return effectTrigger;}
+	public int getEffectTrigger(int ind) {return effectTrigger[ind];}
 
 	// get JewelID
 	public int[] getJewelID(boolean lowRank)

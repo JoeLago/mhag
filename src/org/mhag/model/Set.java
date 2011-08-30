@@ -44,9 +44,26 @@ public class Set {
 			}
 		}
 
+		// outputs
+		resist = new int[5];
+		skillID = new int[100];
+		skillPoint = new int[100];
+		effectID = new int[8];
+		effectSkillIndex = new int[8];
+		Arrays.fill(resist, 0);
+		Arrays.fill(skillID, 0);
+		Arrays.fill(skillPoint, 0);
+		Arrays.fill(effectID, 0);
+		Arrays.fill(effectSkillIndex, 0);
+
+		// generator data
+		gapPoint = new int[10];
+		slots = new int[5];
+		slotInfo = new int[7];
 		Arrays.fill(gapPoint, 0);
 		Arrays.fill(slots, 0);
 		Arrays.fill(slotInfo, 0);
+
 
 	}
 
@@ -72,6 +89,7 @@ public class Set {
 
 	// get armor id
 	public int[] getArmorID() {return armorID;}
+	public int getArmorID(int bodyPart) {return armorID[bodyPart];}
 
 	// set armor id
 	public void setArmorID(int[] aArmorID) {armorID = aArmorID;}
@@ -121,6 +139,7 @@ public class Set {
 
 	// get charm Skill id
 	public int[] getCharmSkillID() {return charmSkillID;}
+	public int getCharmSkillID(int ind) {return charmSkillID[ind];}
 
 	// set charm skill id
 	public void setCharmSkillID(int[] aCharmSkillID)
@@ -135,6 +154,7 @@ public class Set {
 
 	// get charm Skill id
 	public int[] getCharmSkillPoint() {return charmSkillPoint;}
+	public int getCharmSkillPoint(int ind) {return charmSkillPoint[ind];}
 
 	// set charm skill id
 	public void setCharmSkillPoint(int[] aCharmSkillPoint)
@@ -526,11 +546,6 @@ public class Set {
 		Arrays.fill(numJewel, 0);
 
 		// outputs
-		resist = new int[5];
-		skillID = new int[100];
-		skillPoint = new int[100];
-		effectID = new int[8];
-		effectSkillIndex = new int[8];
 		Arrays.fill(resist, 0);
 		Arrays.fill(skillID, 0);
 		Arrays.fill(skillPoint, 0);
@@ -539,6 +554,11 @@ public class Set {
 
 		// hidden
 		female = false;
+
+		//generator
+		Arrays.fill(gapPoint, 0);
+		Arrays.fill(slots, 0);
+		Arrays.fill(slotInfo, 0);
 
 	}
 	// set a set from code (batch version)
@@ -1541,8 +1561,10 @@ public class Set {
 	}
 
 	// calculate set stats (simple version)
-	public void quickCalcSet(Mhag mhag, MhagData mhagData)
+	public void quickCalcSet(Generator gen)
 	{
+		Mhag mhag = gen.getMhag();
+		MhagData mhagData = gen.getMhagData();
 		// defense
 		defense = 0;
 		if(lowRank)
@@ -1564,7 +1586,7 @@ public class Set {
 			}
 		}
 
-		rate += defense / 8;  //high defense has more bonus
+		rate += defense / gen.getScorePara(0);  //high defense has more bonus
 
 		// add skills
 		addSkills(mhag, mhagData);
@@ -1591,7 +1613,7 @@ public class Set {
 				{
 					if(point <= -10) //active negative effects
 						if(skill.getBGSpec(blade))
-							rate -= 20; //punish negative effects
+							rate += gen.getScorePara(1); //punish negative effects
 				}
 			}
 			else //check required skills
@@ -1602,9 +1624,9 @@ public class Set {
 				if(trigger <= point) //triggered
 				{
 					if(skillInd <= 3) // first 4 skills
-						rate += 50 + trigger;  //larger bonus
+						rate += gen.getScorePara(2) + trigger;  //larger bonus
 					else
-						rate += 30 + trigger;  //the rest 6, fewer bonus
+						rate += gen.getScorePara(3) + trigger;  //the rest 6, fewer bonus
 				}
 				else //not triggered, plus the available points;
 				{
@@ -1640,7 +1662,7 @@ public class Set {
 				nSlot -= jewel.getNumSlot();
 			}
 			if(nSlot > 0)
-				rate += 3; //bonus for unused slots
+				rate += gen.getScorePara(4); //bonus for unused slots
 		}
 
 		if(inUse[5])  //weapon slots
@@ -1651,7 +1673,7 @@ public class Set {
 				Jewel jewel = gen.getMhagData().getJewel(jewelID[5][j]);
 				nSlot += jewel.getNumSlot();
 			}
-			rate -= 5; //penalty for used slots (less weapon of choice)
+			rate += gen.getScorePara(5); //penalty for used slots (less weapon of choice)
 		}
 
 	}
@@ -1659,7 +1681,7 @@ public class Set {
 	public void setRate(Generator gen)
 	{
 		rate = 0;
-		quickCalcSet(gen.getMhag(), gen.getMhagData()); //plus rate defense;
+		quickCalcSet(gen); //plus rate defense;
 		rateEffects(gen);  // rate skills
 		rateSlots(gen);  //rate slot usage
 		//rateCharm(gen);  //rate Charm , not supported in current mhag
@@ -1668,6 +1690,7 @@ public class Set {
 	// get gapPoint
 	public int[] getGapPoint() {return gapPoint;}
 	public int getGapPoint(int index) {return gapPoint[index];}
+	public void setGapPoint(int index, int value) {gapPoint[index] = value;}
 
 	// set gapPoint
 	// check gaps of skill points for the generator
@@ -1718,20 +1741,24 @@ public class Set {
 
 	public int[] getSlots() {return slots;}
 	public int getSlots(int index) {return slots[index];}
+	public void setSlots(int index, int value) {slots[index] = value;}
+
 	public int[] getSlotInfo() {return slotInfo;}
 	public int getSlotInfo(int part) {return slotInfo[part];}
+	public void setSlotInfo(int part, int value) {slotInfo[part] = value;}
 
 	// set slots info
 	public void setSlots(MhagData mhagData, int numWeaponSlot)
 	{
 		Arrays.fill(slots, 0);
+		Arrays.fill(slotInfo, 0);
 		for(int i = 0; i < 5; i++)
 		{
 			if(!inUse[i])continue;
 			Armor armor =  mhagData.getArmor(i, armorID[i]);
 			int nSlot = armor.getNumSlot();
 			slotInfo[i] =  nSlot;
-			if((numTorso != 0) && (i == 2))
+			if((numTorso != 0) && (i == 1)) //chest piece
 				slots[4] = nSlot;
 			else
 				slots[nSlot]++;
@@ -1739,14 +1766,62 @@ public class Set {
 		}
 		slots[numCharmSlot]++;
 		slots[numWeaponSlot]++;
-		slotInfo[5] =  numWeaponSlot;
-		slotInfo[6] =  numCharmSlot;
+		slotInfo[6] =  numWeaponSlot;  //warning! weapon charm swap, make weapon the lowest priority
+		slotInfo[5] =  numCharmSlot;
 
 		//slots[0] for torso up  , overwrite number of 0-slot pierces
 		slots[0] = numTorso;
 	}
 
+	// copy a set
+	public void copySet(Set aSet)
+	{
+		for(int i = 0; i < 5; i++)
+			armorID[i] = aSet.getArmorID(i);
+		for(int i = 0; i < 7; i++)
+			for(int j = 0; j < 3; j++)
+				jewelID[i][j] = aSet.getJewelID(i, j);
+		for(int i = 0; i < 2; i++)
+			charmSkillID[i] = aSet.getCharmSkillID(i);
+		for(int i = 0; i < 2; i++)
+			charmSkillPoint[i] = aSet.getCharmSkillPoint(i);
+		for(int i = 0; i < 7; i++)
+			numJewel[i] = aSet.getNumJewel(i);
+		for(int i = 0; i < 7; i++)
+			inUse[i] = aSet.getInUse(i);
 
+		setName = aSet.getSetName();
+		lowRank = aSet.getLowRank();
+		blade = aSet.getBlade();
+		numCharmSkill = aSet.getNumCharmSkill();
+		numCharmSlot = aSet.getNumCharmSlot();
+
+		for(int i = 0; i < 10; i++)
+			gapPoint[i] = aSet.getGapPoint(i);
+		for(int i = 0; i < 5; i++)
+			slots[i] = aSet.getSlots(i);
+		for(int i = 0; i < 5; i++)
+			slotInfo[i] = aSet.getSlotInfo(i);
+	}
+
+	// copy a set, only armor piece and talisman(charm)
+	public void copySetMin(Set aSet)
+	{
+		for(int i = 0; i < 5; i++)
+			armorID[i] = aSet.getArmorID(i);
+		for(int i = 0; i < 2; i++)
+			charmSkillID[i] = aSet.getCharmSkillID(i);
+		for(int i = 0; i < 2; i++)
+			charmSkillPoint[i] = aSet.getCharmSkillPoint(i);
+		for(int i = 0; i < 7; i++)
+			inUse[i] = aSet.getInUse(i);
+
+		setName = unNamedSet; // name not specified
+		lowRank = aSet.getLowRank();
+		blade = aSet.getBlade();
+		numCharmSkill = aSet.getNumCharmSkill();
+		numCharmSlot = aSet.getNumCharmSlot();
+	}
 
 	/*
 	public void setJewelUseTheory(int skillID, int numSlot, int numJewel)
@@ -1794,9 +1869,8 @@ public class Set {
 	static final String unNamedSet = "Unnamed Set";
 
 	//optimization data (for jewel optimization)
-	private int[] gapPoint = new int[10];
-	private int[] slots = new int[5];    //slots summary based on number of slots
+	private int[] gapPoint;
+	private int[] slots;    //slots summary based on number of slots
 	// 0: num_torso; 1-3: # of x-slot pieces; 4: # of slots for torso up pierce
-	//private int[][] jewelUseTheory = new int[10][4];  //optimal jewel use for each skill (theoretical, slot info independent)
-	private int[] slotInfo = new int[7];
+	private int[] slotInfo;
 }

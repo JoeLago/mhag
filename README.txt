@@ -24,6 +24,11 @@ MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is d
      I will also make source code packages for stable versions. (v1.0, v2.0)
 
 History:
+v.1.2 beta 1 09/01/2011:
+   1.new feature : new generator panel, jewel optimization (experimental)
+v.1.1c 08/27/2011:
+   1.bug : combobox menu error for the 2nd talisman skill
+   2.tweak gui
 v.1.1b 08/11/2011:
    1.adjust talisman skill point menu for Auto-Guard
    2.bug : sometimes an armor piece cannot be selected in the calculator
@@ -36,7 +41,6 @@ v.1.1 08/02/2011:
    3.bug :  wrong tooltips when swtiching female/male
    4.bug : backward support to java 1.5 (fixed save & exit window)
    5.error : guild+ armor data error , vangis coat typo
-
 v.1.0 Final Release, 01/10/2011:
    1.new feature : add backward support to java 1.5 and Mac OS
    2.new feature : add "save before exit" dialog when code list is changed.
@@ -44,7 +48,6 @@ v.1.0 Final Release, 01/10/2011:
    4.new feature : Help panel is now more user-friendly.  It contains a list and a content panel.  All help data are automatically extracted from USAGE.txt
    5."load" in the viewer now resets preview panel.
    6.error: redundant items found in MHP3rd's charm data. deleted
-
 v.1.0 beta 4, 01/06/2011:
    1.new feature : add support to mhp3rd (experimental); a simple version of charm system  
    2.add mhp3rd data, translation is partly based on www.mhf3.com. include code book for full sets.
