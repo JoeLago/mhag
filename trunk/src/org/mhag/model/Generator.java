@@ -14,6 +14,25 @@ import java.util.Scanner;
  */
 public class Generator {
 
+	public Generator()
+	{
+		Arrays.fill(effects, -1);
+		Arrays.fill(skills, -1);
+		Arrays.fill(triggers, 0);
+
+		scoreParaDefault[0] = 8;  //defense
+		scoreParaDefault[1] = -20;  // negative skill
+		scoreParaDefault[2] = 50;  // postive skill <= 4
+		scoreParaDefault[3] = 30;  // postive skill > 4
+		scoreParaDefault[4] = 3;  // unused slots
+		scoreParaDefault[5] = -5; // weapon slots in use
+
+		for(int i = 0; i < 6; i++)
+			scorePara[i] = scoreParaDefault[i];
+
+		Arrays.fill(includeOpt, false);
+	}
+
 	static void generator(Mhag aMhag, MhagData aMhagData) throws FileNotFoundException
 	{
 		Generator gen = new Generator();
@@ -218,12 +237,58 @@ public class Generator {
 	{
 		if(genMode == 0)  // jewel optimization
 			setOptimizer(aSet);
-		else if(genMode == 1)  // set search
-			System.exit(0); //not ready yet, tifa
+		//else if(genMode == 1)  // set search
 			//setOptimizer(aSet);
 //		else
 //			aSet = setSearch(aSet);
 
+	}
+
+	// generator main operator for gui, output set code
+	public String[] genMainGui(MhagGui mhagGui, Set aSet, int repeat)
+	{
+		int num = 0;
+		if(genMode == 0)
+			num = 1;
+		else
+			num = numOptSet;
+
+		String[] setCodes = new String[num];
+
+		if(genMode == 0)  // jewel optimization
+		{
+			//System.out.println(numEffectOpt);
+			//System.out.println(Arrays.toString(skills));
+			//System.out.println(Arrays.toString(effects));
+			//System.out.println(Arrays.toString(triggers));
+
+			int score = 0;
+			int progress = 1;
+			Set genSet = new Set();
+			for(int i = 0; i < repeat; i++)
+			{
+				if(i == repeat/20 * progress)
+				{
+					mhagGui.getProgressBar().setValue(progress);
+					progress++;
+				}
+
+				genSet.copySetMin(aSet);  //get Set
+				//genSet.setRate(this);
+				score = setOptimizer(genSet);
+			}
+
+			genSet.setSetName(String.format("Set 1 (%d)", score));
+			setCodes[0] = genSet.getSetCode();
+			//System.out.println(setCodes[0]);
+			/*
+			mhag.setLogOpt(0);
+			mhag.setOutLog(System.out);
+			genSet.calcSet(mhag, mhagData);
+			 */
+		}
+
+		return setCodes;
 	}
 
 	public void numerateTest()  // only for test
@@ -306,9 +371,9 @@ public class Generator {
 			else if(opt.equals("weapon"))
 			{
 	  			if(args.length() != 0)
-					numWeaponSlot = Integer.valueOf(args);
-				if(numWeaponSlot < -1 && numWeaponSlot > 3)
-					numWeaponSlot = -1;
+					numWeaponSlotOpt = Integer.valueOf(args);
+				if(numWeaponSlotOpt < -1 && numWeaponSlotOpt > 3)
+					numWeaponSlotOpt = -1;
 			}
 		}
 
@@ -320,7 +385,7 @@ public class Generator {
 		}
 
 		MhagUtil.logLine(mhag,String.format("Mode: %d",genMode));
-		MhagUtil.logLine(mhag,String.format("# of Weapon Slots: %d",numWeaponSlot));
+		MhagUtil.logLine(mhag,String.format("# of Weapon Slots: %d",numWeaponSlotOpt));
 		MhagUtil.logLine(mhag,String.format("# of Effects: %d",numEffectOpt));
 		MhagUtil.logLine(mhag,"Effects: "+Arrays.toString(effects));
 		MhagUtil.logLine(mhag,"Skills: "+Arrays.toString(skills));
@@ -397,7 +462,34 @@ public class Generator {
 	}
 
 	// Jewel Optimization
-	public void setOptimizer(Set aSet)
+	public int setOptimizer(Set aSet)
+	{
+		int scoreMax = 0;
+
+		if(numWeaponSlotOpt < 0 || numWeaponSlotOpt > 3)
+		{
+			Set bestSet = new Set();
+			bestSet.copySet(aSet);
+			for(int i = 0; i < 4; i++)
+			{
+				Set newSet = new Set();
+				newSet.copySet(aSet);
+				int score = setOptimizer(newSet, i);
+				if(score > scoreMax)
+				{
+					scoreMax = score;
+					bestSet.copySet(newSet);
+				}
+			}
+			aSet.copySet(bestSet);
+		}
+		else
+			scoreMax = setOptimizer(aSet, numWeaponSlotOpt);
+
+		return scoreMax;
+	}
+
+	public int setOptimizer(Set aSet, int numWeaponSlot)
 	{
 		//aSet.save(mhag, mhagData, System.out);
 		for(int i = 0; i < 7; i++)
@@ -419,6 +511,7 @@ public class Generator {
 			System.out.printf("%3d: %-10s %3d\n", i, skill.getSkillName(), aSet.getGapPoint(i));
 		}
 		System.out.println(Arrays.toString(aSet.getSlots()));
+		System.out.println(Arrays.toString(aSet.getSlotInfo()));
 
 		for(int i = 1; i <= numEffectOpt; i++)
 			System.out.println(Arrays.toString(getSkillOrder(i))+
@@ -430,6 +523,7 @@ public class Generator {
 		//System.out.println(aSet.getRate());
 
 		//aSet.calcSet(mhag, mhagData);
+		return aSet.getRate();
 	}
 
 	// jewel Optimization
@@ -672,7 +766,7 @@ public class Generator {
 		return false;
 	}
 
-	public boolean setJewelForSkill(Set aSet, int currentSkill, int[] gapPointNow, int[] slotsNow, int[] numSlotNow)
+	public boolean setJewelForSkill(Set aSet, int currentSkill, int[] gapPointNow, int[] slotsNow, int[] slotInfoNow)
 	{
 		if(gapPointNow[currentSkill] <= 0)return true;
 		int[] points = jewelPoint[currentSkill];
@@ -688,25 +782,25 @@ public class Generator {
 			{
 				if(slotsNow[i] > 0)  // found matched piece
 				{
-					addJewel(aSet, currentSkill, i, i, false, gapPointNow, slotsNow, numSlotNow);
+					addJewel(aSet, currentSkill, i, i, false, gapPointNow, slotsNow, slotInfoNow);
 				}
 				else if ((i == 1) && (slotsNow[4] > 0) &&
 					(((points[1] == 1) && (gapPointNow[currentSkill] >= slotsNow[0])) ||
 					((points[1] == 2) && (gapPointNow[currentSkill]+1 >= slotsNow[0]*2))))   //check 1-slot torso up skill
 				{
-					addJewel(aSet, currentSkill, 1, slotsNow[4], true, gapPointNow, slotsNow, numSlotNow);
+					addJewel(aSet, currentSkill, 1, slotsNow[4], true, gapPointNow, slotsNow, slotInfoNow);
 				}
 				else if((i < 3) &&(slotsNow[i+1] > 0))  // check piece with 1 more slot
 				{
-					addJewel(aSet, currentSkill, i, i+1, false, gapPointNow, slotsNow, numSlotNow);
+					addJewel(aSet, currentSkill, i, i+1, false, gapPointNow, slotsNow, slotInfoNow);
 				}
 				else if ((i == 1) && slotsNow[i+2] > 0) // check piece with 2 more slot
 				{
-					addJewel(aSet, currentSkill, i, i+2, false, gapPointNow, slotsNow, numSlotNow);
+					addJewel(aSet, currentSkill, i, i+2, false, gapPointNow, slotsNow, slotInfoNow);
 				}
 				else if(slotsNow[4] > 0)  //check torso up if no match
 				{
-					addJewel(aSet, currentSkill, 1, slotsNow[4], true, gapPointNow, slotsNow, numSlotNow);
+					addJewel(aSet, currentSkill, 1, slotsNow[4], true, gapPointNow, slotsNow, slotInfoNow);
 				}
 				else
 				{
@@ -726,6 +820,9 @@ public class Generator {
 	public void addJewel(Set aSet, int currentSkill, int nSlot, int pieceSlot, boolean ifTorso,
 			int[] gapPointNow, int[] slotsNow, int[] slotInfoNow)
 	{
+		//System.out.printf(Arrays.toString(slotInfoNow));
+		//System.out.printf(Arrays.toString(slotsNow));
+
 		int bodyPart = 0;
 		if(ifTorso)
 		{
@@ -749,12 +846,18 @@ public class Generator {
 			{
 				if(slotInfoNow[i] == pieceSlot)
 				{
-					bodyPart = i;
+					if(i < 5)
+						bodyPart = i;
+					else if(i == 5)
+						bodyPart = 6;  // weapon , charm swap, make weapon slot lowest priority
+					else
+						bodyPart = 5;
 					break;
 				}
 			}
 			//System.out.printf("here %d %d %d\n", bodyPart, nSlot, jewelIDUsed[currentSkill][nSlot]);
 		}
+		//System.out.printf("%d %d %d %d\n",currentSkill, nSlot, pieceSlot, bodyPart);
 		slotInfoNow[bodyPart] -= nSlot;
 
 		int nJewel = aSet.getNumJewel(bodyPart) + 1;
@@ -764,6 +867,8 @@ public class Generator {
 
 	public Mhag getMhag() {return mhag;}
 	public MhagData getMhagData() {return mhagData;}
+	public void setMhag(Mhag aMhag) {mhag = aMhag;}
+	public void setMhagData(MhagData aMhagData) {mhagData = aMhagData;}
 
 	public int getNumEffectOpt() {return numEffectOpt;}
 
@@ -787,8 +892,18 @@ public class Generator {
 	public void setTriggers(int[] points) {triggers = points;}
 	public void setTriggers(int ind, int point) {triggers[ind] = point;}
 
-	public int getNumWeaponSlot() {return numWeaponSlot;}
-	public void setNumWeaponSlot(int nSlot) {numWeaponSlot = nSlot;}
+	public int getNumWeaponSlot() {return numWeaponSlotOpt;}
+	public void setNumWeaponSlot(int nSlot) {numWeaponSlotOpt = nSlot;}
+
+	public boolean getBlade() {return blade;}
+	public void setBlade(boolean ifBlade) {blade = ifBlade;}
+
+	public int getGenMode() {return genMode;}
+	public void setGenMode(int mode) {genMode = mode;}
+
+	public boolean[] getIncludeOpt() {return includeOpt;}
+	public boolean getIncludeOpt(int ind) {return includeOpt[ind];}
+	public void setIncludeOpt(int ind, boolean incl) {includeOpt[ind] = incl;}
 
 	public int[] getJewelIDUsed(int ind) {return jewelIDUsed[ind];}
 	public int getJewelIDUsed(int ind, int nSlot) {return jewelIDUsed[ind][nSlot];}
@@ -811,17 +926,40 @@ public class Generator {
 	public int[] getCyclePoint(int nSkill) {return cyclePoint[nSkill];}
 	public int getCyclePoint(int nSkill, int ind) {return cyclePoint[nSkill][ind];}
 
+	public int[] getScorePara() {return scorePara;}
+	public int getScorePara(int ind) {return scorePara[ind];}
+	public void setScorePara(int ind, int value) {scorePara[ind] = value;}
+	public void setScoreParaDefault()
+	{
+		for(int i = 0; i < 6; i++)
+			scorePara[i] = scoreParaDefault[i];
+	}
+
+	public int getNumOptSet() {return numOptSet;}
+	public void setNumOptSet(int value) {numOptSet = value;}
+	public void setNumOptSetDefault() {numOptSet = numOptSetDefault;}
+
+
 	private Mhag mhag;  //local mhag data
 	private MhagData mhagData;  //local mhagData data
 
-	private int genMode = 0; //mode 0: jewl only, 1: jewl+charm onlyh, 2. set search
+	//generator options
+	private int genMode = 0; //mode 0: jewl only, 1: partial search , 2. full set search
+	private boolean blade = true; // blademaster/gunner
+	private boolean[] includeOpt = new boolean[4]; // lr, hr, piercing, charm
+	private int numWeaponSlotOpt = 0;  //max # of weapon slots, as an input option
+
+	//scoring parameters : defense, skillNeg, skillPos, skillPos2, slotLeft, slotWeapon
+	private int[] scorePara = new int[6];
+	private int[] scoreParaDefault = new int[6];
+	private int numOptSet = 20;  //number of output sets
+	private int numOptSetDefault = 20;  //number of output sets
 
 	//generator data
 	private int numEffectOpt = 0;
 	private int[] effects = new int[10]; //effect list
 	private int[] skills = new int[10];  //skill list for corresponding effects
 	private int[] triggers = new int[10];  //trigger points, for fast access
-	private int numWeaponSlot = 0;  //max # of weapon slots, as an input option
 
 	//possible jewels
 	private int[][] jewelIDUsed = new int[10][4];  //jewelID values

@@ -1,6 +1,8 @@
 package org.mhag.model;
 
+import java.awt.Cursor;
 import java.awt.Desktop;
+import java.awt.event.ItemEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -9,6 +11,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
@@ -17,6 +20,7 @@ import javax.swing.DefaultListCellRenderer;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JProgressBar;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.event.HyperlinkEvent;
@@ -42,8 +46,6 @@ public class MhagGui extends javax.swing.JFrame {
 		stream = new TextAreaPrintStream(jTextPreview, System.out);
 		streamView = new TextAreaPrintStream(jTextPreview2, System.out);
 		streamGen = new TextAreaPrintStream(jTextPreview3, System.out);
-
-		setSkillTypeMenu();
 
 		//disable for test
 		jButtonMyCharms.setEnabled(false);
@@ -200,7 +202,7 @@ public class MhagGui extends javax.swing.JFrame {
         helpText = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MHAG: Monster Hunter Armor Generator   Ver 1.1c");
+        setTitle("MHAG: Monster Hunter Armor Generator   Ver 1.2 beta 1");
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -216,7 +218,7 @@ public class MhagGui extends javax.swing.JFrame {
         rank.setToolTipText("Change rank type, reset set");
 
         rankGroup.add(lowRank);
-        lowRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        lowRank.setFont(new java.awt.Font("Monospaced", 0, 12));
         lowRank.setText("Low Rank");
         lowRank.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -225,7 +227,7 @@ public class MhagGui extends javax.swing.JFrame {
         });
 
         rankGroup.add(highRank);
-        highRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        highRank.setFont(new java.awt.Font("Monospaced", 0, 12));
         highRank.setSelected(true);
         highRank.setText("High Rank");
         highRank.addActionListener(new java.awt.event.ActionListener() {
@@ -234,23 +236,23 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        org.jdesktop.layout.GroupLayout rankLayout = new org.jdesktop.layout.GroupLayout(rank);
+        javax.swing.GroupLayout rankLayout = new javax.swing.GroupLayout(rank);
         rank.setLayout(rankLayout);
         rankLayout.setHorizontalGroup(
-            rankLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(rankLayout.createSequentialGroup()
+            rankLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(rankLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(rankLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(lowRank)
-                    .add(highRank))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(rankLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lowRank)
+                    .addComponent(highRank))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         rankLayout.setVerticalGroup(
-            rankLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(rankLayout.createSequentialGroup()
-                .add(lowRank)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(highRank))
+            rankLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(rankLayout.createSequentialGroup()
+                .addComponent(lowRank)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(highRank))
         );
 
         hunterType.setBorder(javax.swing.BorderFactory.createTitledBorder("Hunter Type"));
@@ -275,23 +277,23 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        org.jdesktop.layout.GroupLayout hunterTypeLayout = new org.jdesktop.layout.GroupLayout(hunterType);
+        javax.swing.GroupLayout hunterTypeLayout = new javax.swing.GroupLayout(hunterType);
         hunterType.setLayout(hunterTypeLayout);
         hunterTypeLayout.setHorizontalGroup(
-            hunterTypeLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(hunterTypeLayout.createSequentialGroup()
+            hunterTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(hunterTypeLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(hunterTypeLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(blade)
-                    .add(gunner))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(hunterTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(blade)
+                    .addComponent(gunner))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         hunterTypeLayout.setVerticalGroup(
-            hunterTypeLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(hunterTypeLayout.createSequentialGroup()
-                .add(blade)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(gunner))
+            hunterTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(hunterTypeLayout.createSequentialGroup()
+                .addComponent(blade)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(gunner))
         );
 
         sex.setBorder(javax.swing.BorderFactory.createTitledBorder("Gender"));
@@ -316,23 +318,23 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        org.jdesktop.layout.GroupLayout sexLayout = new org.jdesktop.layout.GroupLayout(sex);
+        javax.swing.GroupLayout sexLayout = new javax.swing.GroupLayout(sex);
         sex.setLayout(sexLayout);
         sexLayout.setHorizontalGroup(
-            sexLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(sexLayout.createSequentialGroup()
+            sexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(sexLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(sexLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(male)
-                    .add(female))
+                .addGroup(sexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(male)
+                    .addComponent(female))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         sexLayout.setVerticalGroup(
-            sexLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(sexLayout.createSequentialGroup()
-                .add(male)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(female))
+            sexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(sexLayout.createSequentialGroup()
+                .addComponent(male)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(female))
         );
 
         setup.setBorder(javax.swing.BorderFactory.createTitledBorder("Setup"));
@@ -429,7 +431,7 @@ public class MhagGui extends javax.swing.JFrame {
         charmLabel.setLabelFor(charmMenu);
         charmLabel.setToolTipText("Charm");
 
-        charmSkillLabel.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        charmSkillLabel.setFont(new java.awt.Font("Monospaced", 0, 12));
         charmSkillLabel.setLabelFor(charmSkill1);
         charmSkillLabel.setText("Charm Skill");
 
@@ -577,7 +579,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        charmSlot1.setFont(new java.awt.Font("Monospaced", 0, 12));
         charmSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSlot1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -593,7 +595,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        charmSlot3.setFont(new java.awt.Font("Monospaced", 0, 12));
         charmSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSlot3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -601,7 +603,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmSkill1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        charmSkill1.setFont(new java.awt.Font("Monospaced", 0, 12));
         charmSkill1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSkill1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -609,7 +611,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12));
         charmSkill2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSkill2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -617,7 +619,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        skillPoint1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        skillPoint1.setFont(new java.awt.Font("Monospaced", 0, 12));
         skillPoint1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0" }));
         skillPoint1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -625,7 +627,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        skillPoint2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        skillPoint2.setFont(new java.awt.Font("Monospaced", 0, 12));
         skillPoint2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0" }));
         skillPoint2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -633,168 +635,168 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        org.jdesktop.layout.GroupLayout setupLayout = new org.jdesktop.layout.GroupLayout(setup);
+        javax.swing.GroupLayout setupLayout = new javax.swing.GroupLayout(setup);
         setup.setLayout(setupLayout);
         setupLayout.setHorizontalGroup(
-            setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(setupLayout.createSequentialGroup()
+            setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(setupLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(setupLayout.createSequentialGroup()
-                        .add(weaponLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(weaponMenu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(weaponSlot1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(weaponSlot2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(weaponSlot3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(setupLayout.createSequentialGroup()
-                        .add(headLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(headMenu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(headSlot1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(headSlot2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(headSlot3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(setupLayout.createSequentialGroup()
-                        .add(chestLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(chestMenu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(chestSlot1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(chestSlot2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(chestSlot3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(setupLayout.createSequentialGroup()
-                        .add(armsLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(armsMenu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(armSlot1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(armSlot2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(armSlot3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(setupLayout.createSequentialGroup()
-                        .add(waistLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(waistMenu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(waistSlot1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(waistSlot2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(waistSlot3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(setupLayout.createSequentialGroup()
-                        .add(legsLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(legsMenu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(legSlot1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(legSlot2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(legSlot3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(setupLayout.createSequentialGroup()
-                        .add(charmLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(charmMenu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(charmSlot1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(charmSlot2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(charmSlot3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(setupLayout.createSequentialGroup()
-                        .add(charmSkillLabel)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(charmSkill1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(18, 18, 18)
-                        .add(skillPoint1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(18, 18, 18)
-                        .add(charmSkill2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(18, 18, 18)
-                        .add(skillPoint2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(setupLayout.createSequentialGroup()
+                        .addComponent(weaponLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(weaponMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(weaponSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(weaponSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(weaponSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(setupLayout.createSequentialGroup()
+                        .addComponent(headLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(headMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(headSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(headSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(headSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(setupLayout.createSequentialGroup()
+                        .addComponent(chestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(chestMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(chestSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(chestSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(chestSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(setupLayout.createSequentialGroup()
+                        .addComponent(armsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(armsMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(armSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(armSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(armSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(setupLayout.createSequentialGroup()
+                        .addComponent(waistLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(waistMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(waistSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(waistSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(waistSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(setupLayout.createSequentialGroup()
+                        .addComponent(legsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(legsMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(legSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(legSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(legSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(setupLayout.createSequentialGroup()
+                        .addComponent(charmLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(charmMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(charmSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(charmSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(charmSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(setupLayout.createSequentialGroup()
+                        .addComponent(charmSkillLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(charmSkill1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(skillPoint1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(charmSkill2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(skillPoint2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
         setupLayout.setVerticalGroup(
-            setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(setupLayout.createSequentialGroup()
+            setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(setupLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, weaponLabel)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(weaponMenu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(weaponSlot1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(weaponSlot2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(weaponSlot3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(headLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(headMenu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(headSlot1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(headSlot2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(headSlot3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(chestLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(chestMenu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(chestSlot1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(chestSlot2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(chestSlot3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(armsLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(armsMenu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(armSlot1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(armSlot2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(armSlot3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(18, 18, 18)
-                .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(waistLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(waistMenu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(waistSlot1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(waistSlot2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(waistSlot3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(18, 18, 18)
-                .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(legsLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(legsMenu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(legSlot1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(legSlot2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(legSlot3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(18, 18, 18)
-                .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(charmLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(charmMenu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(charmSlot1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(charmSlot2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(charmSlot3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(18, 18, 18)
-                .add(setupLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(charmSkillLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(charmSkill1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(skillPoint1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(charmSkill2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(skillPoint2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(weaponLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(weaponMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(weaponSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(weaponSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(weaponSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(headLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(headMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(headSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(headSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(headSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(chestMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(chestSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(chestSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(chestSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(armsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(armsMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(armSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(armSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(armSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(waistLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(waistMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(waistSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(waistSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(waistSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(legsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(legsMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(legSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(legSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(legSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(charmLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(charmMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(charmSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(charmSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(charmSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(charmSkillLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(charmSkill1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(skillPoint1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(charmSkill2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(skillPoint2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         output.setBorder(javax.swing.BorderFactory.createTitledBorder("Output"));
 
         outputGroup.add(text);
-        text.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        text.setFont(new java.awt.Font("Monospaced", 0, 12));
         text.setSelected(true);
         text.setText("TEXT");
         text.addActionListener(new java.awt.event.ActionListener() {
@@ -837,36 +839,36 @@ public class MhagGui extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Monospaced", 0, 12));
         jLabel1.setText("Data File");
 
-        org.jdesktop.layout.GroupLayout outputLayout = new org.jdesktop.layout.GroupLayout(output);
+        javax.swing.GroupLayout outputLayout = new javax.swing.GroupLayout(output);
         output.setLayout(outputLayout);
         outputLayout.setHorizontalGroup(
-            outputLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(outputLayout.createSequentialGroup()
+            outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(outputLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(text)
-                .add(18, 18, 18)
-                .add(html)
-                .add(18, 18, 18)
-                .add(code)
-                .add(18, 18, 18)
-                .add(jLabel1)
-                .add(29, 29, 29)
-                .add(jTextData, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 175, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(saveOutput, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                .addComponent(text)
+                .addGap(18, 18, 18)
+                .addComponent(html)
+                .addGap(18, 18, 18)
+                .addComponent(code)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addGap(29, 29, 29)
+                .addComponent(jTextData, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(saveOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
                 .addContainerGap())
         );
         outputLayout.setVerticalGroup(
-            outputLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, outputLayout.createSequentialGroup()
-                .add(outputLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(text)
-                    .add(html)
-                    .add(code)
-                    .add(saveOutput)
-                    .add(jTextData, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel1))
-                .add(117, 117, 117))
+            outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, outputLayout.createSequentialGroup()
+                .addGroup(outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text)
+                    .addComponent(html)
+                    .addComponent(code)
+                    .addComponent(saveOutput)
+                    .addComponent(jTextData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(117, 117, 117))
         );
 
         jScrollPreview.setForeground(javax.swing.UIManager.getDefaults().getColor("Panel.background"));
@@ -875,7 +877,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jTextPreview.setColumns(20);
         jTextPreview.setEditable(false);
-        jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12));
         jTextPreview.setForeground(new java.awt.Color(1, 1, 1));
         jTextPreview.setRows(5);
         jTextPreview.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview (Calculator)"));
@@ -894,70 +896,70 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        org.jdesktop.layout.GroupLayout setNamePanelLayout = new org.jdesktop.layout.GroupLayout(setNamePanel);
+        javax.swing.GroupLayout setNamePanelLayout = new javax.swing.GroupLayout(setNamePanel);
         setNamePanel.setLayout(setNamePanelLayout);
         setNamePanelLayout.setHorizontalGroup(
-            setNamePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, setNamePanelLayout.createSequentialGroup()
+            setNamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, setNamePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(jTextSetName, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                .addComponent(jTextSetName, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                 .addContainerGap())
         );
         setNamePanelLayout.setVerticalGroup(
-            setNamePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(setNamePanelLayout.createSequentialGroup()
+            setNamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(setNamePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(jTextSetName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextSetName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        org.jdesktop.layout.GroupLayout calculatorLayout = new org.jdesktop.layout.GroupLayout(calculator);
+        javax.swing.GroupLayout calculatorLayout = new javax.swing.GroupLayout(calculator);
         calculator.setLayout(calculatorLayout);
         calculatorLayout.setHorizontalGroup(
-            calculatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(calculatorLayout.createSequentialGroup()
-                .add(calculatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(calculatorLayout.createSequentialGroup()
-                        .add(12, 12, 12)
-                        .add(calculatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(output, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(calculatorLayout.createSequentialGroup()
-                                .add(rank, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(12, 12, 12)
-                                .add(hunterType, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(sex, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(setNamePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .add(calculatorLayout.createSequentialGroup()
+            calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(calculatorLayout.createSequentialGroup()
+                .addGroup(calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(calculatorLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(output, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(calculatorLayout.createSequentialGroup()
+                                .addComponent(rank, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12)
+                                .addComponent(hunterType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(sex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(setNamePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(calculatorLayout.createSequentialGroup()
                         .addContainerGap()
-                        .add(setup, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPreview, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 586, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(setup, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPreview, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         calculatorLayout.setVerticalGroup(
-            calculatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(calculatorLayout.createSequentialGroup()
-                .add(calculatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(calculatorLayout.createSequentialGroup()
-                        .add(output, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 57, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(calculatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(hunterType, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(sex, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(rank, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(setNamePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(setup, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 351, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jScrollPreview, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 535, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(calculatorLayout.createSequentialGroup()
+                .addGroup(calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(calculatorLayout.createSequentialGroup()
+                        .addComponent(output, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(hunterType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(sex, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rank, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(setNamePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(setup, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPreview, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane.addTab("<html><body><table width=\"100\">&nbsp;Calculator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/calculator.png")), calculator, ""); // NOI18N
 
         jTextPreview3.setColumns(20);
         jTextPreview3.setEditable(false);
-        jTextPreview3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jTextPreview3.setFont(new java.awt.Font("Monospaced", 0, 12));
         jTextPreview3.setForeground(new java.awt.Color(1, 1, 1));
         jTextPreview3.setRows(5);
         jTextPreview3.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview (Generator)"));
@@ -967,8 +969,15 @@ public class MhagGui extends javax.swing.JFrame {
 
         skillsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Skills"));
 
+        skillType.setFont(new java.awt.Font("Monospaced", 0, 12));
         skillType.setPreferredSize(new java.awt.Dimension(56, 25));
+        skillType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                skillTypeActionPerformed(evt);
+            }
+        });
 
+        skillTree.setFont(new java.awt.Font("Monospaced", 0, 12));
         skillTree.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         skillTree.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -976,19 +985,20 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
+        skillName.setFont(new java.awt.Font("Monospaced", 0, 12));
         skillName.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
 
-        jLabelSkillType.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jLabelSkillType.setFont(new java.awt.Font("Monospaced", 0, 12));
         jLabelSkillType.setText("Type");
         jLabelSkillType.setToolTipText("Skill filter according to skill types");
 
-        jLabelSkillTree.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jLabelSkillTree.setFont(new java.awt.Font("Monospaced", 0, 12));
         jLabelSkillTree.setText("Tree");
 
-        jLabelSkillName.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jLabelSkillName.setFont(new java.awt.Font("Monospaced", 0, 12));
         jLabelSkillName.setText("Name");
 
-        jButtonAdd.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonAdd.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonAdd.setText("Add");
         jButtonAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -996,18 +1006,33 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jButtonRemove.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonRemove.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonRemove.setText("Remove");
+        jButtonRemove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRemoveActionPerformed(evt);
+            }
+        });
 
-        jButtonUp.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonUp.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonUp.setText("Move Up");
+        jButtonUp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonUpActionPerformed(evt);
+            }
+        });
 
-        jButtonDown.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonDown.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonDown.setText("Move Down");
+        jButtonDown.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDownActionPerformed(evt);
+            }
+        });
 
         jListSkillList.setBackground(new java.awt.Color(242, 241, 240));
         jListSkillList.setBorder(javax.swing.BorderFactory.createTitledBorder("Skill List"));
-        jListSkillList.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jListSkillList.setFont(new java.awt.Font("Ubuntu", 0, 12));
         jListSkillList.setForeground(new java.awt.Color(1, 1, 1));
         jListSkillList.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "---", "---", "---", "---", "---", "---", "---", "---", "---", "---" };
@@ -1023,58 +1048,58 @@ public class MhagGui extends javax.swing.JFrame {
         jListSkillList.setVisibleRowCount(2);
         jScrollSkillList.setViewportView(jListSkillList);
 
-        org.jdesktop.layout.GroupLayout skillsPanelLayout = new org.jdesktop.layout.GroupLayout(skillsPanel);
+        javax.swing.GroupLayout skillsPanelLayout = new javax.swing.GroupLayout(skillsPanel);
         skillsPanel.setLayout(skillsPanelLayout);
         skillsPanelLayout.setHorizontalGroup(
-            skillsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(skillsPanelLayout.createSequentialGroup()
+            skillsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(skillsPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(skillsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(skillsPanelLayout.createSequentialGroup()
-                        .add(jLabelSkillType)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(skillType, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 145, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jLabelSkillTree)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(skillTree, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 145, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jLabelSkillName)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(skillName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 145, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(skillsPanelLayout.createSequentialGroup()
-                        .add(jButtonAdd, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 141, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jButtonRemove, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 141, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jButtonUp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 141, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jButtonDown, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 141, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(skillsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(skillsPanelLayout.createSequentialGroup()
+                        .addComponent(jLabelSkillType)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(skillType, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelSkillTree)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(skillTree, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelSkillName)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(skillName, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(skillsPanelLayout.createSequentialGroup()
+                        .addComponent(jButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonRemove, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonUp, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonDown, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, skillsPanelLayout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jScrollSkillList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 589, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, skillsPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollSkillList, javax.swing.GroupLayout.PREFERRED_SIZE, 589, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         skillsPanelLayout.setVerticalGroup(
-            skillsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(skillsPanelLayout.createSequentialGroup()
-                .add(skillsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabelSkillType)
-                    .add(skillType, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabelSkillTree)
-                    .add(skillTree, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabelSkillName)
-                    .add(skillName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(skillsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButtonAdd, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonRemove, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonUp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonDown, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollSkillList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            skillsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(skillsPanelLayout.createSequentialGroup()
+                .addGroup(skillsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelSkillType)
+                    .addComponent(skillType, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelSkillTree)
+                    .addComponent(skillTree, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelSkillName)
+                    .addComponent(skillName, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(skillsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonRemove, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonUp, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonDown, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollSkillList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         optionPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Options"));
@@ -1082,126 +1107,149 @@ public class MhagGui extends javax.swing.JFrame {
         hunterTypePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Hunter Type"));
 
         hunterTypeGen.add(jRadioBlade);
-        jRadioBlade.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jRadioBlade.setFont(new java.awt.Font("Monospaced", 0, 12));
         jRadioBlade.setSelected(true);
         jRadioBlade.setText("Bladermaster");
+        jRadioBlade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioBladeActionPerformed(evt);
+            }
+        });
 
         hunterTypeGen.add(jRadioGunner);
-        jRadioGunner.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jRadioGunner.setFont(new java.awt.Font("Monospaced", 0, 12));
         jRadioGunner.setText("Gunner");
+        jRadioGunner.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioGunnerActionPerformed(evt);
+            }
+        });
 
-        org.jdesktop.layout.GroupLayout hunterTypePanelLayout = new org.jdesktop.layout.GroupLayout(hunterTypePanel);
+        javax.swing.GroupLayout hunterTypePanelLayout = new javax.swing.GroupLayout(hunterTypePanel);
         hunterTypePanel.setLayout(hunterTypePanelLayout);
         hunterTypePanelLayout.setHorizontalGroup(
-            hunterTypePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jRadioBlade)
-            .add(jRadioGunner)
+            hunterTypePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jRadioBlade)
+            .addComponent(jRadioGunner)
         );
         hunterTypePanelLayout.setVerticalGroup(
-            hunterTypePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(hunterTypePanelLayout.createSequentialGroup()
-                .add(jRadioBlade)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jRadioGunner))
+            hunterTypePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(hunterTypePanelLayout.createSequentialGroup()
+                .addComponent(jRadioBlade)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioGunner))
         );
 
-        jCheckBoxLowRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        jCheckBoxLowRank.setSelected(true);
+        jCheckBoxLowRank.setFont(new java.awt.Font("Monospaced", 0, 12));
         jCheckBoxLowRank.setText("Low Rank");
-
-        jCheckBoxHighRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        jCheckBoxHighRank.setSelected(true);
-        jCheckBoxHighRank.setText("High Rank");
-        jCheckBoxHighRank.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxHighRankActionPerformed(evt);
+        jCheckBoxLowRank.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBoxLowRankItemStateChanged(evt);
             }
         });
 
-        jLabelWeaponSlot.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jCheckBoxHighRank.setFont(new java.awt.Font("Monospaced", 0, 12));
+        jCheckBoxHighRank.setText("High Rank");
+        jCheckBoxHighRank.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBoxHighRankItemStateChanged(evt);
+            }
+        });
+
+        jLabelWeaponSlot.setFont(new java.awt.Font("Monospaced", 0, 12));
         jLabelWeaponSlot.setText("Weapon Slots");
 
-        jComboBoxWeaponSlots.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jComboBoxWeaponSlots.setFont(new java.awt.Font("Monospaced", 0, 12));
         jComboBoxWeaponSlots.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No Slot", "One Slot", "Two Slots", "Three Slots", "Any" }));
+        jComboBoxWeaponSlots.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxWeaponSlotsActionPerformed(evt);
+            }
+        });
 
-        optLabel.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        optLabel.setFont(new java.awt.Font("Monospaced", 0, 12));
         optLabel.setText("Search Method");
 
-        jComboBoxOpt.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jComboBoxOpt.setFont(new java.awt.Font("Monospaced", 0, 12));
         jComboBoxOpt.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Jewel Opt", "Partial Search", "Full Search" }));
         jComboBoxOpt.setToolTipText("");
+        jComboBoxOpt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxOptActionPerformed(evt);
+            }
+        });
 
-        jCheckBoxPiercing.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jCheckBoxPiercing.setFont(new java.awt.Font("Monospaced", 0, 12));
         jCheckBoxPiercing.setText("Piercing");
-        jCheckBoxPiercing.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxPiercingActionPerformed(evt);
+        jCheckBoxPiercing.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBoxPiercingItemStateChanged(evt);
             }
         });
 
-        jCheckBoxCharm.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jCheckBoxCharm.setFont(new java.awt.Font("Monospaced", 0, 12));
         jCheckBoxCharm.setText("My Charms");
-        jCheckBoxCharm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxCharmActionPerformed(evt);
+        jCheckBoxCharm.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBoxCharmItemStateChanged(evt);
             }
         });
 
-        org.jdesktop.layout.GroupLayout optionPanelLayout = new org.jdesktop.layout.GroupLayout(optionPanel);
+        javax.swing.GroupLayout optionPanelLayout = new javax.swing.GroupLayout(optionPanel);
         optionPanel.setLayout(optionPanelLayout);
         optionPanelLayout.setHorizontalGroup(
-            optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(optionPanelLayout.createSequentialGroup()
+            optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(optionPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(optionPanelLayout.createSequentialGroup()
-                        .add(jCheckBoxLowRank)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jCheckBoxHighRank)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jCheckBoxPiercing)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jCheckBoxCharm))
-                    .add(optionPanelLayout.createSequentialGroup()
-                        .add(hunterTypePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(optionPanelLayout.createSequentialGroup()
-                                .add(jLabelWeaponSlot)
-                                .add(18, 18, 18)
-                                .add(jComboBoxWeaponSlots, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 125, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(optionPanelLayout.createSequentialGroup()
-                                .add(optLabel)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jComboBoxOpt, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 125, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(optionPanelLayout.createSequentialGroup()
+                        .addComponent(jCheckBoxLowRank)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jCheckBoxHighRank)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jCheckBoxPiercing)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jCheckBoxCharm))
+                    .addGroup(optionPanelLayout.createSequentialGroup()
+                        .addComponent(hunterTypePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(optionPanelLayout.createSequentialGroup()
+                                .addComponent(jLabelWeaponSlot)
+                                .addGap(18, 18, 18)
+                                .addComponent(jComboBoxWeaponSlots, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(optionPanelLayout.createSequentialGroup()
+                                .addComponent(optLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBoxOpt, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         optionPanelLayout.setVerticalGroup(
-            optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(optionPanelLayout.createSequentialGroup()
-                .add(optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(hunterTypePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(optionPanelLayout.createSequentialGroup()
-                        .add(10, 10, 10)
-                        .add(optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jLabelWeaponSlot)
-                            .add(jComboBoxWeaponSlots, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(optLabel)
-                            .add(jComboBoxOpt, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(optionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jCheckBoxLowRank)
-                    .add(jCheckBoxHighRank)
-                    .add(jCheckBoxPiercing)
-                    .add(jCheckBoxCharm)))
+            optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(optionPanelLayout.createSequentialGroup()
+                .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(hunterTypePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(optionPanelLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelWeaponSlot)
+                            .addComponent(jComboBoxWeaponSlots, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(optLabel)
+                            .addComponent(jComboBoxOpt, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBoxLowRank)
+                    .addComponent(jCheckBoxHighRank)
+                    .addComponent(jCheckBoxPiercing)
+                    .addComponent(jCheckBoxCharm)))
         );
 
-        jButtonMyCharms.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonMyCharms.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonMyCharms.setText("Charms");
 
-        jButtonSettings.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonSettings.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonSettings.setText("Settings");
         jButtonSettings.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1209,85 +1257,106 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jButtonSearch.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonSearch.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonSearch.setText("Search");
+        jButtonSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSearchActionPerformed(evt);
+            }
+        });
 
-        jProgressOpt.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jProgressOpt.setFont(new java.awt.Font("Monospaced", 0, 12));
+        jProgressOpt.setMaximum(20);
 
-        loadToCalcGen.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        loadToCalcGen.setFont(new java.awt.Font("Monospaced", 1, 12));
         loadToCalcGen.setText("Load to Calculator");
+        loadToCalcGen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loadToCalcGenActionPerformed(evt);
+            }
+        });
 
         jListOptSets.setBorder(javax.swing.BorderFactory.createTitledBorder("Search Results"));
-        jListOptSets.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jListOptSets.setFont(new java.awt.Font("Monospaced", 0, 12));
         jListOptSets.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jListOptSets.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                jListOptSetsValueChanged(evt);
+            }
+        });
         jScrollOptSets.setViewportView(jListOptSets);
 
-        jButtonAbort.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonAbort.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonAbort.setText("x100,000");
+        jButtonAbort.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAbortActionPerformed(evt);
+            }
+        });
 
-        org.jdesktop.layout.GroupLayout generatorLayout = new org.jdesktop.layout.GroupLayout(generator);
+        javax.swing.GroupLayout generatorLayout = new javax.swing.GroupLayout(generator);
         generator.setLayout(generatorLayout);
         generatorLayout.setHorizontalGroup(
-            generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, generatorLayout.createSequentialGroup()
+            generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, generatorLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(skillsPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(generatorLayout.createSequentialGroup()
-                        .add(optionPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(loadToCalcGen, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 219, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jProgressOpt, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 219, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(generatorLayout.createSequentialGroup()
-                                .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jButtonMyCharms, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 107, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jButtonSearch, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 107, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jButtonAbort, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 107, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jButtonSettings, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 107, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
-                    .add(jScrollOptSets, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 619, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(12, 12, 12)
-                .add(jScrollPreview3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 586, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(skillsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(generatorLayout.createSequentialGroup()
+                        .addComponent(optionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(loadToCalcGen, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jProgressOpt, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(generatorLayout.createSequentialGroup()
+                                .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButtonMyCharms, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButtonAbort, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonSettings, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addComponent(jScrollOptSets, javax.swing.GroupLayout.PREFERRED_SIZE, 619, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addComponent(jScrollPreview3, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         generatorLayout.setVerticalGroup(
-            generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(generatorLayout.createSequentialGroup()
-                .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPreview3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 535, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(generatorLayout.createSequentialGroup()
-                        .add(skillsPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 165, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(generatorLayout.createSequentialGroup()
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(optionPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(generatorLayout.createSequentialGroup()
-                                .add(15, 15, 15)
-                                .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                                    .add(jButtonMyCharms, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jButtonSettings, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(generatorLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                                    .add(jButtonSearch, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jButtonAbort, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jProgressOpt, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 15, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(loadToCalcGen, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jScrollOptSets, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)))
-                .add(11, 11, 11))
+            generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(generatorLayout.createSequentialGroup()
+                .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPreview3, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(generatorLayout.createSequentialGroup()
+                        .addComponent(skillsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(generatorLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(optionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(generatorLayout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jButtonMyCharms, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonSettings, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jButtonSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonAbort, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jProgressOpt, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(loadToCalcGen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollOptSets, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)))
+                .addGap(11, 11, 11))
         );
 
         jTabbedPane.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;Generator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/generator.png")), generator, ""); // NOI18N
 
-        jScrollPreview2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jScrollPreview2.setFont(new java.awt.Font("Monospaced", 0, 12));
         jScrollPreview2.setHorizontalScrollBar(null);
 
         jTextPreview2.setColumns(20);
         jTextPreview2.setEditable(false);
-        jTextPreview2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jTextPreview2.setFont(new java.awt.Font("Monospaced", 0, 12));
         jTextPreview2.setForeground(new java.awt.Color(1, 1, 1));
         jTextPreview2.setRows(5);
         jTextPreview2.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview (Viewer)"));
@@ -1300,7 +1369,7 @@ public class MhagGui extends javax.swing.JFrame {
         codeBookName.setFont(new java.awt.Font("Monospaced", 0, 12));
         codeBookName.setText("MyData");
 
-        codeBookLoad.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        codeBookLoad.setFont(new java.awt.Font("Monospaced", 1, 12));
         codeBookLoad.setText("Load");
         codeBookLoad.setToolTipText("Load code book");
         codeBookLoad.addActionListener(new java.awt.event.ActionListener() {
@@ -1318,27 +1387,27 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        org.jdesktop.layout.GroupLayout codeBookLayout = new org.jdesktop.layout.GroupLayout(codeBook);
+        javax.swing.GroupLayout codeBookLayout = new javax.swing.GroupLayout(codeBook);
         codeBook.setLayout(codeBookLayout);
         codeBookLayout.setHorizontalGroup(
-            codeBookLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(codeBookLayout.createSequentialGroup()
+            codeBookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(codeBookLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(codeBookName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 175, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(codeBookLoad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 65, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(codeBookSave, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 65, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(12, 12, 12))
+                .addComponent(codeBookName, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(codeBookLoad, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(codeBookSave, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12))
         );
         codeBookLayout.setVerticalGroup(
-            codeBookLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(codeBookLayout.createSequentialGroup()
-                .add(codeBookLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(codeBookName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(codeBookLoad)
-                    .add(codeBookSave))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            codeBookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(codeBookLayout.createSequentialGroup()
+                .addGroup(codeBookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(codeBookName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codeBookLoad)
+                    .addComponent(codeBookSave))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         convert.setBorder(javax.swing.BorderFactory.createTitledBorder("Export Sets"));
@@ -1371,33 +1440,33 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        org.jdesktop.layout.GroupLayout convertLayout = new org.jdesktop.layout.GroupLayout(convert);
+        javax.swing.GroupLayout convertLayout = new javax.swing.GroupLayout(convert);
         convert.setLayout(convertLayout);
         convertLayout.setHorizontalGroup(
-            convertLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(convertLayout.createSequentialGroup()
+            convertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(convertLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(convertTEXT)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(convertHTML)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(Output, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                .addComponent(convertTEXT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(convertHTML)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Output, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
                 .addContainerGap())
         );
         convertLayout.setVerticalGroup(
-            convertLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(convertLayout.createSequentialGroup()
-                .add(convertLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(convertTEXT)
-                    .add(convertHTML)
-                    .add(Output))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            convertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(convertLayout.createSequentialGroup()
+                .addGroup(convertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(convertTEXT)
+                    .addComponent(convertHTML)
+                    .addComponent(Output))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jScrollPane1.setFont(new java.awt.Font("Monospaced", 0, 12));
 
         codeList.setBorder(javax.swing.BorderFactory.createTitledBorder("Code List"));
-        codeList.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        codeList.setFont(new java.awt.Font("Monospaced", 0, 12));
         codeList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         codeList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
@@ -1415,7 +1484,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        getSetInteract.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        getSetInteract.setFont(new java.awt.Font("Monospaced", 1, 12));
         getSetInteract.setText("Add from Calculator");
         getSetInteract.setToolTipText("Add the set below");
         getSetInteract.addActionListener(new java.awt.event.ActionListener() {
@@ -1442,48 +1511,48 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        org.jdesktop.layout.GroupLayout viewerLayout = new org.jdesktop.layout.GroupLayout(viewer);
+        javax.swing.GroupLayout viewerLayout = new javax.swing.GroupLayout(viewer);
         viewer.setLayout(viewerLayout);
         viewerLayout.setHorizontalGroup(
-            viewerLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, viewerLayout.createSequentialGroup()
+            viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewerLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(viewerLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, viewerLayout.createSequentialGroup()
-                        .add(codeBook, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(convert, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(viewerLayout.createSequentialGroup()
-                        .add(loadSetInteract, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(getSetInteract, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(deleteInteract, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 130, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(undoInteract, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 130, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPreview2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 586, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addGroup(viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewerLayout.createSequentialGroup()
+                        .addComponent(codeBook, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(convert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(viewerLayout.createSequentialGroup()
+                        .addComponent(loadSetInteract, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(getSetInteract, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(deleteInteract, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(undoInteract, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPreview2, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         viewerLayout.setVerticalGroup(
-            viewerLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(viewerLayout.createSequentialGroup()
-                .add(viewerLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, viewerLayout.createSequentialGroup()
-                        .add(12, 12, 12)
-                        .add(viewerLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(convert, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(codeBook, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(viewerLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(loadSetInteract)
-                            .add(getSetInteract)
-                            .add(deleteInteract)
-                            .add(undoInteract)))
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jScrollPreview2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 535, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewerLayout.createSequentialGroup()
+                .addGroup(viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, viewerLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(convert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(codeBook, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(loadSetInteract)
+                            .addComponent(getSetInteract)
+                            .addComponent(deleteInteract)
+                            .addComponent(undoInteract)))
+                    .addComponent(jScrollPreview2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;Viewer</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/viewer.png")), viewer, ""); // NOI18N
@@ -1492,7 +1561,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jEditorAbout.setContentType("text/html");
         jEditorAbout.setEditable(false);
-        jEditorAbout.setText("<html>\n  <head>\n\n  </head>\n  <body>\n    <h2 align = \"center\">\n      MHAG :\n    </h2>\n  <h2 align = \"center\">\n       Monster Hunter Armor Generator\n    </h2>\n <p align = \"center\">v1.1c </p>\n <p align = \"center\">Release Date: 08/11/2011</p>\n<p align = \"center\">MHAG Project: <a href=\"http://code.google.com/p/mhag/\">code.google.com/p/mhag</a></p>\n\n<p></p>\n<p align = \"center\">by Tifa@mh3</p>\n<p align = \"center\">Unity Member: <a href=\"http://www.capcom-unity.com/tifa@mh3\">www.capcom-unity.com/tifa@mh3</a></p>\n<p align = \"center\">Youtube Channel: <a href=\"http://www.youtube.com/mh3journey\">www.youtube.com/mh3journey</a></p>\n\n  </body>\n\n");
+        jEditorAbout.setText("<html>\n  <head>\n\n  </head>\n  <body>\n    <h2 align = \"center\">\n      MHAG :\n    </h2>\n  <h2 align = \"center\">\n       Monster Hunter Armor Generator\n    </h2>\n <p align = \"center\">v1.2 beta 1 </p>\n <p align = \"center\">Release Date: 09/01/2011</p>\n<p align = \"center\">MHAG Project: <a href=\"http://code.google.com/p/mhag/\">code.google.com/p/mhag</a></p>\n\n<p></p>\n<p align = \"center\">by Tifa@mh3</p>\n<p align = \"center\">Unity Member: <a href=\"http://www.capcom-unity.com/tifa@mh3\">www.capcom-unity.com/tifa@mh3</a></p>\n<p align = \"center\">Youtube Channel: <a href=\"http://www.youtube.com/mh3journey\">www.youtube.com/mh3journey</a></p>\n\n  </body>\n\n");
         jEditorAbout.setOpaque(false);
         jEditorAbout.addHyperlinkListener(new javax.swing.event.HyperlinkListener() {
             public void hyperlinkUpdate(javax.swing.event.HyperlinkEvent evt) {
@@ -1526,68 +1595,66 @@ public class MhagGui extends javax.swing.JFrame {
         helpText.setOpaque(false);
         jScrollHelpText.setViewportView(helpText);
 
-        org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel1Layout.createSequentialGroup()
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .add(jScrollHelpList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 173, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollHelpText, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE)
+                .addComponent(jScrollHelpList, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollHelpText, javax.swing.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(jScrollHelpText, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
-                    .add(jScrollHelpList, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE))
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollHelpText, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
+                    .addComponent(jScrollHelpList, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        org.jdesktop.layout.GroupLayout aboutLayout = new org.jdesktop.layout.GroupLayout(about);
+        javax.swing.GroupLayout aboutLayout = new javax.swing.GroupLayout(about);
         about.setLayout(aboutLayout);
         aboutLayout.setHorizontalGroup(
-            aboutLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(aboutLayout.createSequentialGroup()
-                .add(aboutLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(aboutLayout.createSequentialGroup()
+            aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(aboutLayout.createSequentialGroup()
+                .addGroup(aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(aboutLayout.createSequentialGroup()
                         .addContainerGap()
-                        .add(jScrollAbout, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 444, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(aboutLayout.createSequentialGroup()
-                        .add(171, 171, 171)
-                        .add(jLabel2)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollAbout, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(aboutLayout.createSequentialGroup()
+                        .addGap(171, 171, 171)
+                        .addComponent(jLabel2)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         aboutLayout.setVerticalGroup(
-            aboutLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(aboutLayout.createSequentialGroup()
+            aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(aboutLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(aboutLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(aboutLayout.createSequentialGroup()
-                        .add(jScrollAbout, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jLabel2)))
+                .addGroup(aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(aboutLayout.createSequentialGroup()
+                        .addComponent(jScrollAbout, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)))
                 .addContainerGap())
         );
 
         jTabbedPane.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;About</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/help-browser.png")), about); // NOI18N
 
-        org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jTabbedPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 1238, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1238, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(layout.createSequentialGroup()
-                .add(jTabbedPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 630, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jTabbedPane.getAccessibleContext().setAccessibleName("<html><body><table width=\"300\">&nbsp;Calculator</table></body></html>");
@@ -2064,28 +2131,202 @@ public class MhagGui extends javax.swing.JFrame {
     }//GEN-LAST:event_skillPoint2ActionPerformed
 
 	private void skillTreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_skillTreeActionPerformed
-		// TODO add your handling code here:
+		skillTreeAction();
 	}//GEN-LAST:event_skillTreeActionPerformed
 
 	private void jButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddActionPerformed
-		// TODO add your handling code here:
+		skillAddAction();
 	}//GEN-LAST:event_jButtonAddActionPerformed
-
-	private void jCheckBoxHighRankActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxHighRankActionPerformed
-		// TODO add your handling code here:
-	}//GEN-LAST:event_jCheckBoxHighRankActionPerformed
-
-	private void jCheckBoxCharmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxCharmActionPerformed
-		// TODO add your handling code here:
-	}//GEN-LAST:event_jCheckBoxCharmActionPerformed
-
-	private void jCheckBoxPiercingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxPiercingActionPerformed
-		// TODO add your handling code here:
-	}//GEN-LAST:event_jCheckBoxPiercingActionPerformed
 
 	private void jButtonSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSettingsActionPerformed
 		// TODO add your handling code here:
 	}//GEN-LAST:event_jButtonSettingsActionPerformed
+
+	private void skillTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_skillTypeActionPerformed
+		skillTypeAction();
+	}//GEN-LAST:event_skillTypeActionPerformed
+
+	private void jRadioBladeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioBladeActionPerformed
+		gen.setBlade(true);
+	}//GEN-LAST:event_jRadioBladeActionPerformed
+
+	private void jRadioGunnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioGunnerActionPerformed
+		gen.setBlade(false);
+	}//GEN-LAST:event_jRadioGunnerActionPerformed
+
+	private void jCheckBoxLowRankItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBoxLowRankItemStateChanged
+		checkBoxOptionItem(evt, 0);
+	}//GEN-LAST:event_jCheckBoxLowRankItemStateChanged
+
+	private void jCheckBoxHighRankItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBoxHighRankItemStateChanged
+		checkBoxOptionItem(evt, 1);
+	}//GEN-LAST:event_jCheckBoxHighRankItemStateChanged
+
+	private void jCheckBoxPiercingItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBoxPiercingItemStateChanged
+		checkBoxOptionItem(evt, 2);
+	}//GEN-LAST:event_jCheckBoxPiercingItemStateChanged
+
+	private void jCheckBoxCharmItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBoxCharmItemStateChanged
+		checkBoxOptionItem(evt, 3);
+	}//GEN-LAST:event_jCheckBoxCharmItemStateChanged
+
+	private void jComboBoxWeaponSlotsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxWeaponSlotsActionPerformed
+		int ind = jComboBoxWeaponSlots.getSelectedIndex();
+		if(ind <= 0)
+			gen.setNumWeaponSlot(0);
+		else if(ind > 3)
+			gen.setNumWeaponSlot(-1);
+		else
+			gen.setNumWeaponSlot(ind);
+	}//GEN-LAST:event_jComboBoxWeaponSlotsActionPerformed
+
+	private void jComboBoxOptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxOptActionPerformed
+		int ind = jComboBoxOpt.getSelectedIndex();
+		if(ind >= 0)
+			gen.setGenMode(ind);
+	}//GEN-LAST:event_jComboBoxOptActionPerformed
+
+	private void jButtonRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoveActionPerformed
+		skillListRemoveAction();
+	}//GEN-LAST:event_jButtonRemoveActionPerformed
+
+	private void jButtonUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpActionPerformed
+		skillListUpAction();
+	}//GEN-LAST:event_jButtonUpActionPerformed
+
+	private void jButtonDownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDownActionPerformed
+		skillListDownAction();
+	}//GEN-LAST:event_jButtonDownActionPerformed
+
+	private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchActionPerformed
+		searchAction(1);
+	}//GEN-LAST:event_jButtonSearchActionPerformed
+
+	private void jListOptSetsValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jListOptSetsValueChanged
+	    if(!evt.getValueIsAdjusting()) //solve the problem of running twice !
+		    codePreviewGen();
+	}//GEN-LAST:event_jListOptSetsValueChanged
+
+	private void loadToCalcGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadToCalcGenActionPerformed
+		if(jListOptSets.getSelectedIndex() < 0)return;
+	    String setCode = (String) jListOptSets.getSelectedValue();
+	    loadSet2Calc(setCode);
+	}//GEN-LAST:event_loadToCalcGenActionPerformed
+
+	private void jButtonAbortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbortActionPerformed
+		new Thread(new threadGen()).start(); //Start the thread
+	}//GEN-LAST:event_jButtonAbortActionPerformed
+
+	// main search action
+	private void searchAction(int repeat) {
+		if(gen.getNumEffectOpt() <= 0)
+		{
+			listModelOpt.clear();
+			streamGen.reset();
+		}
+		else
+		{
+			setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+			disableGen(true);
+			long time1 = new Date().getTime();
+
+			gen.initJewel(set.getLowRank());
+			String[] setCodes = gen.genMainGui(this, set, repeat);
+
+			long time2 = new Date().getTime() - time1;
+			disableGen(false);
+			setCursor(null);
+			gen.initJewel(set.getLowRank());
+			jProgressOpt.setValue(jProgressOpt.getMaximum());
+			jProgressOpt.setString(String.format("%7.2fs   ",time2/1000.0));
+			addOptList(setCodes);
+		}
+	}
+
+	private void disableGen(boolean ifDisable)
+	{
+		if(ifDisable)
+		{
+			jTabbedPane.setEnabledAt(0, false); //diable calc
+			jTabbedPane.setEnabledAt(2, false); //diable viewer
+			jButtonAdd.setEnabled(false);
+			jButtonRemove.setEnabled(false);
+			jButtonUp.setEnabled(false);
+			jButtonDown.setEnabled(false);
+			jComboBoxWeaponSlots.setEnabled(false);
+			jButtonSearch.setEnabled(false);
+			jButtonAbort.setEnabled(false);
+			jButtonAbort.setEnabled(false);
+			loadToCalcGen.setEnabled(false);
+			jListOptSets.setEnabled(false);
+
+			//disable for test
+			jButtonMyCharms.setEnabled(false);
+			jButtonSettings.setEnabled(false);
+			jComboBoxOpt.setEnabled(false);
+			jRadioBlade.setEnabled(false);
+			jRadioGunner.setEnabled(false);
+			jCheckBoxLowRank.setEnabled(false);
+			jCheckBoxHighRank.setEnabled(false);
+			jCheckBoxPiercing.setEnabled(false);
+			jCheckBoxCharm.setEnabled(false);
+		}
+		else
+		{
+			jTabbedPane.setEnabledAt(0, true); // enable calc
+			jTabbedPane.setEnabledAt(2, true); // enable viewer
+			jButtonAdd.setEnabled(true);
+			jButtonRemove.setEnabled(true);
+			jButtonUp.setEnabled(true);
+			jButtonDown.setEnabled(true);
+			jComboBoxWeaponSlots.setEnabled(true);
+			jButtonSearch.setEnabled(true);
+			jButtonAbort.setEnabled(true);
+			jButtonAbort.setEnabled(true);
+			loadToCalcGen.setEnabled(true);
+			jListOptSets.setEnabled(true);
+
+			//disable for test
+			jButtonMyCharms.setEnabled(false);
+			jButtonSettings.setEnabled(false);
+			jComboBoxOpt.setEnabled(false);
+			jRadioBlade.setEnabled(false);
+			jRadioGunner.setEnabled(false);
+			jCheckBoxLowRank.setEnabled(false);
+			jCheckBoxHighRank.setEnabled(false);
+			jCheckBoxPiercing.setEnabled(false);
+			jCheckBoxCharm.setEnabled(false);
+		}
+
+	}
+
+	private void addOptList(String[] setCodes)
+	{
+		int num = setCodes.length;
+		if(num <= 0)
+		{
+			listModelOpt.clear();
+			streamGen.reset();
+			return;
+		}
+
+	    adjust = true;
+		listModelOpt.clear();
+		for(int i = 0; i < num; i++)
+			listModelOpt.insertElementAt(setCodes[i],i);
+		jListOptSets.setModel(listModelOpt);
+	    adjust = false;
+		jListOptSets.setSelectedIndex(0);
+	}
+
+	private void checkBoxOptionItem(java.awt.event.ItemEvent evt, int ind)
+	{
+		if (evt.getStateChange() == ItemEvent.DESELECTED)
+			gen.setIncludeOpt(ind, false);
+		else
+			gen.setIncludeOpt(ind, true);
+		//System.out.println(Arrays.toString(gen.getIncludeOpt()));
+	}
 
     private void launchBrowser(HyperlinkEvent evt) throws URISyntaxException, IOException
     {
@@ -2132,6 +2373,35 @@ public class MhagGui extends javax.swing.JFrame {
 	    mhag.setOutFormat(0);
 	    aSet.save(mhag, mhagData, streamView);  // save results
 	    streamView.rewind();
+
+    }
+
+    private void codePreviewGen()
+    {
+	    if(adjust) return; //when loading code book
+	    if(jListOptSets.getSelectedIndex() < 0) return; //not initiate;
+
+	    streamGen.reset();
+
+	    String setCode = (String) jListOptSets.getSelectedValue();
+
+	    Set aSet = new Set();
+
+	    boolean pass = true;
+	    pass = aSet.setSetFromCode(mhag, setCode); //read set
+
+	    if(pass)
+		    pass = aSet.checkSet(mhag, mhagData);  //check set
+	    if(!pass)
+	    {
+		    jTextPreview3.setText("Error in set code!\n");
+		    return;
+	    }
+	    aSet.calcSet(mhag, mhagData);   //calculate set
+
+	    mhag.setOutFormat(0);
+	    aSet.save(mhag, mhagData, streamGen);  // save results
+	    streamGen.rewind();
 
     }
 
@@ -2662,6 +2932,168 @@ public class MhagGui extends javax.swing.JFrame {
 
     }
 
+	// skill type combobox action
+	private void skillTypeAction()
+	{
+	    int ind = skillType.getSelectedIndex();
+	    if(ind < 0)return;
+	    int[] idList = mhagData.getSkillList(ind);
+
+	    skillTree.removeAllItems();
+	    skillTree.addItem("---");
+	    for(int i = 0; i < idList.length; i++)
+	    {
+			Skill skill = mhagData.getSkill(idList[i]);
+			skillTree.addItem(skill.getSkillName());
+	    }
+		skillTree.setSelectedIndex(0);
+
+	}
+
+	// skill tree combobox action
+	private void skillTreeAction()
+	{
+	    int ind = skillTree.getSelectedIndex();
+
+		skillName.removeAllItems();
+		skillName.addItem("---");
+	    if(ind > 0)
+		{
+			int indType = skillType.getSelectedIndex();
+			int[] idList = mhagData.getSkillList(indType);
+			int skillID = idList[ind -1];
+			int[] effectList = mhagData.getEffectList(skillID);
+
+			for(int i = 0; i < effectList.length; i++)
+			{
+				Effect effect = mhagData.getEffect(effectList[i]);
+				skillName.addItem(effect.getEffectName());
+			}
+		}
+		skillName.setSelectedIndex(0);
+
+	}
+
+	// skill add button action
+	private void skillAddAction()
+	{
+		int indName = skillName.getSelectedIndex();
+		if(indName <= 0)return;  // no effect selected
+		String name = skillName.getSelectedItem().toString();
+
+		int num = gen.getNumEffectOpt();
+		if(num >= 10)return;  // maximum 10 effects
+
+		// calculate skillID and effectID
+		int indType = skillType.getSelectedIndex();
+		int indTree = skillTree.getSelectedIndex();
+		int[] idList = mhagData.getSkillList(indType);
+		int skillID = idList[indTree -1];
+		int[] effectList = mhagData.getEffectList(skillID);
+		int effectID = effectList[indName -1];
+
+		// check if it overlaps with the previous skills
+		for(int i = 0; i < num; i++)
+		{
+			if(skillID == gen.getSkills(i))
+				return;
+		}
+
+		// add effect to the list
+		listModelSkill.removeElementAt(num);
+		listModelSkill.insertElementAt(name + ",", num);
+		jListSkillList.setSelectedIndex(num);
+
+		// update generator data
+		gen.setNumEffectOpt(num + 1);
+		gen.setSkills(num, skillID);
+		gen.setEffects(num, effectID);
+		Effect effect = mhagData.getEffect(effectID);
+		gen.setTriggers(num, effect.getEffectTrigger());
+
+	}
+
+	// skil list remove
+	public void skillListRemoveAction()
+	{
+		int ind = jListSkillList.getSelectedIndex();
+		if(ind < 0)return;  // no entry
+
+		int num = gen.getNumEffectOpt();
+		for(int i = ind; i < num - 1; i++)
+		{
+			listModelSkill.setElementAt(listModelSkill.getElementAt(i+1), i);
+			gen.setSkills(i, gen.getSkills(i+1));
+			gen.setEffects(i, gen.getEffects(i+1));
+			gen.setTriggers(i, gen.getTriggers(i+1));
+		}
+		if(num > 0)
+			listModelSkill.setElementAt("---", num - 1);
+
+
+		gen.setSkills(num - 1, -1);
+		gen.setEffects(num - 1, -1);
+		gen.setTriggers(num - 1, 0);
+		gen.setNumEffectOpt(num - 1);
+		if(ind > 0 )
+			jListSkillList.setSelectedIndex(ind - 1);
+		else
+			jListSkillList.setSelectedIndex(0);
+	}
+
+	// skill list move up
+	public void skillListUpAction()
+	{
+		int ind = jListSkillList.getSelectedIndex();
+		if(ind <= 0)return;   //first skill can't be moved up
+
+		String name = listModelSkill.getElementAt(ind).toString();
+
+		listModelSkill.setElementAt(listModelSkill.getElementAt(ind - 1), ind);
+		listModelSkill.setElementAt(name, ind - 1);
+
+		int temp = gen.getSkills(ind);
+		gen.setSkills(ind, gen.getSkills(ind - 1));
+		gen.setSkills(ind - 1, temp);
+
+		temp = gen.getEffects(ind);
+		gen.setEffects(ind, gen.getEffects(ind - 1));
+		gen.setEffects(ind - 1, temp);
+
+		temp = gen.getTriggers(ind);
+		gen.setTriggers(ind, gen.getTriggers(ind - 1));
+		gen.setTriggers(ind - 1, temp);
+
+		jListSkillList.setSelectedIndex(ind - 1);
+	}
+
+	// skill list move down
+	public void skillListDownAction()
+	{
+		int ind = jListSkillList.getSelectedIndex();
+		if(ind >= gen.getNumEffectOpt() - 1)return;   //last skill can't be moved down
+
+		String name = listModelSkill.getElementAt(ind).toString();
+
+		listModelSkill.setElementAt(listModelSkill.getElementAt(ind + 1), ind);
+		listModelSkill.setElementAt(name, ind + 1);
+
+		int temp = gen.getSkills(ind);
+		gen.setSkills(ind, gen.getSkills(ind + 1));
+		gen.setSkills(ind + 1, temp);
+
+		temp = gen.getEffects(ind);
+		gen.setEffects(ind, gen.getEffects(ind + 1));
+		gen.setEffects(ind + 1, temp);
+
+		temp = gen.getTriggers(ind);
+		gen.setTriggers(ind, gen.getTriggers(ind + 1));
+		gen.setTriggers(ind + 1, temp);
+
+		jListSkillList.setSelectedIndex(ind + 1);
+	}
+
+	/*
     // get Jewel ID according to jewel buttton position
     private void getJewelID(int bodyPart)
     {
@@ -2675,6 +3107,7 @@ public class MhagGui extends javax.swing.JFrame {
 		    jewelID[i] = list[ind];
 	    }
     }
+	 */
 
     // [2/0/0] slot menu case, only show 2/1
     private boolean check200(int bodyPart, int Slot)
@@ -3279,13 +3712,40 @@ public class MhagGui extends javax.swing.JFrame {
 	public void setSkillTypeMenu()
 	{
 		skillType.addItem("Any");
-	    for(int i = 1; i < 7; i++)
+	    for(int i = 1; i <= 7; i++)
 	    {
 			String name = Skill.getSkillTypeName(i);
 		    skillType.addItem(name);
 	    }
 		skillType.setSelectedIndex(0);
 	}
+
+	// initialize Generator
+	public void initGen()
+	{
+		gen.setMhag(mhag);
+		gen.setMhagData(mhagData);
+
+		setSkillTypeMenu();
+		jComboBoxWeaponSlots.setSelectedIndex(0);
+		jComboBoxOpt.setSelectedIndex(0);
+		jCheckBoxLowRank.setSelected(true);
+		jCheckBoxHighRank.setSelected(true);
+		jCheckBoxPiercing.setSelected(true);
+		jCheckBoxCharm.setSelected(false);
+
+	    listModelSkill.clear();
+	    jListSkillList.setModel(listModelSkill);
+		for(int i = 0; i < 10; i++)
+			listModelSkill.insertElementAt("---", i);
+	    jListSkillList.clearSelection();
+
+		jProgressOpt.setValue(0);
+		jProgressOpt.setStringPainted(true);
+
+	}
+
+	public JProgressBar getProgressBar() {return jProgressOpt;}
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -3299,16 +3759,16 @@ public class MhagGui extends javax.swing.JFrame {
 			Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
 		}
 
-
 		mhagGui.checkPref();
 		mhagGui.readHelp();
 
 		mhagGui.setVisible(true);
 
 		mhagGui.initSetup(false, true, false); // by default
+		mhagGui.initGen();
 
 		//mhagGui.jTextUsage.setCaretPosition(0);
-		mhagGui.jTabbedPane.setEnabledAt(1, false); //diable generator panel
+		//mhagGui.jTabbedPane.setEnabledAt(1, false); //diable generator panel
 
 				try {
 					UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
@@ -3325,10 +3785,12 @@ public class MhagGui extends javax.swing.JFrame {
         });
     }
 
+
 	// GUI MHAG variables
 	private Mhag mhag = new Mhag();
 	private Set set = new Set();
 	private MhagData mhagData = new MhagData();
+	private Generator gen = new Generator();
 
 	private TextAreaPrintStream stream, streamView, streamGen;
 	private int[][] jewelInd = new int[7][3]; //jewel index in each jewel button list
@@ -3342,12 +3804,14 @@ public class MhagGui extends javax.swing.JFrame {
 
 	private boolean codeBookInUse = false;
 	private DefaultListModel listModel =  new DefaultListModel(); //viewer code list
+	private DefaultListModel listModelSkill =  new DefaultListModel(); //generator skill list
+	private DefaultListModel listModelOpt =  new DefaultListModel(); //generator search result list
 
 	private String[] deletedCodes = new String[5]; //store deleted codes;
 
 	// save code book
 	private boolean codeBookChanged = false;   //save code book dialog
-	SaveAndExit dialogSave = new SaveAndExit(new javax.swing.JFrame(), true);
+	//SaveAndExit dialogSave = new SaveAndExit(new javax.swing.JFrame(), true);
 
 	// save code book/outputs data file names
 	private final String fileNamePref = "pref";
@@ -3357,6 +3821,15 @@ public class MhagGui extends javax.swing.JFrame {
 	//help list
 	private DefaultListModel listModelHelp =  new DefaultListModel(); //viewer help list
 	private String[] helpData = new String[100];  // help data, max 100 entries
+
+	// generator thread
+	public class threadGen implements Runnable
+	{
+		public void run()
+		{
+			searchAction(100000);
+		}
+	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Output;
