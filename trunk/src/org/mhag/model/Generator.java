@@ -22,12 +22,11 @@ public class Generator {
 
 		scoreParaDefault[0] = 8;  //defense
 		scoreParaDefault[1] = -20;  // negative skill
-		scoreParaDefault[2] = 50;  // postive skill <= 4
-		scoreParaDefault[3] = 30;  // postive skill > 4
-		scoreParaDefault[4] = 3;  // unused slots
-		scoreParaDefault[5] = -5; // weapon slots in use
+		scoreParaDefault[2] = 50;  // postive skill 
+		scoreParaDefault[3] = 3;  // unused slots
+		scoreParaDefault[4] = -10; // weapon slots in use
 
-		for(int i = 0; i < 6; i++)
+		for(int i = 0; i < 5; i++)
 			scorePara[i] = scoreParaDefault[i];
 
 		Arrays.fill(includeOpt, false);
@@ -233,6 +232,63 @@ public class Generator {
 		 */
 	}
 
+	// automatically generate skill list (for jewel optimization only)
+	public void generateSkillList(Set newSet)
+	{
+		Set aSet = new Set();
+		aSet.copySetMin(newSet);
+		aSet.calcSet(mhag, mhagData);
+
+		int nSkill = aSet.getNumSkill();
+		if(nSkill <= 0)return;
+
+		int[] gap = new int[nSkill];
+		int[] eff = new int[nSkill];
+		int[] trig = new int[nSkill];
+		for(int i = 0; i < nSkill; i++)
+		{
+			int skillID = aSet.getSkillID()[i];
+			int skillPoint = aSet.getSkillPoint()[i];
+			Skill skill = mhagData.getSkill(skillID);
+			int nEffect = skill.getNumEffect();
+			int pointLeft = 0;
+			int effectID = 0;
+			int point = 0;
+			for(int j = 0; j < nEffect; j++)
+			{
+				point = skill.getEffectTrigger(j);
+				if(point < 0)continue;
+				pointLeft = point - skillPoint;
+				effectID = skill.getEffectID(j);
+				if(pointLeft > 0)break;
+			}
+			if(skill.getJewelID(aSet.getLowRank(), 1)  == 2)
+				gap[i] = (pointLeft + 1)/2;
+			else
+				gap[i] = pointLeft;
+			eff[i] = effectID;
+			trig[i] = point;
+			//System.out.printf("%d:%d %d %d\n",i, aSet.getSkillID()[i], eff[i], gap[i]);
+		}
+
+		int[] index = new int[nSkill];
+		index =	MhagUtil.sortIndex(nSkill, gap);
+		//System.out.println(Arrays.toString(index));
+
+		for(int i = 0; i < 10; i++)
+		{
+			if(i == nSkill - 1)break;
+			int ind = index[nSkill - 1 - i];
+			skills[i] = aSet.getSkillID()[ind];
+			effects[i] = eff[ind];
+			triggers[i] = trig[ind];
+			numEffectOpt = i + 1;
+			//System.out.printf("%d: %d %d\n", i, skills[i], gap[ind]);
+		}
+		//System.out.println(numEffectOpt);
+
+	}
+
 	public void genMain(Set aSet)
 	{
 		if(genMode == 0)  // jewel optimization
@@ -261,13 +317,14 @@ public class Generator {
 			//System.out.println(Arrays.toString(skills));
 			//System.out.println(Arrays.toString(effects));
 			//System.out.println(Arrays.toString(triggers));
+			int max = mhagGui.getProgressBar().getMaximum();
 
 			int score = 0;
 			int progress = 1;
 			Set genSet = new Set();
 			for(int i = 0; i < repeat; i++)
 			{
-				if(i == repeat/20 * progress)
+				if(i == repeat/max * progress)
 				{
 					mhagGui.getProgressBar().setValue(progress);
 					progress++;
@@ -497,6 +554,8 @@ public class Generator {
 		for(int i = 0; i < 7; i++)
 			for(int j = 0; j < 3; j++)
 				aSet.setJewelID(i, j, 0);
+		if(numWeaponSlot > 0)
+			aSet.setInUse(5, true);
 
 		aSet.setRate(this);
 
@@ -631,6 +690,7 @@ public class Generator {
 			if(cycleID == 1)
 			{
 				// make a copy of slot information
+				int cycleSkillInd = currentSkillInd;
 				int cycleSkill = currentSkill;
 
 				int[] gapPointBack = new int[10];
@@ -638,12 +698,9 @@ public class Generator {
 				int[] slotInfoBack = new int[7];
 				int[] numJewelBack = new int[7];
 				int[][] jewelIDBack = new int[7][3];
-				for(int i = 0; i < 10; i++)
-					gapPointBack[i] = gapPointNow[i];
-				for(int i = 0; i < 5; i++)
-					slotsBack[i] = slotsNow[i];
-				for(int i = 0; i < 7; i++)
-					slotInfoBack[i] = slotInfoNow[i];
+				System.arraycopy(gapPointNow, 0, gapPointBack, 0, 10);
+				System.arraycopy(slotsNow, 0, slotsBack, 0, 5);
+				System.arraycopy(slotInfoNow, 0, slotInfoBack, 0, 7);
 				for(int i = 0; i < 7; i++)
 					numJewelBack[i] = aSet.getNumJewel(i);
 				for(int i = 0; i < 7; i++)
@@ -653,7 +710,7 @@ public class Generator {
 				//try a cicle
 				int trailNo = 1;
 				success = false;
-				while(!success || (gapPointBack[cycleSkill] > 0))
+				do
 				{
 					if(trailNo == 1)
 					{
@@ -669,19 +726,16 @@ public class Generator {
 
 					}else
 					{
-						// start over
-						for(int i = 0; i < 10; i++)
-							gapPointNow[i] = gapPointBack[i];
-						for(int i = 0; i < 5; i++)
-							slotsNow[i] = slotsBack[i];
-						for(int i = 0; i < 7; i++)
-							slotInfoNow[i] = slotInfoBack[i];
+						System.arraycopy(gapPointBack, 0, gapPointNow, 0, 10);
+						System.arraycopy(slotsBack, 0, slotsNow, 0, 5);
+					
+						System.arraycopy(slotInfoBack, 0, slotInfoNow, 0, 7);
 						for(int i = 0; i < 7; i++)
 							aSet.setNumJewel(i, numJewelBack[i]);
 						for(int i = 0; i < 7; i++)
 							for(int j = 0; j < 3; j++)
 								aSet.setJewelID(i, j, jewelIDBack[i][j]);
-						currentSkillInd = cycleSkill;
+						currentSkillInd = cycleSkillInd;
 
 						// enhanced run
 						gapPointNow[cycleSkill] += trailNo -1; // add more points
@@ -701,7 +755,7 @@ public class Generator {
 					}
 
 					trailNo++;
-				}
+				} while((gapPointNow[cycleSkill] > 0) && (trailNo <10));  // if too many tails , quit
 
 			}
 			else
@@ -788,7 +842,7 @@ public class Generator {
 					(((points[1] == 1) && (gapPointNow[currentSkill] >= slotsNow[0])) ||
 					((points[1] == 2) && (gapPointNow[currentSkill]+1 >= slotsNow[0]*2))))   //check 1-slot torso up skill
 				{
-					addJewel(aSet, currentSkill, 1, slotsNow[4], true, gapPointNow, slotsNow, slotInfoNow);
+					addJewel(aSet, currentSkill, 1, 1, true, gapPointNow, slotsNow, slotInfoNow);
 				}
 				else if((i < 3) &&(slotsNow[i+1] > 0))  // check piece with 1 more slot
 				{
@@ -800,7 +854,7 @@ public class Generator {
 				}
 				else if(slotsNow[4] > 0)  //check torso up if no match
 				{
-					addJewel(aSet, currentSkill, 1, slotsNow[4], true, gapPointNow, slotsNow, slotInfoNow);
+					addJewel(aSet, currentSkill, 1, 1, true, gapPointNow, slotsNow, slotInfoNow);
 				}
 				else
 				{
@@ -846,23 +900,21 @@ public class Generator {
 			{
 				if(slotInfoNow[i] == pieceSlot)
 				{
-					if(i < 5)
-						bodyPart = i;
-					else if(i == 5)
-						bodyPart = 6;  // weapon , charm swap, make weapon slot lowest priority
-					else
-						bodyPart = 5;
+					if((i == 1) && (slotsNow[4] > 0))continue;
+					bodyPart = i;
 					break;
 				}
 			}
 			//System.out.printf("here %d %d %d\n", bodyPart, nSlot, jewelIDUsed[currentSkill][nSlot]);
 		}
-		//System.out.printf("%d %d %d %d\n",currentSkill, nSlot, pieceSlot, bodyPart);
 		slotInfoNow[bodyPart] -= nSlot;
 
 		int nJewel = aSet.getNumJewel(bodyPart) + 1;
-		aSet.setNumJewel(bodyPart, nJewel);  //torso (chest) piece
+		aSet.setNumJewel(bodyPart, nJewel);  
 		aSet.setJewelID(bodyPart, nJewel - 1, jewelIDUsed[currentSkill][nSlot]);
+		//System.out.printf("%d %d %d %d\n",currentSkill, nSlot, pieceSlot, bodyPart);
+		//System.out.printf("%d %d %d\n",nJewel, jewelIDUsed[currentSkill][nSlot], slotsNow[4]);
+
 	}
 
 	public Mhag getMhag() {return mhag;}
@@ -931,7 +983,7 @@ public class Generator {
 	public void setScorePara(int ind, int value) {scorePara[ind] = value;}
 	public void setScoreParaDefault()
 	{
-		for(int i = 0; i < 6; i++)
+		for(int i = 0; i < 5; i++)
 			scorePara[i] = scoreParaDefault[i];
 	}
 
@@ -950,8 +1002,8 @@ public class Generator {
 	private int numWeaponSlotOpt = 0;  //max # of weapon slots, as an input option
 
 	//scoring parameters : defense, skillNeg, skillPos, skillPos2, slotLeft, slotWeapon
-	private int[] scorePara = new int[6];
-	private int[] scoreParaDefault = new int[6];
+	private int[] scorePara = new int[5];
+	private int[] scoreParaDefault = new int[5];
 	private int numOptSet = 20;  //number of output sets
 	private int numOptSetDefault = 20;  //number of output sets
 
