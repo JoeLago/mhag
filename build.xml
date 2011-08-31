@@ -71,6 +71,8 @@
     nbproject/build-impl.xml file. 
 
     -->
+
+    <!--
         <target name="-post-jar">
            <jar jarfile="Mhag.jar">
               <zipfileset src="dist/Mhag.jar" excludes="META-INF/*" />
@@ -79,4 +81,5 @@
                  </manifest>
             </jar>
         </target>
+    -->
 </project>

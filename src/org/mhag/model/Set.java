@@ -1623,10 +1623,13 @@ public class Set {
 
 				if(trigger <= point) //triggered
 				{
+					rate += gen.getScorePara(2) + trigger;  //larger bonus
+					/*
 					if(skillInd <= 3) // first 4 skills
 						rate += gen.getScorePara(2) + trigger;  //larger bonus
 					else
-						rate += gen.getScorePara(3) + trigger;  //the rest 6, fewer bonus
+						rate += gen.getScorePara(2) + trigger;  //the rest 6, fewer bonus
+					 */
 				}
 				else //not triggered, plus the available points;
 				{
@@ -1662,7 +1665,7 @@ public class Set {
 				nSlot -= jewel.getNumSlot();
 			}
 			if(nSlot > 0)
-				rate += gen.getScorePara(4); //bonus for unused slots
+				rate += nSlot * gen.getScorePara(3); //bonus for unused slots
 		}
 
 		if(inUse[5])  //weapon slots
@@ -1673,7 +1676,8 @@ public class Set {
 				Jewel jewel = gen.getMhagData().getJewel(jewelID[5][j]);
 				nSlot += jewel.getNumSlot();
 			}
-			rate += gen.getScorePara(5); //penalty for used slots (less weapon of choice)
+			if(nSlot > 0)
+				rate += nSlot * gen.getScorePara(4); //penalty for used slots (less weapon of choice)
 		}
 
 	}
@@ -1766,11 +1770,14 @@ public class Set {
 		}
 		slots[numCharmSlot]++;
 		slots[numWeaponSlot]++;
-		slotInfo[6] =  numWeaponSlot;  //warning! weapon charm swap, make weapon the lowest priority
-		slotInfo[5] =  numCharmSlot;
+		slotInfo[5] =  numWeaponSlot; 
+		slotInfo[6] =  numCharmSlot;
 
-		//slots[0] for torso up  , overwrite number of 0-slot pierces
-		slots[0] = numTorso;
+		//slots[0] for # torso up + 1
+		if(numTorso != 0)
+			slots[0] = numTorso + 1;
+		else
+			slots[0] = 0;
 	}
 
 	// copy a set

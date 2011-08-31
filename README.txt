@@ -1,8 +1,7 @@
 MHAG: Monster Hunter Armor Generator 
-v.1.1
+v.1.2 beta 1
 Author : Tifa@mh3
 MHAG Project: code.google.com/mhag
-Proposed MHAG code/output wiki : mhag.wetpaint.com
 
 About MHAG:
 MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is designed for Monster Hunter Tri (Wii), and it supports Monster Hunter Portable/Freedom 3rd (PSP).  MHAG has a calculator, a viewer and a generator, making it an outstanding tool to manage and design your own armor sets. 
@@ -24,8 +23,11 @@ MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is d
      I will also make source code packages for stable versions. (v1.0, v2.0)
 
 History:
-v.1.2 beta 1 09/01/2011:
+v.1.2 beta 1 08/31/2011:
    1.new feature : new generator panel, jewel optimization (experimental)
+   2.improve speed of "load to Calculator" 
+   3.tweak jewel preview: add "# of slot" information after jewel short name (if # > 1); this may cut the last letter of jewel name
+   4.delete help panel
 v.1.1c 08/27/2011:
    1.bug : combobox menu error for the 2nd talisman skill
    2.tweak gui

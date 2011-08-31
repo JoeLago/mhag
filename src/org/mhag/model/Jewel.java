@@ -116,10 +116,21 @@ public class Jewel {
 	{
 		int pos = jewelName.indexOf("Jewel");
 		String jewelShort = jewelName.substring(0, pos - 1).trim();
+
 		if(jewelName.indexOf("+") != -1)
 			return jewelShort+("+");
 		else
-			return jewelShort;
+		{
+			if(numSlot > 1)
+			{
+				if(jewelShort.length() <= 9)
+					return String.format("%s%d", jewelShort, numSlot);
+				else
+					return String.format("%s%d", jewelShort.substring(0,9), numSlot);
+			}
+			else
+				return jewelShort;
+		}
 	}
 
 	// get jewel name with only positive skill
