@@ -56,7 +56,13 @@ public class MhagData {
 	// read skill from skill file
 	public void readSkill(Mhag mhag) 
 	{
-		Scanner in = new Scanner(getClass().getResourceAsStream(fileSkill));
+		String file;
+		if(mhag.getGame() == 0)
+			file = dirDataTri + fileSkill;
+		else
+			file = dirDataP3rd + fileSkill;
+
+		Scanner in = new Scanner(getClass().getResourceAsStream(file));
 
 		// check total # of skills
 		int nMax = 0;
@@ -79,7 +85,7 @@ public class MhagData {
 			skillList[i] = new Skill();
 
 		}
-		Scanner in2 = new Scanner(getClass().getResourceAsStream(fileSkill));
+		Scanner in2 = new Scanner(getClass().getResourceAsStream(file));
 
 		// read skill entry
 		int ioErr = 0;
@@ -249,7 +255,13 @@ public class MhagData {
 	// read jewel from jewel file
 	public void readJewel(Mhag mhag)
 	{
-		Scanner in = new Scanner(getClass().getResourceAsStream(fileJewel));
+		String file;
+		if(mhag.getGame() == 0)
+			file = dirDataTri + fileJewel;
+		else
+			file = dirDataP3rd + fileJewel;
+
+		Scanner in = new Scanner(getClass().getResourceAsStream(file));
 
 		// check total # of skills
 		int nMax = 0;
@@ -272,7 +284,7 @@ public class MhagData {
 			jewelList[i] = new Jewel();
 
 		}
-		Scanner in2 = new Scanner(getClass().getResourceAsStream(fileJewel));
+		Scanner in2 = new Scanner(getClass().getResourceAsStream(file));
 
 		// read Jewel entry
 		int ioErr = 0;
@@ -299,7 +311,13 @@ public class MhagData {
 	// read armor from armor file
 	public void readArmor(Mhag mhag) 
 	{
-		Scanner in = new Scanner(getClass().getResourceAsStream(fileArmor));
+		String file;
+		if(mhag.getGame() == 0)
+			file = dirDataTri + fileArmor;
+		else
+			file = dirDataP3rd + fileArmor;
+
+		Scanner in = new Scanner(getClass().getResourceAsStream(file));
 
 		// check total # of skills
 		int nMax[] = new int[5];
@@ -340,7 +358,7 @@ public class MhagData {
 			}
 		}
 
-		Scanner in2 = new Scanner(getClass().getResourceAsStream(fileArmor));
+		Scanner in2 = new Scanner(getClass().getResourceAsStream(file));
 		// read Armor entry
 		int ioErr = 0;
 		int[] armorIndex = new int[5];
@@ -1064,10 +1082,11 @@ public class MhagData {
 	 */
 
 	// Constants for file names
-	private final String dirData = "data/";
-	private final String fileArmor = dirData+"armor.dat";
-	private final String fileJewel = dirData+"jewel.dat";
-	private final String fileSkill = dirData+"skill.dat";
+	private final String dirDataTri = "data/tri/";
+	private final String dirDataP3rd = "data/p3rd/";
+	private final String fileArmor = "armor.dat";
+	private final String fileJewel = "jewel.dat";
+	private final String fileSkill = "skill.dat";
 //	private final String fileCharm = dirData+"charm.dat";
 	private final String dirRef = "reference/";
 	private final String fileRefArmor = dirRef+"ref_armor.dat";
@@ -1083,7 +1102,6 @@ public class MhagData {
 	private Armor[][] armorList;
 	private Skill[] skillList;
 	private Jewel[] jewelList;
-//	private Charm[] charmList;
 	private Effect[] effectList;
 
 	// indeces

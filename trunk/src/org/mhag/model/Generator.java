@@ -994,6 +994,8 @@ public class Generator {
 
 	private Mhag mhag;  //local mhag data
 	private MhagData mhagData;  //local mhagData data
+	// charm data for generator
+  	private Charm[] charmList;
 
 	//generator options
 	private int genMode = 0; //mode 0: jewl only, 1: partial search , 2. full set search

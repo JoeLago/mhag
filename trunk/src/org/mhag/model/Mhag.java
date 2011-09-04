@@ -14,8 +14,9 @@ import java.io.PrintStream;
 public class Mhag
 {
 
-	public Mhag()
+	public Mhag(int version)
 	{
+		game = version;
 	}
 
 	// MHAG command-line help
@@ -177,6 +178,9 @@ public class Mhag
 		if(method == 3)mhagData.showReference(this); //show ref
 	}
 
+	// get game version
+	public int getGame() {return game;}
+
 	// get method
 	public int getMethod() {return method;}
 
@@ -234,7 +238,7 @@ public class Mhag
 	public static void main(String[] args) throws FileNotFoundException
 	{
 
-		Mhag mhag = new Mhag();
+		Mhag mhag = new Mhag(0);
 		MhagData mhagData = new MhagData();
 
 		mhag.init(mhagData, args);
@@ -247,6 +251,7 @@ public class Mhag
 //		System.out.println(dir);
 
 	}
+	private int game = 0; // game, 0: tri; 1: mhp3rd
 
 	private int method = 0;  // MHAG method 0: caluclator; 1: batch;
 				 // 2: generator; 3: reference;
