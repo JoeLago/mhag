@@ -2,6 +2,9 @@ package org.mhag.model;
 
 import java.awt.Cursor;
 import java.awt.Desktop;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.awt.event.ItemEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -39,6 +42,12 @@ public class MhagGui extends javax.swing.JFrame {
     public MhagGui() {
         initComponents();
 
+		String title =  "MHAG: Monster Hunter Armor Generator Ver 1.2 beta 2";
+		if(mhag.getGame() == 0)
+			setTitle(title + " for Monster Hunter Tri");
+		else
+			setTitle(title + " for Monster Hunter Portable 3rd");
+
 		// align list
 		DefaultListCellRenderer renderer = (DefaultListCellRenderer)jListSkillList.getCellRenderer();
 		renderer.setHorizontalAlignment(JLabel.CENTER);
@@ -48,7 +57,7 @@ public class MhagGui extends javax.swing.JFrame {
 		streamGen = new TextAreaPrintStream(jTextPreview3, System.out);
 
 		//disable for test
-		jButtonMyCharms.setEnabled(false);
+		//jButtonMyCharms.setEnabled(false);
 		jButtonSettings.setEnabled(false);
 		jComboBoxOpt.setEnabled(false);
 		jRadioBlade.setEnabled(false);
@@ -57,7 +66,6 @@ public class MhagGui extends javax.swing.JFrame {
 		jCheckBoxHighRank.setEnabled(false);
 		jCheckBoxPiercing.setEnabled(false);
 		jCheckBoxCharm.setEnabled(false);
-
     }
 
     /** This method is called from within the constructor to
@@ -138,6 +146,9 @@ public class MhagGui extends javax.swing.JFrame {
         jTextPreview = new javax.swing.JTextArea();
         setNamePanel = new javax.swing.JPanel();
         jTextSetName = new javax.swing.JTextField();
+        buttonLink = new javax.swing.JButton();
+        buttonGoto = new javax.swing.JButton();
+        buttonSubmit = new javax.swing.JButton();
         generator = new javax.swing.JPanel();
         jScrollPreview3 = new javax.swing.JScrollPane();
         jTextPreview3 = new javax.swing.JTextArea();
@@ -198,7 +209,6 @@ public class MhagGui extends javax.swing.JFrame {
         labelPic = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MHAG: Monster Hunter Armor Generator   Ver 1.2 beta 1");
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -206,7 +216,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jTabbedPane.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        jTabbedPane.setFont(new java.awt.Font("Monospaced", 1, 14));
         jTabbedPane.setOpaque(true);
         jTabbedPane.setPreferredSize(new java.awt.Dimension(1238, 630));
 
@@ -909,6 +919,26 @@ public class MhagGui extends javax.swing.JFrame {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
+        buttonLink.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        buttonLink.setText("Copy MHAG Online Link");
+        buttonLink.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLinkActionPerformed(evt);
+            }
+        });
+
+        buttonGoto.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        buttonGoto.setText("Goto MHAG Online");
+        buttonGoto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonGotoActionPerformed(evt);
+            }
+        });
+
+        buttonSubmit.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        buttonSubmit.setText("Submit to MHAG Online");
+        buttonSubmit.setEnabled(false);
+
         javax.swing.GroupLayout calculatorLayout = new javax.swing.GroupLayout(calculator);
         calculator.setLayout(calculatorLayout);
         calculatorLayout.setHorizontalGroup(
@@ -929,7 +959,14 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addComponent(setNamePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(calculatorLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(setup, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)))
+                        .addComponent(setup, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE))
+                    .addGroup(calculatorLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(buttonLink, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(buttonGoto, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15)
+                        .addComponent(buttonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPreview, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -946,7 +983,12 @@ public class MhagGui extends javax.swing.JFrame {
                             .addComponent(rank, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(setNamePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(setup, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(setup, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(buttonLink, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonGoto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jScrollPreview, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1249,6 +1291,11 @@ public class MhagGui extends javax.swing.JFrame {
 
         jButtonMyCharms.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonMyCharms.setText("Charms");
+        jButtonMyCharms.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMyCharmsActionPerformed(evt);
+            }
+        });
 
         jButtonSettings.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonSettings.setText("Settings");
@@ -1563,7 +1610,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jEditorAbout.setContentType("text/html");
         jEditorAbout.setEditable(false);
-        jEditorAbout.setText("<html>\n  <head>\n\n  </head>\n  <body>\n    <h2 align = \"center\">\n      MHAG :\n    </h2>\n  <h2 align = \"center\">\n       Monster Hunter Armor Generator\n    </h2>\n <p align = \"center\">v1.2 beta 1 </p>\n <p align = \"center\">Release Date: 08/31/2011</p>\n<p align = \"center\">MHAG Project: <a href=\"http://code.google.com/p/mhag/\">code.google.com/p/mhag</a></p>\n\n<p></p>\n<p align = \"center\">by Tifa@mh3</p>\n<p align = \"center\">Unity Member: <a href=\"http://www.capcom-unity.com/tifa@mh3\">www.capcom-unity.com/tifa@mh3</a></p>\n<p align = \"center\">Youtube Channel: <a href=\"http://www.youtube.com/mh3journey\">www.youtube.com/mh3journey</a></p>\n\n  </body>\n\n");
+        jEditorAbout.setText("<html>\n  <head>\n\n  </head>\n  <body>\n    <h2 align = \"center\">\n      MHAG :\n    </h2>\n  <h2 align = \"center\">\n       Monster Hunter Armor Generator\n    </h2>\n <p align = \"center\">v1.2 beta 2 </p>\n <p align = \"center\">Release Date: 09/04/2011</p>\n<p align = \"center\">MHAG Project: <a href=\"http://code.google.com/p/mhag/\">code.google.com/p/mhag</a></p>\n\n<p></p>\n<p align = \"center\">by Tifa@mh3</p>\n<p align = \"center\">Unity Member: <a href=\"http://www.capcom-unity.com/tifa@mh3\">www.capcom-unity.com/tifa@mh3</a></p>\n<p align = \"center\">Youtube Channel: <a href=\"http://www.youtube.com/mh3journey\">www.youtube.com/mh3journey</a></p>\n\n  </body>\n\n");
         jEditorAbout.setOpaque(false);
         jEditorAbout.addHyperlinkListener(new javax.swing.event.HyperlinkListener() {
             public void hyperlinkUpdate(javax.swing.event.HyperlinkEvent evt) {
@@ -2169,6 +2216,38 @@ public class MhagGui extends javax.swing.JFrame {
 		new Thread(new threadGen()).start(); //Start the thread
 	}//GEN-LAST:event_jButtonAbortActionPerformed
 
+	private void jButtonMyCharmsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMyCharmsActionPerformed
+		if(!ifCharm)
+		{
+			ifCharm = true;
+			charmDialog = new CharmDialog(new javax.swing.JFrame(), true, mhagData);
+			charmDialog.setLocationRelativeTo(jButtonMyCharms);
+		}
+		charmDialog.setVisible(false);    // add to make the charm  to the front
+		charmDialog.toFront();
+		charmDialog.setVisible(true);
+	}//GEN-LAST:event_jButtonMyCharmsActionPerformed
+
+	private void buttonLinkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLinkActionPerformed
+		String url = set.getSetCodeURL(mhag);
+		StringSelection data = new StringSelection(url);
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+		clipboard.setContents(data, data);
+	}//GEN-LAST:event_buttonLinkActionPerformed
+
+	private void buttonGotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGotoActionPerformed
+		try {
+			String url = set.getSetCodeURL(mhag);
+			Desktop desktop = Desktop.getDesktop();
+			URI uri = new URI(url);
+			desktop.browse(uri);
+		} catch (IOException ex) {
+			//Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
+		} catch (URISyntaxException ex) {
+			//Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}//GEN-LAST:event_buttonGotoActionPerformed
+
 	// main search action
 	private void searchAction(int repeat) {
 		// no effects are inputed, automatically generate the list
@@ -2352,7 +2431,7 @@ public class MhagGui extends javax.swing.JFrame {
 
     private void codePreviewGen()
     {
-	    if(adjust) return; //when loading code book
+	    if(adjust) return; //when loading codes of generated sets
 	    if(jListOptSets.getSelectedIndex() < 0) return; //not initiate;
 
 	    streamGen.reset();
@@ -3726,6 +3805,7 @@ public class MhagGui extends javax.swing.JFrame {
 	}
 
 	public JProgressBar getProgressBar() {return jProgressOpt;}
+	public MhagData getMhagData() {return mhagData;}
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -3748,6 +3828,8 @@ public class MhagGui extends javax.swing.JFrame {
 		mhagGui.initSetup(false, true, false); // by default
 		mhagGui.initGen();
 
+		//mhagGui.charmDialog = new CharmDialog(new javax.swing.JFrame(), true, mhagGui.getMhagData());
+
 		//mhagGui.jTextUsage.setCaretPosition(0);
 		//mhagGui.jTabbedPane.setEnabledAt(1, false); //diable generator panel
 
@@ -3768,10 +3850,14 @@ public class MhagGui extends javax.swing.JFrame {
 
 
 	// GUI MHAG variables
-	private Mhag mhag = new Mhag();
+	private Mhag mhag = new Mhag(0);  // 0: tri; 1: p3rd
 	private Set set = new Set();
 	private MhagData mhagData = new MhagData();
 	private Generator gen = new Generator();
+	private CharmDialog charmDialog;
+
+	//dialog setting
+	private boolean ifCharm = false;
 
 	private TextAreaPrintStream stream, streamView, streamGen;
 	private int[][] jewelInd = new int[7][3]; //jewel index in each jewel button list
@@ -3829,7 +3915,10 @@ public class MhagGui extends javax.swing.JFrame {
     private javax.swing.JLabel armsLabel;
     private javax.swing.JComboBox armsMenu;
     private javax.swing.JRadioButton blade;
+    private javax.swing.JButton buttonGoto;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton buttonLink;
+    private javax.swing.JButton buttonSubmit;
     private javax.swing.JPanel calculator;
     private javax.swing.JLabel charmLabel;
     private javax.swing.JComboBox charmMenu;

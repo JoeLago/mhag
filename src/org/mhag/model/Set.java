@@ -73,7 +73,11 @@ public class Set {
 	public String getSetName() {return setName;}
 
 	// set set name
-	public void setSetName(String aSetName) {setName = aSetName;}
+	public void setSetName(String aSetName) 
+	{
+		aSetName.replaceAll(":", ".");
+		setName = aSetName;
+	}
 
 	// get low/high rank
 	public boolean getLowRank() {return lowRank;}
@@ -528,6 +532,24 @@ public class Set {
 
 		return line.toString();
 	}
+
+	// get url for mhag online
+	public String getSetCodeURL(Mhag mhag)
+	{
+		String setCode = getSetCode();
+		StringBuffer setURL = new StringBuffer("http://31.222.180.81:8880/mhag-");
+		if(mhag.getGame() == 0)
+			setURL.append("tri");
+		else
+			setURL.append("p3");
+		setURL.append("/viewset.htm?s=");
+
+		int gap = setCode.indexOf(":");   //delete set name for now
+		setURL.append(setCode.substring(gap+1).trim().replaceAll(" ", ".")); // replace space with "."
+		//System.out.println(setURL);
+		return setURL.toString();
+	}
+
 
 	// initialize set
 	public void init()
