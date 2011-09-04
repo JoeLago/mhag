@@ -75,8 +75,7 @@ public class Set {
 	// set set name
 	public void setSetName(String aSetName) 
 	{
-		aSetName.replaceAll(":", ".");
-		setName = aSetName;
+		setName = aSetName.replaceAll(":", ".");
 	}
 
 	// get low/high rank
