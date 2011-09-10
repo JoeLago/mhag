@@ -29,6 +29,8 @@ v.1.2 beta 3 09/10/2011:
    3. remove output feature from the calculator
    4. new feature: reset button 
    5. new feature: english/japanese switch (menu only, mhp3rd only)
+   6. new feature: in viewer panel, if the code book doesn't exist, MHAG automatically creates one.
+   7. bug: after load a "auto-guard" set, one can input the 2nd skill in the calculator. fixed
 v.1.2 beta 2 09/04/2011:
    1. new feature: add myCharm dialog (charm manager)
    2. change mhag to support both tri/p3rd in the same package. (source code)
