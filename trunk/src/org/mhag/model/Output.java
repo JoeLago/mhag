@@ -89,19 +89,19 @@ public class Output {
 		String color, title, title2;
 		if(lowRank)
 		{
-			color = new String("orange");
-			title = new String("Low Rank");
+			color = "orange";
+			title = "Low Rank";
 		}
 		else
 		{
-			color = new String("orangered");
-			title = new String("High Rank");
+			color = "orangered";
+			title = "High Rank";
 		}
 
 		if(blade)
-			title2 = new String("Bladermaster");
+			title2 = "Bladermaster";
 		else
-			title2 = new String("Gunner");
+			title2 = "Gunner";
 
 	      outSave.println("<table border=\"1\" cellpadding=\"2\" width=\"650\" rules=\"rows\" frame=\"box\">");
 	      outSave.printf("<tr><td colspan=\"8\"><b>%s</b></td>\n", setName);
@@ -381,23 +381,23 @@ public class Output {
 			String titleNew,color;
 			if(resistInd == 1)
 			{
-				titleNew = new String("Water");
-				color= new String("blue");
+				titleNew = "Water";
+				color= "blue";
 			}
 			else if (resistInd == 2)
 			{
-				titleNew = new String("Ice");
-				color= new String("darkcyan");
+				titleNew = "Ice";
+				color= "darkcyan";
 			}
 			else if (resistInd == 3)
 			{
-				titleNew = new String("Thunder");
-				color= new String("orange");
+				titleNew = "Thunder";
+				color= "orange";
 			}
 			else
 			{
-				titleNew = new String("Dragon");
-				color= new String("purple");
+				titleNew = "Dragon";
+				color= "purple";
 			}
 			outSave.printf("<tr style=\"color:%s\" align=\"right\"><td align=\"left\">%s</td><td>---\n",
 				color,titleNew);
@@ -481,9 +481,9 @@ public class Output {
 		effectName = new String(effectName.substring(2));
 		String arrow;
 		if(ifEff == 0)
-			arrow = new String("&nbsp;");
+			arrow = "&nbsp;";
 		else
-			arrow = new String("&rarr;");
+			arrow = "&rarr;";
 
 		if(firstline)   // format table, add 1st line
 		{

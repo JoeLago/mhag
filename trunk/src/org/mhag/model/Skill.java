@@ -18,10 +18,12 @@ public class Skill {
 		effectID = new int[6];
 		effectTrigger = new int[6];
 		effectName = new String[6];
+		effectNameJP = new String[6];
 
 		Arrays.fill(effectID, 0);
 		Arrays.fill(effectTrigger, 0);
 		Arrays.fill(effectName, "");
+		Arrays.fill(effectNameJP, "");
 		for(int i = 0; i < 2; i++)
 		{
 			Arrays.fill(jewelID[i], -1);
@@ -104,6 +106,94 @@ public class Skill {
 		return 0;
 	}
 
+	// read skill entry from a line , including japanese
+	public static int setSkillFromLineJP(String line, Skill skill)
+	{
+		//System.out.println(line);
+		//System.exit(0);
+		// skill id
+ 		skill.skillID = skillIDTot++;  //start from 1;
+
+		int startPos = 0;
+		int endPos = 0;
+		int wordIndex = 0;
+		skill.numEffect = 0;
+		String word = "";
+		while(line != null )
+		{
+			endPos = MhagUtil.extractWordPos(line, startPos);
+			word = MhagUtil.extractWord(line, startPos, endPos);
+			//System.out.println(word);
+
+			wordIndex++;
+
+			if(wordIndex == 1)
+			{
+				// read Skill Name
+				skill.skillName = word;
+			}
+			else if(wordIndex == 2)
+			{
+				// read Skill Name japanese
+				skill.skillNameJP = word;
+			}
+			else if (wordIndex == 3)
+			{
+				int id = Integer.valueOf(word);
+				skill.skillType = id;
+			}
+			else if(wordIndex == 4)
+			{
+				// read Skill Class
+				int[] numbers = new int [8];
+				int nMax = 0;
+
+				MhagUtil.extractInt(word, nMax, numbers);
+				for ( int i = 0; i < 2; i++)
+					for ( int j = 0; j < 4; j++)
+						skill.maxSkillPoint[i][j] = numbers[i*4+j];
+
+
+			}
+			else
+			{
+				// read effects name/trigger points
+
+				if(endPos == -1)return 1; //error no skill point
+				if(skill.numEffect == 6)return 1; // effect <= 6
+
+				// read effects
+				skill.effectName[skill.numEffect] = word;
+				// read effects japanese
+				startPos = endPos + 1;
+				endPos = MhagUtil.extractWordPos(line, startPos);
+				word = MhagUtil.extractWord
+					(line, startPos, endPos);
+				skill.effectNameJP[skill.numEffect] = word;
+				//read points
+				startPos = endPos + 1;
+				endPos = MhagUtil.extractWordPos(line, startPos);
+				word = MhagUtil.extractWord
+					(line, startPos, endPos);
+				int trigger = Integer.valueOf(word);
+				skill.effectTrigger[skill.numEffect] = trigger;
+
+				if(trigger < 0) skill.hasNegative = true;
+
+				skill.numEffect++;
+			}
+
+			if(endPos  == -1)
+			{
+				if(wordIndex <= 2)return 1;  // error no effect
+				break;
+			}
+			startPos = endPos + 1;
+		}
+
+		return 0;
+	}
+
 	// get skill type index
 	public int getSkillType() {return skillType;}
 
@@ -132,6 +222,9 @@ public class Skill {
 	// get skill name
 	public String getSkillName() {return skillName;}
 
+	// get skill name japanese
+	public String getSkillNameJP() {return skillNameJP;}
+
 	// get max skill point
 	public int[][] getMaxSkillPoint() {return maxSkillPoint;}
 
@@ -149,6 +242,10 @@ public class Skill {
 	// get Effect Name
 	public String[] getEffectName() {return effectName;}
 	public String getEffectName(int ind) {return effectName[ind];}
+
+	// get Effect Name japanese
+	public String[] getEffectNameJP() {return effectNameJP;}
+	public String getEffectNameJP(int ind) {return effectNameJP[ind];}
 
 	// get Effect ID
 	public int[] getEffectID() {return effectID;}
@@ -235,12 +332,14 @@ public class Skill {
 
 	private int skillID = 0; // Skill ID
 	private String skillName = "";  // Skill Name
+	private String skillNameJP = "";  // Skill Name japanese
 //	private String skillClass = "";  // A/B/C/D  
 	private int skillType = 0; // 1 - 7
 	private int[][] maxSkillPoint = new int [2][4]; //max point (1st index: low rank 0, high rank 1)
 							// 2nd index: 0 - 3 slots
 	private int numEffect = 0;  // # Effects , 6 max, 3 pos ,3 neg
 	private String[] effectName;   // Effect Name
+	private String[] effectNameJP;   // Effect Name japanese name
 	private int[] effectID;   // Effect IDs
 	private int[] effectTrigger;  //skill points to tigger effect
 

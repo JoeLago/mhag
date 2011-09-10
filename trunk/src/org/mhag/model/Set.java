@@ -12,8 +12,12 @@ package org.mhag.model;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Set {
 
@@ -177,7 +181,7 @@ public class Set {
 			return MhagData.emptyName;
 		else
 		{
-			StringBuffer title = new StringBuffer("");
+			StringBuilder title = new StringBuilder("");
 			for (int i = 0; i < numCharmSkill; i++)
 			{
 				Skill skill = mhagData.getSkill(charmSkillID[i]);
@@ -456,7 +460,7 @@ public class Set {
 	// get coding of a set (batch version code)
 	public String getSetCode()
 	{
-		StringBuffer line = new StringBuffer(setName);
+		StringBuilder line = new StringBuilder(setName);
 
 		line.append(" : ");
 
@@ -533,22 +537,44 @@ public class Set {
 	}
 
 	// get url for mhag online
-	public String getSetCodeURL(Mhag mhag)
+	public URI getSetCodeURI(Mhag mhag)
 	{
+
 		String setCode = getSetCode();
-		StringBuffer setURL = new StringBuffer("http://31.222.180.81:8880/mhag-");
+
+		//  process set name
+		int gap = setCode.indexOf(":");   //delete set name
+		String name = setCode.substring(0, gap+2);
+		name = name.replace("+", "%2B");
+		name = name.replace("$", "%24");
+		name = name.replace("&", "%26");
+		name = name.replace("[", "%5B");
+		name = name.replace("]", "%5D");
+		name = name.replace("<", "%3C");
+		name = name.replace(">", "%3E");
+		name = name.replace("=", "%3D");
+
+		StringBuilder file = new StringBuilder("/mhag-");
 		if(mhag.getGame() == 0)
-			setURL.append("tri");
+			file.append("tri");
 		else
-			setURL.append("p3");
-		setURL.append("/viewset.htm?s=");
+			file.append("p3");
+		file.append("/viewset.htm");
 
-		int gap = setCode.indexOf(":");   //delete set name for now
-		setURL.append(setCode.substring(gap+1).trim().replaceAll(" ", ".")); // replace space with "."
+		StringBuilder newCode = new StringBuilder("s=");
+		newCode.append(name);
+
+		newCode.append(setCode.substring(gap+1).trim().replace(" ", ".")); // replace space with "."
+
+		try {
+			URI uri = new URI("http", "31.222.180.81:8880", file.toString(), newCode.toString(), null);
+			return uri;
+		} catch (URISyntaxException ex) {
+			Logger.getLogger(Set.class.getName()).log(Level.SEVERE, null, ex);
+			return null;
+		}
 		//System.out.println(setURL);
-		return setURL.toString();
 	}
-
 
 	// initialize set
 	public void init()
@@ -1406,12 +1432,12 @@ public class Set {
 
 		// weapon line
 		int nSlotWeapon = calWeaponSlot(mhagData);
-		String slots = Output.slotWord(mhag.getOutFormat(), nSlotWeapon);
+		String slotsName = Output.slotWord(mhag.getOutFormat(), nSlotWeapon);
 
 		String[] jewels = new String[3];
 		jewels = getJewelNameShort(mhagData, 5);
 
-		Output.weapon(mhag.getOutFormat(), outSave, slots, jewels);
+		Output.weapon(mhag.getOutFormat(), outSave, slotsName, jewels);
 
 		// armor lines
 		for(int i = 0; i < 5; i++)
@@ -1422,18 +1448,18 @@ public class Set {
 				Armor armor = mhagData.getArmor(i, armorID[i]);
 				title = armor.getArmorName();  //armor name
 				int nSlot = armor.getNumSlot();
-				slots = Output.slotWord(mhag.getOutFormat(), nSlot);
+				slotsName = Output.slotWord(mhag.getOutFormat(), nSlot);
 
 				jewels = getJewelNameShort(mhagData, i);
 			}
 			else
 			{
 				title = MhagData.emptyName;
-				slots = "";
+				slotsName = "";
 				Arrays.fill(jewels, "");
 			}
 			Output.armor(mhag.getOutFormat(), outSave, 
-				title, slots, jewels);
+				title, slotsName, jewels);
 		}
 
 		// charm line
@@ -1442,17 +1468,17 @@ public class Set {
 		if(inUse[6])
 		{
 			title = getCharmNameWithSkill(mhagData);
-			slots = Output.slotWord(mhag.getOutFormat(), numCharmSlot);
+			slotsName = Output.slotWord(mhag.getOutFormat(), numCharmSlot);
 			jewels = getJewelNameShort(mhagData, 6);
 		}
 		else
 		{
 			title = MhagData.emptyName;
-			slots = "";
+			slotsName = "";
 			Arrays.fill(jewels, "");
 		}
 		Output.charm(mhag.getOutFormat(), outSave,
-				title, slots, jewels);
+				title, slotsName, jewels);
 
 		// Part 2 : Table (defense, elements, skills)
 		// head line 2

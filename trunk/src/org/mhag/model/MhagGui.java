@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -42,22 +43,23 @@ public class MhagGui extends javax.swing.JFrame {
     public MhagGui() {
         initComponents();
 
-		String title =  "MHAG: Monster Hunter Armor Generator Ver 1.2 beta 2";
+		String title =  "MHAG: Monster Hunter Armor Generator Ver 1.2 beta 3";
 		if(mhag.getGame() == 0)
 			setTitle(title + " for Monster Hunter Tri");
 		else
 			setTitle(title + " for Monster Hunter Portable 3rd");
 
 		// align list
-		DefaultListCellRenderer renderer = (DefaultListCellRenderer)jListSkillList.getCellRenderer();
-		renderer.setHorizontalAlignment(JLabel.CENTER);
+		DefaultListCellRenderer rendererNew = (DefaultListCellRenderer)jListSkillList.getCellRenderer();
+		rendererNew.setHorizontalAlignment(JLabel.CENTER);
 
 		stream = new TextAreaPrintStream(jTextPreview, System.out);
 		streamView = new TextAreaPrintStream(jTextPreview2, System.out);
 		streamGen = new TextAreaPrintStream(jTextPreview3, System.out);
 
 		//disable for test
-		//jButtonMyCharms.setEnabled(false);
+		/*
+		jButtonMyCharms.setEnabled(false);
 		jButtonSettings.setEnabled(false);
 		jComboBoxOpt.setEnabled(false);
 		jRadioBlade.setEnabled(false);
@@ -66,6 +68,8 @@ public class MhagGui extends javax.swing.JFrame {
 		jCheckBoxHighRank.setEnabled(false);
 		jCheckBoxPiercing.setEnabled(false);
 		jCheckBoxCharm.setEnabled(false);
+		*/
+
     }
 
     /** This method is called from within the constructor to
@@ -136,12 +140,9 @@ public class MhagGui extends javax.swing.JFrame {
         skillPoint1 = new javax.swing.JComboBox();
         skillPoint2 = new javax.swing.JComboBox();
         output = new javax.swing.JPanel();
-        text = new javax.swing.JRadioButton();
-        html = new javax.swing.JRadioButton();
-        code = new javax.swing.JRadioButton();
-        saveOutput = new javax.swing.JButton();
-        jTextData = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        reset = new javax.swing.JButton();
+        langLabel = new javax.swing.JLabel();
+        langMenu = new javax.swing.JComboBox();
         jScrollPreview = new javax.swing.JScrollPane();
         jTextPreview = new javax.swing.JTextArea();
         setNamePanel = new javax.swing.JPanel();
@@ -216,7 +217,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jTabbedPane.setFont(new java.awt.Font("Monospaced", 1, 14));
+        jTabbedPane.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         jTabbedPane.setOpaque(true);
         jTabbedPane.setPreferredSize(new java.awt.Dimension(1238, 630));
 
@@ -298,7 +299,7 @@ public class MhagGui extends javax.swing.JFrame {
             hunterTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(hunterTypeLayout.createSequentialGroup()
                 .addComponent(blade)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(gunner))
         );
 
@@ -609,7 +610,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmSkill1.setFont(new java.awt.Font("Monospaced", 0, 12));
+        charmSkill1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmSkill1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSkill1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -796,54 +797,29 @@ public class MhagGui extends javax.swing.JFrame {
                     .addComponent(skillPoint1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(charmSkill2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(skillPoint2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(4, Short.MAX_VALUE))
         );
 
-        output.setBorder(javax.swing.BorderFactory.createTitledBorder("Output"));
+        output.setBorder(javax.swing.BorderFactory.createTitledBorder("Settings"));
 
-        outputGroup.add(text);
-        text.setFont(new java.awt.Font("Monospaced", 0, 12));
-        text.setSelected(true);
-        text.setText("TEXT");
-        text.addActionListener(new java.awt.event.ActionListener() {
+        reset.setFont(new java.awt.Font("Monospaced", 0, 12));
+        reset.setText("Reset");
+        reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textActionPerformed(evt);
+                resetActionPerformed(evt);
             }
         });
 
-        outputGroup.add(html);
-        html.setFont(new java.awt.Font("Monospaced", 0, 12));
-        html.setText("HTML");
-        html.addActionListener(new java.awt.event.ActionListener() {
+        langLabel.setFont(new java.awt.Font("Monospaced", 0, 12));
+        langLabel.setText("Menu Language");
+
+        langMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        langMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "English", "Japanese" }));
+        langMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                htmlActionPerformed(evt);
+                langMenuActionPerformed(evt);
             }
         });
-
-        outputGroup.add(code);
-        code.setFont(new java.awt.Font("Monospaced", 0, 12));
-        code.setText("Code");
-        code.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                codeActionPerformed(evt);
-            }
-        });
-
-        saveOutput.setFont(new java.awt.Font("Monospaced", 1, 12));
-        saveOutput.setText("Save");
-        saveOutput.setToolTipText("Append set to data file");
-        saveOutput.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saveOutputActionPerformed(evt);
-            }
-        });
-
-        jTextData.setFont(new java.awt.Font("Monospaced", 0, 12));
-        jTextData.setText("MyData");
-        jTextData.setToolTipText("Input your save data ");
-
-        jLabel1.setFont(new java.awt.Font("Monospaced", 0, 12));
-        jLabel1.setText("Data File");
 
         javax.swing.GroupLayout outputLayout = new javax.swing.GroupLayout(output);
         output.setLayout(outputLayout);
@@ -851,30 +827,21 @@ public class MhagGui extends javax.swing.JFrame {
             outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(outputLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(text)
+                .addComponent(reset, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(html)
+                .addComponent(langLabel)
                 .addGap(18, 18, 18)
-                .addComponent(code)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addGap(29, 29, 29)
-                .addComponent(jTextData, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(saveOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(langMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(225, Short.MAX_VALUE))
         );
         outputLayout.setVerticalGroup(
             outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, outputLayout.createSequentialGroup()
+            .addGroup(outputLayout.createSequentialGroup()
                 .addGroup(outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text)
-                    .addComponent(html)
-                    .addComponent(code)
-                    .addComponent(saveOutput)
-                    .addComponent(jTextData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(117, 117, 117))
+                    .addComponent(reset, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(langMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(langLabel))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jScrollPreview.setForeground(javax.swing.UIManager.getDefaults().getColor("Panel.background"));
@@ -916,10 +883,10 @@ public class MhagGui extends javax.swing.JFrame {
             .addGroup(setNamePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTextSetName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        buttonLink.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        buttonLink.setFont(new java.awt.Font("Monospaced", 0, 12));
         buttonLink.setText("Copy MHAG Online Link");
         buttonLink.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -927,7 +894,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        buttonGoto.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        buttonGoto.setFont(new java.awt.Font("Monospaced", 0, 12));
         buttonGoto.setText("Goto MHAG Online");
         buttonGoto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -935,7 +902,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        buttonSubmit.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        buttonSubmit.setFont(new java.awt.Font("Monospaced", 0, 12));
         buttonSubmit.setText("Submit to MHAG Online");
         buttonSubmit.setEnabled(false);
 
@@ -945,6 +912,16 @@ public class MhagGui extends javax.swing.JFrame {
             calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(calculatorLayout.createSequentialGroup()
                 .addGroup(calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(calculatorLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(setup, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE))
+                    .addGroup(calculatorLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(buttonLink, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(buttonGoto, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15)
+                        .addComponent(buttonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(calculatorLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addGroup(calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -956,17 +933,7 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(sex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(setNamePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(calculatorLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(setup, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE))
-                    .addGroup(calculatorLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(buttonLink, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(buttonGoto, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)
-                        .addComponent(buttonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(setNamePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPreview, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -978,13 +945,13 @@ public class MhagGui extends javax.swing.JFrame {
                         .addComponent(output, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(hunterType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(sex, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rank, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(sex, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                            .addComponent(rank, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                            .addComponent(hunterType, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
                             .addComponent(setNamePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(setup, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(setup, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(buttonLink, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(buttonGoto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1610,7 +1577,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jEditorAbout.setContentType("text/html");
         jEditorAbout.setEditable(false);
-        jEditorAbout.setText("<html>\n  <head>\n\n  </head>\n  <body>\n    <h2 align = \"center\">\n      MHAG :\n    </h2>\n  <h2 align = \"center\">\n       Monster Hunter Armor Generator\n    </h2>\n <p align = \"center\">v1.2 beta 2 </p>\n <p align = \"center\">Release Date: 09/04/2011</p>\n<p align = \"center\">MHAG Project: <a href=\"http://code.google.com/p/mhag/\">code.google.com/p/mhag</a></p>\n\n<p></p>\n<p align = \"center\">by Tifa@mh3</p>\n<p align = \"center\">Unity Member: <a href=\"http://www.capcom-unity.com/tifa@mh3\">www.capcom-unity.com/tifa@mh3</a></p>\n<p align = \"center\">Youtube Channel: <a href=\"http://www.youtube.com/mh3journey\">www.youtube.com/mh3journey</a></p>\n\n  </body>\n\n");
+        jEditorAbout.setText("<html>\n  <head>\n\n  </head>\n  <body>\n    <h2 align = \"center\">\n      MHAG :\n    </h2>\n  <h2 align = \"center\">\n       Monster Hunter Armor Generator\n    </h2>\n <p align = \"center\">v1.2 beta 3 </p>\n <p align = \"center\">Release Date: 09/10/2011</p>\n<p align = \"center\">MHAG Project: <a href=\"http://code.google.com/p/mhag/\">code.google.com/p/mhag</a></p>\n\n<p></p>\n<p align = \"center\">by Tifa@mh3</p>\n<p align = \"center\">Unity Member: <a href=\"http://www.capcom-unity.com/tifa@mh3\">www.capcom-unity.com/tifa@mh3</a></p>\n<p align = \"center\">Youtube Channel: <a href=\"http://www.youtube.com/mh3journey\">www.youtube.com/mh3journey</a></p>\n\n  </body>\n\n");
         jEditorAbout.setOpaque(false);
         jEditorAbout.addHyperlinkListener(new javax.swing.event.HyperlinkListener() {
             public void hyperlinkUpdate(javax.swing.event.HyperlinkEvent evt) {
@@ -1842,31 +1809,6 @@ public class MhagGui extends javax.swing.JFrame {
     private void charmSlot3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_charmSlot3ActionPerformed
 	    jewelSlotAction(6, 2);
     }//GEN-LAST:event_charmSlot3ActionPerformed
-
-    private void textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textActionPerformed
-	    saveOpt = 0;
-    }//GEN-LAST:event_textActionPerformed
-
-    private void htmlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_htmlActionPerformed
-	    saveOpt = 1;
-    }//GEN-LAST:event_htmlActionPerformed
-
-    private void codeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codeActionPerformed
-	    saveOpt = 2;
-}//GEN-LAST:event_codeActionPerformed
-
-    private void saveOutputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveOutputActionPerformed
-	    try {
-		    appendData();
-		    if(!fileNameData.equals(jTextData.getText())) //name changed,save pref
-		    {
-			    fileNameData = jTextData.getText();
-			    savePref();
-		    }
-	    } catch (FileNotFoundException ex) {
-		    Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
-	    }
-}//GEN-LAST:event_saveOutputActionPerformed
 
     private void codeBookLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codeBookLoadActionPerformed
 
@@ -2180,9 +2122,7 @@ public class MhagGui extends javax.swing.JFrame {
 	}//GEN-LAST:event_jComboBoxWeaponSlotsActionPerformed
 
 	private void jComboBoxOptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxOptActionPerformed
-		int ind = jComboBoxOpt.getSelectedIndex();
-		if(ind >= 0)
-			gen.setGenMode(ind);
+		searchOptAction();
 	}//GEN-LAST:event_jComboBoxOptActionPerformed
 
 	private void jButtonRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoveActionPerformed
@@ -2229,7 +2169,8 @@ public class MhagGui extends javax.swing.JFrame {
 	}//GEN-LAST:event_jButtonMyCharmsActionPerformed
 
 	private void buttonLinkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLinkActionPerformed
-		String url = set.getSetCodeURL(mhag);
+		URI uri = set.getSetCodeURI(mhag);
+		String url = uri.toASCIIString();
 		StringSelection data = new StringSelection(url);
 		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 		clipboard.setContents(data, data);
@@ -2237,16 +2178,59 @@ public class MhagGui extends javax.swing.JFrame {
 
 	private void buttonGotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGotoActionPerformed
 		try {
-			String url = set.getSetCodeURL(mhag);
 			Desktop desktop = Desktop.getDesktop();
-			URI uri = new URI(url);
-			desktop.browse(uri);
+			desktop.browse(set.getSetCodeURI(mhag));
 		} catch (IOException ex) {
-			//Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
-		} catch (URISyntaxException ex) {
 			//Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}//GEN-LAST:event_buttonGotoActionPerformed
+
+	private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
+    	initGUISet();
+	    jTextSetName.setText(Set.unNamedSet);
+	    initSetup(false, true, false);
+	}//GEN-LAST:event_resetActionPerformed
+
+	private void langMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_langMenuActionPerformed
+		language = langMenu.getSelectedIndex();
+	    changeLanguage(set.getFemale());
+	}//GEN-LAST:event_langMenuActionPerformed
+
+	// search option action (disable/enable button/menus)
+	private void searchOptAction()
+	{
+		int ind = jComboBoxOpt.getSelectedIndex();
+		if(ind < 0)return;
+		gen.setGenMode(ind);
+
+		if(ind == 0)
+		{
+			jRadioBlade.setEnabled(false);
+			jRadioGunner.setEnabled(false);
+			jCheckBoxLowRank.setEnabled(false);
+			jCheckBoxHighRank.setEnabled(false);
+			jCheckBoxPiercing.setEnabled(false);
+			jCheckBoxCharm.setEnabled(false);
+		}
+		else if (ind == 1)
+		{
+			jRadioBlade.setEnabled(false);
+			jRadioGunner.setEnabled(false);
+			jCheckBoxLowRank.setEnabled(true);
+			jCheckBoxHighRank.setEnabled(true);
+			jCheckBoxPiercing.setEnabled(true);
+			jCheckBoxCharm.setEnabled(true);
+		}
+		else
+		{
+			jRadioBlade.setEnabled(true);
+			jRadioGunner.setEnabled(true);
+			jCheckBoxLowRank.setEnabled(true);
+			jCheckBoxHighRank.setEnabled(true);
+			jCheckBoxPiercing.setEnabled(true);
+			jCheckBoxCharm.setEnabled(true);
+		}
+	}
 
 	// main search action
 	private void searchAction(int repeat) {
@@ -2339,16 +2323,20 @@ public class MhagGui extends javax.swing.JFrame {
 			loadToCalcGen.setEnabled(true);
 			jListOptSets.setEnabled(true);
 
+			searchOptAction();
+			jButtonMyCharms.setEnabled(true);
+			jButtonSettings.setEnabled(true);
+			jComboBoxOpt.setEnabled(true);
+
 			//disable for test
-			jButtonMyCharms.setEnabled(false);
-			jButtonSettings.setEnabled(false);
-			jComboBoxOpt.setEnabled(false);
+			/*
 			jRadioBlade.setEnabled(false);
 			jRadioGunner.setEnabled(false);
 			jCheckBoxLowRank.setEnabled(false);
 			jCheckBoxHighRank.setEnabled(false);
 			jCheckBoxPiercing.setEnabled(false);
 			jCheckBoxCharm.setEnabled(false);
+			 */
 		}
 
 	}
@@ -2481,6 +2469,7 @@ public class MhagGui extends javax.swing.JFrame {
 	    // start load
 	    jTextSetName.setText(aSet.getSetName());
 
+		/*
 	    if(aSet.getLowRank())
 	    {
 		    lowRank.setSelected(true);
@@ -2502,6 +2491,7 @@ public class MhagGui extends javax.swing.JFrame {
 		    blade.setSelected(false);
 		    gunner.setSelected(true);
 	    }
+		 */
 
 	    male.setSelected(true);
 	    female.setSelected(false);
@@ -2587,7 +2577,7 @@ public class MhagGui extends javax.swing.JFrame {
 
 	    //charm skill
 	    int nSkill = aSet.getNumCharmSkill();
-	    boolean lowRank = aSet.getLowRank();
+	    boolean lowRankNow = aSet.getLowRank();
 	    int maxPoint = 0;
 	    int skillID = 0;
 	    int skillID2 = 0;
@@ -2596,7 +2586,7 @@ public class MhagGui extends javax.swing.JFrame {
 	    {
 		    skillID = aSet.getCharmSkillID()[0];
 
-		    list2 = mhagData.getSkillList(lowRank, nCharmSlot);
+		    list2 = mhagData.getSkillList(lowRankNow, nCharmSlot);
 		    for (int j = 0; j < list2.length; j++)
 		    {
 			    if(list2[j] == skillID)
@@ -2608,7 +2598,7 @@ public class MhagGui extends javax.swing.JFrame {
 		    }
 
 		    Skill skill = mhagData.getSkill(skillID);
-		    maxPoint = skill.getMaxSkillPoint(lowRank, nCharmSlot);
+		    maxPoint = skill.getMaxSkillPoint(lowRankNow, nCharmSlot);
 		    point = aSet.getCharmSkillPoint()[0];
 		    skillPoint1.setSelectedIndex(maxPoint - point);
 		    charmPointAction(0);
@@ -2618,7 +2608,7 @@ public class MhagGui extends javax.swing.JFrame {
 	    {
 		    skillID2 = aSet.getCharmSkillID()[1];
 
-		    list2 = mhagData.getSkillList(lowRank, nCharmSlot, skillID, "Auto-Guard");
+		    list2 = mhagData.getSkillList(lowRankNow, nCharmSlot, skillID, "Auto-Guard");
 		    for (int j = 0; j < list2.length; j++)
 		    {
 			    if(list2[j] == skillID2)
@@ -2630,7 +2620,7 @@ public class MhagGui extends javax.swing.JFrame {
 		    }
 
 		    Skill skill = mhagData.getSkill(skillID2);
-		    maxPoint = skill.getMaxSkillPoint(lowRank, nCharmSlot);
+		    maxPoint = skill.getMaxSkillPoint(lowRankNow, nCharmSlot);
 		    point = aSet.getCharmSkillPoint()[1];
 		    skillPoint2.setSelectedIndex(maxPoint - point);
 		    charmPointAction(1);
@@ -2641,6 +2631,7 @@ public class MhagGui extends javax.swing.JFrame {
 
     }
 
+	/*
     private void appendData() throws FileNotFoundException
     {
 	    calSetGUI();
@@ -2680,6 +2671,7 @@ public class MhagGui extends javax.swing.JFrame {
 	    saveStream.close();
 
     }
+	 */
 
     private void weaponMenuAction()
     {
@@ -2782,7 +2774,7 @@ public class MhagGui extends javax.swing.JFrame {
 	   set.setCharmSkillPoint(1, 0);
 
 	   int bodyPart = 6;
-	   boolean lowRank = set.getLowRank();
+	   boolean lowRankNow = set.getLowRank();
 	   if(nSlot > 0)
 		   set.setInUse(bodyPart, true);
 
@@ -2798,10 +2790,10 @@ public class MhagGui extends javax.swing.JFrame {
 		   changeJewelSlot(bodyPart, i, set.getLowRank(), 0, false);
 	   }
 
-	   changeCharmSkill(0, lowRank, nSlot, true);
-	   changeCharmPoint(0, lowRank, nSlot, -1, true);
-	   changeCharmSkill(1, lowRank, nSlot, false);
-	   changeCharmPoint(1, lowRank, nSlot, -1, false);
+	   changeCharmSkill(0, lowRankNow, nSlot, true);
+	   changeCharmPoint(0, lowRankNow, nSlot, -1, true);
+	   changeCharmSkill(1, lowRankNow, nSlot, false);
+	   changeCharmPoint(1, lowRankNow, nSlot, -1, false);
 
 	   calSetGUI();
     }
@@ -2809,7 +2801,7 @@ public class MhagGui extends javax.swing.JFrame {
     private void charmSkillAction(int slotInd)
     {
 	    if(adjust)return;
-	    boolean lowRank = set.getLowRank();
+	    boolean lowRankNow = set.getLowRank();
 	    int nSlot = set.getNumCharmSlot();
 	    if(slotInd == 0)
 	    {
@@ -2817,20 +2809,20 @@ public class MhagGui extends javax.swing.JFrame {
 		   int ind = charmSkill1.getSelectedIndex();
 		   if(ind <= 0)
 		   {
-			   changeCharmPoint(0, lowRank, nSlot, -1, true);
-			   changeCharmSkill(1, lowRank, nSlot, false);
-			   changeCharmPoint(1, lowRank, nSlot, -1, false);
+			   changeCharmPoint(0, lowRankNow, nSlot, -1, true);
+			   changeCharmSkill(1, lowRankNow, nSlot, false);
+			   changeCharmPoint(1, lowRankNow, nSlot, -1, false);
 			   calSetGUI();
 			   return;
 		   }
 
-		   int[] list = mhagData.getSkillList(lowRank, nSlot);
+		   int[] list = mhagData.getSkillList(lowRankNow, nSlot);
 		   set.setCharmSkillID(0,list[ind-1]);
 		   set.setNumCharmSkill(0);   //no charm skill determined
 
-		   changeCharmPoint(0, lowRank, nSlot, set.getCharmSkillID()[0], true);
-		   changeCharmSkill(1, lowRank, nSlot, false);
-		   changeCharmPoint(1, lowRank, nSlot, -1, false);
+		   changeCharmPoint(0, lowRankNow, nSlot, set.getCharmSkillID()[0], true);
+		   changeCharmSkill(1, lowRankNow, nSlot, false);
+		   changeCharmPoint(1, lowRankNow, nSlot, -1, false);
 	    }
 	    else
 	    {
@@ -2838,16 +2830,16 @@ public class MhagGui extends javax.swing.JFrame {
 		   int ind = charmSkill2.getSelectedIndex();
 		   if(ind <= 0)
 		   {
-			   changeCharmPoint(1, lowRank, nSlot, -1, true);
+			   changeCharmPoint(1, lowRankNow, nSlot, -1, true);
 			   calSetGUI();
 			   return;
 		   }
 
-		   int[] list = mhagData.getSkillList(lowRank, nSlot, set.getCharmSkillID()[0], "Auto-Guard");
+		   int[] list = mhagData.getSkillList(lowRankNow, nSlot, set.getCharmSkillID()[0], "Auto-Guard");
 		   set.setCharmSkillID(1,list[ind-1]);
 		   set.setNumCharmSkill(1);  // only the 1st charm skill determined
 
-		   changeCharmPoint(1, lowRank, nSlot, set.getCharmSkillID()[1], true);
+		   changeCharmPoint(1, lowRankNow, nSlot, set.getCharmSkillID()[1], true);
 
 	    }
 	    calSetGUI();
@@ -2856,7 +2848,7 @@ public class MhagGui extends javax.swing.JFrame {
     private void charmPointAction(int slotInd)
     {
 	    if(adjust)return;
-	    boolean lowRank = set.getLowRank();
+	    boolean lowRankNow = set.getLowRank();
 	    int nSlot = set.getNumCharmSlot();
 	    if(slotInd == 0)
 	    {
@@ -2866,32 +2858,37 @@ public class MhagGui extends javax.swing.JFrame {
 		   if((ind < 0) || (skillID < 0))
 		   {
 			   set.setNumCharmSkill(0);
-			   changeCharmPoint(0, lowRank, nSlot, -1, true);
-			   changeCharmSkill(1, lowRank, nSlot, false);
-			   changeCharmPoint(1, lowRank, nSlot, -1, false);
+			   changeCharmPoint(0, lowRankNow, nSlot, -1, true);
+			   changeCharmSkill(1, lowRankNow, nSlot, false);
+			   changeCharmPoint(1, lowRankNow, nSlot, -1, false);
 			   return;
 		   }
 
 		   Skill skill = mhagData.getSkill(skillID);
 
-		   int maxPoint = skill.getMaxSkillPoint(lowRank, nSlot);
+		   int maxPoint = skill.getMaxSkillPoint(lowRankNow, nSlot);
 		   set.setCharmSkillPoint(0,maxPoint - ind);
 
 		   if(skill.getSkillName().equals("Auto-Guard"))
+		   {
 			   set.setCharmSkillPoint(0,10);
-
-		   if(set.getCharmSkillPoint()[0] != 0)
+			   set.setInUse(6, true);
+			   set.setNumCharmSkill(1);
+			   changeCharmSkill(1, lowRankNow, nSlot, false);
+			   changeCharmPoint(1, lowRankNow, nSlot, -1, false);
+		   }
+		   else if(set.getCharmSkillPoint()[0] != 0)
 		   {
 			   set.setInUse(6, true);
 			   set.setNumCharmSkill(1);
-			   changeCharmSkill(1, lowRank, nSlot, true);
-			   changeCharmPoint(1, lowRank, nSlot, -1, true);
+			   changeCharmSkill(1, lowRankNow, nSlot, true);
+			   changeCharmPoint(1, lowRankNow, nSlot, -1, true);
 		   }
 		   else
 		   {
 			   set.setNumCharmSkill(0);
-			   changeCharmSkill(1, lowRank, nSlot, false);
-			   changeCharmPoint(1, lowRank, nSlot, -1, false);
+			   changeCharmSkill(1, lowRankNow, nSlot, false);
+			   changeCharmPoint(1, lowRankNow, nSlot, -1, false);
 		   }
 
 	    }
@@ -2904,12 +2901,12 @@ public class MhagGui extends javax.swing.JFrame {
 		   if((ind < 0) || (skillID < 0))
 		   {
 			   set.setNumCharmSkill(0);
-			   changeCharmPoint(1, lowRank, nSlot, -1, true);
+			   changeCharmPoint(1, lowRankNow, nSlot, -1, true);
 			   return;
 		   }
 
 		   Skill skill = mhagData.getSkill(skillID);
-		   int maxPoint = skill.getMaxSkillPoint(lowRank, nSlot);
+		   int maxPoint = skill.getMaxSkillPoint(lowRankNow, nSlot);
 
 		   set.setCharmSkillPoint(1,maxPoint - ind);
 		   if(set.getCharmSkillPoint()[1] != 0)
@@ -2999,7 +2996,10 @@ public class MhagGui extends javax.swing.JFrame {
 	    for(int i = 0; i < idList.length; i++)
 	    {
 			Skill skill = mhagData.getSkill(idList[i]);
-			skillTree.addItem(skill.getSkillName());
+			if(language == 0)
+				skillTree.addItem(skill.getSkillName());
+			else
+				skillTree.addItem(skill.getSkillNameJP());
 	    }
 		skillTree.setSelectedIndex(0);
 
@@ -3022,7 +3022,10 @@ public class MhagGui extends javax.swing.JFrame {
 			for(int i = 0; i < effectList.length; i++)
 			{
 				Effect effect = mhagData.getEffect(effectList[i]);
-				skillName.addItem(effect.getEffectName());
+				if(language == 0)
+					skillName.addItem(effect.getEffectName());
+				else
+					skillName.addItem(effect.getEffectNameJP());
 			}
 		}
 		skillName.setSelectedIndex(0);
@@ -3034,7 +3037,7 @@ public class MhagGui extends javax.swing.JFrame {
 	{
 		int indName = skillName.getSelectedIndex();
 		if(indName <= 0)return;  // no effect selected
-		String name = skillName.getSelectedItem().toString();
+		//String name = skillName.getSelectedItem().toString();
 
 		int num = gen.getNumEffectOpt();
 		if(num >= 10)return;  // maximum 10 effects
@@ -3055,6 +3058,8 @@ public class MhagGui extends javax.swing.JFrame {
 		}
 
 		// add effect to the list
+		Skill skill = mhagData.getSkill(skillID);
+		String name = skill.getSkillName(); //always english
 		listModelSkill.removeElementAt(num);
 		listModelSkill.insertElementAt(name + ",", num);
 		jListSkillList.setSelectedIndex(num);
@@ -3428,7 +3433,7 @@ public class MhagGui extends javax.swing.JFrame {
 
 	    int[] ind = mhagData.getArmorList(lowRank, blade, female, bodyPart);
 	    int num = ind.length;
-	    String[] name = mhagData.getArmorListMenu(bodyPart, female, num, ind);
+	    String[] name = mhagData.getArmorListMenu(bodyPart, female, num, ind, language);
 
 	    ArrayList<String> toolTips = new ArrayList<String>();
 
@@ -3441,7 +3446,7 @@ public class MhagGui extends javax.swing.JFrame {
 	    {
 		    bodyMenu.addItem(name[i]);
 		    Armor armor = mhagData.getArmor(bodyPart, ind[i]);
-		    toolTips.add(armor.getToolTips());
+		    toolTips.add(armor.getToolTips(mhagData, language));
 	    }
 
 	    rendererArmor[bodyPart].setTooltips(toolTips);
@@ -3475,8 +3480,8 @@ public class MhagGui extends javax.swing.JFrame {
 	    for(int i = 1; i < num; i++)
 	    {
  		    Jewel jewel = mhagData.getJewel(ind[i]);
-		    jewelSlot.addItem(jewel.getJewelNameSkill());
-		    toolTips.add(jewel.getJewelToolTips());
+		    jewelSlot.addItem(jewel.getJewelNameSkill(mhagData, language));
+		    toolTips.add(jewel.getJewelToolTips(language));
 	    }
 	    renderer[bodyPart][slotInd].setTooltips(toolTips);
 	    jewelSlot.setVisible(true);
@@ -3502,6 +3507,11 @@ public class MhagGui extends javax.swing.JFrame {
 	    }
 
 	    jewelMenuType[bodyPart][slotInd] = nSlot;
+    }
+
+	// adjust jewel slot menu items (selected index is not changed)
+    public void AdjustJewelSlot(int bodyPart, int slotInd)
+    {
     }
 
     public void changeCharmSkill(int skillNo, boolean lowRank, int nSlot, boolean active)
@@ -3535,7 +3545,10 @@ public class MhagGui extends javax.swing.JFrame {
 		for(int i = 0; i < num; i++)
 		{
 			Skill skill = mhagData.getSkill(ind[i]);
-			skillSlot.addItem(skill.getSkillName());
+			if(language == 0)
+				skillSlot.addItem(skill.getSkillName());
+			else
+				skillSlot.addItem(skill.getSkillNameJP());
 		}
 		skillSlot.setSelectedIndex(0);
 
@@ -3624,6 +3637,8 @@ public class MhagGui extends javax.swing.JFrame {
 
     public void initSetup(boolean lowRank, boolean blade, boolean female)
     {
+		boolean showPreviewKeep = showPreview;
+		showPreview = false;
 	    for(int i = 0; i < 5; i++)
 		    changeArmorMenu(i, lowRank, blade, female, true);
 
@@ -3641,6 +3656,10 @@ public class MhagGui extends javax.swing.JFrame {
 	    changeCharmSkill(0, lowRank, 0 , true);
 	    changeCharmSkill(1, lowRank, 0 , false);
 
+		showPreview = true;
+		calSetGUI();
+		showPreview = showPreviewKeep;
+
     }
 
     public void changeGender(boolean lowRank, boolean blade, boolean female)
@@ -3655,7 +3674,7 @@ public class MhagGui extends javax.swing.JFrame {
 
 		    int[] ind = mhagData.getArmorList(lowRank, blade, female, i);
 		    int num = ind.length;
-		    String[] name = mhagData.getArmorListMenu(i, female, num, ind);
+		    String[] name = mhagData.getArmorListMenu(i, female, num, ind, language);
 
 		    ArrayList<String> toolTips = new ArrayList<String>();
 
@@ -3670,12 +3689,35 @@ public class MhagGui extends javax.swing.JFrame {
 				    bodyMenu.setSelectedIndex(j);
 			    }
 			    Armor armor = mhagData.getArmor(i, ind[j]);
-			    toolTips.add(armor.getToolTips());
+			    toolTips.add(armor.getToolTips(mhagData, language));
 		    }
 		    rendererArmor[i].setTooltips(toolTips);
 	    }
 	    adjust = false;
 
+    }
+
+    public void changeLanguage(boolean ifFemale)
+    {
+		String setCode = set.getSetCode();
+	    loadSet2Calc(setCode);
+		female.setSelected(false);
+		set.setFemale(false);
+
+		if(ifFemale)
+		{
+			female.setSelected(true);
+			set.setFemale(true);
+			changeGender(set.getLowRank(), set.getBlade(), set.getFemale());
+		}
+
+		// generator panel
+	    int skillTreeInd = skillTree.getSelectedIndex();
+		int skillNameInd = skillName.getSelectedIndex();
+		skillTypeAction();
+		skillTree.setSelectedIndex(skillTreeInd);
+		skillTreeAction();
+		skillName.setSelectedIndex(skillNameInd);
     }
 
     public void calSetGUI()
@@ -3705,14 +3747,14 @@ public class MhagGui extends javax.swing.JFrame {
 		Scanner filein = new Scanner(new File(fileNamePref));
 
 		int count = 0;
-		while (filein.hasNext() && (count < 2))
+		while (filein.hasNext() && (count < 1))
 		{
-			if(count == 0)
-			{
-				fileNameData = filein.nextLine();
-				jTextData.setText(fileNameData);
-			}
-			else
+  			if(count == 0)
+//			{
+//				fileNameData = filein.nextLine();
+//				jTextData.setText(fileNameData);
+//			}
+//			else
 			{
 				fileNameCodeBook = filein.nextLine();
 				codeBookName.setText(fileNameCodeBook);
@@ -3731,7 +3773,7 @@ public class MhagGui extends javax.swing.JFrame {
     public void savePref() throws FileNotFoundException
     {
 	    PrintStream fileout = new PrintStream(new File(fileNamePref));
-	    fileout.println(fileNameData);
+//	    fileout.println(fileNameData);
 	    fileout.println(fileNameCodeBook);
 	    fileout.close();
     }
@@ -3828,6 +3870,9 @@ public class MhagGui extends javax.swing.JFrame {
 		mhagGui.initSetup(false, true, false); // by default
 		mhagGui.initGen();
 
+		if(mhagGui.mhag.getGame() == 0)
+			mhagGui.langMenu.setEnabled(false);
+
 		//mhagGui.charmDialog = new CharmDialog(new javax.swing.JFrame(), true, mhagGui.getMhagData());
 
 		//mhagGui.jTextUsage.setCaretPosition(0);
@@ -3855,6 +3900,7 @@ public class MhagGui extends javax.swing.JFrame {
 	private MhagData mhagData = new MhagData();
 	private Generator gen = new Generator();
 	private CharmDialog charmDialog;
+	private int language = 0;   //0: english, 1: japanese
 
 	//dialog setting
 	private boolean ifCharm = false;
@@ -3883,7 +3929,7 @@ public class MhagGui extends javax.swing.JFrame {
 
 	// save code book/outputs data file names
 	private final String fileNamePref = "pref";
-	private String fileNameData = "MyData";
+//	private String fileNameData = "MyData";
 	private String fileNameCodeBook = "MyData";
 
 	//help list
@@ -3933,7 +3979,6 @@ public class MhagGui extends javax.swing.JFrame {
     private javax.swing.JComboBox chestSlot1;
     private javax.swing.JComboBox chestSlot2;
     private javax.swing.JComboBox chestSlot3;
-    private javax.swing.JRadioButton code;
     private javax.swing.JPanel codeBook;
     private javax.swing.JButton codeBookLoad;
     private javax.swing.JTextField codeBookName;
@@ -3953,7 +3998,6 @@ public class MhagGui extends javax.swing.JFrame {
     private javax.swing.JComboBox headSlot2;
     private javax.swing.JComboBox headSlot3;
     private javax.swing.JRadioButton highRank;
-    private javax.swing.JRadioButton html;
     private javax.swing.JPanel hunterType;
     private javax.swing.ButtonGroup hunterTypeGen;
     private javax.swing.ButtonGroup hunterTypeGroup;
@@ -3973,7 +4017,6 @@ public class MhagGui extends javax.swing.JFrame {
     private javax.swing.JComboBox jComboBoxOpt;
     private javax.swing.JComboBox jComboBoxWeaponSlots;
     private javax.swing.JEditorPane jEditorAbout;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelSkillName;
     private javax.swing.JLabel jLabelSkillTree;
     private javax.swing.JLabel jLabelSkillType;
@@ -3991,13 +4034,14 @@ public class MhagGui extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPreview3;
     private javax.swing.JScrollPane jScrollSkillList;
     private javax.swing.JTabbedPane jTabbedPane;
-    private javax.swing.JTextField jTextData;
     private javax.swing.JTextArea jTextPreview;
     private javax.swing.JTextArea jTextPreview2;
     private javax.swing.JTextArea jTextPreview3;
     private javax.swing.JTextField jTextSetName;
     private javax.swing.JLabel labelLogo;
     private javax.swing.JLabel labelPic;
+    private javax.swing.JLabel langLabel;
+    private javax.swing.JComboBox langMenu;
     private javax.swing.JComboBox legSlot1;
     private javax.swing.JComboBox legSlot2;
     private javax.swing.JComboBox legSlot3;
@@ -4013,7 +4057,7 @@ public class MhagGui extends javax.swing.JFrame {
     private javax.swing.ButtonGroup outputGroup;
     private javax.swing.JPanel rank;
     private javax.swing.ButtonGroup rankGroup;
-    private javax.swing.JButton saveOutput;
+    private javax.swing.JButton reset;
     private javax.swing.JPanel setNamePanel;
     private javax.swing.JPanel setup;
     private javax.swing.JPanel sex;
@@ -4024,7 +4068,6 @@ public class MhagGui extends javax.swing.JFrame {
     private javax.swing.JComboBox skillTree;
     private javax.swing.JComboBox skillType;
     private javax.swing.JPanel skillsPanel;
-    private javax.swing.JRadioButton text;
     private javax.swing.JButton undoInteract;
     private javax.swing.JPanel viewer;
     private javax.swing.JLabel waistLabel;
