@@ -23,9 +23,15 @@ MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is d
      I will also make source code packages for stable versions. (v1.0, v2.0)
 
 History:
+v.1.2 beta 3 09/10/2011:
+   1. add set name information in url link for MHAG Online, support special characters
+   2. add japanese data
+   3. remove output feature from the calculator
+   4. new feature: reset button 
+   5. new feature: english/japanese switch (menu only, mhp3rd only)
 v.1.2 beta 2 09/04/2011:
    1. new feature: add myCharm dialog (charm manager)
-   2. change mhag to support both tri/p3rd in the same package.
+   2. change mhag to support both tri/p3rd in the same package. (source code)
    3. new feature : generate url link for set code
    4. bug: if set name contains ":", switch it to ".". (for url/set code)
 v.1.2 beta 1 08/31/2011:

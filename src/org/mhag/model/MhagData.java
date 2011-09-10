@@ -96,8 +96,13 @@ public class MhagData {
 			if(line.startsWith("#"))continue;
 			// System.out.printf("%d\n", skillIndex);
 			// System.out.println(line);
-			ioErr = Skill.setSkillFromLine
-				(line, skillList[skillIndex]);
+			if(mhag.getGame() == 0) //MHAG
+				ioErr = Skill.setSkillFromLine
+					(line, skillList[skillIndex]);
+			else
+				ioErr = Skill.setSkillFromLineJP
+					(line, skillList[skillIndex]);
+
 			if(ioErr != 0)
 			{
 				MhagUtil.logLine(mhag,
@@ -294,9 +299,13 @@ public class MhagData {
 			line = in2.nextLine();
 			if(line.startsWith("#"))continue;
 			// System.out.printf("%d\n", jewelIndex);
-			// System.out.println(line);
-			ioErr = Jewel.setJewelFromLine
-				(line, jewelList[jewelIndex]);
+			//System.out.println(line);
+			if(mhag.getGame() == 0)
+				ioErr = Jewel.setJewelFromLine
+					(line, jewelList[jewelIndex]);
+			else
+				ioErr = Jewel.setJewelFromLineJP
+					(line, jewelList[jewelIndex]);
 			if(ioErr != 0)
 			{
 				MhagUtil.logLine(mhag,
@@ -329,7 +338,11 @@ public class MhagData {
 		{
 			line = in.nextLine();
 			if(line.startsWith("#"))continue;
-			String word = Armor.getBodyPartFromLine(line);
+			String word = "";
+			if(mhag.getGame() == 0)
+				word = Armor.getBodyPartFromLine(line);
+			else
+				word = Armor.getBodyPartFromLineJP(line);
 			nBodyPart = Armor.convertBodyPart(word);
 			nMax[nBodyPart] += 1;
 		}
@@ -371,11 +384,20 @@ public class MhagData {
 			// System.out.println(Arrays.toString(armorIndex));
 			// System.out.println(line);
 
-			String word = Armor.getBodyPartFromLine(line);
+			String word = "";
+			if(mhag.getGame() == 0)
+				word = Armor.getBodyPartFromLine(line);
+			else
+				word = Armor.getBodyPartFromLineJP(line);
 			nBodyPart = Armor.convertBodyPart(word);
 
-			ioErr = Armor.setArmorFromLine(line, nBodyPart,
-				armorList[nBodyPart][armorIndex[nBodyPart]]);
+			if(mhag.getGame() == 0)
+				ioErr = Armor.setArmorFromLine(line, nBodyPart,
+					armorList[nBodyPart][armorIndex[nBodyPart]]);
+			else
+				ioErr = Armor.setArmorFromLineJP(line, nBodyPart,
+					armorList[nBodyPart][armorIndex[nBodyPart]]);
+
 			if(ioErr != 0)
 			{
 				MhagUtil.logLine(mhag,
@@ -630,10 +652,10 @@ public class MhagData {
 
 				// add set
 
-				StringBuffer code = new StringBuffer("");
+				StringBuilder code = new StringBuilder("");
 				String setName = armor.getSetName();
 
-				code.append(setName + " :");
+				code.append(setName).append(" :");
 
 				if(armor.getDefenseLowRank() == 0) // high rank
 				{
@@ -670,12 +692,12 @@ public class MhagData {
 				{
 					if(armorID[k] == -1)continue;
 					checked[k][armorID[k]] = true;
-					code.append(" "+Armor.partFull.charAt(k));
-					code.append(" "+String.valueOf(armorID[k]));
+					code.append(" ").append(Armor.partFull.charAt(k));
+					code.append(" ").append(String.valueOf(armorID[k]));
 					code.append(" 0");
 				}
 
-				codeBook[num] = new String(code.toString());
+				codeBook[num] = code.toString();
 
 				//System.out.println(code.toString());
 				num++;
@@ -853,13 +875,13 @@ public class MhagData {
 
 			int pos = armorName.indexOf("/");
 			if(pos == - 1)
-				nameStr[i] = new String(armorName);
+				nameStr[i] = armorName;
 			else
 			{
 				if(female)
-					nameStr[i] = new String(armorName.substring(pos+1).trim());
+					nameStr[i] = armorName.substring(pos + 1).trim();
 				else
-					nameStr[i] = new String(armorName.substring(0,pos).trim());
+					nameStr[i] = armorName.substring(0, pos).trim();
 			}
 		}
 		return nameStr;
@@ -867,23 +889,27 @@ public class MhagData {
 
 //	generate menu list
 	public String[] getArmorListMenu(int bodyPart, boolean female,
-		int num, int[] index)
+		int num, int[] index, int language)
 	{
 		String[] nameStr = new String[num];
-		nameStr[0] = new String("---");
+		nameStr[0] = "---";
 		for(int i = 1; i < num ; i++)  //first 1 is null;
 		{
-			String armorName  = armorList[bodyPart][index[i]].getArmorName();
+			String armorName  = "";
+			if(language == 0) // english
+				armorName = armorList[bodyPart][index[i]].getArmorName();
+			else
+				armorName = armorList[bodyPart][index[i]].getArmorNameJP();
 
 			int pos = armorName.indexOf("/");
 			if(pos == - 1)
-				nameStr[i] = new String(armorName);
+				nameStr[i] = armorName;
 			else
 			{
 				if(female)
-					nameStr[i] = new String(armorName.substring(pos+1).trim());
+					nameStr[i] = armorName.substring(pos + 1).trim();
 				else
-					nameStr[i] = new String(armorName.substring(0,pos).trim());
+					nameStr[i] = armorName.substring(0, pos).trim();
 			}
 		}
 		return nameStr;
@@ -903,7 +929,7 @@ public class MhagData {
 
 			index[num] = i;
 			//nameStr[num] = jewel.getJewelNameShort();
-			nameStr[num] = jewel.getJewelNameSkill();
+			nameStr[num] = jewel.getJewelNameSkill(this, 0);  //sorted by english name
 			num++;
 		}
 

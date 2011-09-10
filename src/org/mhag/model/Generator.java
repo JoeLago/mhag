@@ -917,6 +917,11 @@ public class Generator {
 
 	}
 
+	public int[] getArmorList(int bodyPart)
+	{
+		return null;
+	}
+
 	public Mhag getMhag() {return mhag;}
 	public MhagData getMhagData() {return mhagData;}
 	public void setMhag(Mhag aMhag) {mhag = aMhag;}
