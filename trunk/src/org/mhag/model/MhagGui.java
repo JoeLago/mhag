@@ -1823,8 +1823,18 @@ public class MhagGui extends javax.swing.JFrame {
 		} catch (FileNotFoundException ex) {
 			String message = String.format("Code File %s doesnot exist!\n",codeFile);
 			jTextPreview2.append(message);
-			message = String.format("create a new Code Book %s, or choose another Code File\n",codeFile);
+			message = String.format("A new Code Book has been created\n");
 			jTextPreview2.append(message);
+			listModel.clear();
+			codeList.setModel(listModel);
+			codeBookInUse = true;
+			if(!fileNameCodeBook.equals(codeBookName.getText())) //name changed,save pref
+				try {
+					fileNameCodeBook = codeBookName.getText();
+				savePref();
+			} catch (FileNotFoundException ex2) {
+				Logger.getLogger(MhagGui.class.getName()).log(Level.SEVERE, null, ex2);
+			}
 			return;
 		}
 
