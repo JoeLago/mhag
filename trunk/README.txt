@@ -1,5 +1,5 @@
 MHAG: Monster Hunter Armor Generator 
-v.1.2 beta 1
+v.1.2 beta 4
 Author : Tifa@mh3
 MHAG Project: code.google.com/mhag
 
@@ -23,12 +23,14 @@ MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is d
      I will also make source code packages for stable versions. (v1.0, v2.0)
 
 History:
+v.1.2 beta 4 09/12/2011:
+   1. bug: japanese language support. Finally, it works in windows.
 v.1.2 beta 3 09/10/2011:
    1. add set name information in url link for MHAG Online, support special characters
    2. add japanese data
    3. remove output feature from the calculator
    4. new feature: reset button 
-   5. new feature: english/japanese switch (menu only, mhp3rd only)
+   5. new feature: english/japanese switch (menu only, mhp3rd only)  (currently only work under linux)
    6. new feature: in viewer panel, if the code book doesn't exist, MHAG automatically creates one.
    7. bug: after load a "auto-guard" set, one can input the 2nd skill in the calculator. fixed
 v.1.2 beta 2 09/04/2011:

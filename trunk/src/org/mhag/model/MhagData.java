@@ -62,7 +62,7 @@ public class MhagData {
 		else
 			file = dirDataP3rd + fileSkill;
 
-		Scanner in = new Scanner(getClass().getResourceAsStream(file));
+		Scanner in = new Scanner(getClass().getResourceAsStream(file), "UTF-8");
 
 		// check total # of skills
 		int nMax = 0;
@@ -85,7 +85,7 @@ public class MhagData {
 			skillList[i] = new Skill();
 
 		}
-		Scanner in2 = new Scanner(getClass().getResourceAsStream(file));
+		Scanner in2 = new Scanner(getClass().getResourceAsStream(file), "UTF-8");
 
 		// read skill entry
 		int ioErr = 0;
@@ -266,7 +266,7 @@ public class MhagData {
 		else
 			file = dirDataP3rd + fileJewel;
 
-		Scanner in = new Scanner(getClass().getResourceAsStream(file));
+		Scanner in = new Scanner(getClass().getResourceAsStream(file), "UTF-8");
 
 		// check total # of skills
 		int nMax = 0;
@@ -289,7 +289,7 @@ public class MhagData {
 			jewelList[i] = new Jewel();
 
 		}
-		Scanner in2 = new Scanner(getClass().getResourceAsStream(file));
+		Scanner in2 = new Scanner(getClass().getResourceAsStream(file), "UTF-8");
 
 		// read Jewel entry
 		int ioErr = 0;
@@ -326,7 +326,7 @@ public class MhagData {
 		else
 			file = dirDataP3rd + fileArmor;
 
-		Scanner in = new Scanner(getClass().getResourceAsStream(file));
+		Scanner in = new Scanner(getClass().getResourceAsStream(file), "UTF-8");
 
 		// check total # of skills
 		int nMax[] = new int[5];
@@ -371,7 +371,7 @@ public class MhagData {
 			}
 		}
 
-		Scanner in2 = new Scanner(getClass().getResourceAsStream(file));
+		Scanner in2 = new Scanner(getClass().getResourceAsStream(file), "UTF-8");
 		// read Armor entry
 		int ioErr = 0;
 		int[] armorIndex = new int[5];
