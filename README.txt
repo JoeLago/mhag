@@ -1,5 +1,5 @@
 MHAG: Monster Hunter Armor Generator 
-v.1.2 beta 4
+v.1.2 beta 5
 Author : Tifa@mh3
 MHAG Project: code.google.com/mhag
 
@@ -23,6 +23,9 @@ MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is d
      I will also make source code packages for stable versions. (v1.0, v2.0)
 
 History:
+v.1.2 beta 5 09/19/2011:
+   1. bug: set url link for special characters
+   2. bug: menu selection for "yukumu armor pieces" (armor pieces #1)
 v.1.2 beta 4 09/12/2011:
    1. bug: japanese language support. Finally, it works in windows.
 v.1.2 beta 3 09/10/2011:

@@ -2747,7 +2747,7 @@ public class MhagGui extends javax.swing.JFrame {
 		   int[] list = mhagData.getArmorList(set.getLowRank(),
 			   set.getBlade(), set.getFemale(), bodyPart);
 		   int armorID = list[ind];
-		   if(!set.getInUse(bodyPart)&&(armorID == set.getArmorID()[bodyPart]))return; //no change, no reset
+		   if(set.getInUse(bodyPart)&&(armorID == set.getArmorID()[bodyPart]))return; //no change, no reset
 
 		   // set armor id
 		   set.setInUse(bodyPart, true);

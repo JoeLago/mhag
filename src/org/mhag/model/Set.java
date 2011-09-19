@@ -541,18 +541,8 @@ public class Set {
 	{
 
 		String setCode = getSetCode();
-
-		//  process set name
 		int gap = setCode.indexOf(":");   //delete set name
 		String name = setCode.substring(0, gap+2);
-		name = name.replace("+", "%2B");
-		name = name.replace("$", "%24");
-		name = name.replace("&", "%26");
-		name = name.replace("[", "%5B");
-		name = name.replace("]", "%5D");
-		name = name.replace("<", "%3C");
-		name = name.replace(">", "%3E");
-		name = name.replace("=", "%3D");
 
 		StringBuilder file = new StringBuilder("/mhag-");
 		if(mhag.getGame() == 0)
@@ -568,12 +558,28 @@ public class Set {
 
 		try {
 			URI uri = new URI("http", "31.222.180.81:8880", file.toString(), newCode.toString(), null);
-			return uri;
+			String temp = uri.toString();
+
+			//  process set name
+			int pos1 = temp.indexOf("=") + 1;   // first set name position
+			int pos2 = temp.indexOf(":", pos1) - 1 ;   // last set name position
+			name = temp.substring(pos1, pos2);
+
+			// special letters
+			name = name.replace("+", "%2B");
+			name = name.replace("$", "%24");
+			name = name.replace("&", "%26");
+			name = name.replace("[", "%5B");
+			name = name.replace("]", "%5D");
+			name = name.replace("<", "%3C");
+			name = name.replace(">", "%3E");
+			name = name.replace("=", "%3D");
+
+			return new URI(temp.substring(0, pos1)+name+temp.substring(pos2));
 		} catch (URISyntaxException ex) {
 			Logger.getLogger(Set.class.getName()).log(Level.SEVERE, null, ex);
 			return null;
 		}
-		//System.out.println(setURL);
 	}
 
 	// initialize set
