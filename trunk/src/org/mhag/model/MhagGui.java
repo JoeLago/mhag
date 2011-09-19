@@ -43,7 +43,7 @@ public class MhagGui extends javax.swing.JFrame {
     public MhagGui() {
         initComponents();
 
-		String title =  "MHAG: Monster Hunter Armor Generator Ver 1.2 beta 4";
+		String title =  "MHAG: Monster Hunter Armor Generator Ver 1.2 beta 5";
 		if(mhag.getGame() == 0)
 			setTitle(title + " for Monster Hunter Tri");
 		else
@@ -1383,7 +1383,7 @@ public class MhagGui extends javax.swing.JFrame {
         codeBookName.setFont(new java.awt.Font("Monospaced", 0, 12));
         codeBookName.setText("MyData");
 
-        codeBookLoad.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        codeBookLoad.setFont(new java.awt.Font("Monospaced", 1, 12));
         codeBookLoad.setText("Load");
         codeBookLoad.setToolTipText("Load code book");
         codeBookLoad.addActionListener(new java.awt.event.ActionListener() {
@@ -1577,7 +1577,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jEditorAbout.setContentType("text/html");
         jEditorAbout.setEditable(false);
-        jEditorAbout.setText("<html>\n  <head>\n\n  </head>\n  <body>\n    <h2 align = \"center\">\n      MHAG :\n    </h2>\n  <h2 align = \"center\">\n       Monster Hunter Armor Generator\n    </h2>\n <p align = \"center\">ver 1.2 beta 4 </p>\n <p align = \"center\">Release Date: 09/12/2011</p>\n<p align = \"center\">MHAG Project: <a href=\"http://code.google.com/p/mhag/\">code.google.com/p/mhag</a></p>\n\n<p></p>\n<p align = \"center\">by Tifa@mh3</p>\n<p align = \"center\">Unity Member: <a href=\"http://www.capcom-unity.com/tifa@mh3\">www.capcom-unity.com/tifa@mh3</a></p>\n<p align = \"center\">Youtube Channel: <a href=\"http://www.youtube.com/mh3journey\">www.youtube.com/mh3journey</a></p>\n\n  </body>\n\n");
+        jEditorAbout.setText("<html>\n  <head>\n\n  </head>\n  <body>\n    <h2 align = \"center\">\n      MHAG :\n    </h2>\n  <h2 align = \"center\">\n       Monster Hunter Armor Generator\n    </h2>\n <p align = \"center\">ver 1.2 beta 5 </p>\n <p align = \"center\">Release Date: 09/19/2011</p>\n<p align = \"center\">MHAG Project: <a href=\"http://code.google.com/p/mhag/\">code.google.com/p/mhag</a></p>\n\n<p></p>\n<p align = \"center\">by Tifa@mh3</p>\n<p align = \"center\">Unity Member: <a href=\"http://www.capcom-unity.com/tifa@mh3\">www.capcom-unity.com/tifa@mh3</a></p>\n<p align = \"center\">Youtube Channel: <a href=\"http://www.youtube.com/mh3journey\">www.youtube.com/mh3journey</a></p>\n\n  </body>\n\n");
         jEditorAbout.setOpaque(false);
         jEditorAbout.addHyperlinkListener(new javax.swing.event.HyperlinkListener() {
             public void hyperlinkUpdate(javax.swing.event.HyperlinkEvent evt) {
