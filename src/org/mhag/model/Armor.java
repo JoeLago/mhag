@@ -476,11 +476,26 @@ public class Armor {
 	// get blader/gunner info
 	public String getBladeOrGunner() {return bladeOrGunner;}
 
+	// get blader/gunner info
+	public int getBG4Head() {return bg4Head;}
+
+	// get blader/gunner info
+	public void setBG4Head(int opt) {bg4Head = opt;}
+
 	// get body part
 	public int getBodyPart() {return bodyPart;}
 
 	// get # of slots
 	public int getNumSlot() {return numSlot;}
+
+	// get defense
+	public int getDefense(boolean lowRank)
+	{
+		if(lowRank)
+			return defense[0];
+		else
+			return defense[1];
+	}
 
 	// get lowrank defense
 	public int getDefenseLowRank() {return defense[0];}
@@ -541,7 +556,6 @@ public class Armor {
 		return tips.toString();
 	}
 
-
 	private int armorID = 0;  // Armor ID
 	private String armorName = "";   // Armor Piece Name
 	private String armorNameJP = "";   // Armor Piece Name japanese
@@ -555,6 +569,8 @@ public class Armor {
 	private int[] skillID;  // Skill ID
 	private String[] skillName;  // Skill Name
 	private int[] skillPoint; // Skill Points
+
+	private int bg4Head = 0;  // 0: both; 1: blade; 2: gunner
 
 	static int[] armorIDTot;
 	static final String partFull = "HCAWL";

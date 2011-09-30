@@ -1,10 +1,10 @@
 MHAG: Monster Hunter Armor Generator 
-v.1.2 beta 5
+v.1.2 beta 6
 Author : Tifa@mh3
 MHAG Project: code.google.com/mhag
 
 About MHAG:
-MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is designed for Monster Hunter Tri (Wii), and it supports Monster Hunter Portable/Freedom 3rd (PSP).  MHAG has a calculator, a viewer and a generator, making it an outstanding tool to manage and design your own armor sets. 
+MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is designed for both Monster Hunter Tri (Wii), and Monster Hunter Portable/Freedom 3rd (PSP).  MHAG has a calculator, a viewer and a generator, making it an outstanding tool to manage and design your own armor sets. 
      1. Why MHAG:
      There are a few calculators available online already. So why am I developing MHAG?
      1) MHAG is a light-weighted FREE JAVA program, so once you have it, you have it forever.  Remember our favorite armor database set http://mhdb.xengi.org/mh3/armory.php is gone, together with our armor data.
@@ -23,6 +23,12 @@ MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is d
      I will also make source code packages for stable versions. (v1.0, v2.0)
 
 History:
+v.1.2 beta 6 09/30/2011:
+   1. bug: skill list in the generator panel should show activated skills(effects).
+   2. bug: "load to calculator" function (gunner or low rank)
+   3. new feature: suggestions of armor pieces according to the skills
+   4. new feature: full/partial set search
+   5. new feature: advanced setting panel
 v.1.2 beta 5 09/19/2011:
    1. bug: set url link for special characters
    2. bug: menu selection for "yukumu armor pieces" (armor pieces #1)

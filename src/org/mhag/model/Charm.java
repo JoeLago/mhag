@@ -46,6 +46,7 @@ public class Charm {
 				parseSkill(0, line.substring(startPos), mhagData);
 				numSkill = 1;
 			}
+			setLowRank(mhagData);
 			return;
 		}
 		else
@@ -73,7 +74,7 @@ public class Charm {
 			parseSlots(line.substring(endPos+1));
 			numSkill = 2;
 		}
-
+		setLowRank(mhagData);
 	}
 
 	public void parseSkill(int skillIndex, String line, MhagData mhagData)
@@ -111,6 +112,16 @@ public class Charm {
 	// check if the charm can be found in low rank
 	public void setLowRank(MhagData mhagData)
 	{
+		// slot only
+		if(numSkill == 0)
+		{
+			if(numSlot == 3)  // 3 slot for high rank
+				lowRank = false;
+			else
+				lowRank =  true;
+			return;
+		}
+
 		for(int i = 0; i < numSkill; i++)
 		{
 			Skill skill = mhagData.getSkill(skillID[i]);
@@ -132,6 +143,7 @@ public class Charm {
 
 		for (int i = 0; i < numSkill; i++)
 		{
+			if(skillID[i] < 0) return;
 			Skill skill = mhagData.getSkill(skillID[i]);
 			if(skillPoint[i] > 0)
 				line=String.format("%s +%d, ",

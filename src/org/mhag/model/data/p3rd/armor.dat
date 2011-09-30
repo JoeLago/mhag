@@ -896,16 +896,16 @@ Snake's Body/The Boss' Body      : スネークボディ/ザ.ボスボディ    
 Snake's Arms/The Boss' Arms      : スネークアーム/ザ.ボスアーム                         : G : A :  -- :  49 : 1 :  2 :  2 :  2 :  2 :  2 : Psychic :  3 : Loading :  3 : Sense :  2 : Elemental : -3
 Snake's Band/The Boss' Band      : スネークバンド/ザ.ボスバンド                         : G : W :  -- :  49 : 1 :  2 :  2 :  2 :  2 :  2 : Psychic :  4 : Loading :  3 : Sense :  2 : Elemental : -2
 Snake's Feet/The Boss' Feet      : スネークフット/ザ.ボスフット                         : G : L :  -- :  49 : 1 :  2 :  2 :  2 :  2 :  2 : Psychic :  3 : Loading :  4 : Sense :  2 : Elemental : -2
-UNIQLO Knit Hat       : ユニクロニット帽        : A : H :  -- :  82 : 2 : -3 :  1 :  4 :  0 :  0 : Evade Dist :  3 : Cold Res :  2 : Hearing :  2 : Eating : -2
+UNIQLO Knithat        : ユニクロニット帽        : A : H :  -- :  82 : 2 : -3 :  1 :  4 :  0 :  0 : Evade Dist :  3 : Cold Res :  2 : Hearing :  2 : Eating : -2
 UNIQLO Suit           : ユニクロダウン          : B : C :  -- :  82 : 1 : -3 :  1 :  4 :  0 :  0 : Evade Dist :  3 : Cold Res :  2 : Hearing :  2 : Eating : -2
 UNIQLO Gloves         : ユニクログローブ        : B : A :  -- :  82 : 2 : -3 :  1 :  4 :  0 :  0 : Evade Dist :  3 : Cold Res :  2 : Hearing :  2 : Eating : -2
-UNIQLO Ring Belt      : ユニクロリングベルト    : B : W :  -- :  82 : 2 : -3 :  1 :  4 :  0 :  0 : Evade Dist :  3 : Cold Res :  2 : Hearing :  2 : Eating : -2
-UNIQLO Cargo Pants    : ユニクロカーゴパンツ    : B : L :  -- :  82 : 2 : -3 :  1 :  4 :  0 :  0 : Evade Dist :  3 : Cold Res :  2 : Hearing :  2 : Eating : -2
+UNIQLO Ringbelt       : ユニクロリングベルト    : B : W :  -- :  82 : 2 : -3 :  1 :  4 :  0 :  0 : Evade Dist :  3 : Cold Res :  2 : Hearing :  2 : Eating : -2
+UNIQLO Cargopants     : ユニクロカーゴパンツ    : B : L :  -- :  82 : 2 : -3 :  1 :  4 :  0 :  0 : Evade Dist :  3 : Cold Res :  2 : Hearing :  2 : Eating : -2
 UNIQLO Headphone      : ユニクロヘッドホン      : A : H :  -- :  49 : 2 : -4 :  2 :  5 :  0 :  0 : Evade Dist :  3 : Cold Res :  3 : Hearing :  3 : Eating : -2
 UNIQLO Jacket         : ユニクロジャケット      : G : C :  -- :  49 : 1 : -4 :  2 :  5 :  0 :  0 : Evade Dist :  3 : Cold Res :  2 : Hearing :  2 : Eating : -2
 UNIQLO Grabs          : ユニクログラブ          : G : A :  -- :  49 : 2 : -4 :  2 :  5 :  0 :  0 : Evade Dist :  3 : Cold Res :  2 : Hearing :  2 : Eating : -2
 UNIQLO Porch          : ユニクロポーチ          : G : W :  -- :  49 : 2 : -4 :  2 :  5 :  0 :  0 : Evade Dist :  4 : Cold Res :  2 : Hearing :  1 : Eating : -2
-UNIQLO Cut Pants      : ユニクロカットパンツ    : G : L :  -- :  49 : 2 : -4 :  2 :  5 :  0 :  0 : Evade Dist :  3 : Cold Res :  2 : Hearing :  2 : Eating : -2
+UNIQLO Cutpants       : ユニクロカットパンツ    : G : L :  -- :  49 : 2 : -4 :  2 :  5 :  0 :  0 : Evade Dist :  3 : Cold Res :  2 : Hearing :  2 : Eating : -2
 Gold Luna Helm        : ゴールドルナヘルム      : A : H :  -- :  84 : 3 :  2 : -2 :  0 : -4 :  3 : Fate :  1 : Bash :  2 : Protection :  1 : ThunderRes : -3
 Gold Luna Mail        : ゴールドルナメイル      : B : C :  -- :  84 : 3 :  2 : -2 :  0 : -4 :  3 : Fate :  1 : Bash :  1 : Protection :  1 : ThunderRes : -2
 Gold Luna Vambraces   : ゴールドルナアーム      : B : A :  -- :  84 : 0 :  2 : -2 :  0 : -4 :  3 : Fate :  5 : Bash :  4 : Protection :  2 : ThunderRes : -2
@@ -999,8 +999,8 @@ Bullfango S Mask      : ファンゴSフェイク       : B : H :  -- :  70 : 0 
 Bullfango S Head      : ファンゴSヘッド         : G : H :  -- :  41 : 0 : -1 :  0 :  3 : -2 :  3 : Hunger : 15
 Jaggi S Mask          : ジャギィSフェイク       : B : H :  -- :  71 : 0 :  0 :  0 :  0 :  0 :  0 : Spd Gather : 10
 Jaggi S Head          : ジャギィSヘッド         : G : H :  -- :  41 : 0 :  1 :  1 :  1 :  1 :  1 : Spd Gather : 10
-Skulll S Mask         : スカルSフェイス         : B : H :  -- :  71 : 0 :  2 : -2 : -2 : -2 :  1 : Torso Up
-Skulll S Head         : スカルSヘッド           : G : H :  -- :  41 : 0 :  4 : -1 : -1 : -1 :  2 : Torso Up
+Skull S Mask          : スカルSフェイス         : B : H :  -- :  71 : 0 :  2 : -2 : -2 : -2 :  1 : Torso Up
+Skull S Head          : スカルSヘッド           : G : H :  -- :  41 : 0 :  4 : -1 : -1 : -1 :  2 : Torso Up
 Wyvernking Eyepatch   : 竜王の隻眼              : A : H :  -- :  51 : 0 :  2 :  2 :  2 :  2 :  2 : Psychic : 15
 Shadow Shade          : シャドウアイ            : A : H :  -- :  51 : 0 :  2 :  2 :  2 :  2 :  2 : Wide-Range : 20
 SoulHunter Jacket     : 狩猟戦線ジャケット      : B : C :  -- :  82 : 0 :  2 :  2 :  2 :  2 :  2 : Survivor : 10

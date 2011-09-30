@@ -1,197 +1,209 @@
-  0: Anti-Theft
-  1: Attack Down (L)
-  2: Attack Down (M)
-  3: Attack Down (S)
-  4: Attack Up (S)
-  5: Attack Up (M)
-  6: Attack Up (L)
-  7: Auto-Guard
-  8: BBQ Expert
-  9: Blightproof
- 10: Bombardier
- 11: Carving Pro
- 12: Carving Master
- 13: Clust S Lv1 Up
- 14: Clust S All Up
- 15: Cold Surge (Hi)
- 16: Cold Surge (Lo)
- 17: Cold Cancel (Lo)
- 18: Cold Cancel (Hi)
- 19: Combination Pro
- 20: Combination -15%
- 21: Combination -10%
- 22: Combination -5%
- 23: Combination +15%
- 24: Combination +25%
- 25: Combination +45%
- 26: Constitution -2
- 27: Constitution -1
- 28: Constitution +1
- 29: Constitution +2
- 30: Crag S Lv1 Up
- 31: Crag S All Up
- 32: Critical Draw
- 33: CurrentRes (Lo)
- 34: CurrentRes (Hi)
- 35: Defense Down (L)
- 36: Defense Down (M)
- 37: Defense Down (S)
- 38: Defense Up (S)
- 39: Defense Up (M)
- 40: Defense Up (L)
- 41: Dragon Res -15
- 42: Dragon Res -10
- 43: Dragon Res +10
- 44: Dragon Res +15
- 45: Dragon Res +20
- 46: Dung Bomb Expert
- 47: Slow Eater
- 48: Speed Eating +1
- 49: Speed Eating +2
- 50: Elemental Atk Down
- 51: Elemental Atk Up
- 52: Evasion Up
- 53: Evasion +1
- 54: Evasion +2
- 55: Critical Eye -3
- 56: Critical Eye -2
- 57: Critical Eye -1
- 58: Critical Eye +1
- 59: Critical Eye +2
- 60: Critical Eye +3
- 61: Distraction
- 62: Focus
- 63: Horrible Luck
- 64: Bad Luck
- 65: Good Luck
- 66: Great Luck
- 67: Mind's Eye
- 68: Fire Res -15
- 69: Fire Res -10
- 70: Fire Res +10
- 71: Fire Res +15
- 72: Fire Res +20
- 73: Fishing Expert
- 74: Flaming Aura
- 75: Awaken
- 76: Gather -1
- 77: Gather +1
- 78: Gather +2
- 79: Gourmand
- 80: Scavenger
- 81: Guard -1
- 82: Guard +1
- 83: Guard +2
- 84: Guard Boost
- 85: Sharpness +1
- 86: Health -30
- 87: Health -10
- 88: Health +20
- 89: Health +50
- 90: Earplugs
- 91: HG Earplugs
- 92: Heat Surge (Hi)
- 93: Heat Surge (Lo)
- 94: Heat Cancel (Lo)
- 95: Heat Cancel (Hi)
- 96: Double Hunger
- 97: Raise Hunger
- 98: Halve Hunger
- 99: Negate Hunger
-100: Ice Res -15
-101: Ice Res -10
-102: Ice Res +10
-103: Ice Res +15
-104: Ice Res +20
-105: Item Use Down
-106: Item Use Up
-107: Load Up
-108: Nearsight
-109: Farsight
-110: Mud/Snow
-111: NormalS Boost
-112: NormalS All Up
-113: Oxygen Down
-114: Oxygen Up
-115: Double Paralysis
-116: Negate Paralysis
-117: PelletS Lv1 Up
-118: PelletS All Up
-119: PelletS Boost
-120: Capture Guru
-121: PierceS Boost
-122: PierceS Lv1 Up
-123: PierceS All Up
-124: Double Poison
-125: Negate Posion
-126: Worrywart
-127: Adrenaline +1
-128: Adrenaline +2
-129: Steadiness -1
-130: Steadiness +1
-131: Steadiness +2
-132: Demonic Blessing
-133: Divine Blessing
-134: Detect
-135: Autotracker
-136: Punishing Draw
-137: Bonus Shot
-138: Recovery Down
-139: Recovery Up
-140: Recovery Spd -2
-141: Recovery Spd -1
-142: Recovery Spd +1
-143: Recovery Spd +2
-144: Recoil Down -3
-145: Recoil Down -2
-146: Recoil Down -1
-147: Recoil Down +1
-148: Recoil Down +2
-149: Recoil Down +3
-150: Reload Speed -3
-151: Reload Speed -2
-152: Reload Speed -1
-153: Reload Speed +1
-154: Reload Speed +2
-155: Reload Speed +3
-156: Taunt
-157: Sneak
-158: Slow Sharpening
-159: Speed Sharpening
-160: Blunt Edge
-161: Razor Sharp
-162: Double Sleep
-163: Negate Sleep
-164: Speed Gatherer
-165: Trap Master
-166: Short Sprinter
-167: Marathon Runner
-168: Status Atk Down
-169: Status Atk Up
-170: Double Stun
-171: Halve Stun
-172: Negate Stun
-173: Fortify
-174: Doggy Paddler
-175: Olympic Swimmer
-176: Thunder Res -15
-177: Thunder Res -10
-178: Thunder Res +10
-179: Thunder Res +15
-180: Thunder Res +20
-181: Capture Expert
-182: Pro Transporter
-183: Tremor-Proof
-184: Water Res -15
-185: Water Res -10
-186: Water Res +10
-187: Water Res +15
-188: Water Res +20
-189: Devil's Whim
-190: Spectre's Whim
-191: Spirit's Whim
-192: Divine Whim
-193: Wide-Range +1
-194: Wide-Range +2
-195: Windproof (Lo)
-196: Windproof (Hi)
+  0: Health -30
+  1: Health -10
+  2: Health +20
+  3: Health +50
+  4: Attack Down (L)
+  5: Attack Down (M)
+  6: Attack Down (S)
+  7: Attack Up (S)
+  8: Attack Up (M)
+  9: Attack Up (L)
+ 10: Defense Down (L)
+ 11: Defense Down (M)
+ 12: Defense Down (S)
+ 13: Defense Up (S)
+ 14: Defense Up (M)
+ 15: Defense Up (L)
+ 16: Fire Res Down
+ 17: Fire Res Up (S)
+ 18: Fire Res Up (L)
+ 19: Water Res Down
+ 20: Water Res Up (S)
+ 21: Water Res Up (L)
+ 22: Ice Res Down
+ 23: Ice Res Up (S)
+ 24: Ice Res Up (L)
+ 25: Thunder Res Down
+ 26: Thunder Res Up (S)
+ 27: Thunder Res Up (L)
+ 28: Dragon Res Down
+ 29: Dragon Res Up (S)
+ 30: Dragon Res Up (L)
+ 31: Double Poison
+ 32: Negate Posion
+ 33: Double Paralysis
+ 34: Negate Paralysis
+ 35: Double Sleep
+ 36: Negate Sleep
+ 37: Double Stun
+ 38: Halve Stun
+ 39: Negate Stun
+ 40: Mud/Snow
+ 41: Tremor-Proof
+ 42: Windproof
+ 43: High Windproof
+ 44: Antiseptic
+ 45: Anti-Theft
+ 46: Earplugs
+ 47: HG Earplugs
+ 48: Anti Defense Down
+ 49: Blightproof
+ 50: Sharpness +1
+ 51: Mind's Eye
+ 52: Blunt Edge
+ 53: Razor Sharp
+ 54: Critical Draw
+ 55: Punishing Draw
+ 56: Guard -1
+ 57: Guard +1
+ 58: Guard +2
+ 59: Guard Boost
+ 60: Slow Sharpening
+ 61: Speed Sharpening
+ 62: Bonus Shot
+ 63: Auto-Guard
+ 64: Reload Speed -3
+ 65: Reload Speed -2
+ 66: Reload Speed -1
+ 67: Reload Speed +1
+ 68: Reload Speed +2
+ 69: Reload Speed +3
+ 70: Recoil Down -3
+ 71: Recoil Down -2
+ 72: Recoil Down -1
+ 73: Recoil Down +1
+ 74: Recoil Down +2
+ 75: Recoil Down +3
+ 76: Steadiness -2
+ 77: Steadiness -1
+ 78: Steadiness +1
+ 79: Steadiness +2
+ 80: NormalS/RapidBow Boost
+ 81: PierceS/PrceBow Boost
+ 82: PelletS/ScattBow Boost
+ 83: NormalS All Up
+ 84: PierceS Lv1 Up
+ 85: PierceS All Up
+ 86: PelletS Lv1 Up
+ 87: PelletS All Up
+ 88: Crag S Lv1 Up
+ 89: Crag S All Up
+ 90: Clust S Lv1 Up
+ 91: Clust S All Up
+ 92: Slice S Up
+ 93: Para C Up
+ 94: Sleep C Up
+ 95: Poison C Up
+ 96: Power C Up
+ 97: CloseR C Up
+ 98: Exhaust C Up
+ 99: Short Sprinter
+100: Marathon Runner
+101: Evasion Up
+102: Evasion Down
+103: Evasion +1
+104: Evasion +2
+105: Speed Sheathe
+106: Critical Eye -3
+107: Critical Eye -2
+108: Critical Eye -1
+109: Critical Eye +1
+110: Critical Eye +2
+111: Critical Eye +3
+112: Status Atk Down
+113: Status Atk +1
+114: Status Atk +2
+115: Weakness Blow
+116: Destructor
+117: Load Up
+118: Distraction
+119: Focus
+120: Power Release +1
+121: Power Release +2
+122: KO
+123: Stamina Taker
+124: Worrywart
+125: Adrenaline +1
+126: Adrenaline +2
+127: Fortify
+128: Bombardier
+129: Flute Expert
+130: Gunnery Master
+131: Gunnery King
+132: Fire Atk Down
+133: Fire Atk +1
+134: Fire Atk +2
+135: Water Atk Down
+136: Water Atk +1
+137: Water Atk +2
+138: Ice Atk Down
+139: Ice Atk +1
+140: Ice Atk +2
+141: Thunder Atk Down
+142: Thunder Atk +1
+143: Thunder Atk +2
+144: Dragon Atk Down
+145: Dragon Atk +1
+146: Dragon Atk +2
+147: Elemental Atk Down
+148: Elemental Atk Up
+149: Demonic Blessing
+150: Divine Blessing
+151: Constitution -2
+152: Constitution -1
+153: Constitution +1
+154: Constitution +2
+155: Taunt
+156: Sneak
+157: Dung Bomb Expert
+158: Horrible Luck
+159: Bad Luck
+160: Good Luck
+161: Great Luck
+162: Detect
+163: Autotracker
+164: Capture Guru
+165: Capture Pro
+166: Capture Expert
+167: Hunter Life
+168: Pro Transporter
+169: Heat Surge
+170: Heat Cancel
+171: Cold Surge
+172: Cold Cancel
+173: Recovery Down
+174: Recovery Up
+175: Recovery Spd -2
+176: Recovery Spd -1
+177: Recovery Spd +1
+178: Recovery Spd +2
+179: Stamina Rec Down
+180: Stamina Rec Up
+181: Wide-Range +1
+182: Wide-Range +2
+183: Item Use Down
+184: Item Use Up
+185: Trap Master
+186: Slow Eater
+187: Speed Eating +1
+188: Speed Eating +2
+189: Double Hunger
+190: Raise Hunger
+191: Halve Hunger
+192: Negate Hunger
+193: Gourmand
+194: Scavenger
+195: Combination -20%
+196: Combination -10%
+197: Combination +20%
+198: Combination +45%
+199: Combination Pro
+200: Gather -1
+201: Gather +1
+202: Gather +2
+203: Speed Gatherer
+204: Devil's Whim
+205: Spectre's Whim
+206: Spirit's Whim
+207: Divine Whim
+208: Carving Pro

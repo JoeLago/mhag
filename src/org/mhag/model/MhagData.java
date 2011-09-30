@@ -19,6 +19,8 @@ public class MhagData {
 
 	public MhagData()
 	{
+		for (int i = 0; i < CharmDialog.numMax; i++)
+			charmList[i] = new Charm();
 	}
 
 	// read data file
@@ -36,6 +38,15 @@ public class MhagData {
 		genEffectList();
 		preProcessJewelList();
 		preProcessArmorList();
+
+		/*
+		for(int i = 0; i < Armor.armorIDTot[0]; i++)
+		{
+			Armor armor = armorList[0][i];
+			System.out.printf("%d. %d %s\n", i, armor.getBG4Head(), armor.getArmorName());
+		}
+		 */
+
 //		preProcessCharmList();
 //		preProcessSkillList();
 	}
@@ -180,7 +191,7 @@ public class MhagData {
 
 	}
 
-	// pre process Armor list (skill id from skill name )
+	// pre process Armor list (skill id from skill name ), check b/g for head pieces
 	public void preProcessArmorList()
 	{
 		for (int i = 0; i < Armor.getArmorMax(); i++)
@@ -200,6 +211,83 @@ public class MhagData {
 
 		}
 
+		setBG4HeadAll();
+
+	}
+
+	public void setBG4HeadAll()
+	{
+
+		boolean[] checked = new boolean[Armor.armorIDTot[0]];
+		Arrays.fill(checked, false);
+		for(int i = 0; i < Armor.armorIDTot[0]; i++)
+		{
+			if(checked[i])continue;
+			Armor armor =  armorList[0][i];
+			String setName1 = armor.getSetName();
+			checked[i] = true;
+
+			boolean found = false;
+			for(int j = i + 1; j < Armor.armorIDTot[0]; j++)
+			{
+				if(checked[j])continue;
+				Armor armor2 =  armorList[0][j];
+
+				if(setName1.equals(armor2.getSetName()))
+				{
+					if(((armor.getNumSkill() == 1) && (armor2.getNumSkill() != 1)) ||
+						((armor.getNumSkill() != 1) && (armor2.getNumSkill() == 1)))
+					{
+						checked[j] = true;
+						continue;
+					}
+
+					if(armor.getDefenseHighRank() > armor2.getDefenseHighRank())
+					{
+						armor.setBG4Head(1);
+						armor2.setBG4Head(2);
+					}
+					else
+					{
+						armor.setBG4Head(2);
+						armor2.setBG4Head(1);
+					}
+					checked[j] = true;
+					found = true;
+					break;
+				}
+
+			}
+			if(found)continue;
+
+			// if not found, search the other body part
+			for(int k = 1; k < 5; k++)
+			{
+				for(int j = 0; j < Armor.armorIDTot[k]; j++)
+				{
+					Armor armor2 =  armorList[k][j];
+					if((setName1.equals(armor2.getSetName()))  &&
+						(armor.getDefenseHighRank() == armor2.getDefenseHighRank()))
+					{
+						if(((armor.getNumSkill() == 1) && (armor2.getNumSkill() != 1)) ||
+							((armor.getNumSkill() != 1) && (armor2.getNumSkill() == 1)))
+							continue;
+
+						if(armor2.getBladeOrGunner().equals("A"))
+							armor.setBG4Head(0);
+						else if(armor2.getBladeOrGunner().equals("B"))
+							armor.setBG4Head(1);
+						else
+							armor.setBG4Head(2);
+						found = true;
+						break;
+					}
+
+				}
+				if(found)break;
+			}
+
+		}
 	}
 
 	/* pre process skill list (genate skill list in class)
@@ -409,56 +497,61 @@ public class MhagData {
 
 	}
 
-	/* read charm from charm file
-	public void readCharm(Mhag mhag) throws FileNotFoundException
+	// read charm from charm file
+	public void readCharm() 
 	{
-		Scanner in = new Scanner(new File(fileCharm));
+		try {
+			Scanner filein = new Scanner(new File(CharmDialog.fileCharm));
 
-		// check total # of skills
-		int nMax = 0;
-		String line = "";
-		while(in.hasNext())
-		{
-			line = in.nextLine();
-			if(line.startsWith("#"))continue;
-			nMax++;
-		}
-
-		String logLine = String.format
-			("Total Number of Jewels : %d",nMax);
-		MhagUtil.logLine(mhag,logLine);
-		in.close();
-
-		charmList = new Charm[nMax];
-		for (int i = 0; i < nMax; i++)
-		{
-			charmList[i] = new Charm();
-
-		}
-		Scanner in2 = new Scanner(new File(fileCharm));
-
-		// read Charm entry
-		int ioErr = 0;
-		int charmIndex = 0;
-		while(in2.hasNext())
-		{
-			line = in2.nextLine();
-			if(line.startsWith("#"))continue;
-			// System.out.printf("%d\n", charmIndex);
-			// System.out.println(line);
-			ioErr = Charm.setCharmFromLine
-				(line, charmList[charmIndex]);
-			if(ioErr != 0)
+			int numMax = CharmDialog.numMax;
+			int ind = 0;
+			while(filein.hasNext())
 			{
-				MhagUtil.logLine(mhag,
-					"Error Found in Jewel File");
-				return;
+				Charm aCharm = new Charm();
+				String line = filein.nextLine();
+				aCharm.setCharmFromLine(line, this);
+				charmList[ind] = aCharm;
+				ind++;
+				if(ind >= numMax) break;
 			}
-			charmIndex++;
-		}
+			numCharm = ind;
 
+		} catch (FileNotFoundException ex) {
+
+			readCharmDefault();
+		}
 	}
-	 */
+
+	public void readCharmDefault()
+	{
+		int numMax = CharmDialog.numMax;
+
+		Charm aCharm = new Charm();
+		aCharm.setCharmFromLine("Auto-Guard +10", this);
+		charmList[0] = aCharm;
+		aCharm = new Charm();
+		aCharm.setCharmFromLine("OOO", this);
+		charmList[1] = aCharm;
+		aCharm = new Charm();
+		aCharm.setCharmFromLine("OO", this);
+		charmList[2] = aCharm;
+		numCharm = 3;
+	}
+
+	// copy charm from a set
+	public void setCharm(Set set, int ind)
+	{
+		charmList[ind] = new Charm();
+		charmList[ind].setNumSkill(set.getNumCharmSkill());
+		charmList[ind].setNumSlot(set.getNumCharmSlot());
+		for(int i = 0; i < set.getNumCharmSkill(); i++)
+		{
+			charmList[ind].setSkillID(i, set.getCharmSkillID(i));
+			charmList[ind].setSkillPoint(i, set.getCharmSkillPoint(i));
+		}
+		charmList[ind].setCharmName(this);
+		charmList[ind].setLowRank(this);
+	}
 
 	// get Skill ID, from a skill name
 	public int getSkillIDFromName(String skillName)
@@ -821,6 +914,17 @@ public class MhagData {
 		return skillList[skillID];
 	}
 
+	// get Charm class
+	public Charm getCharm(int charmID)
+	{
+		return charmList[charmID];
+	}
+
+	//get number of charm
+	public int getNumCharm() {return numCharm;}
+
+	public void setNumCharm(int num) {numCharm = num;}
+
 	/* get number of skill in a class
 	public int getNumSkillInClass(int nClass)
 	{
@@ -1129,6 +1233,8 @@ public class MhagData {
 	private Skill[] skillList;
 	private Jewel[] jewelList;
 	private Effect[] effectList;
+	private Charm[] charmList = new Charm[CharmDialog.numMax];
+	private int numCharm = 0;
 
 	// indeces
 //	private int[][] indexSkillInClass;  // skill id list

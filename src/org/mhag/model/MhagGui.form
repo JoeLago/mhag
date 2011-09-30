@@ -1349,13 +1349,13 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="skillsPanel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="optionPanel" min="-2" max="-2" attributes="0"/>
+                          <Component id="skillsPanel" alignment="0" max="32767" attributes="1"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="optionPanel" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jProgressOpt" min="-2" pref="219" max="-2" attributes="1"/>
                                   <Component id="loadToCalcGen" min="-2" pref="219" max="-2" attributes="1"/>
-                                  <Component id="jProgressOpt" alignment="0" min="-2" pref="219" max="-2" attributes="1"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jButtonMyCharms" min="-2" pref="107" max="-2" attributes="1"/>
@@ -1369,9 +1369,9 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <Component id="jScrollOptSets" min="-2" pref="619" max="-2" attributes="0"/>
+                          <Component id="jScrollOptSets" alignment="0" pref="626" max="32767" attributes="1"/>
                       </Group>
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPreview3" min="-2" pref="586" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1380,16 +1380,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPreview3" min="-2" pref="535" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="1">
                               <Component id="skillsPanel" min="-2" pref="165" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="optionPanel" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jButtonMyCharms" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                           <Component id="jButtonSettings" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -1404,12 +1399,14 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="loadToCalcGen" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
+                                  <Component id="optionPanel" alignment="0" min="-2" max="-2" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollOptSets" pref="220" max="32767" attributes="0"/>
+                              <Component id="jScrollOptSets" pref="244" max="32767" attributes="0"/>
                           </Group>
+                          <Component id="jScrollPreview3" alignment="0" min="-2" pref="535" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1473,7 +1470,7 @@
                                   <Component id="jLabelSkillType" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="skillType" min="-2" pref="145" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jLabelSkillTree" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="skillTree" min="-2" pref="145" max="-2" attributes="0"/>
@@ -1483,21 +1480,19 @@
                                   <Component id="skillName" min="-2" pref="145" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jButtonAdd" min="-2" pref="141" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jButtonRemove" min="-2" pref="141" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jButtonUp" min="-2" pref="141" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jButtonDown" min="-2" pref="141" max="-2" attributes="0"/>
+                                  <Component id="jButtonAdd" min="-2" pref="107" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jButtonRemove" min="-2" pref="107" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jButtonUp" min="-2" pref="107" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jButtonDown" min="-2" pref="107" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jButtonShowPiece" min="-2" pref="107" max="-2" attributes="0"/>
                               </Group>
+                              <Component id="jScrollSkillList" alignment="0" min="-2" pref="589" max="-2" attributes="1"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jScrollSkillList" min="-2" pref="589" max="-2" attributes="1"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace pref="13" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1507,10 +1502,10 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabelSkillType" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="skillType" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                              <Component id="jLabelSkillTree" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="skillTree" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               <Component id="jLabelSkillName" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="skillName" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="jLabelSkillTree" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="skillTree" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -1518,6 +1513,7 @@
                               <Component id="jButtonRemove" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               <Component id="jButtonUp" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               <Component id="jButtonDown" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="jButtonShowPiece" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollSkillList" min="-2" max="-2" attributes="0"/>
@@ -1689,6 +1685,17 @@
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JButton" name="jButtonShowPiece">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Monospaced" size="12" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Suggestion"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonShowPieceActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="optionPanel">
@@ -1706,146 +1713,71 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabelWeaponSlot" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelArmorType" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="optLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jCheckBoxLowRank" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jCheckBoxHighRank" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jCheckBoxPiercing" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jCheckBoxCharm" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="hunterTypePanel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabelWeaponSlot" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jComboBoxWeaponSlots" min="-2" pref="125" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxType" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxWeaponSlots" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabelHead" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxHead" min="-2" pref="115" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="optLabel" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jComboBoxOpt" min="-2" pref="125" max="-2" attributes="0"/>
+                                          <Component id="jLabelArmorRank" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxRank" min="-2" pref="115" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
+                              <Group type="102" alignment="0" attributes="1">
+                                  <Component id="jComboBoxOpt" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                  <Component id="jCheckBoxCharm" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jCheckBoxEarring" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="18" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="hunterTypePanel" min="-2" max="-2" attributes="1"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabelWeaponSlot" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jComboBoxWeaponSlots" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="optLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jComboBoxOpt" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabelArmorType" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxType" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="jLabelArmorRank" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxRank" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jCheckBoxLowRank" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBoxHighRank" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBoxPiercing" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelWeaponSlot" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxWeaponSlots" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="jLabelHead" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxHead" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jCheckBoxCharm" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxEarring" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="optLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxOpt" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="hunterTypePanel">
-                  <Properties>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder title="Hunter Type"/>
-                      </Border>
-                    </Property>
-                  </Properties>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jRadioBlade" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioGunner" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jRadioBlade" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jRadioGunner" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Component class="javax.swing.JRadioButton" name="jRadioBlade">
-                      <Properties>
-                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="hunterTypeGen"/>
-                        </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Monospaced" size="12" style="0"/>
-                        </Property>
-                        <Property name="selected" type="boolean" value="true"/>
-                        <Property name="text" type="java.lang.String" value="Bladermaster"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioBladeActionPerformed"/>
-                      </Events>
-                    </Component>
-                    <Component class="javax.swing.JRadioButton" name="jRadioGunner">
-                      <Properties>
-                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="hunterTypeGen"/>
-                        </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Monospaced" size="12" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="Gunner"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioGunnerActionPerformed"/>
-                      </Events>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Component class="javax.swing.JCheckBox" name="jCheckBoxLowRank">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Monospaced" size="12" style="0"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Low Rank"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxLowRankItemStateChanged"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBoxHighRank">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Monospaced" size="12" style="0"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="High Rank"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxHighRankItemStateChanged"/>
-                  </Events>
-                </Component>
                 <Component class="javax.swing.JLabel" name="jLabelWeaponSlot">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1854,7 +1786,7 @@
                     <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="jComboBoxWeaponSlots"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Weapon Slots"/>
+                    <Property name="text" type="java.lang.String" value="Weapon"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxWeaponSlots">
@@ -1884,7 +1816,7 @@
                     <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                       <ComponentRef name="jComboBoxOpt"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Search Method"/>
+                    <Property name="text" type="java.lang.String" value="Search"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxOpt">
@@ -1894,9 +1826,9 @@
                     </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="3">
-                        <StringItem index="0" value="Jewel Opt"/>
-                        <StringItem index="1" value="Partial Search"/>
-                        <StringItem index="2" value="Full Search"/>
+                        <StringItem index="0" value="Full Search"/>
+                        <StringItem index="1" value="Partial"/>
+                        <StringItem index="2" value="Jewel Opt"/>
                       </StringArray>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -1905,15 +1837,15 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxOptActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBoxPiercing">
+                <Component class="javax.swing.JCheckBox" name="jCheckBoxEarring">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Monospaced" size="12" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Piercing"/>
+                    <Property name="text" type="java.lang.String" value="Earrings"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxPiercingItemStateChanged"/>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxEarringItemStateChanged"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBoxCharm">
@@ -1927,30 +1859,85 @@
                     <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxCharmItemStateChanged"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JLabel" name="jLabelArmorRank">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Monospaced" size="12" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Rank"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxRank">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Monospaced" size="12" style="0"/>
+                    </Property>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="3">
+                        <StringItem index="0" value="Any"/>
+                        <StringItem index="1" value="Low Rank Only"/>
+                        <StringItem index="2" value="High Rank Only"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxRankActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelHead">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Monospaced" size="12" style="0"/>
+                    </Property>
+                    <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                      <ComponentRef name="jComboBoxOpt"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Head"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxHead">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Monospaced" size="12" style="0"/>
+                    </Property>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="3">
+                        <StringItem index="0" value="Any"/>
+                        <StringItem index="1" value="Melee Only"/>
+                        <StringItem index="2" value="Gunner Only"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxHeadActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelArmorType">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Monospaced" size="12" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Type"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxType">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Monospaced" size="12" style="0"/>
+                    </Property>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="2">
+                        <StringItem index="0" value="Melee"/>
+                        <StringItem index="1" value="Gunner"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxTypeActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jButtonMyCharms">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Monospaced" size="12" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Charms"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMyCharmsActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonSettings">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Monospaced" size="12" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Settings"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSettingsActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JButton" name="jButtonSearch">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -2013,10 +2000,32 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Monospaced" size="12" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="x100,000"/>
+                <Property name="text" type="java.lang.String" value="Abort"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAbortActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonMyCharms">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Monospaced" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Charms"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMyCharmsActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonSettings">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Monospaced" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Adhanced"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSettingsActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -2434,7 +2443,7 @@
                   <Properties>
                     <Property name="contentType" type="java.lang.String" value="text/html"/>
                     <Property name="editable" type="boolean" value="false"/>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;&#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;h2 align = &quot;center&quot;&gt;&#xa;      MHAG :&#xa;    &lt;/h2&gt;&#xa;  &lt;h2 align = &quot;center&quot;&gt;&#xa;       Monster Hunter Armor Generator&#xa;    &lt;/h2&gt;&#xa; &lt;p align = &quot;center&quot;&gt;ver 1.2 beta 5 &lt;/p&gt;&#xa; &lt;p align = &quot;center&quot;&gt;Release Date: 09/19/2011&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;MHAG Project: &lt;a href=&quot;http://code.google.com/p/mhag/&quot;&gt;code.google.com/p/mhag&lt;/a&gt;&lt;/p&gt;&#xa;&#xa;&lt;p&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;by Tifa@mh3&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Unity Member: &lt;a href=&quot;http://www.capcom-unity.com/tifa@mh3&quot;&gt;www.capcom-unity.com/tifa@mh3&lt;/a&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Youtube Channel: &lt;a href=&quot;http://www.youtube.com/mh3journey&quot;&gt;www.youtube.com/mh3journey&lt;/a&gt;&lt;/p&gt;&#xa;&#xa;  &lt;/body&gt;&#xa;&#xa;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;&#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;h2 align = &quot;center&quot;&gt;&#xa;      MHAG :&#xa;    &lt;/h2&gt;&#xa;  &lt;h2 align = &quot;center&quot;&gt;&#xa;       Monster Hunter Armor Generator&#xa;    &lt;/h2&gt;&#xa; &lt;p align = &quot;center&quot;&gt;ver 1.2 beta 6 &lt;/p&gt;&#xa; &lt;p align = &quot;center&quot;&gt;Release Date: 09/29/2011&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;MHAG Project: &lt;a href=&quot;http://code.google.com/p/mhag/&quot;&gt;code.google.com/p/mhag&lt;/a&gt;&lt;/p&gt;&#xa;&#xa;&lt;p&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;by Tifa@mh3&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Unity Member: &lt;a href=&quot;http://www.capcom-unity.com/tifa@mh3&quot;&gt;www.capcom-unity.com/tifa@mh3&lt;/a&gt;&lt;/p&gt;&#xa;&lt;p align = &quot;center&quot;&gt;Youtube Channel: &lt;a href=&quot;http://www.youtube.com/mh3journey&quot;&gt;www.youtube.com/mh3journey&lt;/a&gt;&lt;/p&gt;&#xa;&#xa;  &lt;/body&gt;&#xa;&#xa;"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
                   <Events>

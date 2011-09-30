@@ -1,131 +1,164 @@
-  0: Antidote Jewel       Poison +1, Stun -1
-  1: Antidote Jewel+      Poison +2
-  2: Paralysis Jewel      Paralysis +1, Poison -1
-  3: Paralysis Jewel+     Paralysis +2
-  4: Pep Jewel            Sleep +1, Mud/Snow -1
-  5: Pep Jewel+           Sleep +3, Mud/Snow -1
-  6: Steadfast Jewel      Stun +1, Paralysis -1
-  7: Steadfast Jewel+     Stun +2
-  8: Weather Jewel        Mud/Snow +1, Sleep -1
-  9: Weather Jewel+       Mud/Snow +2
- 10: Ninja Jewel          Sense +2
- 11: Vitality Jewel       Health +2
- 12: Recovery Jewel       Rec Speed +1, Eating -1
- 13: Resurgence Jewel     Rec Speed +3, Eating -1
- 14: Razor Jewel          Sharpness +1, Handicraft -1
- 15: Cutter Jewel         Sharpness +4, Handicraft -2
- 16: Handicraft Jewel     Handicraft +1, Sharpness -1
- 17: Architect Jewel      Handicraft +4, Sharpness -2
- 18: Fencer Jewel         Fencing +1, Handicraft -1
- 19: Swordsman Jewel      Fencing +4, Handicraft -2
- 20: Expert Jewel         Expert +1, Dragon Res -1
- 21: Master Jewel         Expert +3, Dragon Res -1
- 22: Hermit Jewel         Expert +5, Dragon Res -1
- 23: Grinder Jewel        Sharpener +2
- 24: Stone Wall Jewel     Guard +1, Stamina -1
- 25: Iron Wall Jewel      Guard +3, Stamina -1
- 26: Shield Jewel         Guard Up +1, Stamina -1
- 27: Aegis Jewel          Guard Up +3, Stamina -1
- 28: Quickload Jewel      Reload Spd +1, Recoil -1
- 29: Flashload Jewel      Reload Spd +3, Recoil -1
- 30: Absorber Jewel       Recoil +1, Reload Spd -1
- 31: FlinchFree Jewel     Recoil +4, Reload Spd -2
- 32: Forceshot Jewel      NormalS Up +1, Recoil -1
- 33: Forceshot Jewel+     NormalS Up +4, Recoil -2
- 34: Pierce Jewel         PierceS Up +1, Recoil -1
- 35: Pierce Jewel+        PierceS Up +4, Recoil -2
- 36: Pellet Jewel         PelletS Up +1, Recoil -1
- 37: Pellet Jewel+        PelletS Up +4, Recoil -2
- 38: ShotPlus Jewel       Normal S+ +1, Reload Spd -1
- 39: ShotPlus Jewel+      Normal S+ +3, Reload Spd -1
- 40: PiercPlus Jewel      Pierce S+ +1, Reload Spd -1
- 41: PiercPlus Jewel+     Pierce S+ +3, Reload Spd -1
- 42: PelletPlus Jewel     Pellet S+ +2
- 43: CragPlus Jewel       Crag S+ +2
- 44: ClustPlus Jewel      Clust S+ +1, Reload Spd -1
- 45: Disabler Jewel       Status +1, Elemental -1
- 46: Disabler Jewel+      Status +3, Elemental -1
- 47: Element Jewel        Elemental +1, Status -1
- 48: Element Jewel+       Elemental +4, Status -2
+  0: Vitality Jewel       Health +2
+  1: Recovery Jewel       Rec Speed +1, Eating -1
+  2: Recovery Jewel       Rec Speed +3, Eating -1
+  3: Medicine Jewel       Rec Level +1, Rec Speed -1
+  4: Medicine Jewel       Rec Level +3, Rec Speed -1
+  5: Sprinter Jewel       Stamina +1, Hunger -1
+  6: Sprinter Jewel       Stamina +4, Hunger -2
+  7: Physique Jewel       Constitutn +1, Stamina -1
+  8: Physique Jewel       Constitutn +3, Stamina -1
+  9: Stamina Jewel        StaminaRec +1, Evasion -1
+ 10: Stamina Jewel        StaminaRec +3, Evasion -1
+ 11: Hungerless Jewel     Hunger +2
+ 12: Metabolism Jewel     Gluttony +2
+ 13: Attack Jewel         Attack +1
+ 14: Attack Jewel         Attack +3, Defense -1
+ 15: Attack Jewel         Attack +5, Defense -1
+ 16: Expert Jewel         Expert +1, Dragon Res -1
+ 17: Expert Jewel         Expert +3, Dragon Res -1
+ 18: Expert Jewel         Expert +5, Dragon Res -1
+ 19: Disabler Jewel       Status +1, Elemental -1
+ 20: Disabler Jewel       Status +3, Elemental -1
+ 21: Element Jewel        Elemental +1, Status -1
+ 22: Element Jewel        Elemental +4, Status -2
+ 23: Flame Jewel          Fire Atk +1, Water Atk -1
+ 24: Flame Jewel          Fire Atk +3, Water Atk -1
+ 25: Stream Jewel         Water Atk +1, ThunderAtk -1
+ 26: Stream Jewel         Water Atk +3, ThunderAtk -1
+ 27: Lightning Jewel      ThunderAtk +1, Ice Atk -1
+ 28: Lightning Jewel      ThunderAtk +3, Ice Atk -1
+ 29: Fleezing Jewel       Ice Atk +1, Fire Atk -1
+ 30: Fleezing Jewel       Ice Atk +3, Fire Atk -1
+ 31: Dragonfell Jewel     Dragon Atk +1, Status -1
+ 32: Dragonfell Jewel     Dragon Atk +3, Status -1
+ 33: Blow Jewel           Blow +1, Health -1
+ 34: Blow Jewel           Blow +4, Health -2
+ 35: Bash Jewel           Bash +1, Expert -1
+ 36: Bash Jewel           Bash +4, Expert -2
+ 37: Magazine Jewel       Loading +1, Reload Spd -1
+ 38: Magazine Jewel       Loading +4, Reload Spd -2
+ 39: Charger Jewel        FastCharge +1, Constitutn -1
+ 40: Charger Jewel        FastCharge +4, Constitutn -2
+ 41: Full Release Jewel   Earnest +1, Sense -1
+ 42: Full Release Jewel   Earnest +3, Sense -1
+ 43: KO Jewel             KO +1, FastCharge -1
+ 44: KO Jewel             KO +3, FastCharge -1
+ 45: Exhaust Jewel        Exhaust +1, Stamina -1
+ 46: Exhaust Jewel        Exhaust +3, Stamina -1
+ 47: Potential Jewel      Potential +1, Protection -1
+ 48: Potential Jewel      Potential +3, Protection -1
  49: Bombardier Jewel     Bomb Boost +2
- 50: Lite Eater Jewel     Hunger +1, Eating -1
- 51: Hungerless Jewel     Hunger +2
- 52: Metabolism Jewel     Gluttony +2
- 53: Attack Jewel         Attack +1
- 54: Assault  Jewel       Attack +3, Defense -1
- 55: Onslaught Jewel      Attack +5, Defense -1
- 56: Defense Jewel        Defense +1, Attack -1
- 57: Turtle Jewel         Defense +3, Attack -1
- 58: Protection Jewel     Protection +1
- 59: Asylum Jewel         Protection +2
- 60: Earplug Jewel        Hearing +1, Protection -1
- 61: Silencer Jewel       Hearing +4, Protection -2
- 62: Alarm Jewel          Anti-Theft +2
- 63: Friendship Jewel     Wide-Range +1, Sense -1
- 64: Alliance Jewel       Wide-Range +3, Sense -1
- 65: Transportr Jewel     Transportr +2
- 66: Crimson Jewel        Fire Res +2
- 67: Torrent Jewel        Water Res +2
- 68: Storm  Jewel         ThunderRes +2
- 69: Glacier Jewel        Ice Res +2
- 70: Dragonbane Jewel     Dragon Res +2
- 71: Breeze Jewel         Heat Res +2
- 72: Warmth Jewel         Cold Res +2
- 73: Sandbag Jewel        Wind Res +1, Fate -1
- 74: Anchor Jewel         Wind Res +3, Fate -1
- 75: Map Jewel            Map +2
- 76: Gathering Jewel      Gathering +2
- 77: Spree Jewel          Spd Gather +2
- 78: Blessing Jewel       Whim +2
- 79: Fate Jewel           Fate +1, Whim -1
- 80: Destiny Jewel        Fate +4, Whim -2
- 81: Fisher Jewel         Fishing +2
- 82: Psychic Jewel        Psychic +2
- 83: Medicine Jewel       Rec Level +1, Rec Speed -1
- 84: Panacea Jewel        Rec Level +3, Rec Speed -1
- 85: Professor Jewel      Combo Rate +2
- 86: Factory Jewel        Combo Plus +2
- 87: Evade Jewel          Evasion +1, Health -1
- 88: Lightfoot Jewel      Evasion +3, Health -1
- 89: Crisis Jewel         Potential +1, Protection -1
- 90: Peril Jewel          Potential +3, Protection -1
- 91: Enduring Jewel       LastingPwr +2
- 92: Sprinter Jewel       Stamina +1, Hunger -1
- 93: Marathon Jewel       Stamina +4, Hunger -2
- 94: Chamber Jewel        Loading +1, Reload Spd -1
- 95: Magazine Jewel       Loading +4, Reload Spd -2
- 96: Sniper Jewel         Precision +2
- 97: Gobbler Jewel        Eating +1, Rec Level -1
- 98: Voracious Jewel      Eating +4, Rec Level -2
- 99: Carver Jewel         Carving +1, Fate -1
-100: Looter Jewel         Carving +4, Fate -2
-101: Footing Jewel        Tremor Res +1, Sleep -1
-102: Tectonic Jewel       Tremor Res +3, Sleep -1
-103: BBQ Jewel            BBQ +2
-104: Jumping Jewel        Evade Dist +1, Health -1
-105: Leaping Jewel        Evade Dist +4, Health -2
-106: Draw Jewel           Crit Draw +1, Expert -1
-107: Critical Jewel       Crit Draw +3, Expert -1
-108: TrapMaster Jewel     SpeedSetup +2
-109: Workout Jewel        Constitutn +1, Stamina -1
-110: Physique Jewel       Constitutn +3, Stamina -1
-111: Tranq Jewel          Tranquilzr +1, Fate -1
-112: Capture Jewel        Tranquilzr +4, Fate -2
-113: Perception Jewel     Perception +2
-114: Charger Jewel        FastCharge +1, Constitutn -1
-115: Dynamo Jewel         FastCharge +4, Constitutn -2
-116: Fresh Air Jewel      Oxygen +2
-117: Upstream Jewel       CurrentRes +2
-118: Swimmer Jewel        Swimming +1, Oxygen -1
-119: Diver Jewel          Swimming +3, Oxygen -1
-120: Gambit Jewel         PunishDraw +1, Sharpness -1
-121: Checkmate Jewel      PunishDraw +4, Sharpness -2
-122: Resistor Jewel       Blight Res +1, Health -1
-123: Release Jewel        FreeElemnt +1, Status -1
-124: Catalyst Jewel       FreeElemnt +4, Status -2
-125: Guts Jewel           Survivor +1, Protection -1
-126: Fortitude Jewel      Survivor +3, Protection -1
-127: Salvo Jewel          Rapid Fire +1, Reload Spd -1
-128: Fusillade Jewel      Rapid Fire +4, Reload Spd -2
-129: Dung Jewel           Dungmaster +2
-130: Torchlight Jewel     Flame Aura +2
+ 50: Flute Jewel          Flute +2
+ 51: Gunnery Jewel        Gunnery +2
+ 52: Defense Jewel        Defense +1, Attack -1
+ 53: Defense Jewel        Defense +3, Attack -1
+ 54: Fire Res Jewel       Fire Res +1, Water Res -1
+ 55: Fire Res Jewel+      Fire Res +2
+ 56: Water Res Jewel      Water Res +1, ThunderRes -1
+ 57: Water Res Jewel+     Water Res +2
+ 58: ThundrRes Jewel      ThunderRes +1, Ice Res -1
+ 59: ThundrRes Jewel+     ThunderRes +2
+ 60: Ice Res Jewel        Ice Res +1, Fire Res -1
+ 61: Ice Res Jewel+       Ice Res +2
+ 62: DragonRes Jewel      Dragon Res +1, Poison -1
+ 63: DragonRes Jewel+     Dragon Res +2
+ 64: Protection Jewel     Protection +1
+ 65: Asylum Jewel         Protection +2
+ 66: Handicraft Jewel     Handicraft +1, Sharpness -1
+ 67: Handicraft Jewel     Handicraft +4, Sharpness -2
+ 68: Fencer Jewel         Fencing +1, Handicraft -1
+ 69: Fencer Jewel         Fencing +4, Handicraft -2
+ 70: Razor Jewel          Sharpness +1, Handicraft -1
+ 71: Razor Jewel          Sharpness +4, Handicraft -2
+ 72: Draw Jewel           Crit Draw +1, Expert -1
+ 73: Draw Jewel           Crit Draw +3, Expert -1
+ 74: Gambit Jewel         PunishDraw +1, Sharpness -1
+ 75: Gambit Jewel         PunishDraw +4, Sharpness -2
+ 76: Iron Wall Jewel      Guard +1, Constitutn -1
+ 77: Iron Wall Jewel      Guard +3, Constitutn -1
+ 78: Shield Jewel         Guard Up +1, StaminaRec -1
+ 79: Shield Jewel         Guard Up +3, StaminaRec -1
+ 80: Grinder Jewel        Sharpener +2
+ 81: Forceshot Jewel      NormalS Up +1, Recoil -1
+ 82: Forceshot Jewel      NormalS Up +4, Recoil -2
+ 83: Pierce Jewel         PierceS Up +1, Recoil -1
+ 84: Pierce Jewel         PierceS Up +4, Recoil -2
+ 85: Pellet Jewel         PelletS Up +1, Recoil -1
+ 86: Pellet Jewel         PelletS Up +4, Recoil -2
+ 87: ShotPlus Jewel       Normal S+ +1, Reload Spd -1
+ 88: ShotPlus Jewel       Normal S+ +3, Reload Spd -1
+ 89: PiercPlus Jewel      Pierce S+ +2
+ 90: PelletPlus Jewel     Pellet S+ +2
+ 91: CragPlus Jewel       Crag S+ +2
+ 92: ClustPlus Jewel      Clust S+ +1, Reload Spd -1
+ 93: SlicePlus Jewel      Slice S+ +2
+ 94: Salvo Jewel          Rapid Fire +1, Reload Spd -1
+ 95: Salvo Jewel          Rapid Fire +4, Reload Spd -2
+ 96: Quickload Jewel      Reload Spd +1, Recoil -1
+ 97: Quickload Jewel      Reload Spd +3, Recoil -1
+ 98: Absorber Jewel       Recoil +1, Reload Spd -1
+ 99: Absorber Jewel       Recoil +4, Reload Spd -2
+100: Sniper Jewel         Precision +2
+101: ParaPlus Jewel       Para C+ +1, Attack -1
+102: ParaPlus Jewel       Para C+ +3, Attack -1
+103: SleepPlus Jewel      Sleep C+ +2
+104: PoisonPlus Jewel     Poison C+ +2
+105: PowerPlus Jewel      Power C+ +1, Expert -1
+106: PowerPlus Jewel      Power C+ +3, Expert -1
+107: CloseRPlus Jewel     CloseR C+ +2
+108: ExhausPlus Jewel     Exhaust C+ +2
+109: Evade Jewel          Evasion +1, Health -1
+110: Evade Jewel          Evasion +3, Health -1
+111: Jumping Jewel        Evade Dist +1, Health -1
+112: Jumping Jewel        Evade Dist +4, Health -2
+113: Sheathe Jewel        Sheathe +1, Sharpener -1
+114: Sheathe Jewel        Sheathe +3, Sharpener -1
+115: TrapMaster Jewel     SpeedSetup +2
+116: Gobbler Jewel        Eating +1, Rec Level -1
+117: Gobbler Jewel        Eating +4, Rec Level -2
+118: Steadfast Jewel      Stun +1, Paralysis -1
+119: Steadfast Jewel+     Stun +2
+120: Paralysis Jewel      Paralysis +1, Poison -1
+121: Paralysis Jewel      Paralysis +3, Poison -1
+122: Pep Jewel            Sleep +1, Mud/Snow -1
+123: Pep Jewel            Sleep +3, Mud/Snow -1
+124: Antidote Jewel       Poison +1, Stun -1
+125: Antidote Jewel       Poison +3, Stun -1
+126: Solid Jewel          Solid Def +2
+127: Alarm Jewel          Anti-Theft +2
+128: AntiStick Jewel      Mud/Snow +1, Sleep -1
+129: AntiStick Jewel+     Mud/Snow +2
+130: Antisept Jewel       Antiseptic +1, Sense -1
+131: Antisept Jewel+      Antiseptic +2
+132: Footing Jewel        Tremor Res +1, Sleep -1
+133: Footing Jewel+       Tremor Res +2
+134: Breeze Jewel         Heat Res +2
+135: Warmth Jewel         Cold Res +2
+136: Earplug Jewel        Hearing +1, Protection -1
+137: Earplug Jewel        Hearing +4, Protection -2
+138: Anti-Wind Jewel      Wind Res +1, Fate -1
+139: Anti-Wind Jewel      Wind Res +3, Fate -1
+140: Friendship Jewel     Wide-Range +1, Sense -1
+141: Friendship Jewel     Wide-Range +3, Sense -1
+142: Ninja Jewel          Sense +2
+143: Professor Jewel      Combo Rate +2
+144: Enduring Jewel       LastingPwr +2
+145: Dung Jewel           Dungmaster +2
+146: Factory Jewel        Combo Plus +2
+147: Transportr Jewel     Transportr +2
+148: Gathering Jewel      Gathering +2
+149: Spree Jewel          Spd Gather +2
+150: Blessing Jewel       Whim +2
+151: Hunter Jewel         Hunter +2
+152: Psychic Jewel        Psychic +2
+153: Perception Jewel     Perception +2
+154: Fate Jewel           Fate +1, Whim -1
+155: Fate Jewel           Fate +4, Whim -2
+156: Capture Jewel        Tranquilzr +1, Fate -1
+157: Capture Jewel        Tranquilzr +4, Fate -2
+158: Carver Jewel         Carving +1, Fate -1
+159: Carver Jewel         Carving +4, Fate -2
+160: Resistor Jewel       Blight Res +1, Health -1
+161: Resistor Jewel       Blight Res +4, Health -2
+162: Fortitude Jewel      Survivor +1, Rec Level -1
+163: Fortitude Jewel      Survivor +3, Rec Level -1
