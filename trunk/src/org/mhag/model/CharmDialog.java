@@ -5,7 +5,6 @@
  * @author Tifa@mh3
  *
  */
-
 package org.mhag.model;
 
 /**
@@ -29,9 +28,11 @@ public class CharmDialog extends javax.swing.JDialog {
         initComponents();
     }
 
-    public CharmDialog(java.awt.Frame parent, boolean modal, MhagData aMhagData) {
+    public CharmDialog(java.awt.Frame parent, boolean modal, MhagData aMhagData, Generator aGen) {
         initComponents();
+		setTitle(String.format("My Charm (max %d)", numMax));
 		mhagData = aMhagData;
+		gen = aGen;
 		charmReload();
     }
 
@@ -61,9 +62,17 @@ public class CharmDialog extends javax.swing.JDialog {
         buttonReload = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("");
         setResizable(false);
+        addWindowFocusListener(new java.awt.event.WindowFocusListener() {
+            public void windowGainedFocus(java.awt.event.WindowEvent evt) {
+            }
+            public void windowLostFocus(java.awt.event.WindowEvent evt) {
+                formWindowLostFocus(evt);
+            }
+        });
 
-        charmSkillLabel.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        charmSkillLabel.setFont(new java.awt.Font("Monospaced", 0, 12));
         charmSkillLabel.setText("Slot");
 
         charmSkill1.setFont(new java.awt.Font("Monospaced", 0, 12));
@@ -107,7 +116,7 @@ public class CharmDialog extends javax.swing.JDialog {
         });
 
         charmList.setBorder(javax.swing.BorderFactory.createTitledBorder("Charm List"));
-        charmList.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        charmList.setFont(new java.awt.Font("Monospaced", 0, 12));
         charmList.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "---" };
             public int getSize() { return strings.length; }
@@ -152,7 +161,7 @@ public class CharmDialog extends javax.swing.JDialog {
             }
         });
 
-        buttonSave.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        buttonSave.setFont(new java.awt.Font("Monospaced", 0, 12));
         buttonSave.setText("Save");
         buttonSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,7 +169,7 @@ public class CharmDialog extends javax.swing.JDialog {
             }
         });
 
-        buttonReload.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        buttonReload.setFont(new java.awt.Font("Monospaced", 0, 12));
         buttonReload.setText("Reload");
         buttonReload.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -298,6 +307,10 @@ public class CharmDialog extends javax.swing.JDialog {
 	private void charmListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_charmListValueChanged
 		inputCharm();
 	}//GEN-LAST:event_charmListValueChanged
+
+	private void formWindowLostFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowLostFocus
+		setVisible(false);
+	}//GEN-LAST:event_formWindowLostFocus
 
     private void charmMenuAction()
     {
@@ -531,9 +544,10 @@ public class CharmDialog extends javax.swing.JDialog {
 	// charm add button action
 	private void charmAddAction()
 	{
+		if(numTot >= numMax)return;
 		charm.setCharmName(mhagData);
 		String name = charm.getCharmName();
-		System.out.println(name);
+		//System.out.println(name);
 		if(name.length() <= 0)return; // no charm specified
 
 		// add charm to the list
@@ -599,6 +613,7 @@ public class CharmDialog extends javax.swing.JDialog {
 		} catch (FileNotFoundException ex) {
 			Logger.getLogger(CharmDialog.class.getName()).log(Level.SEVERE, null, ex);
 		}
+
 	}
 
 	//charm reload
@@ -622,7 +637,8 @@ public class CharmDialog extends javax.swing.JDialog {
 		} catch (FileNotFoundException ex) {
 			listModel.insertElementAt("Auto-Guard +10", 0);
 			listModel.insertElementAt("OOO", 1);
-			numTot = 2;
+			listModel.insertElementAt("OO", 2);
+			numTot = 3;
 		}
 	    charmList.setModel(listModel);
 		adjust = false;
@@ -676,11 +692,13 @@ public class CharmDialog extends javax.swing.JDialog {
 
 	// my variables
 	private MhagData mhagData;
+	private Generator gen;
 	private Charm charm = new Charm();
 	private int numTot = 0;
 	private DefaultListModel listModel =  new DefaultListModel(); //generator skill list
-	private final String fileCharm = "mycharm.dat";
 	private boolean adjust = false;
+	static String fileCharm = "mycharm.dat";
+	static int numMax = 255;  //maximum number of charms
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonAdd;

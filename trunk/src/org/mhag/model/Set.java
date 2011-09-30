@@ -1651,6 +1651,7 @@ public class Set {
 		numEffect = 0;
 		Arrays.fill(effectID, 0);
 		Arrays.fill(effectSkillIndex, 0);
+		//System.out.printf("1: %d\n",rate);
 
 		for(int i =0; i < numSkill; i++)
 		{
@@ -1690,6 +1691,7 @@ public class Set {
 				}
 
 			}
+			//System.out.printf("2: %d\n",rate);
 
 		}
 
@@ -1719,6 +1721,7 @@ public class Set {
 			}
 			if(nSlot > 0)
 				rate += nSlot * gen.getScorePara(3); //bonus for unused slots
+			//System.out.printf("3: %d\n",rate);
 		}
 
 		if(inUse[5])  //weapon slots
@@ -1731,6 +1734,7 @@ public class Set {
 			}
 			if(nSlot > 0)
 				rate += nSlot * gen.getScorePara(4); //penalty for used slots (less weapon of choice)
+			//System.out.printf("4: %d\n",rate);
 		}
 
 	}

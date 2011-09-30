@@ -1,118 +1,212 @@
-  0: Piscine Mask     Leather Vest     Leather Gloves     Piscine Belt     Piscine Leggings
-  1: Leather Headgear     Chainmail Vest     Chainmail Gloves     Leather Belt     Leather Pants
-  2: Chainmail Headgear     Loc Lac Shawl     Hunter's Vambraces     Chainmail Belt     Chainmail Pants
-  3: Hunter's Helm     Hunter's Mail     Hunter's Guards     Loc Lac Kilt     Loc Lac Boots
-  4: Hunter's Cap     Hunter's Vest     Bone Vambraces     Hunter's Faulds     Hunter's Greaves
-  5: Bone Helm     Bone Mail     Bone Guards     Hunter's Coat     Hunter's Leggings
-  6: Bone Cap     Bone Vest     Alloy Vambraces     Bone Faulds     Bone Greaves
-  7: Alloy Helm     Alloy Mail     Alloy Guards     Bone Coat     Bone Leggings
-  8: Alloy Cap     Alloy Vest     Jaggi Vambraces     Alloy Coil     Alloy Greaves
-  9: Jaggi Helm     Jaggi Mail     Jaggi Guards     Alloy Coat     Alloy Leggings
- 10: Jaggi Cap     Jaggi Vest     Rhenoplos Vambraces     Jaggi Faulds     Jaggi Greaves
- 11: Rhenoplos Helm     Bnahabra Suit     Rhenoplos Guards     Jaggi Coat     Jaggi Leggings
- 12: Rhenoplos Cap     Bnahabra vest     Qurupeco Vambraces     Bnahabra Coil     Bnahabra Boots
- 13: Qurupeco Helm     Rhenoplos Mail     Qurupeco Guards     Bnahabra Coat     Bnahabra Leggings
- 14: Qurupeco Cap     Rhenoplos Vest     Ludroth Vambraces     Rhenoplos Coil     Rhenoplos Greaves
- 15: Ludroth Helm     Qurupeco Mail     Ludroth Guards     Rhenoplos Coat     Rhenoplos Leggings
- 16: Ludroth Cap     Qurupeco Vest     Steel Vambraces     Qurupeco Coil     Qurupeco Greaves
- 17: Baggi Helm     Ludroth Mail     Baggi Vambraces     Qurupeco Coat     Qurupeco Leggings
- 18: Baggi Cap     Ludroth Vest     Baggi Guards     Ludroth Faulds     Ludroth Greaves
- 19: Barroth Helm     Steel Mail     Barroth Vambraces     Ludroth Coat     Ludroth Leggings
- 20: Barroth Cap     Baggi Mail     Barroth Guards     Steel Faulds     Baggi Greaves
- 21: Gobul Helm     Baggi Vest     Gobul Vambraces     Baggi Coil     Baggi Leggings
- 22: Gobul Cap     Barroth Mail     Gobul Guards     Baggi Coat     Barroth Greaves
- 23: Rathian Helm     Barroth Vest     Rathian Vambraces     Barroth Faulds     Barroth Leggings
- 24: Rathian Cap     Gobul Mail     Rathian Guards     Barroth Coat     Gobul Greaves
- 25: Gigginox Helm     Gobul Vest     Gigginox Vambraces     Gobul Faulds     Gobul Leggings
- 26: Gigginox Cap     Rathian Mail     Gigginox Guards     Gobul Coat     Rathian Greaves
- 27: Ingot Helm     Rathian Vest     Ingot Vambraces     Rathian Faulds     Rathian Leggings
- 28: Ingot Cap     Gigginox Mail     Ingot Guards     Rathian Coat     Gigginox Greaves
- 29: Lagiacrus Helm     Gigginox Vest     Lagiacrus Vambraces     Gigginox Faulds     Gigginox Leggings
- 30: Lagiacrus Cap     Ingot Mail     Lagiacrus Guards     Gigginox Coat     Ingot Greaves
- 31: Rathalos Helm     Ingot Vest     Rathalos Vambraces     Ingot Coil     Ingot Leggings
- 32: Rathalos Cap     Lagiacrus Mail     Rathalos Guards     Ingot Coat     Lagiacrus Greaves
- 33: Barioth Helm     Lagiacrus Vest     Barioth Vambraces     Lagiacrus Faulds     Lagiacrus Leggings
- 34: Barioth Cap     Rathalos Mail     Barioth Guards     Lagiacrus Coat     Rathalos Greaves
- 35: Diablos Helm     Rathalos Vest     Diablos Vambraces     Rathalos Faulds     Rathalos Leggings
- 36: Diablos Cap     Barioth Mail     Diablos Guards     Rathalos Coat     Barioth Greaves
- 37: Uragaan Helm     Barioth Vest     Uragaan Vambraces     Barioth Faulds     Barioth Leggings
- 38: Uragaan Cap     Diablos Mail     Uragaan Guards     Barioth Coat     Uragaan Greaves
- 39: Agnaktor Helm     Diablos Vest     Agnaktor Vambraces     Uragaan Faulds     Uragaan Leggings
- 40: Agnaktor Cap     Uragaan Mail     Agnaktor Guards     Uragaan Coat     Agnaktor Greaves
- 41: Helios Helm/Selene Helm     Uragaan Vest     Helios Vambraces/Selene Vambraces     Agnaktor Faulds     Agnaktor Leggings
- 42: Helios Cap/Selene Cap     Agnaktor Mail     Helios Guards/Selene Guards     Agnaktor Coat     Helios Greaves/Selene Greaves
- 43: Yamato Kabuto/Hinata Hachigane     Agnaktor Vest     Yamato Kote/Hinata Kote     Helios Coil/Selene Coil     Helios Leggings/Selene Leggings
- 44: Mutsu Eboshi/Amagi Hachigane     Helios Mail/Selene Mail     Mutsu Kote/Amagi Kote     Helios Coat/Selene Coat     Yamato Gusoku/Hinata Hakama
- 45: Guild Bard Lobos/Scholar's Beret     Helios Vest/Selene Vest     Guild Bard Braces/Scholar's Gloves     Yamato Koshiate/Hinata Koshiate     Mutsu Gosuku/Amagi Hakama
- 46: Guild Bard Hat/Scholar's Cap     Yamato Muneate/Hinata Muneate     Guild Bard Sleeves/Scholar's Sleeves     Mutsu Koshiate/Amagi Koshiate     Guild Bard Boots/Scholar's Socks
- 47: Ranger's Headgear     Mutsu Muneate/Amagi Muneate     Ranger's Gauntlets     Guild Bard Coil/Scholar's Skirt     Guild Bard Gaiters/Scholar's Sandals
- 48: Archer's Turban     Guild Bard Bolero/Scholar's Blouse     Archer's Gautlets     Guild Bard Coat/Scholar's Mini     Ranger's Espadrilles
- 49: Piscine Mask+     Guild Bard Vest/Scholar's Vest     Leather Vambraces+     Ranger's Faulds     Archer's Espadrilles
- 50: Piscine Snorkel+     Ranger's Girdle     Leather Guards+     Archer's Bandolier     Piscine Leggings+
- 51: Leather Helm+     Archer's Girdle     Chainmail Vambraces+     Piscine Belt+     Piscine Pants+
- 52: Leather Cap+     Leather Mail+     Chainmail Guards+     Piscine Tank+     Leather Greaves+
- 53: Chainmail Helm+     Leather Vest+     Hunter's Vambraces+     Leather Faulds+     Leather Leggings+
- 54: Chainmail Cap+     Chainmail Mail+     Hunter's Guards+     Leather Coat+     Chainmail Greaves+
- 55: Hunter's Helm+     Chainmail Vest+     Bone Vambraces+     Chainmail Faulds+     Chainmail Leggings+
- 56: Hunter's Cap+     Loc Lac Shawl+     Bone Guards+     Chainmail Coat+     Loc Lac Boots+
- 57: Bone Helm+     Loc Lac Vest+     Alloy Vambraces+     Loc Lac Kilt+     Loc Lac Gaiters+
- 58: Bone Cap+     Hunter's Mail+     Alloy Guards+     Loc Lac Coat+     Hunter's Greaves+
- 59: Alloy Helm+     Hunter's Vest+     Jaggi Vambraces+     Hunter's Faulds+     Hunter's Leggings+
- 60: Alloy Cap+     Bone Mail+     Jaggi Guards+     Hunter's Coat+     Bone Greaves+
- 61: Jaggi Helm+     Bone Vest+     Rhenoplos Vambraces+     Bone Faulds+     Bone Leggings+
- 62: Jaggi Cap+     Alloy Mail+     Rhenoplos Guards+     Bone Coat+     Alloy Greaves+
- 63: Rhenoplos Helm+     Alloy Vest+     Qurupeco Vambraces+     Alloy Coil+     Alloy Leggings+
- 64: Rhenoplos Cap+     Jaggi Mail+     Qurupeco Guards+     Alloy Coat+     Jaggi Greaves+
- 65: Qurupeco Helm+     Jaggi Vest+     Ludroth Vambraces+     Jaggi Faulds+     Jaggi Leggings+
- 66: Qurupeco Cap+     Bnahabra Suit+     Ludroth Guards+     Jaggi Coat+     Bnahabra Boots+
- 67: Ludroth Helm+     Bnahabra vest+     Steel Vambraces+     Bnahabra Coil+     Bnahabra Leggings+
- 68: Ludroth Cap+     Rhenoplos Mail+     Baggi Vambraces+     Bnahabra Coat+     Rhenoplos Greaves+
- 69: Baggi Helm+     Rhenoplos Vest+     Baggi Guards+     Rhenoplos Coil+     Rhenoplos Leggings+
- 70: Baggi Cap+     Qurupeco Mail+     Barroth Vambraces+     Rhenoplos Coat+     Qurupeco Greaves+
- 71: Barroth Helm+     Qurupeco Vest+     Barroth Guards+     Qurupeco Coil+     Qurupeco Leggings+
- 72: Barroth Cap+     Ludroth Mail+     Gobul Vambraces+     Qurupeco Coat+     Ludroth Greaves+
- 73: Gobul Helm+     Ludroth Vest+     Gobul Guards+     Ludroth Faulds+     Ludroth Leggings+
- 74: Gobul Cap+     Steel Mail+     Rathian Vambraces+     Ludroth Coat+     Baggi Greaves+
- 75: Rathian Helm+     Baggi Mail+     Rathian Guards+     Steel Faulds+     Baggi Leggings+
- 76: Rathian Cap+     Baggi Vest+     Gigginox Vambraces+     Baggi Coil+     Barroth Greaves+
- 77: Gigginox Helm+     Barroth Mail+     Gigginox Guards+     Baggi Coat+     Barroth Leggings+
- 78: Gigginox Cap+     Barroth Vest+     Ingot Vambraces+     Barroth Faulds+     Gobul Greaves+
- 79: Ingot Helm+     Gobul Mail+     Ingot Guards+     Barroth Coat+     Gobul Leggings+
- 80: Ingot Cap+     Gobul Vest+     Dober Vambraces     Gobul Faulds+     Rathian Greaves+
- 81: Dober Helm     Rathian Mail+     Dober Guards     Gobul Coat+     Rathian Leggings+
- 82: Dober Cap     Rathian Vest+     Lagiacrus Vambraces+     Rathian Faulds+     Gigginox Greaves+
- 83: Lagiacrus Helm+     Gigginox Mail+     Lagiacrus Guards+     Rathian Coat+     Gigginox Leggings+
- 84: Lagiacrus Cap+     Gigginox Vest+     Rathalos Vambraces+     Gigginox Faulds+     Ingot Greaves+
- 85: Rathalos Helm+     Ingot Mail+     Rathalos Guards+     Gigginox Coat+     Ingot Leggings+
- 86: Rathalos Cap+     Ingot Vest+     Barioth Vambraces+     Ingot Coil+     Dober Greaves
- 87: Barioth Helm+     Dober Mail     Barioth Guards+     Ingot Coat+     Dober Leggings
- 88: Barioth Cap+     Dober Vest     Diablos Vambraces+     Dober Coil     Lagiacrus Greaves+
- 89: Diablos Helm+     Lagiacrus Mail+     Diablos Guards+     Dober Coat     Lagiacrus Leggings+
- 90: Diablos Cap+     Lagiacrus Vest+     Uragaan Vambraces+     Lagiacrus Faulds+     Rathalos Greaves+
- 91: Uragaan Helm+     Rathalos Mail+     Uragaan Guards+     Lagiacrus Coat+     Rathalos Leggings+
- 92: Uragaan Cap+     Rathalos Vest+     Agnaktor Vambraces+     Rathalos Faulds+     Barioth Greaves+
- 93: Agnaktor Helm+     Barioth Mail+     Agnaktor Guards+     Rathalos Coat+     Barioth Leggings+
- 94: Agnaktor Cap+     Barioth Vest+     Damacrus Vambraces     Barioth Faulds+     Uragaan Greaves+
- 95: Damacrus Helm     Diablos Mail+     Damacrus Guards     Barioth Coat+     Uragaan Leggings+
- 96: Damacrus Cap     Diablos Vest+     Helios Vambraces+/Selene Vambraces+     Uragaan Faulds+     Agnaktor Greaves+
- 97: Helios Helm+/Selene Helm+     Uragaan Mail+     Helios Guards+/Selene Guards+     Uragaan Coat+     Agnaktor Leggings+
- 98: Helios Cap+/Selene Cap+     Uragaan Vest+     Yamato Kote+/Hinata Kote+     Agnaktor Faulds+     Damacrus Greaves
- 99: Yamato Kabuto+/Hinata Hachigane+     Agnaktor Mail+     Mutsu Kote+/Amagi Kote+     Agnaktor Coat+     Damacrus Leggings
-100: Mutsu Eboshi+/Amagi Hachigane+     Agnaktor Vest+     Guild Bard Braces+/Scholar's Gloves+     Damacrus Coil     Helios Greaves+/Selene Greaves+
-101: Guild Bard Lobos+/Scholar's Ceret+     Damacrus Mail     Guild Bard Sleeves+/Scholar's Sleeves+     Damacrus Coat     Helios Leggings+/Selene Leggings+
-102: Guild Bard Hat+/Scholar's Cap+     Damacrus Vest     Vangis Vambraces     Helios Coil+/Selene Coil+     Yamato Gusoku+/Hinata Hakama+
-103: Vangis Helm     Helios Mail+/Selene Mail+     Vangis Guards     Helios Coat+/Selene Coat+     Mutsu Gosuku+/Amagi Hakama+
-104: Vangis Cap     Helios Vest+/Selene Vest+     Escadora Arms     Yamato Koshiate+/Hinata Koshiate+     Guild Bard Boots+/Scholar's Socks+
-105: Escadora Wisdom     Yamato Muneate+/Hinata Muneate+     Escadora Arma     Mutsu Koshiate+/Amagi Koshiate+     Guild Bard Gaiters+/Scholar's Sandals+
-106: Escadora Sagesse     Mutsu Muneate+/Amagi Muneate+     Chakra Bracelet     Guild Bard Coil+/Scholar's Skirt+     Vangis Greaves
-107: Chakra Earring     Guild Bard Bolero+/Scholar's Blouse+          Guild Bard Coat+/Scholar's Mini+     Vangis Leggings
-108: Blast Earring     Guild Bard Vest+/Scholar's Vest+          Vangis Coil     Escadora Scale
-109: Pursuit Earring     Vangis Mail          Vangis Coat     Escadora Scala
-110: Hawkeye Earring     Vangis Vest          Escadora Might     Chakra Anklet
-111: Grace Earring     Escadora Soul          Escadora Force     Black Leather Pants
-112: Sword Saint Earring     Escadora Seele          Chakra Waistlet     
-113: Barrage Earring     Chakra Necklace               
-114: Jaggi Mask     HellHunter Jacket               
-115: Skulll Mask     HellHunter Leather               
-116: Wyvernking Eyepatch     SoulHunter Jacket               
-117: Shadow Shade     SoulHunter Leather               
+  0: Yukumo Kasa     Yukumo Dogi     Yukumo Kote     Yukumo Obi     Yukumo Hakama
+  1: Leather Headgear     Leather Vest     Leather Gloves     Leather Belt     Leather Pants
+  2: Chainmail Headgear     Chainmail Vest     Chainmail Gloves     Chainmail Belt     Chainmail Pants
+  3: Hunter's Helm     Loc Lac Shawl     Hunter's Vambraces     Loc Lac Kilt     Loc Lac Boots
+  4: Hunter's Cap     Hunter's Mail     Hunter's Guards     Hunter's Faulds     Hunter's Greaves
+  5: Bone Helm     Hunter's Vest     Bone Vambraces     Hunter's Coat     Hunter's Leggings
+  6: Bone Cap     Bone Mail     Bone Guards     Bone Faulds     Bone Greaves
+  7: Alloy Helm     Bone Vest     Alloy Vambraces     Bone Coat     Bone Leggings
+  8: Alloy Cap     Alloy Mail     Alloy Guards     Alloy Coil     Alloy Greaves
+  9: Bnahabra Hat     Alloy Vest     Bnahabra Glove     Alloy Coat     Alloy Leggings
+ 10: Bnahabra Cap     Bnahabra Suit     Bnahabra Cuffs     Bnahabra Coil     Bnahabra Boots
+ 11: Rhenoplos Helm     Bnahabra vest     Rhenoplos Vambraces     Bnahabra Coat     Bnahabra Leggings
+ 12: Rhenoplos Cap     Rhenoplos Mail     Rhenoplos Guards     Rhenoplos Coil     Rhenoplos Greaves
+ 13: Jaggi Helm     Rhenoplos Vest     Jaggi Vambraces     Rhenoplos Coat     Rhenoplos Leggings
+ 14: Jaggi Cap     Jaggi Mail     Jaggi Guards     Jaggi Faulds     Jaggi Greaves
+ 15: Qurupeco Helm     Jaggi Vest     Qurupeco Vambraces     Jaggi Coat     Jaggi Leggings
+ 16: Qurupeco Cap     Qurupeco Mail     Qurupeco Guards     Qurupeco Coil     Qurupeco Greaves
+ 17: Ludroth Helm     Qurupeco Vest     Ludroth Vambraces     Qurupeco Coat     Qurupeco Leggings
+ 18: Ludroth Cap     Ludroth Mail     Ludroth Guards     Ludroth Faulds     Ludroth Greaves
+ 19: Urkusus Helm     Ludroth Vest     Urkusus Vambraces     Ludroth Coat     Ludroth Leggings
+ 20: Urkusus Cap     Urkusus Mail     Urkusus Guards     Urkusus Faulds     Urkusus Greaves
+ 21: Froggi Helm     Urkusus Vest     Froggi Vambraces     Urkusus Coat     Urkusus Leggings
+ 22: Froggi Cap     Froggi Mail     Froggi Guards     Froggi Faulds     Froggi Greaves
+ 23: Aoashira Helm     Froggi Vest     Aoashira Vambraces     Froggi Coat     Froggi Leggings
+ 24: Aoashira Cap     Aoashira Mail     Aoashira Guards     Aoashira Faulds     Aoashira Greaves
+ 25: Barroth Helm     Aoashira Vest     Barroth Vambraces     Aoashira Coat     Aoashira Leggings
+ 26: Barroth Cap     Barroth Mail     Barroth Guards     Barroth Faulds     Barroth Greaves
+ 27: Ranguro Helm     Barroth Vest     Ranguro Vambraces     Barroth Coat     Barroth Leggings
+ 28: Ranguro Cap     Ranguro Mail     Ranguro Guards     Ranguro Faulds     Ranguro Greaves
+ 29: Baggi Helm     Ranguro Vest     Baggi Vambraces     Ranguro Coat     Ranguro Leggings
+ 30: Baggi Cap     Baggi Mail     Baggi Guards     Baggi Coil     Baggi Greaves
+ 31: Hapul Helm     Baggi Vest     Hapul Vambraces     Baggi Coat     Baggi Leggings
+ 32: Hapul Cap     Hapul Mail     Hapul Guards     Hapul Faulds     Hapul Greaves
+ 33: Rathian Helm     Hapul Vest     Rathian Vambraces     Hapul Coat     Hapul Leggings
+ 34: Rathian Cap     Rathian Mail     Rathian Guards     Rathian Faulds     Rathian Greaves
+ 35: Gigginox Helm     Rathian Vest     Gigginox Vambraces     Rathian Coat     Rathian Leggings
+ 36: Gigginox Cap     Gigginox Mail     Gigginox Guards     Gigginox Faulds     Gigginox Greaves
+ 37: Ingot Helm     Gigginox Vest     Steel Vambraces     Gigginox Coat     Gigginox Leggings
+ 38: Ingot Cap     Steel Mail     Ingot Vambraces     Steel Faulds     Ingot Greaves
+ 39: Yuami Headpiece     Ingot Mail     Ingot Guards     Ingot Coil     Ingot Leggings
+ 40: Zuwaroposu Hood     Ingot Vest     Yuami Wrist     Ingot Coat     Yuami Sandals
+ 41: Zuwaroposu Cap     Yuami Towel     Vaiku Vambraces     Vaiku Faulds     Vaiku Greaves
+ 42: Acorn Helm     Zuwaroposu Mantle     Vaiku Guards     Vaiku Coat     Vaiku Leggings
+ 43: Vaiku Helm     Zuwaroposu Vest     Pumpkin Vambraces     Pumpkin Faulds     Pumpkin Greaves
+ 44: Vaiku Cap     Acorn Mail     Pumpkin Guards     Pumpkin Coat     Pumpkin Leggings
+ 45: Pumpkin Helm     Vaiku Mail     Obituary Mano/Butterfly Mano     Obituary Anca/Butterfly Anca     Obituary Gamba/Butterfly Gamba
+ 46: Pumpkin Cap     Vaiku Vest     Obituary Brasso/Butterfly Brasso     Obituary Cocusa/Butterfly Cocusa     Obituary Femur/Butterfly Femur
+ 47: Obituary Testa/Butterfly Testa     Pumpkin Mail     Barioth Vambraces     Barioth Faulds     Barioth Greaves
+ 48: Obituary Caput/Butterfly Caput     Pumpkin Vest     Barioth Guards     Barioth Coat     Barioth Leggings
+ 49: Barioth Helm     Obituary Petto/Butterfly Petto     Guild Bard Braces/Scholar's Gloves     Guild Bard Coil/Scholar's Skirt     Guild Bard Boots/Scholar's Socks
+ 50: Barioth Cap     Obituary Pectus/Butterfly Pectus     Guild Bard Sleeves/Scholar's Sleeves     Guild Bard Coat/Scholar's Mini     Guild Bard Gaiters/Scholar's Sandals
+ 51: Guild Bard Lobos/Scholar's Beret     Barioth Mail     Ancient Vambraces     Nargacuga Faulds     Ancient Greaves
+ 52: Guild Bard Hat/Scholar's Cap     Barioth Vest     Ancient Guards     Nargacuga Coat     Ancient Leggings
+ 53: Nargacuga Helm     Guild Bard Bolero/Scholar's Blouse     Nargacuga Vambraces     Jinouga Faulds     Nargacuga Greaves
+ 54: Nargacuga Cap     Guild Bard Vest/Scholar's Vest     Nargacuga Guards     Jinouga Coat     Nargacuga Leggings
+ 55: Jinouga Helm     Ancient Mail     Jinouga Vambraces     Rathalos Faulds     Jinouga Greaves
+ 56: Jinouga Cap     Ancient Vest     Jinouga Guards     Rathalos Coat     Jinouga Leggings
+ 57: Rathalos Helm     Nargacuga Mail     Rathalos Vambraces     Tigrex Faulds     Rathalos Greaves
+ 58: Rathalos Cap     Nargacuga Vest     Rathalos Guards     Tigrex Coat     Rathalos Leggings
+ 59: Tigrex Helm     Jinouga Mail     Tigrex Vambraces     Dobol Faulds     Tigrex Greaves
+ 60: Tigrex Cap     Jinouga Vest     Tigrex Guards     Dobol Coat     Tigrex Leggings
+ 61: Dobol Helm     Rathalos Mail     Dobol Vambraces     Agnaktor Faulds     Dobol Greaves
+ 62: Dobol Cap     Rathalos Vest     Dobol Guards     Agnaktor Coat     Dobol Leggings
+ 63: Agnaktor Helm     Tigrex Mail     Agnaktor Vambraces     Diablos Faulds     Agnaktor Greaves
+ 64: Agnaktor Cap     Tigrex Vest     Agnaktor Guards     Diablos Coat     Agnaktor Leggings
+ 65: Diablos Helm     Dobol Mail     Diablos Vambraces     Uragaan Faulds     Diablos Greaves
+ 66: Diablos Cap     Dobol Vest     Diablos Guards     Uragaan Coat     Diablos Leggings
+ 67: Uragaan Helm     Agnaktor Mail     Uragaan Vambraces     Yamato Koshiate/Hinata Koshiate     Uragaan Greaves
+ 68: Uragaan Cap     Agnaktor Vest     Uragaan Guards     Mutsu Koshiate/Amagi Koshiate     Uragaan Leggings
+ 69: Yamato Kabuto/Hinata Hachigane     Diablos Mail     Yamato Kote/Hinata Kote     Yukumo - Sky Obi     Yamato Gusoku/Hinata Hakama
+ 70: Mutsu Eboshi/Amagi Hachigane     Diablos Vest     Mutsu Kote/Amagi Kote     Yukumo - Earth Obi     Mutsu Gosuku/Amagi Hakama
+ 71: Yukumo - Sky Kasa     Uragaan Mail     Yukumo - Sky Kote     Leather S Faulds     Yukumo - Sky Hakama
+ 72: Yukumo - Earth Kasa     Uragaan Vest     Yukumo - Earth Kote     Leather S Coat     Yukumo - Earth Hakama
+ 73: Leather S Helm     Yamato Muneate/Hinata Muneate     Leather S Vambraces     Chainmail S Faulds     Leather S Greaves
+ 74: Leather S Cap     Mutsu Muneate/Amagi Muneate     Leather S Guards     Chainmail S Coat     Leather S Legging
+ 75: Chainmail S Helm     Yukumo - Sky Dogi     Chainmail S Vambraces     Hunter's S Faulds     Chainmail S Greaves
+ 76: Chainmail S Cap     Yukumo - Earth Dogi     Chainmail S Guards     Hunter's S Coat     Chainmail S Leggings
+ 77: Hunter's S Helm     Leather S Mail     Hunter's S Vambraces     Loc Lac S Kilt     Hunter's S Greaves
+ 78: Hunter's S Cap     Leather S Vest     Hunter's S Guards     Loc Lac S Coat     Hunter's S Leggings
+ 79: Bone S Helm     Chainmail S Mail     Bone S Vambraces     Bone S Faulds     Loc Lac S Boots
+ 80: Bone S Cap     Chainmail S Vest     Bone S Guards     Bone S Coat     Loc Lac S Gaiters
+ 81: Alloy S Helm     Hunter's S Mail     Alloy S Vambraces     Alloy S Coil     Bone S Greaves
+ 82: Alloy S Cap     Hunter's S Vest     Alloy S Guards     Alloy S Coat     Bone S Leggings
+ 83: Rhenoplos S Helm     Loc Lac S Shawl     Rhenoplos S Vambraces     Rhenoplos S Coil     Alloy S Greaves
+ 84: Rhenoplos S Cap     Loc Lac S Vest     Rhenoplos S Guards     Rhenoplos S Coat     Alloy S Leggings
+ 85: Zuwaroposu S Hood     Bone S Mail     Bnahabra S Glove     Bnahabra S Coil     Rhenoplos S Greaves
+ 86: Zuwaroposu S Cap     Bone S Vest     Bnahabra S Cuffs     Bnahabra S Coat     Rhenoplos S Leggings
+ 87: Bnahabra S Hat     Alloy S Mail     Jaggi S Vambraces     Jaggi S Faulds     Bnahabra S Boots
+ 88: Bnahabra S Cap     Alloy S Vest     Jaggi S Guards     Jaggi S Coat     Bnahabra S Leggings
+ 89: Jaggi S Helm     Rhenoplos S Mail     Froggi S Vambraces     Froggi S Faulds     Jaggi S Greaves
+ 90: Jaggi S Cap     Rhenoplos S Vest     Froggi S Guards     Froggi S Coat     Jaggi S Leggings
+ 91: Froggi S Helm     Zuwaroposu S Mantle     Urkusus S Vambraces     Urkusus S Faulds     Froggi S Greaves
+ 92: Froggi S Cap     Zuwaroposu S Vest     Urkusus S Guards     Urkusus S Coat     Froggi S Leggings
+ 93: Urkusus S Helm     Bnahabra S Suit     Steel S Vambraces     Steel S Faulds     Urkusus S Greaves
+ 94: Urkusus S Cap     Bnahabra S vest     Aoashira S Vambraces     Aoashira S Faulds     Urkusus S Leggings
+ 95: Aoashira S Helm     Jaggi S Mail     Aoashira S Guards     Aoashira S Coat     Aoashira S Greaves
+ 96: Aoashira S Cap     Jaggi S Vest     Chakra Bracelet     Chakra Waistlet     Aoashira S Leggings
+ 97: Chakra Earring     Froggi S Mail     Yuami Wrist+     Pumpkin S Faulds     Chakra Anklet
+ 98: Yuami Headpiece+     Froggi S Vest     Pumpkin S Vambraces     Pumpkin S Coat     Yuami Sandals+
+ 99: Pumpkin S Helm     Urkusus S Mail     Pumpkin S Guards     Qurupeco S Coil     Pumpkin S Greaves
+100: Pumpkin S Cap     Urkusus S Vest     Qurupeco S Vambraces     Qurupeco S Coat     Pumpkin S Leggings
+101: Qurupeco S Helm     Steel S Mail     Qurupeco S Guards     Ludroth S Faulds     Qurupeco S Greaves
+102: Qurupeco S Cap     Aoashira S Mail     Ludroth S Vambraces     Ludroth S Coat     Qurupeco S Leggings
+103: Ludroth S Helm     Aoashira S Vest     Ludroth S Guards     Vaiku S Faulds     Ludroth S Greaves
+104: Ludroth S Cap     Chakra Necklace     Vaiku S Vambraces     Vaiku S Coat     Ludroth S Leggings
+105: Vaiku S Helm     Yuami Towel+     Vaiku S Guards     Nadeshiko Waist     Vaiku S Greaves
+106: Vaiku S Cap     Pumpkin S Mail     Nadeshiko Sleeves     Kikyo Waist     Vaiku S Leggings
+107: Nadeshiko Cap     Pumpkin S Vest     Kikyo Sleeves     Barroth S Faulds     Nadeshiko Skirt
+108: Kikyo Cap     Qurupeco S Mail     Barroth S Vambraces     Barroth S Coat     Kikyo Skirt
+109: Barroth S Helm     Qurupeco S Vest     Barroth S Guards     Baggi S Coil     Barroth S Greaves
+110: Barroth S Cap     Ludroth S Mail     Baggi S Vambraces     Baggi S Coat     Barroth S Leggings
+111: Baggi S Helm     Ludroth S Vest     Baggi S Guards     Ranguro S Faulds     Baggi S Greaves
+112: Baggi S Cap     Vaiku S Mail     Ranguro S Vambraces     Ranguro S Coat     Baggi S Leggings
+113: Ranguro S Helm     Vaiku S Vest     Ranguro S Guards     Rathian S Faulds     Ranguro S Greaves
+114: Ranguro S Cap     Nadeshiko Vest     Rathian S Vambraces     Rathian S Coat     Ranguro S Leggings
+115: Rathian S Helm     Kikyo Vest     Rathian S Guards     Guild Bard S Coil/Scholar's S Skirt     Rathian S Greaves
+116: Rathian S Cap     Barroth S Mail     Guild Bard S Braces/Scholar's S Gloves     Guild Bard S Coat/Scholar's S Mini     Rathian S Leggings
+117: Guild Bard S Lobos/Scholar's S Beret     Barroth S Vest     Guild Bard S Sleeves/Scholar's S Sleeves     Gigginox S Faulds     Guild Bard S Boots/Scholar's S Socks
+118: Guild Bard S Hat/Scholar's S Cap     Baggi S Mail     Gigginox S Vambraces     Gigginox S Coat     Guild Bard S Gaiters/Scholar's S Sandals
+119: Gigginox S Helm     Baggi S Vest     Gigginox S Guards     Obituary S Anca/Butterfly S Anca     Gigginox S Greaves
+120: Gigginox S Cap     Ranguro S Mail     Obituary S Mano/Butterfly S Mano     Obituary S Cocusa/Butterfly S Cocusa     Gigginox S Leggings
+121: Obituary S Testa/Butterfly S Testa     Ranguro S Vest     Obituary S Brasso/Butterfly S Brasso     Hapul S Faulds     Obituary S Gamba/Butterfly S Gamba
+122: Obituary S Caput/Butterfly S Caput     Rathian S Mail     Hapul S Vambraces     Hapul S Coat     Obituary S Femur/Butterfly S Femur
+123: Hapul S Helm     Rathian S Vest     Hapul S Guards     Ranger's Faulds     Hapul S Greaves
+124: Hapul S Cap     Guild Bard S Bolero/Scholar's S Blouse     Ranger's Gauntlets     Archer's Bandolier     Hapul S Leggings
+125: Acorn S Helm     Guild Bard S Vest/Scholar's S Vest     Archer's Gautlets     Ingot S Coil     Ranger's Espadrilles
+126: Acorn S Cap     Gigginox S Mail     Ancient S Vambraces     Ingot S Coat     Archer's Espadrilles
+127: Ranger's Headgear     Gigginox S Vest     Ancient S Guards     Nargacuga S Faulds     Ancient S Greaves
+128: Archer's Turban     Obituary S Petto/Butterfly S Petto     Ingot S Vambraces     Nargacuga S Coat     Ancient S Leggings
+129: Ingot S Helm     Obituary S Pectus/Butterfly S Pectus     Ingot S Guards     Barioth S Faulds     Ingot S Greaves
+130: Ingot S Cap     Hapul S Mail     Nargacuga S Vambraces     Barioth S Coat     Ingot S Leggings
+131: Nargacuga S Helm     Hapul S Vest     Nargacuga S Guards     Rathalos S Faulds     Nargacuga S Greaves
+132: Nargacuga S Cap     Acorn S Mail     Barioth S Vambraces     Rathalos S Coat     Nargacuga S Leggings
+133: Barioth S Helm     Acorn S Vest     Barioth S Guards     Uragaan S Faulds     Barioth S Greaves
+134: Barioth S Cap     Ranger's Girdle     Rathalos S Vambraces     Uragaan S Coat     Barioth S Leggings
+135: Rathalos S Helm     Archer's Girdle     Rathalos S Guards     Tigrex S Faulds     Rathalos S Greaves
+136: Rathalos S Cap     Ancient S Mail     Uragaan S Vambraces     Tigrex S Coat     Rathalos S Leggings
+137: Uragaan S Helm     Ancient S Vest     Uragaan S Guards     Diablos S Faulds     Uragaan S Greaves
+138: Uragaan S Cap     Ingot S Mail     Tigrex S Vambraces     Diablos S Coat     Uragaan S Leggings
+139: Tigrex S Helm     Ingot S Vest     Tigrex S Guards     Jinouga S Faulds     Tigrex S Greaves
+140: Tigrex S Cap     Nargacuga S Mail     Diablos S Vambraces     Jinouga S Coat     Tigrex S Leggings
+141: Diablos S Helm     Nargacuga S Vest     Diablos S Guards     Agnaktor S Faulds     Diablos S Greaves
+142: Diablos S Cap     Barioth S Mail     Jinouga S Vambraces     Agnaktor S Coat     Diablos S Leggings
+143: Jinouga S Helm     Barioth S Vest     Jinouga S Guards     Dobol S Faulds     Jinouga S Greaves
+144: Jinouga S Cap     Rathalos S Mail     Agnaktor S Vambraces     Dobol S Coat     Jinouga S Leggings
+145: Agnaktor S Helm     Rathalos S Vest     Agnaktor S Guards     Qurupeco U Coil     Agnaktor S Greaves
+146: Agnaktor S Cap     Uragaan S Mail     Dobol S Vambraces     Qurupeco U Coat     Agnaktor S Leggings
+147: Dobol S Helm     Uragaan S Vest     Dobol S Guards     Ludroth U Faulds     Dobol S Greaves
+148: Dobol S Cap     Tigrex S Mail     Qurupeco U Vambraces     Ludroth U Coat     Dobol S Leggings
+149: Qurupeco U Helm     Tigrex S Vest     Qurupeco U Guards     Barroth U Faulds     Qurupeco U Greaves
+150: Qurupeco U Cap     Diablos S Mail     Ludroth U Vambraces     Barroth U Coat     Qurupeco U Leggings
+151: Ludroth U Helm     Diablos S Vest     Ludroth U Guards     Gigginox U Faulds     Ludroth U Greaves
+152: Ludroth U Cap     Jinouga S Mail     Barroth U Vambraces     Gigginox U Coat     Ludroth U Leggings
+153: Barroth U Helm     Jinouga S Vest     Barroth U Guards     Dober Coil     Barroth U Greaves
+154: Barroth U Cap     Agnaktor S Mail     Gigginox U Vambraces     Dober Coat     Barroth U Leggings
+155: Gigginox U Helm     Agnaktor S Vest     Gigginox U Guards     Nargacuga U Faulds     Gigginox U Greaves
+156: Gigginox U Cap     Dobol S Mail     Dober Vambraces     Nargacuga U Coat     Gigginox U Leggings
+157: Dober Helm     Dobol S Vest     Dober Guards     Barioth U Faulds     Dober Greaves
+158: Dober Cap     Qurupeco U Mail     Nargacuga U Vambraces     Barioth U Coat     Dober Leggings
+159: Nargacuga U Helm     Qurupeco U Vest     Nargacuga U Guards     Uragaan U Faulds     Nargacuga U Greaves
+160: Nargacuga U Cap     Ludroth U Mail     Barioth U Vambraces     Uragaan U Coat     Nargacuga U Leggings
+161: Barioth U Helm     Ludroth U Vest     Barioth U Guards     Tigrex U Faulds     Barioth U Greaves
+162: Barioth U Cap     Barroth U Mail     Uragaan U Vambraces     Tigrex U Coat     Barioth U Leggings
+163: Uragaan U Helm     Barroth U Vest     Uragaan U Guards     Diablos U Faulds     Uragaan U Greaves
+164: Uragaan U Cap     Gigginox U Mail     Tigrex U Vambraces     Diablos U Coat     Uragaan U Leggings
+165: Tigrex U Helm     Gigginox U Vest     Tigrex U Guards     Agnaktor U Faulds     Tigrex U Greaves
+166: Tigrex U Cap     Dober Mail     Diablos U Vambraces     Agnaktor U Coat     Tigrex U Leggings
+167: Diablos U Helm     Dober Vest     Diablos U Guards     Damacrus Coil     Diablos U Greaves
+168: Diablos U Cap     Nargacuga U Mail     Agnaktor U Vambraces     Damacrus Coat     Diablos U Leggings
+169: Agnaktor U Helm     Nargacuga U Vest     Agnaktor U Guards     Pirate J Coil     Agnaktor U Greaves
+170: Agnaktor U Cap     Barioth U Mail     Damacrus Vambraces     Pirate J Coat     Agnaktor U Leggings
+171: Damacrus Helm     Barioth U Vest     Damacrus Guards     Crow Lily Belt     Damacrus Greaves
+172: Damacrus Cap     Uragaan U Mail     Pirate J Gloves     Crow Lily Buckle     Damacrus Leggings
+173: Pirate J Hat     Uragaan U Vest     Pirate J Cuffs     Snake's Belt/The Boss' Belt     Pirate J Boots
+174: Pirate J Cap     Tigrex U Mail     Snake's Gloves/The Boss' Gloves     Snake's Band/The Boss' Band     Pirate J Pants
+175: Snake's Mask/The Boss' Mask     Tigrex U Vest     Snake's Arms/The Boss' Arms     UNIQLO Ring Belt     Crow Lily Jeans
+176: Snake's Head/The Boss' Head     Diablos U Mail     UNIQLO Gloves     UNIQLO Porch     Crow Lily Denim
+177: UNIQLO Knit Hat     Diablos U Vest     UNIQLO Grabs     Gold Luna Faulds     Snake's Boots/The Boss' Boots
+178: UNIQLO Headphone     Agnaktor U Mail     Gold Luna Vambraces     Gold Luna Coat     Snake's Feet/The Boss' Feet
+179: Gold Luna Helm     Agnaktor U Vest     Gold Luna Guards     Silver Sol Faulds     UNIQLO Cargo Pants
+180: Gold Luna Cap     Damacrus Mail     Silver Sol Vambraces     Silver Sol Coat     UNIQLO Cut Pants
+181: Silver Sol Helm     Damacrus Vest     Silver Sol Guards     Vangis Coil     Gold Luna Greaves
+182: Silver Sol Cap     Pirate J Suit     Vangis Vambraces     Vangis Coat     Gold Luna Leggings
+183: Vangis Helm     Pirate J Jacket     Vangis Guards     Yamato Koshiate+/Hinata Koshiate+     Silver Sol Greaves
+184: Vangis Cap     Crow Lily Jacket     Yamato Kote+/Hinata Kote+     Mutsu Koshiate+/Amagi Koshiate+     Silver Sol Leggings
+185: Yamato Kabuto+/Hinata Hachigane+     Crow Lily Jumper     Mutsu Kote+/Amagi Kote+     Akantor Ikkeku     Vangis Greaves
+186: Mutsu Eboshi+/Amagi Hachigane+     Snake's Suit/The Boss' Suit     Akantor Sakunpe     Akantor Cinture     Vangis Leggings
+187: Akantor Sakupake     Snake's Body/The Boss' Body     Akantor Claw     Ukanlos Ikkeku     Yamato Gusoku+/Hinata Hakama+
+188: Akantor Mask     UNIQLO Suit     Ukanlos Sakunpe     Ukanlos Cinture     Mutsu Gosuku+/Amagi Hakama+
+189: Ukanlos Sakupake     UNIQLO Jacket     Ukanlos Claw     Escadora Might     Akantor Kemal
+190: Ukanlos Mask     Gold Luna Mail     Escadora Arms     Escadora Force     Akantor Hessian
+191: Escadora Wisdom     Gold Luna Vest     Escadora Arma     Storm Obi     Ukanlos Kemal
+192: Escadora Sagesse     Silver Sol Mail     Storm Sleeve     Sky Obi     Ukanlos Hessian
+193: Storm Crown     Silver Sol Vest     Sky Sleeve          Escadora Scale
+194: Sky Crown     Vangis Mail               Escadora Scala
+195: Gagua Mask     Vangis Vest               Storm Hakama
+196: Bullfango Mask     Yamato Muneate+/Hinata Muneate+               Sky Hakama
+197: Two-Eye Earring     Mutsu Muneate+/Amagi Muneate+               Black Leather Legs
+198: Jaggi Mask     Akantor Urunte               Black Leather Pants
+199: Skull Mask     Akantor Aegis               
+200: Gagua S Mask     Ukanlos Urunte               
+201: Gagua S Head     Ukanlos Aegis               
+202: Bullfango S Mask     Escadora Soul               
+203: Bullfango S Head     Escadora Seele               
+204: Jaggi S Mask     Storm Clothing               
+205: Jaggi S Head     Sky Clothing               
+206: Skulll S Mask     HellHunter Jacket               
+207: Skulll S Head     HellHunter Leather               
+208: Wyvernking Eyepatch     SoulHunter Jacket               
+209: Shadow Shade     SoulHunter Leather               
+210: Sword Saint Earring     MH Division Jacket               
+211: Barrage Earring     MH Division Jersey               

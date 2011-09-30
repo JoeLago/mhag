@@ -1,62 +1,108 @@
-Chainmail Set : L B H 2 0 C 1 0 A 1 0 W 2 0 L 2 0
-Leather Set : L B H 1 0 C 0 0 A 0 0 W 1 0 L 1 0
-Loc Lac Set : L B C 2 0 W 3 0 L 3 0
-Piscine Set : L B H 0 0 W 0 0 L 0 0
-Hunter's Set : L B H 3 0 C 3 0 A 2 0 W 4 0 L 4 0
-Alloy Set : L B H 7 0 C 7 0 A 6 0 W 8 0 L 8 0
-Bone Set : L B H 5 0 C 5 0 A 4 0 W 6 0 L 6 0
-Steel Set : L B C 19 0 A 16 0 W 20 0
-Bnahabra Set : L B C 11 0 W 12 0 L 12 0
-Qurupeco Set : L B H 13 0 C 15 0 A 12 0 W 16 0 L 16 0
-Rhenoplos Set : L B H 11 0 C 13 0 A 10 0 W 14 0 L 14 0
-Jaggi Set : L B H 9 0 C 9 0 A 8 0 W 10 0 L 10 0
-Baggi Set : L B H 17 0 C 20 0 A 17 0 W 21 0 L 20 0
-Ludroth Set : L B H 15 0 C 17 0 A 14 0 W 18 0 L 18 0
-Ranger's Set : L B H 47 0 C 50 0 A 47 0 W 49 0 L 48 0
-Guild Bard/Scholar's Set : L B H 45 0 C 48 0 A 45 0 W 47 0 L 46 0
-Barroth Set : L B H 19 0 C 22 0 A 19 0 W 23 0 L 22 0
-Ingot Set : L B H 27 0 C 30 0 A 27 0 W 31 0 L 30 0
-Rathian Set : L B H 23 0 C 26 0 A 23 0 W 27 0 L 26 0
-Gobul Set : L B H 21 0 C 24 0 A 21 0 W 25 0 L 24 0
-Agnaktor Set : L B H 39 0 C 42 0 A 39 0 W 41 0 L 40 0
-Uragaan Set : L B H 37 0 C 40 0 A 37 0 W 39 0 L 38 0
-Diablos Set : L B H 35 0 C 38 0 A 35 0
-Barioth Set : L B H 33 0 C 36 0 A 33 0 W 37 0 L 36 0
-Rathalos Set : L B H 31 0 C 34 0 A 31 0 W 35 0 L 34 0
-Lagiacrus Set : L B H 29 0 C 32 0 A 29 0 W 33 0 L 32 0
-Gigginox Set : L B H 25 0 C 28 0 A 25 0 W 29 0 L 28 0
-Chakra Set : H B H 107 0 C 113 0 A 106 0 W 112 0 L 110 0
-Yamato/Hinata Set : L B H 43 0 C 46 0 A 43 0 W 45 0 L 44 0
-Helios/Selene Set : L B H 41 0 C 44 0 A 41 0 W 43 0 L 42 0
-Loc Lac+ Set : H B C 56 0 W 57 0 L 56 0
-Hunter's+ Set : H B H 55 0 C 58 0 A 53 0 W 59 0 L 58 0
-Chainmail+ Set : H B H 53 0 C 54 0 A 51 0 W 55 0 L 54 0
-Leather+ Set : H B H 51 0 C 52 0 A 49 0 W 53 0 L 52 0
-Piscine+ Set : H B H 49 0 W 51 0 L 50 0
-Guild Bard/Scholar's+ Set : H B H 101 0 C 107 0 A 100 0 W 106 0 L 104 0
-Alloy+ Set : H B H 59 0 C 62 0 A 57 0 W 63 0 L 62 0
-Bone+ Set : H B H 57 0 C 60 0 A 55 0 W 61 0 L 60 0
-Steel+ Set : H B C 74 0 A 67 0 W 75 0
-Bnahabra+ Set : H B C 66 0 W 67 0 L 66 0
-Qurupeco+ Set : H B H 65 0 C 70 0 A 63 0 W 71 0 L 70 0
-Rhenoplos+ Set : H B H 63 0 C 68 0 A 61 0 W 69 0 L 68 0
-Jaggi+ Set : H B H 61 0 C 64 0 A 59 0 W 65 0 L 64 0
-Baggi+ Set : H B H 69 0 C 75 0 A 68 0 W 76 0 L 74 0
-Ludroth+ Set : H B H 67 0 C 72 0 A 65 0 W 73 0 L 72 0
-Barroth+ Set : H B H 71 0 C 77 0 A 70 0 W 78 0 L 76 0
-Ingot+ Set : H B H 79 0 C 85 0 A 78 0 W 86 0 L 84 0
-Rathian+ Set : H B H 75 0 C 81 0 A 74 0 W 82 0 L 80 0
-Gobul+ Set : H B H 73 0 C 79 0 A 72 0 W 80 0 L 78 0
-Damacrus Set : H B H 95 0 C 101 0 A 94 0 W 100 0 L 98 0
-Agnaktor+ Set : H B H 93 0 C 99 0 A 92 0 W 98 0 L 96 0
-Uragaan+ Set : H B H 91 0 C 97 0 A 90 0 W 96 0 L 94 0
-Diablos+ Set : H B H 89 0 C 95 0 A 88 0
-Barioth+ Set : H B H 87 0 C 93 0 A 86 0 W 94 0 L 92 0
-Rathalos+ Set : H B H 85 0 C 91 0 A 84 0 W 92 0 L 90 0
-Lagiacrus+ Set : H B H 83 0 C 89 0 A 82 0 W 90 0 L 88 0
-Dober Set : H B H 81 0 C 87 0 A 80 0 W 88 0 L 86 0
-Gigginox+ Set : H B H 77 0 C 83 0 A 76 0 W 84 0 L 82 0
-Vangis Set : H B H 103 0 C 109 0 A 102 0 W 108 0 L 106 0
-Escadora Set : H B H 105 0 C 111 0 A 104 0 W 110 0 L 108 0
-Yamato/Hinata+ Set : H B H 99 0 C 105 0 A 98 0 W 104 0 L 102 0
-Helios/Selene+ Set : H B H 97 0 C 103 0 A 96 0 W 102 0 L 100 0
+Leather Set : L B H 1 0 C 1 0 A 1 0 W 1 0 L 1 0
+Yukumo Set : L B H 0 0 C 0 0 A 0 0 W 0 0 L 0 0
+Chainmail Set : L B H 2 0 C 2 0 A 2 0 W 2 0 L 2 0
+Loc Lac Set : L B C 3 0 W 3 0 L 3 0
+Hunter's Set : L B H 3 0 C 4 0 A 3 0 W 4 0 L 4 0
+Alloy Set : L B H 7 0 C 8 0 A 7 0 W 8 0 L 8 0
+Bone Set : L B H 5 0 C 6 0 A 5 0 W 6 0 L 6 0
+Yuami Set : L B H 39 0 C 41 0 A 40 0 L 40 0
+Rhenoplos Set : L B H 11 0 C 12 0 A 11 0 W 12 0 L 12 0
+Bnahabra Set : L B H 9 0 C 10 0 A 9 0 W 10 0 L 10 0
+Qurupeco Set : L B H 15 0 C 16 0 A 15 0 W 16 0 L 16 0
+Jaggi Set : L B H 13 0 C 14 0 A 13 0 W 14 0 L 14 0
+Acorn Set : L B H 42 0 C 44 0
+Zuwaroposu Set : L B H 40 0 C 42 0
+Aoashira Set : L B H 23 0 C 24 0 A 23 0 W 24 0 L 24 0
+Vaiku Set : L B H 43 0 C 45 0 A 41 0 W 41 0 L 41 0
+Froggi Set : L B H 21 0 C 22 0 A 21 0 W 22 0 L 22 0
+Urkusus Set : L B H 19 0 C 20 0 A 19 0 W 20 0 L 20 0
+Ludroth Set : L B H 17 0 C 18 0 A 17 0 W 18 0 L 18 0
+Steel Set : L B C 38 0 A 37 0 W 38 0
+Pumpkin Set : L B H 45 0 C 47 0 A 43 0 W 43 0 L 43 0
+Baggi Set : L B H 29 0 C 30 0 A 29 0 W 30 0 L 30 0
+Ranguro Set : L B H 27 0 C 28 0 A 27 0 W 28 0 L 28 0
+Barroth Set : L B H 25 0 C 26 0 A 25 0 W 26 0 L 26 0
+Chakra Set : H B H 97 0 C 104 0 A 96 0 W 96 0 L 97 0
+Obituary/Butterfly Set : L B H 47 0 C 49 0 A 45 0 W 45 0 L 45 0
+Gigginox Set : L B H 35 0 C 36 0 A 35 0 W 36 0 L 36 0
+Rathian Set : L B H 33 0 C 34 0 A 33 0 W 34 0 L 34 0
+Hapul Set : L B H 31 0 C 32 0 A 31 0 W 32 0 L 32 0
+Ancient Set : L B C 55 0 A 51 0 L 51 0
+Nargacuga Set : L B H 53 0 C 57 0 A 53 0 W 51 0 L 53 0
+Guild Bard/Scholar's Set : L B H 51 0 C 53 0 A 49 0 W 49 0 L 49 0
+Barioth Set : L B H 49 0 C 51 0 A 47 0 W 47 0 L 47 0
+Ingot Set : L B H 37 0 C 39 0 A 38 0 W 39 0 L 38 0
+Rathalos Set : L B H 57 0 C 61 0 A 57 0 W 55 0 L 57 0
+Jinouga Set : L B H 55 0 C 59 0 A 55 0 W 53 0 L 55 0
+Uragaan Set : L B H 67 0 C 71 0 A 67 0 W 65 0 L 67 0
+Diablos Set : L B H 65 0 C 69 0 A 65 0 W 63 0 L 65 0
+Agnaktor Set : L B H 63 0 C 67 0 A 63 0 W 61 0 L 63 0
+Dobol Set : L B H 61 0 C 65 0 A 61 0 W 59 0 L 61 0
+Tigrex Set : L B H 59 0 C 63 0 A 59 0 W 57 0 L 59 0
+Yamato/Hinata Set : L B H 69 0 C 73 0 A 69 0 W 67 0 L 69 0
+Yuami+ Set : H B H 98 0 C 105 0 A 97 0 L 98 0
+Pirate J Set : H B H 173 0 C 182 0 A 172 0 W 169 0 L 173 0
+Chainmail S Set : H B H 75 0 C 79 0 A 75 0 W 73 0 L 75 0
+Leather S Set : H B H 73 0 C 77 0 A 73 0 W 71 0 L 73 0
+Yukumo - Sky Set : H B H 71 0 C 75 0 A 71 0 W 69 0 L 71 0
+Loc Lac S Set : H B C 83 0 W 77 0 L 79 0
+Alloy S Set : H B H 81 0 C 87 0 A 81 0 W 81 0 L 83 0
+Bone S Set : H B H 79 0 C 85 0 A 79 0 W 79 0 L 81 0
+Hunter's S Set : H B H 77 0 C 81 0 A 77 0 W 75 0 L 77 0
+Pumpkin S Set : H B H 99 0 C 106 0 A 98 0 W 97 0 L 99 0
+Bnahabra S Set : H B H 87 0 C 93 0 A 85 0 W 85 0 L 87 0
+Zuwaroposu S Set : H B H 85 0 C 91 0
+Rhenoplos S Set : H B H 83 0 C 89 0 A 83 0 W 83 0 L 85 0
+Qurupeco S Set : H B H 101 0 C 108 0 A 100 0 W 99 0 L 101 0
+Jaggi S Set : H B H 89 0 C 95 0 A 87 0 W 87 0 L 89 0
+Qurupeco U Set : H B H 149 0 C 158 0 A 148 0 W 145 0 L 149 0
+Nadeshiko Set : H B H 107 0 C 114 0 A 106 0 W 105 0 L 107 0
+Vaiku S Set : H B H 105 0 C 112 0 A 104 0 W 103 0 L 105 0
+Ludroth S Set : H B H 103 0 C 110 0 A 102 0 W 101 0 L 103 0
+Aoashira S Set : H B H 95 0 C 102 0 A 94 0 W 94 0 L 95 0
+Urkusus S Set : H B H 93 0 C 99 0 A 91 0 W 91 0 L 93 0
+Froggi S Set : H B H 91 0 C 97 0 A 89 0 W 89 0 L 91 0
+Steel S Set : H B C 101 0 A 93 0 W 93 0
+Ludroth U Set : H B H 151 0 C 160 0 A 150 0 W 147 0 L 151 0
+Ranguro S Set : H B H 113 0 C 120 0 A 112 0 W 111 0 L 113 0
+Baggi S Set : H B H 111 0 C 118 0 A 110 0 W 109 0 L 111 0
+Barroth S Set : H B H 109 0 C 116 0 A 108 0 W 107 0 L 109 0
+Acorn S Set : H B H 125 0 C 132 0
+Hapul S Set : H B H 123 0 C 130 0 A 122 0 W 121 0 L 123 0
+Obituary S/Butterfly S Set : H B H 121 0 C 128 0 A 120 0 W 119 0 L 121 0
+Gigginox S Set : H B H 119 0 C 126 0 A 118 0 W 117 0 L 119 0
+Guild Bard S/Scholar's S Set : H B H 117 0 C 124 0 A 116 0 W 115 0 L 117 0
+Rathian S Set : H B H 115 0 C 122 0 A 114 0 W 113 0 L 115 0
+Barroth U Set : H B H 153 0 C 162 0 A 152 0 W 149 0 L 153 0
+Ancient S Set : H B C 136 0 A 126 0 L 127 0
+Gigginox U Set : H B H 155 0 C 164 0 A 154 0 W 151 0 L 155 0
+Barioth S Set : H B H 133 0 C 142 0 A 132 0 W 129 0 L 133 0
+Nargacuga S Set : H B H 131 0 C 140 0 A 130 0 W 127 0 L 131 0
+Ingot S Set : H B H 129 0 C 138 0 A 128 0 W 125 0 L 129 0
+Ranger's Set : H B H 127 0 C 134 0 A 124 0 W 123 0 L 125 0
+Barioth U Set : H B H 161 0 C 170 0 A 160 0 W 157 0 L 161 0
+Nargacuga U Set : H B H 159 0 C 168 0 A 158 0 W 155 0 L 159 0
+Dober Set : H B H 157 0 C 166 0 A 156 0 W 153 0 L 157 0
+Uragaan S Set : H B H 137 0 C 146 0 A 136 0 W 133 0 L 137 0
+Rathalos S Set : H B H 135 0 C 144 0 A 134 0 W 131 0 L 135 0
+Uragaan U Set : H B H 163 0 C 172 0 A 162 0 W 159 0 L 163 0
+Dobol S Set : H B H 147 0 C 156 0 A 146 0 W 143 0 L 147 0
+Agnaktor S Set : H B H 145 0 C 154 0 A 144 0 W 141 0 L 145 0
+Jinouga S Set : H B H 143 0 C 152 0 A 142 0 W 139 0 L 143 0
+Diablos S Set : H B H 141 0 C 150 0 A 140 0 W 137 0 L 141 0
+Tigrex S Set : H B H 139 0 C 148 0 A 138 0 W 135 0 L 139 0
+Crow Lily Set : H B C 184 0 W 171 0 L 175 0
+UNIQLO Knit Set : H B H 177 0 C 188 0 A 176 0 W 175 0 L 179 0
+Snake's/The Boss' Set : H B H 175 0 C 186 0 A 174 0 W 173 0 L 177 0
+Silver Sol Set : H B H 181 0 C 192 0 A 180 0 W 179 0 L 183 0
+Gold Luna Set : H B H 179 0 C 190 0 A 178 0 W 177 0 L 181 0
+Agnaktor U Set : H B H 169 0 C 178 0 A 168 0 W 165 0 L 169 0
+Diablos U Set : H B H 167 0 C 176 0 A 166 0 W 163 0 L 167 0
+Tigrex U Set : H B H 165 0 C 174 0 A 164 0 W 161 0 L 165 0
+Yamato/Hinata+ Set : H B H 185 0 C 196 0 A 184 0 W 183 0 L 187 0
+Vangis Set : H B H 183 0 C 194 0 A 182 0 W 181 0 L 185 0
+Damacrus Set : H B H 171 0 C 180 0 A 170 0 W 167 0 L 171 0
+Storm Set : H B H 193 0 C 204 0 A 192 0 W 191 0 L 195 0
+Escadora Set : H B H 191 0 C 202 0 A 190 0 W 189 0 L 193 0
+Ukanlos Set : H B H 189 0 C 200 0 A 188 0 W 187 0 L 191 0
+Akantor Set : H B H 187 0 C 198 0 A 186 0 W 185 0 L 189 0
