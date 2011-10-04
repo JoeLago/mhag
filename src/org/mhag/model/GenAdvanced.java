@@ -71,7 +71,7 @@ public class GenAdvanced extends javax.swing.JDialog {
 
         formula1.setText("<html><b>Score</b>  =  \"defense\" /<b> E1</b>  - \"# of  negative skills\" x <b>E2</b> </html>");
 
-        formula3.setText("<html>+ sum of \"query skills\" (<b>E3</b> + min(\"trigger points\", \"skill points\") )</html>");
+        formula3.setText("<html>+ sum of \"query skills\" ( (<b>E3</b> + \"trigger points\") or \"skill points\")</html>");
 
         formula2.setText("<html>+ \"# of unused slots\" x <b>E4</b> -  \"# of  used weapon slots\" x <b>E5</b>");
 
@@ -86,7 +86,7 @@ public class GenAdvanced extends javax.swing.JDialog {
                     .addGroup(formulaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(formula1, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(formula3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         formulaPanelLayout.setVerticalGroup(
             formulaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -254,7 +254,7 @@ public class GenAdvanced extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        defaultButton.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        defaultButton.setFont(new java.awt.Font("Monospaced", 0, 12));
         defaultButton.setText("Default");
         defaultButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -274,8 +274,8 @@ public class GenAdvanced extends javax.swing.JDialog {
                         .addComponent(paraPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(defaultButton, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
-                            .addComponent(optionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(optionPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(defaultButton, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
