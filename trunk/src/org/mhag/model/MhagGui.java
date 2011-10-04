@@ -806,6 +806,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         reset.setFont(new java.awt.Font("Monospaced", 0, 12));
         reset.setText("Reset");
+        reset.setToolTipText("Reset set");
         reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resetActionPerformed(evt);
@@ -890,6 +891,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         buttonLink.setFont(new java.awt.Font("Monospaced", 0, 12));
         buttonLink.setText("Copy MHAG Online Link");
+        buttonLink.setToolTipText("Copy MHAG URL");
         buttonLink.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonLinkActionPerformed(evt);
@@ -898,6 +900,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         buttonGoto.setFont(new java.awt.Font("Monospaced", 0, 12));
         buttonGoto.setText("Goto MHAG Online");
+        buttonGoto.setToolTipText("See the set in a web browser");
         buttonGoto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonGotoActionPerformed(evt);
@@ -1010,6 +1013,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jButtonAdd.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonAdd.setText("Add");
+        jButtonAdd.setToolTipText("Add skill to the end");
         jButtonAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAddActionPerformed(evt);
@@ -1018,6 +1022,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jButtonRemove.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonRemove.setText("Remove");
+        jButtonRemove.setToolTipText("Remove the selected skill");
         jButtonRemove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRemoveActionPerformed(evt);
@@ -1026,6 +1031,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jButtonUp.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonUp.setText("Move Up");
+        jButtonUp.setToolTipText("Move the selected skill up");
         jButtonUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonUpActionPerformed(evt);
@@ -1034,6 +1040,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jButtonDown.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonDown.setText("Move Down");
+        jButtonDown.setToolTipText("Move the selected skill down");
         jButtonDown.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDownActionPerformed(evt);
@@ -1060,6 +1067,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jButtonShowPiece.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonShowPiece.setText("Suggestion");
+        jButtonShowPiece.setToolTipText("Show suggested armor pieces");
         jButtonShowPiece.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonShowPieceActionPerformed(evt);
@@ -1125,6 +1133,7 @@ public class MhagGui extends javax.swing.JFrame {
         jLabelWeaponSlot.setFont(new java.awt.Font("Monospaced", 0, 12));
         jLabelWeaponSlot.setLabelFor(jComboBoxWeaponSlots);
         jLabelWeaponSlot.setText("Weapon");
+        jLabelWeaponSlot.setToolTipText("Number of weapon slots");
 
         jComboBoxWeaponSlots.setFont(new java.awt.Font("Monospaced", 0, 12));
         jComboBoxWeaponSlots.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No Slot", "One Slot", "Two Slots", "Three Slots", "Any" }));
@@ -1137,6 +1146,7 @@ public class MhagGui extends javax.swing.JFrame {
         optLabel.setFont(new java.awt.Font("Monospaced", 0, 12));
         optLabel.setLabelFor(jComboBoxOpt);
         optLabel.setText("Search");
+        optLabel.setToolTipText("Search method");
 
         jComboBoxOpt.setFont(new java.awt.Font("Monospaced", 0, 12));
         jComboBoxOpt.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Full Search", "Partial", "Jewel Opt" }));
@@ -1149,6 +1159,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jCheckBoxEarring.setFont(new java.awt.Font("Monospaced", 0, 12));
         jCheckBoxEarring.setText("Earrings");
+        jCheckBoxEarring.setToolTipText("Include earring pieces");
         jCheckBoxEarring.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jCheckBoxEarringItemStateChanged(evt);
@@ -1157,6 +1168,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jCheckBoxCharm.setFont(new java.awt.Font("Monospaced", 0, 12));
         jCheckBoxCharm.setText("My Charms");
+        jCheckBoxCharm.setToolTipText("Include customized charms");
         jCheckBoxCharm.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jCheckBoxCharmItemStateChanged(evt);
@@ -1165,6 +1177,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jLabelArmorRank.setFont(new java.awt.Font("Monospaced", 0, 12));
         jLabelArmorRank.setText("Rank");
+        jLabelArmorRank.setToolTipText("Rank of armor pieces");
 
         jComboBoxRank.setFont(new java.awt.Font("Monospaced", 0, 12));
         jComboBoxRank.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Any", "Low Rank Only", "High Rank Only" }));
@@ -1177,6 +1190,7 @@ public class MhagGui extends javax.swing.JFrame {
         jLabelHead.setFont(new java.awt.Font("Monospaced", 0, 12));
         jLabelHead.setLabelFor(jComboBoxOpt);
         jLabelHead.setText("Head");
+        jLabelHead.setToolTipText("Type of head pieces");
 
         jComboBoxHead.setFont(new java.awt.Font("Monospaced", 0, 12));
         jComboBoxHead.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Any", "Melee Only", "Gunner Only" }));
@@ -1188,6 +1202,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jLabelArmorType.setFont(new java.awt.Font("Monospaced", 0, 12));
         jLabelArmorType.setText("Type");
+        jLabelArmorType.setToolTipText("Hunter type (for full search)");
 
         jComboBoxType.setFont(new java.awt.Font("Monospaced", 0, 12));
         jComboBoxType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Melee", "Gunner" }));
@@ -1255,6 +1270,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jButtonSearch.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonSearch.setText("Search");
+        jButtonSearch.setToolTipText("Start search");
         jButtonSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSearchActionPerformed(evt);
@@ -1265,6 +1281,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         loadToCalcGen.setFont(new java.awt.Font("Monospaced", 1, 12));
         loadToCalcGen.setText("Load to Calculator");
+        loadToCalcGen.setToolTipText("Load the selected set");
         loadToCalcGen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loadToCalcGenActionPerformed(evt);
@@ -1283,6 +1300,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jButtonAbort.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonAbort.setText("Abort");
+        jButtonAbort.setToolTipText("Abort search");
         jButtonAbort.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAbortActionPerformed(evt);
@@ -1291,6 +1309,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jButtonMyCharms.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonMyCharms.setText("Charms");
+        jButtonMyCharms.setToolTipText("Customized charms");
         jButtonMyCharms.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMyCharmsActionPerformed(evt);
@@ -1299,6 +1318,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jButtonSettings.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonSettings.setText("Adhanced");
+        jButtonSettings.setToolTipText("Advanced settings");
         jButtonSettings.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSettingsActionPerformed(evt);
@@ -1504,7 +1524,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         deleteInteract.setFont(new java.awt.Font("Monospaced", 1, 12));
         deleteInteract.setText("Remove/Cut");
-        deleteInteract.setToolTipText("Remvoe/cut the selected set (max 5) ");
+        deleteInteract.setToolTipText("Remove/cut the selected set (max 5) ");
         deleteInteract.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteInteractActionPerformed(evt);
