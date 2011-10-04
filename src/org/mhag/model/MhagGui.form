@@ -1180,6 +1180,7 @@
                       <Font name="Monospaced" size="12" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Reset"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Reset set"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resetActionPerformed"/>
@@ -1303,6 +1304,7 @@
                   <Font name="Monospaced" size="12" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Copy MHAG Online Link"/>
+                <Property name="toolTipText" type="java.lang.String" value="Copy MHAG URL"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonLinkActionPerformed"/>
@@ -1314,6 +1316,7 @@
                   <Font name="Monospaced" size="12" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Goto MHAG Online"/>
+                <Property name="toolTipText" type="java.lang.String" value="See the set in a web browser"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonGotoActionPerformed"/>
@@ -1597,6 +1600,7 @@
                       <Font name="Monospaced" size="12" style="1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Add"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Add skill to the end"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAddActionPerformed"/>
@@ -1608,6 +1612,7 @@
                       <Font name="Monospaced" size="12" style="1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Remove"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Remove the selected skill"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRemoveActionPerformed"/>
@@ -1619,6 +1624,7 @@
                       <Font name="Monospaced" size="12" style="1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Move Up"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Move the selected skill up"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonUpActionPerformed"/>
@@ -1630,6 +1636,7 @@
                       <Font name="Monospaced" size="12" style="1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Move Down"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Move the selected skill down"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonDownActionPerformed"/>
@@ -1691,6 +1698,7 @@
                       <Font name="Monospaced" size="12" style="1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Suggestion"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Show suggested armor pieces"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonShowPieceActionPerformed"/>
@@ -1787,6 +1795,7 @@
                       <ComponentRef name="jComboBoxWeaponSlots"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Weapon"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Number of weapon slots"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxWeaponSlots">
@@ -1817,6 +1826,7 @@
                       <ComponentRef name="jComboBoxOpt"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Search"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Search method"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxOpt">
@@ -1843,6 +1853,7 @@
                       <Font name="Monospaced" size="12" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Earrings"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Include earring pieces"/>
                   </Properties>
                   <Events>
                     <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxEarringItemStateChanged"/>
@@ -1854,6 +1865,7 @@
                       <Font name="Monospaced" size="12" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="My Charms"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Include customized charms"/>
                   </Properties>
                   <Events>
                     <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxCharmItemStateChanged"/>
@@ -1865,6 +1877,7 @@
                       <Font name="Monospaced" size="12" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Rank"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Rank of armor pieces"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxRank">
@@ -1893,6 +1906,7 @@
                       <ComponentRef name="jComboBoxOpt"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Head"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Type of head pieces"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxHead">
@@ -1918,6 +1932,7 @@
                       <Font name="Monospaced" size="12" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Type"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Hunter type (for full search)"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxType">
@@ -1944,6 +1959,7 @@
                   <Font name="Monospaced" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Search"/>
+                <Property name="toolTipText" type="java.lang.String" value="Start search"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchActionPerformed"/>
@@ -1962,6 +1978,7 @@
                   <Font name="Monospaced" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Load to Calculator"/>
+                <Property name="toolTipText" type="java.lang.String" value="Load the selected set"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loadToCalcGenActionPerformed"/>
@@ -2001,6 +2018,7 @@
                   <Font name="Monospaced" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Abort"/>
+                <Property name="toolTipText" type="java.lang.String" value="Abort search"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAbortActionPerformed"/>
@@ -2012,6 +2030,7 @@
                   <Font name="Monospaced" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Charms"/>
+                <Property name="toolTipText" type="java.lang.String" value="Customized charms"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMyCharmsActionPerformed"/>
@@ -2023,6 +2042,7 @@
                   <Font name="Monospaced" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Adhanced"/>
+                <Property name="toolTipText" type="java.lang.String" value="Advanced settings"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSettingsActionPerformed"/>
@@ -2355,7 +2375,7 @@
                   <Font name="Monospaced" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Remove/Cut"/>
-                <Property name="toolTipText" type="java.lang.String" value="Remvoe/cut the selected set (max 5) "/>
+                <Property name="toolTipText" type="java.lang.String" value="Remove/cut the selected set (max 5) "/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteInteractActionPerformed"/>
