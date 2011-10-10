@@ -557,7 +557,7 @@ public class Set {
 		newCode.append(setCode.substring(gap+1).trim().replace(" ", ".")); // replace space with "."
 
 		try {
-			URI uri = new URI("http", "31.222.180.81:8880", file.toString(), newCode.toString(), null);
+			URI uri = new URI("http", "mhag.info", file.toString(), newCode.toString(), null);
 			String temp = uri.toString();
 
 			//  process set name
