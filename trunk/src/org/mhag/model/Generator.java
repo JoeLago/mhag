@@ -1094,7 +1094,8 @@ public class Generator {
 					((gapPointNow[currentSkill] > 0) && (i == 1)) ||
 					((jewelNeg[currentSkill] && (i >= 2) && (gapPointNow[currentSkill]+1 >= pointJewel))))
 			{
-				if(slotsNow[i] > 0)  // found matched piece
+				if((slotsNow[i] > 0)  // found matched piece
+						&& !(ifSlotGunPart && (i == numWeaponSlotOpt) && (slotsNow[i] == 1))) //gunner weapon slot (can't use all slots)
 				{
 					addJewel(aSet, currentSkill, i, i, false, gapPointNow, slotsNow, slotInfoNow);
 				}
@@ -1630,6 +1631,9 @@ public class Generator {
 	public boolean getIfCharm() {return ifCharm;}
 	public void setIfCharm(boolean opt) {ifCharm = opt;}
 
+	public boolean getIfSlotGunPart() {return ifSlotGunPart;}
+	public void setIfSlotGunPart(boolean opt) {ifSlotGunPart = opt;}
+
 	public int[] getJewelIDUsed(int ind) {return jewelIDUsed[ind];}
 	public int getJewelIDUsed(int ind, int nSlot) {return jewelIDUsed[ind][nSlot];}
 
@@ -1680,6 +1684,7 @@ public class Generator {
 	private int armorHeadOpt = 0; // 0: any, 1: melee only, 2: gunner only
 	private boolean ifEarring = true;  //include earring
 	private boolean ifCharm = false; //use my charm
+	private boolean ifSlotGunPart = false; // slots from two gun parts
 	//private boolean[] includeOpt = new boolean[4]; // lr, hr, piercing, charm
 	private int numWeaponSlotOpt = 0;  //max # of weapon slots, as an input option
 

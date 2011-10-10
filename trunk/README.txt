@@ -1,5 +1,5 @@
 MHAG: Monster Hunter Armor Generator 
-v.1.2 beta 6
+v.2.0 RC1
 Author : Tifa@mh3
 MHAG Project: code.google.com/mhag
 
@@ -23,6 +23,11 @@ MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is d
      I will also make source code packages for stable versions. (v1.0, v2.0)
 
 History:
+v.2.0 RC1 10/10/2011:
+   1. delete about tab panel, add about button/dialog
+   2. add scroll pane for low resolution screen (ex. 1024x768)
+   3. change new mhag icon, add splash screen
+   4. in the generator function, add an option for gunner weapon slots, so the slots can be from two different parts.
 v.1.2 beta 6 09/30/2011:
    1. bug: skill list in the generator panel should show activated skills(effects).
    2. bug: "load to calculator" function (gunner or low rank)
