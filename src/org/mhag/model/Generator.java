@@ -1162,6 +1162,7 @@ public class Generator {
 				if(slotInfoNow[i] == pieceSlot)
 				{
 					if((i == 1) && (slotsNow[4] > 0))continue;
+					if(ifSlotGunPart && (i == 5) && (nSlot == numWeaponSlotOpt))continue;
 					bodyPart = i;
 					break;
 				}

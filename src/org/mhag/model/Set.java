@@ -544,11 +544,11 @@ public class Set {
 		int gap = setCode.indexOf(":");   //delete set name
 		String name = setCode.substring(0, gap+2);
 
-		StringBuilder file = new StringBuilder("/mhag-");
+		StringBuilder file = new StringBuilder("/mh");
 		if(mhag.getGame() == 0)
 			file.append("tri");
 		else
-			file.append("p3");
+			file.append("p3rd");
 		file.append("/viewset.htm");
 
 		StringBuilder newCode = new StringBuilder("s=");
