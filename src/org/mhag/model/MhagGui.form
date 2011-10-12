@@ -97,7 +97,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <EmptySpace min="12" pref="12" max="12" attributes="0"/>
                                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -128,7 +128,7 @@
                                   <Component id="setNamePanel" alignment="0" max="32767" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="setup" min="-2" pref="351" max="-2" attributes="0"/>
+                              <Component id="setup" min="-2" pref="345" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -354,7 +354,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -453,7 +453,6 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="weaponLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Group type="103" alignment="1" groupAlignment="3" attributes="0">
@@ -466,7 +465,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="headLabel" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                   <Component id="headMenu" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="headSlot1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="headSlot2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -476,7 +475,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="chestLabel" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="chestMenu" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="chestSlot1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="chestSlot2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -486,7 +485,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="armsLabel" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                   <Component id="armsMenu" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="armSlot1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="armSlot2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -496,7 +495,7 @@
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="waistLabel" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                   <Component id="waistMenu" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="waistSlot1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="waistSlot2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -506,7 +505,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="legsLabel" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                   <Component id="legsMenu" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="legSlot1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="legSlot2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -516,7 +515,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="charmLabel" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                   <Component id="charmMenu" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="charmSlot1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="charmSlot2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -1216,6 +1215,7 @@
                       <Font name="Monospaced" size="12" style="1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="About MHAG"/>
+                    <Property name="toolTipText" type="java.lang.String" value="About"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aboutButtonActionPerformed"/>
@@ -1365,8 +1365,8 @@
                           <Component id="jScrollOptSets" pref="635" max="32767" attributes="1"/>
                           <Component id="skillsPanel" alignment="0" max="32767" attributes="1"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="optionPanel" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                              <Component id="optionPanel" min="-2" pref="425" max="-2" attributes="0"/>
+                              <EmptySpace pref="14" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="loadToCalcGen" alignment="1" min="-2" pref="195" max="-2" attributes="1"/>
                                   <Component id="jProgressOpt" min="-2" pref="195" max="-2" attributes="1"/>
@@ -1769,7 +1769,7 @@
                                   <Component id="jCheckBoxGun" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="17" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1992,7 +1992,7 @@
                       <Font name="Monospaced" size="12" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Slots from Two Gunner Parts"/>
-                    <Property name="toolTipText" type="java.lang.String" value="Include earring pieces"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Gun slots are from different gun parts"/>
                   </Properties>
                   <Events>
                     <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxGunItemStateChanged"/>
@@ -2121,15 +2121,15 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="getSetInteract" min="-2" pref="170" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="deleteInteract" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="deleteInteract" min="-2" pref="135" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="undoInteract" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="undoInteract" min="-2" pref="135" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jScrollPane1" alignment="0" pref="633" max="32767" attributes="1"/>
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
                                       <Component id="codeBook" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace pref="19" max="32767" attributes="0"/>
                                       <Component id="convert" min="-2" max="-2" attributes="0"/>
@@ -2145,14 +2145,14 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="1">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="codeBook" min="-2" max="-2" attributes="1"/>
                                   <Component id="convert" min="-2" max="-2" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" pref="436" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="loadSetInteract" alignment="3" min="-2" max="-2" attributes="0"/>
