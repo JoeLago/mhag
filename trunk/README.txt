@@ -1,28 +1,58 @@
 MHAG: Monster Hunter Armor Generator 
-v.2.0 RC2
-Author : Tifa@mh3
+Desktop 2.0
+Author : Tifa@mh3, Gondor
 MHAG Project: code.google.com/mhag
 
 About MHAG:
-MHAG is a FREE armor set manager for Video Game series: Monster Hunter.  It is designed for both Monster Hunter Tri (Wii), and Monster Hunter Portable/Freedom 3rd (PSP).  MHAG has a calculator, a viewer and a generator, making it an outstanding tool to manage and design your own armor sets. 
-     1. Why MHAG:
-     There are a few calculators available online already. So why am I developing MHAG?
-     1) MHAG is a light-weighted FREE JAVA program, so once you have it, you have it forever.  Remember our favorite armor database set http://mhdb.xengi.org/mh3/armory.php is gone, together with our armor data.
-     2) MHAG has/will have more functions.  I will complete the generator in v2.0.
-     3) MHAG has/will have most accurate data.  Well, I can't say it is error-free now, but my goal is to make it as perfect as possible.  The data are all in plain text format, so it can be easily modified by anyone.  When I compiled the data, I looked up wikia site, Japanese wiki site and the wii game itself.  Both wiki sites actually have many errors. (about 70% errors are from wikia, 30% from Japanese wiki) 
-     4) MHAG data can be SHARED.  With MHAG, users can easily manage and share set data.  I may use the wiki site mhag.wetpaint.com to share code data. (the site is not good to display text/html outputs. I may try to find a better place, or let me know if you know a better place)  With the set data, I will make set books for the community (in PDF). (maybe every week or two)
-     5) MHAG is cross-platform, as it's completely written in Java.  Besides, it's open source. (If you are developer, you must know how to get the source code)
+MHAG is a FREE armor toolkit, featuring a desktop version (MHAG Desktop) and an online version (MHAG Online).
 
-     2. Why Now:
-     For those who know me in the game, I recently stopped playing MH3 for a while.  That's why I have time to think about doing something interesting.  I know it may be a little late to release a version for MH3.  But it will be great for MHP3/MHF3 once the game is out.
+Webite: 
+http://mhag.info
 
-     3. Where to find/follow MHAG:
-     1) Capcom Unity , Monster Hunter Tri forum & Tifa's Blogs http://www.capcom-unity.com/tifa@mh3
-     2) MHAG Google Code Project: http://code.google.com/mhag
-     3) (maybe) My youtube channel with tutorial, http://www.youtube.com/mh3journey
-     I will also make source code packages for stable versions. (v1.0, v2.0)
+Features:
+ 1. MHAG Desktop: Create and organize sets offline
+  a. Manually build armor sets with the built-in calculator
+  b. Use the generator to search armor sets automatically within seconds
+  c. Use the viewer to manage, browse and export armor sets
+  d. The three components can interact with each other
 
-History:
+ 2. MHAG Online: Create and share sets online
+  a. Works on ANY device that connects to internet
+  b. Features the same calculator as MHAG Desktop
+  c. Use the online database to share and search mixed sets
+
+ 3. Integration of MHAG Desktop and MHAG Online
+  a. Share same data and core functions
+  b. Easily access MHAG Online from MHAG Desktop
+
+ 4. Support Games
+  a. Monster Hunter Tri (Wii)
+  b. Monster Hunter Portable 3rd (PSP/PS3)
+  c. (future) Monster Hunter Tri G (3DS)*
+  d. (future) Monster Hunter Freedom Unite (PSP)**
+
+(Notes:
+*   When MHTri G comes to the west, or if many users request it
+**  If any user can provide MHFU data
+)
+
+System Requirements:
+ 1. MHAG Desktop:
+  a. Any PC (WinXP or later, MacOS and Linux)
+  b. JAVA 6 (JRE 1.6) or later
+  c. Screen resolution: 1024x768 (minimum), 1280x720 or above (recommended)
+ 2. MHAG ONline:
+  a. Any device (PC, tablet, smartphone)
+  b. Web browser (Google Chrome, Mozilla Firefox, Safari, Internet Explorer, Opera etc.)
+
+History (MHAG Desktop):
+v.2.0 10/17/2011:
+   1. bug: partial search never stops when charm is manually reset; fixed
+   2. bug: "slot from two gun parts" failed to search some cases; fixed
+   3. bug: "reset" function in the calculator doesn't reset gunner/blade low/high rank and female/male radio buttons; fixed
+   4. new feature: armor suggestion also outputs all armor pieces that contain the selected skills, sorted by total skill points.
+   5. update README description
+   6. update USAGE 
 v.2.0 RC2 10/11/2011:
    1. bug: "slot from two gun parts" doesn't work properly. fixed
    2. new feature: add mhag icon 
@@ -102,25 +132,18 @@ v.1.0 beta 2, 01/01/2011:
 v.1.0 beta 1, 01/01/2011: 
    1.initial release for test; It has a calculator and a viewer.
 
-Requirement:
-1.OS: any OS with JRE 1.5 or above. (tested on windows 7, linux Ubuntu and Mac Os 10.4)
-2.Screen Resolution: best for 720p or higher (1280 pixels in width)
-3.CPU: (not sure, let me know if you feel slow or have any problems)
-4.Browser: Google Chrome/Mozilla Firefox/Safari, Internet Explorer is not recommended
-
-Installation:
+Installation (MHAG Desktop):
 1. Make sure your computer have JRE (Java Runtime Environment). If not, download and install JRE at http://www.java.com
 2. Unzip mhag pack to a folder, then enter mhag folder.
 3. Run MHAG:
      1) windows : in File Explorer, double click the icon of Mhag.jar
      2) linux : use command line "java -jar Mhag.jar" in a console.
-     3) Mac OS : (not tested yet, let me know if you happen to run it on Mac)
+     3) Mac OS : double click
 
 Known Issues:
-1). Current support for MHP3.(experimental)
-* Translation : skill/jewels have same name translation as those in www.mhf3.com.  Check the site for the original Japanese name.
-* armor pieces : all armor sets are available to all players except for one female-only set.(Nadeshiko/Kikyo set) MHAG doesn't exclude it in male mode.
-* charm: current version allows flexible input of charm skill & charm skill point.  The data is based on "MHP3rd Official Strategy Book".
+TBD
 
 Acknowledgements
-Many thanks to Capcom unity, Bobo's www.mhf3.com and holywoodchunk's charm information.
+Many thanks to Capcom unity, Bobo's www.mhf3.com, Monster Hunter Wikia.
+Thank CHUMP, Vyracritus, OZ78, Slater etc from Capcom Unity, Xalugami from mhf3.com, Stuff from MH3 Wikia for testing mhag and offering suggestions
+

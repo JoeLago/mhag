@@ -73,6 +73,12 @@ public class MhagGui extends javax.swing.JFrame {
 		stream = new TextAreaPrintStream(jTextPreview, System.out);
 		streamView = new TextAreaPrintStream(jTextPreview2, System.out);
 		streamGen = new TextAreaPrintStream(jTextPreview3, System.out);
+		
+		// only if mh3 game, jCheckBoxGun is enabled
+		if(mhag.getGame() == 0)
+			jCheckBoxGun.setEnabled(true);
+		else
+			jCheckBoxGun.setEnabled(false);
 
     }
 
@@ -220,7 +226,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jTabbedPane.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        jTabbedPane.setFont(new java.awt.Font("Monospaced", 1, 14));
         jTabbedPane.setOpaque(true);
         jTabbedPane.setPreferredSize(new java.awt.Dimension(1238, 630));
 
@@ -350,7 +356,7 @@ public class MhagGui extends javax.swing.JFrame {
         setup.setBorder(javax.swing.BorderFactory.createTitledBorder("Setup"));
         setup.setPreferredSize(new java.awt.Dimension(625, 390));
 
-        weaponMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        weaponMenu.setFont(new java.awt.Font("Monospaced", 0, 12));
         weaponMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No Slot", "1 Slot", "2 Slots", "3 Slots" }));
         weaponMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -358,7 +364,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        headMenu.setFont(new java.awt.Font("Monospaced", 0, 12));
+        headMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         headMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         headMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -406,7 +412,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        weaponLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+        weaponLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
         weaponLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/weapon.png"))); // NOI18N
         weaponLabel.setLabelFor(weaponMenu);
         weaponLabel.setToolTipText("Weapon");
@@ -421,7 +427,7 @@ public class MhagGui extends javax.swing.JFrame {
         chestLabel.setLabelFor(chestMenu);
         chestLabel.setToolTipText("Chest");
 
-        armsLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+        armsLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
         armsLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/arms.png"))); // NOI18N
         armsLabel.setLabelFor(armsMenu);
         armsLabel.setToolTipText("Arms");
@@ -461,7 +467,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        weaponSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        weaponSlot3.setFont(new java.awt.Font("Monospaced", 0, 12));
         weaponSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         weaponSlot3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -824,7 +830,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        aboutButton.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        aboutButton.setFont(new java.awt.Font("Monospaced", 1, 12));
         aboutButton.setText("About MHAG");
         aboutButton.setToolTipText("About");
         aboutButton.addActionListener(new java.awt.event.ActionListener() {
@@ -901,7 +907,7 @@ public class MhagGui extends javax.swing.JFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        buttonLink.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        buttonLink.setFont(new java.awt.Font("Monospaced", 1, 12));
         buttonLink.setText("Copy Set Link");
         buttonLink.setToolTipText("Copy MHAG URL");
         buttonLink.addActionListener(new java.awt.event.ActionListener() {
@@ -910,7 +916,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        buttonGoto.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        buttonGoto.setFont(new java.awt.Font("Monospaced", 1, 12));
         buttonGoto.setText("Open Webpage");
         buttonGoto.setToolTipText("See the set in a web browser");
         buttonGoto.addActionListener(new java.awt.event.ActionListener() {
@@ -919,7 +925,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 14));
         jLabel1.setText("MHAG Online");
 
         javax.swing.GroupLayout calculatorLayout = new javax.swing.GroupLayout(calculator);
@@ -984,7 +990,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jTextPreview3.setColumns(20);
         jTextPreview3.setEditable(false);
-        jTextPreview3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jTextPreview3.setFont(new java.awt.Font("Monospaced", 0, 12));
         jTextPreview3.setForeground(new java.awt.Color(1, 1, 1));
         jTextPreview3.setRows(5);
         jTextPreview3.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview (Generator)"));
@@ -994,7 +1000,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         skillsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Skills"));
 
-        skillType.setFont(new java.awt.Font("Monospaced", 0, 12));
+        skillType.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         skillType.setPreferredSize(new java.awt.Dimension(56, 25));
         skillType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1002,7 +1008,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        skillTree.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        skillTree.setFont(new java.awt.Font("Monospaced", 0, 12));
         skillTree.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         skillTree.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1099,9 +1105,9 @@ public class MhagGui extends javax.swing.JFrame {
                         .addComponent(skillType, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabelSkillTree)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(6, 6, 6)
                         .addComponent(skillTree, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabelSkillName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(skillName, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1224,7 +1230,7 @@ public class MhagGui extends javax.swing.JFrame {
         headLabel1.setLabelFor(headMenu);
         headLabel1.setToolTipText("Head");
 
-        jCheckBoxGun.setFont(new java.awt.Font("Monospaced", 0, 12));
+        jCheckBoxGun.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jCheckBoxGun.setText("Slots from Two Gunner Parts");
         jCheckBoxGun.setToolTipText("Gun slots are from different gun parts");
         jCheckBoxGun.addItemListener(new java.awt.event.ItemListener() {
@@ -1321,7 +1327,7 @@ public class MhagGui extends javax.swing.JFrame {
         });
 
         jListOptSets.setBorder(javax.swing.BorderFactory.createTitledBorder("Search Results"));
-        jListOptSets.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jListOptSets.setFont(new java.awt.Font("Monospaced", 0, 12));
         jListOptSets.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jListOptSets.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
@@ -1527,7 +1533,7 @@ public class MhagGui extends javax.swing.JFrame {
         jScrollPane1.setFont(new java.awt.Font("Monospaced", 0, 12));
 
         codeList.setBorder(javax.swing.BorderFactory.createTitledBorder("Code List"));
-        codeList.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        codeList.setFont(new java.awt.Font("Monospaced", 0, 12));
         codeList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         codeList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
@@ -1554,7 +1560,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        deleteInteract.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        deleteInteract.setFont(new java.awt.Font("Monospaced", 1, 12));
         deleteInteract.setText("Remove/Cut");
         deleteInteract.setToolTipText("Remove/cut the selected set (max 5) ");
         deleteInteract.addActionListener(new java.awt.event.ActionListener() {
@@ -1563,7 +1569,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        undoInteract.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        undoInteract.setFont(new java.awt.Font("Monospaced", 1, 12));
         undoInteract.setText("Paste");
         undoInteract.setToolTipText("Append the recently removed set (max 5)");
         undoInteract.addActionListener(new java.awt.event.ActionListener() {
@@ -2105,6 +2111,7 @@ public class MhagGui extends javax.swing.JFrame {
 		else
 			gen.setNumWeaponSlot(ind);
 
+		/*
 		if((mhag.getGame() == 0) && (!gen.getBlade()) && (gen.getNumWeaponSlot() > 1)) 
 		{
 			jCheckBoxGun.setEnabled(true);
@@ -2119,6 +2126,7 @@ public class MhagGui extends javax.swing.JFrame {
 			gen.setIfSlotGunPart(false);
 		}
 		//System.out.println(gen.getIfSlotGunPart());
+		 */
 
 	}//GEN-LAST:event_jComboBoxWeaponSlotsActionPerformed
 
@@ -2191,6 +2199,13 @@ public class MhagGui extends javax.swing.JFrame {
 	private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
     	initGUISet();
 	    jTextSetName.setText(Set.unNamedSet);
+
+		lowRank.setSelected(false);
+		highRank.setSelected(true);
+		blade.setSelected(true);
+		gunner.setSelected(false);
+	    male.setSelected(true);
+	    female.setSelected(false);
 	    initSetup(false, true, false);
 	}//GEN-LAST:event_resetActionPerformed
 
@@ -2211,29 +2226,9 @@ public class MhagGui extends javax.swing.JFrame {
 
 	private void jComboBoxTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTypeActionPerformed
 		if(jComboBoxType.getSelectedIndex() == 0)
-		{
 			gen.setBlade(true);
-			jCheckBoxGun.setEnabled(false);
-			gen.setIfSlotGunPart(false);
-		}
 		else
-		{
 			gen.setBlade(false);
-			if((mhag.getGame() == 0 ) && (gen.getNumWeaponSlot() > 1))
-			{
-				jCheckBoxGun.setEnabled(true);
-				if(jCheckBoxGun.isSelected())
-					gen.setIfSlotGunPart(true);
-				else
-					gen.setIfSlotGunPart(false);
-			}
-			else
-			{
-				jCheckBoxGun.setEnabled(false);
-				gen.setIfSlotGunPart(false);
-			}
-		}
-		//System.out.println(gen.getIfSlotGunPart());
 	}//GEN-LAST:event_jComboBoxTypeActionPerformed
 
 	private void jComboBoxRankActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxRankActionPerformed
@@ -2262,11 +2257,10 @@ public class MhagGui extends javax.swing.JFrame {
 	}//GEN-LAST:event_aboutButtonActionPerformed
 
 	private void jCheckBoxGunItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBoxGunItemStateChanged
-		if(evt.getStateChange() == ItemEvent.DESELECTED)
-			gen.setIfSlotGunPart(false);
+		if (evt.getStateChange() == ItemEvent.DESELECTED)
+			gen.setIfCheckGun(false);
 		else
-			gen.setIfSlotGunPart(true);
-		//System.out.println(gen.getIfSlotGunPart());
+			gen.setIfCheckGun(true);
 	}//GEN-LAST:event_jCheckBoxGunItemStateChanged
 
 	//show possible pieces for generator
@@ -2278,7 +2272,7 @@ public class MhagGui extends javax.swing.JFrame {
 		boolean ifLowRank = false;
 		boolean ifBlade = true;
 	    streamGen.reset();
-		streamGen.println("====== Possible Armor Pieces ======");
+		streamGen.println("====== Recommended Armor Pieces ======");
 
 		if (gen.getGenMode() == 1)
 		{
@@ -2313,9 +2307,18 @@ public class MhagGui extends javax.swing.JFrame {
 				int[] armorList = gen.getArmorList(ifLowRank, ifBlade, bodyPart);
 				outputArmor(streamGen, bodyPart, armorList);
 			}
-
-
 		}
+		streamGen.println();
+		streamGen.println();
+		streamGen.println("====== All Armor Pieces with Selected Skills ======");
+		streamGen.println("------ (sorted by combined skill points)------"); 
+
+		for(int bodyPart = 0; bodyPart < 5; bodyPart++)
+		{
+			int[] armorList = gen.getArmorListAll(ifLowRank, ifBlade, bodyPart);
+			outputArmor(streamGen, bodyPart, armorList);
+		}
+
 	    streamGen.rewind();
 	}
 
@@ -2925,6 +2928,8 @@ public class MhagGui extends javax.swing.JFrame {
 	   boolean lowRankNow = set.getLowRank();
 	   if(nSlot > 0)
 		   set.setInUse(bodyPart, true);
+	   else
+		   set.setInUse(bodyPart, false);
 
 	   //initialiate jewel menu lists
 	   set.setNumJewel(bodyPart, nSlot);
@@ -2960,6 +2965,8 @@ public class MhagGui extends javax.swing.JFrame {
 			   changeCharmPoint(0, lowRankNow, nSlot, -1, true);
 			   changeCharmSkill(1, lowRankNow, nSlot, false);
 			   changeCharmPoint(1, lowRankNow, nSlot, -1, false);
+			   if(nSlot <= 0)
+				   set.setInUse(6, false); //slot no use
 			   calSetGUI();
 			   return;
 		   }
@@ -3005,6 +3012,8 @@ public class MhagGui extends javax.swing.JFrame {
 		   int skillID = set.getCharmSkillID()[0];
 		   if((ind < 0) || (skillID < 0))
 		   {
+			   if(nSlot <= 0)
+				   set.setInUse(6, false);  //slot no use
 			   set.setNumCharmSkill(0);
 			   changeCharmPoint(0, lowRankNow, nSlot, -1, true);
 			   changeCharmSkill(1, lowRankNow, nSlot, false);
@@ -3034,6 +3043,8 @@ public class MhagGui extends javax.swing.JFrame {
 		   }
 		   else
 		   {
+			   if(nSlot <= 0)
+				   set.setInUse(6, false);  //slot no use
 			   set.setNumCharmSkill(0);
 			   changeCharmSkill(1, lowRankNow, nSlot, false);
 			   changeCharmPoint(1, lowRankNow, nSlot, -1, false);

@@ -336,6 +336,13 @@ public class Generator {
 			Set genSet = new Set();
 
 			genSet.copySetMin(aSet);  //get Set
+
+			if(!genSet.getBlade() && ifCheckGun && 
+					((numWeaponSlotOpt == 2) || (numWeaponSlotOpt == 3)))
+				ifSlotGunPart = true;
+			else
+				ifSlotGunPart = false;
+
 			//genSet.setRate(this);
 			score = setOptimizer(genSet);
 
@@ -353,6 +360,12 @@ public class Generator {
 			ifLowRank = aSet.getLowRank();
 			ifBlade = aSet.getBlade();
 			initJewel(ifLowRank);
+
+			if(!ifBlade && ifCheckGun &&
+					((numWeaponSlotOpt == 2) || (numWeaponSlotOpt == 3)))
+				ifSlotGunPart = true;
+			else
+				ifSlotGunPart = false;
 
 			for(int bodyPart = 0; bodyPart < 5; bodyPart++)
 			{
@@ -397,6 +410,12 @@ public class Generator {
 				ifLowRank =  true;
 			ifBlade = genBlade;
 			initJewel(ifLowRank);
+
+			if(!ifBlade && ifCheckGun &&
+					((numWeaponSlotOpt == 2) || (numWeaponSlotOpt == 3)))
+				ifSlotGunPart = true;
+			else
+				ifSlotGunPart = false;
 
 			for(int bodyPart = 0; bodyPart < 5; bodyPart++)
 			{
@@ -1095,7 +1114,7 @@ public class Generator {
 					((jewelNeg[currentSkill] && (i >= 2) && (gapPointNow[currentSkill]+1 >= pointJewel))))
 			{
 				if((slotsNow[i] > 0)  // found matched piece
-						&& !(ifSlotGunPart && (i == numWeaponSlotOpt) && (slotsNow[i] == 1))) //gunner weapon slot (can't use all slots)
+						&& !(ifSlotGunPart && (i == numWeaponSlotOpt) && (slotsNow[i] == 1) && (slotInfoNow[5] == numWeaponSlotOpt))) //gunner weapon slot (can't use all slots)
 				{
 					addJewel(aSet, currentSkill, i, i, false, gapPointNow, slotsNow, slotInfoNow);
 				}
@@ -1157,14 +1176,20 @@ public class Generator {
 			if(jewelNeg[currentSkill])
 				gapPointNow[jewelNegSkillInd[currentSkill]] -= jewelNegPoint[currentSkill][nSlot];
 
-			for(int i = 0; i < 7; i++)
+			// check weapon slot first if ifSlotGunPart is triggered
+			if(ifSlotGunPart && (pieceSlot == numWeaponSlotOpt) && (slotInfoNow[5] == numWeaponSlotOpt) && (nSlot < pieceSlot))
+				bodyPart = 5;
+			else  // normal cases
 			{
-				if(slotInfoNow[i] == pieceSlot)
+				for(int i = 0; i < 7; i++)
 				{
-					if((i == 1) && (slotsNow[4] > 0))continue;
-					if(ifSlotGunPart && (i == 5) && (nSlot == numWeaponSlotOpt))continue;
-					bodyPart = i;
-					break;
+					if(slotInfoNow[i] == pieceSlot)
+					{
+						if((i == 1) && (slotsNow[4] > 0))continue;
+						if(ifSlotGunPart && (i == 5) && (nSlot == numWeaponSlotOpt))continue;
+						bodyPart = i;
+						break;
+					}
 				}
 			}
 			//System.out.printf("here %d %d %d\n", bodyPart, nSlot, jewelIDUsed[currentSkill][nSlot]);
@@ -1277,6 +1302,109 @@ public class Generator {
 			temp[i] = armorList[i];
 
 		return temp;
+	}
+
+	// generate a list of armor pieces that contain the effects, and sorted by combined skill points
+	public int[] getArmorListAll(boolean lowRank, boolean blade, int bodyPart)
+	{
+		int [] armorList = new int[Armor.armorIDTot[bodyPart]]; 
+		int [] pointList = new int[Armor.armorIDTot[bodyPart]]; 
+		int armorNum = 0;
+
+		for(int i = 0; i < Armor.armorIDTot[bodyPart]; i++) 
+		{
+			Armor armor = mhagData.getArmor(bodyPart, i) ;
+
+			//check gunner /blade
+			if(blade)
+			{
+				if(armor.getBladeOrGunner().equals("G"))
+					continue;
+			}
+			else
+			{
+				if(armor.getBladeOrGunner().equals("B"))
+					continue;
+			}
+
+			//check low/high rank
+			if(lowRank || (armorRankOpt == 1)) // low rank only
+			{
+				if(!armor.getLowRank()) continue;
+			}
+			else if(armorRankOpt == 2) //high rank only
+			{
+				if(armor.getLowRank()) continue;
+			}
+
+			//check earring
+			if(!ifEarring)
+			{
+				if((armor.getArmorName().contains("Earring")) &&
+						(armor.getNumSkill() > 0))
+					continue;
+			}
+
+			// check head pieces
+			if(bodyPart == 0)
+			{
+				if(armorHeadOpt == 1) //melee only
+				{
+					if(armor.getBG4Head() == 2)continue;
+				}
+				else if(armorHeadOpt == 2) //gunner only
+				{
+					if(armor.getBG4Head() == 1)continue;
+				}
+			}
+
+			//check armor skills 
+			int point = getSkillPointAll(armor);
+			if(point > 0)
+			{
+				if(armorNum == 0)
+				{
+					armorList[0] = i;
+					pointList[0] = point;
+					armorNum = 1;
+				}
+				else
+				{
+					armorList[armorNum] = i;
+					pointList[armorNum] = point;
+					armorNum++;
+				}
+
+			}
+
+		}
+
+		int[] ind = MhagUtil.sortIndex(armorNum, pointList); //sorted by skill points
+
+		int[] temp = new int[armorNum];
+		for(int i = 0; i < armorNum; i++)
+			temp[i] = armorList[ind[i]];
+
+		return temp;
+	}
+
+	public int getSkillPointAll(Armor armor)
+	{
+		int point = 0;
+		for(int i = 0; i < numEffectOpt; i++)
+		{
+			int skillID = skills[i];
+			//check armor
+			for(int j = 0; j < armor.getNumSkill(); j++)
+			{
+				if(skillID == armor.getSkillID()[j])
+				{
+					point += armor.getSkillPoint()[j];
+					break;
+				}
+			}
+		}
+		return point;
 	}
 
 	public int updateArmorList(boolean lowRank, int bodyPart, int armorNum, int[] armorList, int armorID)
@@ -1632,6 +1760,9 @@ public class Generator {
 	public boolean getIfCharm() {return ifCharm;}
 	public void setIfCharm(boolean opt) {ifCharm = opt;}
 
+	public boolean getIfCheckGun() {return ifCheckGun;}
+	public void setIfCheckGun(boolean opt) {ifCheckGun = opt;}
+
 	public boolean getIfSlotGunPart() {return ifSlotGunPart;}
 	public void setIfSlotGunPart(boolean opt) {ifSlotGunPart = opt;}
 
@@ -1685,6 +1816,7 @@ public class Generator {
 	private int armorHeadOpt = 0; // 0: any, 1: melee only, 2: gunner only
 	private boolean ifEarring = true;  //include earring
 	private boolean ifCharm = false; //use my charm
+	private boolean ifCheckGun = false; // if checkbox for gun part is selected , fault false
 	private boolean ifSlotGunPart = false; // slots from two gun parts
 	//private boolean[] includeOpt = new boolean[4]; // lr, hr, piercing, charm
 	private int numWeaponSlotOpt = 0;  //max # of weapon slots, as an input option
