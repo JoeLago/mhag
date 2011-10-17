@@ -55,10 +55,10 @@ Bnahabra Glove        : ブナハグローブ      : B : A :  29 :  29 : 2 : -5 
 Bnahabra Coil         : ブナハコイル        : B : W :  29 :  29 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  3 : Sheathe :  1 : Sense :  3 : Attack : -2
 Bnahabra Boots        : ブナハブーツ        : B : L :  29 :  29 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  3 : Sheathe :  3 : Sense :  1 : Attack : -2
 Bnahabra Cap          : ブナハキャップ      : A : H :  18 :  18 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  3 : Sheathe :  3 : Sense :  4 : Attack : -1
-Bnahabra vest         : ブナハベスト        : G : C :  18 :  18 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  1 : Sheathe :  3 : Sense :  1 : Attack : -2
-Bnahabra Cuffs        : ブナハカフス        : G : A :  18 :  18 : 2 : -3 : -1 : -1 :  3 :  5 : Status :  3 : Sheathe :  1 : Sense :  1 : Attack : -2
-Bnahabra Coat         : ブナハコート        : G : W :  18 :  18 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  3 : Sheathe :  2 : Sense :  2 : Attack : -2
-Bnahabra Leggings     : ブナハフット        : G : L :  18 :  18 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  1 : Sheathe :  2 : Sense :  3 : Attack : -3
+Bnahabra vest         : ブナハベスト        : G : C :  18 :  18 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  3 : Sheathe :  1 : Sense :  1 : Attack : -2
+Bnahabra Cuffs        : ブナハカフス        : G : A :  18 :  18 : 2 : -3 : -1 : -1 :  3 :  5 : Status :  1 : Sheathe :  3 : Sense :  1 : Attack : -2
+Bnahabra Coat         : ブナハコート        : G : W :  18 :  18 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  2 : Sheathe :  3 : Sense :  2 : Attack : -2
+Bnahabra Leggings     : ブナハフット        : G : L :  18 :  18 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  2 : Sheathe :  1 : Sense :  3 : Attack : -3
 Rhenoplos Helm        : リノプロヘルム      : A : H :  29 :  29 : 1 :  2 : -2 : -2 : -2 :  1 : Gunnery :  1 : StaminaRec :  2 : Ice Res : -3 : Mud/Snow :  3
 Rhenoplos Mail        : リノプロメイル      : B : C :  29 :  29 : 1 :  2 : -2 : -2 : -2 :  1 : Gunnery :  1 : StaminaRec :  2 : Ice Res : -2 : Mud/Snow :  2
 Rhenoplos Vambraces   : リノプロアーム      : B : A :  29 :  29 : 1 :  2 : -2 : -2 : -2 :  1 : Gunnery :  3 : StaminaRec :  1 : Ice Res : -1 : Defense :  4
@@ -388,11 +388,11 @@ Chainmail S Vest      : チェーンSレジスト       : G : C :  -- :  35 : 1 
 Chainmail S Guards    : チェーンSガード         : G : A :  -- :  35 : 2 :  3 :  2 :  2 : -1 :  0 : Health :  3 : Combo Rate :  4 :                   Normal S+  :  2
 Chainmail S Coat      : チェーンSコート         : G : W :  -- :  35 : 2 :  3 :  2 :  2 : -1 :  0 : Health :  2 : Combo Rate :  4 : Combo Plus :  3
 Chainmail S Leggings  : チェーンSレギンス       : G : L :  -- :  35 : 2 :  3 :  2 :  2 : -1 :  0 : Health :  4 : Combo Rate :  4 : Combo Plus :  1
-Hunter's S Helm       : ハンターSヘルム         : A : H :  -- :  62 : 1 :  2 :  0 : -2 : -1 :  0 : Psychic :  3 : Hunter :  2 : SpeedSetup :  4 : Poison : -2
-Hunter's S Mail       : ハンターSメイル         : B : C :  -- :  62 : 1 :  2 :  0 : -2 : -1 :  0 : Psychic :  2 : Hunter :  1 :                   Poison : -3 : Perception :  3
-Hunter's S Vambraces  : ハンターSアーム         : B : A :  -- :  62 : 2 :  2 :  0 : -2 : -1 :  0 :                Hunter :  2 : SpeedSetup :  4 : Poison : -1 : Perception :  4
-Hunter's S Faulds     : ハンターSフォールド     : B : W :  -- :  62 : 1 :  2 :  0 : -2 : -1 :  0 : Psychic :  3 : Hunter :  3 :                   Poison : -2 : Perception :  3
-Hunter's S Greaves    : ハンターSグリーヴ       : B : L :  -- :  62 : 1 :  2 :  0 : -2 : -1 :  0 : Psychic :  5 : Hunter :  2 : SpeedSetup :  2 : Poison : -2
+Hunter's S Helm       : ハンターSヘルム         : A : H :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 : Psychic :  3 : Hunter :  2 : SpeedSetup :  4 : Poison : -2
+Hunter's S Mail       : ハンターSメイル         : B : C :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 : Psychic :  2 : Hunter :  1 :                   Poison : -3 : Perception :  3
+Hunter's S Vambraces  : ハンターSアーム         : B : A :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 :                Hunter :  2 : SpeedSetup :  4 : Poison : -1 : Perception :  4
+Hunter's S Faulds     : ハンターSフォールド     : B : W :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 : Psychic :  3 : Hunter :  3 :                   Poison : -2 : Perception :  3
+Hunter's S Greaves    : ハンターSグリーヴ       : B : L :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 : Psychic :  5 : Hunter :  2 : SpeedSetup :  2 : Poison : -2
 Hunter's S Cap        : ハンターSキャップ       : A : H :  -- :  36 : 1 :  1 :  2 :  0 : -2 :  1 : Psychic :  4 : Hunter :  3 : SpeedSetup :  4 : Poison : -2
 Hunter's S Vest       : ハンターSレジスト       : G : C :  -- :  36 : 1 :  1 :  2 :  0 : -2 :  1 : Psychic :  2 : Hunter :  1 :                   Poison : -3 : Perception :  3
 Hunter's S Guards     : ハンターSガード         : G : A :  -- :  36 : 1 :  1 :  2 :  0 : -2 :  1 :                Hunter :  1 : SpeedSetup :  4 : Poison : -2 : Perception :  4
@@ -760,7 +760,7 @@ Qurupeco U Vest       : ペッコUレジスト         : G : C :  -- :  41 : 0 :
 Qurupeco U Guards     : ペッコUガード           : G : A :  -- :  41 : 3 : -2 :  0 : -3 :  5 :  3 : Wide-Range :  4 : Eating :  1 : Ice Atk : -1 : ThunderAtk :  1
 Qurupeco U Coat       : ペッコUコート           : G : W :  -- :  41 : 1 : -2 :  0 : -3 :  5 :  3 : Wide-Range :  1 : Eating :  2 : Ice Atk : -3 : ThunderAtk :  5
 Qurupeco U Leggings   : ペッコUレギンス         : G : L :  -- :  41 : 2 : -2 :  0 : -3 :  5 :  3 : Wide-Range :  4 : Eating :  1 : Ice Atk : -3 : ThunderAtk :  1
-Ludroth U Helm        : ルドロスUヘルム         : A : H :  -- :  71 : 1 : -4 :  2 :  0 : -2 :  1 : Stamina :  1 : Exhaust :  3 : ThunderRes : -3 : Water Res :  4
+Ludroth U Helm        : ルドロスUヘルム         : A : H :  -- :  71 : 1 : -4 :  2 :  0 : -1 :  1 : Stamina :  1 : Exhaust :  3 : ThunderRes : -3 : Water Res :  4
 Ludroth U Mail        : ルドロスUメイル         : B : C :  -- :  71 : 3 : -4 :  2 :  0 : -2 :  1 : Stamina :  1 : Status  :  1 : ThunderRes : -2 : Water Res :  1
 Ludroth U Vambraces   : ルドロスUアーム         : B : A :  -- :  71 : 1 : -4 :  2 :  0 : -2 :  1 : Stamina :  3 : Status  :  5 : ThunderRes : -1 : Water Res :  2
 Ludroth U Faulds      : ルドロスUフォールド     : B : W :  -- :  71 : 3 : -4 :  2 :  0 : -2 :  1 : Stamina :  2 : Status  :  1 : ThunderRes : -3 : Water Res :  1
@@ -967,10 +967,10 @@ Ukanlos Claw          : ウカムルノキリペ        : G : A :  -- :  52 : 0 
 Ukanlos Cinture       : ウカムルイッケタリ      : G : W :  -- :  52 : 1 : -4 :  0 :  5 : -1 : -1 : Blow :  2 : Rapid Fire :  3 : FastCharge : -2 : NormalS Up :  4
 Ukanlos Hessian       : ウカムルチキル          : G : L :  -- :  52 : 2 : -4 :  0 :  5 : -1 : -1 : Blow :  2 : Rapid Fire :  2 : FastCharge : -2 : Ice Atk :  3
 Escadora Wisdom       : エスカドラワイズ        : A : H :  -- :  89 : 0 :  0 :  0 :  0 :  1 : -4 : Elemental :  2 : Evade Dist :  3 : Blight Res :  5 : Potential : -3
-Escadora Soul         : エスカドラソウル        : B : C :  -- :  89 : 1 :  0 :  0 :  0 :  1 : -4 : Elemental :  2 : Evade Dist :  4 : Blight Res :  1 : Potential : -2
-Escadora Arms         : エスカドラアムズ        : B : A :  -- :  89 : 2 :  0 :  0 :  0 :  1 : -4 : Elemental :  3 : Evade Dist :  4 : Blight Res :  1 : Potential : -1
-Escadora Might        : エスカドラマイト        : B : W :  -- :  89 : 3 :  0 :  0 :  0 :  1 : -4 : Elemental :  1 : Evade Dist :  2 : Blight Res :  2 : Potential : -2
-Escadora Scale        : エスカドラスケル        : B : L :  -- :  89 : 3 :  0 :  0 :  0 :  1 : -4 : Elemental :  2 : Evade Dist :  2 : Blight Res :  1 : Potential : -2
+Escadora Soul         : エスカドラソウル        : B : C :  -- :  89 : 1 : -3 :  0 :  3 :  1 : -4 : Elemental :  2 : Evade Dist :  4 : Blight Res :  1 : Potential : -2
+Escadora Arms         : エスカドラアムズ        : B : A :  -- :  89 : 2 : -3 :  0 :  3 :  1 : -4 : Elemental :  3 : Evade Dist :  4 : Blight Res :  1 : Potential : -1
+Escadora Might        : エスカドラマイト        : B : W :  -- :  89 : 3 :  3 :  0 : -3 :  1 : -4 : Elemental :  1 : Evade Dist :  2 : Blight Res :  2 : Potential : -2
+Escadora Scale        : エスカドラスケル        : B : L :  -- :  89 : 3 :  3 :  0 : -3 :  1 : -4 : Elemental :  2 : Evade Dist :  2 : Blight Res :  1 : Potential : -2
 Escadora Sagesse      : エスカドラサジェス      : A : H :  -- :  52 : 0 :  1 :  1 :  1 :  3 : -2 : Elemental :  4 : Evade Dist :  4 : Blight Res :  4 : Potential : -3
 Escadora Seele        : エスカドラゼーレ        : G : C :  -- :  52 : 1 : -3 :  1 :  3 :  3 : -2 : Elemental :  2 : Evade Dist :  2 : Blight Res :  3 : Potential : -2
 Escadora Arma         : エスカドラアルマ        : G : A :  -- :  52 : 2 : -3 :  1 :  3 :  3 : -2 : Elemental :  2 : Evade Dist :  4 : Blight Res :  1 : Potential : -2

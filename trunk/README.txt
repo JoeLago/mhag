@@ -10,31 +10,30 @@ Webite:
 http://mhag.info
 
 Features:
- 1. MHAG Desktop: Create and organize sets offline
-  a. Manually build armor sets with the built-in calculator
-  b. Use the generator to search armor sets automatically within seconds
-  c. Use the viewer to manage, browse and export armor sets
-  d. The three components can interact with each other
+1. MHAG Desktop: Create and organize sets offline
+   a. Manually build armor sets with the built-in calculator
+   b. Use the generator to search armor sets automatically within seconds
+   c. Use the viewer to manage, browse and export armor sets
+   d. The three components can interact with each other
 
- 2. MHAG Online: Create and share sets online
-  a. Works on ANY device that connects to internet
-  b. Features the same calculator as MHAG Desktop
-  c. Use the online database to share and search mixed sets
+2. MHAG Online: Create and share sets online
+   a. Works on ANY device that connects to internet
+   b. Features the same calculator as MHAG Desktop
+   c. Use the online database to share and search mixed sets
 
- 3. Integration of MHAG Desktop and MHAG Online
-  a. Share same data and core functions
-  b. Easily access MHAG Online from MHAG Desktop
+3. Integration of MHAG Desktop and MHAG Online
+   a. Share same data and core functions
+   b. Easily access MHAG Online from MHAG Desktop
 
- 4. Support Games
-  a. Monster Hunter Tri (Wii)
-  b. Monster Hunter Portable 3rd (PSP/PS3)
-  c. (future) Monster Hunter Tri G (3DS)*
-  d. (future) Monster Hunter Freedom Unite (PSP)**
+4. Support Games
+   a. Monster Hunter Tri (Wii)
+   b. Monster Hunter Portable 3rd (PSP/PS3)
+   c. (future) Monster Hunter Tri G (3DS)*
+   d. (future) Monster Hunter Freedom Unite (PSP)**
 
-(Notes:
+(Notes)
 *   When MHTri G comes to the west, or if many users request it
 **  If any user can provide MHFU data
-)
 
 System Requirements:
  1. MHAG Desktop:
@@ -46,13 +45,15 @@ System Requirements:
   b. Web browser (Google Chrome, Mozilla Firefox, Safari, Internet Explorer, Opera etc.)
 
 History (MHAG Desktop):
-v.2.0 10/17/2011:
+v.2.0 10/18/2011:
    1. bug: partial search never stops when charm is manually reset; fixed
    2. bug: "slot from two gun parts" failed to search some cases; fixed
    3. bug: "reset" function in the calculator doesn't reset gunner/blade low/high rank and female/male radio buttons; fixed
-   4. new feature: armor suggestion also outputs all armor pieces that contain the selected skills, sorted by total skill points.
-   5. update README description
-   6. update USAGE 
+   4. bug: in GUI background thread; fixed
+   5. new feature: armor suggestion also outputs all armor pieces that contain the selected skills, sorted by total skill points.
+   6. update README description
+   7. update USAGE 
+   8. correct a few mhp3rd data errors (bnahabra set, hunter's S set, ludroth U set, Escadora set)
 v.2.0 RC2 10/11/2011:
    1. bug: "slot from two gun parts" doesn't work properly. fixed
    2. new feature: add mhag icon 

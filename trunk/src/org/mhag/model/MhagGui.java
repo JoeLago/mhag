@@ -57,7 +57,7 @@ public class MhagGui extends javax.swing.JFrame {
 		}
 
 		// set title
-		String title =  "MHAG (Monster Hunter Armor Generator) Ver 2.0";
+		String title =  "MHAG (Monster Hunter Armor Generator) Desktop 2.0";
 		if(mhag.getGame() == 0)
 			setTitle(title + " for Monster Hunter Tri");
 		else
@@ -2147,9 +2147,7 @@ public class MhagGui extends javax.swing.JFrame {
 	}//GEN-LAST:event_jButtonDownActionPerformed
 
 	private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchActionPerformed
-		task = new Task();
-		task.execute();  // start background task
-		//searchAction();
+		searchAction();
 	}//GEN-LAST:event_jButtonSearchActionPerformed
 
 	private void jListOptSetsValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jListOptSetsValueChanged
@@ -2398,21 +2396,20 @@ public class MhagGui extends javax.swing.JFrame {
 	}
 
 	// main search action
-	private void searchAction(Task task)
+	private void searchAction()
 	{
-		// no effects are inputed, automatically generate the list
-		boolean auto = false;
-		if(gen.getNumEffectOpt() <= 0)
-			if(gen.getGenMode() == 0)
-			{
-				gen.generateSkillList(set);
-				auto = true;
-			}
+		listModelOpt.clear();
+		streamGen.reset();
 
 		if(gen.getNumEffectOpt() <= 0)
 		{
-			listModelOpt.clear();
-			streamGen.reset();
+			if(gen.getGenMode() == 2) //jewel optimization
+			{
+				// no effects are inputed, automatically generate the list
+				gen.generateSkillList(set);
+			}
+			else
+				return;
 		}
 		else
 		{
@@ -2420,39 +2417,15 @@ public class MhagGui extends javax.swing.JFrame {
 			disableGen(true);
 			jProgressOpt.setString(null);
 			jProgressOpt.setValue(0);
-			long time1 = new Date().getTime();
-
-			mainTask(task);
-
-			long time2 = new Date().getTime() - time1;
-			disableGen(false);
-			setCursor(null);
-			//gen.initJewel(set.getLowRank());
-			jProgressOpt.setValue(jProgressOpt.getMaximum());
-			jProgressOpt.setString(String.format("%7.2fs   ",time2/1000.0));
+			cpuTime = new Date().getTime();
 		}
-
-		if(auto)
-		{
-			for(int i = 0; i < 10; i++)
-			{
-				gen.setEffects(i, -1);
-				gen.setSkills(i, -1);
-				gen.setTriggers(i, 0);
-				gen.setNumEffectOpt(0);
-			}
-		}
+		task = new Task();
+		task.execute();  // start background task
 	}
 
 	public void mainTask(Task task)
 	{
-		listModelOpt.clear();
-		streamGen.reset();
-		String[] setCodes = gen.genMainGui(task, this, set);
-		if(setCodes != null)
-			addOptList(setCodes);
-
-		//if(task.isCancelled())return;
+		setCodeGUI = gen.genMainGui(task, this, set);
 	}
 
 	private void disableGen(boolean ifDisable)
@@ -2465,6 +2438,7 @@ public class MhagGui extends javax.swing.JFrame {
 			jButtonRemove.setEnabled(false);
 			jButtonUp.setEnabled(false);
 			jButtonDown.setEnabled(false);
+			jButtonShowPiece.setEnabled(false);
 			jComboBoxWeaponSlots.setEnabled(false);
 			jButtonSearch.setEnabled(false);
 			loadToCalcGen.setEnabled(false);
@@ -2479,6 +2453,7 @@ public class MhagGui extends javax.swing.JFrame {
 			jComboBoxHead.setEnabled(false);
 			jCheckBoxEarring.setEnabled(false);
 			jCheckBoxCharm.setEnabled(false);
+			jCheckBoxGun.setEnabled(false);
 		}
 		else
 		{
@@ -2488,6 +2463,7 @@ public class MhagGui extends javax.swing.JFrame {
 			jButtonRemove.setEnabled(true);
 			jButtonUp.setEnabled(true);
 			jButtonDown.setEnabled(true);
+			jButtonShowPiece.setEnabled(true);
 			jComboBoxWeaponSlots.setEnabled(true);
 			jButtonSearch.setEnabled(true);
 			loadToCalcGen.setEnabled(true);
@@ -2497,6 +2473,11 @@ public class MhagGui extends javax.swing.JFrame {
 			jButtonMyCharms.setEnabled(true);
 			jButtonSettings.setEnabled(true);
 			jComboBoxOpt.setEnabled(true);
+
+			if(mhag.getGame() == 0)
+				jCheckBoxGun.setEnabled(true);
+			else
+				jCheckBoxGun.setEnabled(false);
 
 			//disable for test
 			/*
@@ -4102,10 +4083,27 @@ public class MhagGui extends javax.swing.JFrame {
 		@Override
 		public Void doInBackground()
 		{
-			searchAction(this);
+			mainTask(this);
 			return null;
 		}
+
+		@Override
+		public void done()
+		{
+			if(setCodeGUI != null)
+				addOptList(setCodeGUI);
+
+			long time2 = new Date().getTime() - cpuTime;
+			disableGen(false);
+			setCursor(null);
+			//gen.initJewel(set.getLowRank());
+			jProgressOpt.setValue(jProgressOpt.getMaximum());
+			jProgressOpt.setString(String.format("%7.2fs   ",time2/1000.0));
+		} 
 	}
+
+	private String[] setCodeGUI;
+	private long cpuTime;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Output;
