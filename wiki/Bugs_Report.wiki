@@ -1,5 +1,5 @@
+#summary Report MHAG bugs
 #labels Featured,bugs
- #Summary Report MHAG bugs
 
 = Introduction =
 
