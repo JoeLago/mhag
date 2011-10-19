@@ -14,3 +14,5 @@ This Wiki page is used to report bugs. Please make comments on this page if you 
   # Charm skill/slot menus are incorrectly displayed - by Willis**
     * Problem: unclear yet
     * Solved: no
+  # Armor set name error: Damascus - by frost
+    * Solved: no
