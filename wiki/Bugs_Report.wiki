@@ -8,4 +8,6 @@ This Wiki page is used to report bugs. Please make comments on this page if you 
 
 = Details =
 
-TBD
+  # Set Name is incorrect in the MHAG Online Link by Hobbes
+    * Problem: the set name contains the symbol "
+    * Solved: no
