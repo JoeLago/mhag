@@ -488,16 +488,16 @@ Agnaktor Vest+        : G : C :  -- :  45 : 1 :  5 : -4 : -2 :  1 :  0 : NormalS
 Agnaktor Guards+      : G : A :  -- :  45 : 3 :  5 : -4 : -2 :  1 :  0 : NormalS Up :  2 : Normal S+ :  1 : Flame Aura :  1 : Stamina : -3
 Agnaktor Coat+        : G : W :  -- :  45 : 3 :  5 : -4 : -2 :  1 :  0 : NormalS Up :  1 : Normal S+ :  2 : Flame Aura :  1 : Stamina : -3
 Agnaktor Leggings+    : G : L :  -- :  45 : 2 :  5 : -4 : -2 :  1 :  0 : NormalS Up :  2 : Normal S+ :  1 : Flame Aura :  4 : Stamina : -2
-Damacrus Helm         : A : H :  -- :  78 : 3 : -2 :  0 :  2 : -2 :  3 : Health :  1 : PunishDraw :  2 : Guard Up :  1 : Stamina : -3
-Damacrus Mail         : B : C :  -- :  78 : 3 : -2 :  0 :  2 : -2 :  3 : Health :  1 : PunishDraw :  1 : Guard Up :  1 : Stamina : -2
-Damacrus Vambraces    : B : A :  -- :  78 : 0 : -2 :  0 :  2 : -2 :  3 : Health :  5 : PunishDraw :  3 : Guard Up :  3 : Stamina : -2
-Damacrus Coil         : B : W :  -- :  78 : 1 : -2 :  0 :  2 : -2 :  3 : Health :  4 : PunishDraw :  3 : Guard Up :  3 : Stamina : -1
-Damacrus Greaves      : B : L :  -- :  78 : 1 : -2 :  0 :  2 : -2 :  3 : Health :  5 : PunishDraw :  2 : Guard Up :  3 : Stamina : -1
-Damacrus Cap          : A : H :  -- :  45 : 3 : -2 :  0 :  2 : -2 :  8 : Health :  1 : Reload Spd :  2 : Guard Up :  1 : Stamina : -3
-Damacrus Vest         : G : C :  -- :  45 : 3 : -2 :  0 :  2 : -2 :  3 : Health :  1 : Reload Spd :  1 : Guard Up :  1 : Stamina : -2
-Damacrus Guards       : G : A :  -- :  45 : 0 : -2 :  0 :  2 : -2 :  3 : Health :  4 : Reload Spd :  5 : Guard Up :  2 : Stamina : -2
-Damacrus Coat         : G : W :  -- :  45 : 1 : -2 :  0 :  2 : -2 :  3 : Health :  3 : Reload Spd :  3 : Guard Up :  4 : Stamina : -1
-Damacrus Leggings     : G : L :  -- :  45 : 0 : -2 :  0 :  2 : -2 :  3 : Health :  6 : Reload Spd :  4 : Guard Up :  2 : Stamina : -1
+Damascus Helm         : A : H :  -- :  78 : 3 : -2 :  0 :  2 : -2 :  3 : Health :  1 : PunishDraw :  2 : Guard Up :  1 : Stamina : -3
+Damascus Mail         : B : C :  -- :  78 : 3 : -2 :  0 :  2 : -2 :  3 : Health :  1 : PunishDraw :  1 : Guard Up :  1 : Stamina : -2
+Damascus Vambraces    : B : A :  -- :  78 : 0 : -2 :  0 :  2 : -2 :  3 : Health :  5 : PunishDraw :  3 : Guard Up :  3 : Stamina : -2
+Damascus Coil         : B : W :  -- :  78 : 1 : -2 :  0 :  2 : -2 :  3 : Health :  4 : PunishDraw :  3 : Guard Up :  3 : Stamina : -1
+Damascus Greaves      : B : L :  -- :  78 : 1 : -2 :  0 :  2 : -2 :  3 : Health :  5 : PunishDraw :  2 : Guard Up :  3 : Stamina : -1
+Damascus Cap          : A : H :  -- :  45 : 3 : -2 :  0 :  2 : -2 :  8 : Health :  1 : Reload Spd :  2 : Guard Up :  1 : Stamina : -3
+Damascus Vest         : G : C :  -- :  45 : 3 : -2 :  0 :  2 : -2 :  3 : Health :  1 : Reload Spd :  1 : Guard Up :  1 : Stamina : -2
+Damascus Guards       : G : A :  -- :  45 : 0 : -2 :  0 :  2 : -2 :  3 : Health :  4 : Reload Spd :  5 : Guard Up :  2 : Stamina : -2
+Damascus Coat         : G : W :  -- :  45 : 1 : -2 :  0 :  2 : -2 :  3 : Health :  3 : Reload Spd :  3 : Guard Up :  4 : Stamina : -1
+Damascus Leggings     : G : L :  -- :  45 : 0 : -2 :  0 :  2 : -2 :  3 : Health :  6 : Reload Spd :  4 : Guard Up :  2 : Stamina : -1
 Helios Helm+/Selene Helm+              : A : H :  -- :  82 : 3 :  0 :  5 :  3 : -3 : -4 : Hearing :  2 : Handicraft :  1 : Protection : -3 : Sharpness : -1
 Helios Mail+/Selene Mail+              : B : C :  -- :  82 : 0 :  0 :  5 :  3 : -3 : -4 : Hearing :  3 : Handicraft :  5 : Protection : -1 : Sharpness : -2
 Helios Vambraces+/Selene Vambraces+    : B : A :  -- :  82 : 0 :  0 :  5 :  3 : -3 : -4 : Hearing :  5 : Handicraft :  3 : Protection : -4 : Sharpness : -1
