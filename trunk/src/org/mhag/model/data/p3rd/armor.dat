@@ -860,16 +860,16 @@ Agnaktor U Vest       : アグナUレジスト         : G : C :  -- :  49 : 1 :
 Agnaktor U Guards     : アグナUガード           : G : A :  -- :  49 : 3 : -2 :  4 :  5 : -1 : -2 : Pierce S+ :  1 : Reload Spd :  1 : Fire Atk : -3 : Water Res :  2
 Agnaktor U Coat       : アグナUコート           : G : W :  -- :  49 : 3 : -2 :  4 :  5 : -1 : -2 : Pierce S+ :  1 : Reload Spd :  1 : Fire Atk : -3 : Water Res :  2
 Agnaktor U Leggings   : アグナUレギンス         : G : L :  -- :  49 : 1 : -2 :  4 :  5 : -1 : -2 : Pierce S+ :  3 : Reload Spd :  2 : Fire Atk : -1 : Ice Atk :  5
-Damacrus Helm         : ダマスクヘルム          : A : H :  -- :  86 : 2 : -2 :  2 :  1 : -3 : -1 : Handicraft :  4 : ThunderAtk :  1 : Sharpener :  2 : Sharpness : -2
-Damacrus Mail         : ダマスクメイル          : B : C :  -- :  86 : 2 : -2 :  2 :  1 : -3 : -1 : Handicraft :  1 : ThunderAtk :  1 : Sharpener :  1 : Sharpness : -4
-Damacrus Vambraces    : ダマスクアーム          : B : A :  -- :  86 : 1 : -2 :  2 :  1 : -3 : -1 : Handicraft :  4 : ThunderAtk :  4 : Sharpener :  2 : Sharpness : -1
-Damacrus Coil         : ダマスクコイル          : B : W :  -- :  86 : 3 : -2 :  2 :  1 : -3 : -1 : Handicraft :  2 : ThunderAtk :  1 : Sharpener :  2 : Sharpness : -2
-Damacrus Greaves      : ダマスクグリーヴ        : B : L :  -- :  86 : 0 : -2 :  2 :  1 : -3 : -1 : Handicraft :  4 : ThunderAtk :  3 : Sharpener :  3 : Sharpness : -3
-Damacrus Cap          : ダマスクキャップ        : A : H :  -- :  50 : 2 : -1 :  3 :  3 : -2 :  0 : Loading :  4 : ThunderAtk :  2 : PelletS Up :  3 : Recoil : -2
-Damacrus Vest         : ダマスクレジスト        : G : C :  -- :  50 : 2 : -1 :  3 :  3 : -2 :  0 : Loading :  1 : ThunderAtk :  1 : PelletS Up :  1 : Recoil : -4
-Damacrus Guards       : ダマスクガード          : G : A :  -- :  50 : 1 : -1 :  3 :  3 : -2 :  0 : Loading :  4 : ThunderAtk :  5 : PelletS Up :  1 : Recoil : -1
-Damacrus Coat         : ダマスクコート          : G : W :  -- :  50 : 3 : -1 :  3 :  3 : -2 :  0 : Loading :  2 : ThunderAtk :  1 : PelletS Up :  2 : Recoil : -2
-Damacrus Leggings     : ダマスクレギンス        : G : L :  -- :  50 : 0 : -1 :  3 :  3 : -2 :  0 : Loading :  4 : ThunderAtk :  2 : PelletS Up :  4 : Recoil : -3
+Damascus Helm         : ダマスクヘルム          : A : H :  -- :  86 : 2 : -2 :  2 :  1 : -3 : -1 : Handicraft :  4 : ThunderAtk :  1 : Sharpener :  2 : Sharpness : -2
+Damascus Mail         : ダマスクメイル          : B : C :  -- :  86 : 2 : -2 :  2 :  1 : -3 : -1 : Handicraft :  1 : ThunderAtk :  1 : Sharpener :  1 : Sharpness : -4
+Damascus Vambraces    : ダマスクアーム          : B : A :  -- :  86 : 1 : -2 :  2 :  1 : -3 : -1 : Handicraft :  4 : ThunderAtk :  4 : Sharpener :  2 : Sharpness : -1
+Damascus Coil         : ダマスクコイル          : B : W :  -- :  86 : 3 : -2 :  2 :  1 : -3 : -1 : Handicraft :  2 : ThunderAtk :  1 : Sharpener :  2 : Sharpness : -2
+Damascus Greaves      : ダマスクグリーヴ        : B : L :  -- :  86 : 0 : -2 :  2 :  1 : -3 : -1 : Handicraft :  4 : ThunderAtk :  3 : Sharpener :  3 : Sharpness : -3
+Damascus Cap          : ダマスクキャップ        : A : H :  -- :  50 : 2 : -1 :  3 :  3 : -2 :  0 : Loading :  4 : ThunderAtk :  2 : PelletS Up :  3 : Recoil : -2
+Damascus Vest         : ダマスクレジスト        : G : C :  -- :  50 : 2 : -1 :  3 :  3 : -2 :  0 : Loading :  1 : ThunderAtk :  1 : PelletS Up :  1 : Recoil : -4
+Damascus Guards       : ダマスクガード          : G : A :  -- :  50 : 1 : -1 :  3 :  3 : -2 :  0 : Loading :  4 : ThunderAtk :  5 : PelletS Up :  1 : Recoil : -1
+Damascus Coat         : ダマスクコート          : G : W :  -- :  50 : 3 : -1 :  3 :  3 : -2 :  0 : Loading :  2 : ThunderAtk :  1 : PelletS Up :  2 : Recoil : -2
+Damascus Leggings     : ダマスクレギンス        : G : L :  -- :  50 : 0 : -1 :  3 :  3 : -2 :  0 : Loading :  4 : ThunderAtk :  2 : PelletS Up :  4 : Recoil : -3
 Pirate J Hat          : 大海賊Ｊハット          : A : H :  -- :  56 : 1 : -3 : -3 : -3 : -3 : -3 : Tranquilzr :  2 : Fate :  2 : Carving :  3 : Protection : -4
 Pirate J Suit         : 大海賊Ｊスーツ          : B : C :  -- :  56 : 0 : -3 : -3 : -3 : -3 : -3 : Tranquilzr :  3 : Fate :  2 : Carving :  2 : Protection : -4
 Pirate J Gloves       : 大海賊Ｊグラブ          : B : A :  -- :  56 : 0 : -3 : -3 : -3 : -3 : -3 : Tranquilzr :  3 : Fate :  4 : Carving :  2 : Protection : -4
