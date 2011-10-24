@@ -1,0 +1,15 @@
+#summary add requests for new features here
+#labels Phase-Requirements,Featured
+
+= Introduction =
+
+Please add any enhancements you would like to see here
+
+
+= Details =
+
+  # searchable jComboBox --  by Stuff
+    * auto-complete search items while typing in the combobox 
+    * Solved: no
+  # Bug report info in the "about" dialog --  by Stuff
+    * Solved: no
