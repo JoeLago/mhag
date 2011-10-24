@@ -13,3 +13,6 @@ Please add any enhancements you would like to see here
     * Solved: no
   # Bug report info in the "about" dialog --  by Stuff
     * Solved: no
+  # To combine all games into one package --  by Stuff
+    * Before MHAG starts, a prompt dialog shows up to let users choose game
+    * Solved: no
