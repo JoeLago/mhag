@@ -393,7 +393,7 @@ public class Generator {
 			else
 			{
 				if(ifCharm)
-					mhagData.readCharm();
+					mhagData.readCharm(mhag.getGame());
 				else
 					mhagData.readCharmDefault();
 
@@ -425,7 +425,7 @@ public class Generator {
 			}
 
 			if(ifCharm)
-				mhagData.readCharm();
+				mhagData.readCharm(mhag.getGame());
 			else
 				mhagData.readCharmDefault();
 
