@@ -68,10 +68,13 @@ public class MhagData {
 	public void readSkill(Mhag mhag) 
 	{
 		String file;
+		file = "data/" + dirSave[mhag.getGame()] + fileSkill;
+		/*
 		if(mhag.getGame() == 0)
 			file = dirDataTri + fileSkill;
 		else
 			file = dirDataP3rd + fileSkill;
+		 */
 
 		Scanner in = new Scanner(getClass().getResourceAsStream(file), "UTF-8");
 
@@ -349,10 +352,13 @@ public class MhagData {
 	public void readJewel(Mhag mhag)
 	{
 		String file;
+		file = "data/" + dirSave[mhag.getGame()] + fileJewel;
+		/*
 		if(mhag.getGame() == 0)
 			file = dirDataTri + fileJewel;
 		else
 			file = dirDataP3rd + fileJewel;
+		 */
 
 		Scanner in = new Scanner(getClass().getResourceAsStream(file), "UTF-8");
 
@@ -409,10 +415,13 @@ public class MhagData {
 	public void readArmor(Mhag mhag) 
 	{
 		String file;
+		file = "data/" + dirSave[mhag.getGame()] + fileArmor;
+		/*
 		if(mhag.getGame() == 0)
 			file = dirDataTri + fileArmor;
 		else
 			file = dirDataP3rd + fileArmor;
+		 */
 
 		Scanner in = new Scanner(getClass().getResourceAsStream(file), "UTF-8");
 
@@ -498,10 +507,10 @@ public class MhagData {
 	}
 
 	// read charm from charm file
-	public void readCharm() 
+	public void readCharm(int game) 
 	{
 		try {
-			Scanner filein = new Scanner(new File(CharmDialog.fileCharm));
+			Scanner filein = new Scanner(new File(getDirSave(game) + CharmDialog.fileCharm));
 
 			int numMax = CharmDialog.numMax;
 			int ind = 0;
@@ -1211,9 +1220,10 @@ public class MhagData {
 	}
 	 */
 
+	public String getDirSave(int game) {return dirSave[game];}
+
 	// Constants for file names
-	private final String dirDataTri = "data/tri/";
-	private final String dirDataP3rd = "data/p3rd/";
+	private final String[] dirSave = {"mhtri/", "mhp3rd/", "mhfu/", "mh3g/"};
 	private final String fileArmor = "armor.dat";
 	private final String fileJewel = "jewel.dat";
 	private final String fileSkill = "skill.dat";

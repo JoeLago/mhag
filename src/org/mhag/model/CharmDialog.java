@@ -28,10 +28,11 @@ public class CharmDialog extends javax.swing.JDialog {
         initComponents();
     }
 
-    public CharmDialog(java.awt.Frame parent, boolean modal, MhagData aMhagData, Generator aGen) {
+    public CharmDialog(java.awt.Frame parent, boolean modal, Mhag aMhag, MhagData aMhagData, Generator aGen) {
         initComponents();
 		setTitle(String.format("My Charm (max %d)", numMax));
 		mhagData = aMhagData;
+		mhag = aMhag;
 		gen = aGen;
 		charmReload();
     }
@@ -604,7 +605,7 @@ public class CharmDialog extends javax.swing.JDialog {
 	{
 		try {
 			PrintStream fileout;
-			fileout = new PrintStream(new File(fileCharm));
+			fileout = new PrintStream(new File(mhagData.getDirSave(mhag.getGame()) + fileCharm));
 			for(int i = 0; i < numTot; i++)
 			{
 				fileout.println(listModel.getElementAt(i).toString());
@@ -625,7 +626,7 @@ public class CharmDialog extends javax.swing.JDialog {
 
 		numTot = 0;
 		try {
-			Scanner filein = new Scanner(new File(fileCharm));
+			Scanner filein = new Scanner(new File(mhagData.getDirSave(mhag.getGame()) + fileCharm));
 
 			while(filein.hasNext())
 			{
@@ -692,6 +693,7 @@ public class CharmDialog extends javax.swing.JDialog {
 
 	// my variables
 	private MhagData mhagData;
+	private Mhag mhag;
 	private Generator gen;
 	private Charm charm = new Charm();
 	private int numTot = 0;

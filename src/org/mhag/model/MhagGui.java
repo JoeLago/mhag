@@ -1,13 +1,18 @@
 package org.mhag.model;
 
+import java.awt.AlphaComposite;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Desktop;
 import java.awt.Dimension;
+import java.awt.Graphics2D;
+import java.awt.SplashScreen;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.ItemEvent;
+import java.awt.geom.Rectangle2D;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -41,7 +46,12 @@ import javax.swing.UIManager;
 public class MhagGui extends javax.swing.JFrame {
 
     /** Creates new form MhagGui */
-    public MhagGui() {
+    public MhagGui(int gameOpt) {
+
+		//initialize splash window 
+		game = gameOpt;
+		mhag = new Mhag(gameOpt);
+
         initComponents();
 
 		// add scrollpane to the frame for low-resoltion screen
@@ -58,10 +68,14 @@ public class MhagGui extends javax.swing.JFrame {
 
 		// set title
 		String title =  "MHAG (Monster Hunter Armor Generator) Desktop 2.0";
-		if(mhag.getGame() == 0)
+		if(game == 0)
 			setTitle(title + " for Monster Hunter Tri");
-		else
+		else if(game == 1)
 			setTitle(title + " for Monster Hunter Portable 3rd");
+		else if (game == 2)
+			setTitle(title + " for Monster Hunter Freedom Unite");
+		else if (game == 3)
+			setTitle(title + " for Monster Hunter Tri G");
 
 		// set icon
 		setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("pic/logo.png")));
@@ -75,7 +89,7 @@ public class MhagGui extends javax.swing.JFrame {
 		streamGen = new TextAreaPrintStream(jTextPreview3, System.out);
 		
 		// only if mh3 game, jCheckBoxGun is enabled
-		if(mhag.getGame() == 0)
+		if(game == 0)
 			jCheckBoxGun.setEnabled(true);
 		else
 			jCheckBoxGun.setEnabled(false);
@@ -226,7 +240,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jTabbedPane.setFont(new java.awt.Font("Monospaced", 1, 14));
+        jTabbedPane.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         jTabbedPane.setOpaque(true);
         jTabbedPane.setPreferredSize(new java.awt.Dimension(1238, 630));
 
@@ -404,7 +418,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmMenu.setFont(new java.awt.Font("Monospaced", 0, 12));
+        charmMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -595,7 +609,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmSlot1.setFont(new java.awt.Font("Monospaced", 0, 12));
+        charmSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSlot1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -603,7 +617,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmSlot2.setFont(new java.awt.Font("Monospaced", 0, 12));
+        charmSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSlot2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -611,7 +625,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmSlot3.setFont(new java.awt.Font("Monospaced", 0, 12));
+        charmSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSlot3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1083,7 +1097,7 @@ public class MhagGui extends javax.swing.JFrame {
         jListSkillList.setVisibleRowCount(2);
         jScrollSkillList.setViewportView(jListSkillList);
 
-        jButtonShowPiece.setFont(new java.awt.Font("Monospaced", 1, 12));
+        jButtonShowPiece.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jButtonShowPiece.setText("Suggestion");
         jButtonShowPiece.setToolTipText("Show suggested armor pieces");
         jButtonShowPiece.addActionListener(new java.awt.event.ActionListener() {
@@ -1306,7 +1320,7 @@ public class MhagGui extends javax.swing.JFrame {
                     .addComponent(jCheckBoxGun)))
         );
 
-        jButtonSearch.setFont(new java.awt.Font("Monospaced", 1, 12));
+        jButtonSearch.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jButtonSearch.setText("Search");
         jButtonSearch.setToolTipText("Start search");
         jButtonSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -1327,7 +1341,7 @@ public class MhagGui extends javax.swing.JFrame {
         });
 
         jListOptSets.setBorder(javax.swing.BorderFactory.createTitledBorder("Search Results"));
-        jListOptSets.setFont(new java.awt.Font("Monospaced", 0, 12));
+        jListOptSets.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jListOptSets.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jListOptSets.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
@@ -1436,7 +1450,7 @@ public class MhagGui extends javax.swing.JFrame {
         codeBookName.setFont(new java.awt.Font("Monospaced", 0, 12));
         codeBookName.setText("MyData");
 
-        codeBookLoad.setFont(new java.awt.Font("Monospaced", 1, 12));
+        codeBookLoad.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         codeBookLoad.setText("Load");
         codeBookLoad.setToolTipText("Load code book");
         codeBookLoad.addActionListener(new java.awt.event.ActionListener() {
@@ -1445,7 +1459,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        codeBookSave.setFont(new java.awt.Font("Monospaced", 1, 12));
+        codeBookSave.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         codeBookSave.setText("Save");
         codeBookSave.setToolTipText("Save code  book, overwrite the old file");
         codeBookSave.addActionListener(new java.awt.event.ActionListener() {
@@ -1498,7 +1512,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        Output.setFont(new java.awt.Font("Monospaced", 1, 12));
+        Output.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         Output.setText("Save & Export");
         Output.setToolTipText("Save code book, and output sets");
         Output.addActionListener(new java.awt.event.ActionListener() {
@@ -1813,8 +1827,9 @@ public class MhagGui extends javax.swing.JFrame {
 	    Scanner codeIn;
 
 		try {
-			codeIn = new Scanner(new File(codeFile));
+			codeIn = new Scanner(new File(mhagData.getDirSave(game) + codeFile));
 		} catch (FileNotFoundException ex) {
+			jTextPreview2.setText("");
 			String message = String.format("Code File %s doesnot exist!\n",codeFile);
 			jTextPreview2.append(message);
 			message = String.format("A new Code Book has been created\n");
@@ -1889,7 +1904,7 @@ public class MhagGui extends javax.swing.JFrame {
 	    if(!codeFile.endsWith(".code"))
 		    codeFile = codeFile+".code";
 
-	    codeOut = new PrintStream(codeFile);
+	    codeOut = new PrintStream(mhagData.getDirSave(game) + codeFile);
 
 	    for(int i = 0; i < num; i++)
 	    {
@@ -1924,7 +1939,7 @@ public class MhagGui extends javax.swing.JFrame {
 
 	    String codeFile = codeBookName.getText();
 	    String saveFile = "";
-	    PrintStream codeOut;
+	    //PrintStream codeOut;
 	    if(!codeFile.endsWith(".code"))
 	    {
 		    if(saveOpt == 0)
@@ -1944,8 +1959,8 @@ public class MhagGui extends javax.swing.JFrame {
 			    saveFile = codePart+".html";
 	    }
 
-	    mhag.setFileIn(codeFile);
-	    mhag.setFileOut(saveFile);
+	    mhag.setFileIn(mhagData.getDirSave(game) + codeFile);
+	    mhag.setFileOut(mhagData.getDirSave(game) + saveFile);
 	    mhag.setOutFormat(saveOpt);
 
 		try {
@@ -2169,7 +2184,7 @@ public class MhagGui extends javax.swing.JFrame {
 		if(!ifCharm)
 		{
 			ifCharm = true;
-			charmDialog = new CharmDialog(new javax.swing.JFrame(), true, mhagData, gen);
+			charmDialog = new CharmDialog(new javax.swing.JFrame(), true, mhag, mhagData, gen);
 			charmDialog.setLocationRelativeTo(jButtonMyCharms);
 		}
 		charmDialog.setVisible(false);    // add to make the charm  to the front
@@ -2474,7 +2489,7 @@ public class MhagGui extends javax.swing.JFrame {
 			jButtonSettings.setEnabled(true);
 			jComboBoxOpt.setEnabled(true);
 
-			if(mhag.getGame() == 0)
+			if(game == 0)
 				jCheckBoxGun.setEnabled(true);
 			else
 				jCheckBoxGun.setEnabled(false);
@@ -3886,7 +3901,7 @@ public class MhagGui extends javax.swing.JFrame {
     {
 
 	try {
-		Scanner filein = new Scanner(new File(fileNamePref));
+		Scanner filein = new Scanner(new File(mhagData.getDirSave(game) + fileNamePref));
 
 		int count = 0;
 		while (filein.hasNext() && (count < 1))
@@ -3914,7 +3929,7 @@ public class MhagGui extends javax.swing.JFrame {
     // save preference file
     public void savePref() throws FileNotFoundException
     {
-	    PrintStream fileout = new PrintStream(new File(fileNamePref));
+	    PrintStream fileout = new PrintStream(new File(mhagData.getDirSave(game) + fileNamePref));
 //	    fileout.println(fileNameData);
 	    fileout.println(fileNameCodeBook);
 	    fileout.close();
@@ -3993,12 +4008,19 @@ public class MhagGui extends javax.swing.JFrame {
 	public MhagData getMhagData() {return mhagData;}
 
     public static void main(String args[]) {
+
+
         java.awt.EventQueue.invokeLater(new Runnable() {
 
 		@Override
 		public void run() {
 
-			MhagGui mhagGui = new MhagGui();
+			ChooseGame chooseGame = new ChooseGame(new javax.swing.JFrame(), true);
+			chooseGame.toFront();
+			chooseGame.setVisible(true);   
+
+			MhagGui mhagGui = new MhagGui(chooseGame.getGameOpt());
+			chooseGame.dispose();
 
 			try {
 				mhagGui.initMhag(); // initialize mhag
@@ -4014,7 +4036,7 @@ public class MhagGui extends javax.swing.JFrame {
 			mhagGui.initSetup(false, true, false); // by default
 			mhagGui.initGen();
 
-			if(mhagGui.mhag.getGame() == 0)
+			if(mhagGui.game == 0)
 				mhagGui.langMenu.setEnabled(false);
 
 		//mhagGui.jTextUsage.setCaretPosition(0);
@@ -4030,13 +4052,15 @@ public class MhagGui extends javax.swing.JFrame {
 
 
 	// GUI MHAG variables
-	private Mhag mhag = new Mhag(0);  // 0: tri; 1: p3rd
+	private int game; //game version: 0: tri; 1: p3rd; 2: mhfu; 3: mh3g
+	private Mhag mhag;    // = new Mhag(0);  // 0: tri; 1: p3rd
 	private Set set = new Set();
 	private MhagData mhagData = new MhagData();
 	private Generator gen = new Generator();
 	private CharmDialog charmDialog;
 	private GenAdvanced advDialog;
 	private About aboutDialog;
+	private SplashScreen splash;
 	private int language = 0;   //0: english, 1: japanese
 
 	//dialog setting
@@ -4044,7 +4068,6 @@ public class MhagGui extends javax.swing.JFrame {
 	private boolean ifAdvance = false;
 	private boolean ifAbout = false;
 
-	private JScrollPane scrollPane = new JScrollPane();
 	private TextAreaPrintStream stream, streamView, streamGen;
 	private int[][] jewelInd = new int[7][3]; //jewel index in each jewel button list
 	private int[][] jewelMenuType = new int[7][3]; //menu type in each jewel button position
