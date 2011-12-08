@@ -1005,7 +1005,7 @@ public class MhagData {
 		int num, int[] index, int language)
 	{
 		String[] nameStr = new String[num];
-		nameStr[0] = "---";
+		nameStr[0] = "";
 		for(int i = 1; i < num ; i++)  //first 1 is null;
 		{
 			String armorName  = "";
