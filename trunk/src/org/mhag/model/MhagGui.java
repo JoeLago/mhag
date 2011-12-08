@@ -33,6 +33,7 @@ import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingWorker;
 import javax.swing.UIManager;
+import javax.swing.text.JTextComponent;
 
 /**
  * @program MHAG
@@ -94,6 +95,7 @@ public class MhagGui extends javax.swing.JFrame {
 		else
 			jCheckBoxGun.setEnabled(false);
 
+		setupAutoCompleteAll();
     }
 
     /** This method is called from within the constructor to
@@ -379,39 +381,34 @@ public class MhagGui extends javax.swing.JFrame {
         });
 
         headMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        headMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         headMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 headMenuActionPerformed(evt);
             }
         });
 
-        chestMenu.setFont(new java.awt.Font("Monospaced", 0, 12));
-        chestMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        chestMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         chestMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chestMenuActionPerformed(evt);
             }
         });
 
-        armsMenu.setFont(new java.awt.Font("Monospaced", 0, 12));
-        armsMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        armsMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         armsMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 armsMenuActionPerformed(evt);
             }
         });
 
-        waistMenu.setFont(new java.awt.Font("Monospaced", 0, 12));
-        waistMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        waistMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         waistMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 waistMenuActionPerformed(evt);
             }
         });
 
-        legsMenu.setFont(new java.awt.Font("Monospaced", 0, 12));
-        legsMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        legsMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         legsMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 legsMenuActionPerformed(evt);
@@ -419,7 +416,6 @@ public class MhagGui extends javax.swing.JFrame {
         });
 
         charmMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        charmMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 charmMenuActionPerformed(evt);
@@ -465,144 +461,126 @@ public class MhagGui extends javax.swing.JFrame {
         charmSkillLabel.setLabelFor(charmSkill1);
         charmSkillLabel.setText("Charm Skill");
 
-        weaponSlot1.setFont(new java.awt.Font("Monospaced", 0, 12));
-        weaponSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        weaponSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         weaponSlot1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 weaponSlot1ActionPerformed(evt);
             }
         });
 
-        weaponSlot2.setFont(new java.awt.Font("Monospaced", 0, 12));
-        weaponSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        weaponSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         weaponSlot2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 weaponSlot2ActionPerformed(evt);
             }
         });
 
-        weaponSlot3.setFont(new java.awt.Font("Monospaced", 0, 12));
-        weaponSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        weaponSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         weaponSlot3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 weaponSlot3ActionPerformed(evt);
             }
         });
 
-        headSlot1.setFont(new java.awt.Font("Monospaced", 0, 12));
-        headSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        headSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         headSlot1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 headSlot1ActionPerformed(evt);
             }
         });
 
-        headSlot2.setFont(new java.awt.Font("Monospaced", 0, 12));
-        headSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        headSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         headSlot2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 headSlot2ActionPerformed(evt);
             }
         });
 
-        headSlot3.setFont(new java.awt.Font("Monospaced", 0, 12));
-        headSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        headSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         headSlot3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 headSlot3ActionPerformed(evt);
             }
         });
 
-        chestSlot1.setFont(new java.awt.Font("Monospaced", 0, 12));
-        chestSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        chestSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         chestSlot1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chestSlot1ActionPerformed(evt);
             }
         });
 
-        chestSlot2.setFont(new java.awt.Font("Monospaced", 0, 12));
-        chestSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        chestSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         chestSlot2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chestSlot2ActionPerformed(evt);
             }
         });
 
-        chestSlot3.setFont(new java.awt.Font("Monospaced", 0, 12));
-        chestSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        chestSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         chestSlot3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chestSlot3ActionPerformed(evt);
             }
         });
 
-        armSlot1.setFont(new java.awt.Font("Monospaced", 0, 12));
-        armSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        armSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         armSlot1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 armSlot1ActionPerformed(evt);
             }
         });
 
-        armSlot2.setFont(new java.awt.Font("Monospaced", 0, 12));
-        armSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        armSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         armSlot2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 armSlot2ActionPerformed(evt);
             }
         });
 
-        armSlot3.setFont(new java.awt.Font("Monospaced", 0, 12));
-        armSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        armSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         armSlot3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 armSlot3ActionPerformed(evt);
             }
         });
 
-        waistSlot1.setFont(new java.awt.Font("Monospaced", 0, 12));
-        waistSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        waistSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         waistSlot1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 waistSlot1ActionPerformed(evt);
             }
         });
 
-        waistSlot2.setFont(new java.awt.Font("Monospaced", 0, 12));
-        waistSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        waistSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         waistSlot2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 waistSlot2ActionPerformed(evt);
             }
         });
 
-        waistSlot3.setFont(new java.awt.Font("Monospaced", 0, 12));
-        waistSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        waistSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         waistSlot3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 waistSlot3ActionPerformed(evt);
             }
         });
 
-        legSlot1.setFont(new java.awt.Font("Monospaced", 0, 12));
-        legSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        legSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         legSlot1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 legSlot1ActionPerformed(evt);
             }
         });
 
-        legSlot2.setFont(new java.awt.Font("Monospaced", 0, 12));
-        legSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        legSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         legSlot2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 legSlot2ActionPerformed(evt);
             }
         });
 
-        legSlot3.setFont(new java.awt.Font("Monospaced", 0, 12));
-        legSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        legSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         legSlot3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 legSlot3ActionPerformed(evt);
@@ -610,7 +588,6 @@ public class MhagGui extends javax.swing.JFrame {
         });
 
         charmSlot1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        charmSlot1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSlot1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 charmSlot1ActionPerformed(evt);
@@ -618,7 +595,6 @@ public class MhagGui extends javax.swing.JFrame {
         });
 
         charmSlot2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        charmSlot2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSlot2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 charmSlot2ActionPerformed(evt);
@@ -626,23 +602,20 @@ public class MhagGui extends javax.swing.JFrame {
         });
 
         charmSlot3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        charmSlot3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
         charmSlot3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 charmSlot3ActionPerformed(evt);
             }
         });
 
-        charmSkill1.setFont(new java.awt.Font("Monospaced", 0, 12));
-        charmSkill1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        charmSkill1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmSkill1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 charmSkill1ActionPerformed(evt);
             }
         });
 
-        charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12));
-        charmSkill2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmSkill2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 charmSkill2ActionPerformed(evt);
@@ -836,7 +809,7 @@ public class MhagGui extends javax.swing.JFrame {
         langLabel.setFont(new java.awt.Font("Monospaced", 0, 12));
         langLabel.setText("Menu Language");
 
-        langMenu.setFont(new java.awt.Font("Monospaced", 0, 12));
+        langMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         langMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "English", "Japanese" }));
         langMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -885,7 +858,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jTextPreview.setColumns(20);
         jTextPreview.setEditable(false);
-        jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12));
+        jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jTextPreview.setForeground(new java.awt.Color(1, 1, 1));
         jTextPreview.setRows(5);
         jTextPreview.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview (Calculator)"));
@@ -1022,16 +995,14 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        skillTree.setFont(new java.awt.Font("Monospaced", 0, 12));
-        skillTree.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        skillTree.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         skillTree.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 skillTreeActionPerformed(evt);
             }
         });
 
-        skillName.setFont(new java.awt.Font("Monospaced", 0, 12));
-        skillName.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        skillName.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
 
         jLabelSkillType.setFont(new java.awt.Font("Monospaced", 0, 12));
         jLabelSkillType.setText("Type");
@@ -1790,10 +1761,6 @@ public class MhagGui extends javax.swing.JFrame {
 	    jewelSlotAction(3, 1);
     }//GEN-LAST:event_waistSlot2ActionPerformed
 
-    private void waistSlot3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_waistSlot3ActionPerformed
-	    jewelSlotAction(3, 2);
-    }//GEN-LAST:event_waistSlot3ActionPerformed
-
     private void legSlot1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_legSlot1ActionPerformed
 	    jewelSlotAction(4, 0);
     }//GEN-LAST:event_legSlot1ActionPerformed
@@ -2275,6 +2242,10 @@ public class MhagGui extends javax.swing.JFrame {
 		else
 			gen.setIfCheckGun(true);
 	}//GEN-LAST:event_jCheckBoxGunItemStateChanged
+
+	private void waistSlot3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_waistSlot3ActionPerformed
+
+		jewelSlotAction(3, 2); 	}//GEN-LAST:event_waistSlot3ActionPerformed
 
 	//show possible pieces for generator
 	private void showPieces()
@@ -3147,7 +3118,7 @@ public class MhagGui extends javax.swing.JFrame {
 	    int[] idList = mhagData.getSkillList(ind);
 
 	    skillTree.removeAllItems();
-	    skillTree.addItem("---");
+	    skillTree.addItem("");
 	    for(int i = 0; i < idList.length; i++)
 	    {
 			Skill skill = mhagData.getSkill(idList[i]);
@@ -3166,7 +3137,7 @@ public class MhagGui extends javax.swing.JFrame {
 	    int ind = skillTree.getSelectedIndex();
 
 		skillName.removeAllItems();
-		skillName.addItem("---");
+		skillName.addItem("");
 	    if(ind > 0)
 		{
 			int indType = skillType.getSelectedIndex();
@@ -3246,7 +3217,7 @@ public class MhagGui extends javax.swing.JFrame {
 			gen.setTriggers(i, gen.getTriggers(i+1));
 		}
 		if(num > 0)
-			listModelSkill.setElementAt("---", num - 1);
+			listModelSkill.setElementAt("", num - 1);
 
 
 		gen.setSkills(num - 1, -1);
@@ -3598,7 +3569,7 @@ public class MhagGui extends javax.swing.JFrame {
 
 	    //first null entry
 	    bodyMenu.addItem(name[0]);
-	    toolTips.add("---");
+	    toolTips.add("");
 	    for(int i = 1; i < num; i++)
 	    {
 		    bodyMenu.addItem(name[i]);
@@ -3632,8 +3603,8 @@ public class MhagGui extends javax.swing.JFrame {
 	    jewelSlot.removeAllItems();
 	    ArrayList<String> toolTips = new ArrayList<String>();
 
-	    jewelSlot.addItem("---"); //1st null item
-	    toolTips.add("---");
+	    jewelSlot.addItem(""); //1st null item
+	    toolTips.add("");
 	    for(int i = 1; i < num; i++)
 	    {
  		    Jewel jewel = mhagData.getJewel(ind[i]);
@@ -3698,7 +3669,7 @@ public class MhagGui extends javax.swing.JFrame {
 		int num = ind.length;
 
 		skillSlot.removeAllItems();
-		skillSlot.addItem("---"); 
+		skillSlot.addItem(""); 
 		for(int i = 0; i < num; i++)
 		{
 			Skill skill = mhagData.getSkill(ind[i]);
@@ -3837,7 +3808,7 @@ public class MhagGui extends javax.swing.JFrame {
 
 		    bodyMenu.removeAllItems();
 		    bodyMenu.addItem(name[0]);
-		    toolTips.add("---");
+		    toolTips.add("");
 		    for(int j = 1; j < num; j++)
 		    {
 			    bodyMenu.addItem(name[j]);
@@ -3996,7 +3967,7 @@ public class MhagGui extends javax.swing.JFrame {
 	    listModelSkill.clear();
 	    jListSkillList.setModel(listModelSkill);
 		for(int i = 0; i < 10; i++)
-			listModelSkill.insertElementAt("---", i);
+			listModelSkill.insertElementAt("", i);
 	    jListSkillList.clearSelection();
 
 		jProgressOpt.setValue(0);
@@ -4006,6 +3977,48 @@ public class MhagGui extends javax.swing.JFrame {
 
 	public JProgressBar getProgressBar() {return jProgressOpt;}
 	public MhagData getMhagData() {return mhagData;}
+
+	public void setupAutoComplete(JComboBox comboBox)
+	{
+		comboBox.setEditable(true);
+		JTextComponent editor = (JTextComponent) comboBox.getEditor().getEditorComponent();
+		editor.setDocument(new AutoComplete(comboBox));
+	}
+
+	public void setupAutoCompleteAll()
+	{
+		setupAutoComplete(skillTree);
+		setupAutoComplete(skillName);
+		setupAutoComplete(headMenu);
+		setupAutoComplete(chestMenu);
+		setupAutoComplete(armsMenu);
+		setupAutoComplete(waistMenu);
+		setupAutoComplete(legsMenu);
+		setupAutoComplete(weaponSlot1);
+		setupAutoComplete(weaponSlot2);
+		setupAutoComplete(weaponSlot3);
+		setupAutoComplete(headSlot1);
+		setupAutoComplete(headSlot2);
+		setupAutoComplete(headSlot3);
+		setupAutoComplete(chestSlot1);
+		setupAutoComplete(chestSlot2);
+		setupAutoComplete(chestSlot3);
+		setupAutoComplete(armSlot1);
+		setupAutoComplete(armSlot2);
+		setupAutoComplete(armSlot3);
+		setupAutoComplete(waistSlot1);
+		setupAutoComplete(waistSlot2);
+		setupAutoComplete(waistSlot3);
+		setupAutoComplete(legSlot1);
+		setupAutoComplete(legSlot2);
+		setupAutoComplete(legSlot3);
+		setupAutoComplete(charmSlot1);
+		setupAutoComplete(charmSlot2);
+		setupAutoComplete(charmSlot3);
+		setupAutoComplete(charmSlot3);
+		setupAutoComplete(charmSkill1);
+		setupAutoComplete(charmSkill2);
+	}
 
     public static void main(String args[]) {
 
