@@ -51,23 +51,25 @@ public class Output {
 	// output head title
 
 	public static void head(int outForm, PrintStream outSave, String setName,
-		boolean lowRank, boolean blade)
+		int rank, boolean blade)
 	{
 		if(outForm == 0)
-			headTEXT(outSave, setName, lowRank, blade);
+			headTEXT(outSave, setName, rank, blade);
 		else
-			headHTML(outSave, setName, lowRank, blade);
+			headHTML(outSave, setName, rank, blade);
 	}
 
 
 	public static void headTEXT(PrintStream outSave, String setName,
-		boolean lowRank, boolean blade)
+		int rank, boolean blade)
 	{
 		String title = new String();
-		if(lowRank)
+		if(rank == 0)
 			title = "Low Rank";
-		else
+		else if(rank == 1)
 			title = "High Rank";
+		else
+			title = "G Rank";
 
 		String title2 = new String();
 		if(blade)
@@ -84,18 +86,23 @@ public class Output {
 	}
 
 	public static void headHTML(PrintStream outSave, String setName,
-		boolean lowRank, boolean blade)
+		int rank, boolean blade)
 	{
 		String color, title, title2;
-		if(lowRank)
+		if(rank == 0)
 		{
 			color = "orange";
 			title = "Low Rank";
 		}
-		else
+		else if(rank == 1)
 		{
 			color = "orangered";
 			title = "High Rank";
+		}
+		else
+		{
+			color = "red";
+			title = "G Rank";
 		}
 
 		if(blade)

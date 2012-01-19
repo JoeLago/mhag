@@ -72,6 +72,9 @@ public class Skill {
 					for ( int j = 0; j < 4; j++)
 						skill.maxSkillPoint[i][j] = numbers[i*4+j];
 
+				// g rank data copied from high rank for mhtri and mhp3rd
+				for ( int j = 0; j < 4; j++)
+					skill.maxSkillPoint[2][j] = skill.maxSkillPoint[1][j];
 
 			}
 			else
@@ -153,6 +156,9 @@ public class Skill {
 					for ( int j = 0; j < 4; j++)
 						skill.maxSkillPoint[i][j] = numbers[i*4+j];
 
+				// g rank data copied from high rank for mhtri and mhp3rd
+				for ( int j = 0; j < 4; j++)
+					skill.maxSkillPoint[2][j] = skill.maxSkillPoint[1][j];
 
 			}
 			else
@@ -228,12 +234,9 @@ public class Skill {
 	// get max skill point
 	public int[][] getMaxSkillPoint() {return maxSkillPoint;}
 
-	public int getMaxSkillPoint(boolean lowRank, int nSlot)
+	public int getMaxSkillPoint(int rank, int nSlot)
 	{
-		if(lowRank)
-			return maxSkillPoint[0][nSlot];
-		else
-			return maxSkillPoint[1][nSlot];
+		return maxSkillPoint[rank][nSlot];
 	}
 
 	// get number of effects
@@ -259,55 +262,37 @@ public class Skill {
 	public int getEffectTrigger(int ind) {return effectTrigger[ind];}
 
 	// get JewelID
-	public int[] getJewelID(boolean lowRank)
+	public int[] getJewelID(int rank)
 	{
-		if(lowRank)
-			return jewelID[0];
-		else
-			return jewelID[1];
+		return jewelID[rank];
 	}
 
-	public int getJewelID(boolean lowRank, int nSlot)
+	public int getJewelID(int rank, int nSlot)
 	{
-		if(lowRank)
-			return jewelID[0][nSlot];
-		else
-			return jewelID[1][nSlot];
+		return jewelID[rank][nSlot];
 	}
 
 	// set JewelID
-	public void setJewelID(boolean lowRank, int nSlot, int id)
+	public void setJewelID(int rank, int nSlot, int id)
 	{
-		if(lowRank)
-			jewelID[0][nSlot] = id;
-		else
-			jewelID[1][nSlot] = id;
+		jewelID[rank][nSlot] = id;
 	}
 
 	// get JewelSkillPoint
-	public int[] getJewelSkillPoint(boolean lowRank)
+	public int[] getJewelSkillPoint(int rank)
 	{
-		if(lowRank)
-			return jewelSkillPoint[0];
-		else
-			return jewelSkillPoint[1];
+		return jewelSkillPoint[rank];
 	}
 
-	public int getJewelSkillPoint(boolean lowRank, int nSlot)
+	public int getJewelSkillPoint(int rank, int nSlot)
 	{
-		if(lowRank)
-			return jewelSkillPoint[0][nSlot];
-		else
-			return jewelSkillPoint[1][nSlot];
+		return jewelSkillPoint[rank][nSlot];
 	}
 
 	// set JewelSkillPoint
-	public void setJewelSkillPoint(boolean lowRank, int nSlot, int points)
+	public void setJewelSkillPoint(int rank, int nSlot, int points)
 	{
-		if(lowRank)
-			jewelSkillPoint[0][nSlot] = points;
-		else
-			jewelSkillPoint[1][nSlot] = points;
+		jewelSkillPoint[rank][nSlot] = points;
 	}
 
 	// get/set hasNegative
@@ -335,7 +320,7 @@ public class Skill {
 	private String skillNameJP = "";  // Skill Name japanese
 //	private String skillClass = "";  // A/B/C/D  
 	private int skillType = 0; // 1 - 7
-	private int[][] maxSkillPoint = new int [2][4]; //max point (1st index: low rank 0, high rank 1)
+	private int[][] maxSkillPoint = new int [3][4]; //max point (1st index: low rank 0, high rank 1, g rank 2)
 							// 2nd index: 0 - 3 slots
 	private int numEffect = 0;  // # Effects , 6 max, 3 pos ,3 neg
 	private String[] effectName;   // Effect Name
@@ -344,8 +329,8 @@ public class Skill {
 	private int[] effectTrigger;  //skill points to tigger effect
 
 	//generator data
-	private int[][] jewelID = new int[2][4]; //jewelID for the skill (1st index: lowrank 0, highrank 1)
-	private int[][] jewelSkillPoint = new int[2][4]; // skill points on the jewel
+	private int[][] jewelID = new int[3][4]; //jewelID for the skill (1st index: lowrank 0, highrank 1, g rank 2)
+	private int[][] jewelSkillPoint = new int[3][4]; // skill points on the jewel
 	private boolean hasNegative = false; // has negative effect or not
 
 	static int skillIDTot = 0;

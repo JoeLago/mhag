@@ -83,10 +83,10 @@ public class Set {
 	}
 
 	// get low/high rank
-	public boolean getLowRank() {return lowRank;}
+	public int getRank() {return rank;}
 
 	// set low/high rank
-	public void setLowRank(boolean aLowRank) {lowRank = aLowRank;}
+	public void setRank(int aRank) {rank = aRank;}
 
 	// get blader/gunner info
 	public boolean getBlade() {return blade;}
@@ -315,10 +315,13 @@ public class Set {
 			{
 				if((args.startsWith("l")) ||
 					(args.startsWith("L")))
-					lowRank = true;
+					rank = 0;
 				else if((args.startsWith("h")) ||
 					(args.startsWith("H")))
-					lowRank = false;
+					rank = 1;
+				else if((args.startsWith("g")) ||
+					(args.startsWith("G")))
+					rank = 2;
 				else
 					MhagUtil.logLine(mhag, errorLine);
 			}
@@ -465,10 +468,12 @@ public class Set {
 		line.append(" : ");
 
 		// low/high rank
-		if(lowRank)
+		if(rank == 0)
 			line.append("L ");
-		else
+		else if(rank == 1)
 			line.append("H ");
+		else
+			line.append("G ");
 
 		// blade or gunner
 		if(blade)
@@ -586,7 +591,7 @@ public class Set {
 	public void init()
 	{
 		setName = unNamedSet;
-		lowRank = false;
+		rank = 2;
 		blade = true;
 		Arrays.fill(armorID, 0);
 		for(int i = 0; i < 7; i++)
@@ -646,10 +651,12 @@ public class Set {
 			return false;
 		}
 
-		if(wordArray[0].equals("H"))
-			lowRank = false;
-		else if(wordArray[0].equals("L"))
-			lowRank = true;
+		if(wordArray[0].equals("L"))
+			rank = 0;
+		else if(wordArray[0].equals("H"))
+			rank = 1;
+		else if(wordArray[0].equals("G"))
+			rank = 2;
 
 		if(wordArray[1].equals("G"))
 			blade = false;
@@ -734,16 +741,16 @@ public class Set {
 		MhagUtil.logLine(mhag, "Checking Set Consistentcy...");
 
 		//low rank check
-		if(lowRank)
+		if(rank != 2) //no g rank, so go to check if armor rank <= set rank
 		{
-			String  errLine = "   Error! not low rank armor piece";
+			String  errLine = "   Error! not right rank armor piece";
 
 			// armor
 			for(int i = 0; i < 5; i++)
 			{
 				if(!inUse[i])continue;
 				Armor armor = mhagData.getArmor(i, armorID[i]);
-				if(!armor.getLowRank())
+				if(armor.getRank() > rank)
 				{
 					MhagUtil.logLine(mhag,errLine);
 					return false;
@@ -759,7 +766,7 @@ public class Set {
 				{
 					Jewel jewel = mhagData.
 						getJewel(jewelID[i][j]);
-					if(!jewel.getLowRank())
+					if(jewel.getRank() > rank)
 					{
 						MhagUtil.logLine(mhag,errLine);
 						return false;
@@ -842,7 +849,7 @@ public class Set {
 		if(inUse[6])
 		{
 			// low rank slot number < 3
-			if(lowRank && (numCharmSlot == 3))
+			if((rank == 0) && (numCharmSlot == 3))
 			{
 				MhagUtil.logLine(mhag,errLine);
 				return false;
@@ -868,7 +875,7 @@ public class Set {
 			for (int i = 0; i < numCharmSkill; i++)
 			{
 				Skill skill = mhagData.getSkill(charmSkillID[i]);
-				if(charmSkillPoint[i] > skill.getMaxSkillPoint(lowRank, numCharmSlot))
+				if(charmSkillPoint[i] > skill.getMaxSkillPoint(rank, numCharmSlot))
 				{
 					MhagUtil.logLine(mhag,
 						"   Error! Charm Skill Point inconsistent!");
@@ -916,23 +923,11 @@ public class Set {
 
 		// defense
 		defense = 0;
-		if(lowRank)
+		for(int i = 0; i < 5; i++)
 		{
-			for(int i = 0; i < 5; i++)
-			{
-				if(!inUse[i])continue;
-				Armor armor = mhagData.getArmor(i, armorID[i]);
-				defense += armor.getDefenseLowRank();
-			}
-		}
-		else
-		{
-			for(int i = 0; i < 5; i++)
-			{
-				if(!inUse[i])continue;
-				Armor armor = mhagData.getArmor(i, armorID[i]);
-				defense += armor.getDefenseHighRank();
-			}
+			if(!inUse[i])continue;
+			Armor armor = mhagData.getArmor(i, armorID[i]);
+			defense += armor.getDefense(rank);
 		}
 		String line = String.format("   Total Defense : %d",defense);
 		MhagUtil.logLine(mhag, line);
@@ -1434,7 +1429,7 @@ public class Set {
 
 		// part 1 :  Setup Inforamtion
 		// head line
-		Output.head(mhag.getOutFormat(), outSave, setName, lowRank, blade);
+		Output.head(mhag.getOutFormat(), outSave, setName, rank, blade);
 
 		// weapon line
 		int nSlotWeapon = calWeaponSlot(mhagData);
@@ -1504,10 +1499,7 @@ public class Set {
 			if(inUse[i])
 			{
 				Armor armor = mhagData.getArmor(i, armorID[i]);
-				if(lowRank)
-					values[i] = armor.getDefenseLowRank();
-				else
-					values[i] = armor.getDefenseHighRank();
+				values[i] = armor.getDefense(rank);
 			}
 		}
 
@@ -1620,23 +1612,11 @@ public class Set {
 		MhagData mhagData = gen.getMhagData();
 		// defense
 		defense = 0;
-		if(lowRank)
+		for(int i = 0; i < 5; i++)
 		{
-			for(int i = 0; i < 5; i++)
-			{
-				if(!inUse[i])continue;
-				Armor armor = mhagData.getArmor(i, armorID[i]);
-				defense += armor.getDefenseLowRank();
-			}
-		}
-		else
-		{
-			for(int i = 0; i < 5; i++)
-			{
-				if(!inUse[i])continue;
-				Armor armor = mhagData.getArmor(i, armorID[i]);
-				defense += armor.getDefenseHighRank();
-			}
+			if(!inUse[i])continue;
+			Armor armor = mhagData.getArmor(i, armorID[i]);
+			defense += armor.getDefense(rank);
 		}
 
 		rate += defense / gen.getScorePara(0);  //high defense has more bonus
@@ -1855,7 +1835,7 @@ public class Set {
 			inUse[i] = aSet.getInUse(i);
 
 		setName = aSet.getSetName();
-		lowRank = aSet.getLowRank();
+		rank = aSet.getRank();
 		blade = aSet.getBlade();
 		numCharmSkill = aSet.getNumCharmSkill();
 		numCharmSlot = aSet.getNumCharmSlot();
@@ -1881,7 +1861,7 @@ public class Set {
 			inUse[i] = aSet.getInUse(i);
 
 		setName = unNamedSet; // name not specified
-		lowRank = aSet.getLowRank();
+		rank = aSet.getRank();
 		blade = aSet.getBlade();
 		numCharmSkill = aSet.getNumCharmSkill();
 		numCharmSlot = aSet.getNumCharmSlot();
@@ -1901,7 +1881,7 @@ public class Set {
 
 	//Inputs
 	private String setName = unNamedSet;  // User-defined Set Name
-	private boolean lowRank = false; // lr T / hr F
+	private int rank = 2; // lr 0 / hr 1/ gr 2
 	private boolean blade = true; // Blade true, or Gunner false
 	private int[] armorID;  // Armor ID for 5 Pieces
 	private int[][] jewelID;  // Jewel IDs for 5 Pieces, Weapon & Charm

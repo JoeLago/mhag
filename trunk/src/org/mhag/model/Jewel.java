@@ -52,11 +52,15 @@ public class Jewel {
 
 				if(word.equals("L"))
 				{
-					jewel.lowRank = true;
+					jewel.rank = 0;
 				}
 				else if (word.equals("H"))
 				{
-					jewel.lowRank = false;
+					jewel.rank = 1;
+				}
+				else if (word.equals("G"))
+				{
+					jewel.rank = 2;
 				}
 				else
 				{
@@ -143,11 +147,15 @@ public class Jewel {
 
 				if(word.equals("L"))
 				{
-					jewel.lowRank = true;
+					jewel.rank = 0;
 				}
 				else if (word.equals("H"))
 				{
-					jewel.lowRank = false;
+					jewel.rank = 1;
+				}
+				else if (word.equals("G"))
+				{
+					jewel.rank = 2;
 				}
 				else
 				{
@@ -280,7 +288,7 @@ public class Jewel {
 	public int[] getSkillPoint() {return skillPoint;}
 
 	// geta low rank
-	public boolean getLowRank() {return lowRank;}
+	public int getRank() {return rank;}
 
 	// get # of slots
 	public int getNumSlot() {return numSlot;}
@@ -297,7 +305,7 @@ public class Jewel {
 	private int jewelID = 0; // Jewel ID
 	private String jewelName = ""; //Jewel Name
 	private String jewelNameJP = ""; //Jewel Name japanese
-	private boolean lowRank = false; // lr Y/ hr N
+	private int rank = 2; // lr 0/ hr 1/ gr 2
 	private int numSlot = 0;  // 0 -3 slots
 	private int numSkill = 0; // 2 skills max
 	private int[] skillID;  //  Skill ID

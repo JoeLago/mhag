@@ -15,7 +15,7 @@ public class Armor {
 
 	public Armor()
 	{
-		defense = new int[2];
+		defense = new int[3];
 		resist = new int[5];
 		skillID = new int[5];
 		skillName = new String[5];
@@ -130,12 +130,12 @@ public class Armor {
 
 				if(word.equals("--"))
 				{
-					armor.lowRank = false;
+					armor.rank = 1;
 					armor.defense[0] = 0;
 				}
 				else
 				{
-					armor.lowRank = true;
+					armor.rank = 0;
 					int def = 0;
 					def = Integer.valueOf(word);
 					if((def <= 0)||(def > 200))
@@ -162,6 +162,8 @@ public class Armor {
 				{
 					armor.defense[1] = def;
 				}
+
+				armor.defense[2] = def;  //g rank def copied from high rank
 			}
 			else if (wordIndex == 6)
 			{
@@ -292,12 +294,12 @@ public class Armor {
 
 				if(word.equals("--"))
 				{
-					armor.lowRank = false;
+					armor.rank = 1;
 					armor.defense[0] = 0;
 				}
 				else
 				{
-					armor.lowRank = true;
+					armor.rank = 0;
 					int def = 0;
 					def = Integer.valueOf(word);
 					if((def <= 0)||(def > 200))
@@ -324,6 +326,7 @@ public class Armor {
 				{
 					armor.defense[1] = def;
 				}
+				armor.defense[2] = def;  //g rank def copied from high rank
 			}
 			else if (wordIndex == 7)
 			{
@@ -462,7 +465,7 @@ public class Armor {
 	public int[] getSkillID() {return skillID;}
 
 	// geta low rank
-	public boolean getLowRank() {return lowRank;}
+	public int getRank() {return rank;}
 
 	// set skill ID in an armor
 	public void setSkillID(int[] id)
@@ -489,19 +492,10 @@ public class Armor {
 	public int getNumSlot() {return numSlot;}
 
 	// get defense
-	public int getDefense(boolean lowRank)
+	public int getDefense(int rank)
 	{
-		if(lowRank)
-			return defense[0];
-		else
-			return defense[1];
+		return defense[rank];
 	}
-
-	// get lowrank defense
-	public int getDefenseLowRank() {return defense[0];}
-
-	// get highrank defense
-	public int getDefenseHighRank() {return defense[1];}
 
 	// get resist
 	public int[] getResist() {return resist;}
@@ -560,10 +554,10 @@ public class Armor {
 	private String armorName = "";   // Armor Piece Name
 	private String armorNameJP = "";   // Armor Piece Name japanese
 	private String bladeOrGunner = "";  // Blade/Gunner/All
-	private boolean lowRank = false; //lr Y / hr N
+	private int rank = 2; //lr 0 / hr 1 /gr 2
 	private int bodyPart = 0;  // Head/Chest/Arms/Waist/Legs
 	private int numSlot = 0;   // # of slots: 0 - 3
-	private int[] defense;  // 0: lr, 1: hr defense
+	private int[] defense;  // 0: lr, 1: hr, 2: gr defense
 	private int[] resist;  // 0-4: Fire/Water/Ice/Thunder/Dragon
 	private int numSkill = 0;  // # of Skill types (max 5 for all mh3 armor)
 	private int[] skillID;  // Skill ID

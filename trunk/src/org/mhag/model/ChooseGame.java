@@ -49,6 +49,7 @@ public class ChooseGame extends javax.swing.JDialog {
 
         gamePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Choose a Game")));
 
+        buttonTri.setBackground(new java.awt.Color(123, 181, 210));
         buttonTri.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/mhtri.png"))); // NOI18N
         buttonTri.setToolTipText("Monster Hunter Tri (Wii)");
         buttonTri.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -58,6 +59,7 @@ public class ChooseGame extends javax.swing.JDialog {
             }
         });
 
+        buttonP3rd.setBackground(new java.awt.Color(251, 219, 148));
         buttonP3rd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/mhp3rd.png"))); // NOI18N
         buttonP3rd.setToolTipText("Monster Hunter Portable 3rd (PSP/PS3)");
         buttonP3rd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -67,6 +69,7 @@ public class ChooseGame extends javax.swing.JDialog {
             }
         });
 
+        buttonMHFU.setBackground(new java.awt.Color(182, 236, 182));
         buttonMHFU.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/mhfu.png"))); // NOI18N
         buttonMHFU.setToolTipText("Monster Hunter Freedom Unite (PSP)");
         buttonMHFU.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -77,6 +80,7 @@ public class ChooseGame extends javax.swing.JDialog {
             }
         });
 
+        button3G.setBackground(new java.awt.Color(204, 204, 255));
         button3G.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/mh3g.png"))); // NOI18N
         button3G.setToolTipText("Monster Hunter Tri G (3DS)");
         button3G.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
