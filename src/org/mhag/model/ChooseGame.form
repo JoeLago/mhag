@@ -106,6 +106,9 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="buttonTri">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="d2" green="b5" red="7b" type="rgb"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/org/mhag/model/pic/mhtri.png"/>
             </Property>
@@ -120,6 +123,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="buttonP3rd">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="94" green="db" red="fb" type="rgb"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/org/mhag/model/pic/mhp3rd.png"/>
             </Property>
@@ -134,6 +140,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="buttonMHFU">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b6" green="ec" red="b6" type="rgb"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/org/mhag/model/pic/mhfu.png"/>
             </Property>
@@ -149,6 +158,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="button3G">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/org/mhag/model/pic/mh3g.png"/>
             </Property>

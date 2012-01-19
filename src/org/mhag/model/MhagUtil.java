@@ -1,11 +1,15 @@
 package org.mhag.model;
 
+import java.awt.Color;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.util.Arrays;
+import javax.swing.JComboBox;
+import javax.swing.UIManager;
+import javax.swing.text.JTextComponent;
 
 /**
  * @program MHAG
@@ -139,6 +143,29 @@ public class MhagUtil {
 			indexTot = indexTot / dimension[i];
 		}
 		return indices;
+	}
+
+	// add auto completion function to jComboBox ; add look and feel
+	public static void setupAutoComplete(JComboBox comboBox)
+	{
+		comboBox.setEditable(true);
+		JTextComponent editor = (JTextComponent) comboBox.getEditor().getEditorComponent();
+		editor.setDocument(new AutoComplete(comboBox));
+	}
+
+	public static void setupLAF()
+	{
+		UIManager.put("Button.background", Color.WHITE);
+		UIManager.put("ComboBox.background", Color.WHITE);
+		UIManager.put("Panel.background", Color.WHITE);
+		UIManager.put("Label.background", Color.WHITE);
+		UIManager.put("RadioButton.background", Color.WHITE);
+		UIManager.put("CheckBox.background", Color.WHITE);
+		UIManager.put("ProgressBar.background", Color.WHITE);
+		UIManager.put("TabbedPane.background", Color.WHITE);
+		UIManager.put("ScrollPane.background", Color.WHITE);
+		UIManager.put("Button.defaultButtonFollowsFocus", Boolean.TRUE);
+		UIManager.put("ScrollBarUI", "org.mhag.model.MyMetalScrollBarUI");
 	}
 
 }

@@ -35,6 +35,8 @@ public class CharmDialog extends javax.swing.JDialog {
 		mhag = aMhag;
 		gen = aGen;
 		charmReload();
+		MhagUtil.setupAutoComplete(charmSkill1);
+		MhagUtil.setupAutoComplete(charmSkill2);
     }
 
     /** This method is called from within the constructor to
@@ -76,8 +78,7 @@ public class CharmDialog extends javax.swing.JDialog {
         charmSkillLabel.setFont(new java.awt.Font("Monospaced", 0, 12));
         charmSkillLabel.setText("Slot");
 
-        charmSkill1.setFont(new java.awt.Font("Monospaced", 0, 12));
-        charmSkill1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        charmSkill1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmSkill1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 charmSkill1ActionPerformed(evt);
@@ -92,8 +93,7 @@ public class CharmDialog extends javax.swing.JDialog {
             }
         });
 
-        charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12));
-        charmSkill2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---" }));
+        charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmSkill2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 charmSkill2ActionPerformed(evt);
@@ -319,10 +319,10 @@ public class CharmDialog extends javax.swing.JDialog {
 	   if(nSlot < 0)return;
 	   charm.setNumSlot(nSlot);
 
-	   changeCharmSkill(0, false, nSlot, true);
-	   changeCharmPoint(0, false, nSlot, -1, true);
-	   changeCharmSkill(1, false, nSlot, false);
-	   changeCharmPoint(1, false, nSlot, -1, false);
+	   changeCharmSkill(0, 2, nSlot, true);
+	   changeCharmPoint(0, 2, nSlot, -1, true);
+	   changeCharmSkill(1, 2, nSlot, false);
+	   changeCharmPoint(1, 2, nSlot, -1, false);
     }
 
     private void charmSkillAction(int slotInd)
@@ -334,19 +334,19 @@ public class CharmDialog extends javax.swing.JDialog {
 		   int ind = charmSkill1.getSelectedIndex();
 		   if(ind <= 0)
 		   {
-			   changeCharmPoint(0, false, nSlot, -1, true);
-			   changeCharmSkill(1, false, nSlot, false);
-			   changeCharmPoint(1, false, nSlot, -1, false);
+			   changeCharmPoint(0, 2, nSlot, -1, true);
+			   changeCharmSkill(1, 2, nSlot, false);
+			   changeCharmPoint(1, 2, nSlot, -1, false);
 			   return;
 		   }
 
-		   int[] list = mhagData.getSkillList(false, nSlot);
+		   int[] list = mhagData.getSkillList(2, nSlot);   // deault g rank
 		   charm.setSkillID(0,list[ind-1]);
 		   charm.setNumSkill(0);   //no charm skill determined
 
-		   changeCharmPoint(0, false, nSlot, charm.getSkillID(0), true);
-		   changeCharmSkill(1, false, nSlot, false);
-		   changeCharmPoint(1, false, nSlot, -1, false);
+		   changeCharmPoint(0, 2, nSlot, charm.getSkillID(0), true);
+		   changeCharmSkill(1, 2, nSlot, false);
+		   changeCharmPoint(1, 2, nSlot, -1, false);
 	    }
 	    else
 	    {
@@ -354,22 +354,22 @@ public class CharmDialog extends javax.swing.JDialog {
 		   int ind = charmSkill2.getSelectedIndex();
 		   if(ind <= 0)
 		   {
-			   changeCharmPoint(1, false, nSlot, -1, true);
+			   changeCharmPoint(1, 2, nSlot, -1, true);
 			   return;
 		   }
 
-		   int[] list = mhagData.getSkillList(false, nSlot, charm.getSkillID(0), "Auto-Guard");
+		   int[] list = mhagData.getSkillList(2, nSlot, charm.getSkillID(0), "Auto-Guard");
 		   charm.setSkillID(1,list[ind-1]);
 		   charm.setNumSkill(1);  // only the 1st charm skill determined
 
-		   changeCharmPoint(1, false, nSlot, charm.getSkillID(1), true);
+		   changeCharmPoint(1, 2, nSlot, charm.getSkillID(1), true);
 
 	    }
     }
 
     private void charmPointAction(int slotInd)
     {
-	    boolean lowRank = false;
+	    int rank = 2;
 	    int nSlot = charm.getNumSlot();
 	    if(slotInd == 0)
 	    {
@@ -379,15 +379,15 @@ public class CharmDialog extends javax.swing.JDialog {
 		   if((ind < 0) || (skillID < 0))
 		   {
 			   charm.setNumSkill(0);
-			   changeCharmPoint(0, lowRank, nSlot, -1, true);
-			   changeCharmSkill(1, lowRank, nSlot, false);
-			   changeCharmPoint(1, lowRank, nSlot, -1, false);
+			   changeCharmPoint(0, rank, nSlot, -1, true);
+			   changeCharmSkill(1, rank, nSlot, false);
+			   changeCharmPoint(1, rank, nSlot, -1, false);
 			   return;
 		   }
 
 		   Skill skill = mhagData.getSkill(skillID);
 
-		   int maxPoint = skill.getMaxSkillPoint(lowRank, nSlot);
+		   int maxPoint = skill.getMaxSkillPoint(rank, nSlot);
 		   charm.setSkillPoint(0,maxPoint - ind);
 
 		   if(skill.getSkillName().equals("Auto-Guard"))
@@ -396,14 +396,14 @@ public class CharmDialog extends javax.swing.JDialog {
 		   if(charm.getSkillPoint(0) != 0)
 		   {
 			   charm.setNumSkill(1);
-			   changeCharmSkill(1, lowRank, nSlot, true);
-			   changeCharmPoint(1, lowRank, nSlot, -1, true);
+			   changeCharmSkill(1, rank, nSlot, true);
+			   changeCharmPoint(1, rank, nSlot, -1, true);
 		   }
 		   else
 		   {
 			   charm.setNumSkill(0);
-			   changeCharmSkill(1, lowRank, nSlot, false);
-			   changeCharmPoint(1, lowRank, nSlot, -1, false);
+			   changeCharmSkill(1, rank, nSlot, false);
+			   changeCharmPoint(1, rank, nSlot, -1, false);
 		   }
 
 	    }
@@ -416,12 +416,12 @@ public class CharmDialog extends javax.swing.JDialog {
 		   if((ind < 0) || (skillID < 0))
 		   {
 			   charm.setNumSkill(0);
-			   changeCharmPoint(1, lowRank, nSlot, -1, true);
+			   changeCharmPoint(1, rank, nSlot, -1, true);
 			   return;
 		   }
 
 		   Skill skill = mhagData.getSkill(skillID);
-		   int maxPoint = skill.getMaxSkillPoint(lowRank, nSlot);
+		   int maxPoint = skill.getMaxSkillPoint(rank, nSlot);
 
 		   charm.setSkillPoint(1,maxPoint - ind);
 		   if(charm.getSkillPoint(1) != 0)
@@ -432,7 +432,7 @@ public class CharmDialog extends javax.swing.JDialog {
 	    }
     }
 
-    public void changeCharmSkill(int skillNo, boolean lowRank, int nSlot, boolean active)
+    public void changeCharmSkill(int skillNo, int rank, int nSlot, boolean active)
     {
 
 	    JComboBox skillSlot;
@@ -441,13 +441,13 @@ public class CharmDialog extends javax.swing.JDialog {
 	    if(skillNo == 0)
 	    {
 		    skillSlot = charmSkill1;
-	   	    ind = mhagData.getSkillList(lowRank, nSlot);
+	   	    ind = mhagData.getSkillList(rank, nSlot);
 	    }
 	    else
 	    {
 		    skillSlot = charmSkill2;
 		    exception = charm.getSkillID(0);
-	   	    ind = mhagData.getSkillList(lowRank, nSlot, exception, "Auto-Guard");
+	   	    ind = mhagData.getSkillList(rank, nSlot, exception, "Auto-Guard");
 	    }
 
 	    if(!active)
@@ -460,7 +460,7 @@ public class CharmDialog extends javax.swing.JDialog {
 		int num = ind.length;
 
 		skillSlot.removeAllItems();
-		skillSlot.addItem("---");
+		skillSlot.addItem("");
 		for(int i = 0; i < num; i++)
 		{
 			Skill skill = mhagData.getSkill(ind[i]);
@@ -474,7 +474,7 @@ public class CharmDialog extends javax.swing.JDialog {
 
     }
 
-    public void changeCharmPoint(int skillNo, boolean lowRank, int nSlot, int skillID, boolean active)
+    public void changeCharmPoint(int skillNo, int rank, int nSlot, int skillID, boolean active)
     {
 
 	    JComboBox skillPoint;
@@ -504,7 +504,7 @@ public class CharmDialog extends javax.swing.JDialog {
 	    else
 	    {
 		    Skill skill = mhagData.getSkill(skillID);
-		    int maxPoint = skill.getMaxSkillPoint(lowRank, nSlot);
+		    int maxPoint = skill.getMaxSkillPoint(rank, nSlot);
 		    int minPoint = 0;
 		    if(skill.getSkillName().equals("Auto-Guard"))
 			    minPoint = 10;   // fixed skill point for auto-guard

@@ -23,7 +23,7 @@ public class Charm {
 	public void init()
 	{
 		charmName = "";
-		lowRank = false;
+		rank = 2;
 		numSlot = 0;
 		numSkill = 0;
 		Arrays.fill(skillID, 0);
@@ -46,7 +46,7 @@ public class Charm {
 				parseSkill(0, line.substring(startPos), mhagData);
 				numSkill = 1;
 			}
-			setLowRank(mhagData);
+			setRank(mhagData);
 			return;
 		}
 		else
@@ -74,7 +74,7 @@ public class Charm {
 			parseSlots(line.substring(endPos+1));
 			numSkill = 2;
 		}
-		setLowRank(mhagData);
+		setRank(mhagData);
 	}
 
 	public void parseSkill(int skillIndex, String line, MhagData mhagData)
@@ -110,28 +110,38 @@ public class Charm {
 	}
 
 	// check if the charm can be found in low rank
-	public void setLowRank(MhagData mhagData)
+	public void setRank(MhagData mhagData)
 	{
 		// slot only
 		if(numSkill == 0)
 		{
 			if(numSlot == 3)  // 3 slot for high rank
-				lowRank = false;
+				rank = 1;
 			else
-				lowRank =  true;
+				rank = 0;
 			return;
 		}
 
+		//rank check
 		for(int i = 0; i < numSkill; i++)
 		{
 			Skill skill = mhagData.getSkill(skillID[i]);
-			if(skill.getMaxSkillPoint(true, numSlot) < skillPoint[i])
+			if(skill.getMaxSkillPoint(1, numSlot) < skillPoint[i])
 			{
-				lowRank = false;
+				rank = 2;
 				return;
 			}
 		}
-		lowRank = true;
+		for(int i = 0; i < numSkill; i++)
+		{
+			Skill skill = mhagData.getSkill(skillID[i]);
+			if(skill.getMaxSkillPoint(0, numSlot) < skillPoint[i])
+			{
+				rank = 1;
+				return;
+			}
+		}
+		rank = 0;
 	}
 
 	// set charm name
@@ -170,21 +180,21 @@ public class Charm {
 	}
 
 	public String getCharmName() {return charmName;}
-	public boolean getLowRank() {return lowRank;}
+	public int getRank() {return rank;}
 	public int getNumSlot() {return numSlot;}
 	public int getNumSkill() {return numSkill;}
 	public int getSkillID(int ind) {return skillID[ind];}
 	public int getSkillPoint(int ind) {return skillPoint[ind];}
 
 	public void setCharmName(String name) {charmName = name;}
-	public void setLowRank(boolean ifLowRank) {lowRank = ifLowRank;}
+	public void setRank(int rankInd) {rank = rankInd;}
 	public void setNumSlot(int nSlot) {numSlot = nSlot;}
 	public void setNumSkill(int nSkill) {numSkill = nSkill;}
 	public void setSkillID(int ind, int value) {skillID[ind] = value;}
 	public void setSkillPoint(int ind, int value) {skillPoint[ind] = value;}
 
 	private String charmName = ""; //charm name
-	private boolean lowRank = false;  //if charm can be obtained in low rank
+	private int rank = 2;  //if charm can be obtained in low rank
 
 	private int numSlot = 0; // # of charm slot
 	private int numSkill = 0; // number of skills on Charm

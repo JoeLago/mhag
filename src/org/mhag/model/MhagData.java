@@ -177,17 +177,15 @@ public class MhagData {
 
 			// set jewel id/points for the positive skill (1st one)
 			int point = aJewel.getSkillPoint()[0];
-			boolean ifLowRank = aJewel.getLowRank();
+			int rank = aJewel.getRank();
 			int nSlot = aJewel.getNumSlot();
-			if((skillList[id[0]].getJewelID(ifLowRank, nSlot) >= 0) &&
-				(skillList[id[0]].getJewelSkillPoint(ifLowRank, nSlot) > point))continue;
-			skillList[id[0]].setJewelID(ifLowRank, nSlot, i);
-			skillList[id[0]].setJewelSkillPoint(ifLowRank, nSlot, point);
+			if((skillList[id[0]].getJewelID(rank, nSlot) >= 0) &&
+				(skillList[id[0]].getJewelSkillPoint(rank, nSlot) > point))continue;
 
-			if(ifLowRank)
+			for (int j = rank; j >= 0; j--)
 			{
-				skillList[id[0]].setJewelID(false, nSlot, i);
-				skillList[id[0]].setJewelSkillPoint(false, nSlot, point);
+				skillList[id[0]].setJewelID(j, nSlot, i);
+				skillList[id[0]].setJewelSkillPoint(j, nSlot, point);
 			}
 
 		}
@@ -245,7 +243,7 @@ public class MhagData {
 						continue;
 					}
 
-					if(armor.getDefenseHighRank() > armor2.getDefenseHighRank())
+					if(armor.getDefense(2) > armor2.getDefense(2))  //use G rank defense (G = high for mhtri and mh3g)
 					{
 						armor.setBG4Head(1);
 						armor2.setBG4Head(2);
@@ -270,7 +268,7 @@ public class MhagData {
 				{
 					Armor armor2 =  armorList[k][j];
 					if((setName1.equals(armor2.getSetName()))  &&
-						(armor.getDefenseHighRank() == armor2.getDefenseHighRank()))
+						(armor.getDefense(2) == armor2.getDefense(2)))
 					{
 						if(((armor.getNumSkill() == 1) && (armor2.getNumSkill() != 1)) ||
 							((armor.getNumSkill() != 1) && (armor2.getNumSkill() == 1)))
@@ -559,7 +557,7 @@ public class MhagData {
 			charmList[ind].setSkillPoint(i, set.getCharmSkillPoint(i));
 		}
 		charmList[ind].setCharmName(this);
-		charmList[ind].setLowRank(this);
+		charmList[ind].setRank(this);
 	}
 
 	// get Skill ID, from a skill name
@@ -724,7 +722,7 @@ public class MhagData {
 				boolean plusSet = true;
 				if(armorName.indexOf("+") == -1)
 					plusSet = false;
-				int defense = armor.getDefenseHighRank();
+				int defense = armor.getDefense(2);
 
 				// check chest/arm/waist/leg
 
@@ -738,7 +736,7 @@ public class MhagData {
 						if(!armor2Name.contains(armor1stWord))continue;
 						if((!plusSet) && armor2Name.contains("+"))continue;
 						if((plusSet) && (!armor2Name.contains("+")))continue;
-						if(armor2.getDefenseHighRank() != defense)continue;
+						if(armor2.getDefense(2) != defense)continue;
 						armorID[k] = jk;
 						break;
 					}
@@ -759,15 +757,19 @@ public class MhagData {
 
 				code.append(setName).append(" :");
 
-				if(armor.getDefenseLowRank() == 0) // high rank
+				if(armor.getDefense(1) == 0) // G rank
 				{
 					defenseList[num] = defense;
+					code.append(" G");
+				}
+				else if(armor.getDefense(0) == 0) // high rank
+				{
+					defenseList[num] = armor.getDefense(1);
 					code.append(" H");
-
 				}
 				else
 				{
-					defenseList[num] = armor.getDefenseLowRank();
+					defenseList[num] = armor.getDefense(0);
 					code.append(" L");
 				}
 
@@ -949,7 +951,7 @@ public class MhagData {
 
 	// get armor list (index copy, name can be got from armorList)
 	// sorted by armorName;
-	public int[] getArmorList(boolean lowRank, boolean blade, 
+	public int[] getArmorList(int rank, boolean blade, 
 		boolean female, int bodyPart)
 	{
 		int nMax = Armor.armorIDTot[bodyPart];
@@ -958,7 +960,7 @@ public class MhagData {
 		for (int i = 0; i < nMax; i++)
 		{
 			Armor armor = armorList[bodyPart][i];
-			if(lowRank && (!armor.getLowRank()))continue;
+			if(rank < armor.getRank())continue;
 			if(blade && (armor.getBladeOrGunner().equals("G")))continue;
 			if((!blade) && (armor.getBladeOrGunner().equals("B")))continue;
 
@@ -1028,7 +1030,7 @@ public class MhagData {
 		return nameStr;
 	}
 
-	public int[] getJewelList(boolean lowRank, int nSlot)
+	public int[] getJewelList(int rank, int nSlot)
 	{
 		int nMax = Jewel.jewelIDTot;
 		int[] index = new int[nMax];
@@ -1037,7 +1039,7 @@ public class MhagData {
 		for (int i = 0; i < nMax; i++)
 		{
 			Jewel jewel = jewelList[i];
-			if(lowRank && (!jewel.getLowRank()))continue;
+			if(rank < jewel.getRank())continue;
 			if(jewel.getNumSlot() > nSlot)continue;
 
 			index[num] = i;
@@ -1057,7 +1059,7 @@ public class MhagData {
 		return indFinal;
 	}
 
-	public int[] getSkillList(boolean lowRank, int nSlot)
+	public int[] getSkillList(int rank, int nSlot)
 	{
 		int nMax = Skill.skillIDTot;
 		int[] index = new int[nMax];
@@ -1066,7 +1068,7 @@ public class MhagData {
 		for (int i = 0; i < nMax; i++)
 		{
 			Skill skill = skillList[i];
-			if(skill.getMaxSkillPoint(lowRank, nSlot) == 0)continue;
+			if(skill.getMaxSkillPoint(rank, nSlot) == 0)continue;
 
 			index[num] = i;
 			nameStr[num] = skill.getSkillName();
@@ -1084,7 +1086,7 @@ public class MhagData {
 	}
 
 	// get list and exclude one exception
-	public int[] getSkillList(boolean lowRank, int nSlot, int exception)
+	public int[] getSkillList(int rank, int nSlot, int exception)
 	{
 		int nMax = Skill.skillIDTot;
 		int[] index = new int[nMax];
@@ -1093,7 +1095,7 @@ public class MhagData {
 		for (int i = 0; i < nMax; i++)
 		{
 			Skill skill = skillList[i];
-			if(skill.getMaxSkillPoint(lowRank, nSlot) == 0)continue;
+			if(skill.getMaxSkillPoint(rank, nSlot) == 0)continue;
 			if(skill.getSkillID() == exception)continue;
 
 			index[num] = i;
@@ -1112,7 +1114,7 @@ public class MhagData {
 	}
 
 	// get list and exclude two exceptions
-	public int[] getSkillList(boolean lowRank, int nSlot, int except1, String skillExcept2)
+	public int[] getSkillList(int rank, int nSlot, int except1, String skillExcept2)
 	{
 		int nMax = Skill.skillIDTot;
 		int[] index = new int[nMax];
@@ -1121,7 +1123,7 @@ public class MhagData {
 		for (int i = 0; i < nMax; i++)
 		{
 			Skill skill = skillList[i];
-			if(skill.getMaxSkillPoint(lowRank, nSlot) == 0)continue;
+			if(skill.getMaxSkillPoint(rank, nSlot) == 0)continue;
 			if(skill.getSkillID() == except1)continue;
 			if(skill.getSkillName().equals(skillExcept2))continue;
 
@@ -1222,6 +1224,8 @@ public class MhagData {
 
 	public String getDirSave(int game) {return dirSave[game];}
 
+	public int getMaxRank(int game) {return maxRank[game];}
+
 	// Constants for file names
 	private final String[] dirSave = {"mhtri/", "mhp3rd/", "mhfu/", "mh3g/"};
 	private final String fileArmor = "armor.dat";
@@ -1237,6 +1241,8 @@ public class MhagData {
 //	private final String fileRefSkillClass = dirRef+"ref_skill_class.dat";
 	private final String fileCompleteBlade = dirRef+"blade_sets.input";
 	private final String fileCompleteGunner = dirRef+"gunner_sets.input";
+	
+	private final int[] maxRank = {1, 1, 2, 2}; //max rank: high for mhtri and mhp3rd, G for mhfu and mh3g
 
 	// data
 	private Armor[][] armorList;

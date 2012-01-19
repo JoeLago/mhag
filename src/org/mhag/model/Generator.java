@@ -58,7 +58,7 @@ public class Generator {
 	        gen.createCharmLookupTable();
 		 */
 
-		gen.initJewel(aSet.getLowRank());
+		gen.initJewel(aSet.getRank());
 		//gen.testJewelSkills();
 
 		//for(int i = 0; i < 100000; i++)
@@ -70,7 +70,7 @@ public class Generator {
 
 	}
 
-	public void initJewel(boolean lowRank)
+	public void initJewel(int rank)
 	{
 		//setup jewel information
 		Arrays.fill(jewelNeg, false);
@@ -87,7 +87,7 @@ public class Generator {
 			Skill skill = mhagData.getSkill(skills[i]);
 			for(int j = 1; j <= 3; j++)
 			{
-				int jewelID = skill.getJewelID(lowRank, j);
+				int jewelID = skill.getJewelID(rank, j);
 
 				if(jewelID >= 0)
 				{
@@ -264,7 +264,7 @@ public class Generator {
 				effectID = skill.getEffectID(j);
 				if(pointLeft > 0)break;
 			}
-			if(skill.getJewelID(aSet.getLowRank(), 1)  == 2)
+			if(skill.getJewelID(aSet.getRank(), 1)  == 2)
 				gap[i] = (pointLeft + 1)/2;
 			else
 				gap[i] = pointLeft;
@@ -306,7 +306,7 @@ public class Generator {
 	public String[] genMainGui(Task task, MhagGui mhagGui, Set aSet)
 	{
 		boolean ifBlade = true;
-		boolean ifLowRank = false;
+		int rank = 2;
 		int[][] searchSpace = new int[6][100];  //indeces of possible pieces
 		int[] searchNum = new int[6];  //number of possible pieces
 		for(int i = 0; i < 6; i++)
@@ -326,7 +326,7 @@ public class Generator {
 
 		if(genMode == 2)  // jewel optimization
 		{
-			initJewel(aSet.getLowRank());
+			initJewel(aSet.getRank());
 			//System.out.println(numEffectOpt);
 			//System.out.println(Arrays.toString(skills));
 			//System.out.println(Arrays.toString(effects));
@@ -357,9 +357,9 @@ public class Generator {
 		}
 		else if(genMode == 1) //  partial set search
 		{
-			ifLowRank = aSet.getLowRank();
+			rank = aSet.getRank();
 			ifBlade = aSet.getBlade();
-			initJewel(ifLowRank);
+			initJewel(rank);
 
 			if(!ifBlade && ifCheckGun &&
 					((numWeaponSlotOpt == 2) || (numWeaponSlotOpt == 3)))
@@ -377,7 +377,7 @@ public class Generator {
 				}
 				else
 				{
-					int[] temp = getArmorList(ifLowRank, ifBlade, bodyPart);
+					int[] temp = getArmorList(rank, ifBlade, bodyPart);
 					searchNum[bodyPart] = temp.length;
 					System.arraycopy(temp, 0, searchSpace[bodyPart], 0, temp.length);
 				}
@@ -397,19 +397,24 @@ public class Generator {
 				else
 					mhagData.readCharmDefault();
 
-				int[] temp = getCharmList(ifLowRank);
+				int[] temp = getCharmList(rank);
 				searchNum[5] = temp.length;
 				System.arraycopy(temp, 0, searchSpace[5], 0, temp.length);
 			}
 
-			setCodes = genSearch(task, mhagGui, ifLowRank, ifBlade, searchNum, searchSpace);
+			setCodes = genSearch(task, mhagGui, rank, ifBlade, searchNum, searchSpace);
 		}
 		else  // full set search
 		{
 			if(armorRankOpt == 1)  //if low rank pieces only
-				ifLowRank =  true;
+				rank =  0;
+			else if(armorRankOpt == 2)  //if high rank pieces only
+				rank = 1;
+			else if(armorRankOpt == 4)  // if high/low rank pieces
+				rank = 1;
+
 			ifBlade = genBlade;
-			initJewel(ifLowRank);
+			initJewel(rank);
 
 			if(!ifBlade && ifCheckGun &&
 					((numWeaponSlotOpt == 2) || (numWeaponSlotOpt == 3)))
@@ -419,7 +424,7 @@ public class Generator {
 
 			for(int bodyPart = 0; bodyPart < 5; bodyPart++)
 			{
-				int[] temp = getArmorList(ifLowRank, ifBlade, bodyPart);
+				int[] temp = getArmorList(rank, ifBlade, bodyPart);
 				searchNum[bodyPart] = temp.length;
 				System.arraycopy(temp, 0, searchSpace[bodyPart], 0, temp.length);
 			}
@@ -429,29 +434,29 @@ public class Generator {
 			else
 				mhagData.readCharmDefault();
 
-			int[] temp = getCharmList(ifLowRank);
+			int[] temp = getCharmList(rank);
 			searchNum[5] = temp.length;
 			System.arraycopy(temp, 0, searchSpace[5], 0, temp.length);
 
-			setCodes = genSearch(task, mhagGui, ifLowRank, ifBlade, searchNum, searchSpace);
+			setCodes = genSearch(task, mhagGui, rank, ifBlade, searchNum, searchSpace);
 		}
 
 		return setCodes;
 	}
 
-	public String[] genSearch(Task task, MhagGui mhagGui, boolean ifLowRank, boolean ifBlade,
+	public String[] genSearch(Task task, MhagGui mhagGui, int rank, boolean ifBlade,
 			int[] searchNum, int[][] searchSpace) 
 	{
 		if(optMethod == 0)
-			return full(task, mhagGui, ifLowRank, ifBlade, searchNum,searchSpace);
+			return full(task, mhagGui, rank, ifBlade, searchNum,searchSpace);
 		else if(optMethod == 1)
-			return sa(task, mhagGui, ifLowRank, ifBlade, searchNum, searchSpace);
+			return sa(task, mhagGui, rank, ifBlade, searchNum, searchSpace);
 		else
-			return ga(task, mhagGui, ifLowRank, ifBlade, searchNum, searchSpace);
+			return ga(task, mhagGui, rank, ifBlade, searchNum, searchSpace);
 	}
 
 	//numerate sets , full search algorithm
-	public String[] full(Task task, MhagGui mhagGui, boolean lowRank, boolean blade,
+	public String[] full(Task task, MhagGui mhagGui, int rank, boolean blade,
 			int[] searchNum, int[][] searchSpace)
 	{
 		// stored set data
@@ -486,7 +491,7 @@ public class Generator {
 
 			indices = MhagUtil.getIndexArray(i, searchNum); //Armor.getArmorIDTot());
 			aSet.init();
-			input(lowRank, blade, aSet, indices, searchSpace);
+			input(rank, blade, aSet, indices, searchSpace);
 
 			int score = setOptimizer(aSet);
 
@@ -514,14 +519,14 @@ public class Generator {
 	}
 
 	// genetic algorithm
-	public String[] ga(Task task, MhagGui mhagGui, boolean lowRank, boolean blade,
+	public String[] ga(Task task, MhagGui mhagGui, int rank, boolean blade,
 			int[] searchNum, int[][] searchSpace)
 	{
 		return null;
 	}
 
 	//simulated annealing
-	public String[] sa(Task task, MhagGui mhagGui, boolean lowRank, boolean blade,
+	public String[] sa(Task task, MhagGui mhagGui, int rank, boolean blade,
 			int[] searchNum, int[][] searchSpace) 
 	{
 		int numStep = 10000;
@@ -530,7 +535,7 @@ public class Generator {
 		Set setOld = new Set();
 		Set aSet = new Set();
 		aSet.init();
-		input(lowRank, blade, aSet, indices, searchSpace);
+		input(rank, blade, aSet, indices, searchSpace);
 		int score = setOptimizer(aSet);
 
 		int progress = 1;
@@ -552,7 +557,7 @@ public class Generator {
 			//change
 			indices[part] = rand.nextInt(searchNum[part]);
 			aSet.init();
-			input(lowRank, blade, aSet, indices, searchSpace);
+			input(rank, blade, aSet, indices, searchSpace);
 			score = setOptimizer(aSet);
 
 			//Monte Carlo step
@@ -604,9 +609,9 @@ public class Generator {
 	}
 
 	// input armor pieces/charm to a new set
-	public void input(boolean lowRank, boolean blade, Set set, int[] indices, int[][] searchSpace)
+	public void input(int rank, boolean blade, Set set, int[] indices, int[][] searchSpace)
 	{
-		set.setLowRank(lowRank);
+		set.setRank(rank);
 		set.setBlade(blade);
 		for(int i = 0; i < 7; i++)
 			set.setInUse(i, true);
@@ -730,29 +735,19 @@ public class Generator {
 	// show available jewels based on skills
 	public void showJewels()
 	{
-		boolean lowRank = true;
-		for(int i = 0; i < Skill.skillIDTot; i++)
+		for(int rank = 0; rank < 3; rank++) //various ranks
 		{
-			Skill skill = mhagData.getSkill(i);
-			System.out.printf("%3d %-10s: ", i, skill.getSkillName());
-			for(int j = 1; j < 4; j++)
+			for(int i = 0; i < Skill.skillIDTot; i++)
 			{
-				if(skill.getJewelID(lowRank, j) < 0)continue;
-				System.out.printf("(%d) %3d ",j,skill.getJewelSkillPoint(lowRank, j));
+				Skill skill = mhagData.getSkill(i);
+				System.out.printf("%3d %-10s: ", i, skill.getSkillName());
+				for(int j = 1; j < 4; j++)
+				{
+					if(skill.getJewelID(rank, j) < 0)continue;
+					System.out.printf("(%d) %3d ",j,skill.getJewelSkillPoint(rank, j));
+				}
+				System.out.println();
 			}
-			System.out.println();
-		}
-		lowRank = false;
-		for(int i = 0; i < Skill.skillIDTot; i++)
-		{
-			Skill skill = mhagData.getSkill(i);
-			System.out.printf("%3d %-10s: ", i, skill.getSkillName());
-			for(int j = 1; j < 4; j++)
-			{
-				if(skill.getJewelID(lowRank, j) < 0)continue;
-				System.out.printf("(%d) %3d ",j,skill.getJewelSkillPoint(lowRank, j));
-			}
-			System.out.println();
 		}
 	}
 
@@ -765,7 +760,7 @@ public class Generator {
 			int skillID2nd = -1;
 			for (int j = 1; j < 4; j++)
 			{
-				int jewelID = skill.getJewelID(false, j);
+				int jewelID = skill.getJewelID(2, j);
 				if(jewelID < 0)continue;
 				Jewel jewel = mhagData.getJewel(jewelID);
 				if(jewel.getNumSkill() == 1)continue;
@@ -776,7 +771,7 @@ public class Generator {
 			int skillID3rd = -1;
 			for (int j = 1; j < 4; j++)
 			{
-				int jewelID = skill2.getJewelID(false, j);
+				int jewelID = skill2.getJewelID(2, j);
 				if(jewelID < 0)continue;
 				Jewel jewel = mhagData.getJewel(jewelID);
 				if(jewel.getNumSkill() == 1)continue;
@@ -1205,7 +1200,7 @@ public class Generator {
 	}
 
 	// generate a list of armor candidates according to the effects
-	public int[] getArmorList(boolean lowRank, boolean blade, int bodyPart)
+	public int[] getArmorList(int rank, boolean blade, int bodyPart)
 	{
 		int [] armorList = new int[Armor.armorIDTot[bodyPart]]; 
 		int armorNum = 0;
@@ -1226,14 +1221,26 @@ public class Generator {
 					continue;
 			}
 
-			//check low/high rank
-			if(lowRank || (armorRankOpt == 1)) // low rank only
+			//check low/high/g rank
+			if((rank == 0) || (armorRankOpt == 1)) // low rank only
 			{
-				if(!armor.getLowRank()) continue;
+				if(armor.getRank() != 0) continue;
 			}
 			else if(armorRankOpt == 2) //high rank only
 			{
-				if(armor.getLowRank()) continue;
+				if(armor.getRank() != 1) continue;
+			}
+			else if(armorRankOpt == 3) //G rank only
+			{
+				if(armor.getRank() != 2) continue;
+			}
+			else if(armorRankOpt == 4) //low/high rank
+			{
+				if(armor.getRank() == 2) continue;
+			}
+			else if(armorRankOpt == 5) //high/g rank
+			{
+				if(armor.getRank() == 0) continue;
 			}
 
 			//check earring
@@ -1259,7 +1266,7 @@ public class Generator {
 
 			//check armor skills and slots
 			//System.out.printf("%s:", armor.getArmorName());
-			armorNum = updateArmorList(lowRank, bodyPart, armorNum, armorList, i);
+			armorNum = updateArmorList(rank, bodyPart, armorNum, armorList, i);
 			/*
 			for(int j = 0; j < armorNum; j++)
 			{
@@ -1305,7 +1312,7 @@ public class Generator {
 	}
 
 	// generate a list of armor pieces that contain the effects, and sorted by combined skill points
-	public int[] getArmorListAll(boolean lowRank, boolean blade, int bodyPart)
+	public int[] getArmorListAll(int rank, boolean blade, int bodyPart)
 	{
 		int [] armorList = new int[Armor.armorIDTot[bodyPart]]; 
 		int [] pointList = new int[Armor.armorIDTot[bodyPart]]; 
@@ -1327,14 +1334,26 @@ public class Generator {
 					continue;
 			}
 
-			//check low/high rank
-			if(lowRank || (armorRankOpt == 1)) // low rank only
+			//check low/high/g rank
+			if((rank == 0) || (armorRankOpt == 1)) // low rank only
 			{
-				if(!armor.getLowRank()) continue;
+				if(armor.getRank() != 0) continue;
 			}
 			else if(armorRankOpt == 2) //high rank only
 			{
-				if(armor.getLowRank()) continue;
+				if(armor.getRank() != 1) continue;
+			}
+			else if(armorRankOpt == 3) //G rank only
+			{
+				if(armor.getRank() != 2) continue;
+			}
+			else if(armorRankOpt == 4) //low/high rank
+			{
+				if(armor.getRank() == 2) continue;
+			}
+			else if(armorRankOpt == 5) //high/g rank
+			{
+				if(armor.getRank() == 0) continue;
 			}
 
 			//check earring
@@ -1407,7 +1426,7 @@ public class Generator {
 		return point;
 	}
 
-	public int updateArmorList(boolean lowRank, int bodyPart, int armorNum, int[] armorList, int armorID)
+	public int updateArmorList(int rank, int bodyPart, int armorNum, int[] armorList, int armorID)
 	{
 		if(armorNum == 0)
 		{
@@ -1422,7 +1441,7 @@ public class Generator {
 		for(int i = 0; i < armorNum; i++)
 		{
 			Armor armorNow = mhagData.getArmor(bodyPart, armorList[i]);
-			int compare = armorCompare(lowRank, armor, armorNow);
+			int compare = armorCompare(rank, armor, armorNow);
 			//System.out.printf("%d", compare);
 			if(compare == 2)
 			{
@@ -1458,18 +1477,15 @@ public class Generator {
 	}
 
 	// generate a list of charm candidates according to the effects
-	public int[] getCharmList(boolean lowRank)
+	public int[] getCharmList(int rank)
 	{
 		int [] charmList = new int[mhagData.getNumCharm()];
 		int charmNum = 0;
 
 		for(int i = 0; i < mhagData.getNumCharm(); i++)
 		{
-			//check low/high rank
-			if(lowRank) // low rank only
-			{
-				if(!mhagData.getCharm(i).getLowRank())continue;
-			}
+			//check low/high/g rank
+			if(rank < mhagData.getCharm(i).getRank())continue;
 
 			//check armor skills and slots
 			charmNum = updateCharmList(charmNum, charmList, i);
@@ -1536,7 +1552,7 @@ public class Generator {
 	// 0 :  can't determine which is better
 	// 1 : armor1 > armor2 (all skills/slot , if skill same, defense is better)
 	// 2 : armor1 <= armor2 (all skills/slot, if skill same, defense is worse or equal)
-	public int armorCompare(boolean lowRank, Armor armor1, Armor armor2)
+	public int armorCompare(int rank, Armor armor1, Armor armor2)
 	{
 		//check torso up for armor1
 		boolean ifTorso1 = false;
@@ -1549,7 +1565,7 @@ public class Generator {
 		{
 			if(ifTorso2)
 			{
-				if(armor1.getDefense(lowRank) > armor2.getDefense(lowRank))
+				if(armor1.getDefense(rank) > armor2.getDefense(rank))
 					return 1; // 1 > 2
 				else
 					return 2; // 2 >= 1
@@ -1626,8 +1642,8 @@ public class Generator {
 
 		if(comparedResult <0) //skill/slot same, check defense
 		{
-			point1 = armor1.getDefense(lowRank);
-			point2 = armor2.getDefense(lowRank);
+			point1 = armor1.getDefense(rank);
+			point2 = armor2.getDefense(rank);
 			if(point1 > point2)
 				comparedResult = 1;
 			else
@@ -1812,7 +1828,7 @@ public class Generator {
 	//generator options
 	private int genMode = 0; //mode 2: jewl only, 1: partial search , 0. full set search
 	private boolean genBlade = true; // blademaster/gunner
-	private int armorRankOpt = 0; // 0: any, 1: high rank only, 2: low rank only
+	private int armorRankOpt = 0; // 0: any, 1: low rank only, 2: high rank only, 3: G rank only, 4: low/high Rank, 5: high/G Rank
 	private int armorHeadOpt = 0; // 0: any, 1: melee only, 2: gunner only
 	private boolean ifEarring = true;  //include earring
 	private boolean ifCharm = false; //use my charm
