@@ -23,7 +23,7 @@ public class Charm {
 	public void init()
 	{
 		charmName = "";
-		rank = 2;
+		rank = 0;
 		numSlot = 0;
 		numSkill = 0;
 		Arrays.fill(skillID, 0);
@@ -194,7 +194,7 @@ public class Charm {
 	public void setSkillPoint(int ind, int value) {skillPoint[ind] = value;}
 
 	private String charmName = ""; //charm name
-	private int rank = 2;  //if charm can be obtained in low rank
+	private int rank = 0;  //if charm can be obtained in low rank
 
 	private int numSlot = 0; // # of charm slot
 	private int numSkill = 0; // number of skills on Charm

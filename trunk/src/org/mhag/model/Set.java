@@ -250,11 +250,29 @@ public class Set {
 	// get set rate
 	public int getRate() {return rate;}
 
-	// get gender
+	// get female
 	public boolean getFemale() {return female;}
+	// set female
+	public void setFemale(boolean ifFemale) {female = ifFemale;}
 
 	// set gender
-	public void setFemale(boolean ifFemale) {female = ifFemale;}
+	public String getSetGender(MhagData mhagData)
+	{
+		String sex = "A";
+		for(int i = 0; i < 5; i++)
+		{
+			if(!inUse[i])continue;
+			Armor armor = mhagData.getArmor(i, armorID[i]);
+			if(sex.contains("A"))
+			{
+				if(!armor.ifMale())
+					sex = "F";
+				else if(!armor.ifFemale())
+					sex = "M";
+			}
+		}
+		return sex;
+	}
 
 	// get jewel name
 	public String[] getJewelName(MhagData mhagData, int bodyPart)
@@ -610,9 +628,6 @@ public class Set {
 		Arrays.fill(effectID, 0);
 		Arrays.fill(effectSkillIndex, 0);
 
-		// hidden
-		female = false;
-
 		//generator
 		Arrays.fill(gapPoint, 0);
 		Arrays.fill(slots, 0);
@@ -735,10 +750,34 @@ public class Set {
 
 	}
 
-	// check set consistency
+	// check set consistency, including gender
 	public boolean checkSet(Mhag mhag, MhagData mhagData)
 	{
 		MhagUtil.logLine(mhag, "Checking Set Consistentcy...");
+
+		// gender check
+		String sex = "A";
+		String  errLine0 = "   Error! not right gender for armor piece";
+
+		for(int i = 0; i < 5; i++)
+		{
+			if(!inUse[i])continue;
+			Armor armor = mhagData.getArmor(i, armorID[i]);
+			if(sex.contains("A"))
+			{
+				if(!armor.ifMale())
+					sex = "F";
+				else if(!armor.ifFemale())
+					sex = "M";
+			}
+			else if((sex.contains("M") && !armor.ifMale()) ||
+					(sex.contains("F") && !armor.ifFemale()))
+			{
+				// gender not consistent
+				MhagUtil.logLine(mhag,errLine0);
+				return false;
+			}
+		}
 
 		//low rank check
 		if(rank != 2) //no g rank, so go to check if armor rank <= set rank
@@ -1908,7 +1947,7 @@ public class Set {
 	private int rate = 0; // # Reserved for sets Evaluation
 
 	// hidden variable
-	private boolean female = false;  //gender, only used in GUI
+	private boolean female = false; // Male false/Female true
 
 	static final String unNamedSet = "Unnamed Set";
 

@@ -182,7 +182,7 @@ public class MhagData {
 			if((skillList[id[0]].getJewelID(rank, nSlot) >= 0) &&
 				(skillList[id[0]].getJewelSkillPoint(rank, nSlot) > point))continue;
 
-			for (int j = rank; j >= 0; j--)
+			for (int j = rank; j <= 2; j++)
 			{
 				skillList[id[0]].setJewelID(j, nSlot, i);
 				skillList[id[0]].setJewelSkillPoint(j, nSlot, point);
@@ -963,6 +963,8 @@ public class MhagData {
 			if(rank < armor.getRank())continue;
 			if(blade && (armor.getBladeOrGunner().equals("G")))continue;
 			if((!blade) && (armor.getBladeOrGunner().equals("B")))continue;
+			if(female && !armor.ifFemale())continue;
+			if(!female && !armor.ifMale())continue;
 
 			index[num] = i;
 			num++;

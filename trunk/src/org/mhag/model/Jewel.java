@@ -305,7 +305,7 @@ public class Jewel {
 	private int jewelID = 0; // Jewel ID
 	private String jewelName = ""; //Jewel Name
 	private String jewelNameJP = ""; //Jewel Name japanese
-	private int rank = 2; // lr 0/ hr 1/ gr 2
+	private int rank = 0; // lr 0/ hr 1/ gr 2
 	private int numSlot = 0;  // 0 -3 slots
 	private int numSkill = 0; // 2 skills max
 	private int[] skillID;  //  Skill ID

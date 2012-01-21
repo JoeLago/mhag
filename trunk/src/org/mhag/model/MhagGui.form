@@ -95,16 +95,16 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="12" pref="12" max="12" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="output" alignment="0" min="-2" max="-2" attributes="1"/>
-                                  <Group type="102" alignment="0" attributes="1">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Component id="rank" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="hunterType" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="sex" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="setNamePanel" max="32767" attributes="0"/>
+                                      <Component id="setNamePanel" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -127,10 +127,10 @@
                               <Component id="output" min="-2" pref="57" max="-2" attributes="1"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="rank" min="-2" max="-2" attributes="1"/>
-                                  <Component id="setNamePanel" min="-2" max="-2" attributes="1"/>
                                   <Component id="sex" min="-2" pref="80" max="-2" attributes="1"/>
-                                  <Component id="hunterType" min="-2" max="-2" attributes="1"/>
+                                  <Component id="rank" min="-2" max="-2" attributes="1"/>
+                                  <Component id="hunterType" min="-2" pref="80" max="-2" attributes="1"/>
+                                  <Component id="setNamePanel" min="-2" max="-2" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="setup" min="-2" pref="345" max="-2" attributes="0"/>
@@ -212,23 +212,21 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace pref="14" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="blade" min="-2" max="-2" attributes="0"/>
                               <Component id="gunner" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="12" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Component id="blade" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="gunner" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="9" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -284,7 +282,7 @@
                               <Component id="male" min="-2" max="-2" attributes="0"/>
                               <Component id="female" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="12" max="32767" attributes="0"/>
+                          <EmptySpace pref="18" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1293,18 +1291,16 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollOptSets" pref="647" max="32767" attributes="1"/>
-                          <Component id="skillsPanel" alignment="0" max="32767" attributes="1"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="optionPanel" min="-2" pref="425" max="-2" attributes="0"/>
-                              <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="optionPanel" min="-2" pref="419" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="loadToCalcGen" alignment="1" min="-2" pref="195" max="-2" attributes="1"/>
                                   <Component id="jProgressOpt" min="-2" pref="195" max="-2" attributes="1"/>
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jButtonMyCharms" min="-2" pref="95" max="-2" attributes="1"/>
                                           <Component id="jButtonSearch" min="-2" pref="95" max="-2" attributes="1"/>
@@ -1317,20 +1313,23 @@
                                   </Group>
                               </Group>
                           </Group>
+                          <Component id="skillsPanel" alignment="0" min="-2" max="-2" attributes="1"/>
+                          <Component id="jScrollOptSets" alignment="0" min="-2" pref="623" max="-2" attributes="1"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPreview3" min="-2" pref="586" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jScrollPreview3" pref="604" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <Component id="skillsPanel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="optionPanel" min="-2" pref="112" max="-2" attributes="1"/>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jButtonMyCharms" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -1346,10 +1345,9 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="loadToCalcGen" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="optionPanel" min="-2" max="-2" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollOptSets" max="32767" attributes="0"/>
+                              <Component id="jScrollOptSets" min="-2" pref="243" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jScrollPreview3" alignment="0" min="-2" pref="535" max="-2" attributes="0"/>
                       </Group>
@@ -1439,7 +1437,7 @@
                               </Group>
                               <Component id="jScrollSkillList" alignment="0" min="-2" pref="589" max="-2" attributes="1"/>
                           </Group>
-                          <EmptySpace pref="36" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1666,35 +1664,34 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jComboBoxRank" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
-                              <Component id="jComboBoxOpt" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
-                              <Component id="jComboBoxType" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                              <Component id="jComboBoxRank" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                              <Component id="jComboBoxOpt" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                              <Component id="jComboBoxType" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="headLabel1" min="-2" pref="20" max="-2" attributes="1"/>
                                       <Component id="weaponLabel1" min="-2" pref="20" max="-2" attributes="1"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jComboBoxHead" min="-2" pref="115" max="-2" attributes="1"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jCheckBoxEarring" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jComboBoxWeaponSlots" min="-2" pref="115" max="-2" attributes="1"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jCheckBoxCharm" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="jComboBoxHead" alignment="0" min="-2" pref="110" max="-2" attributes="1"/>
+                                      <Component id="jComboBoxWeaponSlots" alignment="0" min="-2" pref="110" max="-2" attributes="1"/>
                                   </Group>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jCheckBoxGun" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="1">
+                                  <Component id="genderLabel" min="-2" pref="20" max="-2" attributes="1"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jComboBoxGender" min="-2" pref="110" max="-2" attributes="0"/>
                               </Group>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jCheckBoxGun" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxEarring" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxCharm" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -1712,7 +1709,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jComboBoxWeaponSlots" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="jCheckBoxCharm" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCheckBoxGun" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -1734,11 +1731,16 @@
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jComboBoxOpt" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                              <Component id="optLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBoxGun" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jComboBoxOpt" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="optLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jComboBoxGender" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="genderLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxCharm" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1783,7 +1785,7 @@
                     </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="3">
-                        <StringItem index="0" value="Full Search"/>
+                        <StringItem index="0" value="Full"/>
                         <StringItem index="1" value="Partial"/>
                         <StringItem index="2" value="Jewel Opt"/>
                       </StringArray>
@@ -1804,18 +1806,6 @@
                   </Properties>
                   <Events>
                     <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxEarringItemStateChanged"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBoxCharm">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Monospaced" size="12" style="0"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="MyCharms"/>
-                    <Property name="toolTipText" type="java.lang.String" value="Include customized charms"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxCharmItemStateChanged"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabelArmorRank">
@@ -1924,11 +1914,53 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Monospaced" size="12" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Slots from Two Gunner Parts"/>
+                    <Property name="text" type="java.lang.String" value="Split Gun"/>
                     <Property name="toolTipText" type="java.lang.String" value="Gun slots are from different gun parts"/>
                   </Properties>
                   <Events>
                     <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxGunItemStateChanged"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="genderLabel">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Lucida Sans Typewriter" size="12" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/org/mhag/model/pic/gender.png"/>
+                    </Property>
+                    <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                      <ComponentRef name="jComboBoxGender"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Gender"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxGender">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Monospaced" size="12" style="0"/>
+                    </Property>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="2">
+                        <StringItem index="0" value="Male"/>
+                        <StringItem index="1" value="Female"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxGenderActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBoxCharm">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Monospaced" size="12" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="MyCharms"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Include customized charms"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBoxCharmItemStateChanged"/>
                   </Events>
                 </Component>
               </SubComponents>

@@ -306,7 +306,8 @@ public class Generator {
 	public String[] genMainGui(Task task, MhagGui mhagGui, Set aSet)
 	{
 		boolean ifBlade = true;
-		int rank = 2;
+		boolean ifFemale = false;
+		int rank = mhagData.getMaxRank(mhag.getGame());
 		int[][] searchSpace = new int[6][100];  //indeces of possible pieces
 		int[] searchNum = new int[6];  //number of possible pieces
 		for(int i = 0; i < 6; i++)
@@ -359,6 +360,7 @@ public class Generator {
 		{
 			rank = aSet.getRank();
 			ifBlade = aSet.getBlade();
+			ifFemale = aSet.getFemale();
 			initJewel(rank);
 
 			if(!ifBlade && ifCheckGun &&
@@ -377,7 +379,7 @@ public class Generator {
 				}
 				else
 				{
-					int[] temp = getArmorList(rank, ifBlade, bodyPart);
+					int[] temp = getArmorList(rank, ifBlade, ifFemale, bodyPart);
 					searchNum[bodyPart] = temp.length;
 					System.arraycopy(temp, 0, searchSpace[bodyPart], 0, temp.length);
 				}
@@ -414,6 +416,7 @@ public class Generator {
 				rank = 1;
 
 			ifBlade = genBlade;
+			ifFemale = genFemale;
 			initJewel(rank);
 
 			if(!ifBlade && ifCheckGun &&
@@ -424,7 +427,7 @@ public class Generator {
 
 			for(int bodyPart = 0; bodyPart < 5; bodyPart++)
 			{
-				int[] temp = getArmorList(rank, ifBlade, bodyPart);
+				int[] temp = getArmorList(rank, ifBlade, ifFemale, bodyPart);
 				searchNum[bodyPart] = temp.length;
 				System.arraycopy(temp, 0, searchSpace[bodyPart], 0, temp.length);
 			}
@@ -1200,7 +1203,7 @@ public class Generator {
 	}
 
 	// generate a list of armor candidates according to the effects
-	public int[] getArmorList(int rank, boolean blade, int bodyPart)
+	public int[] getArmorList(int rank, boolean blade, boolean ifFemale, int bodyPart)
 	{
 		int [] armorList = new int[Armor.armorIDTot[bodyPart]]; 
 		int armorNum = 0;
@@ -1218,6 +1221,18 @@ public class Generator {
 			else
 			{
 				if(armor.getBladeOrGunner().equals("B"))
+					continue;
+			}
+
+			//check gender
+			if(ifFemale)
+			{
+				if(!armor.ifFemale())
+					continue;
+			}
+			else
+			{
+				if(!armor.ifMale())
 					continue;
 			}
 
@@ -1312,7 +1327,7 @@ public class Generator {
 	}
 
 	// generate a list of armor pieces that contain the effects, and sorted by combined skill points
-	public int[] getArmorListAll(int rank, boolean blade, int bodyPart)
+	public int[] getArmorListAll(int rank, boolean blade, boolean ifFemale, int bodyPart)
 	{
 		int [] armorList = new int[Armor.armorIDTot[bodyPart]]; 
 		int [] pointList = new int[Armor.armorIDTot[bodyPart]]; 
@@ -1331,6 +1346,18 @@ public class Generator {
 			else
 			{
 				if(armor.getBladeOrGunner().equals("B"))
+					continue;
+			}
+
+			//check gender
+			if(ifFemale)
+			{
+				if(!armor.ifFemale())
+					continue;
+			}
+			else
+			{
+				if(!armor.ifMale())
 					continue;
 			}
 
@@ -1755,6 +1782,9 @@ public class Generator {
 	public boolean getBlade() {return genBlade;}
 	public void setBlade(boolean ifBlade) {genBlade = ifBlade;}
 
+	public boolean getFemale() {return genFemale;}
+	public void setFemale(boolean ifFemale) {genFemale = ifFemale;}
+
 	public int getGenMode() {return genMode;}
 	public void setGenMode(int mode) {genMode = mode;}
 
@@ -1828,6 +1858,7 @@ public class Generator {
 	//generator options
 	private int genMode = 0; //mode 2: jewl only, 1: partial search , 0. full set search
 	private boolean genBlade = true; // blademaster/gunner
+	private boolean genFemale = false; // false: male/true: female
 	private int armorRankOpt = 0; // 0: any, 1: low rank only, 2: high rank only, 3: G rank only, 4: low/high Rank, 5: high/G Rank
 	private int armorHeadOpt = 0; // 0: any, 1: melee only, 2: gunner only
 	private boolean ifEarring = true;  //include earring

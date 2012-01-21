@@ -44,7 +44,7 @@ public class Armor {
 			wordIndex++;
 
 			// read Armor Class
-			if(wordIndex == 3)break;
+			if(wordIndex == 4)break;
 			startPos = endPos + 1;
 		}
 		return word;
@@ -66,7 +66,7 @@ public class Armor {
 			wordIndex++;
 
 			// read Armor Class
-			if(wordIndex == 4)break;
+			if(wordIndex == 5)break;
 			startPos = endPos + 1;
 		}
 		return word;
@@ -114,6 +114,19 @@ public class Armor {
 			}
 			else if(wordIndex == 3)
 			{
+				// gender
+				String strBGA = "FMA";
+				if(strBGA.indexOf(word) != -1)
+				{
+					armor.gender = word;
+				}
+				else
+				{
+					return 1;  // incorrect FMA;
+				}
+			}
+			else if(wordIndex == 4)
+			{
 				//Body Part (check)
 				if( nBodyPart == convertBodyPart(word))
 				{
@@ -124,7 +137,7 @@ public class Armor {
 					return 1;  // inconsistent body part ind
 				}
 			}
-			else if(wordIndex == 4)
+			else if(wordIndex == 5)
 			{
 				// read low rank defense
 
@@ -148,7 +161,7 @@ public class Armor {
 					}
 				}
 			}
-			else if(wordIndex == 5)
+			else if(wordIndex == 6)
 			{
 				// read high rank defense
 
@@ -165,7 +178,7 @@ public class Armor {
 
 				armor.defense[2] = def;  //g rank def copied from high rank
 			}
-			else if (wordIndex == 6)
+			else if (wordIndex == 7)
 			{
 				// read # of slots
 
@@ -179,7 +192,7 @@ public class Armor {
 					armor.numSlot = nSlot;
 				}
 			}
-			else if ((wordIndex >= 7 )&&(wordIndex <= 11))
+			else if ((wordIndex >= 8 )&&(wordIndex <= 12))
 			{
 				// read reisistance
 
@@ -222,7 +235,7 @@ public class Armor {
 
 			if(endPos  == -1)
 			{
-				if(wordIndex <= 10)return 1;  // no skill ok
+				if(wordIndex <= 11)return 1;  // no skill ok
 				break;
 			}
 			startPos = endPos + 1;
@@ -278,6 +291,19 @@ public class Armor {
 			}
 			else if(wordIndex == 4)
 			{
+				// gender
+				String strBGA = "FMA";
+				if(strBGA.indexOf(word) != -1)
+				{
+					armor.gender = word;
+				}
+				else
+				{
+					return 1;  // incorrect FMA;
+				}
+			}
+			else if(wordIndex == 5)
+			{
 				//Body Part (check)
 				if( nBodyPart == convertBodyPart(word))
 				{
@@ -288,7 +314,7 @@ public class Armor {
 					return 1;  // inconsistent body part ind
 				}
 			}
-			else if(wordIndex == 5)
+			else if(wordIndex == 6)
 			{
 				// read low rank defense
 
@@ -312,7 +338,7 @@ public class Armor {
 					}
 				}
 			}
-			else if(wordIndex == 6)
+			else if(wordIndex == 7)
 			{
 				// read high rank defense
 
@@ -328,7 +354,7 @@ public class Armor {
 				}
 				armor.defense[2] = def;  //g rank def copied from high rank
 			}
-			else if (wordIndex == 7)
+			else if(wordIndex == 8)
 			{
 				// read # of slots
 
@@ -342,7 +368,7 @@ public class Armor {
 					armor.numSlot = nSlot;
 				}
 			}
-			else if ((wordIndex >= 8 )&&(wordIndex <= 12))
+			else if ((wordIndex >=  9 )&&(wordIndex <= 13))
 			{
 				// read reisistance
 
@@ -386,7 +412,7 @@ public class Armor {
 
 			if(endPos  == -1)
 			{
-				if(wordIndex <= 11)return 1;  // no skill ok
+				if(wordIndex <= 12)return 1;  // no skill ok
 				break;
 			}
 			startPos = endPos + 1;
@@ -479,6 +505,25 @@ public class Armor {
 	// get blader/gunner info
 	public String getBladeOrGunner() {return bladeOrGunner;}
 
+	// get gender info
+	public String getGender() {return gender;}
+
+	public boolean ifMale() 
+	{
+		if(gender.equals("F"))
+			return false;
+		else
+			return true;
+	}
+
+	public boolean ifFemale() 
+	{
+		if(gender.equals("M"))
+			return false;
+		else
+			return true;
+	}
+
 	// get blader/gunner info
 	public int getBG4Head() {return bg4Head;}
 
@@ -554,6 +599,7 @@ public class Armor {
 	private String armorName = "";   // Armor Piece Name
 	private String armorNameJP = "";   // Armor Piece Name japanese
 	private String bladeOrGunner = "";  // Blade/Gunner/All
+	private String gender = "";  // Male/Female/All
 	private int rank = 2; //lr 0 / hr 1 /gr 2
 	private int bodyPart = 0;  // Head/Chest/Arms/Waist/Legs
 	private int numSlot = 0;   // # of slots: 0 - 3
