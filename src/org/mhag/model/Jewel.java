@@ -302,6 +302,9 @@ public class Jewel {
 		}
 	}
 
+	public String getItem() {return items;}
+	public void setItem(String entry) {items = entry;}
+
 	private int jewelID = 0; // Jewel ID
 	private String jewelName = ""; //Jewel Name
 	private String jewelNameJP = ""; //Jewel Name japanese
@@ -311,6 +314,7 @@ public class Jewel {
 	private int[] skillID;  //  Skill ID
 	private String[] skillName;  //  Skill Name
 	private int[] skillPoint;  // 1st positve; 2nd negative
+	private String items = ""; //jewel materials
 
 	static int jewelIDTot = 0;
 }

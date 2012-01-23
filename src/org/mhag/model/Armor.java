@@ -595,6 +595,10 @@ public class Armor {
 		return tips.toString();
 	}
 
+	// access armor materials
+	public String getItem() {return items;}
+	public void setItem(String entry) {items = entry;}
+
 	private int armorID = 0;  // Armor ID
 	private String armorName = "";   // Armor Piece Name
 	private String armorNameJP = "";   // Armor Piece Name japanese
@@ -609,6 +613,7 @@ public class Armor {
 	private int[] skillID;  // Skill ID
 	private String[] skillName;  // Skill Name
 	private int[] skillPoint; // Skill Points
+	private String items = ""; //armor materials
 
 	private int bg4Head = 0;  // 0: both; 1: blade; 2: gunner
 

@@ -54,7 +54,7 @@ Lite Eater Jewel : L : 1 : Hunger : 1 : Eating : -1
 Hungerless Jewel : L : 1 : Hunger : 2
 Metabolism Jewel : L : 1 : Gluttony : 2
 Attack Jewel : L : 1 : Attack : 1
-Assault  Jewel : L : 2 : Attack : 3 : Defense : -1
+Assault Jewel : L : 2 : Attack : 3 : Defense : -1
 Onslaught Jewel : H : 3 : Attack : 5 : Defense : -1
 Defense Jewel : L : 1 : Defense : 1 : Attack : -1
 Turtle Jewel : L : 2 : Defense : 3 : Attack : -1
@@ -68,7 +68,7 @@ Alliance Jewel : H : 2 : Wide-Range : 3 : Sense  : -1
 Transportr Jewel : L : 1 : Transportr : 2
 Crimson Jewel : L : 1 : Fire Res : 2
 Torrent Jewel : L : 1 : Water Res : 2
-Storm  Jewel : L : 1 : ThunderRes : 2
+Storm Jewel : L : 1 : ThunderRes : 2
 Glacier Jewel : L : 1 : Ice Res : 2
 Dragonbane Jewel : L : 1 : Dragon Res : 2
 Breeze Jewel : L : 1 : Heat Res : 2

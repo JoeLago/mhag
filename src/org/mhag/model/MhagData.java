@@ -30,6 +30,7 @@ public class MhagData {
 		readJewel(mhag);
 		readArmor(mhag);
 		//readCharm(mhag);
+
 	}
 
 	// process data right after access
@@ -104,16 +105,17 @@ public class MhagData {
 		// read skill entry
 		int ioErr = 0;
 		int skillIndex = 0;
+		int game = mhag.getGame();
 		while(in2.hasNext())
 		{
 			line = in2.nextLine();
 			if(line.startsWith("#"))continue;
 			// System.out.printf("%d\n", skillIndex);
 			// System.out.println(line);
-			if(mhag.getGame() == 0) //MHAG
+			if(game == 0) //mhtri
 				ioErr = Skill.setSkillFromLine
 					(line, skillList[skillIndex]);
-			else
+			else if(game == 1)  //mhp3rd
 				ioErr = Skill.setSkillFromLineJP
 					(line, skillList[skillIndex]);
 
@@ -349,8 +351,10 @@ public class MhagData {
 	// read jewel from jewel file
 	public void readJewel(Mhag mhag)
 	{
-		String file;
+		String file, fileItem;
+		Scanner inItem = null;
 		file = "data/" + dirSave[mhag.getGame()] + fileJewel;
+		fileItem = "data/" + dirSave[mhag.getGame()] + fileJewelItem;
 		/*
 		if(mhag.getGame() == 0)
 			file = dirDataTri + fileJewel;
@@ -359,6 +363,11 @@ public class MhagData {
 		 */
 
 		Scanner in = new Scanner(getClass().getResourceAsStream(file), "UTF-8");
+		try {
+			inItem = new Scanner(getClass().getResourceAsStream(fileItem), "UTF-8");
+		} catch (Exception e) {
+			ifItem = false;
+		}
 
 		// check total # of skills
 		int nMax = 0;
@@ -386,16 +395,17 @@ public class MhagData {
 		// read Jewel entry
 		int ioErr = 0;
 		int jewelIndex = 0;
+		int game = mhag.getGame();
 		while(in2.hasNext())
 		{
 			line = in2.nextLine();
 			if(line.startsWith("#"))continue;
 			// System.out.printf("%d\n", jewelIndex);
 			//System.out.println(line);
-			if(mhag.getGame() == 0)
+			if(game == 0)
 				ioErr = Jewel.setJewelFromLine
 					(line, jewelList[jewelIndex]);
-			else
+			else if(game == 1)
 				ioErr = Jewel.setJewelFromLineJP
 					(line, jewelList[jewelIndex]);
 			if(ioErr != 0)
@@ -404,6 +414,16 @@ public class MhagData {
 					"Error Found in Jewel File");
 				return;
 			}
+
+			// add jewel materials
+			if(ifItem)
+			{
+				String lineItem = inItem.nextLine();
+				int startPos = MhagUtil.extractWordPos(lineItem, 0) + 1;
+				jewelList[jewelIndex].setItem(
+					MhagUtil.extractWord(lineItem, startPos, -1));
+			}
+
 			jewelIndex++;
 		}
 
@@ -412,8 +432,10 @@ public class MhagData {
 	// read armor from armor file
 	public void readArmor(Mhag mhag) 
 	{
-		String file;
+		String file, fileItem;
+		Scanner inItem = null;
 		file = "data/" + dirSave[mhag.getGame()] + fileArmor;
+		fileItem = "data/" + dirSave[mhag.getGame()] + fileArmorItem;
 		/*
 		if(mhag.getGame() == 0)
 			file = dirDataTri + fileArmor;
@@ -422,11 +444,17 @@ public class MhagData {
 		 */
 
 		Scanner in = new Scanner(getClass().getResourceAsStream(file), "UTF-8");
+		try {
+			inItem = new Scanner(getClass().getResourceAsStream(fileItem), "UTF-8");
+		} catch (Exception e) {
+			ifItem = false;
+		}
 
 		// check total # of skills
 		int nMax[] = new int[5];
 		Arrays.fill(nMax, 0);
 		int nBodyPart = 0;
+		int game = mhag.getGame();
 
 		String line = "";
 		while(in.hasNext())
@@ -434,9 +462,9 @@ public class MhagData {
 			line = in.nextLine();
 			if(line.startsWith("#"))continue;
 			String word = "";
-			if(mhag.getGame() == 0)
+			if(game == 0)
 				word = Armor.getBodyPartFromLine(line);
-			else
+			else if(game == 1)
 				word = Armor.getBodyPartFromLineJP(line);
 			nBodyPart = Armor.convertBodyPart(word);
 			nMax[nBodyPart] += 1;
@@ -480,18 +508,29 @@ public class MhagData {
 			// System.out.println(line);
 
 			String word = "";
-			if(mhag.getGame() == 0)
+			if(game == 0)
+			{
 				word = Armor.getBodyPartFromLine(line);
-			else
-				word = Armor.getBodyPartFromLineJP(line);
-			nBodyPart = Armor.convertBodyPart(word);
-
-			if(mhag.getGame() == 0)
+				nBodyPart = Armor.convertBodyPart(word);
 				ioErr = Armor.setArmorFromLine(line, nBodyPart,
 					armorList[nBodyPart][armorIndex[nBodyPart]]);
-			else
+			}
+			else if(game == 1)
+			{
+				word = Armor.getBodyPartFromLineJP(line);
+				nBodyPart = Armor.convertBodyPart(word);
 				ioErr = Armor.setArmorFromLineJP(line, nBodyPart,
 					armorList[nBodyPart][armorIndex[nBodyPart]]);
+			}
+
+			// add armor materials
+			if(ifItem)
+			{
+				String lineItem = inItem.nextLine();
+				int startPos = MhagUtil.extractWordPos(lineItem, 0) + 1;
+				armorList[nBodyPart][armorIndex[nBodyPart]].setItem(
+					MhagUtil.extractWord(lineItem, startPos, -1));
+			}
 
 			if(ioErr != 0)
 			{
@@ -500,6 +539,7 @@ public class MhagData {
 				return;
 			}
 			armorIndex[nBodyPart]++;
+
 		}
 
 	}
@@ -1228,11 +1268,15 @@ public class MhagData {
 
 	public int getMaxRank(int game) {return maxRank[game];}
 
+	public boolean getIfItem() {return ifItem;}
+
 	// Constants for file names
 	private final String[] dirSave = {"mhtri/", "mhp3rd/", "mhfu/", "mh3g/"};
 	private final String fileArmor = "armor.dat";
 	private final String fileJewel = "jewel.dat";
 	private final String fileSkill = "skill.dat";
+	private final String fileArmorItem = "armor_item.dat";
+	private final String fileJewelItem = "jewel_item.dat";
 //	private final String fileCharm = dirData+"charm.dat";
 	private final String dirRef = "reference/";
 	private final String fileRefArmor = dirRef+"ref_armor.dat";
@@ -1253,6 +1297,7 @@ public class MhagData {
 	private Effect[] effectList;
 	private Charm[] charmList = new Charm[CharmDialog.numMax];
 	private int numCharm = 0;
+	private boolean ifItem = true;
 
 	// indeces
 //	private int[][] indexSkillInClass;  // skill id list

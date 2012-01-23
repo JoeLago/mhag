@@ -158,6 +158,7 @@ public class MhagGui extends javax.swing.JFrame {
         charmSkill2 = new javax.swing.JComboBox();
         skillPoint1 = new javax.swing.JComboBox();
         skillPoint2 = new javax.swing.JComboBox();
+        materials = new javax.swing.JCheckBox();
         output = new javax.swing.JPanel();
         reset = new javax.swing.JButton();
         langLabel = new javax.swing.JLabel();
@@ -199,8 +200,8 @@ public class MhagGui extends javax.swing.JFrame {
         jComboBoxType = new javax.swing.JComboBox();
         weaponLabel1 = new javax.swing.JLabel();
         headLabel1 = new javax.swing.JLabel();
-        jCheckBoxGun = new javax.swing.JCheckBox();
         genderLabel = new javax.swing.JLabel();
+        jCheckBoxGun = new javax.swing.JCheckBox();
         jComboBoxGender = new javax.swing.JComboBox();
         jCheckBoxCharm = new javax.swing.JCheckBox();
         jButtonSearch = new javax.swing.JButton();
@@ -246,7 +247,7 @@ public class MhagGui extends javax.swing.JFrame {
         rank.setBorder(javax.swing.BorderFactory.createTitledBorder("Rank"));
         rank.setToolTipText("Change rank type, reset set");
 
-        rankMenu.setFont(new java.awt.Font("Monospaced", 0, 12));
+        rankMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         rankMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Low Rank", "High Rank", "G Rank" }));
         rankMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -275,7 +276,7 @@ public class MhagGui extends javax.swing.JFrame {
         hunterType.setToolTipText("Change hunter type, reset set");
 
         hunterTypeGroup.add(blade);
-        blade.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        blade.setFont(new java.awt.Font("Monospaced", 0, 12));
         blade.setSelected(true);
         blade.setText("Blademaster");
         blade.addActionListener(new java.awt.event.ActionListener() {
@@ -285,7 +286,7 @@ public class MhagGui extends javax.swing.JFrame {
         });
 
         hunterTypeGroup.add(gunner);
-        gunner.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        gunner.setFont(new java.awt.Font("Monospaced", 0, 12));
         gunner.setText("Gunner");
         gunner.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -363,7 +364,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        headMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        headMenu.setFont(new java.awt.Font("Monospaced", 0, 12));
         headMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 headMenuActionPerformed(evt);
@@ -598,14 +599,14 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12));
+        charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         charmSkill2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 charmSkill2ActionPerformed(evt);
             }
         });
 
-        skillPoint1.setFont(new java.awt.Font("Monospaced", 0, 12));
+        skillPoint1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         skillPoint1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0" }));
         skillPoint1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -613,11 +614,19 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        skillPoint2.setFont(new java.awt.Font("Monospaced", 0, 12));
+        skillPoint2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         skillPoint2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0" }));
         skillPoint2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 skillPoint2ActionPerformed(evt);
+            }
+        });
+
+        materials.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        materials.setText("Materials");
+        materials.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                materialsItemStateChanged(evt);
             }
         });
 
@@ -702,13 +711,15 @@ public class MhagGui extends javax.swing.JFrame {
                         .addComponent(charmSkillLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(charmSkill1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(skillPoint1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(charmSkill2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(skillPoint2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(skillPoint2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                        .addComponent(materials)))
+                .addContainerGap())
         );
         setupLayout.setVerticalGroup(
             setupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -774,7 +785,8 @@ public class MhagGui extends javax.swing.JFrame {
                     .addComponent(charmSkill1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(skillPoint1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(charmSkill2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(skillPoint2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(skillPoint2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(materials))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -793,7 +805,7 @@ public class MhagGui extends javax.swing.JFrame {
         langLabel.setText("Menu Language");
         langLabel.setOpaque(true);
 
-        langMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        langMenu.setFont(new java.awt.Font("Monospaced", 0, 12));
         langMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "English", "Japanese" }));
         langMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -801,7 +813,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        aboutButton.setFont(new java.awt.Font("Monospaced", 1, 12));
+        aboutButton.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         aboutButton.setText("About MHAG");
         aboutButton.setToolTipText("About");
         aboutButton.addActionListener(new java.awt.event.ActionListener() {
@@ -837,7 +849,7 @@ public class MhagGui extends javax.swing.JFrame {
         );
 
         jScrollPreview.setForeground(javax.swing.UIManager.getDefaults().getColor("Panel.background"));
-        jScrollPreview.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jScrollPreview.setFont(new java.awt.Font("Monospaced", 0, 12));
         jScrollPreview.setHorizontalScrollBar(null);
 
         jTextPreview.setColumns(20);
@@ -1124,13 +1136,13 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        optLabel.setFont(new java.awt.Font("Monospaced", 0, 12));
+        optLabel.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         optLabel.setLabelFor(jComboBoxOpt);
         optLabel.setText("Mode");
         optLabel.setToolTipText("Search method");
         optLabel.setOpaque(true);
 
-        jComboBoxOpt.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jComboBoxOpt.setFont(new java.awt.Font("Monospaced", 0, 12));
         jComboBoxOpt.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Full", "Partial", "Jewel Opt" }));
         jComboBoxOpt.setToolTipText("");
         jComboBoxOpt.addActionListener(new java.awt.event.ActionListener() {
@@ -1139,7 +1151,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jCheckBoxEarring.setFont(new java.awt.Font("Monospaced", 0, 12));
+        jCheckBoxEarring.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jCheckBoxEarring.setText("Earrings");
         jCheckBoxEarring.setToolTipText("Include earring pieces");
         jCheckBoxEarring.addItemListener(new java.awt.event.ItemListener() {
@@ -1148,12 +1160,12 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jLabelArmorRank.setFont(new java.awt.Font("Monospaced", 0, 12));
+        jLabelArmorRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jLabelArmorRank.setText("Rank");
         jLabelArmorRank.setToolTipText("Rank of armor pieces");
         jLabelArmorRank.setOpaque(true);
 
-        jComboBoxRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jComboBoxRank.setFont(new java.awt.Font("Monospaced", 0, 12));
         jComboBoxRank.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Any", "Low Rank Only", "High Rank Only", "G Rank Only", "No G Rank", "No Low Rank" }));
         jComboBoxRank.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1187,24 +1199,24 @@ public class MhagGui extends javax.swing.JFrame {
         weaponLabel1.setLabelFor(weaponMenu);
         weaponLabel1.setToolTipText("Weapon");
 
-        headLabel1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
+        headLabel1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
         headLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/head.png"))); // NOI18N
         headLabel1.setLabelFor(headMenu);
         headLabel1.setToolTipText("Head");
 
+        genderLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+        genderLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/gender.png"))); // NOI18N
+        genderLabel.setLabelFor(jComboBoxGender);
+        genderLabel.setToolTipText("Gender");
+
         jCheckBoxGun.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        jCheckBoxGun.setText("Split Gun");
+        jCheckBoxGun.setText("SplitGun");
         jCheckBoxGun.setToolTipText("Gun slots are from different gun parts");
         jCheckBoxGun.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jCheckBoxGunItemStateChanged(evt);
             }
         });
-
-        genderLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
-        genderLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/gender.png"))); // NOI18N
-        genderLabel.setLabelFor(jComboBoxGender);
-        genderLabel.setToolTipText("Gender");
 
         jComboBoxGender.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jComboBoxGender.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Male", "Female" }));
@@ -1239,58 +1251,56 @@ public class MhagGui extends javax.swing.JFrame {
                     .addComponent(jComboBoxOpt, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBoxType, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
-                .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(headLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(weaponLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(genderLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(optionPanelLayout.createSequentialGroup()
-                        .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(headLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(weaponLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jComboBoxHead, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxWeaponSlots, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jComboBoxGender, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBoxEarring)
+                            .addComponent(jCheckBoxCharm)))
                     .addGroup(optionPanelLayout.createSequentialGroup()
-                        .addComponent(genderLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jComboBoxGender, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBoxGun)
-                    .addComponent(jCheckBoxEarring)
-                    .addComponent(jCheckBoxCharm))
+                        .addComponent(jComboBoxWeaponSlots, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBoxGun)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         optionPanelLayout.setVerticalGroup(
             optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(optionPanelLayout.createSequentialGroup()
                 .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(optionPanelLayout.createSequentialGroup()
-                        .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBoxHead, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBoxEarring))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBoxWeaponSlots, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBoxGun)))
-                    .addGroup(optionPanelLayout.createSequentialGroup()
-                        .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jComboBoxType, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabelArmorType))
-                            .addComponent(headLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(weaponLabel1)
-                            .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jComboBoxRank, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabelArmorRank)))))
+                    .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jComboBoxType, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelArmorType))
+                    .addComponent(headLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jComboBoxHead, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jCheckBoxEarring)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jComboBoxGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jCheckBoxCharm))
+                    .addComponent(genderLabel)
+                    .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jComboBoxRank, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelArmorRank)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jComboBoxOpt, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(optLabel))
-                    .addComponent(jComboBoxGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(genderLabel)
-                    .addComponent(jCheckBoxCharm))
+                    .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jComboBoxWeaponSlots, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBoxGun))
+                        .addComponent(weaponLabel1)))
                 .addContainerGap())
         );
 
@@ -1303,9 +1313,9 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jProgressOpt.setFont(new java.awt.Font("Monospaced", 0, 12));
+        jProgressOpt.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
 
-        loadToCalcGen.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        loadToCalcGen.setFont(new java.awt.Font("Monospaced", 1, 12));
         loadToCalcGen.setText("Load to Calculator");
         loadToCalcGen.setToolTipText("Load the selected set");
         loadToCalcGen.addActionListener(new java.awt.event.ActionListener() {
@@ -1324,7 +1334,7 @@ public class MhagGui extends javax.swing.JFrame {
         });
         jScrollOptSets.setViewportView(jListOptSets);
 
-        jButtonAbort.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonAbort.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonAbort.setText("Abort");
         jButtonAbort.setToolTipText("Abort search");
         jButtonAbort.addActionListener(new java.awt.event.ActionListener() {
@@ -1333,7 +1343,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jButtonMyCharms.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonMyCharms.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonMyCharms.setText("Charms");
         jButtonMyCharms.setToolTipText("Customized charms");
         jButtonMyCharms.addActionListener(new java.awt.event.ActionListener() {
@@ -1357,7 +1367,7 @@ public class MhagGui extends javax.swing.JFrame {
             generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(generatorLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(generatorLayout.createSequentialGroup()
                         .addComponent(optionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1372,8 +1382,8 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButtonAbort, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButtonSettings, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addComponent(skillsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollOptSets, javax.swing.GroupLayout.PREFERRED_SIZE, 623, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollOptSets, javax.swing.GroupLayout.PREFERRED_SIZE, 623, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(skillsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPreview3, javax.swing.GroupLayout.DEFAULT_SIZE, 604, Short.MAX_VALUE))
         );
@@ -1399,7 +1409,7 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(loadToCalcGen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollOptSets, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollOptSets, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPreview3, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
@@ -1411,7 +1421,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jTextPreview2.setColumns(20);
         jTextPreview2.setEditable(false);
-        jTextPreview2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jTextPreview2.setFont(new java.awt.Font("Monospaced", 0, 12));
         jTextPreview2.setForeground(new java.awt.Color(1, 1, 1));
         jTextPreview2.setRows(5);
         jTextPreview2.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview (Viewer)"));
@@ -2247,6 +2257,19 @@ public class MhagGui extends javax.swing.JFrame {
 		else
 			gen.setFemale(true);
 	}//GEN-LAST:event_jComboBoxGenderActionPerformed
+
+	private void materialsItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_materialsItemStateChanged
+		if (evt.getStateChange() == ItemEvent.DESELECTED)
+		{
+			showItem = false;
+			calSetGUI();
+		}
+		else
+		{
+			showItem = true;
+			calSetGUI();
+		}
+	}//GEN-LAST:event_materialsItemStateChanged
 
 	//show possible pieces for generator
 	private void showPieces()
@@ -3893,6 +3916,8 @@ public class MhagGui extends javax.swing.JFrame {
 
 	   stream.reset();
   	   set.save(mhag, mhagData, stream);  // save results
+	   if(showItem && mhagData.getIfItem())  // show materials
+		   set.getItem(mhagData, stream);
 	   stream.rewind();
     }
 
@@ -4059,6 +4084,12 @@ public class MhagGui extends javax.swing.JFrame {
 			rankMenu.setSelectedIndex(2);
 	}
 
+	public void adjustItemCheckBox()
+	{
+		if(!mhagData.getIfItem())
+			materials.setEnabled(false);
+	}
+
 	/* backup
     private void highRankActionPerformed(java.awt.event.ActionEvent evt) {                                         
 	    // set to high Rank
@@ -4107,6 +4138,7 @@ public class MhagGui extends javax.swing.JFrame {
 			//mhagGui.readHelp();
 
 			mhagGui.adjustRankMenu();
+			mhagGui.adjustItemCheckBox();
 			mhagGui.setVisible(true);
 
 			mhagGui.initSetup(mhagGui.mhagData.getMaxRank(mhagGui.game), true, false); // by default
@@ -4145,6 +4177,7 @@ public class MhagGui extends javax.swing.JFrame {
 	private int[][] jewelMenuType = new int[7][3]; //menu type in each jewel button position
 	private boolean adjust = false; // adjust menu, don't perform calculation
 	private boolean showPreview = true; // show preview
+	private boolean showItem = false; // show materials
 	int saveOpt =0;  //save option for GUI
 
 	private ComboboxToolTipRenderer[][] renderer = new ComboboxToolTipRenderer[7][3];
@@ -4297,6 +4330,7 @@ public class MhagGui extends javax.swing.JFrame {
     private javax.swing.JButton loadSetInteract;
     private javax.swing.JButton loadToCalcGen;
     private javax.swing.JRadioButton male;
+    private javax.swing.JCheckBox materials;
     private javax.swing.JLabel optLabel;
     private javax.swing.JPanel optionPanel;
     private javax.swing.JPanel output;
