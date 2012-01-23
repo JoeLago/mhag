@@ -1311,10 +1311,12 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="optionPanel" min="-2" pref="419" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="loadToCalcGen" alignment="1" min="-2" pref="195" max="-2" attributes="1"/>
-                                  <Component id="jProgressOpt" min="-2" pref="195" max="-2" attributes="1"/>
-                                  <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="loadToCalcGen" alignment="1" min="-2" pref="195" max="-2" attributes="1"/>
+                                      <Component id="jProgressOpt" min="-2" pref="195" max="-2" attributes="1"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jButtonMyCharms" min="-2" pref="95" max="-2" attributes="1"/>
                                           <Component id="jButtonSearch" min="-2" pref="95" max="-2" attributes="1"/>
@@ -1327,8 +1329,8 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <Component id="jScrollOptSets" min="-2" pref="623" max="-2" attributes="1"/>
                           <Component id="skillsPanel" alignment="0" min="-2" max="-2" attributes="1"/>
+                          <Component id="jScrollOptSets" min="-2" pref="623" max="-2" attributes="1"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jScrollPreview3" pref="604" max="32767" attributes="0"/>
@@ -1343,8 +1345,8 @@
                               <Component id="skillsPanel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="optionPanel" min="-2" pref="112" max="-2" attributes="1"/>
                                   <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jButtonMyCharms" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                           <Component id="jButtonSettings" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -1359,13 +1361,14 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="loadToCalcGen" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
+                                  <Component id="optionPanel" min="-2" pref="118" max="-2" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollOptSets" min="-2" pref="242" max="-2" attributes="0"/>
+                              <Component id="jScrollOptSets" min="-2" pref="240" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jScrollPreview3" alignment="0" min="-2" pref="535" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="30" max="32767" attributes="0"/>
+                      <EmptySpace pref="25" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2128,7 +2131,7 @@
                                   <Component id="convert" min="-2" max="-2" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" pref="436" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" pref="434" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="loadSetInteract" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2139,7 +2142,7 @@
                           </Group>
                           <Component id="jScrollPreview2" alignment="0" min="-2" pref="535" max="-2" attributes="1"/>
                       </Group>
-                      <EmptySpace pref="30" max="32767" attributes="0"/>
+                      <EmptySpace pref="27" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

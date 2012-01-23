@@ -240,14 +240,14 @@ public class MhagGui extends javax.swing.JFrame {
         });
 
         jTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
-        jTabbedPane.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        jTabbedPane.setFont(new java.awt.Font("Monospaced", 1, 14));
         jTabbedPane.setOpaque(true);
         jTabbedPane.setPreferredSize(new java.awt.Dimension(1238, 630));
 
         rank.setBorder(javax.swing.BorderFactory.createTitledBorder("Rank"));
         rank.setToolTipText("Change rank type, reset set");
 
-        rankMenu.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        rankMenu.setFont(new java.awt.Font("Monospaced", 0, 12));
         rankMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Low Rank", "High Rank", "G Rank" }));
         rankMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -599,14 +599,14 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        charmSkill2.setFont(new java.awt.Font("Monospaced", 0, 12));
         charmSkill2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 charmSkill2ActionPerformed(evt);
             }
         });
 
-        skillPoint1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        skillPoint1.setFont(new java.awt.Font("Monospaced", 0, 12));
         skillPoint1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0" }));
         skillPoint1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -614,7 +614,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        skillPoint2.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        skillPoint2.setFont(new java.awt.Font("Monospaced", 0, 12));
         skillPoint2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0" }));
         skillPoint2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -622,7 +622,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        materials.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        materials.setFont(new java.awt.Font("Monospaced", 0, 12));
         materials.setText("Materials");
         materials.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -813,7 +813,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        aboutButton.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        aboutButton.setFont(new java.awt.Font("Monospaced", 1, 12));
         aboutButton.setText("About MHAG");
         aboutButton.setToolTipText("About");
         aboutButton.addActionListener(new java.awt.event.ActionListener() {
@@ -854,7 +854,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jTextPreview.setColumns(20);
         jTextPreview.setEditable(false);
-        jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jTextPreview.setFont(new java.awt.Font("Monospaced", 0, 12));
         jTextPreview.setForeground(new java.awt.Color(1, 1, 1));
         jTextPreview.setRows(5);
         jTextPreview.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview (Calculator)"));
@@ -973,7 +973,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jTextPreview3.setColumns(20);
         jTextPreview3.setEditable(false);
-        jTextPreview3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jTextPreview3.setFont(new java.awt.Font("Monospaced", 0, 12));
         jTextPreview3.setForeground(new java.awt.Color(1, 1, 1));
         jTextPreview3.setRows(5);
         jTextPreview3.setBorder(javax.swing.BorderFactory.createTitledBorder("Preview (Generator)"));
@@ -1128,7 +1128,7 @@ public class MhagGui extends javax.swing.JFrame {
         optionPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Options"));
         optionPanel.setOpaque(false);
 
-        jComboBoxWeaponSlots.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jComboBoxWeaponSlots.setFont(new java.awt.Font("Monospaced", 0, 12));
         jComboBoxWeaponSlots.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0 Slot", "1 Slot", "2 Slots", "3 Slots", "Any" }));
         jComboBoxWeaponSlots.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1151,7 +1151,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jCheckBoxEarring.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jCheckBoxEarring.setFont(new java.awt.Font("Monospaced", 0, 12));
         jCheckBoxEarring.setText("Earrings");
         jCheckBoxEarring.setToolTipText("Include earring pieces");
         jCheckBoxEarring.addItemListener(new java.awt.event.ItemListener() {
@@ -1160,12 +1160,12 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jLabelArmorRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jLabelArmorRank.setFont(new java.awt.Font("Monospaced", 0, 12));
         jLabelArmorRank.setText("Rank");
         jLabelArmorRank.setToolTipText("Rank of armor pieces");
         jLabelArmorRank.setOpaque(true);
 
-        jComboBoxRank.setFont(new java.awt.Font("Monospaced", 0, 12));
+        jComboBoxRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jComboBoxRank.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Any", "Low Rank Only", "High Rank Only", "G Rank Only", "No G Rank", "No Low Rank" }));
         jComboBoxRank.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1173,7 +1173,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jComboBoxHead.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jComboBoxHead.setFont(new java.awt.Font("Monospaced", 0, 12));
         jComboBoxHead.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Any", "Melee", "Gunner" }));
         jComboBoxHead.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1181,7 +1181,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jLabelArmorType.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jLabelArmorType.setFont(new java.awt.Font("Monospaced", 0, 12));
         jLabelArmorType.setText("Type");
         jLabelArmorType.setToolTipText("Hunter type (for full search)");
         jLabelArmorType.setOpaque(true);
@@ -1194,22 +1194,22 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        weaponLabel1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+        weaponLabel1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
         weaponLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/weapon.png"))); // NOI18N
         weaponLabel1.setLabelFor(weaponMenu);
         weaponLabel1.setToolTipText("Weapon");
 
-        headLabel1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+        headLabel1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
         headLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/head.png"))); // NOI18N
         headLabel1.setLabelFor(headMenu);
         headLabel1.setToolTipText("Head");
 
-        genderLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12)); // NOI18N
+        genderLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 12));
         genderLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/gender.png"))); // NOI18N
         genderLabel.setLabelFor(jComboBoxGender);
         genderLabel.setToolTipText("Gender");
 
-        jCheckBoxGun.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jCheckBoxGun.setFont(new java.awt.Font("Monospaced", 0, 12));
         jCheckBoxGun.setText("SplitGun");
         jCheckBoxGun.setToolTipText("Gun slots are from different gun parts");
         jCheckBoxGun.addItemListener(new java.awt.event.ItemListener() {
@@ -1218,7 +1218,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jComboBoxGender.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jComboBoxGender.setFont(new java.awt.Font("Monospaced", 0, 12));
         jComboBoxGender.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Male", "Female" }));
         jComboBoxGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1226,7 +1226,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jCheckBoxCharm.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jCheckBoxCharm.setFont(new java.awt.Font("Monospaced", 0, 12));
         jCheckBoxCharm.setText("MyCharms");
         jCheckBoxCharm.setToolTipText("Include customized charms");
         jCheckBoxCharm.addItemListener(new java.awt.event.ItemListener() {
@@ -1315,7 +1315,7 @@ public class MhagGui extends javax.swing.JFrame {
 
         jProgressOpt.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
 
-        loadToCalcGen.setFont(new java.awt.Font("Monospaced", 1, 12));
+        loadToCalcGen.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         loadToCalcGen.setText("Load to Calculator");
         loadToCalcGen.setToolTipText("Load the selected set");
         loadToCalcGen.addActionListener(new java.awt.event.ActionListener() {
@@ -1334,7 +1334,7 @@ public class MhagGui extends javax.swing.JFrame {
         });
         jScrollOptSets.setViewportView(jListOptSets);
 
-        jButtonAbort.setFont(new java.awt.Font("Monospaced", 1, 12));
+        jButtonAbort.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jButtonAbort.setText("Abort");
         jButtonAbort.setToolTipText("Abort search");
         jButtonAbort.addActionListener(new java.awt.event.ActionListener() {
@@ -1343,7 +1343,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jButtonMyCharms.setFont(new java.awt.Font("Monospaced", 1, 12));
+        jButtonMyCharms.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jButtonMyCharms.setText("Charms");
         jButtonMyCharms.setToolTipText("Customized charms");
         jButtonMyCharms.addActionListener(new java.awt.event.ActionListener() {
@@ -1352,7 +1352,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jButtonSettings.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonSettings.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonSettings.setText("Advanced");
         jButtonSettings.setToolTipText("Advanced settings");
         jButtonSettings.addActionListener(new java.awt.event.ActionListener() {
@@ -1371,9 +1371,10 @@ public class MhagGui extends javax.swing.JFrame {
                     .addGroup(generatorLayout.createSequentialGroup()
                         .addComponent(optionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(loadToCalcGen, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jProgressOpt, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(loadToCalcGen, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jProgressOpt, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(generatorLayout.createSequentialGroup()
                                 .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButtonMyCharms, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1382,8 +1383,8 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButtonAbort, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButtonSettings, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addComponent(jScrollOptSets, javax.swing.GroupLayout.PREFERRED_SIZE, 623, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(skillsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(skillsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollOptSets, javax.swing.GroupLayout.PREFERRED_SIZE, 623, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPreview3, javax.swing.GroupLayout.DEFAULT_SIZE, 604, Short.MAX_VALUE))
         );
@@ -1395,8 +1396,8 @@ public class MhagGui extends javax.swing.JFrame {
                         .addComponent(skillsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(optionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(generatorLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
                                 .addGroup(generatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jButtonMyCharms, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButtonSettings, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1407,11 +1408,12 @@ public class MhagGui extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jProgressOpt, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(loadToCalcGen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(loadToCalcGen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(optionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollOptSets, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollOptSets, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPreview3, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jTabbedPane.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;Generator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/generator.png")), generator, ""); // NOI18N
@@ -1611,7 +1613,7 @@ public class MhagGui extends javax.swing.JFrame {
                             .addComponent(codeBook, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(convert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 436, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(loadSetInteract)
@@ -1619,7 +1621,7 @@ public class MhagGui extends javax.swing.JFrame {
                             .addComponent(deleteInteract)
                             .addComponent(undoInteract)))
                     .addComponent(jScrollPreview2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         jTabbedPane.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;Viewer</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/viewer.png")), viewer, ""); // NOI18N
