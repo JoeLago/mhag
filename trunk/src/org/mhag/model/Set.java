@@ -1906,6 +1906,51 @@ public class Set {
 		numCharmSlot = aSet.getNumCharmSlot();
 	}
 
+	public void getItem(MhagData mhagData, PrintStream outStream)
+	{
+		String[] armorType = new String[5];
+		armorType[0] = "Head";
+		armorType[1] = "Chest";
+		armorType[2] = "Arm";
+		armorType[3] = "Waist";
+		armorType[4] = "Leg";
+
+		for(int bodyPart = 0; bodyPart < 5; bodyPart++)
+		{
+			if(!inUse[bodyPart])continue;
+			Armor armor = mhagData.getArmor(bodyPart, armorID[bodyPart]);
+			outStream.printf("%s: %s\n", armorType[bodyPart],armor.getItem());
+		}
+
+		int numUsedJewel = 0;
+		int[] usedJewel = new int[21];
+		Arrays.fill(usedJewel, -1);
+
+		for(int bodyPart = 0; bodyPart < 7; bodyPart++)
+		{
+			for(int i = 0; i < numJewel[bodyPart]; i++)
+			{
+				int id = jewelID[bodyPart][i];
+				boolean found = false;
+				for(int j = 0; j < numUsedJewel; j++)
+				{
+					if(id == usedJewel[j])
+					{
+						found = true;
+						break;
+					}
+				}
+				if(found)continue;
+				usedJewel[numUsedJewel] = id;
+				numUsedJewel++;
+
+				Jewel jewel = mhagData.getJewel(id);
+				outStream.printf("%s : %s\n",jewel.getJewelName(),jewel.getItem());
+			}
+		}
+
+	}
+
 	/*
 	public void setJewelUseTheory(int skillID, int numSlot, int numJewel)
 	{

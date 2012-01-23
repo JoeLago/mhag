@@ -55,10 +55,10 @@ Bnahabra Glove        : ブナハグローブ      : B : A : A :  29 :  29 : 2 :
 Bnahabra Coil         : ブナハコイル        : B : A : W :  29 :  29 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  3 : Sheathe :  1 : Sense :  3 : Attack : -2
 Bnahabra Boots        : ブナハブーツ        : B : A : L :  29 :  29 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  3 : Sheathe :  3 : Sense :  1 : Attack : -2
 Bnahabra Cap          : ブナハキャップ      : A : A : H :  18 :  18 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  3 : Sheathe :  3 : Sense :  4 : Attack : -1
-Bnahabra vest         : ブナハベスト        : G : A : C :  18 :  18 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  3 : Sheathe :  1 : Sense :  1 : Attack : -2
+Bnahabra Vest         : ブナハベスト        : G : A : C :  18 :  18 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  3 : Sheathe :  1 : Sense :  1 : Attack : -2
 Bnahabra Cuffs        : ブナハカフス        : G : A : A :  18 :  18 : 2 : -3 : -1 : -1 :  3 :  5 : Status :  1 : Sheathe :  3 : Sense :  1 : Attack : -2
 Bnahabra Coat         : ブナハコート        : G : A : W :  18 :  18 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  2 : Sheathe :  3 : Sense :  2 : Attack : -2
-Bnahabra Leggings     : ブナハフット        : G : A : L :  18 :  18 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  2 : Sheathe :  1 : Sense :  3 : Attack : -3
+Bnahabra Pants        : ブナハフット        : G : A : L :  18 :  18 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  2 : Sheathe :  1 : Sense :  3 : Attack : -3
 Rhenoplos Helm        : リノプロヘルム      : A : A : H :  29 :  29 : 1 :  2 : -2 : -2 : -2 :  1 : Gunnery :  1 : StaminaRec :  2 : Ice Res : -3 : Mud/Snow :  3
 Rhenoplos Mail        : リノプロメイル      : B : A : C :  29 :  29 : 1 :  2 : -2 : -2 : -2 :  1 : Gunnery :  1 : StaminaRec :  2 : Ice Res : -2 : Mud/Snow :  2
 Rhenoplos Vambraces   : リノプロアーム      : B : A : A :  29 :  29 : 1 :  2 : -2 : -2 : -2 :  1 : Gunnery :  3 : StaminaRec :  1 : Ice Res : -1 : Defense :  4
@@ -357,7 +357,7 @@ Mutsu Eboshi/Amagi Hachigane           : 陸奥【烏帽子】/天城【鉢金�
 Mutsu Muneate/Amagi Muneate            : 陸奥【胴当て】/天城【胸当て】        : G : A : C :  26 :  26 : 2 :  5 :  1 : -2 :  1 : -2 : FastCharge :  1 : Loading :  1 : Expert :  1 : Recoil : -2
 Mutsu Kote/Amagi Kote                  : 陸奥【篭手】/天城【篭手】            : G : A : A :  26 :  26 : 0 :  5 :  1 : -2 :  1 : -2 : FastCharge :  4 : Loading :  3 : Expert :  2 : Recoil : -2
 Mutsu Koshiate/Amagi Koshiate          : 陸奥【腰当て】/天城【腰当て】        : G : A : W :  26 :  26 : 0 :  5 :  1 : -2 :  1 : -2 : FastCharge :  3 : Loading :  3 : Expert :  3 : Recoil : -2
-Mutsu Gosuku/Amagi Hakama              : 陸奥【具足】/天城【袴】              : G : A : L :  26 :  26 : 1 :  5 :  1 : -2 :  1 : -2 : FastCharge :  1 : Loading :  4 : Expert :  1 : Recoil : -3
+Mutsu Gusoku/Amagi Hakama              : 陸奥【具足】/天城【袴】              : G : A : L :  26 :  26 : 1 :  5 :  1 : -2 :  1 : -2 : FastCharge :  1 : Loading :  4 : Expert :  1 : Recoil : -3
 Yukumo - Sky Kasa     : ユクモノカサ.天         : A : A : H :  -- :  60 : 2 :  0 :  0 :  0 :  3 :  0 : Whim :  4 : Protection : 1 : Rec Level : 1 : Sharpener : 3
 Yukumo - Sky Dogi     : ユクモノドウギ.天       : B : A : C :  -- :  60 : 2 :  0 :  0 :  0 :  3 :  0 : Whim :  2 : Protection : 2 : Rec Level : 2 : Sharpener : 1
 Yukumo - Sky Kote     : ユクモノコテ.天         : B : A : A :  -- :  60 : 2 :  0 :  0 :  0 :  3 :  0 : Whim :  1 : Protection : 3 : Rec Level : 2 : Sharpener : 3
@@ -379,7 +379,7 @@ Leather S Guards      : レザーSガード           : G : A : A :  -- :  35 : 
 Leather S Coat        : レザーSコート           : G : A : W :  -- :  35 : 1 :  0 :  0 :  0 :  0 :  2 : Gathering :  1 : Spd Gather :  3 : Whim  :  4 : Hunger : 3
 Leather S Legging     : レザーSレギンス         : G : A : L :  -- :  35 : 1 :  0 :  0 :  0 :  0 :  2 : Gathering :  4 : Spd Gather :  1 : Whim  :  4 : Hunger : 2
 Chainmail S Helm      : チェーンSヘルム         : A : A : H :  -- :  60 : 1 :  2 :  1 :  1 : -2 :  0 : Health :  3 :                   Exhaust    :  4 : Combo Plus :  4
-Chainmail S Mail      : チェーンSメイル         : B : A : C :  -- :  60 : 1 :  2 :  1 :  1 : -2 :  0 : Health :  2 :                   Exhaust    :  2 : Combo Plus :  5
+Chainmail S Armor     : チェーンSメイル         : B : A : C :  -- :  60 : 1 :  2 :  1 :  1 : -2 :  0 : Health :  2 :                   Exhaust    :  2 : Combo Plus :  5
 Chainmail S Vambraces : チェーンSアーム         : B : A : A :  -- :  60 : 2 :  2 :  1 :  1 : -2 :  0 : Health :  4 : Combo Rate :  4 :                   Combo Plus :  1
 Chainmail S Faulds    : チェーンSフォールド     : B : A : W :  -- :  60 : 2 :  2 :  1 :  1 : -2 :  0 : Health :  2 : Combo Rate :  4 : Exhaust    :  3
 Chainmail S Greaves   : チェーンSグリーヴ       : B : A : L :  -- :  60 : 2 :  2 :  1 :  1 : -2 :  0 : Health :  4 : Combo Rate :  4 : Exhaust    :  1
@@ -444,10 +444,10 @@ Bnahabra S Glove      : ブナハSグローブ         : B : A : A :  -- :  64 :
 Bnahabra S Coil       : ブナハSコイル           : B : A : W :  -- :  64 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  2 : Fencing :  2 : Attack : -2 : Paralysis : 5
 Bnahabra S Boots      : ブナハSブーツ           : B : A : L :  -- :  64 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  2 : Fencing :  2 : Attack : -2 : Dragon Res : 5
 Bnahabra S Cap        : ブナハSキャップ         : A : A : H :  -- :  37 : 2 : -3 : -1 : -1 :  3 :  5 : Status :  3 : Reload Spd :  4 : Attack : -1 : Paralysis : 3
-Bnahabra S vest       : ブナハSベスト           : G : A : C :  -- :  37 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  1 :                   Attack : -2 : Paralysis : 2 : Dragon Res :  4
+Bnahabra S Vest       : ブナハSベスト           : G : A : C :  -- :  37 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  1 :                   Attack : -2 : Paralysis : 2 : Dragon Res :  4
 Bnahabra S Cuffs      : ブナハSカフス           : G : A : A :  -- :  37 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  1 : Reload Spd :  5 : Attack : -4 : Paralysis : 1
 Bnahabra S Coat       : ブナハSコート           : G : A : W :  -- :  37 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  4 : Reload Spd :  1 : Attack : -4 : Paralysis : 2
-Bnahabra S Leggings   : ブナハSフット           : G : A : L :  -- :  37 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  1 : Reload Spd :  3 : Attack : -2                 : Dragon Res :  5
+Bnahabra S Pants      : ブナハSフット           : G : A : L :  -- :  37 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  1 : Reload Spd :  3 : Attack : -2                 : Dragon Res :  5
 Jaggi S Helm          : ジャギィSヘルム         : A : A : H :  -- :  67 : 1 : -4 : -2 : -2 : -2 :  1 : Attack :  3 : Rec Speed :  4 : Expert :  1 : LastingPwr : -3
 Jaggi S Mail          : ジャギィSメイル         : B : A : C :  -- :  67 : 1 : -4 : -2 : -2 : -2 :  1 : Attack :  2 : Rec Speed :  2 : Expert :  3 : LastingPwr : -2
 Jaggi S Vambraces     : ジャギィSアーム         : B : A : A :  -- :  67 : 2 : -4 : -2 : -2 : -2 :  1 : Attack :  4 : Rec Speed :  2 : Expert :  1 : LastingPwr : -2
@@ -641,7 +641,7 @@ Ranger's Faulds       : 城塞遊撃隊【鎖帯】      : B : A : W :  -- :  77
 Ranger's Espadrilles  : 城塞遊撃隊【足袋】      : B : A : L :  -- :  77 : 0 :  0 :  0 :  0 :  0 :  0 : Expert :  4 : Carving :  4 : Rec Level :  4 : Fate : -1
 Archer's Turban       : 城塞弓撃隊【面隠】      : A : A : H :  -- :  45 : 3 :  0 :  0 :  0 :  0 :  0 : Expert :  3 : Carving :  3 : Rec Level :  1 : Fate : -2
 Archer's Girdle       : 城塞弓撃隊【胴巻】      : G : A : C :  -- :  45 : 0 :  0 :  0 :  0 :  0 :  0 : Expert :  4 : Carving :  2 : Rec Level :  2 : Fate : -3
-Archer's Gautlets     : 城塞弓撃隊【手甲】      : G : A : A :  -- :  45 : 0 :  0 :  0 :  0 :  0 :  0 : Expert :  3 : Carving :  3 : Rec Level :  4 : Fate : -3
+Archer's Gauntlets    : 城塞弓撃隊【手甲】      : G : A : A :  -- :  45 : 0 :  0 :  0 :  0 :  0 :  0 : Expert :  3 : Carving :  3 : Rec Level :  4 : Fate : -3
 Archer's Bandolier    : 城塞弓撃隊【弾帯】      : G : A : W :  -- :  45 : 2 :  0 :  0 :  0 :  0 :  0 : Expert :  1 : Carving :  3 : Rec Level :  2 : Fate : -3
 Archer's Espadrilles  : 城塞弓撃隊【足袋】      : G : A : L :  -- :  45 : 0 :  0 :  0 :  0 :  0 :  0 : Expert :  4 : Carving :  4 : Rec Level :  3 : Fate : -2
 Ancient S Mail        : アーティアSメイル       : B : A : C :  -- :  77 : 1 :  0 : -4 :  2 : -4 :  3 : Guard Up :  5 : Fencing :  1 : Sharpener : -3
@@ -945,7 +945,7 @@ Mutsu Eboshi+/Amagi Hachigane+         : 陸奥.覇【鳥帽子】/天城.覇【
 Mutsu Muneate+/Amagi Muneate+          : 陸奥.覇【胴当て】/天城.覇【胴当て】            : G : A : C :  -- :  50 : 1 :  5 :  1 : -2 :   1 :  -2 : Expert :  4 : FastCharge :  2 : PierceS Up :  1 : Rec Speed : -2
 Mutsu Kote+/Amagi Kote+                : 陸奥.覇【篭手】/天城.覇【篭手】                : G : A : A :  -- :  50 : 2 :  5 :  1 : -2 :   1 :  -2 : Expert :  2 : FastCharge :  3 : PierceS Up :  1 : Rec Speed : -3
 Mutsu Koshiate+/Amagi Koshiate+        : 陸奥.覇【腰当て】/天城.覇【腰当て】            : G : A : W :  -- :  50 : 0 :  5 :  1 : -2 :   1 :  -2 : Expert :  6 : FastCharge :  1 : PierceS Up :  4 : Rec Speed : -2
-Mutsu Gosuku+/Amagi Hakama+            : 陸奥.覇【具足】/天城.覇【袴】                  : G : A : L :  -- :  50 : 3 :  5 :  1 : -2 :   1 :  -2 : Expert :  2 : FastCharge :  2 : PierceS Up :  1 : Rec Speed : -2
+Mutsu Gusoku+/Amagi Hakama+            : 陸奥.覇【具足】/天城.覇【袴】                  : G : A : L :  -- :  50 : 3 :  5 :  1 : -2 :   1 :  -2 : Expert :  2 : FastCharge :  2 : PierceS Up :  1 : Rec Speed : -2
 Akantor Sakupake      : アカムトサクパケ        : A : A : H :  -- :  89 : 2 :  4 :  0 :  2 : -3 : -5 : Hearing :  3 : Fire Atk :  1 : Bash :  2 : Protection : -3
 Akantor Urunte        : アカムトウルンテ        : B : A : C :  -- :  89 : 1 :  4 :  0 :  2 : -3 : -5 : Hearing :  3 : Fire Atk :  1 : Bash :  2 : Protection : -3
 Akantor Sakunpe       : アカムトサクンペ        : B : A : A :  -- :  89 : 3 :  4 :  0 :  2 : -3 : -5 : Hearing :  2 : Fire Atk :  2 : Bash :  1 : Protection : -2
@@ -1002,7 +1002,7 @@ Jaggi S Head          : ジャギィSヘッド         : G : A : H :  -- :  41 :
 Skull S Mask          : スカルSフェイス         : B : A : H :  -- :  71 : 0 :  2 : -2 : -2 : -2 :  1 : Torso Up
 Skull S Head          : スカルSヘッド           : G : A : H :  -- :  41 : 0 :  4 : -1 : -1 : -1 :  2 : Torso Up
 Wyvernking Eyepatch   : 竜王の隻眼              : A : A : H :  -- :  51 : 0 :  2 :  2 :  2 :  2 :  2 : Psychic : 15
-Shadow Shade          : シャドウアイ            : A : A : H :  -- :  51 : 0 :  2 :  2 :  2 :  2 :  2 : Wide-Range : 20
+Shadow Shades         : シャドウアイ            : A : A : H :  -- :  51 : 0 :  2 :  2 :  2 :  2 :  2 : Wide-Range : 20
 SoulHunter Jacket     : 狩猟戦線ジャケット      : B : A : C :  -- :  82 : 0 :  2 :  2 :  2 :  2 :  2 : Survivor : 10
 SoulHunter Leather    : 狩猟戦線ライダース      : G : A : C :  -- :  49 : 0 :  2 :  2 :  2 :  2 :  2 : Survivor : 10
 Black Leather Legs    : ブラックレザーレグス    : B : A : L :  -- :  82 : 1 :  2 :  2 :  2 :  2 :  2 : Potential : 11
