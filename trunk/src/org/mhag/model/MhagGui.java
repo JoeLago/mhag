@@ -4086,10 +4086,27 @@ public class MhagGui extends javax.swing.JFrame {
 			rankMenu.setSelectedIndex(2);
 	}
 
+	// if material file does not exist,  disable materials check box
 	public void adjustItemCheckBox()
 	{
 		if(!mhagData.getIfItem())
 			materials.setEnabled(false);
+	}
+
+	// for specific game, create save dir if not exist
+	public void createDefaultDir()
+	{
+		File theDir = new File(mhagData.getDirSave(game));
+		if(!theDir.exists())
+			theDir.mkdir();
+	}
+
+	// adjust GUI after data/info are read
+	public void postProcess()
+	{
+		adjustRankMenu();
+		adjustItemCheckBox();
+		createDefaultDir();
 	}
 
 	/* backup
@@ -4139,8 +4156,7 @@ public class MhagGui extends javax.swing.JFrame {
 			mhagGui.checkPref();
 			//mhagGui.readHelp();
 
-			mhagGui.adjustRankMenu();
-			mhagGui.adjustItemCheckBox();
+			mhagGui.postProcess();
 			mhagGui.setVisible(true);
 
 			mhagGui.initSetup(mhagGui.mhagData.getMaxRank(mhagGui.game), true, false); // by default

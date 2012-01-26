@@ -1922,6 +1922,16 @@ public class Set {
 			outStream.printf("%s: %s\n", armorType[bodyPart],armor.getItem());
 		}
 
+		int ntot = 0;
+		for(int bodyPart = 0; bodyPart < 7; bodyPart++)
+		{
+			ntot += numJewel[bodyPart];
+		}
+		if(ntot == 0)
+			return;
+		else
+			outStream.println("Jewels:");
+
 		int numUsedJewel = 0;
 		int[] usedJewel = new int[21];
 		Arrays.fill(usedJewel, -1);
@@ -1945,7 +1955,7 @@ public class Set {
 				numUsedJewel++;
 
 				Jewel jewel = mhagData.getJewel(id);
-				outStream.printf("%s : %s\n",jewel.getJewelName(),jewel.getItem());
+				outStream.printf("%s : %s\n",jewel.getJewelNameShort(),jewel.getItem());
 			}
 		}
 
