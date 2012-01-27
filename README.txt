@@ -1,5 +1,5 @@
 MHAG: Monster Hunter Armor Generator 
-Desktop 2.0
+Desktop 2.1
 Author : Tifa@mh3, Gondor
 MHAG Project: code.google.com/mhag
 
@@ -45,6 +45,15 @@ System Requirements:
   b. Web browser (Google Chrome, Mozilla Firefox, Safari, Internet Explorer, Opera etc.)
 
 History (MHAG Desktop):
+v.2.1 1/26/2011
+   1. new look and feel. 
+   2. new feature: Now all games are integrated into a single package.  Users can choose a game at the beginning.  All user data are saved in sub-dir.
+   3. new feature: Data structure are modified to allow G-rank data.  (so it's ready for MHFU and MH3G support)
+   4. new feature: Add the option to display armor/charm materials in the calculator.  Data exactly from the open source project TriDB (thanks to Feox for convert the data to MHAG format) and P3DB (Most armor/charm names were synchronized with mhf3.com). 
+   5. new feature: Enhance keyboard controls. Most comboboxes now has auto-completion function.  "enter" key can trigger button.
+   6. new feature: Adjust female/male checkbox.  Now if male/female is selected, only male/female sets are available in the armor selection menu. (mostly for mp3rd and future games)  The generator also search sets only for specific gender.  
+   7. error: The Boss' Set and Snake's Set have different skills (mhp3rd).  Fixed, sets are now separated.
+   8. Fix some typo/translations of armor names or jewel names. (Bnahabra Pants, Mutsu Gusoku, Archer's Gauntlets, Chainmail Armor+, Shadow's Shades, Alloy Faulds+, Bnahabra Mail+, Bnahabra Faulds+, Bnahabra Greaves, Steal Coil+, Damascus Set, Assult Jewel, Storm Jewel)
 v.2.0 10/18/2011:
    1. bug: partial search never stops when charm is manually reset; fixed
    2. bug: "slot from two gun parts" failed to search some cases; fixed
