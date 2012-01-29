@@ -3413,8 +3413,8 @@ public class MhagGui extends javax.swing.JFrame {
     private void initMhag() throws FileNotFoundException
     {
 	mhag.setMethod(0);  // default method: calculator
-	//mhag.setLogOpt(0);  // log in console screen
-	mhag.setLogOpt(2);  // turn off log
+	mhag.setLogOpt(0);  // log in console screen
+	//mhag.setLogOpt(2);  // turn off log
 	mhag.prepareLogFile();
 
 	mhag.showMhagInfo(); //display MHAG welcome info

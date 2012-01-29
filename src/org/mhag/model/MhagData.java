@@ -118,6 +118,9 @@ public class MhagData {
 			else if(game == 1)  //mhp3rd
 				ioErr = Skill.setSkillFromLineJP
 					(line, skillList[skillIndex]);
+			else if(game == 3)  //mh3d
+				ioErr = Skill.setSkillFromLineJP
+					(line, skillList[skillIndex]);
 
 			if(ioErr != 0)
 			{
@@ -408,6 +411,9 @@ public class MhagData {
 			else if(game == 1)
 				ioErr = Jewel.setJewelFromLineJP
 					(line, jewelList[jewelIndex]);
+			else if(game == 3)
+				ioErr = Jewel.setJewelFromLineJP
+					(line, jewelList[jewelIndex]);
 			if(ioErr != 0)
 			{
 				MhagUtil.logLine(mhag,
@@ -466,6 +472,8 @@ public class MhagData {
 				word = Armor.getBodyPartFromLine(line);
 			else if(game == 1)
 				word = Armor.getBodyPartFromLineJP(line);
+			else if(game == 3)
+				word = Armor.getBodyPartFromLineJP(line);
 			nBodyPart = Armor.convertBodyPart(word);
 			nMax[nBodyPart] += 1;
 		}
@@ -516,6 +524,13 @@ public class MhagData {
 					armorList[nBodyPart][armorIndex[nBodyPart]]);
 			}
 			else if(game == 1)
+			{
+				word = Armor.getBodyPartFromLineJP(line);
+				nBodyPart = Armor.convertBodyPart(word);
+				ioErr = Armor.setArmorFromLineJP(line, nBodyPart,
+					armorList[nBodyPart][armorIndex[nBodyPart]]);
+			}
+			else if(game == 3)
 			{
 				word = Armor.getBodyPartFromLineJP(line);
 				nBodyPart = Armor.convertBodyPart(word);

@@ -78,8 +78,8 @@ Gambit Jewel : 抜打珠 : L : 1 : PunishDraw : 1 : Sharpness : -1
 Gambit Jewel : 抜打珠 : H : 3 : PunishDraw : 4 : Sharpness : -2
 Iron Wall Jewel : 鉄壁珠 : L : 1 : Guard : 1 : Constitutn : -1
 Iron Wall Jewel : 鉄壁珠 : L : 2 : Guard : 3 : Constitutn : -1
-Shield Jewel : 強壁珠 : L : 1 : Guard Up : 1 : StaminaRec : -1
-Shield Jewel : 強壁珠 : H : 2 : Guard Up : 3 : StaminaRec : -1
+Shield Jewel : 強壁珠 : L : 1 : Guard Up : 1 : Stamina : -1
+Shield Jewel : 強壁珠 : H : 2 : Guard Up : 3 : Stamina : -1
 Grinder Jewel : 研磨珠 : L : 1 : Sharpener : 2
 Forceshot Jewel : 強弾珠 : L : 1 : NormalS Up : 1 : Recoil : -1
 Forceshot Jewel : 強弾珠 : H : 3 : NormalS Up : 4 : Recoil : -2
@@ -101,14 +101,14 @@ Quickload Jewel : 早填珠 : L : 2 : Reload Spd : 3 : Recoil : -1
 Absorber Jewel : 抑反珠 : L : 1 : Recoil : 1 : Reload Spd : -1
 Absorber Jewel : 抑反珠 : H : 3 : Recoil : 4 : Reload Spd : -2
 Sniper Jewel : 点射珠 : L : 1 : Precision : 2
-ParaPlus Jewel : 痺瓶珠 : L : 1 : Para C+ : 1 : Attack : -1
-ParaPlus Jewel : 痺瓶珠 : H : 2 : Para C+ : 3 : Attack : -1
-SleepPlus Jewel : 眠瓶珠 : L : 1 : Sleep C+ : 2
-PoisonPlus Jewel : 毒瓶珠 : L : 1 : Poison C+ : 2
-PowerPlus Jewel : 強瓶珠 : L : 1 : Power C+ : 1 : Expert : -1
-PowerPlus Jewel : 強瓶珠 : H : 2 : Power C+ : 3 : Expert : -1
-CloseRPlus Jewel : 接瓶珠 : L : 1 : CloseR C+ : 2
-ExhausPlus Jewel : 減瓶珠 : L : 1 : Exhaust C+ : 2
+ParaCoat Jewel : 痺瓶珠 : L : 1 : Para C+ : 1 : Attack : -1
+ParaCoat Jewel : 痺瓶珠 : H : 2 : Para C+ : 3 : Attack : -1
+SleepCoat Jewel : 眠瓶珠 : L : 1 : Sleep C+ : 2
+PoisonCoat Jewel : 毒瓶珠 : L : 1 : Poison C+ : 2
+PowerCoat Jewel : 強瓶珠 : L : 1 : Power C+ : 1 : Expert : -1
+PowerCoat Jewel : 強瓶珠 : H : 2 : Power C+ : 3 : Expert : -1
+CloseRCoat Jewel : 接瓶珠 : L : 1 : CloseR C+ : 2
+ExhausCoat Jewel : 減瓶珠 : L : 1 : Exhaust C+ : 2
 Evade Jewel : 回避珠 : L : 1 : Evasion : 1 : Health : -1
 Evade Jewel : 回避珠 : H : 2 : Evasion : 3 : Health : -1
 Jumping Jewel : 跳躍珠 : L : 1 : Evade Dist : 1 : Health : -1
