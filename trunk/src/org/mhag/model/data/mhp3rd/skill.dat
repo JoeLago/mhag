@@ -20,7 +20,7 @@ Water Res : 水耐性 : 2 : 10 10 8 0 13 13 13 11 : Water Res Down : 水耐性�
 Ice Res : 氷耐性 : 2 : 10 10 8 0 13 13 13 11 : Ice Res Down : 氷耐性弱化 : -10 : Ice Res Up (S) : 氷耐性 【小】 : 10 : Ice Res Up (L) : 氷耐性 【大】 : 15
 ThunderRes : 雷耐性 : 2 : 10 10 8 0 13 13 13 11 : Thunder Res Down : 雷耐性弱化 : -10 : Thunder Res Up (S) : 雷耐性 【小】 : 10 : Thunder Res Up (L) : 雷耐性 【大】 : 15
 Dragon Res : 龍耐性 : 2 : 10 10 8 0 13 13 13 11 : Dragon Res Down : 龍耐性弱化 : -10 : Dragon Res Up (S) : 龍耐性 【小】 : 10 : Dragon Res Up (L) : 龍耐性 【大】 : 15
-Poison : 毒 : 2 : 7 7 6 0 7 7 6 0 : Double Poison : 毒倍加 : -10 : Negate Posion : 毒無効 : 10
+Poison : 毒 : 2 : 7 7 6 0 7 7 6 0 : Double Poison : 毒倍加 : -10 : Negate Poison : 毒無効 : 10
 Paralysis : 麻痺 : 2 : 7 7 6 0 7 7 6 0 : Double Paralysis : 麻痺倍加 : -10 : Negate Paralysis : 麻痺無効 : 10
 Sleep : 睡眠 : 2 : 7 7 6 0 7 7 6 0 : Double Sleep : 睡眠倍加 : -10 : Negate Sleep : 睡眠無効 : 10
 Stun : 気絶 : 2 : 10 10 8 0 13 13 13 11 : Double Stun : 気絶倍加 : -10 : Halve Stun : 気絶確率半減 : 10 : Negate Stun : 気絶無効 : 15
@@ -66,7 +66,7 @@ Evasion : 回避性能 : 3 : 6 6 5 0 6 6 6 5 : Evasion Down : 回避性能DOWN :
 Sheathe : 納刀 : 3 : 6 6 5 0 6 6 6 5 : Speed Sheathe : 納刀術 : 10
 Expert : 達人 : 1 : 7 7 6 0 10 10 10 8 : Critical Eye -3 : 見切り-3 : -20 : Critical Eye -2 : 見切り-2 : -15 : Critical Eye -1 : 見切り-1 : -10 : Critical Eye +1 : 見切り+1 : 10 : Critical Eye +2 : 見切り+2 : 15 : Critical Eye +3 : 見切り+3 : 20
 Status : 特殊攻撃 : 1 : 4 4 3 0 6 6 6 5 : Status Atk Down : 状態異常攻撃弱化 : -10 : Status Atk +1 : 状態異常攻撃+1 : 10 : Status Atk +2 : 状態異常攻撃+2 : 15
-Blow : 痛撃 : 1 : 0 0 0 0 5 5 5 4 : Weakness Blow : 弱点特効 : 10
+Blow : 痛撃 : 1 : 0 0 0 0 5 5 5 4 : Stinger : 弱点特効 : 10
 Bash : 重撃 : 1 : 0 0 0 0 5 5 5 4 : Destructor : 破壊王 : 10
 Loading : 装填数 : 6 : 0 0 0 0 6 6 6 5 : Load Up : 装填数UP : 15
 FastCharge : 溜め短縮 : 3 : 0 0 0 0 5 5 5 4 : Distraction : 雑念 : -10 : Focus : 集中 : 10

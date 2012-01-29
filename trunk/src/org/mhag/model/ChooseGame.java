@@ -84,7 +84,6 @@ public class ChooseGame extends javax.swing.JDialog {
         button3G.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/mh3g.png"))); // NOI18N
         button3G.setToolTipText("Monster Hunter Tri G (3DS)");
         button3G.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        button3G.setEnabled(false);
         button3G.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button3GActionPerformed(evt);
