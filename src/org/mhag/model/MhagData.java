@@ -112,15 +112,8 @@ public class MhagData {
 			if(line.startsWith("#"))continue;
 			// System.out.printf("%d\n", skillIndex);
 			// System.out.println(line);
-			if(game == 0) //mhtri
-				ioErr = Skill.setSkillFromLine
-					(line, skillList[skillIndex]);
-			else if(game == 1)  //mhp3rd
-				ioErr = Skill.setSkillFromLineJP
-					(line, skillList[skillIndex]);
-			else if(game == 3)  //mh3d
-				ioErr = Skill.setSkillFromLineJP
-					(line, skillList[skillIndex]);
+			ioErr = Skill.setSkillFromLine
+				(line, skillList[skillIndex], game);
 
 			if(ioErr != 0)
 			{
@@ -405,15 +398,8 @@ public class MhagData {
 			if(line.startsWith("#"))continue;
 			// System.out.printf("%d\n", jewelIndex);
 			//System.out.println(line);
-			if(game == 0)
-				ioErr = Jewel.setJewelFromLine
-					(line, jewelList[jewelIndex]);
-			else if(game == 1)
-				ioErr = Jewel.setJewelFromLineJP
-					(line, jewelList[jewelIndex]);
-			else if(game == 3)
-				ioErr = Jewel.setJewelFromLineJP
-					(line, jewelList[jewelIndex]);
+			ioErr = Jewel.setJewelFromLine
+				(line, jewelList[jewelIndex], game);
 			if(ioErr != 0)
 			{
 				MhagUtil.logLine(mhag,
@@ -468,12 +454,7 @@ public class MhagData {
 			line = in.nextLine();
 			if(line.startsWith("#"))continue;
 			String word = "";
-			if(game == 0)
-				word = Armor.getBodyPartFromLine(line);
-			else if(game == 1)
-				word = Armor.getBodyPartFromLineJP(line);
-			else if(game == 3)
-				word = Armor.getBodyPartFromLineJP(line);
+			word = Armor.getBodyPartFromLine(line, game);
 			nBodyPart = Armor.convertBodyPart(word);
 			nMax[nBodyPart] += 1;
 		}
@@ -516,27 +497,10 @@ public class MhagData {
 			// System.out.println(line);
 
 			String word = "";
-			if(game == 0)
-			{
-				word = Armor.getBodyPartFromLine(line);
-				nBodyPart = Armor.convertBodyPart(word);
-				ioErr = Armor.setArmorFromLine(line, nBodyPart,
-					armorList[nBodyPart][armorIndex[nBodyPart]]);
-			}
-			else if(game == 1)
-			{
-				word = Armor.getBodyPartFromLineJP(line);
-				nBodyPart = Armor.convertBodyPart(word);
-				ioErr = Armor.setArmorFromLineJP(line, nBodyPart,
-					armorList[nBodyPart][armorIndex[nBodyPart]]);
-			}
-			else if(game == 3)
-			{
-				word = Armor.getBodyPartFromLineJP(line);
-				nBodyPart = Armor.convertBodyPart(word);
-				ioErr = Armor.setArmorFromLineJP(line, nBodyPart,
-					armorList[nBodyPart][armorIndex[nBodyPart]]);
-			}
+			word = Armor.getBodyPartFromLine(line, game);
+			nBodyPart = Armor.convertBodyPart(word);
+			ioErr = Armor.setArmorFromLine(line, nBodyPart,
+				armorList[nBodyPart][armorIndex[nBodyPart]], game);
 
 			// add armor materials
 			if(ifItem)

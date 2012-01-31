@@ -23,7 +23,7 @@ public class Jewel {
 	}
 
     	// read jewel entry from a line
-	public static int setJewelFromLine(String line, Jewel jewel)
+	public static int setJewelFromLine(String line, Jewel jewel, int game)
 	{
 		// jewel id
 		jewel.jewelID = jewelIDTot++; // start from 1
@@ -32,6 +32,10 @@ public class Jewel {
 		int endPos = 0;
 		int wordIndex = 0;
 		String word = "";
+		int addJP = 0;
+		if((game == 1) || (game == 3)) //mhp3rd, mh3g
+			addJP = 1;
+
 		while(line != null )
 		{
 			endPos = MhagUtil.extractWordPos(line, startPos);
@@ -46,102 +50,13 @@ public class Jewel {
 				jewel.jewelName = word;
 
 			}
-			else if(wordIndex == 2)
-			{
-				// read low/high rank
-
-				if(word.equals("L"))
-				{
-					jewel.rank = 0;
-				}
-				else if (word.equals("H"))
-				{
-					jewel.rank = 1;
-				}
-				else if (word.equals("G"))
-				{
-					jewel.rank = 2;
-				}
-				else
-				{
-					return 1;
-				}
-			}
-			else if(wordIndex == 3)
-			{
-				// read # of slots
-
-				int nSlot = Integer.valueOf(word);
-				if((nSlot < 1)||(nSlot > 3))
-				{
-					return 1;  // jewel needs slot 1 - 3
-				}
-				else
-				{
-					jewel.numSlot = nSlot;
-				}
-			}
-			else
-			{
-				// read skills name/points
-
-				if(endPos == -1)return 1; //error no skill point
-				if(jewel.numSkill == 2)return 1;  // skill <= 2
-
-				// read Skill
-				jewel.skillName[jewel.numSkill] = word;
-				startPos = endPos + 1;
-				endPos = MhagUtil.extractWordPos(line, startPos);
-				word = MhagUtil.extractWord
-					(line, startPos, endPos);
-				jewel.skillPoint[jewel.numSkill] =
-					Integer.valueOf(word);
-				jewel.numSkill++;
-			}
-
-			if(endPos  == -1)
-			{
-				if(wordIndex <= 3)return 1;  // error no skill
-				break;
-			}
-			startPos = endPos + 1;
-		}
-		if( (jewel.skillPoint[0] <= 0) || (jewel.skillPoint[1] > 0))
-			return 1;  // 1st skill >0 , 2nd skill <= 0
-
-		return 0;
-	}
-
-    	// read jewel entry from a line japanese
-	public static int setJewelFromLineJP(String line, Jewel jewel)
-	{
-		// jewel id
-		jewel.jewelID = jewelIDTot++; // start from 1
-
-		int startPos = 0;
-		int endPos = 0;
-		int wordIndex = 0;
-		String word = "";
-		while(line != null )
-		{
-			endPos = MhagUtil.extractWordPos(line, startPos);
-			word = MhagUtil.extractWord(line, startPos, endPos);
-
-			wordIndex++;
-
-			if(wordIndex == 1)
-			{
-				// read Jewel Name
-				jewel.jewelName = word;
-
-			}
-			else if(wordIndex == 2)
+			else if((wordIndex == 2) && (addJP > 0))
 			{
 				// read Jewel Name japanese
 				jewel.jewelNameJP = word;
 
 			}
-			else if(wordIndex == 3)
+			else if(wordIndex == 2 + addJP)
 			{
 				// read low/high rank
 
@@ -162,7 +77,7 @@ public class Jewel {
 					return 1;
 				}
 			}
-			else if(wordIndex == 4)
+			else if(wordIndex == 3 + addJP)
 			{
 				// read # of slots
 
@@ -196,7 +111,7 @@ public class Jewel {
 
 			if(endPos  == -1)
 			{
-				if(wordIndex <= 4)return 1;  // error no skill
+				if(wordIndex <= 3 + addJP)return 1;  // error no skill
 				break;
 			}
 			startPos = endPos + 1;
