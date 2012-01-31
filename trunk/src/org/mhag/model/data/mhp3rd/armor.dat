@@ -1,4 +1,4 @@
-#Armor List (568)
+#Armor List (1021)
 #Format ^Piece Name : Blade/Gun/All : Male/Female/All : Part(Head/Chest/Arm/Waist/Leg) : LR Defense : HR Defense : # of Slots : Fir Res : Wat Res : Ice Res : Thn Res : Drg Res : Skill 1 : Point 1 : Skill 2 : Point 2 ...
 #In current version defense values are not reliable
 Yukumo Kasa           : ユクモノカサ        : A : A : H :  21 :  21 : 0 :  0 :  0 :  0 :  3 :  0 : Whim :  2 : Protection : 2 : Expert : 2
@@ -42,14 +42,14 @@ Bone Leggings         : ボーンレギンス      : G : A : L :  17 :  17 : 1 :
 Alloy Helm            : アロイヘルム        : A : A : H :  27 :  27 : 1 : -1 :  1 : -2 : -2 : -1 : Expert :  1 : Sharpener :  3 : Wind Res :  2 : Gathering : -3
 Alloy Mail            : アロイメイル        : B : A : C :  27 :  27 : 1 : -1 :  1 : -2 : -2 : -1 : Expert :  2 : Sharpener :  2 : Wind Res :  1 : Gathering : -2
 Alloy Vambraces       : アロイアーム        : B : A : A :  27 :  27 : 1 : -1 :  1 : -2 : -2 : -1 : Expert :  4 : Sharpener :  1 : Wind Res :  1 : Gathering : -3
-Alloy Coil            : アロイフォール      : B : A : W :  27 :  27 : 2 : -1 :  1 : -2 : -2 : -1 : Expert :  3 : Sharpener :  1 : Wind Res :  2 : Gathering : -1
+Alloy Coil            : アロイコイル        : B : A : W :  27 :  27 : 2 : -1 :  1 : -2 : -2 : -1 : Expert :  3 : Sharpener :  1 : Wind Res :  2 : Gathering : -1
 Alloy Greaves         : アロイグリーヴ      : B : A : L :  27 :  27 : 1 : -1 :  1 : -2 : -2 : -1 : Expert :  2 : Sharpener :  1 : Wind Res :  4 : Gathering : -2
 Alloy Cap             : アロイキャップ      : A : A : H :  17 :  17 : 1 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  3 : PelletS Up :  3 : Reload Spd :  3 : Gathering : -2
 Alloy Vest            : アロイレジスト      : G : A : C :  17 :  17 : 1 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  1 : PelletS Up :  2 : Reload Spd :  2 : Gathering : -2
 Alloy Guards          : アロイガード        : G : A : A :  17 :  17 : 1 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  3 : PelletS Up :  2 : Reload Spd :  2 : Gathering : -2
 Alloy Coat            : アロイコート        : G : A : W :  17 :  17 : 2 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  2 : PelletS Up :  1 : Reload Spd :  1 : Gathering : -3
 Alloy Leggings        : アロイレギンス      : G : A : L :  17 :  17 : 1 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  3 : PelletS Up :  3 : Reload Spd :  1 : Gathering : -2
-Bnahabra Hat          : ブナハハツト        : A : A : H :  29 :  29 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  1 : Sheathe :  1 : Sense :  4 : Attack : -3
+Bnahabra Hat          : ブナハハット        : A : A : H :  29 :  29 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  1 : Sheathe :  1 : Sense :  4 : Attack : -3
 Bnahabra Suit         : ブナハスーツ        : B : A : C :  29 :  29 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  3 : Sheathe :  1 : Sense :  1 : Attack : -2
 Bnahabra Glove        : ブナハグローブ      : B : A : A :  29 :  29 : 2 : -5 : -2 : -2 :  2 :  4 : Status :  1 : Sheathe :  4 : Sense :  1 : Attack : -1
 Bnahabra Coil         : ブナハコイル        : B : A : W :  29 :  29 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  3 : Sheathe :  1 : Sense :  3 : Attack : -2
@@ -206,7 +206,7 @@ Yuami Headpiece       : ユアミタオル        : A : A : H :  28 :  28 : 1 : 
 Yuami Towel           : ユアミスガタ        : A : A : C :  28 :  28 : 1 : -2 :  2 : -2 : -2 :  0 : Fate :  2 : LastingPwr :  2 : Attack : -3
 Yuami Wrist           : ユアミリスト        : A : A : A :  28 :  28 : 1 : -2 :  2 : -2 : -2 :  0 : Fate :  3 : LastingPwr :  2 : Attack : -4
 Yuami Sandals         : ユアミサンダル      : A : A : L :  28 :  28 : 1 : -2 :  2 : -2 : -2 :  0 : Fate :  3 : LastingPwr :  3 : Attack : -3
-Zuwaroposu Hood       : ズワロプード        : A : A : H :  32 :  32 : 0 : -2 :  2 : -1 :  0 :  1 : Water Res :  6 : Health :  5
+Zuwaroposu Hood       : ズワロフード        : A : A : H :  32 :  32 : 0 : -2 :  2 : -1 :  0 :  1 : Water Res :  6 : Health :  5
 Zuwaroposu Mantle     : ズワロマント        : B : A : C :  32 :  32 : 0 : -2 :  2 : -1 :  0 :  1 : Water Res :  4 : Health :  5
 Zuwaroposu Cap        : ズワロフッド        : A : A : H :  19 :  19 : 0 : -1 :  4 :  0 :  0 :  2 : Water Res :  8 : Health :  5
 Zuwaroposu Vest       : ズワロケープ        : G : A : C :  19 :  19 : 0 : -1 :  4 :  0 :  0 :  2 : Water Res :  4 : Health :  5
@@ -232,27 +232,27 @@ Pumpkin Vest          : マギュルシュタム    : G : A : C :  21 :  21 : 2 
 Pumpkin Guards        : マギュルアスト      : G : A : A :  21 :  21 : 1 : -2 :  2 :  4 :  0 :  0 : FastCharge :  2 : SpeedSetup :  2 : LastingPwr :  3 : Precision : -2
 Pumpkin Coat          : マギュルブラット    : G : A : W :  21 :  21 : 1 : -2 :  2 :  4 :  0 :  0 : FastCharge :  2 : SpeedSetup :  2 : LastingPwr :  3 : Precision : -2
 Pumpkin Leggings      : マギュルヴルツェル  : G : A : L :  21 :  21 : 1 : -2 :  2 :  4 :  0 :  0 : FastCharge :  2 : SpeedSetup :  3 : LastingPwr :  2 : Precision : -2
-Obituary Testa/Butterfly Testa         : ロワーガテスタ/ファメルテスタ        : A : A : H :  37 :  37 : 1 : -5 :  0 : -1 :  3 :  1 : Expert :  1 : Hearing :  2 : Protection : -3 : ThunderRes :  3
-Obituary Petto/Butterfly Petto         : ロワーガペット/ファメルペット        : B : A : C :  37 :  37 : 1 : -5 :  0 : -1 :  3 :  1 : Expert :  2 : Hearing :  1 : Protection : -3 : ThunderRes :  1
-Obituary Mano/Butterfly Mano           : ロワーガマーノ/ファメルマーノ        : B : A : A :  37 :  37 : 1 : -5 :  0 : -1 :  3 :  1 : Expert :  4 : Hearing :  3 : Protection : -1 : ThunderRes :  1
-Obituary Anca/Butterfly Anca           : ロワーガアンカ/ファメルアンカ        : B : A : W :  37 :  37 : 1 : -5 :  0 : -1 :  3 :  1 : Expert :  4 : Hearing :  3 : Protection : -1 : ThunderRes :  1
-Obituary Gamba/Butterfly Gamba         : ロワーガガンバ/ファメルガンバ        : B : A : L :  37 :  37 : 2 : -5 :  0 : -1 :  3 :  1 : Expert :  1 : Hearing :  1 : Protection : -2 : ThunderRes :  3
-Obituary Caput/Butterfly Caput         : ロワーガカブト/ファメルカブト        : A : A : H :  22 :  22 : 1 : -4 :  0 :  0 :  5 :  3 : Expert :  5 : Hearing :  3 : Protection : -2 : ThunderRes :  1
-Obituary Pectus/Butterfly Pectus       : ロワーガペクトス/ファメルペクトス    : G : A : C :  22 :  22 : 1 : -4 :  0 :  0 :  5 :  3 : Expert :  1 : Hearing :  2 : Protection : -3 : ThunderRes :  1
-Obituary Brasso/Butterfly Brasso       : ロワーガブラッソ/ファメルブラッソ    : G : A : A :  22 :  22 : 1 : -4 :  0 :  0 :  5 :  3 : Expert :  3 : Hearing :  3 : Protection : -2 : ThunderRes :  1
-Obituary Cocusa/Butterfly Cocusa       : ロワーガコクサ/ファメルコクサ        : G : A : W :  22 :  22 : 1 : -4 :  0 :  0 :  5 :  3 : Expert :  1 : Hearing :  2 : Protection : -2 : ThunderRes :  4
-Obituary Femur/Butterfly Femur         : ロワーガフェムル/ファメルフェムル    : G : A : L :  22 :  22 : 2 : -4 :  0 :  0 :  5 :  3 : Expert :  2 : Hearing :  1 : Protection : -2 : ThunderRes :  2
+Obituary Testa/Butterfly Testa         : ロワーガテスタ/ファルメルテスタ        : A : A : H :  37 :  37 : 1 : -5 :  0 : -1 :  3 :  1 : Expert :  1 : Hearing :  2 : Protection : -3 : ThunderRes :  3
+Obituary Petto/Butterfly Petto         : ロワーガペット/ファルメルペット        : B : A : C :  37 :  37 : 1 : -5 :  0 : -1 :  3 :  1 : Expert :  2 : Hearing :  1 : Protection : -3 : ThunderRes :  1
+Obituary Mano/Butterfly Mano           : ロワーガマーノ/ファルメルマーノ        : B : A : A :  37 :  37 : 1 : -5 :  0 : -1 :  3 :  1 : Expert :  4 : Hearing :  3 : Protection : -1 : ThunderRes :  1
+Obituary Anca/Butterfly Anca           : ロワーガアンカ/ファルメルアンカ        : B : A : W :  37 :  37 : 1 : -5 :  0 : -1 :  3 :  1 : Expert :  4 : Hearing :  3 : Protection : -1 : ThunderRes :  1
+Obituary Gamba/Butterfly Gamba         : ロワーガガンバ/ファルメルガンバ        : B : A : L :  37 :  37 : 2 : -5 :  0 : -1 :  3 :  1 : Expert :  1 : Hearing :  1 : Protection : -2 : ThunderRes :  3
+Obituary Caput/Butterfly Caput         : ロワーガカブト/ファルメルカブト        : A : A : H :  22 :  22 : 1 : -4 :  0 :  0 :  5 :  3 : Expert :  5 : Hearing :  3 : Protection : -2 : ThunderRes :  1
+Obituary Pectus/Butterfly Pectus       : ロワーガペクトス/ファルメルペクトス    : G : A : C :  22 :  22 : 1 : -4 :  0 :  0 :  5 :  3 : Expert :  1 : Hearing :  2 : Protection : -3 : ThunderRes :  1
+Obituary Brasso/Butterfly Brasso       : ロワーガブラッソ/ファルメルブラッソ    : G : A : A :  22 :  22 : 1 : -4 :  0 :  0 :  5 :  3 : Expert :  3 : Hearing :  3 : Protection : -2 : ThunderRes :  1
+Obituary Cocusa/Butterfly Cocusa       : ロワーガコクサ/ファルメルコクサ        : G : A : W :  22 :  22 : 1 : -4 :  0 :  0 :  5 :  3 : Expert :  1 : Hearing :  2 : Protection : -2 : ThunderRes :  4
+Obituary Femur/Butterfly Femur         : ロワーガフェムル/ファルメルフェムル    : G : A : L :  22 :  22 : 2 : -4 :  0 :  0 :  5 :  3 : Expert :  2 : Hearing :  1 : Protection : -2 : ThunderRes :  2
 Barioth Helm          : ベリオヘルム        : A : A : H :  39 :  39 : 1 : -4 :  1 :  2 : -3 : -1 : Constitutn :  1 : Stamina :  2 : StaminaRec : -3 : Ice Atk :  3
-Barioth Mail          : ベリオクメイル      : B : A : C :  39 :  39 : 1 : -4 :  1 :  2 : -3 : -1 : Constitutn :  1 : Stamina :  3 : StaminaRec : -2 : Ice Atk :  1
-Barioth Vambraces     : ベリオクアーム      : B : A : A :  39 :  39 : 0 : -4 :  1 :  2 : -3 : -1 : Constitutn :  4 : Stamina :  2 : StaminaRec : -2 : Ice Atk :  3
+Barioth Mail          : ベリオメイル        : B : A : C :  39 :  39 : 1 : -4 :  1 :  2 : -3 : -1 : Constitutn :  1 : Stamina :  3 : StaminaRec : -2 : Ice Atk :  1
+Barioth Vambraces     : ベリオアーム        : B : A : A :  39 :  39 : 0 : -4 :  1 :  2 : -3 : -1 : Constitutn :  4 : Stamina :  2 : StaminaRec : -2 : Ice Atk :  3
 Barioth Faulds        : ベリオフォールド    : B : A : W :  39 :  39 : 2 : -4 :  1 :  2 : -3 : -1 : Constitutn :  4 : Stamina :  1 : StaminaRec : -1 : Ice Atk :  1
-Barioth Greaves       : ベリオクグリーヴ    : B : A : L :  39 :  39 : 2 : -4 :  1 :  2 : -3 : -1 : Constitutn :  2 : Stamina :  2 : StaminaRec : -2 : Ice Atk :  1
+Barioth Greaves       : ベリオグリーヴ      : B : A : L :  39 :  39 : 2 : -4 :  1 :  2 : -3 : -1 : Constitutn :  2 : Stamina :  2 : StaminaRec : -2 : Ice Atk :  1
 Barioth Cap           : ベリオキャップ      : A : A : H :  23 :  23 : 1 : -2 :  2 :  4 : -1 :  0 : Constitutn :  5 : Stamina :  4 : StaminaRec : -1 : Ice Atk :  1
 Barioth Vest          : ベリオレジスト      : G : A : C :  23 :  23 : 1 : -2 :  2 :  4 : -1 :  0 : Constitutn :  1 : Stamina :  3 : StaminaRec : -2 : Ice Atk :  1
 Barioth Guards        : ベリオガード        : G : A : A :  23 :  23 : 0 : -2 :  2 :  4 : -1 :  0 : Constitutn :  3 : Stamina :  1 : StaminaRec : -2 : Ice Atk :  5
 Barioth Coat          : ベリオコート        : G : A : W :  23 :  23 : 2 : -2 :  2 :  4 : -1 :  0 : Constitutn :  1 : Stamina :  3 : StaminaRec : -2 : Ice Atk :  1
 Barioth Leggings      : ベリオレギンス      : G : A : L :  23 :  23 : 2 : -2 :  2 :  4 : -1 :  0 : Constitutn :  2 : Stamina :  1 : StaminaRec : -3 : Ice Atk :  1
-Guild Bard Lobos/Scholar's Beret       : ギルドバードロポス/スカラーフード    : A : A : H :  39 :  39 : 2 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  1 : Perception :  2 : Wide-Range :  1 : Fate : -3
+Guild Bard Lobos/Scholar's Beret       : ギルドバードロボス/スカラーフード    : A : A : H :  39 :  39 : 2 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  1 : Perception :  2 : Wide-Range :  1 : Fate : -3
 Guild Bard Bolero/Scholar's Blouse     : ギルドバードスーツ/スカラースーツ    : B : A : C :  39 :  39 : 0 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  3 : Perception :  2 : Wide-Range :  1 : Fate : -3
 Guild Bard Braces/Scholar's Gloves     : ギルドバードアーム/スカラーグラブ    : B : A : A :  39 :  39 : 0 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  4 : Perception :  2 : Wide-Range :  3 : Fate : -2
 Guild Bard Coil/Scholar's Skirt        : ギルドバードコイル/スカラースカート  : B : A : W :  39 :  39 : 1 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  2 : Perception :  2 : Wide-Range :  4 : Fate : -1
@@ -368,129 +368,129 @@ Yukumo - Earth Dogi   : ユクモノドウギ.地       : G : A : C :  -- :  35 
 Yukumo - Earth Kote   : ユクモノコテ.地         : G : A : A :  -- :  35 : 2 :  0 :  0 :  0 :  4 :  0 : Whim :  2 : Protection : 3 : Rec Level : 1 : Precision : 3
 Yukumo - Earth Obi    : ユクモノオビ.地         : G : A : W :  -- :  35 : 2 :  0 :  0 :  0 :  4 :  0 : Whim :  1 : Protection : 3 : Rec Level : 3 : Precision : 2
 Yukumo - Earth Hakama : ユクモノハカマ.地       : G : A : L :  -- :  35 : 2 :  0 :  0 :  0 :  4 :  0 : Whim :  4 : Protection : 2 : Rec Level : 2 : Precision : 1
-Leather S Helm        : レザーSヘルム           : A : A : H :  -- :  60 : 0 : -1 :  0 :  0 :  0 :  1 : Gathering :  4 : Spd Gather :  1 : Whim  :  4 : Hunger : 4
-Leather S Mail        : レザーSメイル           : B : A : C :  -- :  60 : 1 : -1 :  0 :  0 :  0 :  1 : Gathering :  3 : Spd Gather :  2 : Whim  :  1 : Hunger : 3
-Leather S Vambraces   : レザーSアーム           : B : A : A :  -- :  60 : 1 : -1 :  0 :  0 :  0 :  1 : Gathering :  1 : Spd Gather :  4 : Whim  :  4 : Hunger : 2
-Leather S Faulds      : レザーSフォールド       : B : A : W :  -- :  60 : 1 : -1 :  0 :  0 :  0 :  1 : Gathering :  3 : Spd Gather :  1 : Whim  :  4 : Hunger : 3
-Leather S Greaves     : レザーSグリーヴ         : B : A : L :  -- :  60 : 1 : -1 :  0 :  0 :  0 :  1 : Gathering :  4 : Spd Gather :  2 : Whim  :  2 : Hunger : 3
-Leather S Cap         : レザーSキャップ         : A : A : H :  -- :  35 : 0 :  0 :  0 :  0 :  0 :  2 : Gathering :  4 : Spd Gather :  3 : Whim  :  3 : Hunger : 5
-Leather S Vest        : レザーSレジスト         : G : A : C :  -- :  35 : 1 :  0 :  0 :  0 :  0 :  2 : Gathering :  3 : Spd Gather :  3 : Whim  :  1 : Hunger : 2
-Leather S Guards      : レザーSガード           : G : A : A :  -- :  35 : 1 :  0 :  0 :  0 :  0 :  2 : Gathering :  3 : Spd Gather :  1 : Whim  :  4 : Hunger : 3
-Leather S Coat        : レザーSコート           : G : A : W :  -- :  35 : 1 :  0 :  0 :  0 :  0 :  2 : Gathering :  1 : Spd Gather :  3 : Whim  :  4 : Hunger : 3
-Leather S Legging     : レザーSレギンス         : G : A : L :  -- :  35 : 1 :  0 :  0 :  0 :  0 :  2 : Gathering :  4 : Spd Gather :  1 : Whim  :  4 : Hunger : 2
-Chainmail S Helm      : チェーンSヘルム         : A : A : H :  -- :  60 : 1 :  2 :  1 :  1 : -2 :  0 : Health :  3 :                   Exhaust    :  4 : Combo Plus :  4
-Chainmail S Armor     : チェーンSメイル         : B : A : C :  -- :  60 : 1 :  2 :  1 :  1 : -2 :  0 : Health :  2 :                   Exhaust    :  2 : Combo Plus :  5
-Chainmail S Vambraces : チェーンSアーム         : B : A : A :  -- :  60 : 2 :  2 :  1 :  1 : -2 :  0 : Health :  4 : Combo Rate :  4 :                   Combo Plus :  1
-Chainmail S Faulds    : チェーンSフォールド     : B : A : W :  -- :  60 : 2 :  2 :  1 :  1 : -2 :  0 : Health :  2 : Combo Rate :  4 : Exhaust    :  3
-Chainmail S Greaves   : チェーンSグリーヴ       : B : A : L :  -- :  60 : 2 :  2 :  1 :  1 : -2 :  0 : Health :  4 : Combo Rate :  4 : Exhaust    :  1
-Chainmail S Cap       : チェーンSキャップ       : A : A : H :  -- :  35 : 1 :  3 :  2 :  2 : -1 :  0 : Health :  4 :                   Combo Plus :  5 : Normal S+  :  4
-Chainmail S Vest      : チェーンSレジスト       : G : A : C :  -- :  35 : 1 :  3 :  2 :  2 : -1 :  0 : Health :  3 :                   Combo Plus :  1 : Normal S+  :  5
-Chainmail S Guards    : チェーンSガード         : G : A : A :  -- :  35 : 2 :  3 :  2 :  2 : -1 :  0 : Health :  3 : Combo Rate :  4 :                   Normal S+  :  2
-Chainmail S Coat      : チェーンSコート         : G : A : W :  -- :  35 : 2 :  3 :  2 :  2 : -1 :  0 : Health :  2 : Combo Rate :  4 : Combo Plus :  3
-Chainmail S Leggings  : チェーンSレギンス       : G : A : L :  -- :  35 : 2 :  3 :  2 :  2 : -1 :  0 : Health :  4 : Combo Rate :  4 : Combo Plus :  1
-Hunter's S Helm       : ハンターSヘルム         : A : A : H :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 : Psychic :  3 : Hunter :  2 : SpeedSetup :  4 : Poison : -2
-Hunter's S Mail       : ハンターSメイル         : B : A : C :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 : Psychic :  2 : Hunter :  1 :                   Poison : -3 : Perception :  3
-Hunter's S Vambraces  : ハンターSアーム         : B : A : A :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 :                Hunter :  2 : SpeedSetup :  4 : Poison : -1 : Perception :  4
-Hunter's S Faulds     : ハンターSフォールド     : B : A : W :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 : Psychic :  3 : Hunter :  3 :                   Poison : -2 : Perception :  3
-Hunter's S Greaves    : ハンターSグリーヴ       : B : A : L :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 : Psychic :  5 : Hunter :  2 : SpeedSetup :  2 : Poison : -2
-Hunter's S Cap        : ハンターSキャップ       : A : A : H :  -- :  36 : 1 :  1 :  2 :  0 : -2 :  1 : Psychic :  4 : Hunter :  3 : SpeedSetup :  4 : Poison : -2
-Hunter's S Vest       : ハンターSレジスト       : G : A : C :  -- :  36 : 1 :  1 :  2 :  0 : -2 :  1 : Psychic :  2 : Hunter :  1 :                   Poison : -3 : Perception :  3
-Hunter's S Guards     : ハンターSガード         : G : A : A :  -- :  36 : 1 :  1 :  2 :  0 : -2 :  1 :                Hunter :  1 : SpeedSetup :  4 : Poison : -2 : Perception :  4
-Hunter's S Coat       : ハンターSコート         : G : A : W :  -- :  36 : 1 :  1 :  2 :  0 : -2 :  1 : Psychic :  3 : Hunter :  4 :                   Poison : -1 : Perception :  3
-Hunter's S Leggings   : ハンターSレギンス       : G : A : L :  -- :  36 : 1 :  1 :  2 :  0 : -2 :  1 : Psychic :  4 : Hunter :  2 : SpeedSetup :  3 : Poison : -2
-Loc Lac S Shawl       : ロックラックSスーツ     : B : A : C :  -- :  62 : 2 :  2 : -3 :  0 :  1 :  0 : Psychic :  5 : Transportr :  2
-Loc Lac S Kilt        : ロックラックSコイル     : B : A : W :  -- :  62 : 2 :  2 : -3 :  0 :  1 :  0 : Psychic :  5 : Transportr :  4
-Loc Lac S Boots       : ロックラックSブーツ     : B : A : L :  -- :  62 : 2 :  2 : -3 :  0 :  1 :  0 : Psychic :  5 : Transportr :  4
-Loc Lac S Vest        : ロックラックSベスト     : G : A : C :  -- :  36 : 2 :  3 : -2 :  0 :  2 :  0 : Psychic :  5 : Transportr :  2
-Loc Lac S Coat        : ロックラックSコート     : G : A : W :  -- :  36 : 2 :  3 : -2 :  0 :  2 :  0 : Psychic :  5 : Transportr :  4
-Loc Lac S Gaiters     : ロックラックSフット     : G : A : L :  -- :  36 : 2 :  3 : -2 :  0 :  2 :  0 : Psychic :  5 : Transportr :  4
-Bone S Helm           : ボーンSヘルム           : A : A : H :  -- :  62 : 1 :  2 :  0 : -2 : -1 :  0 : Gathering :  2 : KO :  2 :              Sleep : -3 : Rec Level :  4
-Bone S Mail           : ボーンSメイル           : B : A : C :  -- :  62 : 1 :  2 :  0 : -2 : -1 :  0 : Gathering :  1 : KO :  4 : Flute :  3 : Sleep : -1
-Bone S Vambraces      : ボーンSアーム           : B : A : A :  -- :  62 : 2 :  2 :  0 : -2 : -1 :  0 :                  KO :  1 : Flute :  3 : Sleep : -3 : Rec Level :  2
-Bone S Faulds         : ボーンSフォールド       : B : A : W :  -- :  62 : 1 :  2 :  0 : -2 : -1 :  0 : Gathering :  4 : KO :  3 :              Sleep : -1 : Rec Level :  3
-Bone S Greaves        : ボーンSグリーヴ         : B : A : L :  -- :  62 : 1 :  2 :  0 : -2 : -1 :  0 : Gathering :  4 :           Flute :  4 : Sleep : -2 : Rec Level :  1
-Bone S Cap            : ボーンSキャップ         : A : A : H :  -- :  36 : 1 :  4 :  0 : -1 :  0 :  0 : Gathering :  4 : KO :  4 :              Sleep : -1 : Rec Level :  4
-Bone S Vest           : ボーンSレジスト         : G : A : C :  -- :  36 : 1 :  4 :  0 : -1 :  0 :  0 : Gathering :  1 : KO :  3 : Flute :  3 : Sleep : -2
-Bone S Guards         : ボーンSガード           : G : A : A :  -- :  36 : 2 :  4 :  0 : -1 :  0 :  0 :                  KO :  3 : Flute :  3 : Sleep : -1 : Rec Level :  2
-Bone S Coat           : ボーンSコート           : G : A : W :  -- :  36 : 1 :  4 :  0 : -1 :  0 :  0 : Gathering :  4 : KO :  1 :              Sleep : -3 : Rec Level :  3
-Bone S Leggings       : ボーンSレギンス         : G : A : L :  -- :  36 : 1 :  4 :  0 : -1 :  0 :  0 : Gathering :  2 :           Flute :  4 : Sleep : -3 : Rec Level :  2
-Alloy S Helm          : アロイSヘルム           : A : A : H :  -- :  62 : 2 : -1 :  1 : -2 : -2 : -1 : Expert :  1 : Sharpener :  3 : Wind Res :  2 : Gathering : -3
-Alloy S Mail          : アロイSメイル           : B : A : C :  -- :  62 : 2 : -1 :  1 : -2 : -2 : -1 : Expert :  1 : Sharpener :  2 : Wind Res :  2 : Gathering : -2
-Alloy S Vambraces     : アロイSアーム           : B : A : A :  -- :  62 : 1 : -1 :  1 : -2 : -2 : -1 : Expert :  5 : Sharpener :  2 : Wind Res :  3 : Gathering : -1
-Alloy S Coil          : アロイSフォール         : B : A : W :  -- :  62 : 2 : -1 :  1 : -2 : -2 : -1 : Expert :  4 : Sharpener :  1 : Wind Res :  2 : Gathering : -2
-Alloy S Greaves       : アロイSグリーヴ         : B : A : L :  -- :  62 : 1 : -1 :  1 : -2 : -2 : -1 : Expert :  5 : Sharpener :  2 : Wind Res :  2 : Gathering : -2
-Alloy S Cap           : アロイSキャップ         : A : A : H :  -- :  36 : 2 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  4 : PelletS Up :  4 : Expert :  2 : Gathering : -1
-Alloy S Vest          : アロイSレジスト         : G : A : C :  -- :  36 : 2 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  2 : PelletS Up :  2 : Expert :  1 : Gathering : -2
-Alloy S Guards        : アロイSガード           : G : A : A :  -- :  36 : 1 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  2 : PelletS Up :  1 : Expert :  5 : Gathering : -3
-Alloy S Coat          : アロイSコート           : G : A : W :  -- :  36 : 2 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  3 : PelletS Up :  1 : Expert :  3 : Gathering : -2
-Alloy S Leggings      : アロイSレギンス         : G : A : L :  -- :  36 : 1 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  2 : PelletS Up :  2 : Expert :  5 : Gathering : -2
-Rhenoplos S Helm      : リノプロSヘルム         : A : A : H :  -- :  64 : 2 :  2 : -2 : -2 : -2 :  1 : Gunnery :  2 : StaminaRec :  2 : Stun : -3 : Mud/Snow :  2
-Rhenoplos S Mail      : リノプロSメイル         : B : A : C :  -- :  64 : 1 :  2 : -2 : -2 : -2 :  1 : Gunnery :  2 : StaminaRec :  1 : Stun : -2 : Defense :  4
-Rhenoplos S Vambraces : リノプロSアーム         : B : A : A :  -- :  64 : 1 :  2 : -2 : -2 : -2 :  1 : Gunnery :  4 : StaminaRec :  3 : Stun : -2 : Mud/Snow :  2
-Rhenoplos S Coil      : リノプロSコイル         : B : A : W :  -- :  64 : 1 :  2 : -2 : -2 : -2 :  1 : Gunnery :  4 : StaminaRec :  1 : Stun : -2 : Defense :  4
-Rhenoplos S Greaves   : リノプロSグリーヴ       : B : A : L :  -- :  64 : 2 :  2 : -2 : -2 : -2 :  1 : Gunnery :  1 : StaminaRec :  3 : Stun : -1 : Mud/Snow :  4
-Rhenoplos S Cap       : リノプロSキャップ       : A : A : H :  -- :  37 : 2 :  3 : -1 : -1 : -1 :  2 : Gunnery :  3 : StaminaRec :  3 : Stun : -1 : Precision :  4
-Rhenoplos S Vest      : リノプロSレジスト       : G : A : C :  -- :  37 : 1 :  3 : -1 : -1 : -1 :  2 :                StaminaRec :  2 : Stun : -2 : Precision :  1 : Defense :  4
-Rhenoplos S Guards    : リノプロSガード         : G : A : A :  -- :  37 : 1 :  3 : -1 : -1 : -1 :  2 : Gunnery :  4 : StaminaRec :  3 : Stun : -3 : Precision :  1
-Rhenoplos S Coat      : リノプロSコート         : G : A : W :  -- :  37 : 1 :  3 : -1 : -1 : -1 :  2 :                StaminaRec :  1 : Stun : -2 : Precision :  4 : Defense :  4
-Rhenoplos S Leggings  : リノプロSレギンス       : G : A : L :  -- :  37 : 2 :  3 : -1 : -1 : -1 :  2 : Gunnery :  3 : StaminaRec :  1 : Stun : -2 : Precision :  3
-Zuwaroposu S Hood     : ズワロSプード           : A : A : H :  -- :  64 : 1 : -2 :  2 : -1 :  0 :  1 : Water Res :  4 : Health :  7
-Zuwaroposu S Mantle   : ズワロSマント           : B : A : C :  -- :  64 : 0 : -2 :  2 : -1 :  0 :  1 : Water Res :  8 : Health :  3
-Zuwaroposu S Cap      : ズワロSフッド           : A : A : H :  -- :  39 : 1 : -1 :  4 :  0 :  0 :  2 : Water Res :  6 : Health :  7
-Zuwaroposu S Vest     : ズワロSケープ           : G : A : C :  -- :  39 : 0 : -1 :  4 :  0 :  0 :  2 : Water Res :  8 : Health :  3
-Bnahabra S Hat        : ブナハSハット           : A : A : H :  -- :  64 : 2 : -5 : -2 : -2 :  2 :  4 : Status :  1 : Fencing :  3 : Attack : -3 : Paralysis : 2
-Bnahabra S Suit       : ブナハSスーツ           : B : A : C :  -- :  64 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  2 : Fencing :  1 : Attack : -2 : Dragon Res : 4
-Bnahabra S Glove      : ブナハSグローブ         : B : A : A :  -- :  64 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  3 : Fencing :  2 : Attack : -4 : Paralysis : 2
-Bnahabra S Coil       : ブナハSコイル           : B : A : W :  -- :  64 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  2 : Fencing :  2 : Attack : -2 : Paralysis : 5
-Bnahabra S Boots      : ブナハSブーツ           : B : A : L :  -- :  64 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  2 : Fencing :  2 : Attack : -2 : Dragon Res : 5
-Bnahabra S Cap        : ブナハSキャップ         : A : A : H :  -- :  37 : 2 : -3 : -1 : -1 :  3 :  5 : Status :  3 : Reload Spd :  4 : Attack : -1 : Paralysis : 3
-Bnahabra S Vest       : ブナハSベスト           : G : A : C :  -- :  37 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  1 :                   Attack : -2 : Paralysis : 2 : Dragon Res :  4
-Bnahabra S Cuffs      : ブナハSカフス           : G : A : A :  -- :  37 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  1 : Reload Spd :  5 : Attack : -4 : Paralysis : 1
-Bnahabra S Coat       : ブナハSコート           : G : A : W :  -- :  37 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  4 : Reload Spd :  1 : Attack : -4 : Paralysis : 2
-Bnahabra S Pants      : ブナハSフット           : G : A : L :  -- :  37 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  1 : Reload Spd :  3 : Attack : -2                 : Dragon Res :  5
-Jaggi S Helm          : ジャギィSヘルム         : A : A : H :  -- :  67 : 1 : -4 : -2 : -2 : -2 :  1 : Attack :  3 : Rec Speed :  4 : Expert :  1 : LastingPwr : -3
-Jaggi S Mail          : ジャギィSメイル         : B : A : C :  -- :  67 : 1 : -4 : -2 : -2 : -2 :  1 : Attack :  2 : Rec Speed :  2 : Expert :  3 : LastingPwr : -2
-Jaggi S Vambraces     : ジャギィSアーム         : B : A : A :  -- :  67 : 2 : -4 : -2 : -2 : -2 :  1 : Attack :  4 : Rec Speed :  2 : Expert :  1 : LastingPwr : -2
-Jaggi S Faulds        : ジャギィSフォールド     : B : A : W :  -- :  67 : 1 : -4 : -2 : -2 : -2 :  1 : Attack :  2 : Rec Speed :  4 : Expert :  3 : LastingPwr : -2
-Jaggi S Greaves       : ジャギィSグリーヴ       : B : A : L :  -- :  67 : 1 : -4 : -2 : -2 : -2 :  1 : Attack :  4 : Rec Speed :  3 : Expert :  3 : LastingPwr : -1
-Jaggi S Cap           : ジャギィSキャップ       : A : A : H :  -- :  39 : 1 : -2 : -1 : -1 : -1 :  2 : Attack :  5 : Rec Speed :  4 : Expert :  3 : LastingPwr : -1
-Jaggi S Vest          : ジャギィSレジスト       : G : A : C :  -- :  39 : 1 : -2 : -1 : -1 : -1 :  2 : Attack :  2 : Rec Speed :  2 : Expert :  3 : LastingPwr : -2
-Jaggi S Guards        : ジャギィSガード         : G : A : A :  -- :  39 : 2 : -2 : -1 : -1 : -1 :  2 : Attack :  4 : Rec Speed :  1 : Expert :  1 : LastingPwr : -3
-Jaggi S Coat          : ジャギィSコート         : G : A : W :  -- :  39 : 1 : -2 : -1 : -1 : -1 :  2 : Attack :  1 : Rec Speed :  4 : Expert :  3 : LastingPwr : -3
-Jaggi S Leggings      : ジャギィSレギンス       : G : A : L :  -- :  39 : 1 : -2 : -1 : -1 : -1 :  2 : Attack :  3 : Rec Speed :  4 : Expert :  2 : LastingPwr : -2
-Froggi S Helm         : フロギィSヘルム         : A : A : H :  -- :  70 : 2 :  2 : -2 : -4 :  1 :  0 : Eating :  2 : Constitutn :  2 : Defense : -3 : Poison :  2
-Froggi S Mail         : フロギィSメイル         : B : A : C :  -- :  70 : 0 :  2 : -2 : -4 :  1 :  0 : Eating :  4 : Constitutn :  4 : Defense : -2 : Poison :  1
-Froggi S Vambraces    : フロギィSアーム         : B : A : A :  -- :  70 : 1 :  2 : -2 : -4 :  1 :  0 : Eating :  4 : Constitutn :  2 : Defense : -1 : Status :  4
-Froggi S Faulds       : フロギィSフォールド     : B : A : W :  -- :  70 : 2 :  2 : -2 : -4 :  1 :  0 : Eating :  2 : Constitutn :  2 : Defense : -2 : Status :  3
-Froggi S Greaves      : フロギィSグリーヴ       : B : A : L :  -- :  70 : 1 :  2 : -2 : -4 :  1 :  0 : Eating :  2 : Constitutn :  2 : Defense : -2 : Poison :  5
-Froggi S Cap          : フロギィSキャップ       : A : A : H :  -- :  41 : 2 :  4 : -1 : -2 :  2 :  0 : Eating :  4 : Constitutn :  4 : Defense : -1 : Poison :  2
-Froggi S Vest         : フロギィSレジスト       : G : A : C :  -- :  41 : 0 :  4 : -1 : -2 :  2 :  0 : Eating :  3 : Constitutn :  4 : Defense : -2 : Poison :  2
-Froggi S Guards       : フロギィSガード         : G : A : A :  -- :  41 : 1 :  4 : -1 : -2 :  2 :  0 : Eating :  2 : Constitutn :  2 : Defense : -3 : Status :  4
-Froggi S Coat         : フロギィSコート         : G : A : W :  -- :  41 : 2 :  4 : -1 : -2 :  2 :  0 : Eating :  2 : Constitutn :  2 : Defense : -2 : Status :  3
-Froggi S Leggings     : フロギィSレギンス       : G : A : L :  -- :  41 : 1 :  4 : -1 : -2 :  2 :  0 : Eating :  3 : Constitutn :  1 : Defense : -2 : Poison :  5
-Urkusus S Helm        : ウルクSヘルム           : A : A : H :  -- :  70 : 2 : -4 :  2 :  2 : -2 :  1 : Evasion :  2 : Attack :  1 : Fire Res : -3 : Ice Res :  3
-Urkusus S Mail        : ウルクSメイル           : B : A : C :  -- :  70 : 2 : -4 :  2 :  2 : -2 :  1 : Evasion :  1 : Attack :  1 : Fire Res : -2 : Ice Res :  3
-Urkusus S Vambraces   : ウルクSアーム           : B : A : A :  -- :  70 : 1 : -4 :  2 :  2 : -2 :  1 : Evasion :  4 : Attack :  2 : Fire Res : -2 : Ice Atk :  3
-Urkusus S Faulds      : ウルクSフォールド       : B : A : W :  -- :  70 : 0 : -4 :  2 :  2 : -2 :  1 : Evasion :  4 : Attack :  3 : Fire Res : -2 : Ice Atk :  4
-Urkusus S Greaves     : ウルクSグリーヴ         : B : A : L :  -- :  70 : 1 : -4 :  2 :  2 : -2 :  1 : Evasion :  3 : Attack :  3 : Fire Res : -1 : Ice Res :  4
-Urkusus S Cap         : ウルクSキャップ         : A : A : H :  -- :  41 : 2 : -2 :  3 :  4 : -1 :  3 : Evasion :  4 : Attack :  4 : Fire Res : -1 : Ice Res :  2
-Urkusus S Vest        : ウルクSレジスト         : G : A : C :  -- :  41 : 2 : -2 :  3 :  4 : -1 :  3 : Evasion :  1 : Attack :  1 : Fire Res : -2 : Ice Res :  3
-Urkusus S Guards      : ウルクSガード           : G : A : A :  -- :  41 : 1 : -2 :  3 :  4 : -1 :  3 : Evasion :  3 : Attack :  2 : Fire Res : -3 : Ice Atk :  3
-Urkusus S Coat        : ウルクSコート           : G : A : W :  -- :  41 : 0 : -2 :  3 :  4 : -1 :  3 : Evasion :  4 : Attack :  2 : Fire Res : -3 : Ice Atk :  4
-Urkusus S Leggings    : ウルクSレギンス         : G : A : L :  -- :  41 : 1 : -2 :  3 :  4 : -1 :  3 : Evasion :  2 : Attack :  2 : Fire Res : -2 : Ice Res :  5
-Steel S Mail          : スティールSメイル       : B : A : C :  -- :  71 : 1 :  2 :  0 :  2 : -2 :  0 : Guard :  3 : Sharpener :  4 : Antiseptic : 2
-Steel S Vambraces     : スティールSアーム       : B : A : A :  -- :  71 : 2 :  2 :  0 :  2 : -2 :  0 : Guard :  6 : Sharpener :  2 : Antiseptic : 1
-Steel S Faulds        : スティールSコイル       : B : A : W :  -- :  71 : 2 :  2 :  0 :  2 : -2 :  0 : Guard :  2 : Sharpener :  4 : Antiseptic : 3
-Aoashira S Helm       : アシラSヘルム           : A : A : H :  -- :  70 : 1 : -3 :  1 : -2 : -1 :  1 : Defense :  3 : Protection :  2 : Stun :  3 : Paralysis : -3
-Aoashira S Mail       : アシラSメイル           : B : A : C :  -- :  70 : 1 : -3 :  1 : -2 : -1 :  1 : Defense :  3 : Protection :  1 : Stun :  3 : Paralysis : -2
-Aoashira S Vambraces  : アシラSアーム           : B : A : A :  -- :  70 : 1 : -3 :  1 : -2 : -1 :  1 : Defense :  3 : Protection :  3 : Stun :  3 : Paralysis : -2
-Aoashira S Faulds     : アシラSフォールド       : B : A : W :  -- :  70 : 1 : -3 :  1 : -2 : -1 :  1 : Defense :  3 : Protection :  4 : Stun :  3 : Paralysis : -1
-Aoashira S Greaves    : アシラSグリーヴ         : B : A : L :  -- :  70 : 0 : -3 :  1 : -2 : -1 :  1 : Torso Up
-Aoashira S Cap        : アシラSキャップ         : A : A : H :  -- :  41 : 1 : -2 :  2 : -1 :  0 :  3 : Defense :  4 : Protection :  4 : Stun :  4 : Paralysis : -1
-Aoashira S Vest       : アシラSレジスト         : G : A : C :  -- :  41 : 1 : -2 :  2 : -1 :  0 :  3 : Defense :  3 : Protection :  1 : Stun :  3 : Paralysis : -2
-Aoashira S Guards     : アシラSガード           : G : A : A :  -- :  41 : 1 : -2 :  2 : -1 :  0 :  3 : Defense :  2 : Protection :  3 : Stun :  3 : Paralysis : -3
-Aoashira S Coat       : アシラSコート           : G : A : W :  -- :  41 : 1 : -2 :  2 : -1 :  0 :  3 : Defense :  3 : Protection :  3 : Stun :  3 : Paralysis : -2
-Aoashira S Leggings   : アシラSレギンス         : G : A : L :  -- :  41 : 0 : -2 :  2 : -1 :  0 :  3 : Torso Up
+Leather S Helm        : レザーＳヘルム          : A : A : H :  -- :  60 : 0 : -1 :  0 :  0 :  0 :  1 : Gathering :  4 : Spd Gather :  1 : Whim  :  4 : Hunger : 4
+Leather S Mail        : レザーＳメイル          : B : A : C :  -- :  60 : 1 : -1 :  0 :  0 :  0 :  1 : Gathering :  3 : Spd Gather :  2 : Whim  :  1 : Hunger : 3
+Leather S Vambraces   : レザーＳアーム          : B : A : A :  -- :  60 : 1 : -1 :  0 :  0 :  0 :  1 : Gathering :  1 : Spd Gather :  4 : Whim  :  4 : Hunger : 2
+Leather S Faulds      : レザーＳフォールド      : B : A : W :  -- :  60 : 1 : -1 :  0 :  0 :  0 :  1 : Gathering :  3 : Spd Gather :  1 : Whim  :  4 : Hunger : 3
+Leather S Greaves     : レザーＳグリーヴ        : B : A : L :  -- :  60 : 1 : -1 :  0 :  0 :  0 :  1 : Gathering :  4 : Spd Gather :  2 : Whim  :  2 : Hunger : 3
+Leather S Cap         : レザーＳキャップ        : A : A : H :  -- :  35 : 0 :  0 :  0 :  0 :  0 :  2 : Gathering :  4 : Spd Gather :  3 : Whim  :  3 : Hunger : 5
+Leather S Vest        : レザーＳレジスト        : G : A : C :  -- :  35 : 1 :  0 :  0 :  0 :  0 :  2 : Gathering :  3 : Spd Gather :  3 : Whim  :  1 : Hunger : 2
+Leather S Guards      : レザーＳガード          : G : A : A :  -- :  35 : 1 :  0 :  0 :  0 :  0 :  2 : Gathering :  3 : Spd Gather :  1 : Whim  :  4 : Hunger : 3
+Leather S Coat        : レザーＳコート          : G : A : W :  -- :  35 : 1 :  0 :  0 :  0 :  0 :  2 : Gathering :  1 : Spd Gather :  3 : Whim  :  4 : Hunger : 3
+Leather S Legging     : レザーＳレギンス        : G : A : L :  -- :  35 : 1 :  0 :  0 :  0 :  0 :  2 : Gathering :  4 : Spd Gather :  1 : Whim  :  4 : Hunger : 2
+Chainmail S Helm      : チェーンＳヘルム        : A : A : H :  -- :  60 : 1 :  2 :  1 :  1 : -2 :  0 : Health :  3 :                   Exhaust    :  4 : Combo Plus :  4
+Chainmail S Armor     : チェーンＳメイル        : B : A : C :  -- :  60 : 1 :  2 :  1 :  1 : -2 :  0 : Health :  2 :                   Exhaust    :  2 : Combo Plus :  5
+Chainmail S Vambraces : チェーンＳアーム        : B : A : A :  -- :  60 : 2 :  2 :  1 :  1 : -2 :  0 : Health :  4 : Combo Rate :  4 :                   Combo Plus :  1
+Chainmail S Faulds    : チェーンＳフォールド    : B : A : W :  -- :  60 : 2 :  2 :  1 :  1 : -2 :  0 : Health :  2 : Combo Rate :  4 : Exhaust    :  3
+Chainmail S Greaves   : チェーンＳグリーヴ      : B : A : L :  -- :  60 : 2 :  2 :  1 :  1 : -2 :  0 : Health :  4 : Combo Rate :  4 : Exhaust    :  1
+Chainmail S Cap       : チェーンＳキャップ      : A : A : H :  -- :  35 : 1 :  3 :  2 :  2 : -1 :  0 : Health :  4 :                   Combo Plus :  5 : Normal S+  :  4
+Chainmail S Vest      : チェーンＳレジスト      : G : A : C :  -- :  35 : 1 :  3 :  2 :  2 : -1 :  0 : Health :  3 :                   Combo Plus :  1 : Normal S+  :  5
+Chainmail S Guards    : チェーンＳガード        : G : A : A :  -- :  35 : 2 :  3 :  2 :  2 : -1 :  0 : Health :  3 : Combo Rate :  4 :                   Normal S+  :  2
+Chainmail S Coat      : チェーンＳコート        : G : A : W :  -- :  35 : 2 :  3 :  2 :  2 : -1 :  0 : Health :  2 : Combo Rate :  4 : Combo Plus :  3
+Chainmail S Leggings  : チェーンＳレギンス      : G : A : L :  -- :  35 : 2 :  3 :  2 :  2 : -1 :  0 : Health :  4 : Combo Rate :  4 : Combo Plus :  1
+Hunter's S Helm       : ハンターＳヘルム        : A : A : H :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 : Psychic :  3 : Hunter :  2 : SpeedSetup :  4 : Poison : -2
+Hunter's S Mail       : ハンターＳメイル        : B : A : C :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 : Psychic :  2 : Hunter :  1 :                   Poison : -3 : Perception :  3
+Hunter's S Vambraces  : ハンターＳアーム        : B : A : A :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 :                Hunter :  2 : SpeedSetup :  4 : Poison : -1 : Perception :  4
+Hunter's S Faulds     : ハンターＳフォールド    : B : A : W :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 : Psychic :  3 : Hunter :  3 :                   Poison : -2 : Perception :  3
+Hunter's S Greaves    : ハンターＳグリーヴ      : B : A : L :  -- :  62 : 1 :  0 :  1 :  0 : -4 :  0 : Psychic :  5 : Hunter :  2 : SpeedSetup :  2 : Poison : -2
+Hunter's S Cap        : ハンターＳキャップ      : A : A : H :  -- :  36 : 1 :  1 :  2 :  0 : -2 :  1 : Psychic :  4 : Hunter :  3 : SpeedSetup :  4 : Poison : -2
+Hunter's S Vest       : ハンターＳレジスト      : G : A : C :  -- :  36 : 1 :  1 :  2 :  0 : -2 :  1 : Psychic :  2 : Hunter :  1 :                   Poison : -3 : Perception :  3
+Hunter's S Guards     : ハンターＳガード        : G : A : A :  -- :  36 : 1 :  1 :  2 :  0 : -2 :  1 :                Hunter :  1 : SpeedSetup :  4 : Poison : -2 : Perception :  4
+Hunter's S Coat       : ハンターＳコート        : G : A : W :  -- :  36 : 1 :  1 :  2 :  0 : -2 :  1 : Psychic :  3 : Hunter :  4 :                   Poison : -1 : Perception :  3
+Hunter's S Leggings   : ハンターＳレギンス      : G : A : L :  -- :  36 : 1 :  1 :  2 :  0 : -2 :  1 : Psychic :  4 : Hunter :  2 : SpeedSetup :  3 : Poison : -2
+Loc Lac S Shawl       : ロックラックＳスーツ    : B : A : C :  -- :  62 : 2 :  2 : -3 :  0 :  1 :  0 : Psychic :  5 : Transportr :  2
+Loc Lac S Kilt        : ロックラックＳコイル    : B : A : W :  -- :  62 : 2 :  2 : -3 :  0 :  1 :  0 : Psychic :  5 : Transportr :  4
+Loc Lac S Boots       : ロックラックＳブーツ    : B : A : L :  -- :  62 : 2 :  2 : -3 :  0 :  1 :  0 : Psychic :  5 : Transportr :  4
+Loc Lac S Vest        : ロックラックＳベスト    : G : A : C :  -- :  36 : 2 :  3 : -2 :  0 :  2 :  0 : Psychic :  5 : Transportr :  2
+Loc Lac S Coat        : ロックラックＳコート    : G : A : W :  -- :  36 : 2 :  3 : -2 :  0 :  2 :  0 : Psychic :  5 : Transportr :  4
+Loc Lac S Gaiters     : ロックラックＳフット    : G : A : L :  -- :  36 : 2 :  3 : -2 :  0 :  2 :  0 : Psychic :  5 : Transportr :  4
+Bone S Helm           : ボーンＳヘルム          : A : A : H :  -- :  62 : 1 :  2 :  0 : -2 : -1 :  0 : Gathering :  2 : KO :  2 :              Sleep : -3 : Rec Level :  4
+Bone S Mail           : ボーンＳメイル          : B : A : C :  -- :  62 : 1 :  2 :  0 : -2 : -1 :  0 : Gathering :  1 : KO :  4 : Flute :  3 : Sleep : -1
+Bone S Vambraces      : ボーンＳアーム          : B : A : A :  -- :  62 : 2 :  2 :  0 : -2 : -1 :  0 :                  KO :  1 : Flute :  3 : Sleep : -3 : Rec Level :  2
+Bone S Faulds         : ボーンＳフォールド      : B : A : W :  -- :  62 : 1 :  2 :  0 : -2 : -1 :  0 : Gathering :  4 : KO :  3 :              Sleep : -1 : Rec Level :  3
+Bone S Greaves        : ボーンＳグリーヴ        : B : A : L :  -- :  62 : 1 :  2 :  0 : -2 : -1 :  0 : Gathering :  4 :           Flute :  4 : Sleep : -2 : Rec Level :  1
+Bone S Cap            : ボーンＳキャップ        : A : A : H :  -- :  36 : 1 :  4 :  0 : -1 :  0 :  0 : Gathering :  4 : KO :  4 :              Sleep : -1 : Rec Level :  4
+Bone S Vest           : ボーンＳレジスト        : G : A : C :  -- :  36 : 1 :  4 :  0 : -1 :  0 :  0 : Gathering :  1 : KO :  3 : Flute :  3 : Sleep : -2
+Bone S Guards         : ボーンＳガード          : G : A : A :  -- :  36 : 2 :  4 :  0 : -1 :  0 :  0 :                  KO :  3 : Flute :  3 : Sleep : -1 : Rec Level :  2
+Bone S Coat           : ボーンＳコート          : G : A : W :  -- :  36 : 1 :  4 :  0 : -1 :  0 :  0 : Gathering :  4 : KO :  1 :              Sleep : -3 : Rec Level :  3
+Bone S Leggings       : ボーンＳレギンス        : G : A : L :  -- :  36 : 1 :  4 :  0 : -1 :  0 :  0 : Gathering :  2 :           Flute :  4 : Sleep : -3 : Rec Level :  2
+Alloy S Helm          : アロイＳヘルム          : A : A : H :  -- :  62 : 2 : -1 :  1 : -2 : -2 : -1 : Expert :  1 : Sharpener :  3 : Wind Res :  2 : Gathering : -3
+Alloy S Mail          : アロイＳメイル          : B : A : C :  -- :  62 : 2 : -1 :  1 : -2 : -2 : -1 : Expert :  1 : Sharpener :  2 : Wind Res :  2 : Gathering : -2
+Alloy S Vambraces     : アロイＳアーム          : B : A : A :  -- :  62 : 1 : -1 :  1 : -2 : -2 : -1 : Expert :  5 : Sharpener :  2 : Wind Res :  3 : Gathering : -1
+Alloy S Coil          : アロイＳコイル          : B : A : W :  -- :  62 : 2 : -1 :  1 : -2 : -2 : -1 : Expert :  4 : Sharpener :  1 : Wind Res :  2 : Gathering : -2
+Alloy S Greaves       : アロイＳグリーヴ        : B : A : L :  -- :  62 : 1 : -1 :  1 : -2 : -2 : -1 : Expert :  5 : Sharpener :  2 : Wind Res :  2 : Gathering : -2
+Alloy S Cap           : アロイＳキャップ        : A : A : H :  -- :  36 : 2 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  4 : PelletS Up :  4 : Expert :  2 : Gathering : -1
+Alloy S Vest          : アロイＳレジスト        : G : A : C :  -- :  36 : 2 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  2 : PelletS Up :  2 : Expert :  1 : Gathering : -2
+Alloy S Guards        : アロイＳガード          : G : A : A :  -- :  36 : 1 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  2 : PelletS Up :  1 : Expert :  5 : Gathering : -3
+Alloy S Coat          : アロイＳコート          : G : A : W :  -- :  36 : 2 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  3 : PelletS Up :  1 : Expert :  3 : Gathering : -2
+Alloy S Leggings      : アロイＳレギンス        : G : A : L :  -- :  36 : 1 :  0 :  2 : -1 : -1 :  0 : Pellet S+ :  2 : PelletS Up :  2 : Expert :  5 : Gathering : -2
+Rhenoplos S Helm      : リノプロＳヘルム        : A : A : H :  -- :  64 : 2 :  2 : -2 : -2 : -2 :  1 : Gunnery :  2 : StaminaRec :  2 : Stun : -3 : Mud/Snow :  2
+Rhenoplos S Mail      : リノプロＳメイル        : B : A : C :  -- :  64 : 1 :  2 : -2 : -2 : -2 :  1 : Gunnery :  2 : StaminaRec :  1 : Stun : -2 : Defense :  4
+Rhenoplos S Vambraces : リノプロＳアーム        : B : A : A :  -- :  64 : 1 :  2 : -2 : -2 : -2 :  1 : Gunnery :  4 : StaminaRec :  3 : Stun : -2 : Mud/Snow :  2
+Rhenoplos S Coil      : リノプロＳコイル        : B : A : W :  -- :  64 : 1 :  2 : -2 : -2 : -2 :  1 : Gunnery :  4 : StaminaRec :  1 : Stun : -2 : Defense :  4
+Rhenoplos S Greaves   : リノプロＳグリーヴ      : B : A : L :  -- :  64 : 2 :  2 : -2 : -2 : -2 :  1 : Gunnery :  1 : StaminaRec :  3 : Stun : -1 : Mud/Snow :  4
+Rhenoplos S Cap       : リノプロＳキャップ      : A : A : H :  -- :  37 : 2 :  3 : -1 : -1 : -1 :  2 : Gunnery :  3 : StaminaRec :  3 : Stun : -1 : Precision :  4
+Rhenoplos S Vest      : リノプロＳレジスト      : G : A : C :  -- :  37 : 1 :  3 : -1 : -1 : -1 :  2 :                StaminaRec :  2 : Stun : -2 : Precision :  1 : Defense :  4
+Rhenoplos S Guards    : リノプロＳガード        : G : A : A :  -- :  37 : 1 :  3 : -1 : -1 : -1 :  2 : Gunnery :  4 : StaminaRec :  3 : Stun : -3 : Precision :  1
+Rhenoplos S Coat      : リノプロＳコート        : G : A : W :  -- :  37 : 1 :  3 : -1 : -1 : -1 :  2 :                StaminaRec :  1 : Stun : -2 : Precision :  4 : Defense :  4
+Rhenoplos S Leggings  : リノプロＳレギンス      : G : A : L :  -- :  37 : 2 :  3 : -1 : -1 : -1 :  2 : Gunnery :  3 : StaminaRec :  1 : Stun : -2 : Precision :  3
+Zuwaroposu S Hood     : ズワロＳフード          : A : A : H :  -- :  64 : 1 : -2 :  2 : -1 :  0 :  1 : Water Res :  4 : Health :  7
+Zuwaroposu S Mantle   : ズワロＳマント          : B : A : C :  -- :  64 : 0 : -2 :  2 : -1 :  0 :  1 : Water Res :  8 : Health :  3
+Zuwaroposu S Cap      : ズワロＳフッド          : A : A : H :  -- :  39 : 1 : -1 :  4 :  0 :  0 :  2 : Water Res :  6 : Health :  7
+Zuwaroposu S Vest     : ズワロＳケープ          : G : A : C :  -- :  39 : 0 : -1 :  4 :  0 :  0 :  2 : Water Res :  8 : Health :  3
+Bnahabra S Hat        : ブナハＳハット          : A : A : H :  -- :  64 : 2 : -5 : -2 : -2 :  2 :  4 : Status :  1 : Fencing :  3 : Attack : -3 : Paralysis : 2
+Bnahabra S Suit       : ブナハＳスーツ          : B : A : C :  -- :  64 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  2 : Fencing :  1 : Attack : -2 : Dragon Res : 4
+Bnahabra S Glove      : ブナハＳグローブ        : B : A : A :  -- :  64 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  3 : Fencing :  2 : Attack : -4 : Paralysis : 2
+Bnahabra S Coil       : ブナハＳコイル          : B : A : W :  -- :  64 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  2 : Fencing :  2 : Attack : -2 : Paralysis : 5
+Bnahabra S Boots      : ブナハＳブーツ          : B : A : L :  -- :  64 : 1 : -5 : -2 : -2 :  2 :  4 : Status :  2 : Fencing :  2 : Attack : -2 : Dragon Res : 5
+Bnahabra S Cap        : ブナハＳキャップ        : A : A : H :  -- :  37 : 2 : -3 : -1 : -1 :  3 :  5 : Status :  3 : Reload Spd :  4 : Attack : -1 : Paralysis : 3
+Bnahabra S Vest       : ブナハＳベスト          : G : A : C :  -- :  37 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  1 :                   Attack : -2 : Paralysis : 2 : Dragon Res :  4
+Bnahabra S Cuffs      : ブナハＳカフス          : G : A : A :  -- :  37 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  1 : Reload Spd :  5 : Attack : -4 : Paralysis : 1
+Bnahabra S Coat       : ブナハＳコート          : G : A : W :  -- :  37 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  4 : Reload Spd :  1 : Attack : -4 : Paralysis : 2
+Bnahabra S Pants      : ブナハＳフット          : G : A : L :  -- :  37 : 1 : -3 : -1 : -1 :  3 :  5 : Status :  1 : Reload Spd :  3 : Attack : -2                 : Dragon Res :  5
+Jaggi S Helm          : ジャギィＳヘルム        : A : A : H :  -- :  67 : 1 : -4 : -2 : -2 : -2 :  1 : Attack :  3 : Rec Speed :  4 : Expert :  1 : LastingPwr : -3
+Jaggi S Mail          : ジャギィＳメイル        : B : A : C :  -- :  67 : 1 : -4 : -2 : -2 : -2 :  1 : Attack :  2 : Rec Speed :  2 : Expert :  3 : LastingPwr : -2
+Jaggi S Vambraces     : ジャギィＳアーム        : B : A : A :  -- :  67 : 2 : -4 : -2 : -2 : -2 :  1 : Attack :  4 : Rec Speed :  2 : Expert :  1 : LastingPwr : -2
+Jaggi S Faulds        : ジャギィＳフォールド    : B : A : W :  -- :  67 : 1 : -4 : -2 : -2 : -2 :  1 : Attack :  2 : Rec Speed :  4 : Expert :  3 : LastingPwr : -2
+Jaggi S Greaves       : ジャギィＳグリーヴ      : B : A : L :  -- :  67 : 1 : -4 : -2 : -2 : -2 :  1 : Attack :  4 : Rec Speed :  3 : Expert :  3 : LastingPwr : -1
+Jaggi S Cap           : ジャギィＳキャップ      : A : A : H :  -- :  39 : 1 : -2 : -1 : -1 : -1 :  2 : Attack :  5 : Rec Speed :  4 : Expert :  3 : LastingPwr : -1
+Jaggi S Vest          : ジャギィＳレジスト      : G : A : C :  -- :  39 : 1 : -2 : -1 : -1 : -1 :  2 : Attack :  2 : Rec Speed :  2 : Expert :  3 : LastingPwr : -2
+Jaggi S Guards        : ジャギィＳガード        : G : A : A :  -- :  39 : 2 : -2 : -1 : -1 : -1 :  2 : Attack :  4 : Rec Speed :  1 : Expert :  1 : LastingPwr : -3
+Jaggi S Coat          : ジャギィＳコート        : G : A : W :  -- :  39 : 1 : -2 : -1 : -1 : -1 :  2 : Attack :  1 : Rec Speed :  4 : Expert :  3 : LastingPwr : -3
+Jaggi S Leggings      : ジャギィＳレギンス      : G : A : L :  -- :  39 : 1 : -2 : -1 : -1 : -1 :  2 : Attack :  3 : Rec Speed :  4 : Expert :  2 : LastingPwr : -2
+Froggi S Helm         : フロギィＳヘルム        : A : A : H :  -- :  70 : 2 :  2 : -2 : -4 :  1 :  0 : Eating :  2 : Constitutn :  2 : Defense : -3 : Poison :  2
+Froggi S Mail         : フロギィＳメイル        : B : A : C :  -- :  70 : 0 :  2 : -2 : -4 :  1 :  0 : Eating :  4 : Constitutn :  4 : Defense : -2 : Poison :  1
+Froggi S Vambraces    : フロギィＳアーム        : B : A : A :  -- :  70 : 1 :  2 : -2 : -4 :  1 :  0 : Eating :  4 : Constitutn :  2 : Defense : -1 : Status :  4
+Froggi S Faulds       : フロギィＳフォールド    : B : A : W :  -- :  70 : 2 :  2 : -2 : -4 :  1 :  0 : Eating :  2 : Constitutn :  2 : Defense : -2 : Status :  3
+Froggi S Greaves      : フロギィＳグリーヴ      : B : A : L :  -- :  70 : 1 :  2 : -2 : -4 :  1 :  0 : Eating :  2 : Constitutn :  2 : Defense : -2 : Poison :  5
+Froggi S Cap          : フロギィＳキャップ      : A : A : H :  -- :  41 : 2 :  4 : -1 : -2 :  2 :  0 : Eating :  4 : Constitutn :  4 : Defense : -1 : Poison :  2
+Froggi S Vest         : フロギィＳレジスト      : G : A : C :  -- :  41 : 0 :  4 : -1 : -2 :  2 :  0 : Eating :  3 : Constitutn :  4 : Defense : -2 : Poison :  2
+Froggi S Guards       : フロギィＳガード        : G : A : A :  -- :  41 : 1 :  4 : -1 : -2 :  2 :  0 : Eating :  2 : Constitutn :  2 : Defense : -3 : Status :  4
+Froggi S Coat         : フロギィＳコート        : G : A : W :  -- :  41 : 2 :  4 : -1 : -2 :  2 :  0 : Eating :  2 : Constitutn :  2 : Defense : -2 : Status :  3
+Froggi S Leggings     : フロギィＳレギンス      : G : A : L :  -- :  41 : 1 :  4 : -1 : -2 :  2 :  0 : Eating :  3 : Constitutn :  1 : Defense : -2 : Poison :  5
+Urkusus S Helm        : ウルクＳヘルム          : A : A : H :  -- :  70 : 2 : -4 :  2 :  2 : -2 :  1 : Evasion :  2 : Attack :  1 : Fire Res : -3 : Ice Res :  3
+Urkusus S Mail        : ウルクＳメイル          : B : A : C :  -- :  70 : 2 : -4 :  2 :  2 : -2 :  1 : Evasion :  1 : Attack :  1 : Fire Res : -2 : Ice Res :  3
+Urkusus S Vambraces   : ウルクＳアーム          : B : A : A :  -- :  70 : 1 : -4 :  2 :  2 : -2 :  1 : Evasion :  4 : Attack :  2 : Fire Res : -2 : Ice Atk :  3
+Urkusus S Faulds      : ウルクＳフォールド      : B : A : W :  -- :  70 : 0 : -4 :  2 :  2 : -2 :  1 : Evasion :  4 : Attack :  3 : Fire Res : -2 : Ice Atk :  4
+Urkusus S Greaves     : ウルクＳグリーヴ        : B : A : L :  -- :  70 : 1 : -4 :  2 :  2 : -2 :  1 : Evasion :  3 : Attack :  3 : Fire Res : -1 : Ice Res :  4
+Urkusus S Cap         : ウルクＳキャップ        : A : A : H :  -- :  41 : 2 : -2 :  3 :  4 : -1 :  3 : Evasion :  4 : Attack :  4 : Fire Res : -1 : Ice Res :  2
+Urkusus S Vest        : ウルクＳレジスト        : G : A : C :  -- :  41 : 2 : -2 :  3 :  4 : -1 :  3 : Evasion :  1 : Attack :  1 : Fire Res : -2 : Ice Res :  3
+Urkusus S Guards      : ウルクＳガード          : G : A : A :  -- :  41 : 1 : -2 :  3 :  4 : -1 :  3 : Evasion :  3 : Attack :  2 : Fire Res : -3 : Ice Atk :  3
+Urkusus S Coat        : ウルクＳコート          : G : A : W :  -- :  41 : 0 : -2 :  3 :  4 : -1 :  3 : Evasion :  4 : Attack :  2 : Fire Res : -3 : Ice Atk :  4
+Urkusus S Leggings    : ウルクＳレギンス        : G : A : L :  -- :  41 : 1 : -2 :  3 :  4 : -1 :  3 : Evasion :  2 : Attack :  2 : Fire Res : -2 : Ice Res :  5
+Steel S Mail          : スティールＳメイル      : B : A : C :  -- :  71 : 1 :  2 :  0 :  2 : -2 :  0 : Guard :  3 : Sharpener :  4 : Antiseptic : 2
+Steel S Vambraces     : スティールＳアーム      : B : A : A :  -- :  71 : 2 :  2 :  0 :  2 : -2 :  0 : Guard :  6 : Sharpener :  2 : Antiseptic : 1
+Steel S Faulds        : スティールＳコイル      : B : A : W :  -- :  71 : 2 :  2 :  0 :  2 : -2 :  0 : Guard :  2 : Sharpener :  4 : Antiseptic : 3
+Aoashira S Helm       : アシラＳヘルム          : A : A : H :  -- :  70 : 1 : -3 :  1 : -2 : -1 :  1 : Defense :  3 : Protection :  2 : Stun :  3 : Paralysis : -3
+Aoashira S Mail       : アシラＳメイル          : B : A : C :  -- :  70 : 1 : -3 :  1 : -2 : -1 :  1 : Defense :  3 : Protection :  1 : Stun :  3 : Paralysis : -2
+Aoashira S Vambraces  : アシラＳアーム          : B : A : A :  -- :  70 : 1 : -3 :  1 : -2 : -1 :  1 : Defense :  3 : Protection :  3 : Stun :  3 : Paralysis : -2
+Aoashira S Faulds     : アシラＳフォールド      : B : A : W :  -- :  70 : 1 : -3 :  1 : -2 : -1 :  1 : Defense :  3 : Protection :  4 : Stun :  3 : Paralysis : -1
+Aoashira S Greaves    : アシラＳグリーヴ        : B : A : L :  -- :  70 : 0 : -3 :  1 : -2 : -1 :  1 : Torso Up
+Aoashira S Cap        : アシラＳキャップ        : A : A : H :  -- :  41 : 1 : -2 :  2 : -1 :  0 :  3 : Defense :  4 : Protection :  4 : Stun :  4 : Paralysis : -1
+Aoashira S Vest       : アシラＳレジスト        : G : A : C :  -- :  41 : 1 : -2 :  2 : -1 :  0 :  3 : Defense :  3 : Protection :  1 : Stun :  3 : Paralysis : -2
+Aoashira S Guards     : アシラＳガード          : G : A : A :  -- :  41 : 1 : -2 :  2 : -1 :  0 :  3 : Defense :  2 : Protection :  3 : Stun :  3 : Paralysis : -3
+Aoashira S Coat       : アシラＳコート          : G : A : W :  -- :  41 : 1 : -2 :  2 : -1 :  0 :  3 : Defense :  3 : Protection :  3 : Stun :  3 : Paralysis : -2
+Aoashira S Leggings   : アシラＳレギンス        : G : A : L :  -- :  41 : 0 : -2 :  2 : -1 :  0 :  3 : Torso Up
 Chakra Earring        : 三眼のピアス            : A : A : H :  -- :  37 : 3 :  0 :  0 :  0 :  0 :  3
 Chakra Necklace       : 三眼の首飾り            : A : A : C :  -- :  37 : 3 :  3 : -3 :  0 :  0 :  0
 Chakra Bracelet       : 三眼の腕輪              : A : A : A :  -- :  37 : 3 :  0 :  3 :  0 : -3 :  0
@@ -500,46 +500,46 @@ Yuami Headpiece+      : 高級ユアミタオル        : A : A : H :  -- :  47 
 Yuami Towel+          : 高級ユアミスガタ        : A : A : C :  -- :  47 : 1 : -2 :  2 : -2 : -2 :  0 : Fate :  3 : LastingPwr :  2 : Attack : -4
 Yuami Wrist+          : 高級ユアミリスト        : A : A : A :  -- :  47 : 2 : -2 :  2 : -2 : -2 :  0 : Fate :  4 : LastingPwr :  2 : Attack : -3
 Yuami Sandals+        : 高級ユアミサンダル      : A : A : L :  -- :  47 : 1 : -2 :  2 : -2 : -2 :  0 : Fate :  5 : LastingPwr :  3 : Attack : -3
-Pumpkin S Helm        : マギュルSフロール       : A : A : H :  -- :  64 : 2 : -4 :  1 :  2 :  0 :  0 : FastCharge :  1 : SpeedSetup :  3 : Evasion :  2 : Guard : -3
-Pumpkin S Mail        : マギュルSトロンコ       : B : A : C :  -- :  64 : 1 : -4 :  1 :  2 :  0 :  0 : FastCharge :  1 :                   Evasion :  2 : Guard : -2 : LastingPwr :  4
-Pumpkin S Vambraces   : マギュルSラーマ         : B : A : A :  -- :  64 : 2 : -4 :  1 :  2 :  0 :  0 : FastCharge :  2 : SpeedSetup :  3 : Evasion :  2 : Guard : -2
-Pumpkin S Faulds      : マギュルSオッハ         : B : A : W :  -- :  64 : 0 : -4 :  1 :  2 :  0 :  0 : FastCharge :  4 : SpeedSetup :  2 :                Guard : -1 : LastingPwr :  6
-Pumpkin S Greaves     : マギュルSライース       : B : A : L :  -- :  64 : 2 : -4 :  1 :  2 :  0 :  0 : FastCharge :  2 : SpeedSetup :  1 : Evasion :  4 : Guard : -2
-Pumpkin S Cap         : マギュルSブルーメ       : A : A : H :  -- :  37 : 2 : -2 :  2 :  4 :  0 :  0 : FastCharge :  3 : SpeedSetup :  3 : Evasion :  4 : Precision : -1
-Pumpkin S Vest        : マギュルSシュタム       : G : A : C :  -- :  37 : 1 : -2 :  2 :  4 :  0 :  0 : FastCharge :  1 :                   Evasion :  2 : Precision : -2 : LastingPwr :  4
-Pumpkin S Guards      : マギュルSアスト         : G : A : A :  -- :  37 : 2 : -2 :  2 :  4 :  0 :  0 : FastCharge :  2 : SpeedSetup :  4 : Evasion :  1 : Precision : -2
-Pumpkin S Coat        : マギュルSブラット       : G : A : W :  -- :  37 : 0 : -2 :  2 :  4 :  0 :  0 : FastCharge :  4 : SpeedSetup :  1 :                Precision : -2 : LastingPwr :  6
-Pumpkin S Leggings    : マギュルSヴルツェル     : G : A : L :  -- :  37 : 2 : -2 :  2 :  4 :  0 :  0 : FastCharge :  1 : SpeedSetup :  2 : Evasion :  3 : Precision : -3
-Qurupeco S Helm       : ペッコSヘルム           : A : A : H :  -- :  67 : 2 :  2 : -2 : -4 : -1 :  2 : Wide-Range :  3 : Psychic :  2 : Ice Res : -3 : Fire Atk :  1
-Qurupeco S Mail       : ペッコSメイル           : B : A : C :  -- :  67 : 1 :  2 : -2 : -4 : -1 :  2 : Wide-Range :  5 : Psychic :  1 : Ice Res : -2 : Fire Atk :  1
-Qurupeco S Vambraces  : ペッコSアーム           : B : A : A :  -- :  67 : 0 :  2 : -2 : -4 : -1 :  2 : Wide-Range :  5 : Psychic :  5 : Ice Res : -2 : Fire Atk :  1
-Qurupeco S Coil       : ペッコSコイル           : B : A : W :  -- :  67 : 2 :  2 : -2 : -4 : -1 :  2 : Wide-Range :  3 : Psychic :  3 : Ice Res : -2 : Fire Atk :  1
-Qurupeco S Greaves    : ペッコSグリーヴ         : B : A : L :  -- :  67 : 1 :  2 : -2 : -4 : -1 :  2 : Wide-Range :  4 : Psychic :  2 : Ice Res : -1 : Fire Atk :  4
-Qurupeco S Cap        : ペッコSキャップ         : A : A : H :  -- :  39 : 2 :  4 : -1 : -3 :  0 :  4 : Wide-Range :  5 : Psychic :  4 : Ice Res : -1 : Fire Atk :  1
-Qurupeco S Vest       : ペッコSレジスト         : G : A : C :  -- :  39 : 1 :  4 : -1 : -3 :  0 :  4 : Wide-Range :  5 : Psychic :  1 : Ice Res : -2 : Fire Atk :  1
-Qurupeco S Guards     : ペッコSガード           : G : A : A :  -- :  39 : 0 :  4 : -1 : -3 :  0 :  4 : Wide-Range :  5 : Psychic :  4 : Ice Res : -3 : Fire Atk :  1
-Qurupeco S Coat       : ペッコSコート           : G : A : W :  -- :  39 : 2 :  4 : -1 : -3 :  0 :  4 : Wide-Range :  4 : Psychic :  2 : Ice Res : -2 : Fire Atk :  1
-Qurupeco S Leggings   : ペッコSレギンス         : G : A : L :  -- :  39 : 1 :  4 : -1 : -3 :  0 :  4 : Wide-Range :  3 : Psychic :  2 : Ice Res : -2 : Fire Atk :  4
-Ludroth S Helm        : ルドロスSヘルム         : A : A : H :  -- :  70 : 2 : -4 :  2 : -2 : -2 :  1 : Stamina :  2 : Stun :  2 : ThunderAtk : -3 : Water Atk :  2
-Ludroth S Mail        : ルドロスSメイル         : B : A : C :  -- :  70 : 1 : -4 :  2 : -2 : -2 :  1 : Stamina :  2 : KO   :  4 : ThunderAtk : -2 : Water Atk :  1
-Ludroth S Vambraces   : ルドロスSアーム         : B : A : A :  -- :  70 : 1 : -4 :  2 : -2 : -2 :  1 : Stamina :  3 : Stun :  5 : ThunderAtk : -2 : Water Atk :  1
-Ludroth S Faulds      : ルドロスSフォールド     : B : A : W :  -- :  70 : 2 : -4 :  2 : -2 : -2 :  1 : Stamina :  2 : Stun :  4 : ThunderAtk : -1 : Water Atk :  2
-Ludroth S Greaves     : ルドロスSグリーヴ       : B : A : L :  -- :  70 : 1 : -4 :  2 : -2 : -2 :  1 : Stamina :  1 : KO   :  4 : ThunderAtk : -2 : Water Atk :  4
-Ludroth S Cap         : ルドロスSキャップ       : A : A : H :  -- :  41 : 2 : -2 :  4 : -1 : -1 :  2 : Stamina :  4 : Stun :  5 : ThunderAtk : -1 : Water Atk :  1
-Ludroth S Vest        : ルドロスSレジスト       : G : A : C :  -- :  41 : 1 : -2 :  4 : -1 : -1 :  2 : Stamina :  2 : KO   :  4 : ThunderAtk : -2 : Water Atk :  1
-Ludroth S Guards      : ルドロスSガード         : G : A : A :  -- :  41 : 1 : -2 :  4 : -1 : -1 :  2 : Stamina :  2 : Stun :  4 : ThunderAtk : -3 : Water Atk :  2
-Ludroth S Coat        : ルドロスSコート         : G : A : W :  -- :  41 : 2 : -2 :  4 : -1 : -1 :  2 : Stamina :  2 : Stun :  3 : ThunderAtk : -2 : Water Atk :  2
-Ludroth S Leggings    : ルドロスSレギンス       : G : A : L :  -- :  41 : 1 : -2 :  4 : -1 : -1 :  2 : Stamina :  1 : KO   :  4 : ThunderAtk : -2 : Water Atk :  4
-Vaiku S Helm          : ヴァイクSヘルム         : A : A : H :  -- :  70 : 2 :  0 :  3 : -2 : -2 :  0 : Sheathe :  3 : Sharpness :  3 : Sharpener : -2 : Water Res :  1
-Vaiku S Mail          : ヴァイクSメイル         : B : A : C :  -- :  70 : 2 :  0 :  3 : -2 : -2 :  0 : Sheathe :  1 : Sharpness :  1 : Sharpener : -1 : Water Res :  4
-Vaiku S Vambraces     : ヴァイクSアーム         : B : A : A :  -- :  70 : 1 :  0 :  3 : -2 : -2 :  0 : Sheathe :  3 : Sharpness :  3 : Sharpener : -1 : Water Res :  4
-Vaiku S Faulds        : ヴァイクSフォールド     : B : A : W :  -- :  70 : 1 :  0 :  3 : -2 : -2 :  0 : Sheathe :  1 : Sharpness :  2 : Sharpener : -3 : Rec Speed :  5
-Vaiku S Greaves       : ヴァイクSグリーヴ       : B : A : L :  -- :  70 : 2 :  0 :  3 : -2 : -2 :  0 : Sheathe :  2 : Sharpness :  1 : Sharpener : -3 : Rec Speed :  3
-Vaiku S Cap           : ヴァイクSキャップ       : A : A : H :  -- :  41 : 2 :  0 :  5 : -4 : -1 :  0 : Sheathe :  4 : NormalS Up :  3 : Reload Spd : -2 : Water Res :  2
-Vaiku S Vest          : ヴァイクSレジスト       : G : A : C :  -- :  41 : 2 :  0 :  5 : -4 : -1 :  0 : Sheathe :  1 : NormalS Up :  1 : Reload Spd : -2 : Water Res :  3
-Vaiku S Guards        : ヴァイクSガード         : G : A : A :  -- :  41 : 1 :  0 :  5 : -4 : -1 :  0 : Sheathe :  1 : NormalS Up :  4 : Reload Spd : -2 : Water Res :  4
-Vaiku S Coat          : ヴァイクSコート         : G : A : W :  -- :  41 : 1 :  0 :  5 : -4 : -1 :  0 : Sheathe :  3 : NormalS Up :  2 : Reload Spd : -1 : Rec Speed :  5
-Vaiku S Leggings      : ヴァイクSレギンス       : G : A : L :  -- :  41 : 2 :  0 :  5 : -4 : -1 :  0 : Sheathe :  2 : NormalS Up :  1 : Reload Spd : -3 : Rec Speed :  3
+Pumpkin S Helm        : マギュルＳフロール      : A : A : H :  -- :  64 : 2 : -4 :  1 :  2 :  0 :  0 : FastCharge :  1 : SpeedSetup :  3 : Evasion :  2 : Guard : -3
+Pumpkin S Mail        : マギュルＳトロンコ      : B : A : C :  -- :  64 : 1 : -4 :  1 :  2 :  0 :  0 : FastCharge :  1 :                   Evasion :  2 : Guard : -2 : LastingPwr :  4
+Pumpkin S Vambraces   : マギュルＳラーマ        : B : A : A :  -- :  64 : 2 : -4 :  1 :  2 :  0 :  0 : FastCharge :  2 : SpeedSetup :  3 : Evasion :  2 : Guard : -2
+Pumpkin S Faulds      : マギュルＳオッハ        : B : A : W :  -- :  64 : 0 : -4 :  1 :  2 :  0 :  0 : FastCharge :  4 : SpeedSetup :  2 :                Guard : -1 : LastingPwr :  6
+Pumpkin S Greaves     : マギュルＳライース      : B : A : L :  -- :  64 : 2 : -4 :  1 :  2 :  0 :  0 : FastCharge :  2 : SpeedSetup :  1 : Evasion :  4 : Guard : -2
+Pumpkin S Cap         : マギュルＳブルーメ      : A : A : H :  -- :  37 : 2 : -2 :  2 :  4 :  0 :  0 : FastCharge :  3 : SpeedSetup :  3 : Evasion :  4 : Precision : -1
+Pumpkin S Vest        : マギュルＳシュタム      : G : A : C :  -- :  37 : 1 : -2 :  2 :  4 :  0 :  0 : FastCharge :  1 :                   Evasion :  2 : Precision : -2 : LastingPwr :  4
+Pumpkin S Guards      : マギュルＳアスト        : G : A : A :  -- :  37 : 2 : -2 :  2 :  4 :  0 :  0 : FastCharge :  2 : SpeedSetup :  4 : Evasion :  1 : Precision : -2
+Pumpkin S Coat        : マギュルＳブラット      : G : A : W :  -- :  37 : 0 : -2 :  2 :  4 :  0 :  0 : FastCharge :  4 : SpeedSetup :  1 :                Precision : -2 : LastingPwr :  6
+Pumpkin S Leggings    : マギュルＳヴルツェル    : G : A : L :  -- :  37 : 2 : -2 :  2 :  4 :  0 :  0 : FastCharge :  1 : SpeedSetup :  2 : Evasion :  3 : Precision : -3
+Qurupeco S Helm       : ペッコＳヘルム          : A : A : H :  -- :  67 : 2 :  2 : -2 : -4 : -1 :  2 : Wide-Range :  3 : Psychic :  2 : Ice Res : -3 : Fire Atk :  1
+Qurupeco S Mail       : ペッコＳメイル          : B : A : C :  -- :  67 : 1 :  2 : -2 : -4 : -1 :  2 : Wide-Range :  5 : Psychic :  1 : Ice Res : -2 : Fire Atk :  1
+Qurupeco S Vambraces  : ペッコＳアーム          : B : A : A :  -- :  67 : 0 :  2 : -2 : -4 : -1 :  2 : Wide-Range :  5 : Psychic :  5 : Ice Res : -2 : Fire Atk :  1
+Qurupeco S Coil       : ペッコＳコイル          : B : A : W :  -- :  67 : 2 :  2 : -2 : -4 : -1 :  2 : Wide-Range :  3 : Psychic :  3 : Ice Res : -2 : Fire Atk :  1
+Qurupeco S Greaves    : ペッコＳグリーヴ        : B : A : L :  -- :  67 : 1 :  2 : -2 : -4 : -1 :  2 : Wide-Range :  4 : Psychic :  2 : Ice Res : -1 : Fire Atk :  4
+Qurupeco S Cap        : ペッコＳキャップ        : A : A : H :  -- :  39 : 2 :  4 : -1 : -3 :  0 :  4 : Wide-Range :  5 : Psychic :  4 : Ice Res : -1 : Fire Atk :  1
+Qurupeco S Vest       : ペッコＳレジスト        : G : A : C :  -- :  39 : 1 :  4 : -1 : -3 :  0 :  4 : Wide-Range :  5 : Psychic :  1 : Ice Res : -2 : Fire Atk :  1
+Qurupeco S Guards     : ペッコＳガード          : G : A : A :  -- :  39 : 0 :  4 : -1 : -3 :  0 :  4 : Wide-Range :  5 : Psychic :  4 : Ice Res : -3 : Fire Atk :  1
+Qurupeco S Coat       : ペッコＳコート          : G : A : W :  -- :  39 : 2 :  4 : -1 : -3 :  0 :  4 : Wide-Range :  4 : Psychic :  2 : Ice Res : -2 : Fire Atk :  1
+Qurupeco S Leggings   : ペッコＳレギンス        : G : A : L :  -- :  39 : 1 :  4 : -1 : -3 :  0 :  4 : Wide-Range :  3 : Psychic :  2 : Ice Res : -2 : Fire Atk :  4
+Ludroth S Helm        : ルドロスＳヘルム        : A : A : H :  -- :  70 : 2 : -4 :  2 : -2 : -2 :  1 : Stamina :  2 : Stun :  2 : ThunderAtk : -3 : Water Atk :  2
+Ludroth S Mail        : ルドロスＳメイル        : B : A : C :  -- :  70 : 1 : -4 :  2 : -2 : -2 :  1 : Stamina :  2 : KO   :  4 : ThunderAtk : -2 : Water Atk :  1
+Ludroth S Vambraces   : ルドロスＳアーム        : B : A : A :  -- :  70 : 1 : -4 :  2 : -2 : -2 :  1 : Stamina :  3 : Stun :  5 : ThunderAtk : -2 : Water Atk :  1
+Ludroth S Faulds      : ルドロスＳフォールド    : B : A : W :  -- :  70 : 2 : -4 :  2 : -2 : -2 :  1 : Stamina :  2 : Stun :  4 : ThunderAtk : -1 : Water Atk :  2
+Ludroth S Greaves     : ルドロスＳグリーヴ      : B : A : L :  -- :  70 : 1 : -4 :  2 : -2 : -2 :  1 : Stamina :  1 : KO   :  4 : ThunderAtk : -2 : Water Atk :  4
+Ludroth S Cap         : ルドロスＳキャップ      : A : A : H :  -- :  41 : 2 : -2 :  4 : -1 : -1 :  2 : Stamina :  4 : Stun :  5 : ThunderAtk : -1 : Water Atk :  1
+Ludroth S Vest        : ルドロスＳレジスト      : G : A : C :  -- :  41 : 1 : -2 :  4 : -1 : -1 :  2 : Stamina :  2 : KO   :  4 : ThunderAtk : -2 : Water Atk :  1
+Ludroth S Guards      : ルドロスＳガード        : G : A : A :  -- :  41 : 1 : -2 :  4 : -1 : -1 :  2 : Stamina :  2 : Stun :  4 : ThunderAtk : -3 : Water Atk :  2
+Ludroth S Coat        : ルドロスＳコート        : G : A : W :  -- :  41 : 2 : -2 :  4 : -1 : -1 :  2 : Stamina :  2 : Stun :  3 : ThunderAtk : -2 : Water Atk :  2
+Ludroth S Leggings    : ルドロスＳレギンス      : G : A : L :  -- :  41 : 1 : -2 :  4 : -1 : -1 :  2 : Stamina :  1 : KO   :  4 : ThunderAtk : -2 : Water Atk :  4
+Vaiku S Helm          : ヴァイクＳヘルム        : A : A : H :  -- :  70 : 2 :  0 :  3 : -2 : -2 :  0 : Sheathe :  3 : Sharpness :  3 : Sharpener : -2 : Water Res :  1
+Vaiku S Mail          : ヴァイクＳメイル        : B : A : C :  -- :  70 : 2 :  0 :  3 : -2 : -2 :  0 : Sheathe :  1 : Sharpness :  1 : Sharpener : -1 : Water Res :  4
+Vaiku S Vambraces     : ヴァイクＳアーム        : B : A : A :  -- :  70 : 1 :  0 :  3 : -2 : -2 :  0 : Sheathe :  3 : Sharpness :  3 : Sharpener : -1 : Water Res :  4
+Vaiku S Faulds        : ヴァイクＳフォールド    : B : A : W :  -- :  70 : 1 :  0 :  3 : -2 : -2 :  0 : Sheathe :  1 : Sharpness :  2 : Sharpener : -3 : Rec Speed :  5
+Vaiku S Greaves       : ヴァイクＳグリーヴ      : B : A : L :  -- :  70 : 2 :  0 :  3 : -2 : -2 :  0 : Sheathe :  2 : Sharpness :  1 : Sharpener : -3 : Rec Speed :  3
+Vaiku S Cap           : ヴァイクＳキャップ      : A : A : H :  -- :  41 : 2 :  0 :  5 : -4 : -1 :  0 : Sheathe :  4 : NormalS Up :  3 : Reload Spd : -2 : Water Res :  2
+Vaiku S Vest          : ヴァイクＳレジスト      : G : A : C :  -- :  41 : 2 :  0 :  5 : -4 : -1 :  0 : Sheathe :  1 : NormalS Up :  1 : Reload Spd : -2 : Water Res :  3
+Vaiku S Guards        : ヴァイクＳガード        : G : A : A :  -- :  41 : 1 :  0 :  5 : -4 : -1 :  0 : Sheathe :  1 : NormalS Up :  4 : Reload Spd : -2 : Water Res :  4
+Vaiku S Coat          : ヴァイクＳコート        : G : A : W :  -- :  41 : 1 :  0 :  5 : -4 : -1 :  0 : Sheathe :  3 : NormalS Up :  2 : Reload Spd : -1 : Rec Speed :  5
+Vaiku S Leggings      : ヴァイクＳレギンス      : G : A : L :  -- :  41 : 2 :  0 :  5 : -4 : -1 :  0 : Sheathe :  2 : NormalS Up :  1 : Reload Spd : -3 : Rec Speed :  3
 Nadeshiko Cap         : 撫子【布冠】            : A : F : H :  -- :  70 : 1 :  0 :  0 :  0 :  0 :  0 : Wide-Range :  4 : Psychic :  2 : Perception :  2 : Poison : -3
 Nadeshiko Vest        : 撫子【花衣】            : B : F : C :  -- :  70 : 0 :  0 :  0 :  0 :  0 :  0 : Wide-Range :  5 : Psychic :  3 : Perception :  1 : Poison : -2
 Nadeshiko Sleeves     : 撫子【蕾袖】            : B : F : A :  -- :  70 : 1 :  0 :  0 :  0 :  0 :  0 : Wide-Range :  2 : Psychic :  4 : Perception :  4 : Poison : -1
@@ -550,90 +550,90 @@ Kikyo Vest            : 桔梗【花衣】            : G : F : C :  -- :  41 : 
 Kikyo Sleeves         : 桔梗【蕾袖】            : G : F : A :  -- :  41 : 1 :  0 :  0 :  0 :  0 :  0 : Wide-Range :  4 : Psychic :  4 : Perception :  1 : Poison : -2
 Kikyo Waist           : 桔梗【枝垂】            : G : F : W :  -- :  41 : 1 :  0 :  0 :  0 :  0 :  0 : Wide-Range :  5 : Psychic :  2 : Perception :  3 : Poison : -1
 Kikyo Skirt           : 桔梗【球袴】            : G : F : L :  -- :  41 : 1 :  0 :  0 :  0 :  0 :  0 : Wide-Range :  4 : Psychic :  2 : Perception :  2 : Poison : -3
-Barroth S Helm        : ボロスSヘルム           : A : A : H :  -- :  71 : 0 :  0 :  0 : -3 :  2 :  0 : Hunger : -3 : Guard :  3 : Constitutn :  3 : Potential :  4
-Barroth S Mail        : ボロスSメイル           : B : A : C :  -- :  71 : 2 : -4 :  4 : -3 :  2 :  0 : Hunger : -3 : Guard :  1 : Constitutn :  1 : Potential :  2
-Barroth S Vambraces   : ボロスSアーム           : B : A : A :  -- :  71 : 2 : -4 :  4 : -3 :  2 :  0 : Hunger : -2 : Guard :  1 : Constitutn :  3 : Attack :  3
-Barroth S Faulds      : ボロスSフォールド       : B : A : W :  -- :  71 : 2 :  4 : -4 : -3 :  2 :  0 : Hunger : -3 : Guard :  2 : Constitutn :  1 : Attack :  3
-Barroth S Greaves     : ボロスSグリーヴ         : B : A : L :  -- :  71 : 0 :  4 : -4 : -3 :  2 :  0 : Hunger : -1 : Guard :  3 : Constitutn :  4 : Potential :  5
-Barroth S Cap         : ボロスSキャップ         : A : A : H :  -- :  41 : 0 :  2 :  2 : -1 :  4 :  0 : Hunger : -2 : Recoil :  4 : NormalS Up :  3 : Potential :  6
-Barroth S Vest        : ボロスSレジスト         : G : A : C :  -- :  41 : 2 : -4 :  4 : -1 :  4 :  0 : Hunger : -3 : Recoil :  1 : NormalS Up :  2 : Potential :  1
-Barroth S Guards      : ボロスSガード           : G : A : A :  -- :  41 : 2 : -4 :  4 : -1 :  4 :  0 : Hunger : -3 : Recoil :  2 : NormalS Up :  1 : Attack :  3
-Barroth S Coat        : ボロスSコート           : G : A : W :  -- :  41 : 2 :  4 : -4 : -1 :  4 :  0 : Hunger : -3 : Recoil :  1 : NormalS Up :  2 : Attack :  3
-Barroth S Leggings    : ボロスSレギンス         : G : A : L :  -- :  41 : 0 :  4 : -4 : -1 :  4 :  0 : Hunger : -2 : Recoil :  4 : NormalS Up :  2 : Potential :  5
-Baggi S Helm          : バギィSヘルム           : A : A : H :  -- :  71 : 1 : -4 : -1 :  2 : -1 :  1 : Rec Speed :  3 : Attack :  3 : Fire Res : -3 : Rec Level : 2
-Baggi S Mail          : バギィSメイル           : B : A : C :  -- :  71 : 2 : -4 : -1 :  2 : -1 :  1 : Rec Speed :  1 : Attack :  3 : Fire Res : -2 : Rec Level : 1
-Baggi S Vambraces     : バギィSアーム           : B : A : A :  -- :  71 : 1 : -4 : -1 :  2 : -1 :  1 :                  Attack :  2 : Fire Res : -1 : Rec Level : 3 : Ice Res : 5
-Baggi S Coil          : バギィSコイル           : B : A : W :  -- :  71 : 0 : -4 : -1 :  2 : -1 :  1 : Rec Speed :  4 :               Fire Res : -2 : Rec Level : 3 : Ice Res : 4
-Baggi S Greaves       : バギィSグリーヴ         : B : A : L :  -- :  71 : 2 : -4 : -1 :  2 : -1 :  1 : Rec Speed :  2 : Attack :  4 : Fire Res : -2 : Rec Level : 1
-Baggi S Cap           : バギィSキャップ         : A : A : H :  -- :  41 : 1 : -2 :  0 :  4 :  0 :  2 : Rec Speed :  5 : Attack :  5 : Fire Res : -1 : Rec Level : 2
-Baggi S Vest          : バギィSレジスト         : G : A : C :  -- :  41 : 2 : -2 :  0 :  4 :  0 :  2 : Rec Speed :  1 : Attack :  1 : Fire Res : -2 : Rec Level : 3
-Baggi S Guards        : バギィSガード           : G : A : A :  -- :  41 : 1 : -2 :  0 :  4 :  0 :  2 :                  Attack :  1 : Fire Res : -2 : Rec Level : 3 : Ice Res : 5
-Baggi S Coat          : バギィSコート           : G : A : W :  -- :  41 : 1 : -2 :  0 :  4 :  0 :  2 : Rec Speed :  2 :               Fire Res : -3 : Rec Level : 2 : Ice Res : 4
-Baggi S Leggings      : バギィSレギンス         : G : A : L :  -- :  41 : 2 : -2 :  0 :  4 :  0 :  2 : Rec Speed :  2 : Attack :  3 : Fire Res : -3 : Rec Level : 1
-Ranguro S Helm        : ラングロSヘルム         : A : A : H :  -- :  71 : 1 :  2 : -4 : -2 : -1 :  2 : Evasion :  3 : Water Res : -3 : Tremor Res :  1 : Fire Res :  4
-Ranguro S Mail        : ラングロSメイル         : B : A : C :  -- :  71 : 0 :  2 : -4 : -2 : -1 :  2 : Evasion :  3 : Water Res : -2 : Tremor Res :  3 : Fire Res :  3
-Ranguro S Vambraces   : ラングロSアーム         : B : A : A :  -- :  71 : 2 :  2 : -4 : -2 : -1 :  2 : Evasion :  4 : Water Res : -1 : Tremor Res :  1 : Defense  :  3
-Ranguro S Faulds      : ラングロSフォールド     : B : A : W :  -- :  71 : 2 :  2 : -4 : -2 : -1 :  2 : Evasion :  2 : Water Res : -2 : Defense    :  4 : Fire Res :  1
-Ranguro S Greaves     : ラングロSグリーヴ       : B : A : L :  -- :  71 : 0 :  2 : -4 : -2 : -1 :  2 : Torso Up
-Ranguro S Cap         : ラングロSキャップ       : A : A : H :  -- :  41 : 1 :  4 : -2 : -1 :  0 :  4 : Evasion :  5 : Water Res : -1 : Normal S+  :  1 : Fire Res :  6
-Ranguro S Vest        : ラングロSレジスト       : G : A : C :  -- :  41 : 0 :  4 : -2 : -1 :  0 :  4 : Evasion :  3 : Water Res : -2 : Normal S+  :  3 : Fire Res :  3
-Ranguro S Guards      : ラングロSガード         : G : A : A :  -- :  41 : 2 :  4 : -2 : -1 :  0 :  4 : Evasion :  3 : Water Res : -2 : Normal S+  :  1 : Defense  :  3
-Ranguro S Coat        : ラングロSコート         : G : A : W :  -- :  41 : 2 :  4 : -2 : -1 :  0 :  4 : Evasion :  1 : Water Res : -3 : Defense    :  4 : Fire Res :  1
-Ranguro S Leggings    : ラングロSレギンス       : G : A : L :  -- :  41 : 0 :  4 : -2 : -1 :  0 :  4 : Torso Up
-Rathian S Helm        : レイアSヘルム           : A : A : H :  -- :  74 : 2 :  2 :  0 :  0 : -2 : -4 : Water Atk : -3 : Health :  2 : Rec Speed :  2 : Fire Atk :  2
-Rathian S Mail        : レイアSメイル           : B : A : C :  -- :  74 : 0 :  2 :  0 :  0 : -2 : -4 : Water Atk : -2 : Health :  1 : Rec Speed :  4 : Protection :  4
-Rathian S Vambraces   : レイアSアーム           : B : A : A :  -- :  74 : 1 :  2 :  0 :  0 : -2 : -4 : Water Atk : -1 : Health :  3 : Rec Speed :  1 : Fire Atk :  6
-Rathian S Faulds      : レイアSフォールド       : B : A : W :  -- :  74 : 1 :  2 :  0 :  0 : -2 : -4 : Water Atk : -2 : Health :  4 : Rec Speed :  2 : Protection :  3
-Rathian S Greaves     : レイアSグリーヴ         : B : A : L :  -- :  74 : 2 :  2 :  0 :  0 : -2 : -4 : Water Atk : -2 : Health :  5 : Rec Speed :  1 : Fire Atk :  1
-Rathian S Cap         : レイアSキャップ         : A : A : H :  -- :  43 : 2 :  4 :  0 :  1 : -1 : -3 : Water Atk : -2 : Health :  4 : Rec Speed :  3 : Fire Atk :  2
-Rathian S Vest        : レイアSレジスト         : G : A : C :  -- :  43 : 0 :  4 :  0 :  1 : -1 : -3 : Water Atk : -2 : Health :  2 : Rec Speed :  3 : Protection :  4
-Rathian S Guards      : レイアSガード           : G : A : A :  -- :  43 : 1 :  4 :  0 :  1 : -1 : -3 : Water Atk : -1 : Health :  3 : Rec Speed :  1 : Fire Atk :  6
-Rathian S Coat        : レイアSコート           : G : A : W :  -- :  43 : 1 :  4 :  0 :  1 : -1 : -3 : Water Atk : -3 : Health :  2 : Rec Speed :  3 : Protection :  3
-Rathian S Leggings    : レイアSレギンス         : G : A : L :  -- :  43 : 2 :  4 :  0 :  1 : -1 : -3 : Water Atk : -2 : Health :  5 : Rec Speed :  1 : Fire Atk :  1
-Guild Bard S Lobos/Scholar's S Beret     : ギルドバードSロポス/スカラーSフード         : A : A : H :  -- :  74 : 1 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  2 : Perception :  3 : Wide-Range :  3 : Fate : -3
-Guild Bard S Bolero/Scholar's S Blouse   : ギルドバードSスーツ/スカラーSスーツ         : B : A : C :  -- :  74 : 1 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  3 : Perception :  1 : Wide-Range :  3 : Fate : -2
-Guild Bard S Braces/Scholar's S Gloves   : ギルドバードSアーム/スカラーSグラブ         : B : A : A :  -- :  74 : 2 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  2 : Perception :  1 : Wide-Range :  4 : Fate : -2
-Guild Bard S Coil/Scholar's S Skirt      : ギルドバードSコイル/スカラーSスカート       : B : A : W :  -- :  74 : 3 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  1 : Perception :  2 : Wide-Range :  2 : Fate : -2
-Guild Bard S Boots/Scholar's S Socks     : ギルドバードSブーツ/スカラーSソックス       : B : A : L :  -- :  74 : 0 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  5 : Perception :  3 : Wide-Range :  4 : Fate : -1
-Guild Bard S Hat/Scholar's S Cap         : ギルドバードSハット/スカラーSベレー         : A : A : H :  -- :  43 : 1 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  4 : Perception :  3 : Wide-Range :  5 : Fate : -1
-Guild Bard S Vest/Scholar's S Vest       : ギルドバードSベスト/スカラーSベスト         : G : A : C :  -- :  43 : 1 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  3 : Perception :  2 : Wide-Range :  2 : Fate : -2
-Guild Bard S Sleeves/Scholar's S Sleeves : ギルドバードSカフス/スカラーSカフス         : G : A : A :  -- :  43 : 2 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  2 : Perception :  2 : Wide-Range :  3 : Fate : -2
-Guild Bard S Coat/Scholar's S Mini       : ギルドバードSコート/スカラーSフリル         : G : A : W :  -- :  43 : 3 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  1 : Perception :  1 : Wide-Range :  2 : Fate : -3
-Guild Bard S Gaiters/Scholar's S Sandals : ギルドバードSフット/スカラーSサンダル       : G : A : L :  -- :  43 : 0 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  3 : Perception :  4 : Wide-Range :  4 : Fate : -2
-Gigginox S Helm       : ネブラSヘルム           : A : A : H :  -- :  74 : 2 : -4 :  0 :  3 :  3 : -2 : Sharpness :  3 : Status :  1 : ThunderRes :  2 : Combo Rate : -3
-Gigginox S Mail       : ネブラSメイル           : B : A : C :  -- :  74 : 1 : -4 :  0 :  3 :  3 : -2 : Sharpness :  2 : Status :  3 : ThunderRes :  2 : Combo Rate : -2
-Gigginox S Vambraces  : ネブラSアーム           : B : A : A :  -- :  74 : 0 : -4 :  0 :  3 :  3 : -2 : Sharpness :  2 : Status :  5 : ThunderRes :  5 : Combo Rate : -1
-Gigginox S Faulds     : ネブラSフォールド       : B : A : W :  -- :  74 : 1 : -4 :  0 :  3 :  3 : -2 : Sharpness :  2 : Status :  3 : Hunger     :  4 : Combo Rate : -2
-Gigginox S Greaves    : ネブラSグリーヴ         : B : A : L :  -- :  74 : 2 : -4 :  0 :  3 :  3 : -2 : Sharpness :  1 : Status :  3 : Hunger     :  3 : Combo Rate : -2
-Gigginox S Cap        : ネブラSキャップ         : A : A : H :  -- :  43 : 2 : -2 :  0 :  4 :  4 : -1 : Pierce S+ :  4 : Status :  2 : ThunderRes :  3 : Combo Rate : -2
-Gigginox S Vest       : ネブラSレジスト         : G : A : C :  -- :  43 : 1 : -2 :  0 :  4 :  4 : -1 : Pierce S+ :  3 : Status :  3 : ThunderRes :  1 : Combo Rate : -2
-Gigginox S Guards     : ネブラSガード           : G : A : A :  -- :  43 : 0 : -2 :  0 :  4 :  4 : -1 : Pierce S+ :  1 : Status :  5 : ThunderRes :  5 : Combo Rate : -2
-Gigginox S Coat       : ネブラSコート           : G : A : W :  -- :  43 : 1 : -2 :  0 :  4 :  4 : -1 : Pierce S+ :  3 : Status :  2 : Hunger     :  4 : Combo Rate : -2
-Gigginox S Leggings   : ネブラSレギンス         : G : A : L :  -- :  43 : 2 : -2 :  0 :  4 :  4 : -1 : Pierce S+ :  1 : Status :  3 : Hunger     :  3 : Combo Rate : -2
-Obituary S Testa/Butterfly S Testa     : ロワーガSテスタ/ファメルSテスタ                : A : A : H :  -- :  74 : 0 : -5 :  0 : -1 :  3 :  1 : Expert :  4 : Hearing :  2 : Protection : -4 : ThunderRes :  3
-Obituary S Petto/Butterfly S Petto     : ロワーガSペット/ファメルSペット                : B : A : C :  -- :  74 : 3 : -5 :  0 : -1 :  3 :  1 : Stun   :  1 : Hearing :  1 : Protection : -2 : ThunderRes :  1
-Obituary S Mano/Butterfly S Mano       : ロワーガSマーノ/ファメルSマーノ                : B : A : A :  -- :  74 : 1 : -5 :  0 : -1 :  3 :  1 : Expert :  2 : Hearing :  3 : Protection : -3 : ThunderRes :  3
-Obituary S Anca/Butterfly S Anca       : ロワーガSアンカ/ファメルSアンカ                : B : A : W :  -- :  74 : 1 : -5 :  0 : -1 :  3 :  1 : Stun   :  4 : Hearing :  3 : Protection : -1 : ThunderRes :  3
-Obituary S Gamba/Butterfly S Gamba     : ロワーガSガンバ/ファメルSガンバ                : B : A : L :  -- :  74 : 1 : -5 :  0 : -1 :  3 :  1 : Expert :  4 : Hearing :  1 : Protection : -1 : Stun       :  5
-Obituary S Caput/Butterfly S Caput     : ロワーガSカブト/ファメルSカブト                : A : A : H :  -- :  43 : 0 : -4 :  0 :  0 :  5 :  3 : Expert :  5 : Hearing :  4 : Protection : -3 : ThunderRes :  3
-Obituary S Pectus/Butterfly S Pectus   : ロワーガSペクトス/ファメルSペクトス            : G : A : C :  -- :  43 : 3 : -4 :  0 :  0 :  5 :  3 : Stun   :  1 : Hearing :  1 : Protection : -2 : ThunderRes :  1
-Obituary S Brasso/Butterfly S Brasso   : ロワーガSブラッソ/ファメルSブラッソ            : G : A : A :  -- :  43 : 1 : -4 :  0 :  0 :  5 :  3 : Expert :  2 : Hearing :  2 : Protection : -3 : ThunderRes :  4
-Obituary S Cocusa/Butterfly S Cocusa   : ロワーガSコクサ/ファメルSコクサ                : G : A : W :  -- :  43 : 1 : -4 :  0 :  0 :  5 :  3 : Stun   :  4 : Hearing :  2 : Protection : -1 : ThunderRes :  4
-Obituary S Femur/Butterfly S Femur     : ロワーガSフェムル/ファメルSフェムル            : G : A : L :  -- :  43 : 1 : -4 :  0 :  0 :  5 :  3 : Expert :  3 : Hearing :  1 : Protection : -2 : Stun       :  5
-Hapul S Helm          : ハプルSヘルム           : A : A : H :  -- :  74 : 3 :  2 : -1 : -3 : -2 :  0 : Eating :  1 : Sheathe :  1 : ThunderAtk : -3 : Gluttony  :  2
-Hapul S Mail          : ハプルSメイル           : B : A : C :  -- :  74 : 0 :  2 : -1 : -3 : -2 :  0 : Eating :  5 : Sheathe :  1 : ThunderAtk : -2 : Water Atk :  3
-Hapul S Vambraces     : ハプルSアーム           : B : A : A :  -- :  74 : 2 :  2 : -1 : -3 : -2 :  0 : Eating :  4 : Sheathe :  3 : ThunderAtk : -1 : Water Atk :  1
-Hapul S Faulds        : ハプルSフォールド       : B : A : W :  -- :  74 : 2 :  2 : -1 : -3 : -2 :  0 : Eating :  2 : Sheathe :  1 : ThunderAtk : -3 : Gluttony  :  3
-Hapul S Greaves       : ハプルSグリーヴ         : B : A : L :  -- :  74 : 0 :  2 : -1 : -3 : -2 :  0 : Eating :  3 : Sheathe :  4 : ThunderAtk : -1 : Water Atk :  5
-Hapul S Cap           : ハプルSキャップ         : A : A : H :  -- :  43 : 3 :  4 :  0 : -2 : -1 :  0 : Eating :  2 : Sheathe :  3 : ThunderAtk : -2 : Gluttony  :  2
-Hapul S Vest          : ハプルSレジスト         : G : A : C :  -- :  43 : 0 :  4 :  0 : -2 : -1 :  0 : Eating :  5 : Sheathe :  1 : ThunderAtk : -2 : Water Atk :  3
-Hapul S Guards        : ハプルSガード           : G : A : A :  -- :  43 : 2 :  4 :  0 : -2 : -1 :  0 : Eating :  5 : Sheathe :  1 : ThunderAtk : -2 : Water Atk :  1
-Hapul S Coat          : ハプルSコート           : G : A : W :  -- :  43 : 2 :  4 :  0 : -2 : -1 :  0 : Eating :  1 : Sheathe :  2 : ThunderAtk : -3 : Gluttony  :  3
-Hapul S Leggings      : ハプルSレギンス         : G : A : L :  -- :  43 : 0 :  4 :  0 : -2 : -1 :  0 : Eating :  3 : Sheathe :  4 : ThunderAtk : -1 : Water Atk :  5
-Acorn S Helm          : どんぐりSヘルム         : A : A : H :  -- :  74 : 1 :  2 :  2 : -2 :  0 :  0 : Gunnery :  3 : Bomb Boost :  8
-Acorn S Mail          : どんぐりSメイル         : B : A : C :  -- :  74 : 1 :  2 :  2 : -2 :  0 :  0 : Gunnery :  7 : Bomb Boost :  2
-Acorn S Cap           : どんぐりSキャップ       : A : A : H :  -- :  43 : 1 :  2 :  2 : -2 :  0 :  0 : Gunnery :  4 : Bomb Boost :  9
-Acorn S Vest          : どんぐりSレジスト       : G : A : C :  -- :  43 : 1 :  2 :  2 : -2 :  0 :  0 : Gunnery :  7 : Bomb Boost :  2
+Barroth S Helm        : ボロスＳヘルム          : A : A : H :  -- :  71 : 0 :  0 :  0 : -3 :  2 :  0 : Hunger : -3 : Guard :  3 : Constitutn :  3 : Potential :  4
+Barroth S Mail        : ボロスＳメイル          : B : A : C :  -- :  71 : 2 : -4 :  4 : -3 :  2 :  0 : Hunger : -3 : Guard :  1 : Constitutn :  1 : Potential :  2
+Barroth S Vambraces   : ボロスＳアーム          : B : A : A :  -- :  71 : 2 : -4 :  4 : -3 :  2 :  0 : Hunger : -2 : Guard :  1 : Constitutn :  3 : Attack :  3
+Barroth S Faulds      : ボロスＳフォールド      : B : A : W :  -- :  71 : 2 :  4 : -4 : -3 :  2 :  0 : Hunger : -3 : Guard :  2 : Constitutn :  1 : Attack :  3
+Barroth S Greaves     : ボロスＳグリーヴ        : B : A : L :  -- :  71 : 0 :  4 : -4 : -3 :  2 :  0 : Hunger : -1 : Guard :  3 : Constitutn :  4 : Potential :  5
+Barroth S Cap         : ボロスＳキャップ        : A : A : H :  -- :  41 : 0 :  2 :  2 : -1 :  4 :  0 : Hunger : -2 : Recoil :  4 : NormalS Up :  3 : Potential :  6
+Barroth S Vest        : ボロスＳレジスト        : G : A : C :  -- :  41 : 2 : -4 :  4 : -1 :  4 :  0 : Hunger : -3 : Recoil :  1 : NormalS Up :  2 : Potential :  1
+Barroth S Guards      : ボロスＳガード          : G : A : A :  -- :  41 : 2 : -4 :  4 : -1 :  4 :  0 : Hunger : -3 : Recoil :  2 : NormalS Up :  1 : Attack :  3
+Barroth S Coat        : ボロスＳコート          : G : A : W :  -- :  41 : 2 :  4 : -4 : -1 :  4 :  0 : Hunger : -3 : Recoil :  1 : NormalS Up :  2 : Attack :  3
+Barroth S Leggings    : ボロスＳレギンス        : G : A : L :  -- :  41 : 0 :  4 : -4 : -1 :  4 :  0 : Hunger : -2 : Recoil :  4 : NormalS Up :  2 : Potential :  5
+Baggi S Helm          : バギィＳヘルム          : A : A : H :  -- :  71 : 1 : -4 : -1 :  2 : -1 :  1 : Rec Speed :  3 : Attack :  3 : Fire Res : -3 : Rec Level : 2
+Baggi S Mail          : バギィＳメイル          : B : A : C :  -- :  71 : 2 : -4 : -1 :  2 : -1 :  1 : Rec Speed :  1 : Attack :  3 : Fire Res : -2 : Rec Level : 1
+Baggi S Vambraces     : バギィＳアーム          : B : A : A :  -- :  71 : 1 : -4 : -1 :  2 : -1 :  1 :                  Attack :  2 : Fire Res : -1 : Rec Level : 3 : Ice Res : 5
+Baggi S Coil          : バギィＳコイル          : B : A : W :  -- :  71 : 0 : -4 : -1 :  2 : -1 :  1 : Rec Speed :  4 :               Fire Res : -2 : Rec Level : 3 : Ice Res : 4
+Baggi S Greaves       : バギィＳグリーヴ        : B : A : L :  -- :  71 : 2 : -4 : -1 :  2 : -1 :  1 : Rec Speed :  2 : Attack :  4 : Fire Res : -2 : Rec Level : 1
+Baggi S Cap           : バギィＳキャップ        : A : A : H :  -- :  41 : 1 : -2 :  0 :  4 :  0 :  2 : Rec Speed :  5 : Attack :  5 : Fire Res : -1 : Rec Level : 2
+Baggi S Vest          : バギィＳレジスト        : G : A : C :  -- :  41 : 2 : -2 :  0 :  4 :  0 :  2 : Rec Speed :  1 : Attack :  1 : Fire Res : -2 : Rec Level : 3
+Baggi S Guards        : バギィＳガード          : G : A : A :  -- :  41 : 1 : -2 :  0 :  4 :  0 :  2 :                  Attack :  1 : Fire Res : -2 : Rec Level : 3 : Ice Res : 5
+Baggi S Coat          : バギィＳコート          : G : A : W :  -- :  41 : 1 : -2 :  0 :  4 :  0 :  2 : Rec Speed :  2 :               Fire Res : -3 : Rec Level : 2 : Ice Res : 4
+Baggi S Leggings      : バギィＳレギンス        : G : A : L :  -- :  41 : 2 : -2 :  0 :  4 :  0 :  2 : Rec Speed :  2 : Attack :  3 : Fire Res : -3 : Rec Level : 1
+Ranguro S Helm        : ラングロＳヘルム        : A : A : H :  -- :  71 : 1 :  2 : -4 : -2 : -1 :  2 : Evasion :  3 : Water Res : -3 : Tremor Res :  1 : Fire Res :  4
+Ranguro S Mail        : ラングロＳメイル        : B : A : C :  -- :  71 : 0 :  2 : -4 : -2 : -1 :  2 : Evasion :  3 : Water Res : -2 : Tremor Res :  3 : Fire Res :  3
+Ranguro S Vambraces   : ラングロＳアーム        : B : A : A :  -- :  71 : 2 :  2 : -4 : -2 : -1 :  2 : Evasion :  4 : Water Res : -1 : Tremor Res :  1 : Defense  :  3
+Ranguro S Faulds      : ラングロＳフォールド    : B : A : W :  -- :  71 : 2 :  2 : -4 : -2 : -1 :  2 : Evasion :  2 : Water Res : -2 : Defense    :  4 : Fire Res :  1
+Ranguro S Greaves     : ラングロＳグリーヴ      : B : A : L :  -- :  71 : 0 :  2 : -4 : -2 : -1 :  2 : Torso Up
+Ranguro S Cap         : ラングロＳキャップ      : A : A : H :  -- :  41 : 1 :  4 : -2 : -1 :  0 :  4 : Evasion :  5 : Water Res : -1 : Normal S+  :  1 : Fire Res :  6
+Ranguro S Vest        : ラングロＳレジスト      : G : A : C :  -- :  41 : 0 :  4 : -2 : -1 :  0 :  4 : Evasion :  3 : Water Res : -2 : Normal S+  :  3 : Fire Res :  3
+Ranguro S Guards      : ラングロＳガード        : G : A : A :  -- :  41 : 2 :  4 : -2 : -1 :  0 :  4 : Evasion :  3 : Water Res : -2 : Normal S+  :  1 : Defense  :  3
+Ranguro S Coat        : ラングロＳコート        : G : A : W :  -- :  41 : 2 :  4 : -2 : -1 :  0 :  4 : Evasion :  1 : Water Res : -3 : Defense    :  4 : Fire Res :  1
+Ranguro S Leggings    : ラングロＳレギンス      : G : A : L :  -- :  41 : 0 :  4 : -2 : -1 :  0 :  4 : Torso Up
+Rathian S Helm        : レイアＳヘルム          : A : A : H :  -- :  74 : 2 :  2 :  0 :  0 : -2 : -4 : Water Atk : -3 : Health :  2 : Rec Speed :  2 : Fire Atk :  2
+Rathian S Mail        : レイアＳメイル          : B : A : C :  -- :  74 : 0 :  2 :  0 :  0 : -2 : -4 : Water Atk : -2 : Health :  1 : Rec Speed :  4 : Protection :  4
+Rathian S Vambraces   : レイアＳアーム          : B : A : A :  -- :  74 : 1 :  2 :  0 :  0 : -2 : -4 : Water Atk : -1 : Health :  3 : Rec Speed :  1 : Fire Atk :  6
+Rathian S Faulds      : レイアＳフォールド      : B : A : W :  -- :  74 : 1 :  2 :  0 :  0 : -2 : -4 : Water Atk : -2 : Health :  4 : Rec Speed :  2 : Protection :  3
+Rathian S Greaves     : レイアＳグリーヴ        : B : A : L :  -- :  74 : 2 :  2 :  0 :  0 : -2 : -4 : Water Atk : -2 : Health :  5 : Rec Speed :  1 : Fire Atk :  1
+Rathian S Cap         : レイアＳキャップ        : A : A : H :  -- :  43 : 2 :  4 :  0 :  1 : -1 : -3 : Water Atk : -2 : Health :  4 : Rec Speed :  3 : Fire Atk :  2
+Rathian S Vest        : レイアＳレジスト        : G : A : C :  -- :  43 : 0 :  4 :  0 :  1 : -1 : -3 : Water Atk : -2 : Health :  2 : Rec Speed :  3 : Protection :  4
+Rathian S Guards      : レイアＳガード          : G : A : A :  -- :  43 : 1 :  4 :  0 :  1 : -1 : -3 : Water Atk : -1 : Health :  3 : Rec Speed :  1 : Fire Atk :  6
+Rathian S Coat        : レイアＳコート          : G : A : W :  -- :  43 : 1 :  4 :  0 :  1 : -1 : -3 : Water Atk : -3 : Health :  2 : Rec Speed :  3 : Protection :  3
+Rathian S Leggings    : レイアＳレギンス        : G : A : L :  -- :  43 : 2 :  4 :  0 :  1 : -1 : -3 : Water Atk : -2 : Health :  5 : Rec Speed :  1 : Fire Atk :  1
+Guild Bard S Lobos/Scholar's S Beret     : ギルドバードＳロボス/スカラーＳフード       : A : A : H :  -- :  74 : 1 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  2 : Perception :  3 : Wide-Range :  3 : Fate : -3
+Guild Bard S Bolero/Scholar's S Blouse   : ギルドバードＳスーツ/スカラーＳスーツ       : B : A : C :  -- :  74 : 1 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  3 : Perception :  1 : Wide-Range :  3 : Fate : -2
+Guild Bard S Braces/Scholar's S Gloves   : ギルドバードＳアーム/スカラーＳグラブ       : B : A : A :  -- :  74 : 2 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  2 : Perception :  1 : Wide-Range :  4 : Fate : -2
+Guild Bard S Coil/Scholar's S Skirt      : ギルドバードＳコイル/スカラーＳスカート     : B : A : W :  -- :  74 : 3 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  1 : Perception :  2 : Wide-Range :  2 : Fate : -2
+Guild Bard S Boots/Scholar's S Socks     : ギルドバードＳブーツ/スカラーＳソックス     : B : A : L :  -- :  74 : 0 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  5 : Perception :  3 : Wide-Range :  4 : Fate : -1
+Guild Bard S Hat/Scholar's S Cap         : ギルドバードＳハット/スカラーＳベレー       : A : A : H :  -- :  43 : 1 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  4 : Perception :  3 : Wide-Range :  5 : Fate : -1
+Guild Bard S Vest/Scholar's S Vest       : ギルドバードＳベスト/スカラーＳベスト       : G : A : C :  -- :  43 : 1 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  3 : Perception :  2 : Wide-Range :  2 : Fate : -2
+Guild Bard S Sleeves/Scholar's S Sleeves : ギルドバードＳカフス/スカラーＳカフス       : G : A : A :  -- :  43 : 2 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  2 : Perception :  2 : Wide-Range :  3 : Fate : -2
+Guild Bard S Coat/Scholar's S Mini       : ギルドバードＳコート/スカラーＳフリル       : G : A : W :  -- :  43 : 3 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  1 : Perception :  1 : Wide-Range :  2 : Fate : -3
+Guild Bard S Gaiters/Scholar's S Sandals : ギルドバードＳフット/スカラーＳサンダル     : G : A : L :  -- :  43 : 0 :  0 :  0 :  0 :   0 :   0 : Tranquilzr :  3 : Perception :  4 : Wide-Range :  4 : Fate : -2
+Gigginox S Helm       : ネブラＳヘルム          : A : A : H :  -- :  74 : 2 : -4 :  0 :  3 :  3 : -2 : Sharpness :  3 : Status :  1 : ThunderRes :  2 : Combo Rate : -3
+Gigginox S Mail       : ネブラＳメイル          : B : A : C :  -- :  74 : 1 : -4 :  0 :  3 :  3 : -2 : Sharpness :  2 : Status :  3 : ThunderRes :  2 : Combo Rate : -2
+Gigginox S Vambraces  : ネブラＳアーム          : B : A : A :  -- :  74 : 0 : -4 :  0 :  3 :  3 : -2 : Sharpness :  2 : Status :  5 : ThunderRes :  5 : Combo Rate : -1
+Gigginox S Faulds     : ネブラＳフォールド      : B : A : W :  -- :  74 : 1 : -4 :  0 :  3 :  3 : -2 : Sharpness :  2 : Status :  3 : Hunger     :  4 : Combo Rate : -2
+Gigginox S Greaves    : ネブラＳグリーヴ        : B : A : L :  -- :  74 : 2 : -4 :  0 :  3 :  3 : -2 : Sharpness :  1 : Status :  3 : Hunger     :  3 : Combo Rate : -2
+Gigginox S Cap        : ネブラＳキャップ        : A : A : H :  -- :  43 : 2 : -2 :  0 :  4 :  4 : -1 : Pierce S+ :  4 : Status :  2 : ThunderRes :  3 : Combo Rate : -2
+Gigginox S Vest       : ネブラＳレジスト        : G : A : C :  -- :  43 : 1 : -2 :  0 :  4 :  4 : -1 : Pierce S+ :  3 : Status :  3 : ThunderRes :  1 : Combo Rate : -2
+Gigginox S Guards     : ネブラＳガード          : G : A : A :  -- :  43 : 0 : -2 :  0 :  4 :  4 : -1 : Pierce S+ :  1 : Status :  5 : ThunderRes :  5 : Combo Rate : -2
+Gigginox S Coat       : ネブラＳコート          : G : A : W :  -- :  43 : 1 : -2 :  0 :  4 :  4 : -1 : Pierce S+ :  3 : Status :  2 : Hunger     :  4 : Combo Rate : -2
+Gigginox S Leggings   : ネブラＳレギンス        : G : A : L :  -- :  43 : 2 : -2 :  0 :  4 :  4 : -1 : Pierce S+ :  1 : Status :  3 : Hunger     :  3 : Combo Rate : -2
+Obituary S Testa/Butterfly S Testa     : ロワーガＳテスタ/ファルメルＳテスタ              : A : A : H :  -- :  74 : 0 : -5 :  0 : -1 :  3 :  1 : Expert :  4 : Hearing :  2 : Protection : -4 : ThunderRes :  3
+Obituary S Petto/Butterfly S Petto     : ロワーガＳペット/ファルメルＳペット              : B : A : C :  -- :  74 : 3 : -5 :  0 : -1 :  3 :  1 : Stun   :  1 : Hearing :  1 : Protection : -2 : ThunderRes :  1
+Obituary S Mano/Butterfly S Mano       : ロワーガＳマーノ/ファルメルＳマーノ              : B : A : A :  -- :  74 : 1 : -5 :  0 : -1 :  3 :  1 : Expert :  2 : Hearing :  3 : Protection : -3 : ThunderRes :  3
+Obituary S Anca/Butterfly S Anca       : ロワーガＳアンカ/ファルメルＳアンカ              : B : A : W :  -- :  74 : 1 : -5 :  0 : -1 :  3 :  1 : Stun   :  4 : Hearing :  3 : Protection : -1 : ThunderRes :  3
+Obituary S Gamba/Butterfly S Gamba     : ロワーガＳガンバ/ファルメルＳガンバ              : B : A : L :  -- :  74 : 1 : -5 :  0 : -1 :  3 :  1 : Expert :  4 : Hearing :  1 : Protection : -1 : Stun       :  5
+Obituary S Caput/Butterfly S Caput     : ロワーガＳカブト/ファルメルＳカブト              : A : A : H :  -- :  43 : 0 : -4 :  0 :  0 :  5 :  3 : Expert :  5 : Hearing :  4 : Protection : -3 : ThunderRes :  3
+Obituary S Pectus/Butterfly S Pectus   : ロワーガＳペクトス/ファルメルＳペクトス          : G : A : C :  -- :  43 : 3 : -4 :  0 :  0 :  5 :  3 : Stun   :  1 : Hearing :  1 : Protection : -2 : ThunderRes :  1
+Obituary S Brasso/Butterfly S Brasso   : ロワーガＳブラッソ/ファルメルＳブラッソ          : G : A : A :  -- :  43 : 1 : -4 :  0 :  0 :  5 :  3 : Expert :  2 : Hearing :  2 : Protection : -3 : ThunderRes :  4
+Obituary S Cocusa/Butterfly S Cocusa   : ロワーガＳコクサ/ファルメルＳコクサ              : G : A : W :  -- :  43 : 1 : -4 :  0 :  0 :  5 :  3 : Stun   :  4 : Hearing :  2 : Protection : -1 : ThunderRes :  4
+Obituary S Femur/Butterfly S Femur     : ロワーガＳフェムル/ファルメルＳフェムル          : G : A : L :  -- :  43 : 1 : -4 :  0 :  0 :  5 :  3 : Expert :  3 : Hearing :  1 : Protection : -2 : Stun       :  5
+Hapul S Helm          : ハプルＳヘルム          : A : A : H :  -- :  74 : 3 :  2 : -1 : -3 : -2 :  0 : Eating :  1 : Sheathe :  1 : ThunderAtk : -3 : Gluttony  :  2
+Hapul S Mail          : ハプルＳメイル          : B : A : C :  -- :  74 : 0 :  2 : -1 : -3 : -2 :  0 : Eating :  5 : Sheathe :  1 : ThunderAtk : -2 : Water Atk :  3
+Hapul S Vambraces     : ハプルＳアーム          : B : A : A :  -- :  74 : 2 :  2 : -1 : -3 : -2 :  0 : Eating :  4 : Sheathe :  3 : ThunderAtk : -1 : Water Atk :  1
+Hapul S Faulds        : ハプルＳフォールド      : B : A : W :  -- :  74 : 2 :  2 : -1 : -3 : -2 :  0 : Eating :  2 : Sheathe :  1 : ThunderAtk : -3 : Gluttony  :  3
+Hapul S Greaves       : ハプルＳグリーヴ        : B : A : L :  -- :  74 : 0 :  2 : -1 : -3 : -2 :  0 : Eating :  3 : Sheathe :  4 : ThunderAtk : -1 : Water Atk :  5
+Hapul S Cap           : ハプルＳキャップ        : A : A : H :  -- :  43 : 3 :  4 :  0 : -2 : -1 :  0 : Eating :  2 : Sheathe :  3 : ThunderAtk : -2 : Gluttony  :  2
+Hapul S Vest          : ハプルＳレジスト        : G : A : C :  -- :  43 : 0 :  4 :  0 : -2 : -1 :  0 : Eating :  5 : Sheathe :  1 : ThunderAtk : -2 : Water Atk :  3
+Hapul S Guards        : ハプルＳガード          : G : A : A :  -- :  43 : 2 :  4 :  0 : -2 : -1 :  0 : Eating :  5 : Sheathe :  1 : ThunderAtk : -2 : Water Atk :  1
+Hapul S Coat          : ハプルＳコート          : G : A : W :  -- :  43 : 2 :  4 :  0 : -2 : -1 :  0 : Eating :  1 : Sheathe :  2 : ThunderAtk : -3 : Gluttony  :  3
+Hapul S Leggings      : ハプルＳレギンス        : G : A : L :  -- :  43 : 0 :  4 :  0 : -2 : -1 :  0 : Eating :  3 : Sheathe :  4 : ThunderAtk : -1 : Water Atk :  5
+Acorn S Helm          : どんぐりＳヘルム        : A : A : H :  -- :  74 : 1 :  2 :  2 : -2 :  0 :  0 : Gunnery :  3 : Bomb Boost :  8
+Acorn S Mail          : どんぐりＳメイル        : B : A : C :  -- :  74 : 1 :  2 :  2 : -2 :  0 :  0 : Gunnery :  7 : Bomb Boost :  2
+Acorn S Cap           : どんぐりＳキャップ      : A : A : H :  -- :  43 : 1 :  2 :  2 : -2 :  0 :  0 : Gunnery :  4 : Bomb Boost :  9
+Acorn S Vest          : どんぐりＳレジスト      : G : A : C :  -- :  43 : 1 :  2 :  2 : -2 :  0 :  0 : Gunnery :  7 : Bomb Boost :  2
 Ranger's Headgear     : 城塞遊撃隊【刃笠】      : A : A : H :  -- :  77 : 3 :  0 :  0 :  0 :  0 :  0 : Expert :  1 : Carving :  2 : Rec Level :  1 : Fate : -3
 Ranger's Girdle       : 城塞遊撃隊【胴巻】      : B : A : C :  -- :  77 : 0 :  0 :  0 :  0 :  0 :  0 : Expert :  4 : Carving :  2 : Rec Level :  2 : Fate : -3
 Ranger's Gauntlets    : 城塞遊撃隊【手甲】      : B : A : A :  -- :  77 : 0 :  0 :  0 :  0 :  0 :  0 : Expert :  4 : Carving :  3 : Rec Level :  2 : Fate : -4
@@ -644,152 +644,152 @@ Archer's Girdle       : 城塞弓撃隊【胴巻】      : G : A : C :  -- :  45
 Archer's Gauntlets    : 城塞弓撃隊【手甲】      : G : A : A :  -- :  45 : 0 :  0 :  0 :  0 :  0 :  0 : Expert :  3 : Carving :  3 : Rec Level :  4 : Fate : -3
 Archer's Bandolier    : 城塞弓撃隊【弾帯】      : G : A : W :  -- :  45 : 2 :  0 :  0 :  0 :  0 :  0 : Expert :  1 : Carving :  3 : Rec Level :  2 : Fate : -3
 Archer's Espadrilles  : 城塞弓撃隊【足袋】      : G : A : L :  -- :  45 : 0 :  0 :  0 :  0 :  0 :  0 : Expert :  4 : Carving :  4 : Rec Level :  3 : Fate : -2
-Ancient S Mail        : アーティアSメイル       : B : A : C :  -- :  77 : 1 :  0 : -4 :  2 : -4 :  3 : Guard Up :  5 : Fencing :  1 : Sharpener : -3
-Ancient S Vambraces   : アーティアSアーム       : B : A : A :  -- :  77 : 1 :  0 : -4 :  2 : -4 :  3 : Guard Up :  1 : Fencing :  5 : Sharpener : -5
-Ancient S Greaves     : アーティアSグリーヴ     : B : A : L :  -- :  77 : 1 :  0 : -4 :  2 : -4 :  3 : Guard Up :  5 : Fencing :  4 : Sharpener : -2
-Ancient S Vest        : アーティアSレジスト     : G : A : C :  -- :  45 : 1 :  0 : -2 :  4 : -2 :  5 : Rapid Fire :  5 : Recoil :  1 : Reload Spd : -3
-Ancient S Guards      : アーティアSガード       : G : A : A :  -- :  45 : 1 :  0 : -2 :  4 : -2 :  5 : Rapid Fire :  1 : Recoil :  5 : Reload Spd : -5
-Ancient S Leggings    : アーティアSレギンス     : G : A : L :  -- :  45 : 1 :  0 : -2 :  4 : -2 :  5 : Rapid Fire :  4 : Recoil :  5 : Reload Spd : -2
-Ingot S Helm          : インゴットSヘルム       : A : A : H :  -- :  77 : 1 : -2 : -2 : -2 :  1 :  0 : Wind Res :  2 : Expert :  3 : Whim : -3 : Sharpener :  3
-Ingot S Mail          : インゴットSメイル       : B : A : C :  -- :  77 : 1 : -2 : -2 : -2 :  1 :  0 : Wind Res :  4 : Expert :  1 : Whim : -1 : Sharpener :  3
-Ingot S Vambraces     : インゴットSアーム       : B : A : A :  -- :  77 : 2 : -2 : -2 : -2 :  1 :  0 : Wind Res :  1 : Expert :  2 : Whim : -2 : Sharpener :  4
-Ingot S Coil          : インゴットSコイル       : B : A : W :  -- :  77 : 1 : -2 : -2 : -2 :  1 :  0 : Wind Res :  2 : Expert :  3 : Whim : -2 : Tremor Res :  4
-Ingot S Greaves       : インゴットSグリーヴ     : B : A : L :  -- :  77 : 2 : -2 : -2 : -2 :  1 :  0 : Wind Res :  2 : Expert :  3 : Whim : -2 : Tremor Res :  2
-Ingot S Cap           : インゴットSキャップ     : A : A : H :  -- :  45 : 1 : -1 : -1 : -1 :  2 :  0 : PelletS Up :  3 : Pellet S+ :  4 : Whim : -2 : Reload Spd :  4
-Ingot S Vest          : インゴットSレジスト     : G : A : C :  -- :  45 : 1 : -1 : -1 : -1 :  2 :  0 : PelletS Up :  1 : Pellet S+ :  3 : Whim : -2 : Reload Spd :  3
-Ingot S Guards        : インゴットSガード       : G : A : A :  -- :  45 : 2 : -1 : -1 : -1 :  2 :  0 : PelletS Up :  2 : Pellet S+ :  2 : Whim : -2 : Reload Spd :  3
-Ingot S Coat          : インゴットSコート       : G : A : W :  -- :  45 : 1 : -1 : -1 : -1 :  2 :  0 : PelletS Up :  2 : Pellet S+ :  3 : Whim : -2 : Pierce S+  :  4
-Ingot S Leggings      : インゴットSレギンス     : G : A : L :  -- :  45 : 2 : -1 : -1 : -1 :  2 :  0 : PelletS Up :  2 : Pellet S+ :  3 : Whim : -2 : Pierce S+  :  2
-Nargacuga S Helm      : ナルガSヘルム           : A : A : H :  -- :  77 : 2 : -3 :  1 :  0 : -4 : -1 : Evade Dist :  2 : Sense :  3 : Stamina : -3 : Evasion :  1
-Nargacuga S Mail      : ナルガSメイル           : B : A : C :  -- :  77 : 0 : -3 :  1 :  0 : -4 : -1 : Evade Dist :  3 : Sense :  1 : Stamina : -2 : Evasion :  5
-Nargacuga S Vambraces : ナルガSアーム           : B : A : A :  -- :  77 : 1 : -3 :  1 :  0 : -4 : -1 : Evade Dist :  3 : Sense :  3 : Stamina : -2 : Evasion :  3
-Nargacuga S Faulds    : ナルガSフォールド       : B : A : W :  -- :  77 : 2 : -3 :  1 :  0 : -4 : -1 : Evade Dist :  3 : Sense :  1 : Stamina : -2 : SpeedSetup :  3
-Nargacuga S Greaves   : ナルガSグリーヴ         : B : A : L :  -- :  77 : 2 : -3 :  1 :  0 : -4 : -1 : Evade Dist :  4 : Sense :  2 : Stamina : -1 : SpeedSetup :  2
-Nargacuga S Cap       : ナルガSキャップ         : A : A : H :  -- :  45 : 2 : -1 :  3 :  1 : -2 :  0 : Evade Dist :  4 : Sense :  3 : Stamina : -1 : Evasion :  3
-Nargacuga S Vest      : ナルガSレジスト         : G : A : C :  -- :  45 : 0 : -1 :  3 :  1 : -2 :  0 : Evade Dist :  2 : Sense :  2 : Stamina : -2 : Evasion :  5
-Nargacuga S Guards    : ナルガSガード           : G : A : A :  -- :  45 : 1 : -1 :  3 :  1 : -2 :  0 : Evade Dist :  4 : Sense :  4 : Stamina : -2 : Evasion :  1
-Nargacuga S Coat      : ナルガSコート           : G : A : W :  -- :  45 : 2 : -1 :  3 :  1 : -2 :  0 : Evade Dist :  1 : Sense :  2 : Stamina : -3 : SpeedSetup :  3
-Nargacuga S Leggings  : ナルガSレギンス         : G : A : L :  -- :  45 : 2 : -1 :  3 :  1 : -2 :  0 : Evade Dist :  4 : Sense :  1 : Stamina : -2 : SpeedSetup :  2
-Barioth S Helm        : ベリオSヘルム           : A : A : H :  -- :  77 : 2 : -4 :  1 :  2 : -3 : -1 : Constitutn :  3 : Evasion :  1 : StaminaRec : -3 : Ice Atk :  2
-Barioth S Mail        : ベリオSメイル           : B : A : C :  -- :  77 : 2 : -4 :  1 :  2 : -3 : -1 : Constitutn :  1 : Evasion :  3 : StaminaRec : -2 : Ice Atk :  1
-Barioth S Vambraces   : ベリオSアーム           : B : A : A :  -- :  77 : 1 : -4 :  1 :  2 : -3 : -1 : Constitutn :  4 : Evasion :  1 : StaminaRec : -1 : Ice Atk :  5
-Barioth S Faulds      : ベリオSフォールド       : B : A : W :  -- :  77 : 0 : -4 :  1 :  2 : -3 : -1 : Stamina    :  3 : Evasion :  5 : StaminaRec : -2 : Ice Atk :  3
-Barioth S Greaves     : ベリオSグリーヴ         : B : A : L :  -- :  77 : 1 : -4 :  1 :  2 : -3 : -1 : Constitutn :  4 : Evasion :  2 : StaminaRec : -2 : Stamina :  3
-Barioth S Cap         : ベリオSキャップ         : A : A : H :  -- :  45 : 2 : -2 :  2 :  4 : -1 :  0 : Constitutn :  4 : Evasion :  5 : StaminaRec : -1 : Ice Atk :  1
-Barioth S Vest        : ベリオSレジスト         : G : A : C :  -- :  45 : 2 : -2 :  2 :  4 : -1 :  0 : Constitutn :  1 : Evasion :  3 : StaminaRec : -2 : Ice Atk :  1
-Barioth S Guards      : ベリオSガード           : G : A : A :  -- :  45 : 1 : -2 :  2 :  4 : -1 :  0 : Constitutn :  4 : Evasion :  1 : StaminaRec : -2 : Ice Atk :  4
-Barioth S Coat        : ベリオSコート           : G : A : W :  -- :  45 : 0 : -2 :  2 :  4 : -1 :  0 : Stamina    :  3 : Evasion :  2 : StaminaRec : -3 : Ice Atk :  5
-Barioth S Leggings    : ベリオSレギンス         : G : A : L :  -- :  45 : 1 : -2 :  2 :  4 : -1 :  0 : Constitutn :  4 : Evasion :  2 : StaminaRec : -2 : Stamina :  3
-Rathalos S Helm       : レウスSヘルム           : A : A : H :  -- :  80 : 1 :  2 : -1 : -1 : -2 : -4 : Blow :  1 : Attack   :  4 : Rec Level : -3 : Sharpener : 3
-Rathalos S Mail       : レウスSメイル           : B : A : C :  -- :  80 : 2 :  2 : -1 : -1 : -2 : -4 : Blow :  3 : Attack   :  1 : Rec Level : -2 : Sharpener : 1
-Rathalos S Vambraces  : レウスSアーム           : B : A : A :  -- :  80 : 1 :  2 : -1 : -1 : -2 : -4 : Blow :  3 : Fire Atk :  4 : Rec Level : -2 : Sharpener : 2
-Rathalos S Faulds     : レウスSフォールド       : B : A : W :  -- :  80 : 2 :  2 : -1 : -1 : -2 : -4 : Blow :  1 : Fire Atk :  3 : Rec Level : -2 : Sharpener : 3
-Rathalos S Greaves    : レウスSグリーヴ         : B : A : L :  -- :  80 : 1 :  2 : -1 : -1 : -2 : -4 : Blow :  2 : Attack   :  5 : Rec Level : -3 : Sharpener : 1
-Rathalos S Cap        : レウスSキャップ         : A : A : H :  -- :  47 : 1 :  4 :  0 :  0 : -1 : -2 : Blow :  2 : Attack   :  5 : Rec Level : -2 : Rapid Fire : 4
-Rathalos S Vest       : レウスSレジスト         : G : A : C :  -- :  47 : 2 :  4 :  0 :  0 : -1 : -2 : Blow :  3 : Attack   :  1 : Rec Level : -2 : Rapid Fire : 1
-Rathalos S Guards     : レウスSガード           : G : A : A :  -- :  47 : 1 :  4 :  0 :  0 : -1 : -2 : Blow :  3 : Fire Atk :  4 : Rec Level : -3 : Rapid Fire : 1
-Rathalos S Coat       : レウスSコート           : G : A : W :  -- :  47 : 2 :  4 :  0 :  0 : -1 : -2 : Blow :  1 : Fire Atk :  3 : Rec Level : -3 : Rapid Fire : 2
-Rathalos S Leggings   : レウスSレギンス         : G : A : L :  -- :  47 : 1 :  4 :  0 :  0 : -1 : -2 : Blow :  2 : Attack   :  5 : Rec Level : -2 : Rapid Fire : 2
-Uragaan S Helm        : ガンキンSヘルム         : A : A : H :  -- :  80 : 0 :  2 : -5 : -2 :  1 : -3 : Defense  :  3 : PunishDraw :  3 : Water Res : -3 : Crit Draw :  4
-Uragaan S Mail        : ガンキンSメイル         : B : A : C :  -- :  80 : 2 :  2 : -5 : -2 :  1 : -3 : Fire Res :  3 : PunishDraw :  1 : Water Res : -2 : Crit Draw :  1
-Uragaan S Vambraces   : ガンキンSアーム         : B : A : A :  -- :  80 : 0 :  2 : -5 : -2 :  1 : -3 : Defense  :  6 : PunishDraw :  3 : Water Res : -1 : Crit Draw :  3
-Uragaan S Faulds      : ガンキンSフォールド     : B : A : W :  -- :  80 : 3 :  2 : -5 : -2 :  1 : -3 : Fire Res :  2 : PunishDraw :  1 : Water Res : -3 : Crit Draw :  1
-Uragaan S Greaves     : ガンキンSグリーヴ       : B : A : L :  -- :  80 : 2 :  2 : -5 : -2 :  1 : -3 : Fire Res :  4 : PunishDraw :  2 : Water Res : -2 : Crit Draw :  1
-Uragaan S Cap         : ガンキンSキャップ       : A : A : H :  -- :  47 : 0 :  4 : -4 : -1 :  2 : -2 : Defense  :  4 : Recoil :  5 : Water Res : -2 : PierceS Up :  4
-Uragaan S Vest        : ガンキンSレジスト       : G : A : C :  -- :  47 : 2 :  4 : -4 : -1 :  2 : -2 : Fire Res :  3 : Recoil :  1 : Water Res : -2 : PierceS Up :  1
-Uragaan S Guards      : ガンキンSガード         : G : A : A :  -- :  47 : 0 :  4 : -4 : -1 :  2 : -2 : Defense  :  5 : Recoil :  3 : Water Res : -3 : PierceS Up :  2
-Uragaan S Coat        : ガンキンSコート         : G : A : W :  -- :  47 : 3 :  4 : -4 : -1 :  2 : -2 : Fire Res :  2 : Recoil :  1 : Water Res : -2 : PierceS Up :  2
-Uragaan S Leggings    : ガンキンSレギンス       : G : A : L :  -- :  47 : 2 :  4 : -4 : -1 :  2 : -2 : Fire Res :  4 : Recoil :  1 : Water Res : -3 : PierceS Up :  1
-Tigrex S Helm         : レックスSヘルム         : A : A : H :  -- :  81 : 2 :  2 : -1 :  0 : -4 : -2 : Stamina :  1 : Hearing :  2 : Gluttony :  3 : Protection : -3
-Tigrex S Mail         : レックスSメイル         : B : A : C :  -- :  81 : 0 :  2 : -1 :  0 : -4 : -2 : Stamina :  3 : Hearing :  4 : Gluttony :  1 : Protection : -3
-Tigrex S Vambraces    : レックスSアーム         : B : A : A :  -- :  81 : 2 :  2 : -1 :  0 : -4 : -2 : Stamina :  1 : Hearing :  2 : Gluttony :  4 : Protection : -2
-Tigrex S Faulds       : レックスSフォールド     : B : A : W :  -- :  81 : 2 :  2 : -1 :  0 : -4 : -2 : Stamina :  3 : Hearing :  2 : Gluttony :  2 : Protection : -2
-Tigrex S Greaves      : レックスSグリーヴ       : B : A : L :  -- :  81 : 0 :  2 : -1 :  0 : -4 : -2 : Stamina :  2 : Hearing :  4 : Gluttony :  5 : Protection : -2
-Tigrex S Cap          : レックスSキャップ       : A : A : H :  -- :  47 : 2 :  3 :  0 :  0 : -2 : -1 : Stamina :  3 : Hearing :  3 : Gluttony :  2 : Protection : -3
-Tigrex S Vest         : レックスSレジスト       : G : A : C :  -- :  47 : 0 :  3 :  0 :  0 : -2 : -1 : Stamina :  3 : Hearing :  3 : Gluttony :  2 : Protection : -3
-Tigrex S Guards       : レックスSガード         : G : A : A :  -- :  47 : 2 :  3 :  0 :  0 : -2 : -1 : Stamina :  1 : Hearing :  2 : Gluttony :  3 : Protection : -3
-Tigrex S Coat         : レックスSコート         : G : A : W :  -- :  47 : 2 :  3 :  0 :  0 : -2 : -1 : Stamina :  1 : Hearing :  2 : Gluttony :  5 : Protection : -1
-Tigrex S Leggings     : レックスSレギンス       : G : A : L :  -- :  47 : 0 :  3 :  0 :  0 : -2 : -1 : Stamina :  3 : Hearing :  4 : Gluttony :  4 : Protection : -2
-Diablos S Helm        : ディアブロSヘルム       : A : A : H :  -- :  81 : 2 :  2 : -1 : -3 : -1 : -1 : Crit Draw :  3 : Tremor Res :  2 : Sheathe :  1 : Status : -3
-Diablos S Mail        : ディアブロSメイル       : B : A : C :  -- :  81 : 2 :  2 : -1 : -3 : -1 : -1 : Crit Draw :  2 : Tremor Res :  1 : Sheathe :  2 : Status : -2
-Diablos S Vambraces   : ディアブロSアーム       : B : A : A :  -- :  81 : 2 :  2 : -1 : -3 : -1 : -1 : Crit Draw :  3 : Tremor Res :  2 : Sheathe :  1 : Status : -3
-Diablos S Faulds      : ディアブロSコイル       : B : A : W :  -- :  81 : 2 :  2 : -1 : -3 : -1 : -1 : Crit Draw :  2 : Tremor Res :  2 : Sheathe :  4 : Status : -1
-Diablos S Greaves     : ディアブロSグリーヴ     : B : A : L :  -- :  81 : 2 :  2 : -1 : -3 : -1 : -1 : Crit Draw :  1 : Tremor Res :  4 : Sheathe :  3 : Status : -1
-Diablos S Cap         : ディアブロSキャップ     : A : A : H :  -- :  47 : 2 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  3 : PierceS Up :  3 : Sheathe :  3 : Status : -2
-Diablos S Vest        : ディアブロSレジスト     : G : A : C :  -- :  47 : 2 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  2 : PierceS Up :  2 : Sheathe :  1 : Status : -2
-Diablos S Guards      : ディアブロSガード       : G : A : A :  -- :  47 : 2 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  2 : PierceS Up :  3 : Sheathe :  2 : Status : -2
-Diablos S Coat        : ディアブロSコート       : G : A : W :  -- :  47 : 2 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  3 : PierceS Up :  1 : Sheathe :  2 : Status : -3
-Diablos S Leggings    : ディアブロSレギンス     : G : A : L :  -- :  47 : 2 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  5 : PierceS Up :  1 : Sheathe :  2 : Status : -1
-Jinouga S Helm        : ジンオウSヘルム         : A : A : H :  -- :  81 : 2 : -1 : -2 : -3 :  4 :  0 : ThunderAtk :  1 : Earnest :  2 : Evade Dist :  3 : Sense : -3
-Jinouga S Mail        : ジンオウSメイル         : B : A : C :  -- :  81 : 3 : -1 : -2 : -3 :  4 :  0 : ThunderAtk :  1 : Earnest :  1 : Evade Dist :  1 : Sense : -2
-Jinouga S Vambraces   : ジンオウSアーム         : B : A : A :  -- :  81 : 0 : -1 : -2 : -3 :  4 :  0 : ThunderAtk :  2 : Earnest :  5 : Evade Dist :  5 : Sense : -1
-Jinouga S Faulds      : ジンオウSフォールド     : B : A : W :  -- :  81 : 1 : -1 : -2 : -3 :  4 :  0 : ThunderAtk :  6 : Earnest :  2 : Evade Dist :  1 : Sense : -2
-Jinouga S Greaves     : ジンオウSグリーヴ       : B : A : L :  -- :  81 : 0 : -1 : -2 : -3 :  4 :  0 : ThunderAtk :  1 : Earnest :  5 : Evade Dist :  5 : Sense : -2
-Jinouga S Cap         : ジンオウSキャップ       : A : A : H :  -- :  47 : 2 :  0 : -1 : -1 :  5 :  0 : ThunderAtk :  1 : Earnest :  4 : Evade Dist :  4 : Sense : -2
-Jinouga S Vest        : ジンオウSレジスト       : G : A : C :  -- :  47 : 3 :  0 : -1 : -1 :  5 :  0 : ThunderAtk :  1 : Earnest :  1 : Evade Dist :  1 : Sense : -2
-Jinouga S Guards      : ジンオウSガード         : G : A : A :  -- :  47 : 0 :  0 : -1 : -1 :  5 :  0 : ThunderAtk :  5 : Earnest :  2 : Evade Dist :  4 : Sense : -2
-Jinouga S Coat        : ジンオウSコート         : G : A : W :  -- :  47 : 1 :  0 : -1 : -1 :  5 :  0 : ThunderAtk :  3 : Earnest :  4 : Evade Dist :  2 : Sense : -2
-Jinouga S Leggings    : ジンオウSレギンス       : G : A : L :  -- :  47 : 0 :  0 : -1 : -1 :  5 :  0 : ThunderAtk :  1 : Earnest :  5 : Evade Dist :  5 : Sense : -2
-Agnaktor S Helm       : アグナSヘルム           : A : A : H :  -- :  81 : 1 :  4 : -4 : -2 :  0 : -4 : Constitutn :  1 : Water Atk : -2 : Sharpness :  4 : Fire Atk :  4
-Agnaktor S Mail       : アグナSメイル           : B : A : C :  -- :  81 : 2 :  4 : -4 : -2 :  0 : -4 : Constitutn :  2 : Water Atk : -2 : Sharpness :  1 : Fire Res :  2
-Agnaktor S Vambraces  : アグナSアーム           : B : A : A :  -- :  81 : 1 :  4 : -4 : -2 :  0 : -4 : Constitutn :  2 : Water Atk : -1 : Sharpness :  2 : Fire Atk :  6
-Agnaktor S Faulds     : アグナSフォールド       : B : A : W :  -- :  81 : 1 :  4 : -4 : -2 :  0 : -4 : Constitutn :  3 : Water Atk : -2 : Sharpness :  2 : Fire Res :  4
-Agnaktor S Greaves    : アグナSグリーヴ         : B : A : L :  -- :  81 : 2 :  4 : -4 : -2 :  0 : -4 : Constitutn :  4 : Water Atk : -3 : Sharpness :  1 : Fire Atk :  1
-Agnaktor S Cap        : アグナSキャップ         : A : A : H :  -- :  47 : 1 :  5 : -2 : -1 :  0 : -2 : Precision :  2 : Water Atk : -2 : NormalS Up :  4 : Fire Atk :  5
-Agnaktor S Vest       : アグナSレジスト         : G : A : C :  -- :  47 : 2 :  5 : -2 : -1 :  0 : -2 : Precision :  2 : Water Atk : -2 : NormalS Up :  1 : Fire Res :  2
-Agnaktor S Guards     : アグナSガード           : G : A : A :  -- :  47 : 1 :  5 : -2 : -1 :  0 : -2 : Precision :  1 : Water Atk : -3 : NormalS Up :  2 : Fire Atk :  5
-Agnaktor S Coat       : アグナSコート           : G : A : W :  -- :  47 : 1 :  5 : -2 : -1 :  0 : -2 : Precision :  4 : Water Atk : -1 : NormalS Up :  2 : Fire Res :  4
-Agnaktor S Leggings   : アグナSレギンス         : G : A : L :  -- :  47 : 2 :  5 : -2 : -1 :  0 : -2 : Precision :  4 : Water Atk : -2 : NormalS Up :  2 : Fire Atk :  1
-Dobol S Helm          : ドボルSヘルム           : A : A : H :  -- :  81 : 1 : -3 :  1 : -2 : -2 :  0 : Attack :  3 : Bash :  1 : Potential :  4 : Expert : -3
-Dobol S Mail          : ドボルSメイル           : B : A : C :  -- :  81 : 1 : -3 :  1 : -2 : -2 :  0 : Attack :  4 : Bash :  2 : Potential :  1 : Expert : -2
-Dobol S Vambraces     : ドボルSアーム           : B : A : A :  -- :  81 : 2 : -3 :  1 : -2 : -2 :  0 : Attack :  2 : Bash :  3 : Health    :  2 : Expert : -2
-Dobol S Faulds        : ドボルSフォールド       : B : A : W :  -- :  81 : 1 : -3 :  1 : -2 : -2 :  0 : Health :  3 : Bash :  2 : Potential :  5 : Expert : -1
-Dobol S Greaves       : ドボルSグリーヴ         : B : A : L :  -- :  81 : 1 : -3 :  1 : -2 : -2 :  0 : Attack :  6 : Bash :  2 : Potential :  1 : Expert : -2
-Dobol S Cap           : ドボルSキャップ         : A : A : H :  -- :  47 : 1 : -2 :  3 : -1 : -1 :  0 : Recoil :  5 : Bash :  3 : Potential :  3 : Expert : -2
-Dobol S Vest          : ドボルSレジスト         : G : A : C :  -- :  47 : 1 : -2 :  3 : -1 : -1 :  0 : Recoil :  2 : Bash :  2 : Potential :  2 : Expert : -3
-Dobol S Guards        : ドボルSガード           : G : A : A :  -- :  47 : 2 : -2 :  3 : -1 : -1 :  0 : Recoil :  2 : Bash :  3 : Health    :  3 : Expert : -1
-Dobol S Coat          : ドボルSコート           : G : A : W :  -- :  47 : 1 : -2 :  3 : -1 : -1 :  0 : Health :  3 : Bash :  2 : Potential :  5 : Expert : -1
-Dobol S Leggings      : ドボルSレギンス         : G : A : L :  -- :  47 : 1 : -2 :  3 : -1 : -1 :  0 : Recoil :  6 : Bash :  1 : Potential :  1 : Expert : -3
-Qurupeco U Helm       : ペッコUヘルム           : A : A : H :  -- :  70 : 2 : -3 : -1 : -5 :  4 :  2 : Wide-Range :  2 : Eating :  3 : Ice Atk : -3 : ThunderAtk :  1
-Qurupeco U Mail       : ペッコUメイル           : B : A : C :  -- :  70 : 0 : -3 : -1 : -5 :  4 :  2 : Wide-Range :  5 : Eating :  3 : Ice Atk : -2 : ThunderAtk :  1
-Qurupeco U Vambraces  : ペッコUアーム           : B : A : A :  -- :  70 : 3 : -3 : -1 : -5 :  4 :  2 : Wide-Range :  4 : Eating :  1 : Ice Atk : -1 : ThunderAtk :  1
-Qurupeco U Coil       : ペッコUコイル           : B : A : W :  -- :  70 : 1 : -3 : -1 : -5 :  4 :  2 : Wide-Range :  1 : Eating :  3 : Ice Atk : -2 : ThunderAtk :  5
-Qurupeco U Greaves    : ペッコUグリーヴ         : B : A : L :  -- :  70 : 2 : -3 : -1 : -5 :  4 :  2 : Wide-Range :  5 : Eating :  1 : Ice Atk : -2 : ThunderAtk :  1
-Qurupeco U Cap        : ペッコUキャップ         : A : A : H :  -- :  41 : 2 : -2 :  0 : -3 :  5 :  3 : Wide-Range :  4 : Eating :  5 : Ice Atk : -1 : ThunderAtk :  1
-Qurupeco U Vest       : ペッコUレジスト         : G : A : C :  -- :  41 : 0 : -2 :  0 : -3 :  5 :  3 : Wide-Range :  5 : Eating :  3 : Ice Atk : -2 : ThunderAtk :  1
-Qurupeco U Guards     : ペッコUガード           : G : A : A :  -- :  41 : 3 : -2 :  0 : -3 :  5 :  3 : Wide-Range :  4 : Eating :  1 : Ice Atk : -1 : ThunderAtk :  1
-Qurupeco U Coat       : ペッコUコート           : G : A : W :  -- :  41 : 1 : -2 :  0 : -3 :  5 :  3 : Wide-Range :  1 : Eating :  2 : Ice Atk : -3 : ThunderAtk :  5
-Qurupeco U Leggings   : ペッコUレギンス         : G : A : L :  -- :  41 : 2 : -2 :  0 : -3 :  5 :  3 : Wide-Range :  4 : Eating :  1 : Ice Atk : -3 : ThunderAtk :  1
-Ludroth U Helm        : ルドロスUヘルム         : A : A : H :  -- :  71 : 1 : -4 :  2 :  0 : -1 :  1 : Stamina :  1 : Exhaust :  3 : ThunderRes : -3 : Water Res :  4
-Ludroth U Mail        : ルドロスUメイル         : B : A : C :  -- :  71 : 3 : -4 :  2 :  0 : -2 :  1 : Stamina :  1 : Status  :  1 : ThunderRes : -2 : Water Res :  1
-Ludroth U Vambraces   : ルドロスUアーム         : B : A : A :  -- :  71 : 1 : -4 :  2 :  0 : -2 :  1 : Stamina :  3 : Status  :  5 : ThunderRes : -1 : Water Res :  2
-Ludroth U Faulds      : ルドロスUフォールド     : B : A : W :  -- :  71 : 3 : -4 :  2 :  0 : -2 :  1 : Stamina :  2 : Status  :  1 : ThunderRes : -3 : Water Res :  1
-Ludroth U Greaves     : ルドロスUグリーヴ       : B : A : L :  -- :  71 : 1 : -4 :  2 :  0 : -2 :  1 : Stamina :  3 : Status  :  5 : ThunderRes : -1 : Exhaust   :  2
-Ludroth U Cap         : ルドロスUキャップ       : A : A : H :  -- :  41 : 1 : -2 :  4 :  1 : -1 :  2 : Stamina :  3 : Status  :  5 : ThunderRes : -2 : Exhaust   :  3
-Ludroth U Vest        : ルドロスUレジスト       : G : A : C :  -- :  41 : 3 : -2 :  4 :  1 : -1 :  2 : Stamina :  1 : Status  :  1 : ThunderRes : -2 : Water Res :  1
-Ludroth U Guards      : ルドロスUガード         : G : A : A :  -- :  41 : 1 : -2 :  4 :  1 : -1 :  2 : Stamina :  2 : Status  :  5 : ThunderRes : -3 : Water Res :  1
-Ludroth U Coat        : ルドロスUコート         : G : A : W :  -- :  41 : 3 : -2 :  4 :  1 : -1 :  2 : Stamina :  2 : Status  :  2 : ThunderRes : -2 : Water Res :  1
-Ludroth U Leggings    : ルドロスUレギンス       : G : A : L :  -- :  41 : 1 : -2 :  4 :  1 : -1 :  2 : Stamina :  3 : Exhaust :  2 : ThunderRes : -1 : Water Res :  5
-Barroth U Helm        : ボロスUヘルム           : A : A : H :  -- :  75 : 2 : -5 :  2 :  3 : -2 :  0 : KO :  1 : Fire Atk : -3 : Exhaust :  1 : Defense :  4
-Barroth U Mail        : ボロスUメイル           : B : A : C :  -- :  75 : 1 : -5 :  2 :  3 : -2 :  0 : KO :  3 : Fire Atk : -2 : Exhaust :  1 : Ice Atk :  3
-Barroth U Vambraces   : ボロスUアーム           : B : A : A :  -- :  75 : 3 : -5 :  2 :  3 : -2 :  0 : KO :  1 : Fire Atk : -1 : Exhaust :  1 : Defense :  4
-Barroth U Faulds      : ボロスUフォールド       : B : A : W :  -- :  75 : 0 : -5 :  2 :  3 : -2 :  0 : KO :  4 : Fire Atk : -2 : Exhaust :  5 : Ice Atk :  2
-Barroth U Greaves     : ボロスUグリーヴ         : B : A : L :  -- :  75 : 3 : -5 :  2 :  3 : -2 :  0 : KO :  1 : Fire Atk : -2 : Exhaust :  1 : Defense :  3
-Barroth U Cap         : ボロスUキャップ         : A : A : H :  -- :  44 : 2 : -4 :  3 :  5 : -1 :  0 : Ice Atk :  1 : Fire Atk : -2 : PierceS Up :  3 : Defense :  5
-Barroth U Vest        : ボロスUレジスト         : G : A : C :  -- :  44 : 1 : -4 :  3 :  5 : -1 :  0 : Ice Atk :  1 : Fire Atk : -2 : PierceS Up :  3 : KO :  3
-Barroth U Guards      : ボロスUガード           : G : A : A :  -- :  44 : 3 : -4 :  3 :  5 : -1 :  0 : Ice Atk :  1 : Fire Atk : -1 : PierceS Up :  1 : Defense :  4
-Barroth U Coat        : ボロスUコート           : G : A : W :  -- :  44 : 0 : -4 :  3 :  5 : -1 :  0 : Ice Atk :  5 : Fire Atk : -3 : PierceS Up :  3 : KO :  2
-Barroth U Leggings    : ボロスUレギンス         : G : A : L :  -- :  44 : 3 : -4 :  3 :  5 : -1 :  0 : Ice Atk :  1 : Fire Atk : -2 : PierceS Up :  1 : Defense :  3
-Gigginox U Helm       : ネブラUヘルム           : A : A : H :  -- :  77 : 0 :  0 : -4 :  3 :  4 : -2 : Exhaust :  4 : FastCharge :  2 : Ice Atk : -2 : ThunderAtk :  5
-Gigginox U Mail       : ネブラUメイル           : B : A : C :  -- :  77 : 3 :  0 : -4 :  3 :  4 : -2 : Exhaust :  1 : FastCharge :  1 : Ice Atk : -2 : ThunderAtk :  1
-Gigginox U Vambraces  : ネブラUアーム           : B : A : A :  -- :  77 : 3 :  0 : -4 :  3 :  4 : -2 : Exhaust :  1 : FastCharge :  1 : Ice Atk : -3 : Stamina :  2
-Gigginox U Faulds     : ネブラUフォールド       : B : A : W :  -- :  77 : 2 :  0 : -4 :  3 :  4 : -2 : Exhaust :  2 : FastCharge :  1 : Ice Atk : -2 : Stamina :  4
-Gigginox U Greaves    : ネブラUグリーヴ         : B : A : L :  -- :  77 : 1 :  0 : -4 :  3 :  4 : -2 : Exhaust :  2 : FastCharge :  5 : Ice Atk : -1 : ThunderAtk :  3
-Gigginox U Cap        : ネブラUキャップ         : A : A : H :  -- :  45 : 0 :  0 : -2 :  4 :  5 : -1 : Exhaust :  4 : FastCharge :  5 : Ice Atk : -2 : ThunderAtk :  4
-Gigginox U Vest       : ネブラUレジスト         : G : A : C :  -- :  45 : 3 :  0 : -2 :  4 :  5 : -1 : Exhaust :  1 : FastCharge :  1 : Ice Atk : -2 : ThunderAtk :  1
-Gigginox U Guards     : ネブラUガード           : G : A : A :  -- :  45 : 3 :  0 : -2 :  4 :  5 : -1 : Exhaust :  1 : FastCharge :  2 : Ice Atk : -2 : Stamina :  2
-Gigginox U Coat       : ネブラUコート           : G : A : W :  -- :  45 : 2 :  0 : -2 :  4 :  5 : -1 : Exhaust :  2 : FastCharge :  1 : Ice Atk : -2 : Stamina :  4
-Gigginox U Leggings   : ネブラUレギンス         : G : A : L :  -- :  45 : 1 :  0 : -2 :  4 :  5 : -1 : Exhaust :  3 : FastCharge :  2 : Ice Atk : -2 : ThunderAtk :  4
+Ancient S Mail        : アーティアＳメイル      : B : A : C :  -- :  77 : 1 :  0 : -4 :  2 : -4 :  3 : Guard Up :  5 : Fencing :  1 : Sharpener : -3
+Ancient S Vambraces   : アーティアＳアーム      : B : A : A :  -- :  77 : 1 :  0 : -4 :  2 : -4 :  3 : Guard Up :  1 : Fencing :  5 : Sharpener : -5
+Ancient S Greaves     : アーティアＳグリーヴ    : B : A : L :  -- :  77 : 1 :  0 : -4 :  2 : -4 :  3 : Guard Up :  5 : Fencing :  4 : Sharpener : -2
+Ancient S Vest        : アーティアＳレジスト    : G : A : C :  -- :  45 : 1 :  0 : -2 :  4 : -2 :  5 : Rapid Fire :  5 : Recoil :  1 : Reload Spd : -3
+Ancient S Guards      : アーティアＳガード      : G : A : A :  -- :  45 : 1 :  0 : -2 :  4 : -2 :  5 : Rapid Fire :  1 : Recoil :  5 : Reload Spd : -5
+Ancient S Leggings    : アーティアＳレギンス    : G : A : L :  -- :  45 : 1 :  0 : -2 :  4 : -2 :  5 : Rapid Fire :  4 : Recoil :  5 : Reload Spd : -2
+Ingot S Helm          : インゴットＳヘルム      : A : A : H :  -- :  77 : 1 : -2 : -2 : -2 :  1 :  0 : Wind Res :  2 : Expert :  3 : Whim : -3 : Sharpener :  3
+Ingot S Mail          : インゴットＳメイル      : B : A : C :  -- :  77 : 1 : -2 : -2 : -2 :  1 :  0 : Wind Res :  4 : Expert :  1 : Whim : -1 : Sharpener :  3
+Ingot S Vambraces     : インゴットＳアーム      : B : A : A :  -- :  77 : 2 : -2 : -2 : -2 :  1 :  0 : Wind Res :  1 : Expert :  2 : Whim : -2 : Sharpener :  4
+Ingot S Coil          : インゴットＳコイル      : B : A : W :  -- :  77 : 1 : -2 : -2 : -2 :  1 :  0 : Wind Res :  2 : Expert :  3 : Whim : -2 : Tremor Res :  4
+Ingot S Greaves       : インゴットＳグリーヴ    : B : A : L :  -- :  77 : 2 : -2 : -2 : -2 :  1 :  0 : Wind Res :  2 : Expert :  3 : Whim : -2 : Tremor Res :  2
+Ingot S Cap           : インゴットＳキャップ    : A : A : H :  -- :  45 : 1 : -1 : -1 : -1 :  2 :  0 : PelletS Up :  3 : Pellet S+ :  4 : Whim : -2 : Reload Spd :  4
+Ingot S Vest          : インゴットＳレジスト    : G : A : C :  -- :  45 : 1 : -1 : -1 : -1 :  2 :  0 : PelletS Up :  1 : Pellet S+ :  3 : Whim : -2 : Reload Spd :  3
+Ingot S Guards        : インゴットＳガード      : G : A : A :  -- :  45 : 2 : -1 : -1 : -1 :  2 :  0 : PelletS Up :  2 : Pellet S+ :  2 : Whim : -2 : Reload Spd :  3
+Ingot S Coat          : インゴットＳコート      : G : A : W :  -- :  45 : 1 : -1 : -1 : -1 :  2 :  0 : PelletS Up :  2 : Pellet S+ :  3 : Whim : -2 : Pierce S+  :  4
+Ingot S Leggings      : インゴットＳレギンス    : G : A : L :  -- :  45 : 2 : -1 : -1 : -1 :  2 :  0 : PelletS Up :  2 : Pellet S+ :  3 : Whim : -2 : Pierce S+  :  2
+Nargacuga S Helm      : ナルガＳヘルム          : A : A : H :  -- :  77 : 2 : -3 :  1 :  0 : -4 : -1 : Evade Dist :  2 : Sense :  3 : Stamina : -3 : Evasion :  1
+Nargacuga S Mail      : ナルガＳメイル          : B : A : C :  -- :  77 : 0 : -3 :  1 :  0 : -4 : -1 : Evade Dist :  3 : Sense :  1 : Stamina : -2 : Evasion :  5
+Nargacuga S Vambraces : ナルガＳアーム          : B : A : A :  -- :  77 : 1 : -3 :  1 :  0 : -4 : -1 : Evade Dist :  3 : Sense :  3 : Stamina : -2 : Evasion :  3
+Nargacuga S Faulds    : ナルガＳフォールド      : B : A : W :  -- :  77 : 2 : -3 :  1 :  0 : -4 : -1 : Evade Dist :  3 : Sense :  1 : Stamina : -2 : SpeedSetup :  3
+Nargacuga S Greaves   : ナルガＳグリーヴ        : B : A : L :  -- :  77 : 2 : -3 :  1 :  0 : -4 : -1 : Evade Dist :  4 : Sense :  2 : Stamina : -1 : SpeedSetup :  2
+Nargacuga S Cap       : ナルガＳキャップ        : A : A : H :  -- :  45 : 2 : -1 :  3 :  1 : -2 :  0 : Evade Dist :  4 : Sense :  3 : Stamina : -1 : Evasion :  3
+Nargacuga S Vest      : ナルガＳレジスト        : G : A : C :  -- :  45 : 0 : -1 :  3 :  1 : -2 :  0 : Evade Dist :  2 : Sense :  2 : Stamina : -2 : Evasion :  5
+Nargacuga S Guards    : ナルガＳガード          : G : A : A :  -- :  45 : 1 : -1 :  3 :  1 : -2 :  0 : Evade Dist :  4 : Sense :  4 : Stamina : -2 : Evasion :  1
+Nargacuga S Coat      : ナルガＳコート          : G : A : W :  -- :  45 : 2 : -1 :  3 :  1 : -2 :  0 : Evade Dist :  1 : Sense :  2 : Stamina : -3 : SpeedSetup :  3
+Nargacuga S Leggings  : ナルガＳレギンス        : G : A : L :  -- :  45 : 2 : -1 :  3 :  1 : -2 :  0 : Evade Dist :  4 : Sense :  1 : Stamina : -2 : SpeedSetup :  2
+Barioth S Helm        : ベリオＳヘルム          : A : A : H :  -- :  77 : 2 : -4 :  1 :  2 : -3 : -1 : Constitutn :  3 : Evasion :  1 : StaminaRec : -3 : Ice Atk :  2
+Barioth S Mail        : ベリオＳメイル          : B : A : C :  -- :  77 : 2 : -4 :  1 :  2 : -3 : -1 : Constitutn :  1 : Evasion :  3 : StaminaRec : -2 : Ice Atk :  1
+Barioth S Vambraces   : ベリオＳアーム          : B : A : A :  -- :  77 : 1 : -4 :  1 :  2 : -3 : -1 : Constitutn :  4 : Evasion :  1 : StaminaRec : -1 : Ice Atk :  5
+Barioth S Faulds      : ベリオＳフォールド      : B : A : W :  -- :  77 : 0 : -4 :  1 :  2 : -3 : -1 : Stamina    :  3 : Evasion :  5 : StaminaRec : -2 : Ice Atk :  3
+Barioth S Greaves     : ベリオＳグリーヴ        : B : A : L :  -- :  77 : 1 : -4 :  1 :  2 : -3 : -1 : Constitutn :  4 : Evasion :  2 : StaminaRec : -2 : Stamina :  3
+Barioth S Cap         : ベリオＳキャップ        : A : A : H :  -- :  45 : 2 : -2 :  2 :  4 : -1 :  0 : Constitutn :  4 : Evasion :  5 : StaminaRec : -1 : Ice Atk :  1
+Barioth S Vest        : ベリオＳレジスト        : G : A : C :  -- :  45 : 2 : -2 :  2 :  4 : -1 :  0 : Constitutn :  1 : Evasion :  3 : StaminaRec : -2 : Ice Atk :  1
+Barioth S Guards      : ベリオＳガード          : G : A : A :  -- :  45 : 1 : -2 :  2 :  4 : -1 :  0 : Constitutn :  4 : Evasion :  1 : StaminaRec : -2 : Ice Atk :  4
+Barioth S Coat        : ベリオＳコート          : G : A : W :  -- :  45 : 0 : -2 :  2 :  4 : -1 :  0 : Stamina    :  3 : Evasion :  2 : StaminaRec : -3 : Ice Atk :  5
+Barioth S Leggings    : ベリオＳレギンス        : G : A : L :  -- :  45 : 1 : -2 :  2 :  4 : -1 :  0 : Constitutn :  4 : Evasion :  2 : StaminaRec : -2 : Stamina :  3
+Rathalos S Helm       : レウスＳヘルム          : A : A : H :  -- :  80 : 1 :  2 : -1 : -1 : -2 : -4 : Blow :  1 : Attack   :  4 : Rec Level : -3 : Sharpener : 3
+Rathalos S Mail       : レウスＳメイル          : B : A : C :  -- :  80 : 2 :  2 : -1 : -1 : -2 : -4 : Blow :  3 : Attack   :  1 : Rec Level : -2 : Sharpener : 1
+Rathalos S Vambraces  : レウスＳアーム          : B : A : A :  -- :  80 : 1 :  2 : -1 : -1 : -2 : -4 : Blow :  3 : Fire Atk :  4 : Rec Level : -2 : Sharpener : 2
+Rathalos S Faulds     : レウスＳフォールド      : B : A : W :  -- :  80 : 2 :  2 : -1 : -1 : -2 : -4 : Blow :  1 : Fire Atk :  3 : Rec Level : -2 : Sharpener : 3
+Rathalos S Greaves    : レウスＳグリーヴ        : B : A : L :  -- :  80 : 1 :  2 : -1 : -1 : -2 : -4 : Blow :  2 : Attack   :  5 : Rec Level : -3 : Sharpener : 1
+Rathalos S Cap        : レウスＳキャップ        : A : A : H :  -- :  47 : 1 :  4 :  0 :  0 : -1 : -2 : Blow :  2 : Attack   :  5 : Rec Level : -2 : Rapid Fire : 4
+Rathalos S Vest       : レウスＳレジスト        : G : A : C :  -- :  47 : 2 :  4 :  0 :  0 : -1 : -2 : Blow :  3 : Attack   :  1 : Rec Level : -2 : Rapid Fire : 1
+Rathalos S Guards     : レウスＳガード          : G : A : A :  -- :  47 : 1 :  4 :  0 :  0 : -1 : -2 : Blow :  3 : Fire Atk :  4 : Rec Level : -3 : Rapid Fire : 1
+Rathalos S Coat       : レウスＳコート          : G : A : W :  -- :  47 : 2 :  4 :  0 :  0 : -1 : -2 : Blow :  1 : Fire Atk :  3 : Rec Level : -3 : Rapid Fire : 2
+Rathalos S Leggings   : レウスＳレギンス        : G : A : L :  -- :  47 : 1 :  4 :  0 :  0 : -1 : -2 : Blow :  2 : Attack   :  5 : Rec Level : -2 : Rapid Fire : 2
+Uragaan S Helm        : ガンキンＳヘルム        : A : A : H :  -- :  80 : 0 :  2 : -5 : -2 :  1 : -3 : Defense  :  3 : PunishDraw :  3 : Water Res : -3 : Crit Draw :  4
+Uragaan S Mail        : ガンキンＳメイル        : B : A : C :  -- :  80 : 2 :  2 : -5 : -2 :  1 : -3 : Fire Res :  3 : PunishDraw :  1 : Water Res : -2 : Crit Draw :  1
+Uragaan S Vambraces   : ガンキンＳアーム        : B : A : A :  -- :  80 : 0 :  2 : -5 : -2 :  1 : -3 : Defense  :  6 : PunishDraw :  3 : Water Res : -1 : Crit Draw :  3
+Uragaan S Faulds      : ガンキンＳフォールド    : B : A : W :  -- :  80 : 3 :  2 : -5 : -2 :  1 : -3 : Fire Res :  2 : PunishDraw :  1 : Water Res : -3 : Crit Draw :  1
+Uragaan S Greaves     : ガンキンＳグリーヴ      : B : A : L :  -- :  80 : 2 :  2 : -5 : -2 :  1 : -3 : Fire Res :  4 : PunishDraw :  2 : Water Res : -2 : Crit Draw :  1
+Uragaan S Cap         : ガンキンＳキャップ      : A : A : H :  -- :  47 : 0 :  4 : -4 : -1 :  2 : -2 : Defense  :  4 : Recoil :  5 : Water Res : -2 : PierceS Up :  4
+Uragaan S Vest        : ガンキンＳレジスト      : G : A : C :  -- :  47 : 2 :  4 : -4 : -1 :  2 : -2 : Fire Res :  3 : Recoil :  1 : Water Res : -2 : PierceS Up :  1
+Uragaan S Guards      : ガンキンＳガード        : G : A : A :  -- :  47 : 0 :  4 : -4 : -1 :  2 : -2 : Defense  :  5 : Recoil :  3 : Water Res : -3 : PierceS Up :  2
+Uragaan S Coat        : ガンキンＳコート        : G : A : W :  -- :  47 : 3 :  4 : -4 : -1 :  2 : -2 : Fire Res :  2 : Recoil :  1 : Water Res : -2 : PierceS Up :  2
+Uragaan S Leggings    : ガンキンＳレギンス      : G : A : L :  -- :  47 : 2 :  4 : -4 : -1 :  2 : -2 : Fire Res :  4 : Recoil :  1 : Water Res : -3 : PierceS Up :  1
+Tigrex S Helm         : レックスＳヘルム        : A : A : H :  -- :  81 : 2 :  2 : -1 :  0 : -4 : -2 : Stamina :  1 : Hearing :  2 : Gluttony :  3 : Protection : -3
+Tigrex S Mail         : レックスＳメイル        : B : A : C :  -- :  81 : 0 :  2 : -1 :  0 : -4 : -2 : Stamina :  3 : Hearing :  4 : Gluttony :  1 : Protection : -3
+Tigrex S Vambraces    : レックスＳアーム        : B : A : A :  -- :  81 : 2 :  2 : -1 :  0 : -4 : -2 : Stamina :  1 : Hearing :  2 : Gluttony :  4 : Protection : -2
+Tigrex S Faulds       : レックスＳフォールド    : B : A : W :  -- :  81 : 2 :  2 : -1 :  0 : -4 : -2 : Stamina :  3 : Hearing :  2 : Gluttony :  2 : Protection : -2
+Tigrex S Greaves      : レックスＳグリーヴ      : B : A : L :  -- :  81 : 0 :  2 : -1 :  0 : -4 : -2 : Stamina :  2 : Hearing :  4 : Gluttony :  5 : Protection : -2
+Tigrex S Cap          : レックスＳキャップ      : A : A : H :  -- :  47 : 2 :  3 :  0 :  0 : -2 : -1 : Stamina :  3 : Hearing :  3 : Gluttony :  2 : Protection : -3
+Tigrex S Vest         : レックスＳレジスト      : G : A : C :  -- :  47 : 0 :  3 :  0 :  0 : -2 : -1 : Stamina :  3 : Hearing :  3 : Gluttony :  2 : Protection : -3
+Tigrex S Guards       : レックスＳガード        : G : A : A :  -- :  47 : 2 :  3 :  0 :  0 : -2 : -1 : Stamina :  1 : Hearing :  2 : Gluttony :  3 : Protection : -3
+Tigrex S Coat         : レックスＳコート        : G : A : W :  -- :  47 : 2 :  3 :  0 :  0 : -2 : -1 : Stamina :  1 : Hearing :  2 : Gluttony :  5 : Protection : -1
+Tigrex S Leggings     : レックスＳレギンス      : G : A : L :  -- :  47 : 0 :  3 :  0 :  0 : -2 : -1 : Stamina :  3 : Hearing :  4 : Gluttony :  4 : Protection : -2
+Diablos S Helm        : ディアブロＳヘルム      : A : A : H :  -- :  81 : 2 :  2 : -1 : -3 : -1 : -1 : Crit Draw :  3 : Tremor Res :  2 : Sheathe :  1 : Status : -3
+Diablos S Mail        : ディアブロＳメイル      : B : A : C :  -- :  81 : 2 :  2 : -1 : -3 : -1 : -1 : Crit Draw :  2 : Tremor Res :  1 : Sheathe :  2 : Status : -2
+Diablos S Vambraces   : ディアブロＳアーム      : B : A : A :  -- :  81 : 2 :  2 : -1 : -3 : -1 : -1 : Crit Draw :  3 : Tremor Res :  2 : Sheathe :  1 : Status : -3
+Diablos S Faulds      : ディアブロＳコイル      : B : A : W :  -- :  81 : 2 :  2 : -1 : -3 : -1 : -1 : Crit Draw :  2 : Tremor Res :  2 : Sheathe :  4 : Status : -1
+Diablos S Greaves     : ディアブロＳグリーヴ    : B : A : L :  -- :  81 : 2 :  2 : -1 : -3 : -1 : -1 : Crit Draw :  1 : Tremor Res :  4 : Sheathe :  3 : Status : -1
+Diablos S Cap         : ディアブロＳキャップ    : A : A : H :  -- :  47 : 2 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  3 : PierceS Up :  3 : Sheathe :  3 : Status : -2
+Diablos S Vest        : ディアブロＳレジスト    : G : A : C :  -- :  47 : 2 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  2 : PierceS Up :  2 : Sheathe :  1 : Status : -2
+Diablos S Guards      : ディアブロＳガード      : G : A : A :  -- :  47 : 2 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  2 : PierceS Up :  3 : Sheathe :  2 : Status : -2
+Diablos S Coat        : ディアブロＳコート      : G : A : W :  -- :  47 : 2 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  3 : PierceS Up :  1 : Sheathe :  2 : Status : -3
+Diablos S Leggings    : ディアブロＳレギンス    : G : A : L :  -- :  47 : 2 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  5 : PierceS Up :  1 : Sheathe :  2 : Status : -1
+Jinouga S Helm        : ジンオウＳヘルム        : A : A : H :  -- :  81 : 2 : -1 : -2 : -3 :  4 :  0 : ThunderAtk :  1 : Earnest :  2 : Evade Dist :  3 : Sense : -3
+Jinouga S Mail        : ジンオウＳメイル        : B : A : C :  -- :  81 : 3 : -1 : -2 : -3 :  4 :  0 : ThunderAtk :  1 : Earnest :  1 : Evade Dist :  1 : Sense : -2
+Jinouga S Vambraces   : ジンオウＳアーム        : B : A : A :  -- :  81 : 0 : -1 : -2 : -3 :  4 :  0 : ThunderAtk :  2 : Earnest :  5 : Evade Dist :  5 : Sense : -1
+Jinouga S Faulds      : ジンオウＳフォールド    : B : A : W :  -- :  81 : 1 : -1 : -2 : -3 :  4 :  0 : ThunderAtk :  6 : Earnest :  2 : Evade Dist :  1 : Sense : -2
+Jinouga S Greaves     : ジンオウＳグリーヴ      : B : A : L :  -- :  81 : 0 : -1 : -2 : -3 :  4 :  0 : ThunderAtk :  1 : Earnest :  5 : Evade Dist :  5 : Sense : -2
+Jinouga S Cap         : ジンオウＳキャップ      : A : A : H :  -- :  47 : 2 :  0 : -1 : -1 :  5 :  0 : ThunderAtk :  1 : Earnest :  4 : Evade Dist :  4 : Sense : -2
+Jinouga S Vest        : ジンオウＳレジスト      : G : A : C :  -- :  47 : 3 :  0 : -1 : -1 :  5 :  0 : ThunderAtk :  1 : Earnest :  1 : Evade Dist :  1 : Sense : -2
+Jinouga S Guards      : ジンオウＳガード        : G : A : A :  -- :  47 : 0 :  0 : -1 : -1 :  5 :  0 : ThunderAtk :  5 : Earnest :  2 : Evade Dist :  4 : Sense : -2
+Jinouga S Coat        : ジンオウＳコート        : G : A : W :  -- :  47 : 1 :  0 : -1 : -1 :  5 :  0 : ThunderAtk :  3 : Earnest :  4 : Evade Dist :  2 : Sense : -2
+Jinouga S Leggings    : ジンオウＳレギンス      : G : A : L :  -- :  47 : 0 :  0 : -1 : -1 :  5 :  0 : ThunderAtk :  1 : Earnest :  5 : Evade Dist :  5 : Sense : -2
+Agnaktor S Helm       : アグナＳヘルム          : A : A : H :  -- :  81 : 1 :  4 : -4 : -2 :  0 : -4 : Constitutn :  1 : Water Atk : -2 : Sharpness :  4 : Fire Atk :  4
+Agnaktor S Mail       : アグナＳメイル          : B : A : C :  -- :  81 : 2 :  4 : -4 : -2 :  0 : -4 : Constitutn :  2 : Water Atk : -2 : Sharpness :  1 : Fire Res :  2
+Agnaktor S Vambraces  : アグナＳアーム          : B : A : A :  -- :  81 : 1 :  4 : -4 : -2 :  0 : -4 : Constitutn :  2 : Water Atk : -1 : Sharpness :  2 : Fire Atk :  6
+Agnaktor S Faulds     : アグナＳフォールド      : B : A : W :  -- :  81 : 1 :  4 : -4 : -2 :  0 : -4 : Constitutn :  3 : Water Atk : -2 : Sharpness :  2 : Fire Res :  4
+Agnaktor S Greaves    : アグナＳグリーヴ        : B : A : L :  -- :  81 : 2 :  4 : -4 : -2 :  0 : -4 : Constitutn :  4 : Water Atk : -3 : Sharpness :  1 : Fire Atk :  1
+Agnaktor S Cap        : アグナＳキャップ        : A : A : H :  -- :  47 : 1 :  5 : -2 : -1 :  0 : -2 : Precision :  2 : Water Atk : -2 : NormalS Up :  4 : Fire Atk :  5
+Agnaktor S Vest       : アグナＳレジスト        : G : A : C :  -- :  47 : 2 :  5 : -2 : -1 :  0 : -2 : Precision :  2 : Water Atk : -2 : NormalS Up :  1 : Fire Res :  2
+Agnaktor S Guards     : アグナＳガード          : G : A : A :  -- :  47 : 1 :  5 : -2 : -1 :  0 : -2 : Precision :  1 : Water Atk : -3 : NormalS Up :  2 : Fire Atk :  5
+Agnaktor S Coat       : アグナＳコート          : G : A : W :  -- :  47 : 1 :  5 : -2 : -1 :  0 : -2 : Precision :  4 : Water Atk : -1 : NormalS Up :  2 : Fire Res :  4
+Agnaktor S Leggings   : アグナＳレギンス        : G : A : L :  -- :  47 : 2 :  5 : -2 : -1 :  0 : -2 : Precision :  4 : Water Atk : -2 : NormalS Up :  2 : Fire Atk :  1
+Dobol S Helm          : ドボルＳヘルム          : A : A : H :  -- :  81 : 1 : -3 :  1 : -2 : -2 :  0 : Attack :  3 : Bash :  1 : Potential :  4 : Expert : -3
+Dobol S Mail          : ドボルＳメイル          : B : A : C :  -- :  81 : 1 : -3 :  1 : -2 : -2 :  0 : Attack :  4 : Bash :  2 : Potential :  1 : Expert : -2
+Dobol S Vambraces     : ドボルＳアーム          : B : A : A :  -- :  81 : 2 : -3 :  1 : -2 : -2 :  0 : Attack :  2 : Bash :  3 : Health    :  2 : Expert : -2
+Dobol S Faulds        : ドボルＳフォールド      : B : A : W :  -- :  81 : 1 : -3 :  1 : -2 : -2 :  0 : Health :  3 : Bash :  2 : Potential :  5 : Expert : -1
+Dobol S Greaves       : ドボルＳグリーヴ        : B : A : L :  -- :  81 : 1 : -3 :  1 : -2 : -2 :  0 : Attack :  6 : Bash :  2 : Potential :  1 : Expert : -2
+Dobol S Cap           : ドボルＳキャップ        : A : A : H :  -- :  47 : 1 : -2 :  3 : -1 : -1 :  0 : Recoil :  5 : Bash :  3 : Potential :  3 : Expert : -2
+Dobol S Vest          : ドボルＳレジスト        : G : A : C :  -- :  47 : 1 : -2 :  3 : -1 : -1 :  0 : Recoil :  2 : Bash :  2 : Potential :  2 : Expert : -3
+Dobol S Guards        : ドボルＳガード          : G : A : A :  -- :  47 : 2 : -2 :  3 : -1 : -1 :  0 : Recoil :  2 : Bash :  3 : Health    :  3 : Expert : -1
+Dobol S Coat          : ドボルＳコート          : G : A : W :  -- :  47 : 1 : -2 :  3 : -1 : -1 :  0 : Health :  3 : Bash :  2 : Potential :  5 : Expert : -1
+Dobol S Leggings      : ドボルＳレギンス        : G : A : L :  -- :  47 : 1 : -2 :  3 : -1 : -1 :  0 : Recoil :  6 : Bash :  1 : Potential :  1 : Expert : -3
+Qurupeco U Helm       : ペッコＵヘルム          : A : A : H :  -- :  70 : 2 : -3 : -1 : -5 :  4 :  2 : Wide-Range :  2 : Eating :  3 : Ice Atk : -3 : ThunderAtk :  1
+Qurupeco U Mail       : ペッコＵメイル          : B : A : C :  -- :  70 : 0 : -3 : -1 : -5 :  4 :  2 : Wide-Range :  5 : Eating :  3 : Ice Atk : -2 : ThunderAtk :  1
+Qurupeco U Vambraces  : ペッコＵアーム          : B : A : A :  -- :  70 : 3 : -3 : -1 : -5 :  4 :  2 : Wide-Range :  4 : Eating :  1 : Ice Atk : -1 : ThunderAtk :  1
+Qurupeco U Coil       : ペッコＵコイル          : B : A : W :  -- :  70 : 1 : -3 : -1 : -5 :  4 :  2 : Wide-Range :  1 : Eating :  3 : Ice Atk : -2 : ThunderAtk :  5
+Qurupeco U Greaves    : ペッコＵグリーヴ        : B : A : L :  -- :  70 : 2 : -3 : -1 : -5 :  4 :  2 : Wide-Range :  5 : Eating :  1 : Ice Atk : -2 : ThunderAtk :  1
+Qurupeco U Cap        : ペッコＵキャップ        : A : A : H :  -- :  41 : 2 : -2 :  0 : -3 :  5 :  3 : Wide-Range :  4 : Eating :  5 : Ice Atk : -1 : ThunderAtk :  1
+Qurupeco U Vest       : ペッコＵレジスト        : G : A : C :  -- :  41 : 0 : -2 :  0 : -3 :  5 :  3 : Wide-Range :  5 : Eating :  3 : Ice Atk : -2 : ThunderAtk :  1
+Qurupeco U Guards     : ペッコＵガード          : G : A : A :  -- :  41 : 3 : -2 :  0 : -3 :  5 :  3 : Wide-Range :  4 : Eating :  1 : Ice Atk : -1 : ThunderAtk :  1
+Qurupeco U Coat       : ペッコＵコート          : G : A : W :  -- :  41 : 1 : -2 :  0 : -3 :  5 :  3 : Wide-Range :  1 : Eating :  2 : Ice Atk : -3 : ThunderAtk :  5
+Qurupeco U Leggings   : ペッコＵレギンス        : G : A : L :  -- :  41 : 2 : -2 :  0 : -3 :  5 :  3 : Wide-Range :  4 : Eating :  1 : Ice Atk : -3 : ThunderAtk :  1
+Ludroth U Helm        : ルドロスＵヘルム        : A : A : H :  -- :  71 : 1 : -4 :  2 :  0 : -1 :  1 : Stamina :  1 : Exhaust :  3 : ThunderRes : -3 : Water Res :  4
+Ludroth U Mail        : ルドロスＵメイル        : B : A : C :  -- :  71 : 3 : -4 :  2 :  0 : -2 :  1 : Stamina :  1 : Status  :  1 : ThunderRes : -2 : Water Res :  1
+Ludroth U Vambraces   : ルドロスＵアーム        : B : A : A :  -- :  71 : 1 : -4 :  2 :  0 : -2 :  1 : Stamina :  3 : Status  :  5 : ThunderRes : -1 : Water Res :  2
+Ludroth U Faulds      : ルドロスＵフォールド    : B : A : W :  -- :  71 : 3 : -4 :  2 :  0 : -2 :  1 : Stamina :  2 : Status  :  1 : ThunderRes : -3 : Water Res :  1
+Ludroth U Greaves     : ルドロスＵグリーヴ      : B : A : L :  -- :  71 : 1 : -4 :  2 :  0 : -2 :  1 : Stamina :  3 : Status  :  5 : ThunderRes : -1 : Exhaust   :  2
+Ludroth U Cap         : ルドロスＵキャップ      : A : A : H :  -- :  41 : 1 : -2 :  4 :  1 : -1 :  2 : Stamina :  3 : Status  :  5 : ThunderRes : -2 : Exhaust   :  3
+Ludroth U Vest        : ルドロスＵレジスト      : G : A : C :  -- :  41 : 3 : -2 :  4 :  1 : -1 :  2 : Stamina :  1 : Status  :  1 : ThunderRes : -2 : Water Res :  1
+Ludroth U Guards      : ルドロスＵガード        : G : A : A :  -- :  41 : 1 : -2 :  4 :  1 : -1 :  2 : Stamina :  2 : Status  :  5 : ThunderRes : -3 : Water Res :  1
+Ludroth U Coat        : ルドロスＵコート        : G : A : W :  -- :  41 : 3 : -2 :  4 :  1 : -1 :  2 : Stamina :  2 : Status  :  2 : ThunderRes : -2 : Water Res :  1
+Ludroth U Leggings    : ルドロスＵレギンス      : G : A : L :  -- :  41 : 1 : -2 :  4 :  1 : -1 :  2 : Stamina :  3 : Exhaust :  2 : ThunderRes : -1 : Water Res :  5
+Barroth U Helm        : ボロスＵヘルム          : A : A : H :  -- :  75 : 2 : -5 :  2 :  3 : -2 :  0 : KO :  1 : Fire Atk : -3 : Exhaust :  1 : Defense :  4
+Barroth U Mail        : ボロスＵメイル          : B : A : C :  -- :  75 : 1 : -5 :  2 :  3 : -2 :  0 : KO :  3 : Fire Atk : -2 : Exhaust :  1 : Ice Atk :  3
+Barroth U Vambraces   : ボロスＵアーム          : B : A : A :  -- :  75 : 3 : -5 :  2 :  3 : -2 :  0 : KO :  1 : Fire Atk : -1 : Exhaust :  1 : Defense :  4
+Barroth U Faulds      : ボロスＵフォールド      : B : A : W :  -- :  75 : 0 : -5 :  2 :  3 : -2 :  0 : KO :  4 : Fire Atk : -2 : Exhaust :  5 : Ice Atk :  2
+Barroth U Greaves     : ボロスＵグリーヴ        : B : A : L :  -- :  75 : 3 : -5 :  2 :  3 : -2 :  0 : KO :  1 : Fire Atk : -2 : Exhaust :  1 : Defense :  3
+Barroth U Cap         : ボロスＵキャップ        : A : A : H :  -- :  44 : 2 : -4 :  3 :  5 : -1 :  0 : Ice Atk :  1 : Fire Atk : -2 : PierceS Up :  3 : Defense :  5
+Barroth U Vest        : ボロスＵレジスト        : G : A : C :  -- :  44 : 1 : -4 :  3 :  5 : -1 :  0 : Ice Atk :  1 : Fire Atk : -2 : PierceS Up :  3 : KO :  3
+Barroth U Guards      : ボロスＵガード          : G : A : A :  -- :  44 : 3 : -4 :  3 :  5 : -1 :  0 : Ice Atk :  1 : Fire Atk : -1 : PierceS Up :  1 : Defense :  4
+Barroth U Coat        : ボロスＵコート          : G : A : W :  -- :  44 : 0 : -4 :  3 :  5 : -1 :  0 : Ice Atk :  5 : Fire Atk : -3 : PierceS Up :  3 : KO :  2
+Barroth U Leggings    : ボロスＵレギンス        : G : A : L :  -- :  44 : 3 : -4 :  3 :  5 : -1 :  0 : Ice Atk :  1 : Fire Atk : -2 : PierceS Up :  1 : Defense :  3
+Gigginox U Helm       : ネブラＵヘルム          : A : A : H :  -- :  77 : 0 :  0 : -4 :  3 :  4 : -2 : Exhaust :  4 : FastCharge :  2 : Ice Atk : -2 : ThunderAtk :  5
+Gigginox U Mail       : ネブラＵメイル          : B : A : C :  -- :  77 : 3 :  0 : -4 :  3 :  4 : -2 : Exhaust :  1 : FastCharge :  1 : Ice Atk : -2 : ThunderAtk :  1
+Gigginox U Vambraces  : ネブラＵアーム          : B : A : A :  -- :  77 : 3 :  0 : -4 :  3 :  4 : -2 : Exhaust :  1 : FastCharge :  1 : Ice Atk : -3 : Stamina :  2
+Gigginox U Faulds     : ネブラＵフォールド      : B : A : W :  -- :  77 : 2 :  0 : -4 :  3 :  4 : -2 : Exhaust :  2 : FastCharge :  1 : Ice Atk : -2 : Stamina :  4
+Gigginox U Greaves    : ネブラＵグリーヴ        : B : A : L :  -- :  77 : 1 :  0 : -4 :  3 :  4 : -2 : Exhaust :  2 : FastCharge :  5 : Ice Atk : -1 : ThunderAtk :  3
+Gigginox U Cap        : ネブラＵキャップ        : A : A : H :  -- :  45 : 0 :  0 : -2 :  4 :  5 : -1 : Exhaust :  4 : FastCharge :  5 : Ice Atk : -2 : ThunderAtk :  4
+Gigginox U Vest       : ネブラＵレジスト        : G : A : C :  -- :  45 : 3 :  0 : -2 :  4 :  5 : -1 : Exhaust :  1 : FastCharge :  1 : Ice Atk : -2 : ThunderAtk :  1
+Gigginox U Guards     : ネブラＵガード          : G : A : A :  -- :  45 : 3 :  0 : -2 :  4 :  5 : -1 : Exhaust :  1 : FastCharge :  2 : Ice Atk : -2 : Stamina :  2
+Gigginox U Coat       : ネブラＵコート          : G : A : W :  -- :  45 : 2 :  0 : -2 :  4 :  5 : -1 : Exhaust :  2 : FastCharge :  1 : Ice Atk : -2 : Stamina :  4
+Gigginox U Leggings   : ネブラＵレギンス        : G : A : L :  -- :  45 : 1 :  0 : -2 :  4 :  5 : -1 : Exhaust :  3 : FastCharge :  2 : Ice Atk : -2 : ThunderAtk :  4
 Dober Helm            : ドーベルヘルム          : A : A : H :  -- :  80 : 0 : -2 :  0 :  0 :  0 :  4 : Dragon Atk :  3 : StaminaRec :  3 : Evasion :  4 : Hunger : -3
 Dober Mail            : ドーベルメイル          : B : A : C :  -- :  80 : 2 : -2 :  0 :  0 :  0 :  4 : Dragon Atk :  1 : StaminaRec :  2 : Evasion :  2 : Hunger : -2
 Dober Vambraces       : ドーベルアーム          : B : A : A :  -- :  80 : 3 : -2 :  0 :  0 :  0 :  4 : Dragon Atk :  4 : Dragon Res :  1 : Evasion :  1 : Hunger : -1
@@ -800,66 +800,66 @@ Dober Vest            : ドーベルレジスト        : G : A : C :  -- :  47 
 Dober Guards          : ドーベルガード          : G : A : A :  -- :  47 : 3 : -1 :  0 :  0 :  0 :  5 : Dragon Atk :  2 : Dragon Res :  1 : Evasion :  2 : Hunger : -2
 Dober Coat            : ドーベルコート          : G : A : W :  -- :  47 : 0 : -1 :  0 :  0 :  0 :  5 : Dragon Atk :  5 : StaminaRec :  4 : Evasion :  2 : Hunger : -2
 Dober Leggings        : ドーベルレギンス        : G : A : L :  -- :  47 : 3 : -1 :  0 :  0 :  0 :  5 : Dragon Atk :  1 : Dragon Res :  4 : Evasion :  1 : Hunger : -1
-Nargacuga U Helm      : ナルガUヘルム           : A : A : H :  -- :  80 : 3 : -3 :  1 :  0 : -4 : -1 : StaminaRec :  2 : Perception :  1 : Stamina :  1 : Constitutn : -3
-Nargacuga U Mail      : ナルガUメイル           : B : A : C :  -- :  80 : 3 : -3 :  1 :  0 : -4 : -1 : StaminaRec :  1 : Perception :  1 : Stamina :  1 : Constitutn : -2
-Nargacuga U Vambraces : ナルガUアーム           : B : A : A :  -- :  80 : 2 : -3 :  1 :  0 : -4 : -1 : StaminaRec :  5 : Evasion    :  2 : Stamina :  1 : Constitutn : -1
-Nargacuga U Faulds    : ナルガUフォールド       : B : A : W :  -- :  80 : 0 : -3 :  1 :  0 : -4 : -1 : Evasion    :  3 : Perception :  6 : Stamina :  2 : Constitutn : -2
-Nargacuga U Greaves   : ナルガUグリーヴ         : B : A : L :  -- :  80 : 1 : -3 :  1 :  0 : -4 : -1 : StaminaRec :  2 : Perception :  2 : Stamina :  5 : Constitutn : -2
-Nargacuga U Cap       : ナルガUキャップ         : A : A : H :  -- :  47 : 3 : -1 :  3 :  1 : -2 :  0 : StaminaRec :  2 : Perception :  3 : Stamina :  2 : Constitutn : -2
-Nargacuga U Vest      : ナルガUレジスト         : G : A : C :  -- :  47 : 3 : -1 :  3 :  1 : -2 :  0 : StaminaRec :  1 : Perception :  1 : Stamina :  1 : Constitutn : -2
-Nargacuga U Guards    : ナルガUガード           : G : A : A :  -- :  47 : 2 : -1 :  3 :  1 : -2 :  0 : StaminaRec :  4 : Evasion    :  2 : Stamina :  1 : Constitutn : -2
-Nargacuga U Coat      : ナルガUコート           : G : A : W :  -- :  47 : 1 : -1 :  3 :  1 : -2 :  0 : Evasion    :  3 : Perception :  4 : Stamina :  2 : Constitutn : -2
-Nargacuga U Leggings  : ナルガUレギンス         : G : A : L :  -- :  47 : 0 : -1 :  3 :  1 : -2 :  0 : StaminaRec :  3 : Perception :  3 : Stamina :  5 : Constitutn : -2
-Barioth U Helm        : ベリオUヘルム           : A : A : H :  -- :  80 : 1 :  2 :  1 : -4 : -3 :  0 : Evade Dist :  2 : Constitutn :  3 : Sense :  3 : Evasion : -3
-Barioth U Mail        : ベリオUメイル           : B : A : C :  -- :  80 : 0 :  2 :  1 : -4 : -3 :  0 : Evade Dist :  5 : Constitutn :  2 : Sense :  2 : Evasion : -2
-Barioth U Vambraces   : ベリオUアーム           : B : A : A :  -- :  80 : 1 :  2 :  1 : -4 : -3 :  0 : Evade Dist :  5 : Constitutn :  3 : Sense :  2 : Evasion : -1
-Barioth U Faulds      : ベリオUフォールド       : B : A : W :  -- :  80 : 3 :  2 :  1 : -4 : -3 :  0 : Evade Dist :  1 : Constitutn :  3 : Sense :  1 : Evasion : -2
-Barioth U Greaves     : ベリオUグリーヴ         : B : A : L :  -- :  80 : 3 :  2 :  1 : -4 : -3 :  0 : Evade Dist :  2 : Constitutn :  1 : Sense :  2 : Evasion : -2
-Barioth U Cap         : ベリオUキャップ         : A : A : H :  -- :  47 : 1 :  4 :  2 : -2 : -1 :  0 : Evade Dist :  5 : Constitutn :  3 : Sense :  4 : Evasion : -1
-Barioth U Vest        : ベリオUレジスト         : G : A : C :  -- :  47 : 0 :  4 :  2 : -2 : -1 :  0 : Evade Dist :  5 : Constitutn :  2 : Sense :  2 : Evasion : -2
-Barioth U Guards      : ベリオUガード           : G : A : A :  -- :  47 : 1 :  4 :  2 : -2 : -1 :  0 : Evade Dist :  3 : Constitutn :  3 : Sense :  3 : Evasion : -2
-Barioth U Coat        : ベリオUコート           : G : A : W :  -- :  47 : 3 :  4 :  2 : -2 : -1 :  0 : Evade Dist :  1 : Constitutn :  3 : Sense :  1 : Evasion : -2
-Barioth U Leggings    : ベリオUレギンス         : G : A : L :  -- :  47 : 3 :  4 :  2 : -2 : -1 :  0 : Evade Dist :  2 : Constitutn :  1 : Sense :  1 : Evasion : -3
-Uragaan U Helm        : ガンキンUヘルム         : A : A : H :  -- :  81 : 3 :  3 : -5 : -2 :  1 : -3 : Guard :  2 : StaminaRec :  1 : Dragon Res : -3 : Bomb Boost :  1
-Uragaan U Mail        : ガンキンUメイル         : B : A : C :  -- :  81 : 1 :  3 : -5 : -2 :  1 : -3 : Guard :  5 : StaminaRec :  2 : Dragon Res : -1 : Bomb Boost :  1
-Uragaan U Vambraces   : ガンキンUアーム         : B : A : A :  -- :  81 : 2 :  3 : -5 : -2 :  1 : -3 : Guard :  5 : StaminaRec :  1 : Dragon Res : -2 : Bomb Boost :  1
-Uragaan U Faulds      : ガンキンUフォールド     : B : A : W :  -- :  81 : 0 :  3 : -5 : -2 :  1 : -3 : Guard :  1 : StaminaRec :  4 : Dragon Res : -3 : Bomb Boost :  5
-Uragaan U Greaves     : ガンキンUグリーヴ       : B : A : L :  -- :  81 : 3 :  3 : -5 : -2 :  1 : -3 : Guard :  2 : StaminaRec :  1 : Dragon Res : -3 : Bomb Boost :  1
-Uragaan U Cap         : ガンキンUキャップ       : A : A : H :  -- :  47 : 3 :  5 : -4 : -1 :  2 : -2 : PelletS Up :  2 : StaminaRec :  4 : Dragon Res : -2 : Bomb Boost :  1
-Uragaan U Vest        : ガンキンUレジスト       : G : A : C :  -- :  47 : 1 :  5 : -4 : -1 :  2 : -2 : PelletS Up :  3 : StaminaRec :  3 : Dragon Res : -1 : Bomb Boost :  2
-Uragaan U Guards      : ガンキンUガード         : G : A : A :  -- :  47 : 2 :  5 : -4 : -1 :  2 : -2 : PelletS Up :  1 : Reload Spd :  4 : Dragon Res : -3 : Bomb Boost :  1
-Uragaan U Coat        : ガンキンUコート         : G : A : W :  -- :  47 : 0 :  5 : -4 : -1 :  2 : -2 : PelletS Up :  4 : StaminaRec :  3 : Dragon Res : -2 : Bomb Boost :  4
-Uragaan U Leggings    : ガンキンUレギンス       : G : A : L :  -- :  47 : 3 :  5 : -4 : -1 :  2 : -2 : PelletS Up :  1 : Reload Spd :  2 : Dragon Res : -3 : Bomb Boost :  1
-Tigrex U Helm         : レックスUヘルム         : A : A : H :  -- :  84 : 0 :  2 : -4 :  0 : -2 : -1 : Psychic :  5 : FastCharge :  3 : Hearing :  2 : Protection : -3
-Tigrex U Mail         : レックスUメイル         : B : A : C :  -- :  84 : 0 :  2 : -4 :  0 : -2 : -1 : Psychic :  4 : FastCharge :  1 : Hearing :  3 : Protection : -3
-Tigrex U Vambraces    : レックスUアーム         : B : A : A :  -- :  84 : 2 :  2 : -4 :  0 : -2 : -1 : Psychic :  3 : FastCharge :  3 : Hearing :  1 : Protection : -2
-Tigrex U Faulds       : レックスUフォールド     : B : A : W :  -- :  84 : 3 :  2 : -4 :  0 : -2 : -1 : Psychic :  1 : FastCharge :  2 : Hearing :  2 : Protection : -2
-Tigrex U Greaves      : レックスUグリーヴ       : B : A : L :  -- :  84 : 3 :  2 : -4 :  0 : -2 : -1 : Psychic :  2 : FastCharge :  1 : Hearing :  2 : Protection : -2
-Tigrex U Cap          : レックスUキャップ       : A : A : H :  -- :  49 : 0 :  4 : -2 :  0 : -1 :  0 : Psychic :  4 : FastCharge :  4 : Hearing :  4 : Protection : -3
-Tigrex U Vest         : レックスUレジスト       : G : A : C :  -- :  49 : 0 :  4 : -2 :  0 : -1 :  0 : Psychic :  3 : FastCharge :  3 : Hearing :  3 : Protection : -2
-Tigrex U Guards       : レックスUガード         : G : A : A :  -- :  49 : 2 :  4 : -2 :  0 : -1 :  0 : Psychic :  4 : FastCharge :  1 : Hearing :  1 : Protection : -3
-Tigrex U Coat         : レックスUコート         : G : A : W :  -- :  49 : 3 :  4 : -2 :  0 : -1 :  0 : Psychic :  2 : FastCharge :  2 : Hearing :  1 : Protection : -2
-Tigrex U Leggings     : レックスUレギンス       : G : A : L :  -- :  49 : 3 :  4 : -2 :  0 : -1 :  0 : Psychic :  3 : FastCharge :  1 : Hearing :  1 : Protection : -2
-Diablos U Helm        : ディアブロUヘルム       : A : A : H :  -- :  84 : 1 :  2 : -1 : -3 : -1 : -1 : PunishDraw :  2 : KO :  3 : Exhaust :  4 : Dragon Atk : -2
-Diablos U Mail        : ディアブロUメイル       : B : A : C :  -- :  84 : 3 :  2 : -1 : -3 : -1 : -1 : PunishDraw :  1 : KO :  1 : Exhaust :  1 : Dragon Atk : -2
-Diablos U Vambraces   : ディアブロUアーム       : B : A : A :  -- :  84 : 1 :  2 : -1 : -3 : -1 : -1 : PunishDraw :  3 : KO :  3 : Exhaust :  3 : Dragon Atk : -2
-Diablos U Faulds      : ディアブロUコイル       : B : A : W :  -- :  84 : 3 :  2 : -1 : -3 : -1 : -1 : PunishDraw :  1 : KO :  2 : Exhaust :  2 : Dragon Atk : -2
-Diablos U Greaves     : ディアブロUグリーヴ     : B : A : L :  -- :  84 : 3 :  2 : -1 : -3 : -1 : -1 : PunishDraw :  3 : KO :  1 : Exhaust :  1 : Dragon Atk : -2
-Diablos U Cap         : ディアブロUキャップ     : A : A : H :  -- :  49 : 1 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  1 : Recoil :  4 : Reload Spd :  4 : Dragon Atk : -4
-Diablos U Vest        : ディアブロUレジスト     : G : A : C :  -- :  49 : 3 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  1 : Recoil :  1 : Reload Spd :  2 : Dragon Atk : -1
-Diablos U Guards      : ディアブロUガード       : G : A : A :  -- :  49 : 1 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  1 : Recoil :  5 : Reload Spd :  4 : Dragon Atk : -1
-Diablos U Coat        : ディアブロUコート       : G : A : W :  -- :  49 : 3 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  3 : Recoil :  1 : Reload Spd :  1 : Dragon Atk : -2
-Diablos U Leggings    : ディアブロUレギンス     : G : A : L :  -- :  49 : 3 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  3 : Recoil :  1 : Reload Spd :  1 : Dragon Atk : -2
-Agnaktor U Helm       : アグナUヘルム           : A : A : H :  -- :  84 : 1 : -4 :  2 :  3 : -2 : -4 : Guard Up :  5 : Guard :  3 : Fire Atk : -1 : Ice Atk :  2
-Agnaktor U Mail       : アグナUメイル           : B : A : C :  -- :  84 : 1 : -4 :  2 :  3 : -2 : -4 : Guard Up :  1 : Guard :  2 : Fire Atk : -2 : Ice Atk :  4
-Agnaktor U Vambraces  : アグナUアーム           : B : A : A :  -- :  84 : 3 : -4 :  2 :  3 : -2 : -4 : Guard Up :  1 : Guard :  1 : Fire Atk : -3 : Water Res :  2
-Agnaktor U Faulds     : アグナUフォールド       : B : A : W :  -- :  84 : 3 : -4 :  2 :  3 : -2 : -4 : Guard Up :  1 : Guard :  1 : Fire Atk : -3 : Water Res :  2
-Agnaktor U Greaves    : アグナUグリーヴ         : B : A : L :  -- :  84 : 1 : -4 :  2 :  3 : -2 : -4 : Guard Up :  2 : Guard :  3 : Fire Atk : -1 : Ice Atk :  5
-Agnaktor U Cap        : アグナUキャップ         : A : A : H :  -- :  49 : 1 : -2 :  4 :  5 : -1 : -2 : Pierce S+ :  6 : Reload Spd :  4 : Fire Atk : -1 : Ice Atk :  2
-Agnaktor U Vest       : アグナUレジスト         : G : A : C :  -- :  49 : 1 : -2 :  4 :  5 : -1 : -2 : Pierce S+ :  1 : Reload Spd :  2 : Fire Atk : -2 : Ice Atk :  4
-Agnaktor U Guards     : アグナUガード           : G : A : A :  -- :  49 : 3 : -2 :  4 :  5 : -1 : -2 : Pierce S+ :  1 : Reload Spd :  1 : Fire Atk : -3 : Water Res :  2
-Agnaktor U Coat       : アグナUコート           : G : A : W :  -- :  49 : 3 : -2 :  4 :  5 : -1 : -2 : Pierce S+ :  1 : Reload Spd :  1 : Fire Atk : -3 : Water Res :  2
-Agnaktor U Leggings   : アグナUレギンス         : G : A : L :  -- :  49 : 1 : -2 :  4 :  5 : -1 : -2 : Pierce S+ :  3 : Reload Spd :  2 : Fire Atk : -1 : Ice Atk :  5
+Nargacuga U Helm      : ナルガＵヘルム          : A : A : H :  -- :  80 : 3 : -3 :  1 :  0 : -4 : -1 : StaminaRec :  2 : Perception :  1 : Stamina :  1 : Constitutn : -3
+Nargacuga U Mail      : ナルガＵメイル          : B : A : C :  -- :  80 : 3 : -3 :  1 :  0 : -4 : -1 : StaminaRec :  1 : Perception :  1 : Stamina :  1 : Constitutn : -2
+Nargacuga U Vambraces : ナルガＵアーム          : B : A : A :  -- :  80 : 2 : -3 :  1 :  0 : -4 : -1 : StaminaRec :  5 : Evasion    :  2 : Stamina :  1 : Constitutn : -1
+Nargacuga U Faulds    : ナルガＵフォールド      : B : A : W :  -- :  80 : 0 : -3 :  1 :  0 : -4 : -1 : Evasion    :  3 : Perception :  6 : Stamina :  2 : Constitutn : -2
+Nargacuga U Greaves   : ナルガＵグリーヴ        : B : A : L :  -- :  80 : 1 : -3 :  1 :  0 : -4 : -1 : StaminaRec :  2 : Perception :  2 : Stamina :  5 : Constitutn : -2
+Nargacuga U Cap       : ナルガＵキャップ        : A : A : H :  -- :  47 : 3 : -1 :  3 :  1 : -2 :  0 : StaminaRec :  2 : Perception :  3 : Stamina :  2 : Constitutn : -2
+Nargacuga U Vest      : ナルガＵレジスト        : G : A : C :  -- :  47 : 3 : -1 :  3 :  1 : -2 :  0 : StaminaRec :  1 : Perception :  1 : Stamina :  1 : Constitutn : -2
+Nargacuga U Guards    : ナルガＵガード          : G : A : A :  -- :  47 : 2 : -1 :  3 :  1 : -2 :  0 : StaminaRec :  4 : Evasion    :  2 : Stamina :  1 : Constitutn : -2
+Nargacuga U Coat      : ナルガＵコート          : G : A : W :  -- :  47 : 1 : -1 :  3 :  1 : -2 :  0 : Evasion    :  3 : Perception :  4 : Stamina :  2 : Constitutn : -2
+Nargacuga U Leggings  : ナルガＵレギンス        : G : A : L :  -- :  47 : 0 : -1 :  3 :  1 : -2 :  0 : StaminaRec :  3 : Perception :  3 : Stamina :  5 : Constitutn : -2
+Barioth U Helm        : ベリオＵヘルム          : A : A : H :  -- :  80 : 1 :  2 :  1 : -4 : -3 :  0 : Evade Dist :  2 : Constitutn :  3 : Sense :  3 : Evasion : -3
+Barioth U Mail        : ベリオＵメイル          : B : A : C :  -- :  80 : 0 :  2 :  1 : -4 : -3 :  0 : Evade Dist :  5 : Constitutn :  2 : Sense :  2 : Evasion : -2
+Barioth U Vambraces   : ベリオＵアーム          : B : A : A :  -- :  80 : 1 :  2 :  1 : -4 : -3 :  0 : Evade Dist :  5 : Constitutn :  3 : Sense :  2 : Evasion : -1
+Barioth U Faulds      : ベリオＵフォールド      : B : A : W :  -- :  80 : 3 :  2 :  1 : -4 : -3 :  0 : Evade Dist :  1 : Constitutn :  3 : Sense :  1 : Evasion : -2
+Barioth U Greaves     : ベリオＵグリーヴ        : B : A : L :  -- :  80 : 3 :  2 :  1 : -4 : -3 :  0 : Evade Dist :  2 : Constitutn :  1 : Sense :  2 : Evasion : -2
+Barioth U Cap         : ベリオＵキャップ        : A : A : H :  -- :  47 : 1 :  4 :  2 : -2 : -1 :  0 : Evade Dist :  5 : Constitutn :  3 : Sense :  4 : Evasion : -1
+Barioth U Vest        : ベリオＵレジスト        : G : A : C :  -- :  47 : 0 :  4 :  2 : -2 : -1 :  0 : Evade Dist :  5 : Constitutn :  2 : Sense :  2 : Evasion : -2
+Barioth U Guards      : ベリオＵガード          : G : A : A :  -- :  47 : 1 :  4 :  2 : -2 : -1 :  0 : Evade Dist :  3 : Constitutn :  3 : Sense :  3 : Evasion : -2
+Barioth U Coat        : ベリオＵコート          : G : A : W :  -- :  47 : 3 :  4 :  2 : -2 : -1 :  0 : Evade Dist :  1 : Constitutn :  3 : Sense :  1 : Evasion : -2
+Barioth U Leggings    : ベリオＵレギンス        : G : A : L :  -- :  47 : 3 :  4 :  2 : -2 : -1 :  0 : Evade Dist :  2 : Constitutn :  1 : Sense :  1 : Evasion : -3
+Uragaan U Helm        : ガンキンＵヘルム        : A : A : H :  -- :  81 : 3 :  3 : -5 : -2 :  1 : -3 : Guard :  2 : StaminaRec :  1 : Dragon Res : -3 : Bomb Boost :  1
+Uragaan U Mail        : ガンキンＵメイル        : B : A : C :  -- :  81 : 1 :  3 : -5 : -2 :  1 : -3 : Guard :  5 : StaminaRec :  2 : Dragon Res : -1 : Bomb Boost :  1
+Uragaan U Vambraces   : ガンキンＵアーム        : B : A : A :  -- :  81 : 2 :  3 : -5 : -2 :  1 : -3 : Guard :  5 : StaminaRec :  1 : Dragon Res : -2 : Bomb Boost :  1
+Uragaan U Faulds      : ガンキンＵフォールド    : B : A : W :  -- :  81 : 0 :  3 : -5 : -2 :  1 : -3 : Guard :  1 : StaminaRec :  4 : Dragon Res : -3 : Bomb Boost :  5
+Uragaan U Greaves     : ガンキンＵグリーヴ      : B : A : L :  -- :  81 : 3 :  3 : -5 : -2 :  1 : -3 : Guard :  2 : StaminaRec :  1 : Dragon Res : -3 : Bomb Boost :  1
+Uragaan U Cap         : ガンキンＵキャップ      : A : A : H :  -- :  47 : 3 :  5 : -4 : -1 :  2 : -2 : PelletS Up :  2 : StaminaRec :  4 : Dragon Res : -2 : Bomb Boost :  1
+Uragaan U Vest        : ガンキンＵレジスト      : G : A : C :  -- :  47 : 1 :  5 : -4 : -1 :  2 : -2 : PelletS Up :  3 : StaminaRec :  3 : Dragon Res : -1 : Bomb Boost :  2
+Uragaan U Guards      : ガンキンＵガード        : G : A : A :  -- :  47 : 2 :  5 : -4 : -1 :  2 : -2 : PelletS Up :  1 : Reload Spd :  4 : Dragon Res : -3 : Bomb Boost :  1
+Uragaan U Coat        : ガンキンＵコート        : G : A : W :  -- :  47 : 0 :  5 : -4 : -1 :  2 : -2 : PelletS Up :  4 : StaminaRec :  3 : Dragon Res : -2 : Bomb Boost :  4
+Uragaan U Leggings    : ガンキンＵレギンス      : G : A : L :  -- :  47 : 3 :  5 : -4 : -1 :  2 : -2 : PelletS Up :  1 : Reload Spd :  2 : Dragon Res : -3 : Bomb Boost :  1
+Tigrex U Helm         : レックスＵヘルム        : A : A : H :  -- :  84 : 0 :  2 : -4 :  0 : -2 : -1 : Psychic :  5 : FastCharge :  3 : Hearing :  2 : Protection : -3
+Tigrex U Mail         : レックスＵメイル        : B : A : C :  -- :  84 : 0 :  2 : -4 :  0 : -2 : -1 : Psychic :  4 : FastCharge :  1 : Hearing :  3 : Protection : -3
+Tigrex U Vambraces    : レックスＵアーム        : B : A : A :  -- :  84 : 2 :  2 : -4 :  0 : -2 : -1 : Psychic :  3 : FastCharge :  3 : Hearing :  1 : Protection : -2
+Tigrex U Faulds       : レックスＵフォールド    : B : A : W :  -- :  84 : 3 :  2 : -4 :  0 : -2 : -1 : Psychic :  1 : FastCharge :  2 : Hearing :  2 : Protection : -2
+Tigrex U Greaves      : レックスＵグリーヴ      : B : A : L :  -- :  84 : 3 :  2 : -4 :  0 : -2 : -1 : Psychic :  2 : FastCharge :  1 : Hearing :  2 : Protection : -2
+Tigrex U Cap          : レックスＵキャップ      : A : A : H :  -- :  49 : 0 :  4 : -2 :  0 : -1 :  0 : Psychic :  4 : FastCharge :  4 : Hearing :  4 : Protection : -3
+Tigrex U Vest         : レックスＵレジスト      : G : A : C :  -- :  49 : 0 :  4 : -2 :  0 : -1 :  0 : Psychic :  3 : FastCharge :  3 : Hearing :  3 : Protection : -2
+Tigrex U Guards       : レックスＵガード        : G : A : A :  -- :  49 : 2 :  4 : -2 :  0 : -1 :  0 : Psychic :  4 : FastCharge :  1 : Hearing :  1 : Protection : -3
+Tigrex U Coat         : レックスＵコート        : G : A : W :  -- :  49 : 3 :  4 : -2 :  0 : -1 :  0 : Psychic :  2 : FastCharge :  2 : Hearing :  1 : Protection : -2
+Tigrex U Leggings     : レックスＵレギンス      : G : A : L :  -- :  49 : 3 :  4 : -2 :  0 : -1 :  0 : Psychic :  3 : FastCharge :  1 : Hearing :  1 : Protection : -2
+Diablos U Helm        : ディアブロＵヘルム      : A : A : H :  -- :  84 : 1 :  2 : -1 : -3 : -1 : -1 : PunishDraw :  2 : KO :  3 : Exhaust :  4 : Dragon Atk : -2
+Diablos U Mail        : ディアブロＵメイル      : B : A : C :  -- :  84 : 3 :  2 : -1 : -3 : -1 : -1 : PunishDraw :  1 : KO :  1 : Exhaust :  1 : Dragon Atk : -2
+Diablos U Vambraces   : ディアブロＵアーム      : B : A : A :  -- :  84 : 1 :  2 : -1 : -3 : -1 : -1 : PunishDraw :  3 : KO :  3 : Exhaust :  3 : Dragon Atk : -2
+Diablos U Faulds      : ディアブロＵコイル      : B : A : W :  -- :  84 : 3 :  2 : -1 : -3 : -1 : -1 : PunishDraw :  1 : KO :  2 : Exhaust :  2 : Dragon Atk : -2
+Diablos U Greaves     : ディアブロＵグリーヴ    : B : A : L :  -- :  84 : 3 :  2 : -1 : -3 : -1 : -1 : PunishDraw :  3 : KO :  1 : Exhaust :  1 : Dragon Atk : -2
+Diablos U Cap         : ディアブロＵキャップ    : A : A : H :  -- :  49 : 1 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  1 : Recoil :  4 : Reload Spd :  4 : Dragon Atk : -4
+Diablos U Vest        : ディアブロＵレジスト    : G : A : C :  -- :  49 : 3 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  1 : Recoil :  1 : Reload Spd :  2 : Dragon Atk : -1
+Diablos U Guards      : ディアブロＵガード      : G : A : A :  -- :  49 : 1 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  1 : Recoil :  5 : Reload Spd :  4 : Dragon Atk : -1
+Diablos U Coat        : ディアブロＵコート      : G : A : W :  -- :  49 : 3 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  3 : Recoil :  1 : Reload Spd :  1 : Dragon Atk : -2
+Diablos U Leggings    : ディアブロＵレギンス    : G : A : L :  -- :  49 : 3 :  4 :  0 : -2 :  0 :  0 : Normal S+ :  3 : Recoil :  1 : Reload Spd :  1 : Dragon Atk : -2
+Agnaktor U Helm       : アグナＵヘルム          : A : A : H :  -- :  84 : 1 : -4 :  2 :  3 : -2 : -4 : Guard Up :  5 : Guard :  3 : Fire Atk : -1 : Ice Atk :  2
+Agnaktor U Mail       : アグナＵメイル          : B : A : C :  -- :  84 : 1 : -4 :  2 :  3 : -2 : -4 : Guard Up :  1 : Guard :  2 : Fire Atk : -2 : Ice Atk :  4
+Agnaktor U Vambraces  : アグナＵアーム          : B : A : A :  -- :  84 : 3 : -4 :  2 :  3 : -2 : -4 : Guard Up :  1 : Guard :  1 : Fire Atk : -3 : Water Res :  2
+Agnaktor U Faulds     : アグナＵフォールド      : B : A : W :  -- :  84 : 3 : -4 :  2 :  3 : -2 : -4 : Guard Up :  1 : Guard :  1 : Fire Atk : -3 : Water Res :  2
+Agnaktor U Greaves    : アグナＵグリーヴ        : B : A : L :  -- :  84 : 1 : -4 :  2 :  3 : -2 : -4 : Guard Up :  2 : Guard :  3 : Fire Atk : -1 : Ice Atk :  5
+Agnaktor U Cap        : アグナＵキャップ        : A : A : H :  -- :  49 : 1 : -2 :  4 :  5 : -1 : -2 : Pierce S+ :  6 : Reload Spd :  4 : Fire Atk : -1 : Ice Atk :  2
+Agnaktor U Vest       : アグナＵレジスト        : G : A : C :  -- :  49 : 1 : -2 :  4 :  5 : -1 : -2 : Pierce S+ :  1 : Reload Spd :  2 : Fire Atk : -2 : Ice Atk :  4
+Agnaktor U Guards     : アグナＵガード          : G : A : A :  -- :  49 : 3 : -2 :  4 :  5 : -1 : -2 : Pierce S+ :  1 : Reload Spd :  1 : Fire Atk : -3 : Water Res :  2
+Agnaktor U Coat       : アグナＵコート          : G : A : W :  -- :  49 : 3 : -2 :  4 :  5 : -1 : -2 : Pierce S+ :  1 : Reload Spd :  1 : Fire Atk : -3 : Water Res :  2
+Agnaktor U Leggings   : アグナＵレギンス        : G : A : L :  -- :  49 : 1 : -2 :  4 :  5 : -1 : -2 : Pierce S+ :  3 : Reload Spd :  2 : Fire Atk : -1 : Ice Atk :  5
 Damascus Helm         : ダマスクヘルム          : A : A : H :  -- :  86 : 2 : -2 :  2 :  1 : -3 : -1 : Handicraft :  4 : ThunderAtk :  1 : Sharpener :  2 : Sharpness : -2
 Damascus Mail         : ダマスクメイル          : B : A : C :  -- :  86 : 2 : -2 :  2 :  1 : -3 : -1 : Handicraft :  1 : ThunderAtk :  1 : Sharpener :  1 : Sharpness : -4
 Damascus Vambraces    : ダマスクアーム          : B : A : A :  -- :  86 : 1 : -2 :  2 :  1 : -3 : -1 : Handicraft :  4 : ThunderAtk :  4 : Sharpener :  2 : Sharpness : -1
@@ -875,11 +875,11 @@ Pirate J Suit         : 大海賊Ｊスーツ          : B : A : C :  -- :  56 :
 Pirate J Gloves       : 大海賊Ｊグラブ          : B : A : A :  -- :  56 : 0 : -3 : -3 : -3 : -3 : -3 : Tranquilzr :  3 : Fate :  4 : Carving :  2 : Protection : -4
 Pirate J Coil         : 大海賊Ｊコイル          : B : A : W :  -- :  56 : 0 : -3 : -3 : -3 : -3 : -3 : Tranquilzr :  3 : Fate :  3 : Carving :  4 : Protection : -3
 Pirate J Boots        : 大海賊Ｊブーツ          : B : A : L :  -- :  56 : 0 : -3 : -3 : -3 : -3 : -3 : Tranquilzr :  4 : Fate :  4 : Carving :  3 : Protection : -2
-Pirate J Cap          : 大海賊Jロジャー         : A : A : H :  -- :  32 : 1 : -2 : -2 : -2 : -2 : -2 : Tranquilzr :  3 : Fate :  3 : Carving :  4 : Protection : -3
-Pirate J Jacket       : 大海賊Jジャケット       : G : A : C :  -- :  32 : 0 : -2 : -2 : -2 : -2 : -2 : Tranquilzr :  3 : Fate :  2 : Carving :  2 : Protection : -4
-Pirate J Cuffs        : 大海賊Jカフス           : G : A : A :  -- :  32 : 0 : -2 : -2 : -2 : -2 : -2 : Tranquilzr :  4 : Fate :  3 : Carving :  2 : Protection : -4
-Pirate J Coat         : 大海賊Jスカート         : G : A : W :  -- :  32 : 0 : -2 : -2 : -2 : -2 : -2 : Tranquilzr :  4 : Fate :  3 : Carving :  3 : Protection : -3
-Pirate J Pants        : 大海賊Jパンツ           : G : A : L :  -- :  32 : 0 : -2 : -2 : -2 : -2 : -2 : Tranquilzr :  2 : Fate :  4 : Carving :  3 : Protection : -4
+Pirate J Cap          : 大海賊Ｊロジャー        : A : A : H :  -- :  32 : 1 : -2 : -2 : -2 : -2 : -2 : Tranquilzr :  3 : Fate :  3 : Carving :  4 : Protection : -3
+Pirate J Jacket       : 大海賊Ｊジャケット      : G : A : C :  -- :  32 : 0 : -2 : -2 : -2 : -2 : -2 : Tranquilzr :  3 : Fate :  2 : Carving :  2 : Protection : -4
+Pirate J Cuffs        : 大海賊Ｊカフス          : G : A : A :  -- :  32 : 0 : -2 : -2 : -2 : -2 : -2 : Tranquilzr :  4 : Fate :  3 : Carving :  2 : Protection : -4
+Pirate J Coat         : 大海賊Ｊスカート        : G : A : W :  -- :  32 : 0 : -2 : -2 : -2 : -2 : -2 : Tranquilzr :  4 : Fate :  3 : Carving :  3 : Protection : -3
+Pirate J Pants        : 大海賊Ｊパンツ          : G : A : L :  -- :  32 : 0 : -2 : -2 : -2 : -2 : -2 : Tranquilzr :  2 : Fate :  4 : Carving :  3 : Protection : -4
 Crow Lily Jacket      : 坊屋ジャケット          : B : A : C :  -- :  82 : 0 :  0 :  0 :  0 :  0 :  0 : Attack :  5 : StaminaRec :  3 : Sense : -3
 Crow Lily Belt        : 坊屋ベルト              : B : A : W :  -- :  82 : 0 :  0 :  0 :  0 :  0 :  0 : Attack :  5 : StaminaRec :  4 : Sense : -4
 Crow Lily Jeans       : 坊屋ジーンズ            : B : A : L :  -- :  82 : 1 :  0 :  0 :  0 :  0 :  0 : Attack :  5 : StaminaRec :  3 : Sense : -3
@@ -993,14 +993,14 @@ Jaggi Mask            : ジャギィフェイク        : A : A : H :  30 :  30 
 Skull Mask            : スカルフェイス          : A : A : H :  30 :  30 : 0 :  2 : -2 : -2 : -2 :  1 : Torso Up
 HellHunter Jacket     : 武装戦線ジャケット      : B : A : C :  37 :  73 : 0 :  2 :  2 :  2 :  2 :  2 : Survivor : 10
 HellHunter Leather    : 武装戦線ライダース      : G : A : C :  21 :  49 : 0 :  2 :  2 :  2 :  2 :  2 : Survivor : 10
-Gagua S Mask          : ガーグァSフェイク       : B : A : H :  -- :  64 : 0 : -4 : -2 :  2 : -1 :  1 : Combo Rate : 15
-Gagua S Head          : ガーグァSヘッド         : G : A : H :  -- :  39 : 0 : -2 : -1 :  4 :  0 :  2 : Combo Rate : 15
-Bullfango S Mask      : ファンゴSフェイク       : B : A : H :  -- :  70 : 0 : -2 : -1 :  1 : -4 :  2 : Hunger : 15
-Bullfango S Head      : ファンゴSヘッド         : G : A : H :  -- :  41 : 0 : -1 :  0 :  3 : -2 :  3 : Hunger : 15
-Jaggi S Mask          : ジャギィSフェイク       : B : A : H :  -- :  71 : 0 :  0 :  0 :  0 :  0 :  0 : Spd Gather : 10
-Jaggi S Head          : ジャギィSヘッド         : G : A : H :  -- :  41 : 0 :  1 :  1 :  1 :  1 :  1 : Spd Gather : 10
-Skull S Mask          : スカルSフェイス         : B : A : H :  -- :  71 : 0 :  2 : -2 : -2 : -2 :  1 : Torso Up
-Skull S Head          : スカルSヘッド           : G : A : H :  -- :  41 : 0 :  4 : -1 : -1 : -1 :  2 : Torso Up
+Gagua S Mask          : ガーグァＳフェイク      : B : A : H :  -- :  64 : 0 : -4 : -2 :  2 : -1 :  1 : Combo Rate : 15
+Gagua S Head          : ガーグァＳヘッド        : G : A : H :  -- :  39 : 0 : -2 : -1 :  4 :  0 :  2 : Combo Rate : 15
+Bullfango S Mask      : ファンゴＳフェイク      : B : A : H :  -- :  70 : 0 : -2 : -1 :  1 : -4 :  2 : Hunger : 15
+Bullfango S Head      : ファンゴＳヘッド        : G : A : H :  -- :  41 : 0 : -1 :  0 :  3 : -2 :  3 : Hunger : 15
+Jaggi S Mask          : ジャギィＳフェイク      : B : A : H :  -- :  71 : 0 :  0 :  0 :  0 :  0 :  0 : Spd Gather : 10
+Jaggi S Head          : ジャギィＳヘッド        : G : A : H :  -- :  41 : 0 :  1 :  1 :  1 :  1 :  1 : Spd Gather : 10
+Skull S Mask          : スカルＳフェイス        : B : A : H :  -- :  71 : 0 :  2 : -2 : -2 : -2 :  1 : Torso Up
+Skull S Head          : スカルＳヘッド          : G : A : H :  -- :  41 : 0 :  4 : -1 : -1 : -1 :  2 : Torso Up
 Wyvernking Eyepatch   : 竜王の隻眼              : A : A : H :  -- :  51 : 0 :  2 :  2 :  2 :  2 :  2 : Psychic : 15
 Shadow Shades         : シャドウアイ            : A : A : H :  -- :  51 : 0 :  2 :  2 :  2 :  2 :  2 : Wide-Range : 20
 SoulHunter Jacket     : 狩猟戦線ジャケット      : B : A : C :  -- :  82 : 0 :  2 :  2 :  2 :  2 :  2 : Survivor : 10

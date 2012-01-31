@@ -29,7 +29,7 @@ public class Armor {
 	}
 
 	// read armor entry from a line, get part info
-	public static String getBodyPartFromLine(String line)
+	public static String getBodyPartFromLine(String line, int game)
 	{
 		int startPos = 0;
 		int endPos = 0;
@@ -44,29 +44,14 @@ public class Armor {
 			wordIndex++;
 
 			// read Armor Class
-			if(wordIndex == 4)break;
-			startPos = endPos + 1;
-		}
-		return word;
-	}
-
-	//japanese version
-	public static String getBodyPartFromLineJP(String line)
-	{
-		int startPos = 0;
-		int endPos = 0;
-		int wordIndex = 0;
-		String word = "";
-		while(line != null )
-		{
-			endPos = MhagUtil.extractWordPos(line, startPos);
-			word = MhagUtil.extractWord(line, startPos, endPos);
-			//System.out.println(word);
-
-			wordIndex++;
-
-			// read Armor Class
-			if(wordIndex == 5)break;
+			if((game == 0) || (game == 2))
+			{
+				if(wordIndex == 4)break;
+			}
+			else
+			{
+				if(wordIndex == 5)break;
+			}
 			startPos = endPos + 1;
 		}
 		return word;
@@ -75,7 +60,7 @@ public class Armor {
 	// read armor entry from a line
 	// nBodyPart : body part Index (use & check)
 	public static int setArmorFromLine(String line, int nBodyPart,
-		Armor armor)
+		Armor armor, int game)
 	{
 		// armor id
 		armor.armorID = armorIDTot[nBodyPart]++;
@@ -85,177 +70,19 @@ public class Armor {
 		int wordIndex = 0;
 		String word = "";
 		int resistIndex = 0;
-		while(line != null )
+
+		int addJP = 0;
+		int addDef = 0;
+		if(game == 1) //mhp3rd
+			addJP = 1;
+		else if(game == 3) //mh3g
 		{
-			endPos = MhagUtil.extractWordPos(line, startPos);
-			word = MhagUtil.extractWord(line, startPos, endPos);
-			//System.out.println(word);
-
-			wordIndex++;
-
-			if(wordIndex == 1)
-			{
-				// read armor Name
-				armor.armorName = word;
-
-			}
-			else if(wordIndex == 2)
-			{
-				// read blader/gunner/all
-				String strBGA = "BGA";
-				if(strBGA.indexOf(word) != -1)
-				{
-					armor.bladeOrGunner = word;
-				}
-				else
-				{
-					return 1;  // incorrect BGA;
-				}
-			}
-			else if(wordIndex == 3)
-			{
-				// gender
-				String strBGA = "FMA";
-				if(strBGA.indexOf(word) != -1)
-				{
-					armor.gender = word;
-				}
-				else
-				{
-					return 1;  // incorrect FMA;
-				}
-			}
-			else if(wordIndex == 4)
-			{
-				//Body Part (check)
-				if( nBodyPart == convertBodyPart(word))
-				{
-					armor.bodyPart = nBodyPart;
-				}
-				else
-				{
-					return 1;  // inconsistent body part ind
-				}
-			}
-			else if(wordIndex == 5)
-			{
-				// read low rank defense
-
-				if(word.equals("--"))
-				{
-					armor.rank = 1;
-					armor.defense[0] = 0;
-				}
-				else
-				{
-					armor.rank = 0;
-					int def = 0;
-					def = Integer.valueOf(word);
-					if((def <= 0)||(def > 200))
-					{
-						return 1; // incorrect defense
-					}
-					else
-					{
-						armor.defense[0] = def;
-					}
-				}
-			}
-			else if(wordIndex == 6)
-			{
-				// read high rank defense
-
-				int def = 0;
-				def = Integer.valueOf(word);
-				if((def <= 0)||(def > 200))
-				{
-					return 1; // incorrect defense
-				}
-				else
-				{
-					armor.defense[1] = def;
-				}
-
-				armor.defense[2] = def;  //g rank def copied from high rank
-			}
-			else if (wordIndex == 7)
-			{
-				// read # of slots
-
-				int nSlot = Integer.valueOf(word);
-				if((nSlot < 0)||(nSlot > 3))
-				{
-					return 1;  // armor slot 0 - 3
-				}
-				else
-				{
-					armor.numSlot = nSlot;
-				}
-			}
-			else if ((wordIndex >= 8 )&&(wordIndex <= 12))
-			{
-				// read reisistance
-
-				int nResist = Integer.valueOf(word);
-				if((nResist < -20)||(nResist > 20))
-				{
-					return 1;  // armor resist range[-20,20]
-				}
-				else
-				{
-					armor.resist[resistIndex] = nResist;
-					resistIndex++;
-				}
-			}
-			else
-			{
-				// read skills name/points
-
-				// Torso Up exception (no skill point)
-				if( word.equals("Torso Up"))
-				{
-					armor.skillName[armor.numSkill] = word;
-					armor.numSkill++;
-					break;
-				}
-
-				if(endPos == -1)return 1;  // no skill point
-				if(armor.numSkill == 5)return 1;  // skill <= 5
-
-				// read Skill
-				armor.skillName[armor.numSkill] = word;
-				startPos = endPos + 1;
-				endPos = MhagUtil.extractWordPos(line, startPos);
-				word = MhagUtil.extractWord
-					(line, startPos, endPos);
-				armor.skillPoint[armor.numSkill] =
-					Integer.valueOf(word);
-				armor.numSkill++;
-			}
-
-			if(endPos  == -1)
-			{
-				if(wordIndex <= 11)return 1;  // no skill ok
-				break;
-			}
-			startPos = endPos + 1;
+			addJP = 1;
+			addDef = 1;
 		}
-		return 0;
-	}
+		else if(game == 2) //mhfu
+			addDef = 1;
 
-	// read armor entry from a line (japanese)
-	// nBodyPart : body part Index (use & check)
-	public static int setArmorFromLineJP(String line, int nBodyPart,
-		Armor armor)
-	{
-		// armor id
-		armor.armorID = armorIDTot[nBodyPart]++;
-
-		int startPos = 0;
-		int endPos = 0;
-		int wordIndex = 0;
-		String word = "";
-		int resistIndex = 0;
 		while(line != null )
 		{
 			endPos = MhagUtil.extractWordPos(line, startPos);
@@ -270,13 +97,12 @@ public class Armor {
 				armor.armorName = word;
 
 			}
-			else if(wordIndex == 2)
+			else if((wordIndex == 2) && (addJP > 0)) 
 			{
 				// read armor Name japanese
 				armor.armorNameJP = word;
-
 			}
-			else if(wordIndex == 3)
+			else if(wordIndex == 2 + addJP)
 			{
 				// read blader/gunner/all
 				String strBGA = "BGA";
@@ -289,7 +115,7 @@ public class Armor {
 					return 1;  // incorrect BGA;
 				}
 			}
-			else if(wordIndex == 4)
+			else if(wordIndex == 3 + addJP)
 			{
 				// gender
 				String strBGA = "FMA";
@@ -302,7 +128,7 @@ public class Armor {
 					return 1;  // incorrect FMA;
 				}
 			}
-			else if(wordIndex == 5)
+			else if(wordIndex == 4 + addJP)
 			{
 				//Body Part (check)
 				if( nBodyPart == convertBodyPart(word))
@@ -314,7 +140,7 @@ public class Armor {
 					return 1;  // inconsistent body part ind
 				}
 			}
-			else if(wordIndex == 6)
+			else if(wordIndex == 5 + addJP)
 			{
 				// read low rank defense
 
@@ -338,9 +164,38 @@ public class Armor {
 					}
 				}
 			}
-			else if(wordIndex == 7)
+			else if(wordIndex == 6 + addJP)
 			{
 				// read high rank defense
+				if(word.equals("--"))
+				{
+					armor.rank = 2;
+					armor.defense[0] = 0;
+					armor.defense[1] = 0;
+				}
+				else
+				{
+					if(armor.defense[0] == 0)
+						armor.rank = 1;
+					int def = 0;
+					def = Integer.valueOf(word);
+					if((def <= 0)||(def > 200))
+					{
+						return 1; // incorrect defense
+					}
+					else
+					{
+						armor.defense[1] = def;
+					}
+
+					if(addDef == 0)
+						armor.defense[2] = def;  //g rank def copied from high rank
+				}
+
+			}
+			else if((wordIndex == 7 + addJP) && (addDef > 0))
+			{
+				// read g rank defense
 
 				int def = 0;
 				def = Integer.valueOf(word);
@@ -350,11 +205,10 @@ public class Armor {
 				}
 				else
 				{
-					armor.defense[1] = def;
+					armor.defense[2] = def;
 				}
-				armor.defense[2] = def;  //g rank def copied from high rank
 			}
-			else if(wordIndex == 8)
+			else if (wordIndex == 7 + addJP + addDef)
 			{
 				// read # of slots
 
@@ -368,7 +222,7 @@ public class Armor {
 					armor.numSlot = nSlot;
 				}
 			}
-			else if ((wordIndex >=  9 )&&(wordIndex <= 13))
+			else if ((wordIndex >= 8 + addJP + addDef )&&(wordIndex <= 12 + addJP + addDef))
 			{
 				// read reisistance
 
@@ -390,7 +244,6 @@ public class Armor {
 				// Torso Up exception (no skill point)
 				if( word.equals("Torso Up"))
 				{
-					//skill id for torso up is still -1
 					armor.skillName[armor.numSkill] = word;
 					armor.numSkill++;
 					break;
@@ -412,7 +265,7 @@ public class Armor {
 
 			if(endPos  == -1)
 			{
-				if(wordIndex <= 12)return 1;  // no skill ok
+				if(wordIndex <= 11 + addJP + addDef)return 1;  // no skill ok
 				break;
 			}
 			startPos = endPos + 1;

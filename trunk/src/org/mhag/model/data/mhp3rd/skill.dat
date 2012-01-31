@@ -46,8 +46,8 @@ Reload Spd : 装填速度 : 6 : 4 4 3 0 6 6 6 5 : Reload Speed -3 : 装填速度
 Recoil : 反動 : 6 : 0 0 0 0 5 5 5 4 : Recoil Down -3 : 反動軽減-3 : -20 : Recoil Down -2 : 反動軽減-2 : -15 : Recoil Down -1 : 反動軽減-1 : -10 : Recoil Down +1 : 反動軽減+1 : 10 : Recoil Down +2 : 反動軽減+2 : 15 : Recoil Down +3 : 反動軽減+3 : 20
 Precision : 精密射撃 : 6 : 10 10 8 0 10 10 8 0 : Steadiness -2 : ブレ抑制-2 : -15 : Steadiness -1 : ブレ抑制-1 : -10 : Steadiness +1 : ブレ抑制+1 : 10 : Steadiness +2 : ブレ抑制+2 : 15
 NormalS Up : 通常弾強化 : 6 : 0 0 0 0 5 5 5 4 : NormalS/RapidBow Boost : 通常弾.連射矢UP : 10
-PierceS Up : 貫通弾威力 : 6 : 0 0 0 0 5 5 5 4 : PierceS/PrceBow Boost : 貫通弾.貫通矢UP : 10
-PelletS Up : 散弾威力 : 6 : 0 0 0 0 5 5 5 4 : PelletS/ScattBow Boost : 散弾.拡散矢UP : 10
+PierceS Up : 貫通弾強化 : 6 : 0 0 0 0 5 5 5 4 : PierceS/PrceBow Boost : 貫通弾.貫通矢UP : 10
+PelletS Up : 散弾強化 : 6 : 0 0 0 0 5 5 5 4 : PelletS/ScattBow Boost : 散弾.拡散矢UP : 10
 Normal S+ : 通常弾追加 : 6 : 8 8 6 0 8 8 6 0 : NormalS All Up : 通常弾全LV追加 : 10
 Pierce S+ : 貫通弾追加 : 6 : 10 10 8 0 10 10 8 0 : PierceS Lv1 Up : 貫通弾LV1追加 : 10 : PierceS All Up : 貫通弾全LV追加 : 15
 Pellet S+ : 散弾追加 : 6 : 10 10 8 0 10 10 8 0 : PelletS Lv1 Up : 散弾LV1追加 : 10 : PelletS All Up : 散弾全LV追加 : 15

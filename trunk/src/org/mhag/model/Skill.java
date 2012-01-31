@@ -33,7 +33,7 @@ public class Skill {
 	}
 
     	// read skill entry from a line
-	public static int setSkillFromLine(String line, Skill skill)
+	public static int setSkillFromLine(String line, Skill skill, int game)
 	{
 		// skill id
  		skill.skillID = skillIDTot++;  //start from 1;
@@ -43,6 +43,10 @@ public class Skill {
 		int wordIndex = 0;
 		skill.numEffect = 0;
 		String word = "";
+		int addJP = 0;
+		if((game == 1) || (game == 3)) //mhp3rd, mh3g
+			addJP = 1;
+
 		while(line != null )
 		{
 			endPos = MhagUtil.extractWordPos(line, startPos);
@@ -56,96 +60,17 @@ public class Skill {
 				// read Skill Name
 				skill.skillName = word;
 			}
-			else if (wordIndex == 2)
-			{
-				int id = Integer.valueOf(word);
-				skill.skillType = id;
-			}
-			else if(wordIndex == 3)
-			{
-				// read Skill Class
-				int[] numbers = new int [8];
-				int nMax = 0;
-
-				MhagUtil.extractInt(word, nMax, numbers);
-				for ( int i = 0; i < 2; i++)
-					for ( int j = 0; j < 4; j++)
-						skill.maxSkillPoint[i][j] = numbers[i*4+j];
-
-				// g rank data copied from high rank for mhtri and mhp3rd
-				for ( int j = 0; j < 4; j++)
-					skill.maxSkillPoint[2][j] = skill.maxSkillPoint[1][j];
-
-			}
-			else
-			{
-				// read effects name/trigger points
-
-				if(endPos == -1)return 1; //error no skill point
-				if(skill.numEffect == 6)return 1; // effect <= 6
-
-				// read effects
-				skill.effectName[skill.numEffect] = word;
-				startPos = endPos + 1;
-				endPos = MhagUtil.extractWordPos(line, startPos);
-				word = MhagUtil.extractWord
-					(line, startPos, endPos);
-				int trigger = Integer.valueOf(word);
-				skill.effectTrigger[skill.numEffect] = trigger;
-
-				if(trigger < 0) skill.hasNegative = true;
-
-				skill.numEffect++;
-			}
-
-			if(endPos  == -1)
-			{
-				if(wordIndex <= 2)return 1;  // error no effect
-				break;
-			}
-			startPos = endPos + 1;
-		}
-
-		return 0;
-	}
-
-	// read skill entry from a line , including japanese
-	public static int setSkillFromLineJP(String line, Skill skill)
-	{
-		//System.out.println(line);
-		//System.exit(0);
-		// skill id
- 		skill.skillID = skillIDTot++;  //start from 1;
-
-		int startPos = 0;
-		int endPos = 0;
-		int wordIndex = 0;
-		skill.numEffect = 0;
-		String word = "";
-		while(line != null )
-		{
-			endPos = MhagUtil.extractWordPos(line, startPos);
-			word = MhagUtil.extractWord(line, startPos, endPos);
-			//System.out.println(word);
-
-			wordIndex++;
-
-			if(wordIndex == 1)
-			{
-				// read Skill Name
-				skill.skillName = word;
-			}
-			else if(wordIndex == 2)
+			else if((wordIndex == 2) && (addJP > 0))
 			{
 				// read Skill Name japanese
 				skill.skillNameJP = word;
 			}
-			else if (wordIndex == 3)
+			else if (wordIndex == 2 + addJP)
 			{
 				int id = Integer.valueOf(word);
 				skill.skillType = id;
 			}
-			else if(wordIndex == 4)
+			else if(wordIndex == 3 + addJP)
 			{
 				// read Skill Class
 				int[] numbers = new int [8];
@@ -168,14 +93,18 @@ public class Skill {
 				if(endPos == -1)return 1; //error no skill point
 				if(skill.numEffect == 6)return 1; // effect <= 6
 
+
 				// read effects
 				skill.effectName[skill.numEffect] = word;
-				// read effects japanese
-				startPos = endPos + 1;
-				endPos = MhagUtil.extractWordPos(line, startPos);
-				word = MhagUtil.extractWord
-					(line, startPos, endPos);
-				skill.effectNameJP[skill.numEffect] = word;
+				if(addJP > 0)
+				{
+					// read effects japanese
+					startPos = endPos + 1;
+					endPos = MhagUtil.extractWordPos(line, startPos);
+					word = MhagUtil.extractWord
+						(line, startPos, endPos);
+					skill.effectNameJP[skill.numEffect] = word;
+				}
 				//read points
 				startPos = endPos + 1;
 				endPos = MhagUtil.extractWordPos(line, startPos);
@@ -191,7 +120,7 @@ public class Skill {
 
 			if(endPos  == -1)
 			{
-				if(wordIndex <= 2)return 1;  // error no effect
+				if(wordIndex <= 2 + addJP)return 1;  // error no effect
 				break;
 			}
 			startPos = endPos + 1;
