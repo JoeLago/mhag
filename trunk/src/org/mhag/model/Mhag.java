@@ -238,9 +238,10 @@ public class Mhag
 	public static void main(String[] args) throws FileNotFoundException
 	{
 
-		Mhag mhag = new Mhag(0);
+		Mhag mhag = new Mhag(3);
 		MhagData mhagData = new MhagData();
 
+  		//mhag.method = 3;  //tifa temp
 		mhag.init(mhagData, args);
 
   		mhag.method = 2;  //tifa temp

@@ -704,7 +704,7 @@ public class MhagData {
 	// write input file for complete set
 	public void genRefCompleteSet() throws FileNotFoundException
 	{
-		int nMax = Armor.getArmorMax();
+		int nMax = Armor.getArmorMax() + 50;
 		String[] codeBook = new String[nMax];
 		int[] defenseList = new int[nMax];
 		boolean[] blade = new boolean[nMax];
@@ -913,7 +913,10 @@ public class MhagData {
 			aSet.calcSet(mhag, this);   //calculate set
 
 			Output.batchHead(mhag.getOutFormat(), outSave, num);
-			aSet.save(mhag, this, outSave);  // save results
+			if(mhag.getOutFormat() <= 1)
+				aSet.save(mhag, this, outSave);  // save results
+			else
+				aSet.saveWiki(mhag, this, outSave); 
 
 		}
 		Output.close(mhag.getOutFormat(), outSave);

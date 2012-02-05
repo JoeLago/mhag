@@ -1882,6 +1882,7 @@ public class MhagGui extends javax.swing.JFrame {
 
     private void convertTEXTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertTEXTActionPerformed
 	    saveOpt = 0;
+	    //saveOpt = 2;  //for wiki 
     }//GEN-LAST:event_convertTEXTActionPerformed
 
     private void convertHTMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertHTMLActionPerformed
@@ -1890,6 +1891,7 @@ public class MhagGui extends javax.swing.JFrame {
 
     private void OutputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OutputActionPerformed
 
+		//saveOpt = 2;
 		try {
 			codeBookSave();
 			codeBookChanged = false;  // reset book change status
@@ -4162,7 +4164,7 @@ public class MhagGui extends javax.swing.JFrame {
 			mhagGui.initSetup(mhagGui.mhagData.getMaxRank(mhagGui.game), true, false); // by default
 			mhagGui.initGen();
 
-			if(mhagGui.game == 0)
+			if((mhagGui.game == 0) || (mhagGui.game == 2))
 				mhagGui.langMenu.setEnabled(false);
 
 		//mhagGui.jTextUsage.setCaretPosition(0);
