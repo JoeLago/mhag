@@ -68,7 +68,6 @@ public class Set {
 		Arrays.fill(slots, 0);
 		Arrays.fill(slotInfo, 0);
 
-
 	}
 
 	// get/set inputs
@@ -1641,6 +1640,138 @@ public class Set {
 		Output.end(mhag.getOutFormat(), outSave);
 
 		MhagUtil.logLine(mhag, "Armor Set Saved!");
+
+	}
+
+	public void saveWiki(Mhag mhag, MhagData mhagData, PrintStream outSave)
+	{
+		sortSkill();  //sort Skill for outputs
+
+		// part 1 :  Setup Inforamtion
+		// head line
+		Output.headHTMLWiki(outSave, setName, rank, blade);
+
+
+		// armor lines
+		for(int i = 0; i < 5; i++)
+		{
+			String name = "";
+			String nameJP = "";
+			String items = "";
+			String slotsName = "";
+			if(inUse[i])
+			{
+				Armor armor = mhagData.getArmor(i, armorID[i]);
+				name = armor.getArmorName();  //armor name
+				nameJP = armor.getArmorNameJP();
+				int nSlot = armor.getNumSlot();
+				slotsName = Output.slotWord(mhag.getOutFormat(), nSlot);
+				items = armor.getItem();
+			}
+			Output.armorHTMLWiki(outSave, name, nameJP, slotsName, items);
+		}
+
+		// Part 2 : Table (defense, elements, skills)
+		// head line 2
+		Output.head2ndHTMLWiki(outSave);
+
+		// check possible skill bonus (def up/down, element resist)
+		int[] bonus = checkSkillBonus(mhagData);
+
+		// defense line
+		String title = "Max Def";
+
+		int[] values = new int[5];
+		Arrays.fill(values, 0);
+		for(int i = 0; i < 5; i++)
+		{
+			if(inUse[i])
+			{
+				Armor armor = mhagData.getArmor(i, armorID[i]);
+				values[i] = armor.getDefense(rank);
+			}
+		}
+
+		if(bonus[5] != 0)
+			defense += bonus[5];
+
+		Output.defenseHTMLWiki(outSave, title, values, defense, bonus);
+
+		// resistence
+		for(int i = 0; i < 5; i++)
+		{
+			Arrays.fill(values, 0);
+			for(int j = 0; j < 5; j++)
+			{
+				if(inUse[j])
+				{
+					Armor armor = mhagData.getArmor
+						(j, armorID[j]);
+					values[j] = armor.getResist()[i];
+				}
+			}
+			if(bonus[i] != 0 )
+			{
+				resist[i] += bonus[i];
+			}
+
+			Output.resistHTMLWiki(outSave, i, values, resist[i]);
+		}
+
+		// skill points
+
+		// check troso up
+		if(numTorso > 0)
+		{
+			String[] torsoList = getListTorsoUp(mhagData);
+  			Output.torsoHTMLWiki(outSave, torsoList, numSkill);
+		}
+
+		// skill points
+		String effectName = "---";
+		String effectNameJP = "---";
+		for(int i = 0; i < numSkill; i++)
+		{
+			int ifEff = 0;
+			//skill effects
+			if(i < numEffect)
+			{
+				Effect effect = mhagData.getEffect(effectID[i]);
+				effectName = effect.getEffectName();
+				effectNameJP = effect.getEffectNameJP();
+				if(skillPoint[i] > 0)
+					ifEff = 1;
+				else
+					ifEff = -1;
+			}
+			else
+			{
+				effectName = "  ---";
+				effectNameJP = "  ---";
+			}
+
+			//skill points
+			values = extractPoints(mhagData, skillID[i]);
+
+			//skill title
+			Skill skill = mhagData.getSkill(skillID[i]);
+			if((i == 0)&&(numTorso == 0))
+			{
+				title = "Skills: "+skill.getSkillName();
+				Output.skillHTMLWiki(outSave, true, title, skill.getSkillNameJP(),
+					values, effectName, ifEff, numSkill);
+			}
+			else
+			{
+				title = "        "+skill.getSkillName();
+				Output.skillHTMLWiki(outSave, false, title, skill.getSkillNameJP(),
+					values, effectName, ifEff, numSkill);
+			}
+
+		}
+
+		// end
+		Output.end(mhag.getOutFormat(), outSave);
 
 	}
 

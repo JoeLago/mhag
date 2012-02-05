@@ -1,1485 +1,1493 @@
-Leather Headgear : 暖かい毛皮 x1, 鉄鉱石 x1
-Leather Vest : ファンゴの毛皮 x1, 鉄鉱石 x1
-Leather Gloves : 暖かい毛皮 x2
-Leather Belt : ファンゴの毛皮 x1, 鉄鉱石 x1
-Leather Pants : 暖かい毛皮 x2
-Piscine Mask : ケルビの角 x2, イキツギ藻 x2, なぞの骨 x2
-Piscine Belt : 水生獣の皮 x2, 欠けた貝殻 x2
-Piscine Leggings : 水生獣の皮 x2, 大きなヒレ x1
-Chainmail Headgear : 大地の結晶 x1, 鉄鉱石 x1
-Chainmail Vest : 鉄鉱石 x2, 暖かい毛皮 x1
-Chainmail Gloves : 鉄鉱石 x1, 砥石 x2
-Chainmail Belt : 鉄鉱石 x1, 暖かい毛皮 x2
-Chainmail Pants : 鉄鉱石 x2, 暖かい毛皮 x2
-Loc Lac Shawl : 甲虫の腹袋 x1, モンスターの体液 x3, 氷結晶 x3
-Loc Lac Kilt : 甲虫の腹袋 x2, 甲虫の大顎 x2, 氷結晶 x3
-Loc Lac Boots : 甲虫の大顎 x3, 甲虫の腹袋 x2, 氷結晶 x3
-Hunter's Helm : マカライト鉱石 x1, 鉄鉱石 x1, セッチャクロアリ x2
-Hunter's Mail : 鉄鉱石 x2, ジャギィの鱗 x1, 竜骨【小】 x2
-Hunter's Vambraces : 大地の結晶 x1, ジャギィの鱗 x2, ツタの葉 x1
-Hunter's Faulds : マカライト鉱石 x2, 鉄鉱石 x1, セッチャクロアリ x1
-Hunter's Greaves : 鉄鉱石 x1, 大地の結晶 x1, 竜骨【小】 x2
-Hunter's Cap : マカライト鉱石 x1, 鉄鉱石 x1, セッチャクロアリ x2
-Hunter's Vest : 鉄鉱石 x2, ジャギィの鱗 x1, 竜骨【小】 x2
-Hunter's Guards : 大地の結晶 x1, ジャギィの鱗 x2, ツタの葉 x1
-Hunter's Coat : マカライト鉱石 x2, 鉄鉱石 x1, セッチャクロアリ x1
-Hunter's Leggings : 鉄鉱石 x1, 大地の結晶 x1, 竜骨【小】 x2
+Leather Headgear : 1 暖かい毛皮, 1 鉄鉱石
+Leather Vest : 1 ファンゴの毛皮, 1 鉄鉱石
+Leather Gloves : 2 暖かい毛皮
+Leather Belt : 1 ファンゴの毛皮, 1 鉄鉱石
+Leather Pants : 2 暖かい毛皮
+Piscine Mask : 2 ケルビの角, 2 イキツギ藻, 2 なぞの骨
+Piscine Belt : 2 水生獣の皮, 2 欠けた貝殻
+Piscine Leggings : 2 水生獣の皮, 1 大きなヒレ
+Chainmail Headgear : 1 大地の結晶, 1 鉄鉱石
+Chainmail Vest : 2 鉄鉱石, 1 暖かい毛皮
+Chainmail Gloves : 1 鉄鉱石, 2 砥石
+Chainmail Belt : 1 鉄鉱石, 2 暖かい毛皮
+Chainmail Pants : 2 鉄鉱石, 2 暖かい毛皮
+Loc Lac Shawl : 1 甲虫の腹袋, 3 モンスターの体液, 3 氷結晶
+Loc Lac Kilt : 2 甲虫の腹袋, 2 甲虫の大顎, 3 氷結晶
+Loc Lac Boots : 3 甲虫の大顎, 2 甲虫の腹袋, 3 氷結晶
+Hunter's Helm : 1 マカライト鉱石, 1 鉄鉱石, 2 セッチャクロアリ
+Hunter's Mail : 2 鉄鉱石, 1 ジャギィの鱗, 2 竜骨【小】
+Hunter's Vambraces : 1 大地の結晶, 2 ジャギィの鱗, 1 ツタの葉
+Hunter's Faulds : 2 マカライト鉱石, 1 鉄鉱石, 1 セッチャクロアリ
+Hunter's Greaves : 1 鉄鉱石, 1 大地の結晶, 2 竜骨【小】
+Hunter's Cap : 1 マカライト鉱石, 1 鉄鉱石, 2 セッチャクロアリ
+Hunter's Vest : 2 鉄鉱石, 1 ジャギィの鱗, 2 竜骨【小】
+Hunter's Guards : 1 大地の結晶, 2 ジャギィの鱗, 1 ツタの葉
+Hunter's Coat : 2 マカライト鉱石, 1 鉄鉱石, 1 セッチャクロアリ
+Hunter's Leggings : 1 鉄鉱石, 1 大地の結晶, 2 竜骨【小】
 Yukumo Kasa : ※港店売り
 Yukumo Dogi : ※港店売り
 Yukumo Kote : ※港店売り
 Yukumo Obi : ※港店売り
 Yukumo Hakama : ※港店売り
-Alloy Helm : マカライト鉱石 x3, 大地の結晶 x2, 鉄鉱石 x3
-Alloy Mail : マカライト鉱石 x3, シーブライト鉱石 x2, 鉄鉱石 x2
-Alloy Vambraces : マカライト鉱石 x2, 大地の結晶 x2, 鉄鉱石 x4
-Alloy Coil : マカライト鉱石 x2, シーブライト鉱石 x2, 鉄鉱石 x3
-Alloy Greaves : マカライト鉱石 x4, 大地の結晶 x2, 鉄鉱石 x2
-Alloy Cap : マカライト鉱石 x3, 大地の結晶 x2, 鉄鉱石 x3
-Alloy Vest : マカライト鉱石 x3, シーブライト鉱石 x2, 鉄鉱石 x2
-Alloy Guards : マカライト鉱石 x2, 大地の結晶 x2, 鉄鉱石 x4
-Alloy Coat : マカライト鉱石 x2, シーブライト鉱石 x2, 鉄鉱石 x3
-Alloy Leggings : マカライト鉱石 x4, 大地の結晶 x2, 鉄鉱石 x2
-Bone Helm : 大きなヒレ x3, なぞの頭骨 x1, とがった牙 x2
-Bone Mail : 大きな骨 x1, なぞの骨 x4, とがった牙 x2
-Bone Vambraces : 竜骨【小】 x3, なぞの骨 x3, とがった牙 x2
-Bone Faulds : 竜骨【小】 x3, 棒状の骨 x3, とがった牙 x2
-Bone Greaves : 竜骨【中】 x2, 棒状の骨 x2, なぞの骨 x4
-Bone Cap : 大きなヒレ x3, なぞの頭骨 x1, とがった牙 x2
-Bone Vest : 大きな骨 x1, なぞの骨 x4, とがった牙 x2
-Bone Guards : 竜骨【小】 x3, なぞの骨 x3, とがった牙 x2
-Bone Coat : 竜骨【小】 x3, 棒状の骨 x3, とがった牙 x2
-Bone Leggings : 竜骨【中】 x2, 棒状の骨 x2, なぞの骨 x4
-Bnahabra Hat : 飛甲虫の甲殻 x2, 飛甲虫の羽 x3, キラビートル x1, セッチャクロアリ x2
-Bnahabra Suit : 飛甲虫の甲殻 x2, 飛甲虫の羽 x3, モンスターの体液 x2, キラビートル x1
-Bnahabra Glove : 飛甲虫の羽 x3, 飛甲虫の甲殻 x2, 飛甲虫の麻痺針 x5, キラビートル x2
-Bnahabra Coil : 飛甲虫の羽 x3, 飛甲虫の甲殻 x2, モンスターの体液 x1, キラビートル x2
-Bnahabra Boots : 飛甲虫の甲殻 x2, 飛甲虫の羽 x3, キラビートル x2, セッチャクロアリ x3
-Bnahabra Cap : 飛甲虫の甲殻 x2, 飛甲虫の羽 x3, キラビートル x1, セッチャクロアリ x2
-Bnahabra Vest : 飛甲虫の甲殻 x2, 飛甲虫の羽 x3, モンスターの体液 x2, キラビートル x1
-Bnahabra Cuffs : 飛甲虫の羽 x3, 飛甲虫の甲殻 x2, 飛甲虫の麻痺針 x5, キラビートル x2
-Bnahabra Coat : 飛甲虫の羽 x3, 飛甲虫の甲殻 x2, モンスターの体液 x1, キラビートル x2
-Bnahabra Pants : 飛甲虫の甲殻 x2, 飛甲虫の羽 x3, キラビートル x2, セッチャクロアリ x3
-Rhenoplos Helm : 草食竜の頭殻 x1, 草食竜の甲殻 x2, 氷結晶 x2
-Rhenoplos Mail : 草食竜の頭殻 x1, 草食竜の甲殻 x2, 大地の結晶 x2
-Rhenoplos Vambraces : 草食竜の甲殻 x2, 竜骨【中】 x4, 氷結晶 x2
-Rhenoplos Coil : 草食竜の甲殻 x2, 草食竜の頭殻 x1, 大地の結晶 x2
-Rhenoplos Greaves : 草食竜の甲殻 x2, 竜骨【小】 x6, 氷結晶 x2
-Rhenoplos Cap : 草食竜の頭殻 x1, 草食竜の甲殻 x2, 氷結晶 x2
-Rhenoplos Vest : 草食竜の頭殻 x1, 草食竜の甲殻 x2, 大地の結晶 x2
-Rhenoplos Guards : 草食竜の甲殻 x2, 竜骨【中】 x4, 氷結晶 x2
-Rhenoplos Coat : 草食竜の甲殻 x2, 草食竜の頭殻 x1, 大地の結晶 x2
-Rhenoplos Leggings : 草食竜の甲殻 x2, 竜骨【小】 x6, 氷結晶 x2
-Jaggi Helm : 狗竜の皮 x3, 狗竜の爪 x1, ジャギィの鱗 x2, 鉄鉱石 x3
-Jaggi Mail : 王者のエリマキ x1, 狗竜の爪 x2, ジャギィの皮 x3, 鉄鉱石 x3
-Jaggi Vambraces : 狗竜の爪 x2, 狗竜の皮 x3, ジャギィの鱗 x2, 大地の結晶 x2
-Jaggi Faulds : 狗竜の皮 x2, 王者のエリマキ x1, ジャギィの皮 x3, 大地の結晶 x1
-Jaggi Greaves : ジャギィの皮 x4, ジャギィの鱗 x3, 竜骨【小】 x4, マカライト鉱石 x2
-Jaggi Cap : 狗竜の皮 x3, 狗竜の爪 x1, ジャギィの鱗 x2, 鉄鉱石 x3
-Jaggi Vest : 王者のエリマキ x1, 狗竜の爪 x2, ジャギィの皮 x3, 鉄鉱石 x3
-Jaggi Guards : 狗竜の爪 x2, 狗竜の皮 x3, ジャギィの鱗 x2, 大地の結晶 x2
-Jaggi Coat : 狗竜の皮 x2, 王者のエリマキ x1, ジャギィの皮 x3, 大地の結晶 x1
-Jaggi Leggings : ジャギィの皮 x4, ジャギィの鱗 x3, 竜骨【小】 x4, マカライト鉱石 x2
-Aoashira Helm : 青熊獣の甲殻 x2, 青熊獣の毛 x2, 大きな骨 x2, セッチャクロアリ x3
-Aoashira Mail : 青熊獣の毛 x3, 青熊獣の甲殻 x1, 飛甲虫の甲殻 x2, 光蟲 x3
-Aoashira Vambraces : 青熊獣の甲殻 x2, 青熊獣の腕甲 x1, 青熊獣の毛 x2, 甲虫の腹袋 x2
-Aoashira Faulds : 青熊獣の毛 x2, 青熊獣の甲殻 x1, 大きな骨 x1, セッチャクロアリ x3
-Aoashira Greaves : 青熊獣の腕甲 x2, 青熊獣の毛 x2, 飛甲虫の甲殻 x2, 光蟲 x3
-Aoashira Cap : 青熊獣の甲殻 x2, 青熊獣の毛 x2, 大きな骨 x2, セッチャクロアリ x3
-Aoashira Vest : 青熊獣の毛 x3, 青熊獣の甲殻 x1, 飛甲虫の甲殻 x2, 光蟲 x3
-Aoashira Guards : 青熊獣の甲殻 x2, 青熊獣の腕甲 x1, 青熊獣の毛 x2, 甲虫の腹袋 x2
-Aoashira Coat : 青熊獣の毛 x2, 青熊獣の甲殻 x1, 大きな骨 x1, セッチャクロアリ x3
-Aoashira Leggings : 青熊獣の腕甲 x2, 青熊獣の毛 x2, 飛甲虫の甲殻 x2, 光蟲 x3
-Froggi Helm : 王者のクチバシ x1, 毒狗竜の皮 x2, フロギィの鱗 x2, キラビートル x2
-Froggi Mail : 毒狗竜の皮 x2, 毒狗竜の腕甲 x1, 毒袋 x3, 氷結晶 x5
-Froggi Vambraces : 毒狗竜の腕甲 x2, 毒狗竜の皮 x2, フロギィの鱗 x2, セッチャクロアリ x3
-Froggi Faulds : フロギィの皮 x3, フロギィの鱗 x2, 竜骨【小】 x6, キラビートル x3
-Froggi Greaves : 毒狗竜の腕甲 x2, 毒狗竜の皮 x2, フロギィの皮 x3, セッチャクロアリ x3
-Froggi Cap : 王者のクチバシ x1, 毒狗竜の皮 x2, フロギィの鱗 x2, キラビートル x2
-Froggi Vest : 毒狗竜の皮 x2, 毒狗竜の腕甲 x1, 毒袋 x3, 氷結晶 x5
-Froggi Guards : 毒狗竜の腕甲 x2, 毒狗竜の皮 x2, フロギィの鱗 x2, セッチャクロアリ x3
-Froggi Coat : フロギィの皮 x3, フロギィの鱗 x2, 竜骨【小】 x6, キラビートル x3
-Froggi Leggings : 毒狗竜の腕甲 x2, 毒狗竜の皮 x2, フロギィの皮 x3, セッチャクロアリ x3
-Qurupeco Helm : へんなクチバシ x2, 彩鳥の羽 x2, 竜骨【中】 x2, セッチャクロアリ x3
-Qurupeco Mail : 極彩色の羽根 x1, 彩鳥の鱗 x2, 竜骨【中】 x2, セッチャクロアリ x3
-Qurupeco Vambraces : 火打石 x1, 彩鳥の羽根 x2, 彩鳥の鱗 x2, 雷光虫 x2
-Qurupeco Coil : 彩鳥の羽根 x2, 彩鳥の鱗 x3, 竜骨【小】 x4, キラビートル x2
-Qurupeco Greaves : 彩鳥の鱗 x2, 極彩色の羽根 x1, 竜骨【小】 x4, キラビートル x2
-Qurupeco Cap : へんなクチバシ x2, 彩鳥の羽 x2, 竜骨【中】 x2, セッチャクロアリ x3
-Qurupeco Vest : 極彩色の羽根 x1, 彩鳥の鱗 x2, 竜骨【中】 x2, セッチャクロアリ x3
-Qurupeco Guards : 火打石 x1, 彩鳥の羽根 x2, 彩鳥の鱗 x2, 雷光虫 x2
-Qurupeco Coat : 彩鳥の羽根 x2, 彩鳥の鱗 x3, 竜骨【小】 x4, キラビートル x2
-Qurupeco Leggings : 彩鳥の鱗 x2, 極彩色の羽根 x1, 竜骨【小】 x4, キラビートル x2
-Ludroth Helm : 水獣のトサカ x2, 水獣の尻尾 x1, 水獣の鱗 x2, セッチャクロアリ x3
-Ludroth Mail : 海綿質の皮 x2, 水獣の爪 x1, 水生獣の皮 x3, キラビートル x2
-Ludroth Vambraces : 水獣の爪 x1, 水獣の鱗 x2, 海綿質の皮 x2, 水袋 x2
-Ludroth Faulds : 水生獣の皮 x3, 未熟な海綿質 x5, 竜骨【小】 x4, キラビートル x2
-Ludroth Greaves : 水獣の爪 x2, 水獣の鱗 x3, 海綿質の皮 x2, セッチャクロアリ x3
-Ludroth Cap : 水獣のトサカ x2, 水獣の尻尾 x1, 水獣の鱗 x2, セッチャクロアリ x3
-Ludroth Vest : 海綿質の皮 x2, 水獣の爪 x1, 水生獣の皮 x3, キラビートル x2
-Ludroth Guards : 水獣の爪 x1, 水獣の鱗 x2, 海綿質の皮 x2, 水袋 x2
-Ludroth Coat : 水生獣の皮 x3, 未熟な海綿質 x5, 竜骨【小】 x4, キラビートル x2
-Ludroth Leggings : 水獣の爪 x2, 水獣の鱗 x3, 海綿質の皮 x2, セッチャクロアリ x3
-Baggi Helm : 眠狗竜の皮 x3, 眠狗竜の爪 x2, バギィの鱗 x3, アイシスメタル x2
-Baggi Mail : 王者のトサカ x1, 眠狗竜の爪 x1, バギィの皮 x2, シーブライト鉱石 x2
-Baggi Vambraces : 眠狗竜の爪 x2, 眠狗竜の皮 x3, バギィの皮 x2, アイシスメタル x2
-Baggi Coil : 眠狗竜の皮 x2, 王者のトサカ x1, 睡眠袋 x3, シーブライト鉱石 x2
-Baggi Greaves : バギィの皮 x4, バギィの鱗 x3, 竜骨【小】 x6, ライトクリスタル x1
-Baggi Cap : 眠狗竜の皮 x3, 眠狗竜の爪 x2, バギィの鱗 x3, アイシスメタル x2
-Baggi Vest : 王者のトサカ x1, 眠狗竜の爪 x1, バギィの皮 x2, シーブライト鉱石 x2
-Baggi Guards : 眠狗竜の爪 x2, 眠狗竜の皮 x3, バギィの皮 x2, アイシスメタル x2
-Baggi Coat : 眠狗竜の皮 x2, 王者のトサカ x1, 睡眠袋 x3, シーブライト鉱石 x2
-Baggi Leggings : バギィの皮 x4, バギィの鱗 x3, 竜骨【小】 x6, ライトクリスタル x1
-Urkusus Helm : 白兎獣の耳 x2, 大きな骨 x2, バギィの皮 x4, アイシスメタル x2
-Urkusus Mail : 白兎獣の腹甲 x2, 白兎獣の毛 x2, バギィの鱗 x4, キラビートル x3
-Urkusus Vambraces : 白兎獣の氷爪 x2, 白兎獣の毛 x2, 白兎獣の腹甲 x1, なめらかな皮 x4
-Urkusus Faulds : 白兎獣の毛 x3, 白兎獣の氷爪 x1, 大きな骨 x2, キラビートル x3
-Urkusus Greaves : 白兎獣の毛 x2, 白兎獣の腹甲 x2, 白兎獣の氷爪 x1, セッチャクロアリ x8
-Urkusus Cap : 白兎獣の耳 x2, 大きな骨 x2, バギィの皮 x4, アイシスメタル x2
-Urkusus Vest : 白兎獣の腹甲 x2, 白兎獣の毛 x2, バギィの鱗 x4, キラビートル x3
-Urkusus Guards : 白兎獣の氷爪 x2, 白兎獣の毛 x2, 白兎獣の腹甲 x1, なめらかな皮 x4
-Urkusus Coat : 白兎獣の毛 x3, 白兎獣の氷爪 x1, 大きな骨 x2, キラビートル x3
-Urkusus Leggings : 白兎獣の毛 x2, 白兎獣の腹甲 x2, 白兎獣の氷爪 x1, セッチャクロアリ x8
-Barroth Helm : 土砂竜の背甲 x2, 土砂竜の甲殻 x1, 土砂竜の頭殻 x1, 草食竜の頭殻 x2
-Barroth Mail : 土砂竜の頭殻 x1, 土砂竜の背甲 x2, 肥沃なドロ x2, キラビートル x2
-Barroth Vambraces : 土砂竜の爪 x2, 土砂竜の甲殻 x2, 肥沃なドロ x2, 草食竜の甲殻 x3
-Barroth Faulds : 土砂竜の甲殻 x2, 土砂竜の爪 x1, 土砂竜の背甲 x2, 竜骨【中】 x5
-Barroth Greaves : 土砂竜の甲殻 x2, 土砂竜の尻尾 x1, 竜骨【大】 x2, 草食竜の甲殻 x3
-Barroth Cap : 土砂竜の背甲 x2, 土砂竜の甲殻 x1, 土砂竜の頭殻 x1, 草食竜の頭殻 x2
-Barroth Vest : 土砂竜の頭殻 x1, 土砂竜の背甲 x2, 肥沃なドロ x2, キラビートル x2
-Barroth Guards : 土砂竜の爪 x2, 土砂竜の甲殻 x2, 肥沃なドロ x2, 草食竜の甲殻 x3
-Barroth Coat : 土砂竜の甲殻 x2, 土砂竜の爪 x1, 土砂竜の背甲 x2, 竜骨【中】 x5
-Barroth Leggings : 土砂竜の甲殻 x2, 土砂竜の尻尾 x1, 竜骨【大】 x2, 草食竜の甲殻 x3
-Ranguro Helm : 赤甲獣の爪 x2, 赤甲獣の甲殻 x2, モンスターの体液 x2, ドラグライト鉱石 x4
-Ranguro Mail : 赤甲獣の甲殻 x3, 赤甲獣の蛇腹甲 x1, 大きな骨 x2, 溶岩獣の鱗 x4
-Ranguro Vambraces : 赤甲獣の爪 x2, 赤甲獣の蛇腹甲 x2, 大きな骨 x2, 溶岩獣の鱗 x4
-Ranguro Faulds : 赤甲獣の甲殻 x3, 麻痺袋 x4, モンスターの体液 x1, 紅蓮石 x1
-Ranguro Greaves : 赤甲獣の爪 x2, 赤甲獣の甲殻 x2, 赤甲獣の蛇腹甲 x1, 大地の結晶 x4
-Ranguro Cap : 赤甲獣の爪 x2, 赤甲獣の甲殻 x2, モンスターの体液 x2, ドラグライト鉱石 x4
-Ranguro Vest : 赤甲獣の甲殻 x3, 赤甲獣の蛇腹甲 x1, 大きな骨 x2, 溶岩獣の鱗 x4
-Ranguro Guards : 赤甲獣の爪 x2, 赤甲獣の蛇腹甲 x2, 大きな骨 x2, 溶岩獣の鱗 x4
-Ranguro Coat : 赤甲獣の甲殻 x3, 麻痺袋 x4, モンスターの体液 x1, 紅蓮石 x1
-Ranguro Leggings : 赤甲獣の爪 x2, 赤甲獣の甲殻 x2, 赤甲獣の蛇腹甲 x1, 大地の結晶 x4
-Gobul Helm : 灯魚竜のヒゲ x2, 提灯球 x1, 灯魚竜の皮 x3, 竜骨【中】 x4
-Gobul Mail : 灯魚竜の皮 x3, 灯魚竜のヒレ x2, 灯魚竜の棘 x2, 竜骨【大】 x3
-Gobul Vambraces : 灯魚竜のヒレ x1, 灯魚竜の棘 x2, 灯魚竜の皮 x3, 麻痺袋 x3
-Gobul Faulds : 灯魚竜のヒレ x1, 灯魚竜の棘 x2, 灯魚竜のヒゲ x1, 提灯球 x1
-Gobul Greaves : 灯魚竜の棘 x2, 灯魚竜の皮 x4, 当魚竜のヒレ x1, 竜骨【中】 x5
-Gobul Cap : 灯魚竜のヒゲ x2, 提灯球 x1, 灯魚竜の皮 x3, 竜骨【中】 x4
-Gobul Vest : 灯魚竜の皮 x3, 灯魚竜のヒレ x2, 灯魚竜の棘 x2, 竜骨【大】 x3
-Gobul Guards : 灯魚竜のヒレ x1, 灯魚竜の棘 x2, 灯魚竜の皮 x3, 麻痺袋 x3
-Gobul Coat : 灯魚竜のヒレ x1, 灯魚竜の棘 x2, 灯魚竜のヒゲ x1, 提灯球 x1
-Gobul Leggings : 灯魚竜の棘 x2, 灯魚竜の皮 x4, 当魚竜のヒレ x1, 竜骨【中】 x5
-Rathian Helm : 雌火竜の棘 x1, 雌火竜の鱗 x4, 雌火竜の甲殻 x3, 大地の結晶 x5
-Rathian Mail : 雌火竜の鱗 x4, 雌火竜の翼膜 x3, 火竜の骨髄 x1, マカライト鉱石 x5
-Rathian Vambraces : 火竜の翼爪 x2, 雌火竜の甲殻 x2, 雌火竜の棘 x1, 大地の結晶 x5
-Rathian Faulds : 雌火竜の翼膜 x2, 雌火竜の逆鱗 x1, 火炎袋 x2, マカライト鉱石 x5
-Rathian Greaves : 雌火竜の甲殻 x3, 雌火竜の鱗 x4, 竜骨【大】 x3, ライトクリスタル x1
-Rathian Cap : 雌火竜の棘 x1, 雌火竜の鱗 x4, 雌火竜の甲殻 x3, 大地の結晶 x5
-Rathian Vest : 雌火竜の鱗 x4, 雌火竜の翼膜 x3, 火竜の骨髄 x1, マカライト鉱石 x5
-Rathian Guards : 火竜の翼爪 x2, 雌火竜の甲殻 x2, 雌火竜の棘 x1, 大地の結晶 x5
-Rathian Coat : 雌火竜の翼膜 x2, 雌火竜の逆鱗 x1, 火炎袋 x2, マカライト鉱石 x5
-Rathian Leggings : 雌火竜の甲殻 x3, 雌火竜の鱗 x4, 竜骨【大】 x3, ライトクリスタル x1
-Gigginox Helm : 不気味な皮 x2, 毒怪竜の皮 x3, 毒袋 x2, 眠狗竜の皮 x3
-Gigginox Mail : 毒怪竜の爪 x2, 毒怪竜の皮 x3, 不気味な毒腺 x3, アイシスメタル x4
-Gigginox Vambraces : 毒怪竜の皮 x4, 毒怪竜の爪 x1, 不気味な毒腺 x3, 竜骨【大】 x3
-Gigginox Faulds : 毒怪竜の皮 x4, 不気味な皮 x1, なめらかな皮 x4, 眠狗竜の皮 x2
-Gigginox Greaves : おそろしいクチ x1, なめらかな皮 x4, アルビノエキス x2, ライトクリスタル x1
-Gigginox Cap : 不気味な皮 x2, 毒怪竜の皮 x3, 毒袋 x2, 眠狗竜の皮 x3
-Gigginox Vest : 毒怪竜の爪 x2, 毒怪竜の皮 x3, 不気味な毒腺 x3, アイシスメタル x4
-Gigginox Guards : 毒怪竜の皮 x4, 毒怪竜の爪 x1, 不気味な毒腺 x3, 竜骨【大】 x3
-Gigginox Coat : 毒怪竜の皮 x4, 不気味な皮 x1, なめらかな皮 x4, 眠狗竜の皮 x2
-Gigginox Leggings : おそろしいクチ x1, なめらかな皮 x4, アルビノエキス x2, ライトクリスタル x1
-Ingot Helm : ドラグライト鉱石 x2, アイシスメタル x2, シーブライト鉱石 x1, ライトクリスタル x1
-Ingot Mail : ドラグライト鉱石 x4, 紅蓮石 x1, シーブライト鉱石 x1, ライトクリスタル x1
-Ingot Vambraces : ドラグライト鉱石 x2, ライトクリスタル x2, 紅蓮石 x1, マカライト鉱石 x5
-Ingot Coil : ドラグライト鉱石 x4, 紅蓮石 x1, アイシスメタル x3, マカライト鉱石 x5
-Ingot Greaves : ドラグライト鉱石 x3, アイシスメタル x2, シーブライト鉱石 x2, マカライト鉱石 x5
-Ingot Cap : ドラグライト鉱石 x2, アイシスメタル x2, シーブライト鉱石 x1, ライトクリスタル x1
-Ingot Vest : ドラグライト鉱石 x4, 紅蓮石 x1, シーブライト鉱石 x1, ライトクリスタル x1
-Ingot Guards : ドラグライト鉱石 x2, ライトクリスタル x2, 紅蓮石 x1, マカライト鉱石 x5
-Ingot Coat : ドラグライト鉱石 x4, 紅蓮石 x1, アイシスメタル x3, マカライト鉱石 x5
-Ingot Leggings : ドラグライト鉱石 x3, アイシスメタル x2, シーブライト鉱石 x2, マカライト鉱石 x5
-Barioth Helm : 琥珀色の牙 x2, 氷牙竜の毛皮 x3, 氷牙竜の甲殻 x2, キラビートル x6
-Barioth Mail : 氷牙竜の甲殻 x3, 氷牙竜の尻尾 x1, 氷牙竜の棘 x1, ドスヘラクレス x3
-Barioth Vambraces : 氷牙竜の爪 x1, 氷牙竜の甲殻 x3, 氷結袋 x4, なめらかな皮 x6
-Barioth Faulds : 琥珀色の牙 x1, 氷牙竜の棘 x1, 上竜骨 x2, 白兎獣の腹甲 x4
-Barioth Greaves : 氷牙竜の毛皮 x4, 氷牙竜の甲殻 x2, 氷牙竜の爪 x1, 白兎獣の毛 x6
-Barioth Cap : 琥珀色の牙 x2, 氷牙竜の毛皮 x3, 氷牙竜の甲殻 x2, キラビートル x6
-Barioth Vest : 氷牙竜の甲殻 x3, 氷牙竜の尻尾 x1, 氷牙竜の棘 x1, ドスヘラクレス x3
-Barioth Guards : 氷牙竜の爪 x1, 氷牙竜の甲殻 x3, 氷結袋 x4, なめらかな皮 x6
-Barioth Coat : 琥珀色の牙 x1, 氷牙竜の棘 x1, 上竜骨 x2, 白兎獣の腹甲 x4
-Barioth Leggings : 氷牙竜の毛皮 x4, 氷牙竜の甲殻 x2, 氷牙竜の爪 x1, 白兎獣の毛 x6
-Hapul Helm : 潜口竜の頭殻 x1, 潜口竜の甲殻 x2, 竜骨【中】 x5, 狗竜の皮 x2
-Hapul Mail : 潜口竜の皮 x4, 潜口竜の爪 x1, 潜口竜の甲殻 x3, 鮮やかな体液 x4
-Hapul Vambraces : 潜口竜の爪 x2, 潜口竜の甲殻 x2, 鮮やかな体液 x4, 甲虫の大顎 x3
-Hapul Faulds : 潜口竜の皮 x3, 潜口竜の頭殻 x1, 竜骨【大】 x3, 甲虫の腹袋 x4
-Hapul Greaves : 潜口竜の甲殻 x3, 潜口竜の爪 x1, 潜口竜の皮 x3, 甲虫の大顎 x3
-Hapul Cap : 潜口竜の頭殻 x1, 潜口竜の甲殻 x2, 竜骨【中】 x5, 狗竜の皮 x2
-Hapul Vest : 潜口竜の皮 x4, 潜口竜の爪 x1, 潜口竜の甲殻 x3, 鮮やかな体液 x4
-Hapul Guards : 潜口竜の爪 x2, 潜口竜の甲殻 x2, 鮮やかな体液 x4, 甲虫の大顎 x3
-Hapul Coat : 潜口竜の皮 x3, 潜口竜の頭殻 x1, 竜骨【大】 x3, 甲虫の腹袋 x4
-Hapul Leggings : 潜口竜の甲殻 x3, 潜口竜の爪 x1, 潜口竜の皮 x3, 甲虫の大顎 x3
-Guild Bard Lobos/Scholar's Beret : 飛竜のコイン x2, 海竜のコイン x3, 牙獣のコイン x4, 赤甲獣の蛇腹甲 x3
-Guild Bard Bolero/Scholar's Blouse : 飛竜のコイン x2, 海竜のコイン x3, 牙獣のコイン x4, 火竜の翼膜 x2
-Guild Bard Braces/Scholar's Gloves : 飛竜のコイン x2, 海竜のコイン x3, 牙獣のコイン x4, 爆鎚竜の耐熱殻 x2
-Guild Bard Coil/Scholar's Skirt : 飛竜のコイン x2, 海竜のコイン x3, 牙獣のコイン x4, 鮮やかな体液 x4
-Guild Bard Boots/Scholar's Socks : 飛竜のコイン x2, 海竜のコイン x3, 牙獣のコイン x4, 氷牙竜の棘 x2
-Guild Bard Hat/Scholar's Cap : 飛竜のコイン x2, 海竜のコイン x3, 牙獣のコイン x4, 赤甲獣の蛇腹甲 x3
-Guild Bard Vest/Scholar's Vest : 飛竜のコイン x2, 海竜のコイン x3, 牙獣のコイン x4, 火竜の翼膜 x2
-Guild Bard Sleeves/Scholar's Sleeves : 飛竜のコイン x2, 海竜のコイン x3, 牙獣のコイン x4, 爆鎚竜の耐熱殻 x2
-Guild Bard Coat/Scholar's Mini : 飛竜のコイン x2, 海竜のコイン x3, 牙獣のコイン x4, 鮮やかな体液 x4
-Guild Bard Gaiters/Scholar's Sandals : 飛竜のコイン x2, 海竜のコイン x3, 牙獣のコイン x4, 氷牙竜の棘 x2
-Lagiacrus Helm : 海竜の角 x2, 海流の皮 x3, 海竜の鱗 x3, アイシスメタル x2
-Lagiacrus Mail : 海竜の皮 x3, 海竜の背電殻 x1, 海竜の鱗 x4, ライトクリスタル x6
-Lagiacrus Vambraces : 海竜の爪 x2, 海竜の皮 x2, 海竜の鱗 x4, アイシスメタル x2
-Lagiacrus Faulds : 海竜の角 x1, 海流の背電殻 x2, 海流の鱗 x4, アイシスメタル x1
-Lagiacrus Greaves : 海竜の鱗 x2, 海竜の皮 x1, 海竜の逆鱗 x1, ライトクリスタル x1
-Lagiacrus Cap : 海竜の角 x2, 海流の皮 x3, 海竜の鱗 x3, アイシスメタル x2
-Lagiacrus Vest : 海竜の皮 x3, 海竜の背電殻 x1, 海竜の鱗 x4, ライトクリスタル x6
-Lagiacrus Guards : 海竜の爪 x2, 海竜の皮 x2, 海竜の鱗 x4, アイシスメタル x2
-Lagiacrus Coat : 海竜の角 x1, 海流の背電殻 x2, 海流の鱗 x4, アイシスメタル x1
-Lagiacrus Leggings : 海竜の鱗 x2, 海竜の皮 x1, 海竜の逆鱗 x1, ライトクリスタル x1
-Rathalos Helm : 火竜の鱗 x3, 火竜の甲殻 x3, 火竜の翼爪 x1, ドラグライト鉱石 x3
-Rathalos Mail : 火竜の甲殻 x2, 火竜の鱗 x4, 火竜の翼膜 x3, ドラグライト鉱石 x3
-Rathalos Vambraces : 火竜の尻尾 x1, 火竜の翼爪 x1, 火竜の骨髄 x2, ドラグライト鉱石 x3
-Rathalos Faulds : 火竜の翼膜 x3, 火竜の逆鱗 x1, 上竜骨 x3, 紅蓮石 x1
-Rathalos Greaves : 火竜の甲殻 x3, 火竜の鱗 x4, 火炎袋 x2, ドラグライト鉱石 x3
-Rathalos Cap : 火竜の鱗 x3, 火竜の甲殻 x3, 火竜の翼爪 x1, ドラグライト鉱石 x3
-Rathalos Vest : 火竜の甲殻 x2, 火竜の鱗 x4, 火竜の翼膜 x3, ドラグライト鉱石 x3
-Rathalos Guards : 火竜の尻尾 x1, 火竜の翼爪 x1, 火竜の骨髄 x2, ドラグライト鉱石 x3
-Rathalos Coat : 火竜の翼膜 x3, 火竜の逆鱗 x1, 上竜骨 x3, 紅蓮石 x1
-Rathalos Leggings : 火竜の甲殻 x3, 火竜の鱗 x4, 火炎袋 x2, ドラグライト鉱石 x3
-Dobol Helm : 尾槌竜の角 x2, 尾槌竜の甲殻 x4, 上竜骨 x3, 草食竜の甲殻 x3
-Dobol Mail : 尾槌竜のコブ x3, 尾槌竜の角 x2, 尾槌竜の甲殻 x4, ファンゴの毛皮 x4
-Dobol Vambraces : 尾槌竜の甲殻 x4, 尾槌竜の尾甲 x2, 尾槌竜の苔甲 x4, 草食竜の甲殻 x3
-Dobol Faulds : 尾槌竜の苔甲 x4, 尾槌竜の甲殻 x4, 尾槌竜の尾骨 x1, フロギィの皮 x4
-Dobol Greaves : 尾槌竜の尾甲 x2, 尾槌竜の苔甲 x4, 尾槌竜のコブ x2, ファンゴの毛皮 x4
-Dobol Cap : 尾槌竜の角 x2, 尾槌竜の甲殻 x4, 上竜骨 x3, 草食竜の甲殻 x3
-Dobol Vest : 尾槌竜のコブ x3, 尾槌竜の角 x2, 尾槌竜の甲殻 x4, ファンゴの毛皮 x4
-Dobol Guards : 尾槌竜の甲殻 x4, 尾槌竜の尾甲 x2, 尾槌竜の苔甲 x4, 草食竜の甲殻 x3
-Dobol Coat : 尾槌竜の苔甲 x4, 尾槌竜の甲殻 x4, 尾槌竜の尾骨 x1, フロギィの皮 x4
-Dobol Leggings : 尾槌竜の尾甲 x2, 尾槌竜の苔甲 x4, 尾槌竜のコブ x2, ファンゴの毛皮 x4
-Diablos Helm : 角竜の尾甲 x2, 角竜の甲殻 x4, 角竜の背甲 x2, 毒狗竜の皮 x5
-Diablos Mail : ねじれた角 x2, 角竜の背甲 x3, 角竜の甲殻 x2, 毒狗竜の腕甲 x3
-Diablos Vambraces : 角竜の牙 x3, 角竜の骨髄 x1, ねじれた角 x2, 草食竜の甲殻 x3
-Diablos Faulds : 角竜の甲殻 x4, 角竜の牙 x4, 上質なねじれた角 x1, 草食竜の頭殻 x4
-Diablos Greaves : 角竜の背甲 x3, 角竜の甲殻 x3, 角竜の牙 x3, 草食竜の甲殻 x3
-Diablos Cap : 角竜の尾甲 x2, 角竜の甲殻 x4, 角竜の背甲 x2, 毒狗竜の皮 x5
-Diablos Vest : ねじれた角 x2, 角竜の背甲 x3, 角竜の甲殻 x2, 毒狗竜の腕甲 x3
-Diablos Guards : 角竜の牙 x3, 角竜の骨髄 x1, ねじれた角 x2, 草食竜の甲殻 x3
-Diablos Coat : 角竜の甲殻 x4, 角竜の牙 x4, 上質なねじれた角 x1, 草食竜の頭殻 x4
-Diablos Leggings : 角竜の背甲 x3, 角竜の甲殻 x3, 角竜の牙 x3, 草食竜の甲殻 x3
-Uragaan Helm : 爆鎚竜の甲殻 x3, 爆鎚竜の骨髄 x1, 爆鎚竜の鱗 x4, ドラグライト鉱石 x3
-Uragaan Mail : 爆鎚竜の顎 x1, 爆鎚竜の耐熱殻 x1, 爆鎚竜の甲殻 x3, 赤甲獣の甲殻 x2
-Uragaan Vambraces : 爆鎚竜の鱗 x3, 爆鎚竜の顎 x1, 溶岩塊 x3, 紅蓮石 x1
-Uragaan Faulds : 爆鎚竜の耐熱殻 x2, 爆鎚竜の鱗 x3, 上竜骨 x2, 赤甲獣の甲殻 x3
-Uragaan Greaves : 爆鎚竜の甲殻 x4, 爆鎚竜の鱗 x4, 溶岩塊 x3, 赤甲獣の蛇腹甲 x3
-Uragaan Cap : 爆鎚竜の甲殻 x3, 爆鎚竜の骨髄 x1, 爆鎚竜の鱗 x4, ドラグライト鉱石 x3
-Uragaan Vest : 爆鎚竜の顎 x1, 爆鎚竜の耐熱殻 x1, 爆鎚竜の甲殻 x3, 赤甲獣の甲殻 x2
-Uragaan Guards : 爆鎚竜の鱗 x3, 爆鎚竜の顎 x1, 溶岩塊 x3, 紅蓮石 x1
-Uragaan Coat : 爆鎚竜の耐熱殻 x2, 爆鎚竜の鱗 x3, 上竜骨 x2, 赤甲獣の甲殻 x3
-Uragaan Leggings : 爆鎚竜の甲殻 x4, 爆鎚竜の鱗 x4, 溶岩塊 x3, 赤甲獣の蛇腹甲 x3
-Agnaktor Helm : 炎戈竜の甲殻 x5, 炎戈竜の碇口 x1, 炎戈竜の皮 x3, ドラグライト鉱石 x5
-Agnaktor Mail : 炎戈竜の皮 x4, 炎戈竜のヒレ x2, 炎戈竜の甲殻 x5, 毒狗竜の皮 x5
-Agnaktor Vambraces : 溶岩獣の鱗 x8, 竜骨【中】 x4, 溶岩塊 x8, 紅蓮石 x1
-Agnaktor Faulds : 炎戈竜の燃鱗 x6, 炎戈竜のヒレ x2, 炎戈竜の爪 x1, 炎戈竜の尻尾 x1
-Agnaktor Greaves : 炎戈竜の爪 x1, 赤熱した胸殻 x4, 炎戈竜の皮 x3, 毒狗竜の腕甲 x3
-Agnaktor Cap : 炎戈竜の甲殻 x5, 炎戈竜の碇口 x1, 炎戈竜の皮 x3, ドラグライト鉱石 x5
-Agnaktor Vest : 炎戈竜の皮 x4, 炎戈竜のヒレ x2, 炎戈竜の甲殻 x5, 毒狗竜の皮 x5
-Agnaktor Guards : 溶岩獣の鱗 x8, 竜骨【中】 x4, 溶岩塊 x8, 紅蓮石 x1
-Agnaktor Coat : 炎戈竜の燃鱗 x6, 炎戈竜のヒレ x2, 炎戈竜の爪 x1, 炎戈竜の尻尾 x1
-Agnaktor Leggings : 炎戈竜の爪 x1, 赤熱した胸殻 x4, 炎戈竜の皮 x3, 毒狗竜の腕甲 x3
-Helios Helm/Selene Helm : 大海龍の甲皮 x2, 湾曲した龍角 x2, 神秘の発光体 x2
-Helios Mail/Selene Mail : 大海龍の鱗 x2, 大海龍の鎧毛 x2, 深淵の龍玉 x1
-Helios Vambraces/Selene Vambraces : 大海龍の甲皮 x2, 大海龍の鱗 x2, 神秘の発光体 x1
-Helios Coil/Selene Coil : 大海龍の鱗 x2, 大海龍の鎧毛 x2, 神秘の発光体 x1
-Helios Greaves/Selene Greaves : 大海龍の甲皮 x2, 大海龍の鱗 x2, 海竜の逆鱗 x1
-Helios Cap/Selene Cap : 大海龍の甲皮 x2, 湾曲した龍角 x2, 神秘の発光体 x2
-Helios Vest/Selene Vest : 大海龍の鱗 x2, 大海龍の鎧毛 x2, 深淵の龍玉 x1
-Helios Guards/Selene Guards : 大海龍の甲皮 x2, 大海龍の鱗 x2, 神秘の発光体 x1
-Helios Coat/Selene Coat : 大海龍の鱗 x2, 大海龍の鎧毛 x2, 神秘の発光体 x1
-Helios Leggings/Selene Leggings : 大海龍の甲皮 x2, 大海龍の鱗 x2, 海竜の逆鱗 x1
-Leather S Helm : カブレライト鉱石 x1, 暖かい毛皮 x2, ファンゴの毛皮 x3
-Leather S Mail : 上質な毛皮 x1, カブレライト鉱石 x1, ファンゴの毛皮 x3
-Leather S Vambraces : 上質な毛皮 x2, 暖かい毛皮 x2, なめらかな皮 x4
-Leather S Faulds : カブレライト鉱石 x1, ファンゴの頭 x2, ファンゴの毛皮 x3
-Leather S Greaves : 上質な毛皮 x2, 暖かい毛皮 x2, なめらかな皮 x4
-Leather S Cap : カブレライト鉱石 x1, 暖かい毛皮 x2, ファンゴの毛皮 x3
-Leather S Vest : 上質な毛皮 x1, カブレライト鉱石 x1, ファンゴの毛皮 x3
-Leather S Guards : 上質な毛皮 x2, 暖かい毛皮 x2, なめらかな皮 x4
-Leather S Coat : カブレライト鉱石 x1, ファンゴの頭 x2, ファンゴの毛皮 x3
-Leather S Legging : 上質な毛皮 x2, 暖かい毛皮 x2, なめらかな皮 x4
-Yukumo - Sky Kasa : 王族カナブン x1, 暖かい毛皮 x5, 丸鳥の羽 x5
-Yukumo - Sky Dogi : 王族カナブン x2, 暖かい毛皮 x3, 丸鳥の羽 x3
-Yukumo - Sky Kote : 王族カナブン x2, 暖かい毛皮 x3, 丸鳥の羽 x3
-Yukumo - Sky Obi : 王族カナブン x1, 暖かい毛皮 x5, カブレライト鉱石 x2
-Yukumo - Sky Hakama : 王族カナブン x2, ファンゴの毛皮 x3, 暖かい毛皮 x2
-Yukumo - Earth Kasa : 王族カナブン x1, 暖かい毛皮 x5, 丸鳥の羽 x5
-Yukumo - Earth Dogi : 王族カナブン x2, 暖かい毛皮 x3, 丸鳥の羽 x3
-Yukumo - Earth Kote : 王族カナブン x2, 暖かい毛皮 x3, 丸鳥の羽 x3
-Yukumo - Earth Obi : 王族カナブン x1, 暖かい毛皮 x5, カブレライト鉱石 x2
-Yukumo - Earth Hakama : 王族カナブン x2, ファンゴの毛皮 x3, 暖かい毛皮 x2
-Chainmail S Helm : カブレライト鉱石 x1, マカライト鉱石 x2, 鉄鉱石 x5
-Chainmail S Armor : カブレライト鉱石 x2, シーブライト鉱石 x1, 大地の結晶 x2, 王族カナブン x2
-Chainmail S Vambraces : カブレライト鉱石 x2, アイシスメタル x2, 大地の結晶 x2
-Chainmail S Faulds : カブレライト鉱石 x1, シーブライト鉱石 x1, 大地の結晶 x2, 王族カナブン x2
-Chainmail S Greaves : カブレライト鉱石 x2, マカライト鉱石 x2, 鉄鉱石 x5
-Chainmail S Cap : カブレライト鉱石 x1, マカライト鉱石 x2, 鉄鉱石 x5
-Chainmail S Vest : カブレライト鉱石 x2, シーブライト鉱石 x1, 大地の結晶 x2, 王族カナブン x2
-Chainmail S Guards : カブレライト鉱石 x2, アイシスメタル x2, 大地の結晶 x2
-Chainmail S Coat : カブレライト鉱石 x1, シーブライト鉱石 x1, 大地の結晶 x2, 王族カナブン x2
-Chainmail S Leggings : カブレライト鉱石 x2, マカライト鉱石 x2, 鉄鉱石 x5
-Loc Lac S Shawl : 上質な腹袋 x1, モンスターの濃汁 x2, 氷結晶 x5
-Loc Lac S Kilt : 上質な腹袋 x2, 甲虫の大顎 x3, モンスターの体液 x4
-Loc Lac S Boots : 上質な腹袋 x3, 甲虫の大顎 x3, アイシスメタル x3
-Loc Lac S Vest : 上質な腹袋 x1, モンスターの濃汁 x2, 氷結晶 x5
-Loc Lac S Coat : 上質な腹袋 x2, 甲虫の大顎 x3, モンスターの体液 x4
-Loc Lac S Gaiters : 上質な腹袋 x3, 甲虫の大顎 x3, アイシスメタル x3
-Hunter's S Helm : デプスライト鉱石 x2, 王族カナブン x2, マカライト鉱石 x5, 鉄鉱石 x5
-Hunter's S Mail : カブレライト鉱石 x1, ジャギィの上鱗 x3, アイシスメタル x3, 鉄鉱石 x5
-Hunter's S Vambraces : デプスライト鉱石 x2, ジャギィの上鱗 x2, 大地の結晶 x2, 竜骨【大】 x2
-Hunter's S Faulds : 上質な毛皮 x3, ファンゴの頭 x1, ファンゴの毛皮 x5, ドラグライト鉱石 x5
-Hunter's S Greaves : カブレライト鉱石 x1, ファンゴの毛皮 x2, アイシスメタル x3, 大地の結晶 x2
-Hunter's S Cap : デプスライト鉱石 x2, 王族カナブン x2, マカライト鉱石 x5, 鉄鉱石 x5
-Hunter's S Vest : カブレライト鉱石 x1, ジャギィの上鱗 x3, アイシスメタル x3, 鉄鉱石 x5
-Hunter's S Guards : デプスライト鉱石 x2, ジャギィの上鱗 x2, 大地の結晶 x2, 竜骨【大】 x2
-Hunter's S Coat : 上質な毛皮 x3, ファンゴの頭 x1, ファンゴの毛皮 x5, ドラグライト鉱石 x5
-Hunter's S Leggings : カブレライト鉱石 x1, ファンゴの毛皮 x2, アイシスメタル x3, 大地の結晶 x2
-Piscine S Mask : 上質な鳥竜骨 x5, ケルビの蒼角 x3, イキツギ藻 x10
-Piscine S Blet : 上質なヒレ x2, 未熟な海綿質 x3, シーブライト鉱石 x2
-Piscine S Leggings : 上質なヒレ x4, 水生獣の皮 x5, カブレライト鉱石 x5
-Piscine S Snorkel : 上質な鳥竜骨 x5, ケルビの蒼角 x3, イキツギ藻 x10
-Piscine S Tank : 上質なヒレ x2, 未熟な海綿質 x3, シーブライト鉱石 x2
-Piscine S Pants : 上質なヒレ x4, 水生獣の皮 x5, カブレライト鉱石 x5
-Bone S Helm : 上質な鳥竜骨 x2, 上質なヒレ x3, なぞの頭骨 x3
-Bone S Mail : 堅牢な骨 x1, 竜骨【小】 x5, とがった牙 x5
-Bone S Vambraces : 上質な鳥竜骨 x2, 竜骨【大】 x1, とがった牙 x5
-Bone S Faulds : 堅牢な骨 x1, 竜骨【中】 x2, なぞの骨 x10
-Bone S Greaves : 上質な鳥竜骨 x2, 上質なヒレ x3, 上竜骨 x2
-Bone S Cap : 上質な鳥竜骨 x2, 上質なヒレ x3, なぞの頭骨 x3
-Bone S Vest : 堅牢な骨 x1, 竜骨【小】 x5, とがった牙 x5
-Bone S Guards : 上質な鳥竜骨 x2, 竜骨【大】 x1, とがった牙 x5
-Bone S Coat : 堅牢な骨 x1, 竜骨【中】 x2, なぞの骨 x10
-Bone S Leggings : 上質な鳥竜骨 x2, 上質なヒレ x3, 上竜骨 x2
-Alloy S Helm : デプスライト鉱石 x1, カブレライト鉱石 x1, ドラグライト鉱石 x5, シーブライト鉱石 x3
-Alloy S Mail : デプスライト鉱石 x2, カブレライト鉱石 x2, マカライト鉱石 x7, 鉄鉱石 x10
-Alloy S Vambraces : デプスライト鉱石 x2, カブレライト鉱石 x3, マカライト鉱石 x7, 大地の結晶 x7
-Alloy S Coil : デプスライト鉱石 x1, カブレライト鉱石 x2, ドラグライト鉱石 x5, シーブライト鉱石 x5
-Alloy S Greaves : デプスライト鉱石 x3, カブレライト鉱石 x3, 紅蓮石 x3, アイシスメタル x5
-Alloy S Cap : デプスライト鉱石 x1, カブレライト鉱石 x1, ドラグライト鉱石 x5, シーブライト鉱石 x3
-Alloy S Vest : デプスライト鉱石 x2, カブレライト鉱石 x2, マカライト鉱石 x7, 鉄鉱石 x10
-Alloy S Guards : デプスライト鉱石 x2, カブレライト鉱石 x3, マカライト鉱石 x7, 大地の結晶 x7
-Alloy S Coat : デプスライト鉱石 x1, カブレライト鉱石 x2, ドラグライト鉱石 x5, シーブライト鉱石 x5
-Alloy S Leggings : デプスライト鉱石 x3, カブレライト鉱石 x3, 紅蓮石 x3, アイシスメタル x5
-Bnahabra S Hat : 飛甲虫の堅殻 x2, 飛甲虫の甲殻 x3, 飛甲虫の麻痺針 x2, 王族カナブン x2
-Bnahabra S Suit : 飛甲虫の堅殻 x2, 飛甲虫の甲殻 x3, モンスターの濃汁 x2, 王族カナブン x2
-Bnahabra S Glove : 飛甲虫の堅殻 x2, 飛甲虫の羽 x-2, 上質な腹袋 x2, モンスターの体液 x3
-Bnahabra S Coil : 飛甲虫の堅殻 x2, 飛甲虫の羽 x4, モンスターの濃汁 x1, 王族カナブン x2
-Bnahabra S Boots : 飛甲虫の堅殻 x2, 飛甲虫の羽 x4, 上質な腹袋 x1, モンスターの体液 x3
-Bnahabra S Cap : 飛甲虫の堅殻 x2, 飛甲虫の甲殻 x3, 飛甲虫の麻痺針 x2, 王族カナブン x2
-Bnahabra S Vest : 飛甲虫の堅殻 x2, 飛甲虫の甲殻 x3, モンスターの濃汁 x2, 王族カナブン x2
-Bnahabra S Cuffs : 飛甲虫の堅殻 x2, 飛甲虫の羽 x-2, 上質な腹袋 x2, モンスターの体液 x3
-Bnahabra S Coat : 飛甲虫の堅殻 x2, 飛甲虫の羽 x4, モンスターの濃汁 x1, 王族カナブン x2
-Bnahabra S Pants : 飛甲虫の堅殻 x2, 飛甲虫の羽 x4, 上質な腹袋 x1, モンスターの体液 x3
-Rhenoplos S Helm : 草食竜の堅殻 x3, 草食竜の頭殻 x1, 氷結晶 x3
-Rhenoplos S Mail : 草食竜の堅殻 x1, 草食竜の頭殻 x1, カブレライト鉱石 x2
-Rhenoplos S Vambraces : 草食竜の堅殻 x3, 竜骨【中】 x4, 氷結晶 x3
-Rhenoplos S Coil : 草食竜の堅殻 x1, 草食竜の頭殻 x1, 氷結晶 x3
-Rhenoplos S Greaves : 草食竜の堅殻 x3, 竜骨【小】 x6, カブレライト鉱石 x2
-Rhenoplos S Cap : 草食竜の堅殻 x3, 草食竜の頭殻 x1, 氷結晶 x3
-Rhenoplos S Vest : 草食竜の堅殻 x1, 草食竜の頭殻 x1, カブレライト鉱石 x2
-Rhenoplos S Guards : 草食竜の堅殻 x3, 竜骨【中】 x4, 氷結晶 x3
-Rhenoplos S Coat : 草食竜の堅殻 x1, 草食竜の頭殻 x1, 氷結晶 x3
-Rhenoplos S Leggings : 草食竜の堅殻 x3, 竜骨【小】 x6, カブレライト鉱石 x2
-Zuwaroposu Hood : 垂皮竜の上皮 x2, デプスライト鉱石 x2, ファンゴの毛皮 x3
-Zuwaroposu Mantle : 垂皮竜の皮 x4, デプスライト鉱石 x1, ファンゴの毛皮 x3
-Zuwaroposu Cap : 垂皮竜の上皮 x2, デプスライト鉱石 x2, ファンゴの毛皮 x3
-Zuwaroposu Vest : 垂皮竜の皮 x4, デプスライト鉱石 x1, ファンゴの毛皮 x3
-Nadeshiko Cap : 落陽草の花 x1, マンドラゴラ x3, 丸鳥の羽 x5, ペピポパンプキン x3
-Nadeshiko Vest : 落陽草の花 x1, マンドラゴラ x3, ライトクリスタル x6, アイシスメタル x1
-Nadeshiko Sleeves : 落陽草の花 x1, ユニオン鉱石 x3, 高級お食事券 x1, イチノタチウオ x3
-Nadeshiko Waist : 落陽草の花 x1, マンドラゴラ x3, お食事券 x3, うなりうねり貝 x3
-Nadeshiko Skirt : 落陽草の花 x1, ユニオン鉱石 x3, ライトクリスタル x4, デプスライト鉱石 x1
-Kikyo Cap : 落陽草の花 x1, マンドラゴラ x3, 丸鳥の羽 x5, ペピポパンプキン x3
-Kikyo Vest : 落陽草の花 x1, マンドラゴラ x3, ライトクリスタル x6, アイシスメタル x1
-Kikyo Sleeves : 落陽草の花 x1, ユニオン鉱石 x3, 高級お食事券 x1, イチノタチウオ x3
-Kikyo Waist : 落陽草の花 x1, マンドラゴラ x3, お食事券 x3, うなりうねり貝 x3
-Kikyo Skirt : 落陽草の花 x1, ユニオン鉱石 x3, ライトクリスタル x4, デプスライト鉱石 x1
-Jaggi S Helm : 狗竜の上皮 x4, 狗竜の爪 x2, 狗竜の皮 x2, シーブライト鉱石 x2
-Jaggi S Mail : 狗竜の尖爪 x4, 狗竜の上皮 x4, ジャギィの皮 x3, カブレライト鉱石 x2
-Jaggi S Vambraces : 狗竜の尖爪 x4, 王者のエリマキ x1, 鳥竜玉 x1, シーブライト鉱石 x2
-Jaggi S Faulds : 狗竜の上皮 x4, 王者のエリマキ x2, ジャギィの上鱗 x4, ドラグライト鉱石 x2
-Jaggi S Greaves : ジャギィの上鱗 x4, ジャギィの皮 x4, 上質な鳥竜骨 x7, ドラグライト鉱石 x2
-Jaggi S Cap : 狗竜の上皮 x4, 狗竜の爪 x2, 狗竜の皮 x2, シーブライト鉱石 x2
-Jaggi S Vest : 狗竜の尖爪 x4, 狗竜の上皮 x4, ジャギィの皮 x3, カブレライト鉱石 x2
-Jaggi S Guards : 狗竜の尖爪 x4, 王者のエリマキ x1, 鳥竜玉 x1, シーブライト鉱石 x2
-Jaggi S Coat : 狗竜の上皮 x4, 王者のエリマキ x2, ジャギィの上鱗 x4, ドラグライト鉱石 x2
-Jaggi S Leggings : ジャギィの上鱗 x4, ジャギィの皮 x4, 上質な鳥竜骨 x7, ドラグライト鉱石 x2
-Aoashira S Helm : 青熊獣の堅殻 x3, 堅牢な骨 x2, 青熊獣の毛 x3, ドスヘラクレス x3
-Aoashira S Mail : 青熊獣の剛毛 x5, 青熊獣の堅殻 x2, 飛甲虫の堅殻 x3, 王族カナブン x2
-Aoashira S Vambraces : 青熊獣の堅殻 x3, 青熊獣の堅腕甲 x3, 青熊獣の毛 x3, 上質な腹袋 x2
-Aoashira S Faulds : 青熊獣の剛毛 x5, 堅牢な骨 x2, 青熊獣の甲殻 x3, ドスヘラクレス x3
-Aoashira S Greaves : 青熊獣の堅腕甲 x2, 青熊獣の剛毛 x4, 飛甲虫の甲殻 x3, 王族カナブン x2
-Aoashira S Cap : 青熊獣の堅殻 x3, 堅牢な骨 x2, 青熊獣の毛 x3, ドスヘラクレス x3
-Aoashira S Vest : 青熊獣の剛毛 x5, 青熊獣の堅殻 x2, 飛甲虫の堅殻 x3, 王族カナブン x2
-Aoashira S Guards : 青熊獣の堅殻 x3, 青熊獣の堅腕甲 x3, 青熊獣の毛 x3, 上質な腹袋 x2
-Aoashira S Coat : 青熊獣の剛毛 x5, 堅牢な骨 x2, 青熊獣の甲殻 x3, ドスヘラクレス x3
-Aoashira S Leggings : 青熊獣の堅腕甲 x2, 青熊獣の剛毛 x4, 飛甲虫の甲殻 x3, 王族カナブン x2
-Froggi S Helm : 毒狗竜の上皮 x3, 王者のクチバシ x2, 鳥竜玉 x1, ドスヘラクレス x6
-Froggi S Mail : 猛毒袋 x2, 毒狗竜の腕甲 x2, フロギィの上鱗 x2, ドスヘラクレス x6
-Froggi S Vambraces : 毒狗竜の堅腕甲 x3, 毒狗竜の上皮 x3, 猛毒袋 x4, デプスライト鉱石 x1
-Froggi S Faulds : フロギィの上鱗 x4, フロギィの皮 x7, 上質な鳥竜骨 x5, デプスライト鉱石 x3
-Froggi S Greaves : 毒狗竜の堅腕甲 x4, 毒狗竜の上皮 x3, 毒狗竜の皮 x3, 王族カナブン x4
-Froggi S Cap : 毒狗竜の上皮 x3, 王者のクチバシ x2, 鳥竜玉 x1, ドスヘラクレス x6
-Froggi S Vest : 猛毒袋 x2, 毒狗竜の腕甲 x2, フロギィの上鱗 x2, ドスヘラクレス x6
-Froggi S Guards : 毒狗竜の堅腕甲 x3, 毒狗竜の上皮 x3, 猛毒袋 x4, デプスライト鉱石 x1
-Froggi S Coat : フロギィの上鱗 x4, フロギィの皮 x7, 上質な鳥竜骨 x5, デプスライト鉱石 x3
-Froggi S Leggings : 毒狗竜の堅腕甲 x4, 毒狗竜の上皮 x3, 毒狗竜の皮 x3, 王族カナブン x4
-Baggi S Helm : 眠狗竜の上皮 x4, 眠狗竜の爪 x2, 眠狗竜の皮 x2, グラシスメタル x3
-Baggi S Mail : 眠狗竜の尖爪 x4, 王者のトサカ x1, 鳥竜玉 x3, アイシスメタル x4
-Baggi S Vambraces : 眠狗竜の尖爪 x3, 眠狗竜の上皮 x3, 昏睡袋 x4, アイシスメタル x4
-Baggi S Coil : 眠狗竜の上皮 x3, 王者のトサカ x1, バギィの上鱗 x6, ライトクリスタル x2
-Baggi S Greaves : バギィの上鱗 x2, バギィの皮 x6, 上質な鳥竜骨 x7, グラシスメタル x3
-Baggi S Cap : 眠狗竜の上皮 x4, 眠狗竜の爪 x2, 眠狗竜の皮 x2, グラシスメタル x3
-Baggi S Vest : 眠狗竜の尖爪 x4, 王者のトサカ x1, 鳥竜玉 x3, アイシスメタル x4
-Baggi S Guards : 眠狗竜の尖爪 x3, 眠狗竜の上皮 x3, 昏睡袋 x4, アイシスメタル x4
-Baggi S Coat : 眠狗竜の上皮 x3, 王者のトサカ x1, バギィの上鱗 x6, ライトクリスタル x2
-Baggi S Leggings : バギィの上鱗 x2, バギィの皮 x6, 上質な鳥竜骨 x7, グラシスメタル x3
-Urkusus S Helm : 白兎獣の大耳 x2, 堅牢な骨 x2, バギィの皮 x5, グラシスメタル x3
-Urkusus S Mail : 白兎獣の堅腹甲 x3, 白獣獣の剛毛 x3, バギィの上鱗 x6, 王族カナブン x2
-Urkusus S Vambraces : 白兎獣の凍爪 x2, 白兎獣の毛 x3, 白兎獣の堅腹甲 x3, 王族カナブン x2
-Urkusus S Faulds : 白兎獣の剛毛 x3, 白兎獣の凍爪 x2, 堅牢な骨 x3, ドスヘラクレス x8
-Urkusus S Greaves : 白兎獣の剛毛 x3, 白兎獣の堅腹甲 x3, 白兎獣の凍爪 x1, なめらかな皮 x8
-Urkusus S Cap : 白兎獣の大耳 x2, 堅牢な骨 x2, バギィの皮 x5, グラシスメタル x3
-Urkusus S Vest : 白兎獣の堅腹甲 x3, 白獣獣の剛毛 x3, バギィの上鱗 x6, 王族カナブン x2
-Urkusus S Guards : 白兎獣の凍爪 x2, 白兎獣の毛 x3, 白兎獣の堅腹甲 x3, 王族カナブン x2
-Urkusus S Coat : 白兎獣の剛毛 x3, 白兎獣の凍爪 x2, 堅牢な骨 x3, ドスヘラクレス x8
-Urkusus S Leggings : 白兎獣の剛毛 x3, 白兎獣の堅腹甲 x3, 白兎獣の凍爪 x1, なめらかな皮 x8
-Qurupeco S Helm : ステキなクチバシ x2, 彩鳥の翼 x2, 上竜骨 x1, ドスヘラクレス x3
-Qurupeco S Mail : 彩鳥の上鱗 x3, 極彩色の羽根 x2, 上竜骨 x1, 王族カナブン x2
-Qurupeco S Vambraces : 彩鳥の上鱗 x3, 火打石 x1, 彩鳥の羽根 x4, 王族カナブン x2
-Qurupeco S Coil : 彩鳥の翼 x2, 彩鳥の上鱗 x3, 尖竜骨 x1, キラビートル x5
-Qurupeco S Greaves : 彩鳥の翼 x3, 彩鳥の上鱗 x3, 極彩色の羽根 x2, ドスヘラクレス x3
-Qurupeco S Cap : ステキなクチバシ x2, 彩鳥の翼 x2, 上竜骨 x1, ドスヘラクレス x3
-Qurupeco S Vest : 彩鳥の上鱗 x3, 極彩色の羽根 x2, 上竜骨 x1, 王族カナブン x2
-Qurupeco S Guards : 彩鳥の上鱗 x3, 火打石 x1, 彩鳥の羽根 x4, 王族カナブン x2
-Qurupeco S Coat : 彩鳥の翼 x2, 彩鳥の上鱗 x3, 尖竜骨 x1, キラビートル x5
-Qurupeco S Leggings : 彩鳥の翼 x3, 彩鳥の上鱗 x3, 極彩色の羽根 x2, ドスヘラクレス x3
-Qurupeco U Helm : 紅彩鳥の翼 x1, ステキなクチバシ x3, 上竜骨 x2, 王族カナブン x2
-Qurupeco U Mail : 紅彩鳥の上鱗 x3, 極彩色の羽根 x2, 尖竜骨 x1, 王族カナブン x2
-Qurupeco U Vambraces : 電気石 x3, 紅彩鳥の上鱗 x3, 極彩色の羽根 x2, ドスヘラクレス x3
-Qurupeco U Coil : 紅彩鳥の翼 x3, 紅彩鳥の上鱗 x3, 尖竜骨 x1, ドスヘラクレス x3
-Qurupeco U Greaves : 紅彩鳥の上鱗 x3, 紅彩鳥の翼 x2, 竜玉 x1, キラビートル x5
-Qurupeco U Cap : 紅彩鳥の翼 x1, ステキなクチバシ x3, 上竜骨 x2, 王族カナブン x2
-Qurupeco U Vest : 紅彩鳥の上鱗 x3, 極彩色の羽根 x2, 尖竜骨 x1, 王族カナブン x2
-Qurupeco U Guards : 電気石 x3, 紅彩鳥の上鱗 x3, 極彩色の羽根 x2, ドスヘラクレス x3
-Qurupeco U Coat : 紅彩鳥の翼 x3, 紅彩鳥の上鱗 x3, 尖竜骨 x1, ドスヘラクレス x3
-Qurupeco U Leggings : 紅彩鳥の上鱗 x3, 紅彩鳥の翼 x2, 竜玉 x1, キラビートル x5
-Ludroth S Helm : 高級なトサカ x2, 水獣の上鱗 x3, 水獣の尻尾 x1, 大水袋 x2
-Ludroth S Mail : 海綿質の上皮 x3, 水生獣の上皮 x3, 水生獣の皮 x6, 王族カナブン x2
-Ludroth S Vambraces : 水獣の鋭爪 x3, 水獣の上鱗 x4, 海綿質の上皮 x2, ドスヘラクレス x5
-Ludroth S Faulds : 水生獣の上皮 x4, 未熟な海綿質 x6, 尖竜骨 x2, 王族カナブン x2
-Ludroth S Greaves : 水獣の鋭爪 x2, 水獣の上鱗 x3, 海綿質の上皮 x3, キラビートル x5
-Ludroth S Cap : 高級なトサカ x2, 水獣の上鱗 x3, 水獣の尻尾 x1, 大水袋 x2
-Ludroth S Vest : 海綿質の上皮 x3, 水生獣の上皮 x3, 水生獣の皮 x6, 王族カナブン x2
-Ludroth S Guards : 水獣の鋭爪 x3, 水獣の上鱗 x4, 海綿質の上皮 x2, ドスヘラクレス x5
-Ludroth S Coat : 水生獣の上皮 x4, 未熟な海綿質 x6, 尖竜骨 x2, 王族カナブン x2
-Ludroth S Leggings : 水獣の鋭爪 x2, 水獣の上鱗 x3, 海綿質の上皮 x3, キラビートル x5
-Ludroth U Helm : 紫水獣の上鱗 x3, 高級なトサカ x3, 水獣の尻尾 x1, ドスヘラクレス x5
-Ludroth U Mail : 海綿質の紫皮 x3, 水生獣の上皮 x3, 水生獣の皮 x6, 王族カナブン x2
-Ludroth U Vambraces : 紫水獣の鋭爪 x4, 海綿質の紫皮 x2, 紫水獣の上鱗 x2, 大水袋 x2
-Ludroth U Faulds : 海綿質の紫皮 x3, 未熟な海綿質 x6, 尖竜骨 x2, 王族カナブン x2
-Ludroth U Greaves : 紫水獣の鋭爪 x3, 紫水獣の上鱗 x3, 水生獣の上皮 x3, キラビートル x5
-Ludroth U Cap : 紫水獣の上鱗 x3, 高級なトサカ x3, 水獣の尻尾 x1, ドスヘラクレス x5
-Ludroth U Vest : 海綿質の紫皮 x3, 水生獣の上皮 x3, 水生獣の皮 x6, 王族カナブン x2
-Ludroth U Guards : 紫水獣の鋭爪 x4, 海綿質の紫皮 x2, 紫水獣の上鱗 x2, 大水袋 x2
-Ludroth U Coat : 海綿質の紫皮 x3, 未熟な海綿質 x6, 尖竜骨 x2, 王族カナブン x2
-Ludroth U Leggings : 紫水獣の鋭爪 x3, 紫水獣の上鱗 x3, 水生獣の上皮 x3, キラビートル x5
-Ranguro S Helm : 赤甲獣の尖爪 x3, 赤甲獣の堅殻 x3, モンスターの濃汁 x3, 紅蓮石 x2
-Ranguro S Mail : 赤甲獣の堅殻 x3, 赤甲獣の蛇腹甲 x4, 堅牢な骨 x2, カブレライト鉱石 x3
-Ranguro S Vambraces : 赤甲獣の尖爪 x3, 強力麻痺袋 x6, 堅牢な骨 x3, ドラグライト鉱石 x5
-Ranguro S Faulds : 赤甲獣の堅殻 x3, 赤甲獣の蛇腹甲 x4, モンスターの濃汁 x3, 紅蓮石 x2
-Ranguro S Greaves : 赤甲獣の尖爪 x3, 赤甲獣の堅殻 x3, 赤甲獣の蛇腹甲 x1, ユニオン鉱石 x2
-Ranguro S Cap : 赤甲獣の尖爪 x3, 赤甲獣の堅殻 x3, モンスターの濃汁 x3, 紅蓮石 x2
-Ranguro S Vest : 赤甲獣の堅殻 x3, 赤甲獣の蛇腹甲 x4, 堅牢な骨 x2, カブレライト鉱石 x3
-Ranguro S Guards : 赤甲獣の尖爪 x3, 強力麻痺袋 x6, 堅牢な骨 x3, ドラグライト鉱石 x5
-Ranguro S Coat : 赤甲獣の堅殻 x3, 赤甲獣の蛇腹甲 x4, モンスターの濃汁 x3, 紅蓮石 x2
-Ranguro S Leggings : 赤甲獣の尖爪 x3, 赤甲獣の堅殻 x3, 赤甲獣の蛇腹甲 x1, ユニオン鉱石 x2
-Obituary Testa/Butterfly Testa : マレコガネ x3, オオクワアゲハ x1, 超電雷光虫 x3, 不死虫 x10
-Obituary Petto/Butterfly Petto : マレコガネ x2, オオクワアゲハ x2, ハナスズムシ x2, セッチャクロアリ x10
-Obituary Mano/Butterfly Mano : マレコガネ x3, オオクワアゲハ x1, アルビノエキス x5, にが虫 x10
-Obituary Anca/Butterfly Anca : マレコガネ x2, オオクワアゲハ x2, 光蟲 x10, ボンバッタ x10
-Obituary Gamba/Butterfly Gamba : マレコガネ x3, オオクワアゲハ x1, モンスターの濃汁 x3, ツチハチノコ x10
-Obituary Caput/Butterfly Caput : マレコガネ x3, オオクワアゲハ x1, 超電雷光虫 x3, 不死虫 x10
-Obituary Pectus/Butterfly Pectus : マレコガネ x2, オオクワアゲハ x2, ハナスズムシ x2, セッチャクロアリ x10
-Obituary Brasso/Butterfly Brasso : マレコガネ x3, オオクワアゲハ x1, アルビノエキス x5, にが虫 x10
-Obituary Cocusa/Butterfly Cocusa : マレコガネ x2, オオクワアゲハ x2, 光蟲 x10, ボンバッタ x10
-Obituary Femur/Butterfly Femur : マレコガネ x3, オオクワアゲハ x1, モンスターの濃汁 x3, ツチハチノコ x10
-Barroth S Helm : 土砂竜の堅甲 x4, 土砂竜の堅殻 x2, 肥沃なドロ x5, ジャギィの鱗 x4
-Barroth S Mail : 土砂竜の堅甲 x4, 土砂竜の頭殻 x3, 肥沃なドロ x5, 草食竜の堅殻 x3
-Barroth S Vambraces : 土砂竜の鋭爪 x4, 土砂竜の堅殻 x2, 上竜骨 x2, ジャギィの鱗 x4
-Barroth S Faulds : 土砂竜の堅殻 x2, 土砂竜の堅甲 x3, 上竜骨 x2, 草食竜の堅殻 x5
-Barroth S Greaves : 土砂竜の堅殻 x3, 土砂竜の尻尾 x1, 尖竜骨 x3, ジャギィの上鱗 x4
-Barroth S Cap : 土砂竜の堅甲 x4, 土砂竜の堅殻 x2, 肥沃なドロ x5, ジャギィの鱗 x4
-Barroth S Vest : 土砂竜の堅甲 x4, 土砂竜の頭殻 x3, 肥沃なドロ x5, 草食竜の堅殻 x3
-Barroth S Guards : 土砂竜の鋭爪 x4, 土砂竜の堅殻 x2, 上竜骨 x2, ジャギィの鱗 x4
-Barroth S Coat : 土砂竜の堅殻 x2, 土砂竜の堅甲 x3, 上竜骨 x2, 草食竜の堅殻 x5
-Barroth S Leggings : 土砂竜の堅殻 x3, 土砂竜の尻尾 x1, 尖竜骨 x3, ジャギィの上鱗 x4
-Barroth U Helm : 氷砕竜の堅甲 x5, 氷砕竜の堅殻 x3, 凍った粘液塊 x5, 白兎獣の毛 x5
-Barroth U Mail : 氷砕竜の頭殻 x3, 氷砕竜の堅甲 x4, 凍った粘液塊 x5, 白兎獣の腹甲 x4
-Barroth U Vambraces : 氷砕竜の鋭爪 x4, 氷砕竜の堅殻 x2, 上竜骨 x2, 眠狗竜の上皮 x3
-Barroth U Faulds : 氷砕竜の堅殻 x3, 氷砕竜の堅甲 x4, 尖竜骨 x2, 白兎獣の剛毛 x4
-Barroth U Greaves : 氷砕竜の堅殻 x3, 氷砕竜の尻尾 x1, 氷砕竜の鋭爪 x3, 白兎獣の堅腹甲 x3
-Barroth U Cap : 氷砕竜の堅甲 x5, 氷砕竜の堅殻 x3, 凍った粘液塊 x5, 白兎獣の毛 x5
-Barroth U Vest : 氷砕竜の頭殻 x3, 氷砕竜の堅甲 x4, 凍った粘液塊 x5, 白兎獣の腹甲 x4
-Barroth U Guards : 氷砕竜の鋭爪 x4, 氷砕竜の堅殻 x2, 上竜骨 x2, 眠狗竜の上皮 x3
-Barroth U Coat : 氷砕竜の堅殻 x3, 氷砕竜の堅甲 x4, 尖竜骨 x2, 白兎獣の剛毛 x4
-Barroth U Leggings : 氷砕竜の堅殻 x3, 氷砕竜の尻尾 x1, 氷砕竜の鋭爪 x3, 白兎獣の堅腹甲 x3
-Gobul S Helm : 灯魚竜の上棘 x2, 灯魚竜の上皮 x4, 灯魚竜のヒゲ x2, 上竜骨 x3
-Gobul S Mail : 灯魚竜の上ヒレ x2, 灯魚竜の上棘 x2, 灯魚竜の皮 x3, 鳥竜玉 x3
-Gobul S Vambraces : 灯魚竜の上皮 x4, 灯魚竜の上棘 x2, 灯魚竜の棘 x3, 竜骨【中】 x5
-Gobul S Faulds : 灯魚竜の上皮 x4, 灯魚竜の上ヒレ x2, 灯魚竜のヒレ x2, 麻痺袋 x5
-Gobul S Greaves : 灯魚竜の上棘 x2, 灯魚竜の上皮 x4, 灯魚竜の上ヒレ x2, 高級提灯球 x1
-Gobul S Cap : 灯魚竜の上棘 x2, 灯魚竜の上皮 x4, 灯魚竜のヒゲ x2, 上竜骨 x3
-Gobul S Vest : 灯魚竜の上ヒレ x2, 灯魚竜の上棘 x2, 灯魚竜の皮 x3, 鳥竜玉 x3
-Gobul S Guards : 灯魚竜の上皮 x4, 灯魚竜の上棘 x2, 灯魚竜の棘 x3, 竜骨【中】 x5
-Gobul S Coat : 灯魚竜の上皮 x4, 灯魚竜の上ヒレ x2, 灯魚竜のヒレ x2, 麻痺袋 x5
-Gobul S Leggings : 灯魚竜の上棘 x2, 灯魚竜の上皮 x4, 灯魚竜の上ヒレ x2, 高級提灯球 x1
-Pumpkin Helm : 王族カナブン x3, ペピポパンプキン x4, いにしえの秘薬 x1, マタタビ x15
-Pumpkin Mail : 王族カナブン x3, ペピポパンプキン x4, 秘薬 x2, サボテンの花 x15
-Pumpkin Vambraces : 王族カナブン x4, ペピポパンプキン x5, モンスターの濃汁 x3, トウガラシ x15
-Pumpkin Faulds : 王族カナブン x4, ペピポパンプキン x5, 飛甲虫の堅殻 x4, 火薬草 x15
-Pumpkin Greaves : 王族カナブン x4, ペピポパンプキン x4, 上質な腹袋 x3, ネムリ草 x15
-Pumpkin Cap : 王族カナブン x3, ペピポパンプキン x4, いにしえの秘薬 x1, マタタビ x15
-Pumpkin Vest : 王族カナブン x3, ペピポパンプキン x4, 秘薬 x2, サボテンの花 x15
-Pumpkin Guards : 王族カナブン x4, ペピポパンプキン x5, モンスターの濃汁 x3, トウガラシ x15
-Pumpkin Coat : 王族カナブン x4, ペピポパンプキン x5, 飛甲虫の堅殻 x4, 火薬草 x15
-Pumpkin Leggings : 王族カナブン x4, ペピポパンプキン x4, 上質な腹袋 x3, ネムリ草 x15
-Guild Bard S Lobos/Scholar's S Beret : 闘技王のコイン x2, 水竜のコイン x3, 飛竜のコイン x3, 勇気の証 x2
-Guild Bard S Bolero/Scholar's S Blouse : 闘技王のコイン x2, 水竜のコイン x3, 海竜のコイン x3, 勇気の証 x2
-Guild Bard S Braces/Scholar's S Gloves : 闘技王のコイン x2, 牙獣のコイン x3, 海竜のコイン x2, 勇気の証 x2
-Guild Bard S Coil/Scholar's S Skirt : 闘技王のコイン x2, 牙獣のコイン x3, 飛竜のコイン x2, 勇気の証 x2
-Guild Bard S Boots/Scholar's S Socks : 闘技王のコイン x2, 飛竜のコイン x3, 海竜のコイン x2, 勇気の証 x2
-Guild Bard S Hat/Scholar's S Cap : 闘技王のコイン x2, 水竜のコイン x3, 飛竜のコイン x3, 勇気の証 x2
-Guild Bard S Vest/Scholar's S Vest : 闘技王のコイン x2, 水竜のコイン x3, 海竜のコイン x3, 勇気の証 x2
-Guild Bard S Sleeves/Scholar's S Sleeves : 闘技王のコイン x2, 牙獣のコイン x3, 海竜のコイン x2, 勇気の証 x2
-Guild Bard S Coat/Scholar's S Mini : 闘技王のコイン x2, 牙獣のコイン x3, 飛竜のコイン x2, 勇気の証 x2
-Guild Bard S Gaiters/Scholar's S Sandals : 闘技王のコイン x2, 飛竜のコイン x3, 海竜のコイン x2, 勇気の証 x2
-Ingot S Helm : ユニオン鉱石 x2, グラシスメタル x3, デプスライト鉱石 x2, カブレライト鉱石 x5
-Ingot S Mail : ユニオン鉱石 x3, 極炎石 x2, デプスライト鉱石 x2, カブレライト鉱石 x5
-Ingot S Vambraces : ユニオン鉱石 x2, グラシスメタル x3, デプスライト鉱石 x2, 溶岩塊 x2
-Ingot S Coil : ユニオン鉱石 x2, 獄炎石 x2, カブレライト鉱石 x5, 溶岩塊 x2
-Ingot S Greaves : ユニオン鉱石 x3, グラシスメタル x3, デプスライト鉱石 x1, カブレライト鉱石 x5
-Ingot S Cap : ユニオン鉱石 x2, グラシスメタル x3, デプスライト鉱石 x2, カブレライト鉱石 x5
-Ingot S Vest : ユニオン鉱石 x3, 極炎石 x2, デプスライト鉱石 x2, カブレライト鉱石 x5
-Ingot S Guards : ユニオン鉱石 x2, グラシスメタル x3, デプスライト鉱石 x2, 溶岩塊 x2
-Ingot S Coat : ユニオン鉱石 x2, 獄炎石 x2, カブレライト鉱石 x5, 溶岩塊 x2
-Ingot S Leggings : ユニオン鉱石 x3, グラシスメタル x3, デプスライト鉱石 x1, カブレライト鉱石 x5
-Rathian S Helm : 雌火竜の上棘 x2, 雌火竜の堅殻 x4, 火竜の骨髄 x2, 爆炎袋 x3
-Rathian S Mail : 雌火竜の上鱗 x4, 火竜の延髄 x1, 雌火竜の逆鱗 x1, 紅蓮石 x2
-Rathian S Vambraces : 雌火竜の堅殻 x4, 火竜の翼爪 x3, 雌火竜の棘 x2, 紅蓮石 x3
-Rathian S Faulds : 雌火竜の上鱗 x3, 雌火竜の翼膜 x4, 雌火竜の紅玉 x1, 紅蓮石 x2
-Rathian S Greaves : 雌火竜の堅殻 x4, 雌火竜の上鱗 x4, 尖竜骨 x3, ドラグライト鉱石 x5
-Rathian S Cap : 雌火竜の上棘 x2, 雌火竜の堅殻 x4, 火竜の骨髄 x2, 爆炎袋 x3
-Rathian S Vest : 雌火竜の上鱗 x4, 火竜の延髄 x1, 雌火竜の逆鱗 x1, 紅蓮石 x2
-Rathian S Guards : 雌火竜の堅殻 x4, 火竜の翼爪 x3, 雌火竜の棘 x2, 紅蓮石 x3
-Rathian S Coat : 雌火竜の上鱗 x3, 雌火竜の翼膜 x4, 雌火竜の紅玉 x1, 紅蓮石 x2
-Rathian S Leggings : 雌火竜の堅殻 x4, 雌火竜の上鱗 x4, 尖竜骨 x3, ドラグライト鉱石 x5
-RioHeart Helm : 桜火竜の堅殻 x2, 桜火竜の上鱗 x3, 尖竜骨 x2, 雌火竜の上鱗 x2
-RioHeart Mail : 桜火竜の上鱗 x3, 桜火竜の堅殻 x2, カブレライト鉱石 x4, 雌火竜の紅玉 x1
-RioHeart Vambraces : 桜火竜の堅殻 x2, 桜火竜の上鱗 x4, 尖竜骨 x3, 雌火竜の逆鱗 x1
-RioHeart Faulds : 桜火竜の上鱗 x3, 桜火竜の堅殻 x2, 爆炎袋 x2, 雌火竜の紅玉 x1
-RioHeart Greaves : 桜火竜の堅殻 x2, 桜火竜の上鱗 x4, 尖竜骨 x3, カブレライト鉱石 x5
-RioHeart Cap : 桜火竜の堅殻 x2, 桜火竜の上鱗 x3, 尖竜骨 x2, 雌火竜の上鱗 x2
-RioHeart Vest : 桜火竜の上鱗 x3, 桜火竜の堅殻 x2, カブレライト鉱石 x4, 雌火竜の紅玉 x1
-RioHeart Guards : 桜火竜の堅殻 x2, 桜火竜の上鱗 x4, 尖竜骨 x3, 雌火竜の逆鱗 x1
-RioHeart Coat : 桜火竜の上鱗 x3, 桜火竜の堅殻 x2, 爆炎袋 x2, 雌火竜の紅玉 x1
-RioHeart Leggings : 桜火竜の堅殻 x2, 桜火竜の上鱗 x4, 尖竜骨 x3, カブレライト鉱石 x5
-Gigginox S Helm : 不気味な上皮 x3, 猛毒袋 x2, 毒怪竜の皮 x5, 眠狗竜の皮 x5
-Gigginox S Mail : 毒怪鳥の鋭爪 x2, 毒怪鳥の上皮 x4, 不気味な毒線 x3, ライトクリスタル x2
-Gigginox S Vambraces : 毒怪竜の上皮 x5, 毒怪竜の鋭爪 x2, 毒怪竜の爪 x2, グラシスメタル x4
-Gigginox S Faulds : 毒怪竜の上皮 x5, 不気味な猛毒腺 x3, 不気味な皮 x2, アイシスメタル x6
-Gigginox S Greaves : 不気味な猛毒腺 x3, 不気味な上皮 x2, おそろしいクチ x2, 眠狗竜の上皮 x4
-Gigginox S Cap : 不気味な上皮 x3, 猛毒袋 x2, 毒怪竜の皮 x5, 眠狗竜の皮 x5
-Gigginox S Vest : 毒怪鳥の鋭爪 x2, 毒怪鳥の上皮 x4, 不気味な毒線 x3, ライトクリスタル x2
-Gigginox S Guards : 毒怪竜の上皮 x5, 毒怪竜の鋭爪 x2, 毒怪竜の爪 x2, グラシスメタル x4
-Gigginox S Coat : 毒怪竜の上皮 x5, 不気味な猛毒腺 x3, 不気味な皮 x2, アイシスメタル x6
-Gigginox S Leggings : 不気味な猛毒腺 x3, 不気味な上皮 x2, おそろしいクチ x2, 眠狗竜の上皮 x4
-Gigginox U Helm : 電怪竜の上皮 x4, 不気味な上皮 x2, アルビノエキス x5, 眠狗竜の上皮 x4
-Gigginox U Mail : 電怪鳥の鋭爪 x2, 電怪鳥の上皮 x4, 竜玉 x1, 眠狗竜の皮 x5
-Gigginox U Vambraces : 電怪竜の鋭爪 x1, おそろしいクチ x2, 尖竜骨 x2, グラシスメタル x4
-Gigginox U Faulds : 電怪竜の上皮 x4, 電怪竜の鋭爪 x1, 電撃袋 x4, アイシスメタル x6
-Gigginox U Greaves : 電怪竜の上皮 x4, 不気味な上皮 x2, 尖竜骨 x2, ライトクリスタル x2
-Gigginox U Cap : 電怪竜の上皮 x4, 不気味な上皮 x2, アルビノエキス x5, 眠狗竜の上皮 x4
-Gigginox U Vest : 電怪竜の鋭爪 x2, 電怪竜の上皮 x4, 竜玉 x1, 眠狗竜の皮 x5
-Gigginox U Guards : 電怪竜の鋭爪 x1, おそろしいクチ x2, 尖竜骨 x2, グラシスメタル x4
-Gigginox U Coat : 電怪竜の上皮 x4, 電怪竜の鋭爪 x1, 電撃袋 x4, アイシスメタル x6
-Gigginox U Leggings : 電怪竜の上皮 x4, 不気味な上皮 x2, 尖竜骨 x2, ライトクリスタル x2
-Plesioth Helm : 水竜の上鱗 x3, 水竜の上ビレ x2, 水竜のお頭 x2, 灯魚竜の皮 x2
-Plesioth Mail : 水竜の上ビレ x3, 水竜の翼膜 x2, モンスターの濃汁 x2, 王族カナブン x3
-Plesioth Vambraces : 水竜の上鱗 x2, 水竜の翼膜 x2, モンスターの濃汁 x1, 水竜の鋭牙 x3
-Plesioth Greaves : 水竜の上鱗 x4, 水竜の上ビレ x2, カブレライト鉱石 x3, 竜玉 x1
-Plesioth Cap : 水竜の上鱗 x3, 水竜の上ビレ x2, 水竜のお頭 x2, 灯魚竜の皮 x2
-Plesioth Vest : 水竜の上ビレ x3, 水竜の翼膜 x2, モンスターの濃汁 x2, 王族カナブン x3
-Plesioth Guards : 水竜の上鱗 x2, 水竜の翼膜 x2, モンスターの濃汁 x1, 水竜の鋭牙 x3
-Plesioth Leggings : 水竜の上鱗 x4, 水竜の上ビレ x2, カブレライト鉱石 x3, 竜玉 x1
-Barioth S Helm : 琥珀色の鋭牙 x2, 氷牙竜の上毛皮 x5, 氷牙竜の甲殻 x4, 凍結袋 x5
-Barioth S Mail : 氷牙竜の堅殻 x4, 氷牙竜の尻尾 x1, 竜玉 x1, 白兎獣の毛 x6
-Barioth S Vambraces : 氷牙竜の鋭爪 x2, 氷牙竜の堅殻 x3, 氷牙竜の毛皮 x4, 白兎獣の堅腹甲 x3
-Barioth S Faulds : 琥珀色の鋭牙 x2, 氷牙竜の棘 x4, 尖竜骨 x4, 白兎獣の腹甲 x4
-Barioth S Greaves : 氷牙竜の上毛皮 x5, 氷牙竜の堅殻 x3, 氷牙竜の爪 x1, 白兎獣の剛毛 x4
-Barioth S Cap : 琥珀色の鋭牙 x2, 氷牙竜の上毛皮 x5, 氷牙竜の甲殻 x4, 凍結袋 x5
-Barioth S Vest : 氷牙竜の堅殻 x4, 氷牙竜の尻尾 x1, 竜玉 x1, 白兎獣の毛 x6
-Barioth S Guards : 氷牙竜の鋭爪 x2, 氷牙竜の堅殻 x3, 氷牙竜の毛皮 x4, 白兎獣の堅腹甲 x3
-Barioth S Coat : 琥珀色の鋭牙 x2, 氷牙竜の棘 x4, 尖竜骨 x4, 白兎獣の腹甲 x4
-Barioth S Leggings : 氷牙竜の上毛皮 x5, 氷牙竜の堅殻 x3, 氷牙竜の爪 x1, 白兎獣の剛毛 x4
-Barioth U Helm : 群青色の鋭牙 x2, 風牙竜の上毛皮 x4, 風牙竜の堅殻 x2, 青熊獣の堅殻 x4
-Barioth U Mail : 風牙竜の堅殻 x3, 風牙竜の尻尾 x1, 尖竜骨 x5, マレコガネ x2
-Barioth U Vambraces : 風牙竜の鋭爪 x1, 風牙竜の堅殻 x3, 風牙竜の上毛皮 x4, 青熊獣の剛毛 x6
-Barioth U Faulds : 群青色の鋭牙 x2, 強靭な胸膜 x5, 竜玉 x1, 草食竜の堅殻 x6
-Barioth U Greaves : 風牙竜の上毛皮 x4, 風牙竜の堅殻 x3, 風牙竜の鋭爪 x1, 青熊獣の腕甲 x3
-Barioth U Cap : 群青色の鋭牙 x2, 風牙竜の上毛皮 x4, 風牙竜の堅殻 x2, 青熊獣の堅殻 x4
-Barioth U Vest : 風牙竜の堅殻 x3, 風牙竜の尻尾 x1, 尖竜骨 x5, マレコガネ x2
-Barioth U Guards : 風牙竜の鋭爪 x1, 風牙竜の堅殻 x3, 風牙竜の上毛皮 x4, 青熊獣の剛毛 x6
-Barioth U Coat : 群青色の鋭牙 x2, 強靭な胸膜 x5, 竜玉 x1, 草食竜の堅殻 x6
-Barioth U Leggings : 風牙竜の上毛皮 x4, 風牙竜の堅殻 x3, 風牙竜の鋭爪 x1, 青熊獣の腕甲 x3
-Hapul S Helm : 潜口竜の堅殻 x4, 潜口竜の頭殻 x4, 潜口竜の上皮 x2, フロギィの上鱗 x5
-Hapul S Mail : 潜口竜の上皮 x4, 潜口竜の堅殻 x4, 極彩色の体液 x4, フロギィの皮 x5
-Hapul S Vambraces : 潜口竜の尖爪 x3, 潜口竜の堅殻 x3, 極彩色の体液 x4, 毒狗竜の皮 x5
-Hapul S Faulds : 潜口竜の尖爪 x2, 潜口竜の上皮 x3, 鮮やかな体液 x4, 毒狗竜の堅腕甲 x3
-Hapul S Greaves : 潜口竜の堅殻 x4, 竜玉 x1, 尖竜骨 x3, 毒狗竜の上皮 x4
-Hapul S Cap : 潜口竜の堅殻 x4, 潜口竜の頭殻 x4, 潜口竜の上皮 x2, フロギィの上鱗 x5
-Hapul S Vest : 潜口竜の上皮 x4, 潜口竜の堅殻 x4, 極彩色の体液 x4, フロギィの皮 x5
-Hapul S Guards : 潜口竜の尖爪 x3, 潜口竜の堅殻 x3, 極彩色の体液 x4, 毒狗竜の皮 x5
-Hapul S Coat : 潜口竜の尖爪 x2, 潜口竜の上皮 x3, 鮮やかな体液 x4, 毒狗竜の堅腕甲 x3
-Hapul S Leggings : 潜口竜の堅殻 x4, 竜玉 x1, 尖竜骨 x3, 毒狗竜の上皮 x4
-Nargacuga Helm : 迅竜の上黒毛 x5, 迅竜の尾棘 x5, 竜玉 x1, 青熊獣の剛毛 x6
-Nargacuga Mail : 迅竜の上鱗 x4, 迅竜の鋭牙 x5, 迅竜の延髄 x1, 王族カナブン x6
-Nargacuga Vambraces : 迅竜の鋭刃翼 x3, 迅竜の上鱗 x5, 迅竜の尾棘 x5, 垂皮竜の上皮 x5
-Nargacuga Faulds : 迅竜の上黒毛 x5, 迅竜の尻尾 x1, 迅竜の鋭刃翼 x3, 青熊獣の堅殻 x4
-Nargacuga Greaves : 迅竜の鋭牙 x5, 迅竜の上鱗 x5, 迅竜の延髄 x1, マレコガネ x3
-Nargacuga Cap : 迅竜の上黒毛 x5, 迅竜の尾棘 x5, 竜玉 x1, 青熊獣の剛毛 x6
-Nargacuga Vest : 迅竜の上鱗 x4, 迅竜の鋭牙 x5, 迅竜の延髄 x1, 王族カナブン x6
-Nargacuga Guards : 迅竜の鋭刃翼 x3, 迅竜の上鱗 x5, 迅竜の尾棘 x5, 垂皮竜の上皮 x5
-Nargacuga Coat : 迅竜の上黒毛 x5, 迅竜の尻尾 x1, 迅竜の鋭刃翼 x3, 青熊獣の堅殻 x4
-Nargacuga Leggings : 迅竜の鋭牙 x5, 迅竜の上鱗 x5, 迅竜の延髄 x1, マレコガネ x3
-Lagiacrus S Helm : 海竜の尖角 x2, 海竜の上皮 x4, 海竜の角 x2, 海流の鱗 x4
-Lagiacrus S Mail : 海竜の上皮 x4, 海竜の蒼玉 x1, 海竜の逆鱗 x1, 氷牙竜の上毛皮 x2
-Lagiacrus S Vambraces : 海竜の鋭爪 x5, 海竜の高電殻 x2, 海竜の上鱗 x5, 海竜の背電殻 x2
-Lagiacrus S Faulds : 海竜の高電殻 x2, 海竜の上鱗 x5, 海竜の逆鱗 x1, 海竜の尻尾 x1
-Lagiacrus S Greaves : 海竜の上鱗 x5, 海竜の上皮 x4, 海竜の鋭爪 x5, 氷牙竜の棘 x3
-Lagiacrus S Cap : 海竜の尖角 x2, 海竜の上皮 x4, 海竜の角 x2, 海流の鱗 x4
-Lagiacrus S Vest : 海竜の上皮 x4, 海竜の蒼玉 x1, 海竜の逆鱗 x1, 氷牙竜の上毛皮 x2
-Lagiacrus S Guards : 海竜の鋭爪 x5, 海竜の高電殻 x2, 海竜の上鱗 x5, 海竜の背電殻 x2
-Lagiacrus S Coat : 海竜の高電殻 x2, 海竜の上鱗 x5, 海竜の逆鱗 x1, 海竜の尻尾 x1
-Lagiacrus S Leggings : 海竜の上鱗 x5, 海竜の上皮 x4, 海竜の鋭爪 x5, 氷牙竜の棘 x3
-Lagiacrus U Helm : 白海竜の尖角 x2, 白海竜の上皮 x5, 海竜の尖角 x4, 尾槌竜の尖角 x2
-Lagiacrus U Mail : 白海竜の上皮 x5, 海竜の蒼玉 x1, 海竜の逆鱗 x1, 風牙竜の尻尾 x1
-Lagiacrus U Vambraces : 白海竜の上皮 x3, 白海竜の高電殻 x3, 海竜の鋭爪 x4, 海竜の高電殻 x3
-Lagiacrus U Faulds : 白海竜の高電殻 x3, 白海竜の上鱗 x4, 海竜の逆鱗 x1, 海竜の尻尾 x2
-Lagiacrus U Greaves : 白海竜の上鱗 x4, 白海竜の上皮 x3, 海竜の鋭爪 x2, 氷牙竜の棘 x2
-Lagiacrus U Cap : 白海竜の尖角 x2, 白海竜の上皮 x5, 海竜の尖角 x4, 尾槌竜の尖角 x2
-Lagiacrus U Vest : 白海竜の上皮 x5, 海竜の蒼玉 x1, 海竜の逆鱗 x1, 風牙竜の尻尾 x1
-Lagiacrus U Guards : 白海竜の上皮 x3, 白海竜の高電殻 x3, 海竜の鋭爪 x4, 海竜の高電殻 x3
-Lagiacrus U Coat : 白海竜の高電殻 x3, 白海竜の上鱗 x4, 海竜の逆鱗 x1, 海竜の尻尾 x2
-Lagiacrus U Leggings : 白海竜の上鱗 x4, 白海竜の上皮 x3, 海竜の鋭爪 x2, 氷牙竜の棘 x2
-Rathalos S Helm : 火竜の上鱗 x4, 火竜の紅玉 x1, 爆炎袋 x3, 尖竜骨 x3
-Rathalos S Mail : 火竜の上鱗 x5, 火竜の甲殻 x4, 火竜の翼膜 x4, ユニオン鉱石 x2
-Rathalos S Vambraces : 火竜の上鱗 x4, 火竜の翼爪 x2, 火竜の尻尾 x1, 獄炎石 x2
-Rathalos S Faulds : 火竜の堅殻 x6, 火竜の翼膜 x4, 火竜の逆鱗 x1, ユニオン鉱石 x2
-Rathalos S Greaves : 火竜の堅殻 x6, 火竜の延髄 x2, 火竜の鱗 x6, 紅蓮石 x4
-Rathalos S Cap : 火竜の上鱗 x4, 火竜の紅玉 x1, 爆炎袋 x3, 尖竜骨 x3
-Rathalos S Vest : 火竜の上鱗 x5, 火竜の甲殻 x4, 火竜の翼膜 x4, ユニオン鉱石 x2
-Rathalos S Guards : 火竜の上鱗 x4, 火竜の翼爪 x2, 火竜の尻尾 x1, 獄炎石 x2
-Rathalos S Coat : 火竜の堅殻 x6, 火竜の翼膜 x4, 火竜の逆鱗 x1, ユニオン鉱石 x2
-Rathalos S Leggings : 火竜の堅殻 x6, 火竜の延髄 x2, 火竜の鱗 x6, 紅蓮石 x4
-RioSoul Helm : 蒼火竜の堅殻 x2, 蒼火竜の翼 x1, 火竜の紅玉 x1, 王族カナブン x3
-RioSoul Mail : 蒼火竜の堅殻 x3, 蒼火竜の上鱗 x3, 爆炎袋 x3, 堅竜骨 x2
-RioSoul Vambraces : 蒼火竜の堅殻 x2, 蒼火竜の尻尾 x3, 堅竜骨 x3, カブレライト鉱石 x3
-RioSoul Faulds : 蒼火竜の堅殻 x2, 蒼火竜の上鱗 x4, カブレライト鉱石 x3, 爆炎袋 x2
-RioSoul Greaves : 蒼火竜の堅殻 x2, 蒼火竜の上鱗 x3, 火竜の紅玉 x1, 獄炎石 x2
-RioSoul Cap : 蒼火竜の堅殻 x2, 蒼火竜の翼 x1, 火竜の紅玉 x1, 王族カナブン x3
-RioSoul Vest : 蒼火竜の堅殻 x3, 蒼火竜の上鱗 x3, 爆炎袋 x3, 堅竜骨 x2
-RioSoul Guards : 蒼火竜の堅殻 x2, 蒼火竜の尻尾 x3, 堅竜骨 x3, カブレライト鉱石 x3
-RioSoul Coat : 蒼火竜の堅殻 x2, 蒼火竜の上鱗 x4, カブレライト鉱石 x3, 爆炎袋 x2
-RioSoul Leggings : 蒼火竜の堅殻 x2, 蒼火竜の上鱗 x3, 火竜の紅玉 x1, 獄炎石 x2
-Jinouga Helm : 雷狼竜の尖角 x2, 雷狼竜の高電毛 x4, 雷狼竜の堅殻 x3, 竜玉 x1
-Jinouga Mail : 雷狼竜の高電毛 x4, 雷狼竜の堅殻 x5, 雷狼竜の碧玉 x1, 雷光虫 x20
-Jinouga Vambraces : 雷狼竜の尖爪 x5, 雷狼竜の高電殻 x4, 雷狼竜の高電毛 x3, ファンゴの毛皮 x6
-Jinouga Faulds : 雷狼竜の堅殻 x5, 雷狼竜の高電毛 x3, 雷狼竜の尻尾 x1, 雷狼竜の碧玉 x1
-Jinouga Greaves : 雷狼竜の堅殻 x5, 雷狼竜の尖爪 x5, 雷狼竜の高電殻 x3, 超電雷光虫 x10
-Jinouga Cap : 雷狼竜の尖角 x2, 雷狼竜の高電毛 x4, 雷狼竜の堅殻 x3, 竜玉 x1
-Jinouga Vest : 雷狼竜の高電毛 x4, 雷狼竜の堅殻 x5, 雷狼竜の碧玉 x1, 雷光虫 x20
-Jinouga Guards : 雷狼竜の尖爪 x5, 雷狼竜の高電殻 x4, 雷狼竜の高電毛 x3, ファンゴの毛皮 x6
-Jinouga Coat : 雷狼竜の堅殻 x5, 雷狼竜の高電毛 x3, 雷狼竜の尻尾 x1, 雷狼竜の碧玉 x1
-Jinouga Leggings : 雷狼竜の堅殻 x5, 雷狼竜の尖爪 x5, 雷狼竜の高電殻 x3, 超電雷光虫 x10
-Bracchidios Helm : 砕竜の黒曜甲 x3, 砕竜の頭殻 x1, なぞの粘菌 x3, 獄炎石 x2
-Bracchidios Mail : 砕竜の堅殻 x4, 砕竜の黒曜甲 x3, ユニオン鉱石 x4, 赤熱した堅胸殻 x3
-Bracchidios Vambraces : 砕竜の黒曜甲 x3, 砕竜の剛拳 x2, なぞの粘菌 x3, 溶岩塊 x4
-Bracchidios Faulds : 砕竜の黒曜甲 x2, 砕竜の尻尾 x1, 砕竜の宝玉 x1, 砕竜の堅殻 x4
-Bracchidios Greaves : 砕竜の堅殻 x4, なぞの粘菌 x2, 砕竜の剛拳 x2, カブレライト鉱石 x5
-Bracchidios Cap : 砕竜の黒曜甲 x3, 砕竜の頭殻 x1, なぞの粘菌 x3, 獄炎石 x2
-Bracchidios Vest : 砕竜の堅殻 x4, 砕竜の黒曜甲 x3, ユニオン鉱石 x4, 赤熱した堅胸殻 x3
-Bracchidios Guards : 砕竜の黒曜甲 x3, 砕竜の剛拳 x2, なぞの粘菌 x3, 溶岩塊 x4
-Bracchidios Coat : 砕竜の黒曜甲 x2, 砕竜の尻尾 x1, 砕竜の宝玉 x1, 砕竜の堅殻 x4
-Bracchidios Leggings : 砕竜の堅殻 x4, なぞの粘菌 x2, 砕竜の剛拳 x2, カブレライト鉱石 x5
-Dobol S Helm : 尾槌竜の尖角 x2, 尾槌竜の堅殻 x6, 尾槌竜の尾骨 x1, ファンゴの毛皮 x3
-Dobol S Mail : 尾槌竜の尖角 x2, 尾槌竜のコブ x4, 竜玉 x1, ファンゴの毛皮 x6
-Dobol S Vambraces : 尾槌竜の堅殻 x6, 尾槌竜の堅尾甲 x2, 尾槌竜の堅苔甲 x5, 垂皮竜の上皮 x6
-Dobol S Faulds : 尾槌竜の堅苔甲 x4, 尾槌竜の堅殻 x6, 尾槌竜の仙骨 x1, 垂皮竜の上皮 x4
-Dobol S Greaves : 尾槌竜の堅尾甲 x3, 尾槌竜の堅苔甲 x5, 尾槌竜のコブ x4, 堅竜骨 x5
-Dobol S Cap : 尾槌竜の尖角 x2, 尾槌竜の堅殻 x6, 尾槌竜の尾骨 x1, ファンゴの毛皮 x3
-Dobol S Vest : 尾槌竜の尖角 x2, 尾槌竜のコブ x4, 竜玉 x1, ファンゴの毛皮 x6
-Dobol S Guards : 尾槌竜の堅殻 x6, 尾槌竜の堅尾甲 x2, 尾槌竜の堅苔甲 x5, 垂皮竜の上皮 x6
-Dobol S Coat : 尾槌竜の堅苔甲 x4, 尾槌竜の堅殻 x6, 尾槌竜の仙骨 x1, 垂皮竜の上皮 x4
-Dobol S Leggings : 尾槌竜の堅尾甲 x3, 尾槌竜の堅苔甲 x5, 尾槌竜のコブ x4, 堅竜骨 x5
-Ranger's Headgear : 闘技王のコイン x2, 水竜のコイン x3, 爆炎袋 x4, 勇気の証 x3
-Ranger's Girdle : 闘技王のコイン x2, 飛竜のコイン x3, 電撃袋 x4, 勇気の証 x3
-Ranger's Gauntlets : 闘技王のコイン x2, 海竜のコイン x3, 凍結袋 x4, 勇気の証 x3
-Ranger's Faulds : 闘技王のコイン x2, 牙獣のコイン x3, 大水袋 x4, 勇気の証 x3
-Ranger's Espadrilles : 闘技王のコイン x2, 牙獣のコイン x2, 大地の龍玉 x1, 勇気の証 x3
-Archer's Turban : 闘技王のコイン x2, 水竜のコイン x3, 爆炎袋 x4, 勇気の証 x3
-Archer's Girdle : 闘技王のコイン x2, 飛竜のコイン x3, 電撃袋 x4, 勇気の証 x3
-Archer's Gauntlets : 闘技王のコイン x2, 海竜のコイン x3, 凍結袋 x4, 勇気の証 x3
-Archer's Bandolier : 闘技王のコイン x2, 牙獣のコイン x3, 大水袋 x4, 勇気の証 x3
-Archer's Espadrilles : 闘技王のコイン x2, 牙獣のコイン x2, 大地の龍玉 x1, 勇気の証 x3
-Ancient Mail : 大きな太古の破片 x3, さびた破片 x5, ユニオン鉱石 x3, カブレライト鉱石 x6
-Ancient Vambraces : 細い太古の破片 x3, さびた破片 x5, ユニオン鉱石 x3, ドラグライト鉱石 x9
-Ancient Greaves : 長い太古の破片 x3, さびた破片 x5, グラシスメタル x4, ドラグライト鉱石 x9
-Ancient Vest : 大きな太古の破片 x3, さびた破片 x5, ユニオン鉱石 x3, カブレライト鉱石 x6
-Ancient Guards : 細い太古の破片 x3, さびた破片 x5, ユニオン鉱石 x3, ドラグライト鉱石 x9
-Ancient Leggings : 長い太古の破片 x3, さびた破片 x5, グラシスメタル x4, ドラグライト鉱石 x9
-Dober Helm : いにしえの龍骨 x4, 迅竜の鋭牙 x1, 上質な鳥竜骨 x10, 上竜骨 x8
-Dober Mail : いにしえの龍骨 x3, 黒角竜の堅甲 x4, 堅竜骨 x3, 竜骨【小】 x20
-Dober Vambraces : いにしえの龍骨 x3, 風牙竜の鋭爪 x3, 古龍の血 x2, 竜骨【大】 x5
-Dober Coil : いにしえの龍骨 x3, 雷狼竜の尖爪 x3, 堅牢な骨 x5, 竜骨【中】 x10
-Dober Greaves : いにしえの龍骨 x3, 凍戈竜の鋭爪 x2, 尖竜骨 x5, 大きな骨 x10
-Dober Cap : いにしえの龍骨 x4, 迅竜の鋭牙 x1, 上質な鳥竜骨 x10, 上竜骨 x8
-Dober Vest : いにしえの龍骨 x3, 黒角竜の堅甲 x4, 堅竜骨 x3, 竜骨【小】 x20
-Dober Guards : いにしえの龍骨 x3, 風牙竜の鋭爪 x3, 古龍の血 x2, 竜骨【大】 x5
-Dober Coat : いにしえの龍骨 x3, 雷狼竜の尖爪 x3, 堅牢な骨 x5, 竜骨【中】 x10
-Dober Leggings : いにしえの龍骨 x3, 凍戈竜の鋭爪 x2, 尖竜骨 x5, 大きな骨 x10
-Diablos S Helm : 角竜の堅殻 x5, 角竜の尾甲 x4, 竜玉 x1, 毒狗竜の上皮 x4
-Diablos S Mail : 角竜の堅甲 x5, 上質なねじれた角 x3, 角竜の背甲 x3, 草食竜の甲殻 x7
-Diablos S Vambraces : 角竜の堅殻 x6, 角竜の牙 x5, 角竜の甲殻 x6, 毒狗竜の腕甲 x3
-Diablos S Faulds : 角竜の堅甲 x6, 角竜の牙 x6, 角竜の延髄 x1, 草食竜の堅殻 x6
-Diablos S Greaves : 角竜の堅殻 x6, ねじれた角 x5, 堅竜骨 x3, 草食竜の頭殻 x3
-Diablos S Cap : 角竜の堅殻 x5, 角竜の尾甲 x4, 竜玉 x1, 毒狗竜の上皮 x4
-Diablos S Vest : 角竜の堅甲 x5, 上質なねじれた角 x3, 角竜の背甲 x3, 草食竜の甲殻 x7
-Diablos S Guards : 角竜の堅殻 x6, 角竜の牙 x5, 角竜の甲殻 x6, 毒狗竜の腕甲 x3
-Diablos S Coat : 角竜の堅甲 x6, 角竜の牙 x6, 角竜の延髄 x1, 草食竜の堅殻 x6
-Diablos S Leggings : 角竜の堅殻 x6, ねじれた角 x5, 堅竜骨 x3, 草食竜の頭殻 x3
-Diablos U Helm : 黒角竜の堅殻 x4, 角竜の尾甲 x4, 竜玉 x1, 甲虫の腹袋 x4
-Diablos U Mail : 上質な黒巻き角 x2, 黒角竜の堅甲 x5, 角竜の骨髄 x2, 狗竜の尖爪 x4
-Diablos U Vambraces : 黒角竜の堅殻 x4, 角竜の牙 x5, 角竜の延髄 x1, 狗竜の爪 x4
-Diablos U Faulds : 黒角竜の堅甲 x6, 黒角竜の堅殻 x5, 角竜の牙 x6, 上質な腹袋 x3
-Diablos U Greaves : 黒角竜の堅殻 x5, ねじれた角 x5, 堅竜骨 x4, 甲虫の大顎 x4
-Diablos U Cap : 黒角竜の堅殻 x4, 角竜の尾甲 x4, 竜玉 x1, 甲虫の腹袋 x4
-Diablos U Vest : 上質な黒巻き角 x2, 黒角竜の堅甲 x5, 角竜の骨髄 x2, 狗竜の尖爪 x4
-Diablos U Guards : 黒角竜の堅殻 x4, 角竜の牙 x5, 角竜の延髄 x1, 狗竜の爪 x4
-Diablos U Coat : 黒角竜の堅甲 x6, 黒角竜の堅殻 x5, 角竜の牙 x6, 上質な腹袋 x3
-Diablos U Leggings : 黒角竜の堅殻 x5, ねじれた角 x5, 堅竜骨 x4, 甲虫の大顎 x4
-Agnaktor S Helm : 炎戈竜の堅殻 x5, 炎戈竜の碇口 x2, 炎戈竜の上皮 x4, 毒狗竜の上皮 x4
-Agnaktor S Mail : 炎戈竜の上皮 x4, 炎戈竜の上ヒレ x2, 炎戈竜の堅殻 x5, 獄炎石 x2
-Agnaktor S Vambraces : 炎戈竜の鋭爪 x5, 炎戈竜の堅殻 x5, 炎戈竜の尻尾 x1, 溶岩塊 x6
-Agnaktor S Faulds : 炎戈竜の上ヒレ x3, 炎戈竜の燃鱗 x5, 溶岩獣の上鱗 x8, 毒狗竜の皮 x5
-Agnaktor S Greaves : 赤熱した堅胸殻 x5, 炎戈竜の上皮 x4, 竜玉 x1, 毒狗竜の腕甲 x3
-Agnaktor S Cap : 炎戈竜の堅殻 x5, 炎戈竜の碇口 x2, 炎戈竜の上皮 x4, 毒狗竜の上皮 x4
-Agnaktor S Vest : 炎戈竜の上皮 x4, 炎戈竜の上ヒレ x2, 炎戈竜の堅殻 x5, 獄炎石 x2
-Agnaktor S Guards : 炎戈竜の鋭爪 x5, 炎戈竜の堅殻 x5, 炎戈竜の尻尾 x1, 溶岩塊 x6
-Agnaktor S Coat : 炎戈竜の上ヒレ x3, 炎戈竜の燃鱗 x5, 溶岩獣の上鱗 x8, 毒狗竜の皮 x5
-Agnaktor S Leggings : 赤熱した堅胸殻 x5, 炎戈竜の上皮 x4, 竜玉 x1, 毒狗竜の腕甲 x3
-Agnaktor U Helm : 凍戈竜の堅殻 x5, 凍戈竜の碇口 x2, 凍戈竜の上皮 x3, なめらかな皮 x8
-Agnaktor U Mail : 凍戈竜の上皮 x4, 凍戈竜の上ヒレ x3, 凍戈竜の堅殻 x5, 眠狗竜の皮 x4
-Agnaktor U Vambraces : 凍戈竜の鋭爪 x3, 凍戈竜の堅殻 x5, 竜玉 x1, 眠狗竜の鋭爪 x3
-Agnaktor U Faulds : 凍戈竜の上ヒレ x2, 凍戈竜の尻尾 x1, 凍戈竜の上皮 x4, 眠狗竜の爪 x3
-Agnaktor U Greaves : 潤った堅胸殻 x5, 凍戈竜の上ヒレ x2, 凍戈竜の鋭爪 x3, 眠狗竜の上皮 x4
-Agnaktor U Cap : 凍戈竜の堅殻 x5, 凍戈竜の碇口 x2, 凍戈竜の上皮 x3, なめらかな皮 x8
-Agnaktor U Vest : 凍戈竜の上皮 x4, 凍戈竜の上ヒレ x3, 凍戈竜の堅殻 x5, 眠狗竜の皮 x4
-Agnaktor U Guards : 凍戈竜の鋭爪 x3, 凍戈竜の堅殻 x5, 竜玉 x1, 眠狗竜の鋭爪 x3
-Agnaktor U Coat : 凍戈竜の上ヒレ x2, 凍戈竜の尻尾 x1, 凍戈竜の上皮 x4, 眠狗竜の爪 x3
-Agnaktor U Leggings : 潤った堅胸殻 x5, 凍戈竜の上ヒレ x2, 凍戈竜の鋭爪 x3, 眠狗竜の上皮 x4
-Uragaan S Helm : 爆鎚竜の堅殻 x4, 爆鎚竜の骨髄 x4, 溶岩塊 x3, 赤甲獣の堅殻 x3
-Uragaan S Mail : 爆槌竜の堅殻 x5, 爆槌竜の顎 x3, 爆槌竜の鱗 x6, 獄炎石 x1
-Uragaan S Vambraces : 爆鎚竜の上鱗 x5, 爆鎚竜の耐熱殻 x5, 尖竜骨 x3, ユニオン鉱石 x3
-Uragaan S Faulds : 爆鎚竜の上鱗 x6, 爆鎚竜の紅玉 x1, 爆鎚竜の甲殻 x4, 赤甲獣の甲殻 x5
-Uragaan S Greaves : 爆鎚竜の堅殻 x5, 爆鎚竜の上鱗 x6, 竜玉 x1, 赤甲獣の蛇腹甲 x2
-Uragaan S Cap : 爆鎚竜の堅殻 x4, 爆鎚竜の骨髄 x4, 溶岩塊 x3, 赤甲獣の堅殻 x3
-Uragaan S Vest : 爆槌竜の堅殻 x5, 爆槌竜の顎 x3, 爆槌竜の鱗 x6, 獄炎石 x1
-Uragaan S Guards : 爆鎚竜の上鱗 x5, 爆鎚竜の耐熱殻 x5, 尖竜骨 x3, ユニオン鉱石 x3
-Uragaan S Coat : 爆鎚竜の上鱗 x6, 爆鎚竜の紅玉 x1, 爆鎚竜の甲殻 x4, 赤甲獣の甲殻 x5
-Uragaan S Leggings : 爆鎚竜の堅殻 x5, 爆鎚竜の上鱗 x6, 竜玉 x1, 赤甲獣の蛇腹甲 x2
-Uragaan U Helm : 鋼鎚竜の堅殻 x5, 爆鎚竜の骨髄 x2, 竜玉 x1, 赤甲獣の爪 x3
-Uragaan U Mail : 鋼槌竜の剛顎 x3, 鋼槌竜の耐熱殻 x2, 鋼槌竜の上鱗 x5, ユニオン鉱石 x3
-Uragaan U Vambraces : 鋼鎚竜の上鱗 x4, 爆鎚竜の紅玉 x1, 溶岩塊 x5, 赤甲獣の尖爪 x3
-Uragaan U Faulds : 鋼鎚竜の耐熱殻 x3, 鋼鎚竜の上鱗 x4, 鋼鎚竜の堅殻 x4, 獄炎石 x1
-Uragaan U Greaves : 鋼鎚竜の堅殻 x5, 鋼鎚竜の上鱗 x4, 鋼鎚竜の剛顎 x2, 赤甲獣の蛇腹甲 x2
-Uragaan U Cap : 鋼鎚竜の堅殻 x5, 爆鎚竜の骨髄 x2, 竜玉 x1, 赤甲獣の爪 x3
-Uragaan U Vest : 鋼槌竜の剛顎 x3, 鋼槌竜の耐熱殻 x2, 鋼槌竜の上鱗 x5, ユニオン鉱石 x3
-Uragaan U Guards : 鋼鎚竜の上鱗 x4, 爆鎚竜の紅玉 x1, 溶岩塊 x5, 赤甲獣の尖爪 x3
-Uragaan U Coat : 鋼鎚竜の耐熱殻 x3, 鋼鎚竜の上鱗 x4, 鋼鎚竜の堅殻 x4, 獄炎石 x1
-Uragaan U Leggings : 鋼鎚竜の堅殻 x5, 鋼鎚竜の上鱗 x4, 鋼鎚竜の剛顎 x2, 赤甲獣の蛇腹甲 x2
-Damascus Helm : 峯山龍の上蒼鱗 x4, 桜火竜の上鱗 x4, 雌火竜の上棘 x2, 勇気の証 x2
-Damascus Mail : 猛々しい龍鋭牙 x4, 蒼火竜の堅殻 x6, 恐暴竜の唾液 x2, 勇気の証 x2
-Damascus Vambraces : 峯山龍の上蒼鱗 x4, 蒼火竜の上鱗 x4, 恐暴竜の唾液 x2, 勇気の証 x2
-Damascus Coil : 峯山龍の堅岩殻 x6, 桜火竜の上鱗 x4, 蒼火竜の上鱗 x4, 勇気の証 x2
-Damascus Greaves : 峯山龍の堅岩殻 x6, 桜火竜の堅殻 x6, 蒼火竜の尻尾 x1, 勇気の証 x2
-Damascus Cap : 峯山龍の上蒼鱗 x4, 桜火竜の上鱗 x4, 雌火竜の上棘 x2, 勇気の証 x2
-Damascus Vest : 猛々しい龍鋭牙 x4, 蒼火竜の堅殻 x6, 恐暴竜の唾液 x2, 勇気の証 x2
-Damascus Guards : 峯山龍の上蒼鱗 x4, 蒼火竜の上鱗 x4, 恐暴竜の唾液 x2, 勇気の証 x2
-Damascus Coat : 峯山龍の堅岩殻 x6, 桜火竜の上鱗 x4, 蒼火竜の上鱗 x4, 勇気の証 x2
-Damascus Leggings : 峯山龍の堅岩殻 x6, 桜火竜の堅殻 x6, 蒼火竜の尻尾 x1, 勇気の証 x2
-Yamato Kabuto/Hinata Hachigane : 猛々しい龍鋭牙 x4, 峯山龍の上蒼鱗 x5, 峯山龍の堅岩殻 x3, 雌火竜の逆鱗 x1
-Yamato Muneate/Hinata Muneate : 峯山龍の堅岩殻 x6, 猛々しい龍鋭牙 x4, 古龍の血 x1, 上質なヒレ x6
-Yamato Kote/Hinata Kote : 峯山龍の上蒼鱗 x6, 峯山龍の上腕甲 x1, 大地の龍玉 x1, デプスライト鉱石 x3
-Yamato Koshiate/Hinata Koshiate : 峯山龍の上腕甲 x4, 峯山龍の堅岩殻 x6, 峯山龍の上蒼鱗 x2, 火竜の逆鱗 x1
-Yamato Gusoku/Hinata Hakama : 峯山龍の上蒼鱗 x5, 峯山龍の堅岩殻 x6, 大地の龍玉 x1, 大きなヒレ x10
-Mutsu Eboshi/Amagi Hachigane : 猛々しい龍鋭牙 x4, 峯山龍の上蒼鱗 x5, 峯山龍の堅岩殻 x3, 雌火竜の逆鱗 x1
-Mutsu Muneate/Amagi Muneate : 峯山龍の堅岩殻 x6, 猛々しい龍鋭牙 x4, 古龍の血 x1, 上質なヒレ x6
-Mutsu Kote/Amagi Kote : 峯山龍の上蒼鱗 x6, 峯山龍の上腕甲 x1, 大地の龍玉 x1, デプスライト鉱石 x3
-Mutsu Koshiate/Amagi Koshiate : 峯山龍の上腕甲 x4, 峯山龍の堅岩殻 x6, 峯山龍の上蒼鱗 x2, 火竜の逆鱗 x1
-Mutsu Gusoku/Amagi Hakama : 峯山龍の上蒼鱗 x5, 峯山龍の堅岩殻 x6, 大地の龍玉 x1, 大きなヒレ x10
-Vangis Helm : 恐暴竜の頭殻 x2, 恐暴竜の黒皮 x4, 恐暴竜の唾液 x3, 氷牙竜の棘 x1
-Vangis Mail : 恐暴竜の大牙 x5, 恐暴竜の鉤爪 x4, 恐暴竜の黒皮 x5, 雷狼竜の碧玉 x1
-Vangis Vambraces : 恐暴竜の黒鱗 x6, 恐暴竜の大牙 x5, 恐暴竜の唾液 x3, 迅竜の延髄 x1
-Vangis Coil : 恐暴竜の黒皮 x4, 恐暴竜の宝玉 x1, 恐暴竜の黒鱗 x6, 尾槌竜の尾骨 x1
-Vangis Greaves : 恐暴竜の鉤爪 x4, 恐暴竜の黒鱗 x6, 恐暴竜の唾液 x3, 爆鎚竜の骨髄 x1
-Vangis Cap : 恐暴竜の頭殻 x2, 恐暴竜の黒皮 x4, 恐暴竜の唾液 x3, 氷牙竜の棘 x1
-Vangis Vest : 恐暴竜の大牙 x5, 恐暴竜の鉤爪 x4, 恐暴竜の黒皮 x5, 雷狼竜の碧玉 x1
-Vangis Guards : 恐暴竜の黒鱗 x6, 恐暴竜の大牙 x5, 恐暴竜の唾液 x3, 迅竜の延髄 x1
-Vangis Coat : 恐暴竜の黒皮 x4, 恐暴竜の宝玉 x1, 恐暴竜の黒鱗 x6, 尾槌竜の尾骨 x1
-Vangis Leggings : 恐暴竜の鉤爪 x4, 恐暴竜の黒鱗 x6, 恐暴竜の唾液 x3, 爆鎚竜の骨髄 x1
-Escadora Wisdom : 砕けた天角 x4, 天をつらぬく角 x1, 煌黒龍の逆鱗 x6, 風牙竜の鋭爪 x1
-Escadora Soul : 煌黒龍の堅逆鱗 x6, 煌黒龍の尖爪 x6, 砕けた天角 x4, 潜口竜の頭殻 x3
-Escadora Arms : 煌黒龍の尖爪 x6, 煌黒龍の堅逆殻 x6, 古龍の血 x1, 上質な黒巻き角 x1
-Escadora Might : 煌黒龍の翼膜 x1, 煌黒龍の尻尾 x1, 煌黒龍の逆鱗 x5, 恐暴竜の頭殻 x2
-Escadora Scale : 煌黒龍の逆鱗 x6, 煌黒龍の堅逆殻 x6, 瑠璃色の龍玉 x1, 上質なねじれた角 x2
-Escadora Sagesse : 砕けた天角 x4, 天をつらぬく角 x1, 煌黒龍の逆鱗 x6, 風牙竜の鋭爪 x1
-Escadora Seele : 煌黒龍の堅逆鱗 x6, 煌黒龍の尖爪 x6, 砕けた天角 x4, 潜口竜の頭殻 x3
-Escadora Arma : 煌黒龍の尖爪 x6, 煌黒龍の堅逆殻 x6, 古龍の血 x1, 上質な黒巻き角 x1
-Escadora Force : 煌黒龍の翼膜 x1, 煌黒龍の尻尾 x1, 煌黒龍の逆鱗 x5, 恐暴竜の頭殻 x2
-Escadora Scala : 煌黒龍の逆鱗 x6, 煌黒龍の堅逆殻 x6, 瑠璃色の龍玉 x1, 上質なねじれた角 x2
-Pirate J Hat : 海賊Ｊチケット x1, 赤甲獣の甲殻 x3, 火竜の上鱗 x5, 鋼鎚竜の上鱗 x6
-Pirate J Suit : 海賊Ｊチケット x1, 赤甲獣の尖爪 x2, 不気味な上皮 x2, 赤熱した堅胸殻 x3
-Pirate J Gloves : 海賊Ｊチケット x1, 赤甲獣の堅殻 x4, 火竜の紅玉 x1, 炎戈竜の堅殻 x5
-Pirate J Coil : 海賊Ｊチケット x1, 赤甲獣の堅殻 x3, 鋼鎚竜の耐熱殻 x3, 炎戈竜の上皮 x4
-Pirate J Boots : 海賊Ｊチケット x1, 赤甲獣の蛇腹甲 x4, 火竜の堅殻 x4, 鋼鎚竜の堅殻 x4
-Pirate J Cap : 海賊Ｊチケット x1, 赤甲獣の甲殻 x3, 火竜の上鱗 x5, 鋼鎚竜の上鱗 x6
-Pirate J Jacket : 海賊Ｊチケット x1, 赤甲獣の尖爪 x2, 不気味な上皮 x2, 赤熱した堅胸殻 x3
-Pirate J Cuffs : 海賊Ｊチケット x1, 赤甲獣の堅殻 x4, 火竜の紅玉 x1, 炎戈竜の堅殻 x5
-Pirate J Coat : 海賊Ｊチケット x1, 赤甲獣の堅殻 x3, 鋼鎚竜の耐熱殻 x3, 炎戈竜の上皮 x4
-Pirate J Pants : 海賊Ｊチケット x1, 赤甲獣の蛇腹甲 x4, 火竜の堅殻 x4, 鋼鎚竜の堅殻 x4
-Bnahabra X Hat : 飛甲虫の斬羽 x2, 飛甲虫の堅殻 x3, 飛甲虫の麻痺針 x2, 皇帝バッタ x2
-Bnahabra X Suit : 飛甲虫の斬羽 x2, 飛甲虫の堅殻 x3, モンスターの特濃 x2, 皇帝バッタ x2
-Bnahabra X Glove : 飛甲虫の斬羽 x2, 飛甲虫の羽 x5, 極上の腹袋 x2, モンスターの特濃 x3
-Bnahabra X Coil : 飛甲虫の斬羽 x2, 飛甲虫の羽 x5, モンスターの特濃 x1, マボロシチョウ x1
-Bnahabra X Boots : 飛甲虫の斬羽 x2, 飛甲虫の羽 x3, 極上の腹袋 x1, モンスターの特濃 x3
-Bnahabra X Cap : 飛甲虫の斬羽 x2, 飛甲虫の堅殻 x3, 飛甲虫の麻痺針 x2, 皇帝バッタ x2
-Bnahabra X Vest : 飛甲虫の斬羽 x2, 飛甲虫の堅殻 x3, モンスターの特濃 x2, 皇帝バッタ x2
-Bnahabra X Cuffs : 飛甲虫の斬羽 x2, 飛甲虫の羽 x5, 極上の腹袋 x2, モンスターの特濃 x3
-Bnahabra X Coat : 飛甲虫の斬羽 x2, 飛甲虫の羽 x5, モンスターの特濃 x1, マボロシチョウ x1
-Bnahabra X Pants : 飛甲虫の斬羽 x2, 飛甲虫の羽 x3, 極上の腹袋 x1, モンスターの特濃 x3
-Rhenoplos X Helm : 草食竜の重骨 x2, 重厚な骨 x3, グラシスメタル x4
-Rhenoplos X Mail : 草食竜の重骨 x2, 竜骨【大】 x3, エルトライト鉱石 x2
-Rhenoplos X Vambraces : 草食竜の重骨 x3, 堅牢な鳥竜骨 x6, グラシスメタル x4
-Rhenoplos X Coil : 草食竜の重骨 x1, 重厚な骨 x4, グラシスメタル x4
-Rhenoplos X Greaves : 草食獣の重骨 x3, 竜骨【大】 x8, エルトライト鉱石 x2
-Rhenoplos X Cap : 草食竜の重骨 x2, 重厚な骨 x3, グラシスメタル x4
-Rhenoplos X Vest : 草食竜の重骨 x2, 竜骨【大】 x3, エルトライト鉱石 x2
-Rhenoplos X Guards : 草食竜の重骨 x3, 堅牢な鳥竜骨 x6, グラシスメタル x4
-Rhenoplos X Coat : 草食竜の重骨 x1, 重厚な骨 x4, グラシスメタル x4
-Rhenoplos X Leggings : 草食獣の重骨 x3, 竜骨【大】 x8, エルトライト鉱石 x2
-Zuwaroposu X Hood : 柔軟な厚皮 x4, 垂皮竜の上皮 x3, 極上の毛皮 x2
-Zuwaroposu X Mantle : 柔軟な厚皮 x2, 垂皮竜の上皮 x5, 極上の毛皮 x2
-Zuwaroposu X Cap : 柔軟な厚皮 x5, 垂皮竜の上皮 x4, 極上の毛皮 x3
-Zuwaroposu X Vest : 柔軟な厚皮 x2, 垂皮竜の上皮 x5, 極上の毛皮 x2
-Pumpkin X Helm : 尾鎚竜の重苔甲 x1, ペピポパンプキン x4, いにしえの秘薬 x2, マタタビ x20
-Pumpkin X Mail : 尾槌竜の重苔甲 x1, ペピポパンプキン x4, 落陽草の花 x1, サボテンの花 x20
-Pumpkin X Vambraces : 尾槌竜の重苔甲 x1, ペピポパンプキン x5, モンスターの特濃 x4, トウガラシ x20
-Pumpkin X Faulds : 尾鎚竜の重苔甲 x1, ペピポパンプキン x5, 飛甲虫の斬羽 x4, 火薬草 x20
-Pumpkin X Greaves : 尾槌竜の重苔甲 x1, ペピポパンプキン x4, 極上の腹袋 x3, ネムリ草 x20
-Pumpkin X Cap : 尾鎚竜の重苔甲 x1, ペピポパンプキン x4, いにしえの秘薬 x2, マタタビ x20
-Pumpkin X Vest : 尾槌竜の重苔甲 x1, ペピポパンプキン x4, 落陽草の花 x1, サボテンの花 x20
-Pumpkin X Guards : 尾槌竜の重苔甲 x1, ペピポパンプキン x5, モンスターの特濃 x4, トウガラシ x20
-Pumpkin X Coat : 尾鎚竜の重苔甲 x1, ペピポパンプキン x5, 飛甲虫の斬羽 x4, 火薬草 x20
-Pumpkin X Leggings : 尾槌竜の重苔甲 x1, ペピポパンプキン x4, 極上の腹袋 x3, ネムリ草 x20
-Jaggi X Helm : 偉大なエリマキ x2, 拘竜の尖爪 x2, ジャギィの上鱗 x2, エルトライト鉱石 x3
-Jaggi X Mail : 狗竜の厚皮 x4, 狗竜の上皮 x4, 堅牢な鳥竜骨 x3, ユニオン鉱石 x2
-Jaggi X Vambraces : 幻鳥竜玉 x1, 狗竜の尖爪 x5, 狗竜の頭 x1, エルトライト鉱石 x3
-Jaggi X Faulds : 狗竜の厚皮 x4, 偉大なエリマキ x2, ジャギィの上鱗 x4, エルトライト鉱石 x5
-Jaggi X Greaves : 狗竜の厚皮 x3, 狗竜の上皮 x4, 堅牢な鳥竜骨 x4, ユニオン鉱石 x5
-Jaggi X Cap : 偉大なエリマキ x2, 拘竜の尖爪 x2, ジャギィの上鱗 x2, エルトライト鉱石 x3
-Jaggi X Vest : 狗竜の厚皮 x4, 狗竜の上皮 x4, 堅牢な鳥竜骨 x3, ユニオン鉱石 x2
-Jaggi X Guards : 幻鳥竜玉 x1, 狗竜の尖爪 x5, 狗竜の頭 x1, エルトライト鉱石 x3
-Jaggi X Coat : 狗竜の厚皮 x4, 偉大なエリマキ x2, ジャギィの上鱗 x4, エルトライト鉱石 x5
-Jaggi X Leggings : 狗竜の厚皮 x3, 狗竜の上皮 x4, 堅牢な鳥竜骨 x4, ユニオン鉱石 x5
-Baggi X Helm : 偉大なトサカ x2, 眠狗竜の尖爪 x2, 眠狗竜の上皮 x2, グラシスメタル x3
-Baggi X Mail : 眠狗竜の厚皮 x4, 眠狗竜の上皮 x4, 堅牢な鳥竜骨 x3, 皇帝バッタ x2
-Baggi X Vambraces : 幻鳥竜玉 x1, 眠狗竜の尖爪 x5, 昏睡袋 x1, グラシスメタル x3
-Baggi X Faulds : 眠狗竜の厚皮 x3, 偉大なトサカ x2, バギィの上鱗 x4, グラシスメタル x5
-Baggi X Greaves : 眠狗竜の厚皮 x2, 眠狗竜の上皮 x4, 堅牢な鳥竜骨 x4, 皇帝バッタ x5
-Baggi X Cap : 偉大なトサカ x2, 眠狗竜の尖爪 x2, 眠狗竜の上皮 x2, グラシスメタル x3
-Baggi X Vest : 眠狗竜の厚皮 x4, 眠狗竜の上皮 x4, 堅牢な鳥竜骨 x3, 皇帝バッタ x2
-Baggi X Guards : 幻鳥竜玉 x1, 眠狗竜の尖爪 x5, 昏睡袋 x1, グラシスメタル x3
-Baggi X Coat : 眠狗竜の厚皮 x3, 偉大なトサカ x2, バギィの上鱗 x4, グラシスメタル x5
-Baggi X Leggings : 眠狗竜の厚皮 x2, 眠狗竜の上皮 x4, 堅牢な鳥竜骨 x4, 皇帝バッタ x5
-Froggi X Helm : 偉大なクチバシ x2, 毒拘竜の堅腕甲 x2, フロギィの上鱗 x2, デプスライト鉱石 x3
-Froggi X Mail : 毒狗竜の厚皮 x4, 毒狗竜の上皮 x4, 堅牢な鳥竜骨 x3, メランジェ鉱石 x2
-Froggi X Vambraces : 幻鳥竜玉 x1, 毒狗竜の堅腕甲 x5, 猛毒袋 x1, デプスライト鉱石 x3
-Froggi X Faulds : 毒狗竜の厚皮 x3, 王者のクチバシ x2, フロギィの上鱗 x4, デプスライト鉱石 x5
-Froggi X Greaves : 毒狗竜の厚皮 x2, 毒狗竜の上皮 x4, 堅牢な鳥竜骨 x4, メランジェ鉱石 x2
-Froggi X Cap : 偉大なクチバシ x2, 毒拘竜の堅腕甲 x2, フロギィの上鱗 x2, デプスライト鉱石 x3
-Froggi X Vest : 毒狗竜の厚皮 x4, 毒狗竜の上皮 x4, 堅牢な鳥竜骨 x3, メランジェ鉱石 x2
-Froggi X Guards : 幻鳥竜玉 x1, 毒狗竜の堅腕甲 x5, 猛毒袋 x1, デプスライト鉱石 x3
-Froggi X Coat : 毒狗竜の厚皮 x3, 王者のクチバシ x2, フロギィの上鱗 x4, デプスライト鉱石 x5
-Froggi X Leggings : 毒狗竜の厚皮 x2, 毒狗竜の上皮 x4, 堅牢な鳥竜骨 x4, メランジェ鉱石 x2
-Aoashira X Helm : 青熊獣の重殻 x3, 重厚な骨 x2, 青熊獣の剛毛 x3, エルトライト鉱石 x6
-Aoashira X Mail : 青熊獣の重腕甲 x2, 青熊獣の重殻 x2, 飛甲虫の斬羽 x3, 皇帝バッタ x4
-Aoashira X Vambraces : 青熊獣の重殻 x3, 青熊獣の重腕甲 x3, 青熊獣の剛毛 x3, 極上の腹袋 x2
-Aoashira X Faulds : 青熊獣の重腕甲 x2, 重厚な骨 x2, 青熊獣の堅殻 x3, エルトライト鉱石 x6
-Aoashira X Greaves : 青熊獣の重腕甲 x2, 重厚な牙 x2, 飛甲虫の堅殻 x3, 皇帝バッタ x4
-Aoashira X Cap : 青熊獣の重殻 x3, 重厚な骨 x2, 青熊獣の剛毛 x3, エルトライト鉱石 x6
-Aoashira X Vest : 青熊獣の重腕甲 x2, 青熊獣の重殻 x2, 飛甲虫の斬羽 x3, 皇帝バッタ x4
-Aoashira X Guards : 青熊獣の重殻 x3, 青熊獣の重腕甲 x3, 青熊獣の剛毛 x3, 極上の腹袋 x2
-Aoashira X Coat : 青熊獣の重腕甲 x2, 重厚な骨 x2, 青熊獣の堅殻 x3, エルトライト鉱石 x6
-Aoashira X Leggings : 青熊獣の重腕甲 x2, 重厚な牙 x2, 飛甲虫の堅殻 x3, 皇帝バッタ x4
-Urkusus X Helm : 白兎獣の地獄耳 x2, 白兎獣の豪剛毛 x2, 眠狗竜の厚皮 x4, マボロシチョウ x1
-Urkusus X Mail : 白兎獣の豪剛毛 x3, 白兎獣の堅腹甲 x3, 偉大なトサカ x4, 皇帝バッタ x3
-Urkusus X Vambraces : 白兎獣の地獄耳 x1, 白兎獣の豪剛毛 x2, 重厚な牙 x2, 柔軟な厚皮 x6
-Urkusus X Faulds : 白兎獣の豪剛毛 x3, 白兎獣の凍爪 x1, 堅牢な骨 x2, 皇帝バッタ x3
-Urkusus X Greaves : 白兎獣の豪剛毛 x3, 白兎獣の堅腹甲 x4, 白兎獣の凍爪 x3, エルトライト鉱石 x8
-Urkusus X Cap : 白兎獣の地獄耳 x2, 白兎獣の豪剛毛 x2, 眠狗竜の厚皮 x4, マボロシチョウ x1
-Urkusus X Vest : 白兎獣の豪剛毛 x3, 白兎獣の堅腹甲 x3, 偉大なトサカ x4, 皇帝バッタ x3
-Urkusus X Guards : 白兎獣の地獄耳 x1, 白兎獣の豪剛毛 x2, 重厚な牙 x2, 柔軟な厚皮 x6
-Urkusus X Coat : 白兎獣の豪剛毛 x3, 白兎獣の凍爪 x1, 堅牢な骨 x2, 皇帝バッタ x3
-Urkusus X Leggings : 白兎獣の豪剛毛 x3, 白兎獣の堅腹甲 x4, 白兎獣の凍爪 x3, エルトライト鉱石 x8
-Ranguro X Helm : 赤甲獣の剛爪 x3, 赤甲獣の重殻 x3, モンスターの特濃 x3, 獄炎石 x2
-Ranguro X Mail : 赤甲獣の重殻 x3, 毒狗竜の厚皮 x3, 重厚な骨 x2, 獄炎石 x3
-Ranguro X Vambraces : 赤甲獣の剛爪 x3, 強力麻痺袋 x6, 重厚な骨 x3, エルトライト鉱石 x5
-Ranguro X Faulds : 赤甲獣の重殻 x3, 赤甲獣の蛇腹甲 x5, モンスターの特濃 x3, 獄炎石 x2
-Ranguro X Greaves : 赤甲獣の剛爪 x3, 赤甲獣の重殻 x3, 重厚な牙 x2, エルトライト鉱石 x2
-Ranguro X Cap : 赤甲獣の剛爪 x3, 赤甲獣の重殻 x3, モンスターの特濃 x3, 獄炎石 x2
-Ranguro X Vest : 赤甲獣の重殻 x3, 毒狗竜の厚皮 x3, 重厚な骨 x2, 獄炎石 x3
-Ranguro X Guards : 赤甲獣の剛爪 x3, 強力麻痺袋 x6, 重厚な骨 x3, エルトライト鉱石 x5
-Ranguro X Coat : 赤甲獣の重殻 x3, 赤甲獣の蛇腹甲 x5, モンスターの特濃 x3, 獄炎石 x2
-Ranguro X Leggings : 赤甲獣の剛爪 x3, 赤甲獣の重殻 x3, 重厚な牙 x2, エルトライト鉱石 x2
-Ingot X Helm : 真紅蓮石 x2, グラシスメタル x2, エルトライト鉱石 x2, カブレライト鉱石 x5
-Ingot X Mail : 真紅蓮石 x3, 獄炎石 x3, エルトライト鉱石 x2, カブレライト鉱石 x5
-Ingot X Vambraces : 真紅蓮石 x2, グラシスメタル x4, エルトライト鉱石 x2, 溶岩塊 x2
-Ingot X Coil : 真紅蓮石 x2, 獄炎石 x3, エルトライト鉱石 x2, 溶岩塊 x2
-Ingot X Greaves : 真紅蓮石 x3, グラシスメタル x2, エルトライト鉱石 x1, カブレライト鉱石 x5
-Ingot X Cap : 真紅蓮石 x2, グラシスメタル x2, エルトライト鉱石 x2, カブレライト鉱石 x5
-Ingot X Vest : 真紅蓮石 x3, 獄炎石 x3, エルトライト鉱石 x2, カブレライト鉱石 x5
-Ingot X Guards : 真紅蓮石 x2, グラシスメタル x4, エルトライト鉱石 x2, 溶岩塊 x2
-Ingot X Coat : 真紅蓮石 x2, 獄炎石 x3, エルトライト鉱石 x2, 溶岩塊 x2
-Ingot X Leggings : 真紅蓮石 x3, グラシスメタル x2, エルトライト鉱石 x1, カブレライト鉱石 x5
-Nadeshiko Cap+ : メランジェ鉱石 x3, 落陽草の花 x1, さびた破片 x10, ペピポパンプキン x3
-Nadeshiko Vest+ : メランジェ鉱石 x2, 落陽草の花 x1, イチノタチウオ x3, 大きな太古の破片 x4
-Nadeshiko Sleeves+ : メランジェ鉱石 x3, 落陽草の花 x1, うなりうねり貝 x3, 細い太古の破片 x4
-Nadeshiko Waist+ : メランジェ鉱石 x2, 落陽草の花 x1, トモダチケット x3, 高級お食事券 x3
-Nadeshiko Skirt+ : メランジェ鉱石 x3, 落陽草の花 x1, オオマヒシメジ x2, 長い太古の破片 x4
-Kikyo Cap+ : メランジェ鉱石 x3, 落陽草の花 x1, さびた破片 x10, ペピポパンプキン x3
-Kikyo Vest+ : メランジェ鉱石 x2, 落陽草の花 x1, イチノタチウオ x3, 大きな太古の破片 x4
-Kikyo Sleeves+ : メランジェ鉱石 x3, 落陽草の花 x1, うなりうねり貝 x3, 細い太古の破片 x4
-Kikyo Waist+ : メランジェ鉱石 x2, 落陽草の花 x1, トモダチケット x3, 高級お食事券 x3
-Kikyo Skirt+ : メランジェ鉱石 x3, 落陽草の花 x1, オオマヒシメジ x2, 長い太古の破片 x4
-Sailer's Beret : 狩猟王のコイン x3, 闘技王のコイン x5, ピュアクリスタル x5, 覇王の証 x3
-Sailer's Blouse : 狩猟王のコイン x3, 飛竜のコイン x5, マボロシチョウ x5, 覇王の証 x3
-Sailer's Gloves : 狩猟王のコイン x3, 海竜のコイン x5, 真紅蓮石 x6, 覇王の証 x3
-Sailer's Skirt : 狩猟王のコイン x3, 獣竜のコイン x5, エルトライト鉱石 x8, 覇王の証 x3
-Sailer's Socks : 狩猟王のコイン x3, 水竜のコイン x5, メランジェ鉱石 x4, 覇王の証 x3
-Sailer's Cap : 狩猟王のコイン x3, 闘技王のコイン x5, ピュアクリスタル x5, 覇王の証 x3
-Sailer's Vest : 狩猟王のコイン x3, 飛竜のコイン x5, マボロシチョウ x5, 覇王の証 x3
-Sailer's Sleeves : 狩猟王のコイン x3, 海竜のコイン x5, 真紅蓮石 x6, 覇王の証 x3
-Sailer's Mini : 狩猟王のコイン x3, 獣竜のコイン x5, エルトライト鉱石 x8, 覇王の証 x3
-Sailer's Sandals : 狩猟王のコイン x3, 水竜のコイン x5, メランジェ鉱石 x4, 覇王の証 x3
-Qurupeco X Helm : 魅惑のクチバシ x2, 彩鳥の剛翼 x2, 堅牢な鳥竜骨 x3, 皇帝バッタ x3
-Qurupeco X Mail : 彩鳥の厚鱗 x3, 極彩色の艶羽根 x2, 堅牢な鳥竜骨 x3, マボロシチョウ x1
-Qurupeco X Vambraces : 彩鳥の厚鱗 x3, 高級火打石 x1, 極彩色の艶羽根 x4, マボロシチョウ x1
-Qurupeco X Coil : 彩鳥の剛翼 x2, 彩鳥の厚鱗 x3, 重厚な骨 x2, 王族カナブン x5
-Qurupeco X Greaves : 彩鳥の剛翼 x2, 彩鳥の厚鱗 x3, 極彩色の艶羽根 x2, 皇帝バッタ x3
-Qurupeco X Cap : 魅惑のクチバシ x2, 彩鳥の剛翼 x2, 堅牢な鳥竜骨 x3, 皇帝バッタ x3
-Qurupeco X Vest : 彩鳥の厚鱗 x3, 極彩色の艶羽根 x2, 堅牢な鳥竜骨 x3, マボロシチョウ x1
-Qurupeco X Guards : 彩鳥の厚鱗 x3, 高級火打石 x1, 極彩色の艶羽根 x4, マボロシチョウ x1
-Qurupeco X Coat : 彩鳥の剛翼 x2, 彩鳥の厚鱗 x3, 重厚な骨 x2, 王族カナブン x5
-Qurupeco X Leggings : 彩鳥の剛翼 x2, 彩鳥の厚鱗 x3, 極彩色の艶羽根 x2, 皇帝バッタ x3
-Qurupeco Z Helm : 紅彩鳥の剛翼 x1, 魅惑のクチバシ x3, 堅牢な鳥竜骨 x2, マボロシチョウ x1
-Qurupeco Z Mail : 紅彩鳥の厚鱗 x3, 極彩色の艶羽根 x2, 重厚な骨 x1, マボロシチョウ x1
-Qurupeco Z Vambraces : 高圧電気石 x3, 紅彩鳥の厚鱗 x3, 極彩色の艶羽根 x2, 皇帝バッタ x3
-Qurupeco Z Coil : 紅彩鳥の剛翼 x3, 紅彩鳥の厚鱗 x3, 重竜骨 x1, 皇帝バッタ x3
-Qurupeco Z Greaves : 紅彩鳥の厚鱗 x3, 紅彩鳥の剛翼 x2, 大竜玉 x1, ドスヘラクレス x5
-Qurupeco Z Cap : 紅彩鳥の剛翼 x1, 魅惑のクチバシ x3, 堅牢な鳥竜骨 x2, マボロシチョウ x1
-Qurupeco Z Vest : 紅彩鳥の厚鱗 x3, 極彩色の艶羽根 x2, 重厚な骨 x1, マボロシチョウ x1
-Qurupeco Z Guards : 高圧電気石 x3, 紅彩鳥の厚鱗 x3, 極彩色の艶羽根 x2, 皇帝バッタ x3
-Qurupeco Z Coat : 紅彩鳥の剛翼 x3, 紅彩鳥の厚鱗 x3, 重竜骨 x1, 皇帝バッタ x3
-Qurupeco Z Leggings : 紅彩鳥の厚鱗 x3, 紅彩鳥の剛翼 x2, 大竜玉 x1, ドスヘラクレス x5
-Ludroth X Helm : イカしたトサカ x2, 水獣の厚鱗 x3, 水獣の靭尾 x1, 特大水袋 x2
-Ludroth X Mail : 海綿質の厚皮 x3, 柔軟な厚皮 x4, 水生獣の上皮 x6, マボロシチョウ x1
-Ludroth X Vambraces : 水獣の剛爪 x3, 水獣の厚鱗 x4, 海綿質の厚皮 x2, 皇帝バッタ x5
-Ludroth X Faulds : 水獣の厚鱗 x4, 柔軟な厚皮 x6, 重厚な骨 x2, 水獣の靭尾 x1
-Ludroth X Greaves : 水獣の剛爪 x2, 水獣の厚鱗 x3, 海綿質の上皮 x3, 皇帝バッタ x5
-Ludroth X Cap : イカしたトサカ x2, 水獣の厚鱗 x3, 水獣の靭尾 x1, 特大水袋 x2
-Ludroth X Vest : 海綿質の厚皮 x3, 柔軟な厚皮 x4, 水生獣の上皮 x6, マボロシチョウ x1
-Ludroth X Guards : 水獣の剛爪 x3, 水獣の厚鱗 x4, 海綿質の厚皮 x2, 皇帝バッタ x5
-Ludroth X Coat : 水獣の厚鱗 x4, 柔軟な厚皮 x6, 重厚な骨 x2, 水獣の靭尾 x1
-Ludroth X Leggings : 水獣の剛爪 x2, 水獣の厚鱗 x3, 海綿質の上皮 x3, 皇帝バッタ x5
-Ludroth Z Helm : 紫水獣の厚鱗 x3, イカしたトサカ x2, 水獣の靭尾 x1, 皇帝バッタ x5
-Ludroth Z Mail : 海綿質の紫厚皮 x3, 柔軟な厚皮 x4, 水生獣の上皮 x6, 水獣の靭尾 x1
-Ludroth Z Vambraces : 紫水獣の剛爪 x4, 海綿質の紫厚皮 x2, 紫水獣の厚鱗 x2, 特大水袋 x2
-Ludroth Z Faulds : 海綿質の紫厚皮 x2, 柔軟な厚皮 x6, 重厚な骨 x2, マボロシチョウ x1
-Ludroth Z Greaves : 紫水獣の剛爪 x3, 紫水獣の厚鱗 x3, 海綿質の上皮 x3, エルトライト鉱石 x5
-Ludroth Z Cap : 紫水獣の厚鱗 x3, イカしたトサカ x2, 水獣の靭尾 x1, 皇帝バッタ x5
-Ludroth Z Vest : 海綿質の紫厚皮 x3, 柔軟な厚皮 x4, 水生獣の上皮 x6, 水獣の靭尾 x1
-Ludroth Z Guards : 紫水獣の剛爪 x4, 海綿質の紫厚皮 x2, 紫水獣の厚鱗 x2, 特大水袋 x2
-Ludroth Z Coat : 海綿質の紫厚皮 x2, 柔軟な厚皮 x6, 重厚な骨 x2, マボロシチョウ x1
-Ludroth Z Leggings : 紫水獣の剛爪 x3, 紫水獣の厚鱗 x3, 海綿質の上皮 x3, エルトライト鉱石 x5
-Plesioth X jHelm : 水竜の厚鱗 x3, 水竜の特上ビレ x2, 水竜の重牙 x2, モンスターの特濃 x3
-Plesioth X jMail : 水竜の特上ビレ x3, 水竜の厚鱗 x2, 水竜の剛翼膜 x2, 柔軟な厚皮 x2
-Plesioth X jVambraces : 水竜の厚鱗 x1, 水竜の特上ビレ x3, 水竜の絶品お頭 x1, 皇帝バッタ x3
-Plesioth X jGreaves : 水竜の厚鱗 x4, 水竜の特上ビレ x2, 大竜玉 x1, エルトライト鉱石 x2
-Plesioth X jCap : 水竜の厚鱗 x3, 水竜の特上ビレ x2, 水竜の重牙 x2, モンスターの特濃 x3
-Plesioth X jVest : 水竜の特上ビレ x3, 水竜の厚鱗 x2, 水竜の剛翼膜 x2, 柔軟な厚皮 x2
-Plesioth X jGuards : 水竜の厚鱗 x1, 水竜の特上ビレ x3, 水竜の絶品お頭 x1, 皇帝バッタ x3
-Plesioth X jLeggings : 水竜の厚鱗 x4, 水竜の特上ビレ x2, 大竜玉 x1, エルトライト鉱石 x2
-Plesioth Z jHelm : 翠水竜の厚鱗 x3, 翠水竜の特上ビレ x2, 水竜の重牙 x2, 幻鳥竜玉 x1
-Plesioth Z jMail : 翠水竜の特上ビレ x3, 翠水竜の厚鱗 x2, 水竜の剛翼膜 x2, 皇帝バッタ x10
-Plesioth Z jVambraces : 翆水竜の厚鱗 x1, 翆水竜の特上ビレ x3, 水竜の絶品お頭 x1, モンスターの特濃 x5
-Plesioth Z jGreaves : 翆水竜の厚鱗 x4, 翆水竜の特上ビレ x2, 大竜玉 x1, メランジェ鉱石 x3
-Plesioth Z jCap : 翠水竜の厚鱗 x3, 翠水竜の特上ビレ x2, 水竜の重牙 x2, 幻鳥竜玉 x1
-Plesioth Z jVest : 翠水竜の特上ビレ x3, 翠水竜の厚鱗 x2, 水竜の剛翼膜 x2, 皇帝バッタ x10
-Plesioth Z jGuards : 翆水竜の厚鱗 x1, 翆水竜の特上ビレ x3, 水竜の絶品お頭 x1, モンスターの特濃 x5
-Plesioth Z jLeggings : 翆水竜の厚鱗 x4, 翆水竜の特上ビレ x2, 大竜玉 x1, メランジェ鉱石 x3
-Rathian X Helm : 雌火竜の秘棘 x2, 雌火竜の重殻 x4, 雌火竜の紅玉 x1, 業炎袋 x3
-Rathian X Mail : 雌火竜の厚鱗 x4, 雌火竜の紅玉 x1, 火竜の延髄 x1, 獄炎石 x2
-Rathian X Vambraces : 雌火竜の重殻 x4, 火竜の剛翼爪 x3, 雌火竜の上棘 x2, 獄炎石 x2
-Rathian X Faulds : 雌火竜の厚鱗 x3, 火竜の剛翼爪 x3, 雌火竜の天鱗 x1, エルトライト鉱石 x4
-Rathian X Greaves : 雌火竜の重殻 x4, 雌火竜の厚鱗 x4, 重竜骨 x3, エルトライト鉱石 x4
-Rathian X Cap : 雌火竜の秘棘 x2, 雌火竜の重殻 x4, 雌火竜の紅玉 x1, 業炎袋 x3
-Rathian X Vest : 雌火竜の厚鱗 x4, 雌火竜の紅玉 x1, 火竜の延髄 x1, 獄炎石 x2
-Rathian X Guards : 雌火竜の重殻 x4, 火竜の剛翼爪 x3, 雌火竜の上棘 x2, 獄炎石 x2
-Rathian X Coat : 雌火竜の厚鱗 x3, 火竜の剛翼爪 x3, 雌火竜の天鱗 x1, エルトライト鉱石 x4
-Rathian X Leggings : 雌火竜の重殻 x4, 雌火竜の厚鱗 x4, 重竜骨 x3, エルトライト鉱石 x4
-RioHeart Z Helm : 桜火竜の重殻 x2, 桜下流の厚鱗 x3, 重竜骨 x2, 雌火竜の秘棘 x2
-RioHeart Z Mail : 桜火竜の厚鱗 x3, 桜火竜の重殻 x2, エルトライト鉱石 x4, 雌火竜の天鱗 x1
-RioHeart Z Vambraces : 桜火竜の重殻 x2, 桜火竜の厚鱗 x4, 重竜骨 x3, 火竜の延髄 x1
-RioHeart Z Faulds : 桜火竜の厚鱗 x3, 桜火竜の重殻 x2, 業炎袋 x2, 雌火竜の紅玉 x1
-RioHeart Z Greaves : 桜火竜の重殻 x2, 桜火竜の厚鱗 x4, 重竜骨 x3, ピュアクリスタル x1
-RioHeart Z Cap : 桜火竜の重殻 x2, 桜下流の厚鱗 x3, 重竜骨 x2, 雌火竜の秘棘 x2
-RioHeart Z Vest : 桜火竜の厚鱗 x3, 桜火竜の重殻 x2, エルトライト鉱石 x4, 雌火竜の天鱗 x1
-RioHeart Z Guards : 桜火竜の重殻 x2, 桜火竜の厚鱗 x4, 重竜骨 x3, 火竜の延髄 x1
-RioHeart Z Coat : 桜火竜の厚鱗 x3, 桜火竜の重殻 x2, 業炎袋 x2, 雌火竜の紅玉 x1
-RioHeart Z Leggings : 桜火竜の重殻 x2, 桜火竜の厚鱗 x4, 重竜骨 x3, ピュアクリスタル x1
-Guild Bard X Lobos/Scholar's X Beret : 狩猟王のコイン x2, 闘技王のコイン x4, 凍戈竜の特上ビレ x3, 覇王の証 x1
-Guild Bard X Bolero/Scholar's X Blouse : 狩猟王のコイン x2, 飛竜のコイン x3, 電怪竜の剛爪 x3, 覇王の証 x1
-Guild Bard X Braces/Scholar's X Gloves : 狩猟王のコイン x2, 海竜のコイン x4, 紫水獣の剛爪 x3, 覇王の証 x1
-Guild Bard X Coil/Scholar's X Skirt : 狩猟王のコイン x2, 水竜のコイン x3, 高圧電気石 x3, 覇王の証 x1
-Guild Bard X Boots/Scholar's X Socks : 狩猟王のコイン x2, 獣竜のコイン x4, 黒角竜の重甲 x3, 覇王の証 x1
-Guild Bard X Hat/Scholar's X Cap : 狩猟王のコイン x2, 闘技王のコイン x4, 凍戈竜の特上ビレ x3, 覇王の証 x1
-Guild Bard X Vest/Scholar's X Vest : 狩猟王のコイン x2, 飛竜のコイン x3, 電怪竜の剛爪 x3, 覇王の証 x1
-Guild Bard X Sleeves/Scholar's X Sleeves : 狩猟王のコイン x2, 海竜のコイン x4, 紫水獣の剛爪 x3, 覇王の証 x1
-Guild Bard X Coat/Scholar's X Mini : 狩猟王のコイン x2, 水竜のコイン x3, 高圧電気石 x3, 覇王の証 x1
-Guild Bard X Gaiters/Scholar's X Sandals : 狩猟王のコイン x2, 獣竜のコイン x4, 黒角竜の重甲 x3, 覇王の証 x1
-Comando's Headgear : 狩猟王のコイン x3, 飛竜のコイン x2, 氷砕竜の重頭殻 x3, 覇王の証 x1
-Comando's Girdle : 狩猟王のコイン x3, 海竜のコイン x3, 翠水竜の特上ビレ x3, 覇王の証 x1
-Comando's Gauntlets : 狩猟王のコイン x3, 獣竜のコイン x3, 緑迅竜の剛刃翼 x3, 覇王の証 x1
-Comando's Faulds : 狩猟王のコイン x3, 水竜のコイン x3, 風牙竜の靭尾 x3, 覇王の証 x1
-Comando's Espadrilles : 狩猟王のコイン x3, 飛竜のコイン x2, 尾斧竜の重尾甲 x3, 覇王の証 x1
-Spy's Turban : 狩猟王のコイン x3, 飛竜のコイン x2, 氷砕竜の重頭殻 x3, 覇王の証 x1
-Spy's Girdle : 狩猟王のコイン x3, 海竜のコイン x3, 翠水竜の特上ビレ x3, 覇王の証 x1
-Spy's Gauntlets : 狩猟王のコイン x3, 獣竜のコイン x3, 緑迅竜の剛刃翼 x3, 覇王の証 x1
-Spy's Bandolier : 狩猟王のコイン x3, 水竜のコイン x3, 風牙竜の靭尾 x3, 覇王の証 x1
-Spy's Espadrilles : 狩猟王のコイン x3, 飛竜のコイン x2, 尾斧竜の重尾甲 x3, 覇王の証 x1
-Ancient X Mail : エルトライト鉱石 x5, さびた破片 x5, 大きな太古の破片 x3, ピュアクリスタル x4
-Ancient X Vambraces : エルトライト鉱石 x5, さびた破片 x5, 細い太古の破片 x3, ユニオン鉱石 x8
-Ancient X Greaves : エルトライト鉱石 x5, さびた破片 x5, 長い太古の破片 x3, メランジェ鉱石 x4
-Ancient X Vest : エルトライト鉱石 x5, さびた破片 x5, 大きな太古の破片 x3, ピュアクリスタル x4
-Ancient X Guards : エルトライト鉱石 x5, さびた破片 x5, 細い太古の破片 x3, ユニオン鉱石 x8
-Ancient X Leggings : エルトライト鉱石 x5, さびた破片 x5, 長い太古の破片 x3, メランジェ鉱石 x4
-Barioth X Helm : 琥珀色の重牙 x2, 氷牙竜の厚毛皮 x5, 氷牙竜の重殻 x4, 瞬間凍結袋 x3
-Barioth X Mail : 氷牙竜の重殻 x4, 氷牙竜の靭尾 x1, 大竜玉 x1, 白兎獣の豪剛毛 x6
-Barioth X Vambraces : 氷牙竜の剛爪 x2, 氷牙竜の重殻 x3, 重竜骨 x3, 瞬間凍結袋 x3
-Barioth X Faulds : 琥珀色の重牙 x2, 氷牙竜の靭尾 x4, 氷牙竜の厚毛皮 x4, 白兎獣の地獄耳 x4
-Barioth X Greaves : 氷牙竜の厚毛皮 x5, 氷牙竜の重殻 x3, 氷牙竜の剛爪 x2, 重厚な牙 x2
-Barioth X Cap : 琥珀色の重牙 x2, 氷牙竜の厚毛皮 x5, 氷牙竜の重殻 x4, 瞬間凍結袋 x3
-Barioth X Vest : 氷牙竜の重殻 x4, 氷牙竜の靭尾 x1, 大竜玉 x1, 白兎獣の豪剛毛 x6
-Barioth X Guards : 氷牙竜の剛爪 x2, 氷牙竜の重殻 x3, 重竜骨 x3, 瞬間凍結袋 x3
-Barioth X Coat : 琥珀色の重牙 x2, 氷牙竜の靭尾 x4, 氷牙竜の厚毛皮 x4, 白兎獣の地獄耳 x4
-Barioth X Leggings : 氷牙竜の厚毛皮 x5, 氷牙竜の重殻 x3, 氷牙竜の剛爪 x2, 重厚な牙 x2
-Barioth Z Helm : 群青色の重牙 x2, 風牙竜の厚毛皮 x3, 風牙竜の重殻 x2, 青熊獣の重殻 x3
-Barioth Z Mail : 風牙竜の重殻 x3, 風牙竜の靭尾 x1, 重竜骨 x3, 皇帝バッタ x2
-Barioth Z Vambraces : 風牙竜の剛爪 x2, 風牙竜の重殻 x3, 風牙竜の厚毛皮 x3, 重厚な牙 x3
-Barioth Z Faulds : 群青色の重牙 x2, 強靭な大胸膜 x4, 大竜玉 x1, 風牙竜の剛爪 x2
-Barioth Z Greaves : 風牙竜の厚毛皮 x4, 風牙竜の重殻 x3, 群青色の重牙 x1, 青熊獣の重腕甲 x3
-Barioth Z Cap : 群青色の重牙 x2, 風牙竜の厚毛皮 x3, 風牙竜の重殻 x2, 青熊獣の重殻 x3
-Barioth Z Vest : 風牙竜の重殻 x3, 風牙竜の靭尾 x1, 重竜骨 x3, 皇帝バッタ x2
-Barioth Z Guards : 風牙竜の剛爪 x2, 風牙竜の重殻 x3, 風牙竜の厚毛皮 x3, 重厚な牙 x3
-Barioth Z Coat : 群青色の重牙 x2, 強靭な大胸膜 x4, 大竜玉 x1, 風牙竜の剛爪 x2
-Barioth Z Leggings : 風牙竜の厚毛皮 x4, 風牙竜の重殻 x3, 群青色の重牙 x1, 青熊獣の重腕甲 x3
-Barroth X Helm : 土砂竜の重甲 x4, 土砂竜の重殻 x2, 土砂竜の重頭殻 x1, 堅牢な鳥竜骨 x2
-Barroth X Mail : 土砂竜の重甲 x4, 土砂竜の重頭殻 x3, 土砂竜の剛爪 x2, 極上の毛皮 x3
-Barroth X Vambraces : 土砂竜の剛爪 x4, 土砂竜の重殻 x2, 重竜骨 x2, 堅牢な鳥竜骨 x2
-Barroth X Faulds : 土砂竜の重殻 x2, 土砂竜の重甲 x3, 重竜骨 x2, 極上の毛皮 x3
-Barroth X Greaves : 土砂竜の重殻 x3, 土砂竜の靱尾 x1, 重厚な骨 x3, 狗竜の厚皮 x2
-Barroth X Cap : 土砂竜の重甲 x4, 土砂竜の重殻 x2, 土砂竜の重頭殻 x1, 堅牢な鳥竜骨 x2
-Barroth X Vest : 土砂竜の重甲 x4, 土砂竜の重頭殻 x3, 土砂竜の剛爪 x2, 極上の毛皮 x3
-Barroth X Guards : 土砂竜の剛爪 x4, 土砂竜の重殻 x2, 重竜骨 x2, 堅牢な鳥竜骨 x2
-Barroth X Coat : 土砂竜の重殻 x2, 土砂竜の重甲 x3, 重竜骨 x2, 極上の毛皮 x3
-Barroth X Leggings : 土砂竜の重殻 x3, 土砂竜の靱尾 x1, 重厚な骨 x3, 狗竜の厚皮 x2
-Barroth Z Helm : 氷砕竜の重甲 x5, 氷砕竜の重殻 x3, 凍った粘液塊 x5, 白兎獣の豪剛毛 x5
-Barroth Z Mail : 氷砕竜の重頭殻 x3, 氷砕竜の重甲 x4, 氷砕竜の剛爪 x2, 白兎獣の地獄耳 x2
-Barroth Z Vambraces : 氷砕竜の剛爪 x4, 氷砕竜の重殻 x2, 重竜骨 x2, 極上の毛皮 x3
-Barroth Z Faulds : 氷砕竜の重殻 x3, 氷砕竜の重甲 x4, 重厚な骨 x2, 白兎獣の豪剛毛 x4
-Barroth Z Greaves : 氷砕竜の重殻 x3, 氷砕竜の靱尾 x1, 氷砕竜の剛爪 x3, 極上の毛皮 x3
-Barroth Z Cap : 氷砕竜の重甲 x5, 氷砕竜の重殻 x3, 凍った粘液塊 x5, 白兎獣の豪剛毛 x5
-Barroth Z Vest : 氷砕竜の重頭殻 x3, 氷砕竜の重甲 x4, 氷砕竜の剛爪 x2, 白兎獣の地獄耳 x2
-Barroth Z Guards : 氷砕竜の剛爪 x4, 氷砕竜の重殻 x2, 重竜骨 x2, 極上の毛皮 x3
-Barroth Z Coat : 氷砕竜の重殻 x3, 氷砕竜の重甲 x4, 重厚な骨 x2, 白兎獣の豪剛毛 x4
-Barroth Z Leggings : 氷砕竜の重殻 x3, 氷砕竜の靱尾 x1, 氷砕竜の剛爪 x3, 極上の毛皮 x3
-Gobul X Helm : 灯魚竜の秘棘 x2, 灯魚竜の厚皮 x6, 灯魚竜の大王ヒゲ x4, 重竜骨 x3
-Gobul X Mail : 灯魚竜の特上ビレ x2, 灯魚竜の秘棘 x3, 灯魚竜の厚皮 x4, 幻鳥竜玉 x2
-Gobul X Vambraces : 灯魚竜の厚皮 x1, 灯魚竜の秘棘 x3, 灯魚竜の上棘 x4, 堅牢な鳥竜骨 x4
-Gobul X Faulds : 灯魚竜の厚皮 x6, 灯魚竜の特上ビレ x2, 灯魚竜の大王ヒゲ x3, 強力麻痺袋 x5
-Gobul X Greaves : 灯魚竜の秘棘 x6, 灯魚竜の厚皮 x6, 灯魚竜の特上ビレ x4, 最高級提灯球 x1
-Gobul X Cap : 灯魚竜の秘棘 x2, 灯魚竜の厚皮 x6, 灯魚竜の大王ヒゲ x4, 重竜骨 x3
-Gobul X Vest : 灯魚竜の特上ビレ x2, 灯魚竜の秘棘 x3, 灯魚竜の厚皮 x4, 幻鳥竜玉 x2
-Gobul X Guards : 灯魚竜の厚皮 x1, 灯魚竜の秘棘 x3, 灯魚竜の上棘 x4, 堅牢な鳥竜骨 x4
-Gobul X Coat : 灯魚竜の厚皮 x6, 灯魚竜の特上ビレ x2, 灯魚竜の大王ヒゲ x3, 強力麻痺袋 x5
-Gobul X Leggings : 灯魚竜の秘棘 x6, 灯魚竜の厚皮 x6, 灯魚竜の特上ビレ x4, 最高級提灯球 x1
-Gigginox X Helm : おぞましい厚皮 x3, 悪夢のクチ x1, 毒怪竜の厚皮 x5, 猛毒袋 x5
-Gigginox X Mail : 毒怪竜の剛爪 x2, 毒怪竜の厚皮 x4, おぞましい毒腺 x3, ピュアクリスタル x1
-Gigginox X Vambraces : 毒怪竜の厚皮 x4, 毒怪竜の剛爪 x2, 毒怪竜の鋭爪 x2, 幻鳥竜玉 x1
-Gigginox X Faulds : 毒怪竜の厚皮 x4, おぞましい毒腺 x3, おぞましい厚皮 x2, モンスターの特濃 x6
-Gigginox X Greaves : おぞましい毒腺 x3, 毒怪竜の厚皮 x2, 悪夢のクチ x2, 眠狗竜の厚皮 x4
-Gigginox X Cap : おぞましい厚皮 x3, 悪夢のクチ x1, 毒怪竜の厚皮 x5, 猛毒袋 x5
-Gigginox X Vest : 毒怪竜の剛爪 x2, 毒怪竜の厚皮 x4, おぞましい毒腺 x3, ピュアクリスタル x1
-Gigginox X Guards : 毒怪竜の厚皮 x4, 毒怪竜の剛爪 x2, 毒怪竜の鋭爪 x2, 幻鳥竜玉 x1
-Gigginox X Coat : 毒怪竜の厚皮 x4, おぞましい毒腺 x3, おぞましい厚皮 x2, モンスターの特濃 x6
-Gigginox X Leggings : おぞましい毒腺 x3, 毒怪竜の厚皮 x2, 悪夢のクチ x2, 眠狗竜の厚皮 x4
-Gigginox Z Helm : 電怪竜の厚皮 x4, おぞましい厚皮 x2, アルビノエキス x7, 眠拘竜の厚皮 x4
-Gigginox Z Mail : 雷怪竜の剛爪 x2, 雷怪竜の厚皮 x4, 大竜玉 x1, 堅牢な鳥竜骨 x5
-Gigginox Z Vambraces : 電怪竜の剛爪 x1, 悪夢のクチ x2, 重竜骨 x2, 雷電袋 x2
-Gigginox Z Faulds : 電怪竜の厚皮 x4, 電怪竜の剛爪 x1, 雷電袋 x4, グラシスメタル x6
-Gigginox Z Greaves : 電怪竜の厚皮 x4, おぞましい厚皮 x2, 重竜骨 x2, ピュアクリスタル x1
-Gigginox Z Cap : 電怪竜の厚皮 x4, おぞましい厚皮 x2, アルビノエキス x7, 眠拘竜の厚皮 x4
-Gigginox Z Vest : 雷怪竜の剛爪 x2, 雷怪竜の厚皮 x4, 大竜玉 x1, 堅牢な鳥竜骨 x5
-Gigginox Z Guards : 電怪竜の剛爪 x1, 悪夢のクチ x2, 重竜骨 x2, 雷電袋 x2
-Gigginox Z Coat : 電怪竜の厚皮 x4, 電怪竜の剛爪 x1, 雷電袋 x4, グラシスメタル x6
-Gigginox Z Leggings : 電怪竜の厚皮 x4, おぞましい厚皮 x2, 重竜骨 x2, ピュアクリスタル x1
-Hapul X Helm : 潜口竜の重殻 x4, 潜口竜の剛爪 x2, 潜口竜の厚皮 x2, 巨大なヒレ x2
-Hapul X Mail : 潜口竜の厚皮 x4, 潜口竜の重殻 x4, 光り輝く体液 x4, 堅牢な鳥竜骨 x2
-Hapul X Vambraces : 潜口竜の剛爪 x3, 潜口竜の重殻 x3, 光り輝く体液 x4, 毒狗竜の上皮 x3
-Hapul X Faulds : 潜口竜の剛爪 x2, 潜口竜の厚皮 x3, 極彩色の体液 x4, 偉大なクチバシ x2
-Hapul X Greaves : 潜口竜の重殻 x4, 大竜玉 x1, 重竜骨 x3, 毒狗竜の厚皮 x4
-Hapul X Cap : 潜口竜の重殻 x4, 潜口竜の剛爪 x2, 潜口竜の厚皮 x2, 巨大なヒレ x2
-Hapul X Vest : 潜口竜の厚皮 x4, 潜口竜の重殻 x4, 光り輝く体液 x4, 堅牢な鳥竜骨 x2
-Hapul X Guards : 潜口竜の剛爪 x3, 潜口竜の重殻 x3, 光り輝く体液 x4, 毒狗竜の上皮 x3
-Hapul X Coat : 潜口竜の剛爪 x2, 潜口竜の厚皮 x3, 極彩色の体液 x4, 偉大なクチバシ x2
-Hapul X Leggings : 潜口竜の重殻 x4, 大竜玉 x1, 重竜骨 x3, 毒狗竜の厚皮 x4
-Dobol X Helm : 尾槌竜の剛角 x2, 尾槌竜の重殻 x6, 尾槌竜の仙骨 x1, エルトライト鉱石 x5
-Dobol X Mail : 尾槌竜の剛角 x2, 霜降りのコブ x4, 大竜玉 x1, 極上の毛皮 x3
-Dobol X Vambraces : 尾槌竜の重殻 x6, 尾槌竜の重尾甲 x2, 尾槌竜の堅苔甲 x5, 重厚な骨 x5
-Dobol X Faulds : 尾槌竜の重苔甲 x4, 尾槌竜の重殻 x6, ドボルストーン x1, 青熊獣の重殻 x3
-Dobol X Greaves : 尾槌竜の重殻 x3, 尾槌竜の重苔甲 x5, 霜降りのコブ x4, 草食竜の重骨 x3
-Dobol X Cap : 尾槌竜の剛角 x2, 尾槌竜の重殻 x6, 尾槌竜の仙骨 x1, エルトライト鉱石 x5
-Dobol X Vest : 尾槌竜の剛角 x2, 霜降りのコブ x4, 大竜玉 x1, 極上の毛皮 x3
-Dobol X Guards : 尾槌竜の重殻 x6, 尾槌竜の重尾甲 x2, 尾槌竜の堅苔甲 x5, 重厚な骨 x5
-Dobol X Coat : 尾槌竜の重苔甲 x4, 尾槌竜の重殻 x6, ドボルストーン x1, 青熊獣の重殻 x3
-Dobol X Leggings : 尾槌竜の重殻 x3, 尾槌竜の重苔甲 x5, 霜降りのコブ x4, 草食竜の重骨 x3
-Dobol Z Helm : 尾槌竜の剛角 x2, 尾斧竜の赤銅殻 x6, 尾槌竜の仙骨 x1, ピュアクリスタル x1
-Dobol Z Mail : 尾槌竜の剛角 x2, 霜降りのコブ x4, 大竜玉 x1, 極上の腹袋 x3
-Dobol Z Vambraces : 尾斧竜の赤銅殻 x6, 尾斧竜の重尾甲 x2, 尾槌竜の堅苔甲 x5, 重厚な牙 x5
-Dobol Z Faulds : 尾斧竜の赤銅甲 x4, 尾斧竜の赤銅殻 x6, ドボルストーン x1, 青熊獣の重腕甲 x3
-Dobol Z Greaves : 尾斧竜の赤銅甲 x3, 尾斧竜の赤銅殻 x5, 霜降りのコブ x4, 重竜骨 x3
-Dobol Z Cap : 尾槌竜の剛角 x2, 尾斧竜の赤銅殻 x6, 尾槌竜の仙骨 x1, ピュアクリスタル x1
-Dobol Z Vest : 尾槌竜の剛角 x2, 霜降りのコブ x4, 大竜玉 x1, 極上の腹袋 x3
-Dobol Z Guards : 尾斧竜の赤銅殻 x6, 尾斧竜の重尾甲 x2, 尾槌竜の堅苔甲 x5, 重厚な牙 x5
-Dobol Z Coat : 尾斧竜の赤銅甲 x4, 尾斧竜の赤銅殻 x6, ドボルストーン x1, 青熊獣の重腕甲 x3
-Dobol Z Leggings : 尾斧竜の赤銅甲 x3, 尾斧竜の赤銅殻 x5, 霜降りのコブ x4, 重竜骨 x3
-Nargacuga X Helm : 迅竜の重尾棘 x2, 迅竜の豪黒毛 x3, 迅竜の剛刃翼 x2, 青熊獣の重殻 x4
-Nargacuga X Mail : 迅竜の厚鱗 x3, 迅竜の重牙 x4, 迅竜の豪黒毛 x3, 狗竜の厚皮 x3
-Nargacuga X Vambraces : 迅竜の剛刃翼 x3, 迅竜の天鱗 x1, 迅竜の延髄 x3, 青熊獣の重腕甲 x5
-Nargacuga X Faulds : 迅竜の豪黒毛 x3, 迅竜の靭尾 x1, 迅竜の天鱗 x1, マボロシチョウ x3
-Nargacuga X Greaves : 迅竜の重牙 x6, 迅竜の厚鱗 x3, 迅竜の重尾棘 x2, 皇帝バッタ x6
-Nargacuga X Cap : 迅竜の重尾棘 x2, 迅竜の豪黒毛 x3, 迅竜の剛刃翼 x2, 青熊獣の重殻 x4
-Nargacuga X Vest : 迅竜の厚鱗 x3, 迅竜の重牙 x4, 迅竜の豪黒毛 x3, 狗竜の厚皮 x3
-Nargacuga X Guards : 迅竜の剛刃翼 x3, 迅竜の天鱗 x1, 迅竜の延髄 x3, 青熊獣の重腕甲 x5
-Nargacuga X Coat : 迅竜の豪黒毛 x3, 迅竜の靭尾 x1, 迅竜の天鱗 x1, マボロシチョウ x3
-Nargacuga X Leggings : 迅竜の重牙 x6, 迅竜の厚鱗 x3, 迅竜の重尾棘 x2, 皇帝バッタ x6
-Nargacuga Z Helm : 緑迅竜の豪斑毛 x6, 緑迅竜の剛刃翼 x3, 迅竜の延髄 x4, 柔軟な厚皮 x4
-Nargacuga Z Mail : 緑迅竜の厚鱗 x5, 緑迅竜の重牙 x5, 迅竜の天鱗 x1, 重厚な牙 x3
-Nargacuga Z Vambraces : 緑迅竜の剛刃翼 x4, 緑迅竜の厚鱗 x5, 緑迅竜の重尾棘 x4, 幻鳥竜玉 x2
-Nargacuga Z Faulds : 緑迅竜の豪斑毛 x6, 緑迅竜の重尾棘 x5, 大竜玉 x1, ピュアクリスタル x1
-Nargacuga Z Greaves : 緑迅竜の重牙 x5, 緑迅竜の厚鱗 x5, 迅竜の靭尾 x1, 重竜骨 x3
-Nargacuga Z Cap : 緑迅竜の豪斑毛 x6, 緑迅竜の剛刃翼 x3, 迅竜の延髄 x4, 柔軟な厚皮 x4
-Nargacuga Z Vest : 緑迅竜の厚鱗 x5, 緑迅竜の重牙 x5, 迅竜の天鱗 x1, 重厚な牙 x3
-Nargacuga Z Guards : 緑迅竜の剛刃翼 x4, 緑迅竜の厚鱗 x5, 緑迅竜の重尾棘 x4, 幻鳥竜玉 x2
-Nargacuga Z Coat : 緑迅竜の豪斑毛 x6, 緑迅竜の重尾棘 x5, 大竜玉 x1, ピュアクリスタル x1
-Nargacuga Z Leggings : 緑迅竜の重牙 x5, 緑迅竜の厚鱗 x5, 迅竜の靭尾 x1, 重竜骨 x3
-Helios X Helm/Selene X Helm : 湾曲した剛龍角 x2, 湾曲した龍角 x4, 深淵の龍玉 x1, 覇王の証 x1
-Helios X Mail/Selene X Mail : 皇海竜の豪鎧毛 x5, 大海龍の鎧毛 x6, 大地の龍玉 x5, 覇王の証 x1
-Helios X Vambraces/Selene X Vambraces : 皇海龍の豪鎧毛 x3, 大海龍の甲皮 x6, 神秘の発光体 x5, 覇王の証 x1
-Helios X Coil/Selene X Coil : 深淵の皇龍玉 x1, 大海龍の尻尾 x3, 海竜の蒼玉 x2, 覇王の証 x1
-Helios X Greaves/Selene X Greaves : 皇海龍の豪鎧毛 x5, 大海龍の鱗 x7, 古龍の血 x4, 覇王の証 x1
-Helios X Cap/Selene X Cap : 湾曲した剛龍角 x2, 湾曲した龍角 x4, 深淵の龍玉 x1, 覇王の証 x1
-Helios X Vest/Selene X Vest : 皇海竜の豪鎧毛 x5, 大海龍の鎧毛 x6, 大地の龍玉 x5, 覇王の証 x1
-Helios X Guards/Selene X Guards : 皇海龍の豪鎧毛 x3, 大海龍の甲皮 x6, 神秘の発光体 x5, 覇王の証 x1
-Helios X Coat/Selene X Coat : 深淵の皇龍玉 x1, 大海龍の尻尾 x3, 海竜の蒼玉 x2, 覇王の証 x1
-Helios X Leggings/Selene X Leggings : 皇海龍の豪鎧毛 x5, 大海龍の鱗 x7, 古龍の血 x4, 覇王の証 x1
-Helios Z Helm/Selene Z Helm : 湾曲した剛龍角 x2, 皇海龍の厚鱗 x2, 深淵の皇龍玉 x1, 覇王の証 x1
-Helios Z Mail/Selene Z Mail : 皇海龍の豪鎧毛 x4, 皇海龍の重甲皮 x5, 湾曲した剛龍角 x2, 覇王の証 x1
-Helios Z Vambraces/Selene Z Vambraces : 皇海龍の重甲皮 x5, 湾曲した剛龍角 x2, 古龍の血 x4, 覇王の証 x1
-Helios Z Coil/Selene Z Coil : 皇海龍の厚鱗 x4, 皇海龍の豪鎧毛 x5, 深淵の皇龍玉 x1, 覇王の証 x1
-Helios Z Greaves/Selene Z Greaves : 皇海龍の厚鱗 x5, 皇海龍の重甲皮 x5, 神秘の発光体 x6, 覇王の証 x1
-Helios Z Cap/Selene Z Cap : 湾曲した剛龍角 x2, 皇海龍の厚鱗 x2, 深淵の皇龍玉 x1, 覇王の証 x1
-Helios Z Vest/Selene Z Vest : 皇海龍の豪鎧毛 x4, 皇海龍の重甲皮 x5, 湾曲した剛龍角 x2, 覇王の証 x1
-Helios Z Guards/Selene Z Guards : 皇海龍の重甲皮 x5, 湾曲した剛龍角 x2, 古龍の血 x4, 覇王の証 x1
-Helios Z Coat/Selene Z Coat : 皇海龍の厚鱗 x4, 皇海龍の豪鎧毛 x5, 深淵の皇龍玉 x1, 覇王の証 x1
-Helios Z Leggings/Selene Z Leggings : 皇海龍の厚鱗 x5, 皇海龍の重甲皮 x5, 神秘の発光体 x6, 覇王の証 x1
-Obituary X Testa/Butterfly X Testa : ピュアアゲハ x1, マボロシチョウ x1, 蝕龍蟲 x6, 不死虫 x20
-Obituary X Petto/Butterfly X Petto : ピュアアゲハ x2, マボロシチョウ x1, 皇帝バッタ x8, セッチャクロアリ x20
-Obituary X Mano/Butterfly X Mano : ピュアアゲハ x1, マボロシチョウ x1, 飛甲虫の斬羽 x4, にが虫 x20
-Obituary X Anca/Butterfly X Anca : ピュアアゲハ x2, マボロシチョウ x1, 極上の腹袋 x4, ボンバッタ x20
-Obituary X Gamba/Butterfly X Gamba : ピュアアゲハ x1, マボロシチョウ x1, モンスターの特濃 x3, ツチハチノコ x20
-Obituary X Caput/Butterfly X Caput : ピュアアゲハ x1, マボロシチョウ x1, 蝕龍蟲 x6, 不死虫 x20
-Obituary X Pectus/Butterfly X Pectus : ピュアアゲハ x2, マボロシチョウ x1, 皇帝バッタ x8, セッチャクロアリ x20
-Obituary X Brasso/Butterfly X Brasso : ピュアアゲハ x1, マボロシチョウ x1, 飛甲虫の斬羽 x4, にが虫 x20
-Obituary X Cocusa/Butterfly X Cocusa : ピュアアゲハ x2, マボロシチョウ x1, 極上の腹袋 x4, ボンバッタ x20
-Obituary X Femur/Butterfly X Femur : ピュアアゲハ x1, マボロシチョウ x1, モンスターの特濃 x3, ツチハチノコ x20
-Rathalos X Helm : 火竜の厚鱗 x4, 火竜の天鱗 x1, 業炎袋 x3, 重竜骨 x3
-Rathalos X Mail : 火竜の厚鱗 x5, 火竜の重殻 x4, 火竜の剛翼 x2, メランジェ鉱石 x2
-Rathalos X Vambraces : 火竜の厚鱗 x4, 火竜の剛翼爪 x2, 火竜の靭尾 x1, 真紅蓮石 x2
-Rathalos X Faulds : 火竜の重殻 x6, 火竜の剛翼 x4, 火竜の延髄 x1, メランジェ鉱石 x2
-Rathalos X Greaves : 火竜の重殻 x6, 火竜の紅玉 x2, 火竜の厚鱗 x6, 大竜玉 x1
-Rathalos X Cap : 火竜の厚鱗 x4, 火竜の天鱗 x1, 業炎袋 x3, 重竜骨 x3
-Rathalos X Vest : 火竜の厚鱗 x5, 火竜の重殻 x4, 火竜の剛翼 x2, メランジェ鉱石 x2
-Rathalos X Guards : 火竜の厚鱗 x4, 火竜の剛翼爪 x2, 火竜の靭尾 x1, 真紅蓮石 x2
-Rathalos X Coat : 火竜の重殻 x6, 火竜の剛翼 x4, 火竜の延髄 x1, メランジェ鉱石 x2
-Rathalos X Leggings : 火竜の重殻 x6, 火竜の紅玉 x2, 火竜の厚鱗 x6, 大竜玉 x1
-RioSoul Z Helm : 蒼火竜の厚鱗 x2, 火竜の剛翼 x2, 火竜の天鱗 x1, マボロシチョウ x2
-RioSoul Z Mail : 蒼火竜の厚鱗 x3, 蒼火竜の重殻 x3, 業炎袋 x3, 重竜骨 x3
-RioSoul Z Vambraces : 蒼火竜の重殻 x2, 蒼火竜の靭尾 x2, 重竜骨 x3, エルトライト鉱石 x5
-RioSoul Z Faulds : 蒼火竜の重殻 x2, 蒼火竜の厚鱗 x4, エルトライト鉱石 x5, 業炎袋 x2
-RioSoul Z Greaves : 蒼火竜の重殻 x2, 蒼火竜の厚鱗 x3, 火竜の天鱗 x1, ピュアクリスタル x1
-RioSoul Z Cap : 蒼火竜の厚鱗 x2, 火竜の剛翼 x2, 火竜の天鱗 x1, マボロシチョウ x2
-RioSoul Z Vest : 蒼火竜の厚鱗 x3, 蒼火竜の重殻 x3, 業炎袋 x3, 重竜骨 x3
-RioSoul Z Guards : 蒼火竜の重殻 x2, 蒼火竜の靭尾 x2, 重竜骨 x3, エルトライト鉱石 x5
-RioSoul Z Coat : 蒼火竜の重殻 x2, 蒼火竜の厚鱗 x4, エルトライト鉱石 x5, 業炎袋 x2
-RioSoul Z Leggings : 蒼火竜の重殻 x2, 蒼火竜の厚鱗 x3, 火竜の天鱗 x1, ピュアクリスタル x1
-Diablos X Helm : 角竜の重殻 x5, 大地を穿つ剛角 x1, 大竜玉 x1, 毒拘竜の厚皮 x4
-Diablos X Mail : 角竜の重甲 x5, 大地を穿つ剛角 x1, 角竜の堅甲 x3, 赤甲獣の重殻 x4
-Diablos X Vambraces : 角竜の重殻 x6, 角竜の重甲 x5, 角竜の堅殻 x6, 狗竜の厚皮 x3
-Diablos X Faulds : 角竜の重甲 x6, 角竜の重尾甲 x6, 角竜の延髄 x3, 草食竜の獣骨 x4
-Diablos X Greaves : 角竜の重殻 x6, 堅牢なねじれた角 x5, 重竜骨 x3, 角竜の重尾甲 x1
-Diablos X Cap : 角竜の重殻 x5, 大地を穿つ剛角 x1, 大竜玉 x1, 毒拘竜の厚皮 x4
-Diablos X Vest : 角竜の重甲 x5, 大地を穿つ剛角 x1, 角竜の堅甲 x3, 赤甲獣の重殻 x4
-Diablos X Guards : 角竜の重殻 x6, 角竜の重甲 x5, 角竜の堅殻 x6, 狗竜の厚皮 x3
-Diablos X Coat : 角竜の重甲 x6, 角竜の重尾甲 x6, 角竜の延髄 x3, 草食竜の獣骨 x4
-Diablos X Leggings : 角竜の重殻 x6, 堅牢なねじれた角 x5, 重竜骨 x3, 角竜の重尾甲 x1
-Diablos Z Helm : 黒角竜の重殻 x4, 大地を穿つ剛角 x2, 大竜玉 x1, 極上の腹袋 x3
-Diablos Z Mail : 堅牢な黒巻き角 x2, 黒角竜の重甲 x5, 角竜の延髄 x2, 偉大なエリマキ x2
-Diablos Z Vambraces : 黒角竜の重殻 x4, 上質な黒巻き角 x5, 黒角竜の重甲 x3, 幻鳥竜玉 x1
-Diablos Z Faulds : 黒角竜の重甲 x6, 黒角竜の重殻 x5, 堅牢な黒巻き角 x1, ピュアクリスタル x1
-Diablos Z Greaves : 黒角竜の重殻 x5, 角竜の重尾甲 x2, 重竜骨 x4, 草食竜の重骨 x2
-Diablos Z Cap : 黒角竜の重殻 x5, 大地を穿つ剛角 x3, 大竜玉 x2, 極上の腹袋 x4
-Diablos Z Vest : 堅牢な黒巻き角 x2, 黒角竜の重甲 x5, 角竜の延髄 x2, 偉大なエリマキ x2
-Diablos Z Guards : 黒角竜の重殻 x4, 上質な黒巻き角 x5, 黒角竜の重甲 x3, 幻鳥竜玉 x1
-Diablos Z Coat : 黒角竜の重甲 x6, 黒角竜の重殻 x5, 堅牢な黒巻き角 x1, ピュアクリスタル x1
-Diablos Z Leggings : 黒角竜の重殻 x5, 角竜の重尾甲 x2, 重竜骨 x4, 草食竜の重骨 x2
-Agnaktor X Helm : 炎戈竜の重殻 x5, 炎戈竜の碇口 x3, 炎戈竜の厚皮 x4, 炎戈竜の剛爪 x2
-Agnaktor X Mail : 炎戈竜の厚皮 x4, 炎戈竜の特上ビレ x2, 炎戈竜の重殻 x5, 真紅蓮石 x2
-Agnaktor X Vambraces : 炎戈竜の剛爪 x3, 炎戈竜の重殻 x3, 炎戈竜の尻尾 x2, 重竜骨 x4
-Agnaktor X Faulds : 炎戈竜の特上ビレ x3, 赤熱した重胸殻 x4, 柔軟な厚皮 x5, 幻鳥竜玉 x1
-Agnaktor X Greaves : 赤熱した重胸殻 x5, 炎戈竜の厚皮 x4, 大竜玉 x1, 毒狗竜の厚皮 x3
-Agnaktor X Cap : 炎戈竜の重殻 x5, 炎戈竜の碇口 x3, 炎戈竜の厚皮 x4, 炎戈竜の剛爪 x2
-Agnaktor X Vest : 炎戈竜の厚皮 x4, 炎戈竜の特上ビレ x2, 炎戈竜の重殻 x5, 真紅蓮石 x2
-Agnaktor X Guards : 炎戈竜の剛爪 x3, 炎戈竜の重殻 x3, 炎戈竜の尻尾 x2, 重竜骨 x4
-Agnaktor X Coat : 炎戈竜の特上ビレ x3, 赤熱した重胸殻 x4, 柔軟な厚皮 x5, 幻鳥竜玉 x1
-Agnaktor X Leggings : 赤熱した重胸殻 x5, 炎戈竜の厚皮 x4, 大竜玉 x1, 毒狗竜の厚皮 x3
-Agnaktor Z Helm : 凍戈竜の重殻 x5, 凍戈竜の碇口 x3, 凍戈竜の厚皮 x3, モンスターの特濃 x6
-Agnaktor Z Mail : 凍戈竜の厚皮 x4, 凍戈竜の特上ビレ x3, 凍戈竜の重殻 x5, 凍った粘液塊 x4
-Agnaktor Z Vambraces : 凍戈竜の剛爪 x3, 凍戈竜の重殻 x5, 大竜玉 x1, 偉大なトサカ x2
-Agnaktor Z Faulds : 凍戈竜の特上ビレ x2, 凍戈竜の尻尾 x2, 凍戈竜の厚皮 x4, 白兎獣の豪剛毛 x5
-Agnaktor Z Greaves : 潤った重胸殻 x5, 凍戈竜の特上ビレ x2, 凍戈竜の剛爪 x3, 眠狗竜の厚皮 x2
-Agnaktor Z Cap : 凍戈竜の重殻 x5, 凍戈竜の碇口 x3, 凍戈竜の厚皮 x3, モンスターの特濃 x6
-Agnaktor Z Vest : 凍戈竜の厚皮 x4, 凍戈竜の特上ビレ x3, 凍戈竜の重殻 x5, 凍った粘液塊 x4
-Agnaktor Z Guards : 凍戈竜の剛爪 x3, 凍戈竜の重殻 x5, 大竜玉 x1, 偉大なトサカ x2
-Agnaktor Z Coat : 凍戈竜の特上ビレ x2, 凍戈竜の尻尾 x2, 凍戈竜の厚皮 x4, 白兎獣の豪剛毛 x5
-Agnaktor Z Leggings : 潤った重胸殻 x5, 凍戈竜の特上ビレ x2, 凍戈竜の剛爪 x3, 眠狗竜の厚皮 x2
-Bracchidios X Helm : 砕竜の重黒曜甲 x3, 砕竜の尖頭殻 x2, 光る粘液 x3, 真紅蓮石 x4
-Bracchidios X Mail : 砕竜の重殻 x4, 砕竜の重黒曜甲 x3, 砕竜の宝玉 x2, 重竜骨 x2
-Bracchidios X Vambraces : 砕竜の重黒曜甲 x3, 砕竜の剛鉄拳 x1, 光る粘菌 x3, ピュアクリスタル x1
-Bracchidios X Faulds : 砕竜の剛鉄拳 x2, 砕竜の尻尾 x1, 砕竜の天殻 x1, 砕竜の重殻 x4
-Bracchidios X Greaves : 砕竜の重殻 x4, 砕竜の重黒曜甲 x2, 砕竜の剛鉄拳 x2, メランジェ鉱石 x3
-Bracchidios X Cap : 砕竜の重黒曜甲 x3, 砕竜の尖頭殻 x2, 光る粘液 x3, 真紅蓮石 x4
-Bracchidios X Vest : 砕竜の重殻 x4, 砕竜の重黒曜甲 x3, 砕竜の宝玉 x2, 重竜骨 x2
-Bracchidios X Guards : 砕竜の重黒曜甲 x3, 砕竜の剛鉄拳 x1, 光る粘菌 x3, ピュアクリスタル x1
-Bracchidios X Coat : 砕竜の剛鉄拳 x2, 砕竜の尻尾 x1, 砕竜の天殻 x1, 砕竜の重殻 x4
-Bracchidios X Leggings : 砕竜の重殻 x4, 砕竜の重黒曜甲 x2, 砕竜の剛鉄拳 x2, メランジェ鉱石 x3
-Lagiacrus X Helm : 海竜の剛角 x2, 海竜の厚皮 x5, 海竜の蒼玉 x1, 水獣の厚鱗 x6
-Lagiacrus X Mail : 海竜の厚皮 x4, 海竜の蒼天鱗 x1, 海竜の剛尾 x1, 氷牙竜の厚毛皮 x4
-Lagiacrus X Vambraces : 海竜の剛爪 x3, 海竜の蓄電殻 x4, 海竜の厚鱗 x4, 雷電袋 x5
-Lagiacrus X Faulds : 海竜の雷電殻 x4, 海竜の厚鱗 x5, 海竜の蒼玉 x1, 海竜の剛尾 x2
-Lagiacrus X Greaves : 海竜の厚鱗 x5, 海竜の厚皮 x4, 海竜の剛爪 x3, ピュアクリスタル x1
-Lagiacrus X Cap : 海竜の剛角 x2, 海竜の厚皮 x5, 海竜の蒼玉 x1, 水獣の厚鱗 x6
-Lagiacrus X Vest : 海竜の厚皮 x4, 海竜の蒼天鱗 x1, 海竜の剛尾 x1, 氷牙竜の厚毛皮 x4
-Lagiacrus X Guards : 海竜の剛爪 x3, 海竜の蓄電殻 x4, 海竜の厚鱗 x4, 雷電袋 x5
-Lagiacrus X Coat : 海竜の雷電殻 x4, 海竜の厚鱗 x5, 海竜の蒼玉 x1, 海竜の剛尾 x2
-Lagiacrus X Leggings : 海竜の厚鱗 x5, 海竜の厚皮 x4, 海竜の剛爪 x3, ピュアクリスタル x1
-Lagiacrus Z Helm : 白海竜の剛角 x2, 白海竜の厚皮 x4, 海竜の蒼天鱗 x1, 海竜の逆鱗 x3
-Lagiacrus Z Mail : 白海竜の厚皮 x4, 海竜の剛爪 x1, 海竜の蒼玉 x1, 風牙竜の厚毛皮 x5
-Lagiacrus Z Vambraces : 白海竜の厚鱗 x5, 海竜の剛爪 x3, 白海竜の雷電殻 x3, 高圧電気石 x3
-Lagiacrus Z Faulds : 白海竜の雷電殻 x4, 白海竜の厚鱗 x5, 海竜の蒼玉 x1, 海竜の剛尾 x1
-Lagiacrus Z Greaves : 白海竜の厚鱗 x5, 白海竜の厚皮 x4, 海竜の剛爪 x3, メランジェ鉱石 x3
-Lagiacrus Z Cap : 白海竜の剛角 x2, 白海竜の厚皮 x4, 海竜の蒼天鱗 x1, 海竜の逆鱗 x3
-Lagiacrus Z Vest : 白海竜の厚皮 x4, 海竜の剛爪 x1, 海竜の蒼玉 x1, 風牙竜の厚毛皮 x5
-Lagiacrus Z Guards : 白海竜の厚鱗 x5, 海竜の剛爪 x3, 白海竜の雷電殻 x3, 高圧電気石 x3
-Lagiacrus Z Coat : 白海竜の雷電殻 x4, 白海竜の厚鱗 x5, 海竜の蒼玉 x1, 海竜の剛尾 x1
-Lagiacrus Z Leggings : 白海竜の厚鱗 x5, 白海竜の厚皮 x4, 海竜の剛爪 x3, メランジェ鉱石 x3
-Uragaan X Helm : 爆鎚竜の重殻 x4, 爆鎚竜の紅玉 x1, 溶岩塊 x8, 爆鎚竜の重耐熱殻 x3
-Uragaan X Mail : 爆鎚竜の重殻 x5, 爆鎚竜の重顎 x1, 爆鎚竜の骨髄 x6, 真紅蓮石 x2
-Uragaan X Vambraces : 爆鎚竜の厚鱗 x5, 爆鎚竜の重耐熱殻 x2, 重竜骨 x3, メランジェ鉱石 x3
-Uragaan X Faulds : 爆鎚竜の厚鱗 x6, 爆鎚竜の天殻 x1, 爆鎚竜の重殻 x1, 赤甲獣の重殻 x4
-Uragaan X Greaves : 爆鎚竜の重殻 x5, 爆鎚竜の厚鱗 x3, 大竜玉 x1, 重厚な牙 x3
-Uragaan X Cap : 爆鎚竜の重殻 x4, 爆鎚竜の紅玉 x1, 溶岩塊 x8, 爆鎚竜の重耐熱殻 x3
-Uragaan X Vest : 爆鎚竜の重殻 x5, 爆鎚竜の重顎 x1, 爆鎚竜の骨髄 x6, 真紅蓮石 x2
-Uragaan X Guards : 爆鎚竜の厚鱗 x5, 爆鎚竜の重耐熱殻 x2, 重竜骨 x3, メランジェ鉱石 x3
-Uragaan X Coat : 爆鎚竜の厚鱗 x6, 爆鎚竜の天殻 x1, 爆鎚竜の重殻 x1, 赤甲獣の重殻 x4
-Uragaan X Leggings : 爆鎚竜の重殻 x5, 爆鎚竜の厚鱗 x3, 大竜玉 x1, 重厚な牙 x3
-Uragaan Z Helm : 鋼鎚竜の重殻 x5, 爆鎚竜の紅玉 x2, 大竜玉 x1, マボロシチョウ x2
-Uragaan Z Mail : 鋼鎚竜の重顎 x2, 鋼鎚竜の重耐熱殻 x2, 鋼鎚竜の厚鱗 x5, メランジェ鉱石 x3
-Uragaan Z Vambraces : 鋼鎚竜の厚鱗 x4, 爆鎚竜の天殻 x1, 鋼鎚竜の重殻 x5, 赤甲獣の剛爪 x3
-Uragaan Z Faulds : 鋼鎚竜の重耐熱殻 x3, 鋼鎚竜の厚鱗 x4, 鋼鎚竜の重殻 x4, 真紅蓮石 x2
-Uragaan Z Greaves : 鋼鎚竜の重殻 x5, 鋼鎚竜の厚鱗 x4, 鋼鎚竜の重顎 x1, ピュアクリスタル x1
-Uragaan Z Cap : 鋼鎚竜の重殻 x5, 爆鎚竜の紅玉 x2, 大竜玉 x1, マボロシチョウ x2
-Uragaan Z Vest : 鋼鎚竜の重顎 x2, 鋼鎚竜の重耐熱殻 x2, 鋼鎚竜の厚鱗 x5, メランジェ鉱石 x3
-Uragaan Z Guards : 鋼鎚竜の厚鱗 x4, 爆鎚竜の天殻 x1, 鋼鎚竜の重殻 x5, 赤甲獣の剛爪 x3
-Uragaan Z Coat : 鋼鎚竜の重耐熱殻 x3, 鋼鎚竜の厚鱗 x4, 鋼鎚竜の重殻 x4, 真紅蓮石 x2
-Uragaan Z Leggings : 鋼鎚竜の重殻 x5, 鋼鎚竜の厚鱗 x4, 鋼鎚竜の重顎 x1, ピュアクリスタル x1
-Jinouga X Helm : 雷狼竜の剛角 x2, 雷狼竜の雷電殻 x2, 雷狼竜の重殻 x2, 大竜玉 x1
-Jinouga X Mail : 雷狼竜の雷電毛 x4, 雷狼竜の重殻 x3, 雷狼竜の天玉 x1, 超電雷光虫 x10
-Jinouga X Vambraces : 雷狼竜の剛爪 x3, 雷狼竜の雷電殻 x2, 雷狼竜の雷電毛 x2, 極上の毛皮 x2
-Jinouga X Faulds : 雷狼竜の重殻 x3, 雷狼竜の雷電毛 x2, 雷狼竜の靭尾 x1, 雷狼竜の天玉 x1
-Jinouga X Greaves : 雷狼竜の重殻 x3, 雷狼竜の剛爪 x3, 雷狼竜の雷電殻 x3, 雷電袋 x3
-Jinouga X Cap : 雷狼竜の剛角 x2, 雷狼竜の雷電殻 x2, 雷狼竜の重殻 x2, 大竜玉 x1
-Jinouga X Vest : 雷狼竜の雷電毛 x4, 雷狼竜の重殻 x3, 雷狼竜の天玉 x1, 超電雷光虫 x10
-Jinouga X Guards : 雷狼竜の剛爪 x3, 雷狼竜の雷電殻 x2, 雷狼竜の雷電毛 x2, 極上の毛皮 x2
-Jinouga X Coat : 雷狼竜の重殻 x3, 雷狼竜の雷電毛 x2, 雷狼竜の靭尾 x1, 雷狼竜の天玉 x1
-Jinouga X Leggings : 雷狼竜の重殻 x3, 雷狼竜の剛爪 x3, 雷狼竜の雷電殻 x3, 雷電袋 x3
-Jinouga Z Helm : 獄狼竜の剛角 x3, 獄狼竜の重殻 x4, 獄狼竜の龍毛 x3, 古龍の血 x3
-Jinouga Z Mail : 獄狼竜の重殻 x4, 獄狼竜の龍殻 x3, 獄狼竜の天玉 x1, 蝕龍蟲 x5
-Jinouga Z Vambraces : 獄狼竜の剛爪 x5, 獄狼竜の龍殻 x4, 獄狼竜の龍毛 x3, 飛甲虫の斬羽 x3
-Jinouga Z Faulds : 獄狼竜の重殻 x4, 獄狼竜の靭尾 x1, 獄狼竜の龍毛 x4, 獄狼竜の天玉 x1
-Jinouga Z Greaves : 獄狼竜の剛爪 x4, 獄狼竜の重殻 x4, 獄狼竜の龍殻 x5, 蝕龍蟲 x5
-Jinouga Z Cap : 獄狼竜の剛角 x3, 獄狼竜の重殻 x4, 獄狼竜の龍毛 x3, 古龍の血 x3
-Jinouga Z Vest : 獄狼竜の重殻 x4, 獄狼竜の龍殻 x3, 獄狼竜の天玉 x1, 蝕龍蟲 x5
-Jinouga Z Guards : 獄狼竜の剛爪 x5, 獄狼竜の龍殻 x4, 獄狼竜の龍毛 x3, 飛甲虫の斬羽 x3
-Jinouga Z Coat : 獄狼竜の重殻 x4, 獄狼竜の靭尾 x1, 獄狼竜の龍毛 x4, 獄狼竜の天玉 x1
-Jinouga Z Leggings : 獄狼竜の剛爪 x4, 獄狼竜の重殻 x4, 獄狼竜の龍殻 x5, 蝕龍蟲 x5
-Dober X Helm : 太古の龍骨 x3, 尾槌竜の剛角 x1, 重竜骨 x4, 古龍の血 x3
-Dober X Mail : 太古の龍骨 x3, 堅牢な黒巻き角 x2, 堅牢な鳥竜骨 x5, 重厚な牙 x5
-Dober X Vambraces : 太古の龍骨 x3, 白海竜の上鱗 x2, 草食竜の重骨 x5, 大竜玉 x2
-Dober X Coil : 太古の龍骨 x3, 獄狼竜の剛爪 x3, 重竜骨 x3, 幻鳥竜玉 x3
-Dober X Greaves : 太古の龍骨 x3, 凍戈竜の剛爪 x2, 堅牢な鳥竜骨 x5, 重厚な骨 x10
-Dober X Cap : 太古の龍骨 x3, 尾槌竜の剛角 x1, 重竜骨 x4, 古龍の血 x3
-Dober X Vest : 太古の龍骨 x3, 堅牢な黒巻き角 x2, 堅牢な鳥竜骨 x5, 重厚な牙 x5
-Dober X Guards : 太古の龍骨 x3, 白海竜の上鱗 x2, 草食竜の重骨 x5, 大竜玉 x2
-Dober X Coat : 太古の龍骨 x3, 獄狼竜の剛爪 x3, 重竜骨 x3, 幻鳥竜玉 x3
-Dober X Leggings : 太古の龍骨 x3, 凍戈竜の剛爪 x2, 堅牢な鳥竜骨 x5, 重厚な骨 x10
-Damascus X Helm : 霊山龍の重蒼鱗 x4, 桜火竜の厚鱗 x4, 雌火竜の秘棘 x2, 峯山龍の堅岩殻 x3
-Damascus X Mail : 神々しい龍牙 x2, 蒼火竜の重殻 x3, 恐暴竜の唾液 x2, 峯山龍の上蒼鱗 x4
-Damascus X Vambraces : 霊山龍の重蒼鱗 x4, 蒼火竜の厚鱗 x4, 恐暴竜の厚黒鱗 x3, 峯山龍の堅岩殻 x3
-Damascus X Coil : 霊山龍の重岩殻 x3, 桜火竜の厚鱗 x4, 蒼火竜の厚鱗 x4, 猛々しい龍鋭牙 x2
-Damascus X Greaves : 霊山龍の重岩殻 x3, 桜火竜の重殻 x3, 蒼火竜の靭尾 x2, 峯山龍の上蒼鱗 x4
-Damascus X Cap : 霊山龍の重蒼鱗 x4, 桜火竜の厚鱗 x4, 雌火竜の秘棘 x2, 峯山龍の堅岩殻 x3
-Damascus X Vest : 神々しい龍牙 x2, 蒼火竜の重殻 x3, 恐暴竜の唾液 x2, 峯山龍の上蒼鱗 x4
-Damascus X Guards : 霊山龍の重蒼鱗 x4, 蒼火竜の厚鱗 x4, 恐暴竜の厚黒鱗 x3, 峯山龍の堅岩殻 x3
-Damascus X Coat : 霊山龍の重岩殻 x3, 桜火竜の厚鱗 x4, 蒼火竜の厚鱗 x4, 猛々しい龍鋭牙 x2
-Damascus Leggings : 霊山龍の重岩殻 x3, 桜火竜の重殻 x3, 蒼火竜の靭尾 x2, 峯山龍の上蒼鱗 x4
-Vangis X Helm : 恐暴竜の厚黒鱗 x2, 恐暴竜の厚黒皮 x4, 恐暴竜の頭殻 x2, 琥珀色の重牙 x2
-Vangis X Mail : 極悪な牙 x2, 恐暴竜の剛鉤爪 x4, 恐暴竜の厚黒皮 x5, 雷狼竜の天玉 x1
-Vangis X Vambraces : 恐暴竜の厚黒鱗 x6, 極悪な牙 x2, 恐暴竜の滅鱗 x1, 迅竜の靱尾 x2
-Vangis X Coil : 恐暴竜の厚黒皮 x4, ドス黒い血 x4, 恐暴竜の重尾 x2, 尾鎚竜の仙骨 x2
-Vangis X Greaves : 恐暴竜の剛鉤爪 x4, 恐暴竜の厚黒鱗 x6, 恐暴竜の厚黒皮 x2, 爆鎚竜の紅玉 x1
-Vangis X Cap : 恐暴竜の厚黒鱗 x2, 恐暴竜の厚黒皮 x4, 恐暴竜の頭殻 x2, 琥珀色の重牙 x2
-Vangis X Vest : 極悪な牙 x2, 恐暴竜の剛鉤爪 x4, 恐暴竜の厚黒皮 x5, 雷狼竜の天玉 x1
-Vangis X Guards : 恐暴竜の厚黒鱗 x6, 極悪な牙 x2, 恐暴竜の滅鱗 x1, 迅竜の靱尾 x2
-Vangis X Coat : 恐暴竜の厚黒皮 x4, ドス黒い血 x4, 恐暴竜の重尾 x2, 尾鎚竜の仙骨 x2
-Vangis X Leggings : 恐暴竜の剛鉤爪 x4, 恐暴竜の厚黒鱗 x6, 恐暴竜の厚黒皮 x2, 爆鎚竜の紅玉 x1
-Moonlight Crown : 月迅竜の重牙 x3, 月迅竜の豪斑毛 x3, 朧月の欠片 x1, 霊水晶 x2
-Moonlight Garment : 月迅竜の厚鱗 x4, 月迅竜の透刃翼 x4, 月迅竜の豪斑毛 x3, 迅竜の天鱗 x2
-Moonlight Gauntlets : 月迅竜の豪斑毛 x6, 月迅竜の重尾棘 x4, 月迅竜の透刃翼 x4, ピュアクリスタル x4
-Moonlight Obi : 月迅竜の厚鱗 x3, 月迅竜の重牙 x3, 迅竜の靭尾 x2, ドボルストーン x1
-Moonlight Gosuku : 月迅竜の厚鱗 x2, 月迅竜の重尾棘 x4, 朧月の欠片 x1, マボロシチョウ x5
-White Shadow Crown : 月迅竜の重牙 x3, 月迅竜の豪斑毛 x3, 朧月の欠片 x1, 霊水晶 x2
-White Shadow Garment : 月迅竜の厚鱗 x4, 月迅竜の透刃翼 x4, 月迅竜の豪斑毛 x3, 迅竜の天鱗 x2
-White Shadow Guantlets : 月迅竜の豪斑毛 x6, 月迅竜の重尾棘 x4, 月迅竜の透刃翼 x4, ピュアクリスタル x4
-White Shadow Obi : 月迅竜の厚鱗 x3, 月迅竜の重牙 x3, 迅竜の靭尾 x2, ドボルストーン x1
-White Shadow Gosuku : 月迅竜の厚鱗 x2, 月迅竜の重尾棘 x4, 朧月の欠片 x1, マボロシチョウ x5
-Silver Sol Helm : 銀火竜の厚鱗 x5, 火竜の天鱗 x1, 火竜の煌液 x3, ピュアクリスタル x1
-Silver Sol Mail : 銀火竜の重殻 x5, 銀火竜の厚鱗 x6, 火竜の剛翼 x3, 重竜骨 x3
-Silver Sol Vambraces : 銀火竜の靭尾 x1, 火竜の延髄 x2, 火竜の剛翼爪 x4, 真紅蓮石 x3
-Silver Sol Faulds : 銀火竜の重殻 x5, 火竜の剛翼 x3, 火竜の紅玉 x2, 業炎袋 x3
-Silver Sol Greaves : 銀火竜の重殻 x5, 銀火竜の厚鱗 x5, 火竜の煌液 x4, ピュアクリスタル x1
-Silver Sol Cap : 銀火竜の厚鱗 x5, 火竜の天鱗 x1, 火竜の煌液 x3, ピュアクリスタル x1
-Silver Sol Vest : 銀火竜の重殻 x5, 銀火竜の厚鱗 x6, 火竜の剛翼 x3, 重竜骨 x3
-Silver Sol Guards : 銀火竜の靭尾 x1, 火竜の延髄 x2, 火竜の剛翼爪 x4, 真紅蓮石 x3
-Silver Sol Coat : 銀火竜の重殻 x5, 火竜の剛翼 x3, 火竜の紅玉 x2, 業炎袋 x3
-Silver Sol Leggings : 銀火竜の重殻 x5, 銀火竜の厚鱗 x5, 火竜の煌液 x4, ピュアクリスタル x1
-Gold Luna Helm : 金火竜の秘棘 x3, 金火竜の重殻 x5, 火竜の煌液 x3, 業炎袋 x3
-Gold Luna Mail : 金火竜の厚鱗 x5, 火竜の延髄 x5, 雌火竜の紅玉 x2, メランジェ鉱石 x4
-Gold Luna Vambraces : 金火竜の重殻 x5, 火竜の剛翼爪 x4, 雌火竜の天鱗 x1, 獄炎石 x4
-Gold Luna Faulds : 金火竜の厚鱗 x5, 雌火竜の天鱗 x1, 火竜の煌液 x3, 真紅蓮石 x3
-Gold Luna Greaves : 金火竜の重殻 x5, 金火竜の厚鱗 x4, 重竜骨 x5, 大竜玉 x2
-Gold Luna Cap : 金火竜の秘棘 x3, 金火竜の重殻 x5, 火竜の煌液 x3, 業炎袋 x3
-Gold Luna Vest : 金火竜の厚鱗 x5, 火竜の延髄 x5, 雌火竜の紅玉 x2, メランジェ鉱石 x4
-Gold Luna Guards : 金火竜の重殻 x5, 火竜の剛翼爪 x4, 雌火竜の天鱗 x1, 獄炎石 x4
-Gold Luna Coat : 金火竜の厚鱗 x5, 雌火竜の天鱗 x1, 火竜の煌液 x3, 真紅蓮石 x3
-Gold Luna Leggings : 金火竜の重殻 x5, 金火竜の厚鱗 x4, 重竜骨 x5, 大竜玉 x2
-Yamato Kabuto+/Hinata Hachigane+ : 霊山龍の重岩殻 x4, 皇海龍の豪鎧毛 x4, 霊水晶 x2, 恐暴竜の剛鉤爪 x1
-Yamato Muneate+/Hinata Muneate+ : 神々しい龍牙 x2, 皇海龍の厚鱗 x6, 大地の龍神玉 x1, 巨大なヒレ x4
-Yamato Kote+/Hinata Kote+ : 霊山龍の重腕甲 x4, 神々しい龍牙 x3, 獄狼竜の重殻 x5, メランジェ鉱石 x5
-Yamato Koshiate+/Hinata Koshiate+ : 霊山龍の重岩殻 x4, 皇海龍の重甲皮 x5, 古龍の血 x4, 極悪な牙 x1
-Yamato Gusoku+/Hinata Hakama+ : 霊山龍の重蒼鱗 x5, 霊水晶 x2, 獄狼竜の剛爪 x4, ピュアクリスタル x2
-Mutsu Eboshi+/Amagi Hachigane+ : 霊山龍の重岩殻 x4, 皇海龍の豪鎧毛 x4, 霊水晶 x2, 恐暴竜の剛鉤爪 x1
-Mutsu Muneate+/Amagi Muneate+ : 神々しい龍牙 x2, 皇海龍の厚鱗 x6, 大地の龍神玉 x1, 巨大なヒレ x4
-Mutsu Kote+/Amagi Kote+ : 霊山龍の重腕甲 x4, 神々しい龍牙 x3, 獄狼竜の重殻 x5, メランジェ鉱石 x5
-Mutsu Koshiate+/Amagi Koshiate+ : 霊山龍の重岩殻 x4, 皇海龍の重甲皮 x5, 古龍の血 x4, 極悪な牙 x1
-Mutsu Gosuku+/Amagi Hakama+ : 霊山龍の重蒼鱗 x5, 霊水晶 x2, 獄狼竜の剛爪 x4, ピュアクリスタル x2
-Abyss Helm : 冥海竜の剛角 x2, 冥海竜の厚鱗 x4, 冥海竜の雷魂 x1, 海竜の蒼天鱗 x1
-Abyss Mail : 冥海竜の厚皮 x4, 冥海竜の剛角 x3, 海竜の剛尾 x2, 大地の龍神玉 x1
-Abyss Vambraces : 冥海竜の厚鱗 x5, 海竜の剛爪 x3, 冥海竜の雷魂 x1, 雷狼竜の天玉 x1
-Abyss Faulds : 冥海竜の厚皮 x4, 冥海竜の雷電殻 x4, 海竜の剛尾 x2, 深淵の皇龍玉 x1
-Abyss Greaves : 冥海竜の厚鱗 x5, 冥海竜の雷電殻 x2, 霊水晶 x1, 朧月の欠片 x1
-Abyss Cap : 冥海竜の剛角 x2, 冥海竜の厚鱗 x4, 冥海竜の雷魂 x1, 海竜の蒼天鱗 x1
-Abyss Vest : 冥海竜の厚皮 x4, 冥海竜の剛角 x3, 海竜の剛尾 x2, 大地の龍神玉 x1
-Abyss Guards : 冥海竜の厚鱗 x5, 海竜の剛爪 x3, 冥海竜の雷魂 x1, 雷狼竜の天玉 x1
-Abyss Coat : 冥海竜の厚皮 x4, 冥海竜の雷電殻 x4, 海竜の剛尾 x2, 深淵の皇龍玉 x1
-Abyss Leggings : 冥海竜の厚鱗 x5, 冥海竜の雷電殻 x2, 霊水晶 x1, 朧月の欠片 x1
-Miraruma Head : 煉黒龍の燃殻 x4, 煉黒龍の凶眼 x2, ほとばしるマグマ x4, 大地を穿つ剛角 x1
-Miraruma Hide : 煉黒龍の黒鱗 x5, 不死の心臓 x3, 煉黒龍の重翼 x2, 砕竜の天殻 x1
-Miraruma Claws : 煉黒龍の燃殻 x4, 煉黒龍の灼熱核 x4, 光炎の大龍玉 x1, 蒼火竜の重殻 x10
-Miraruma Spine : 煉黒龍の黒鱗 x5, 煉黒龍の燃殻 x4, 煉黒龍の炎爪 x2, 大竜玉 x5
-Miraruma Feet : 煉黒龍の燃殻 x4, 煉黒龍の炎爪 x3, 光炎の大龍玉 x1, 桜火竜の重殻 x10
-Miraruma Face : 煉黒龍の燃殻 x4, 煉黒龍の凶眼 x2, ほとばしるマグマ x4, 大地を穿つ剛角 x1
-Miraruma Skin : 煉黒龍の黒鱗 x5, 不死の心臓 x3, 煉黒龍の重翼 x2, 砕竜の天殻 x1
-Miraruma Fists : 煉黒龍の燃殻 x4, 煉黒龍の灼熱核 x4, 光炎の大龍玉 x1, 蒼火竜の重殻 x10
-Miraruma Scale : 煉黒龍の黒鱗 x5, 煉黒龍の燃殻 x4, 煉黒龍の炎爪 x2, 大竜玉 x5
-Miraruma Legs : 煉黒龍の燃殻 x4, 煉黒龍の炎爪 x3, 光炎の大龍玉 x1, 桜火竜の重殻 x10
-Crow Lily Jacket : 武装への招待状 x1, 土砂竜の堅殻 x4, 白海竜の厚皮 x4, 迅竜の上黒毛 x4
-Crow Lily Belt : 武装への招待状 x1, 土砂竜の尻尾 x2, 海竜の尻尾 x2, 迅竜の尻尾 x2
-Crow Lily Jeans : 武装への招待状 x1, 土砂竜の鋭爪 x5, 白海竜の上鱗 x5, 迅竜の上鱗 x6
-Crow Lily Jumper : 武装への招待状 x1, 土砂竜の堅殻 x4, 白海竜の厚皮 x4, 迅竜の上黒毛 x4
-Crow Lily Buckle : 武装への招待状 x1, 土砂竜の尻尾 x2, 海竜の尻尾 x2, 迅竜の尻尾 x2
-Crow Lily Denim : 武装への招待状 x1, 土砂竜の鋭爪 x5, 白海竜の上鱗 x5, 迅竜の上鱗 x6
-Chakra Earring : エルトライト鉱石 x3, ピュアクリスタル x2
-Chakra Necklace : エルトライト鉱石 x3, ピュアクリスタル x2
-Chakra Bracelet : エルトライト鉱石 x3, ピュアクリスタル x2
-Chakra Waistlet : エルトライト鉱石 x3, ピュアクリスタル x2
-Chakra Anklet : エルトライト鉱石 x3, ピュアクリスタル x2
-Jaggi Mask : 狗竜の頭 x1, 狗竜の皮 x3, 王者のエリマキ x1, 紅蓮石 x2
-Gagua Mask : 丸鳥の羽 x7, カブレライト鉱石 x5
-Bullfango Mask : 上質な毛皮 x6, ファンゴの頭 x1, ファンゴの毛皮 x1, 竜骨【大】 x2
-Skull Mask : 太古の龍骨 x5, 真紅蓮石 x3, なぞの骨 x10, 覇王の証 x1
-Skull Head : 太古の龍骨 x5, 真紅蓮石 x3, なぞの骨 x10, 覇王の証 x1
-HellHunter Jacket : 武装への招待状 x2, 土砂竜の鋭爪 x5, 上質な毛皮 x6, 勇気の証 x1
-HellHunter Leather : 武装への招待状 x2, 土砂竜の鋭爪 x5, 上質な毛皮 x6, 勇気の証 x1
+Alloy Helm : 3 マカライト鉱石, 2 大地の結晶, 3 鉄鉱石
+Alloy Mail : 3 マカライト鉱石, 2 シーブライト鉱石, 2 鉄鉱石
+Alloy Vambraces : 2 マカライト鉱石, 2 大地の結晶, 4 鉄鉱石
+Alloy Coil : 2 マカライト鉱石, 2 シーブライト鉱石, 3 鉄鉱石
+Alloy Greaves : 4 マカライト鉱石, 2 大地の結晶, 2 鉄鉱石
+Alloy Cap : 3 マカライト鉱石, 2 大地の結晶, 3 鉄鉱石
+Alloy Vest : 3 マカライト鉱石, 2 シーブライト鉱石, 2 鉄鉱石
+Alloy Guards : 2 マカライト鉱石, 2 大地の結晶, 4 鉄鉱石
+Alloy Coat : 2 マカライト鉱石, 2 シーブライト鉱石, 3 鉄鉱石
+Alloy Leggings : 4 マカライト鉱石, 2 大地の結晶, 2 鉄鉱石
+Bone Helm : 3 大きなヒレ, 1 なぞの頭骨, 2 とがった牙
+Bone Mail : 1 大きな骨, 4 なぞの骨, 2 とがった牙
+Bone Vambraces : 3 竜骨【小】, 3 なぞの骨, 2 とがった牙
+Bone Faulds : 3 竜骨【小】, 3 棒状の骨, 2 とがった牙
+Bone Greaves : 2 竜骨【中】, 2 棒状の骨, 4 なぞの骨
+Bone Cap : 3 大きなヒレ, 1 なぞの頭骨, 2 とがった牙
+Bone Vest : 1 大きな骨, 4 なぞの骨, 2 とがった牙
+Bone Guards : 3 竜骨【小】, 3 なぞの骨, 2 とがった牙
+Bone Coat : 3 竜骨【小】, 3 棒状の骨, 2 とがった牙
+Bone Leggings : 2 竜骨【中】, 2 棒状の骨, 4 なぞの骨
+Bnahabra Hat : 2 飛甲虫の甲殻, 3 飛甲虫の羽, 1 キラビートル, 2 セッチャクロアリ
+Bnahabra Suit : 2 飛甲虫の甲殻, 3 飛甲虫の羽, 2 モンスターの体液, 1 キラビートル
+Bnahabra Glove : 3 飛甲虫の羽, 2 飛甲虫の甲殻, 5 飛甲虫の麻痺針, 2 キラビートル
+Bnahabra Coil : 3 飛甲虫の羽, 2 飛甲虫の甲殻, 1 モンスターの体液, 2 キラビートル
+Bnahabra Boots : 2 飛甲虫の甲殻, 3 飛甲虫の羽, 2 キラビートル, 3 セッチャクロアリ
+Bnahabra Cap : 2 飛甲虫の甲殻, 3 飛甲虫の羽, 1 キラビートル, 2 セッチャクロアリ
+Bnahabra Vest : 2 飛甲虫の甲殻, 3 飛甲虫の羽, 2 モンスターの体液, 1 キラビートル
+Bnahabra Cuffs : 3 飛甲虫の羽, 2 飛甲虫の甲殻, 5 飛甲虫の麻痺針, 2 キラビートル
+Bnahabra Coat : 3 飛甲虫の羽, 2 飛甲虫の甲殻, 1 モンスターの体液, 2 キラビートル
+Bnahabra Pants : 2 飛甲虫の甲殻, 3 飛甲虫の羽, 2 キラビートル, 3 セッチャクロアリ
+Rhenoplos Helm : 1 草食竜の頭殻, 2 草食竜の甲殻, 2 氷結晶
+Rhenoplos Mail : 1 草食竜の頭殻, 2 草食竜の甲殻, 2 大地の結晶
+Rhenoplos Vambraces : 2 草食竜の甲殻, 4 竜骨【中】, 2 氷結晶
+Rhenoplos Coil : 2 草食竜の甲殻, 1 草食竜の頭殻, 2 大地の結晶
+Rhenoplos Greaves : 2 草食竜の甲殻, 6 竜骨【小】, 2 氷結晶
+Rhenoplos Cap : 1 草食竜の頭殻, 2 草食竜の甲殻, 2 氷結晶
+Rhenoplos Vest : 1 草食竜の頭殻, 2 草食竜の甲殻, 2 大地の結晶
+Rhenoplos Guards : 2 草食竜の甲殻, 4 竜骨【中】, 2 氷結晶
+Rhenoplos Coat : 2 草食竜の甲殻, 1 草食竜の頭殻, 2 大地の結晶
+Rhenoplos Leggings : 2 草食竜の甲殻, 6 竜骨【小】, 2 氷結晶
+Jaggi Helm : 3 狗竜の皮, 1 狗竜の爪, 2 ジャギィの鱗, 3 鉄鉱石
+Jaggi Mail : 1 王者のエリマキ, 2 狗竜の爪, 3 ジャギィの皮, 3 鉄鉱石
+Jaggi Vambraces : 2 狗竜の爪, 3 狗竜の皮, 2 ジャギィの鱗, 2 大地の結晶
+Jaggi Faulds : 2 狗竜の皮, 1 王者のエリマキ, 3 ジャギィの皮, 1 大地の結晶
+Jaggi Greaves : 4 ジャギィの皮, 3 ジャギィの鱗, 4 竜骨【小】, 2 マカライト鉱石
+Jaggi Cap : 3 狗竜の皮, 1 狗竜の爪, 2 ジャギィの鱗, 3 鉄鉱石
+Jaggi Vest : 1 王者のエリマキ, 2 狗竜の爪, 3 ジャギィの皮, 3 鉄鉱石
+Jaggi Guards : 2 狗竜の爪, 3 狗竜の皮, 2 ジャギィの鱗, 2 大地の結晶
+Jaggi Coat : 2 狗竜の皮, 1 王者のエリマキ, 3 ジャギィの皮, 1 大地の結晶
+Jaggi Leggings : 4 ジャギィの皮, 3 ジャギィの鱗, 4 竜骨【小】, 2 マカライト鉱石
+Aoashira Helm : 2 青熊獣の甲殻, 2 青熊獣の毛, 2 大きな骨, 3 セッチャクロアリ
+Aoashira Mail : 3 青熊獣の毛, 1 青熊獣の甲殻, 2 飛甲虫の甲殻, 3 光蟲
+Aoashira Vambraces : 2 青熊獣の甲殻, 1 青熊獣の腕甲, 2 青熊獣の毛, 2 甲虫の腹袋
+Aoashira Faulds : 2 青熊獣の毛, 1 青熊獣の甲殻, 1 大きな骨, 3 セッチャクロアリ
+Aoashira Greaves : 2 青熊獣の腕甲, 2 青熊獣の毛, 2 飛甲虫の甲殻, 3 光蟲
+Aoashira Cap : 2 青熊獣の甲殻, 2 青熊獣の毛, 2 大きな骨, 3 セッチャクロアリ
+Aoashira Vest : 3 青熊獣の毛, 1 青熊獣の甲殻, 2 飛甲虫の甲殻, 3 光蟲
+Aoashira Guards : 2 青熊獣の甲殻, 1 青熊獣の腕甲, 2 青熊獣の毛, 2 甲虫の腹袋
+Aoashira Coat : 2 青熊獣の毛, 1 青熊獣の甲殻, 1 大きな骨, 3 セッチャクロアリ
+Aoashira Leggings : 2 青熊獣の腕甲, 2 青熊獣の毛, 2 飛甲虫の甲殻, 3 光蟲
+Froggi Helm : 1 王者のクチバシ, 2 毒狗竜の皮, 2 フロギィの鱗, 2 キラビートル
+Froggi Mail : 2 毒狗竜の皮, 1 毒狗竜の腕甲, 3 毒袋, 5 氷結晶
+Froggi Vambraces : 2 毒狗竜の腕甲, 2 毒狗竜の皮, 2 フロギィの鱗, 3 セッチャクロアリ
+Froggi Faulds : 3 フロギィの皮, 2 フロギィの鱗, 6 竜骨【小】, 3 キラビートル
+Froggi Greaves : 2 毒狗竜の腕甲, 2 毒狗竜の皮, 3 フロギィの皮, 3 セッチャクロアリ
+Froggi Cap : 1 王者のクチバシ, 2 毒狗竜の皮, 2 フロギィの鱗, 2 キラビートル
+Froggi Vest : 2 毒狗竜の皮, 1 毒狗竜の腕甲, 3 毒袋, 5 氷結晶
+Froggi Guards : 2 毒狗竜の腕甲, 2 毒狗竜の皮, 2 フロギィの鱗, 3 セッチャクロアリ
+Froggi Coat : 3 フロギィの皮, 2 フロギィの鱗, 6 竜骨【小】, 3 キラビートル
+Froggi Leggings : 2 毒狗竜の腕甲, 2 毒狗竜の皮, 3 フロギィの皮, 3 セッチャクロアリ
+Qurupeco Helm : 2 へんなクチバシ, 2 彩鳥の羽, 2 竜骨【中】, 3 セッチャクロアリ
+Qurupeco Mail : 1 極彩色の羽根, 2 彩鳥の鱗, 2 竜骨【中】, 3 セッチャクロアリ
+Qurupeco Vambraces : 1 火打石, 2 彩鳥の羽根, 2 彩鳥の鱗, 2 雷光虫
+Qurupeco Coil : 2 彩鳥の羽根, 3 彩鳥の鱗, 4 竜骨【小】, 2 キラビートル
+Qurupeco Greaves : 2 彩鳥の鱗, 1 極彩色の羽根, 4 竜骨【小】, 2 キラビートル
+Qurupeco Cap : 2 へんなクチバシ, 2 彩鳥の羽, 2 竜骨【中】, 3 セッチャクロアリ
+Qurupeco Vest : 1 極彩色の羽根, 2 彩鳥の鱗, 2 竜骨【中】, 3 セッチャクロアリ
+Qurupeco Guards : 1 火打石, 2 彩鳥の羽根, 2 彩鳥の鱗, 2 雷光虫
+Qurupeco Coat : 2 彩鳥の羽根, 3 彩鳥の鱗, 4 竜骨【小】, 2 キラビートル
+Qurupeco Leggings : 2 彩鳥の鱗, 1 極彩色の羽根, 4 竜骨【小】, 2 キラビートル
+Ludroth Helm : 2 水獣のトサカ, 1 水獣の尻尾, 2 水獣の鱗, 3 セッチャクロアリ
+Ludroth Mail : 2 海綿質の皮, 1 水獣の爪, 3 水生獣の皮, 2 キラビートル
+Ludroth Vambraces : 1 水獣の爪, 2 水獣の鱗, 2 海綿質の皮, 2 水袋
+Ludroth Faulds : 3 水生獣の皮, 5 未熟な海綿質, 4 竜骨【小】, 2 キラビートル
+Ludroth Greaves : 2 水獣の爪, 3 水獣の鱗, 2 海綿質の皮, 3 セッチャクロアリ
+Ludroth Cap : 2 水獣のトサカ, 1 水獣の尻尾, 2 水獣の鱗, 3 セッチャクロアリ
+Ludroth Vest : 2 海綿質の皮, 1 水獣の爪, 3 水生獣の皮, 2 キラビートル
+Ludroth Guards : 1 水獣の爪, 2 水獣の鱗, 2 海綿質の皮, 2 水袋
+Ludroth Coat : 3 水生獣の皮, 5 未熟な海綿質, 4 竜骨【小】, 2 キラビートル
+Ludroth Leggings : 2 水獣の爪, 3 水獣の鱗, 2 海綿質の皮, 3 セッチャクロアリ
+Baggi Helm : 3 眠狗竜の皮, 2 眠狗竜の爪, 3 バギィの鱗, 2 アイシスメタル
+Baggi Mail : 1 王者のトサカ, 1 眠狗竜の爪, 2 バギィの皮, 2 シーブライト鉱石
+Baggi Vambraces : 2 眠狗竜の爪, 3 眠狗竜の皮, 2 バギィの皮, 2 アイシスメタル
+Baggi Coil : 2 眠狗竜の皮, 1 王者のトサカ, 3 睡眠袋, 2 シーブライト鉱石
+Baggi Greaves : 4 バギィの皮, 3 バギィの鱗, 6 竜骨【小】, 1 ライトクリスタル
+Baggi Cap : 3 眠狗竜の皮, 2 眠狗竜の爪, 3 バギィの鱗, 2 アイシスメタル
+Baggi Vest : 1 王者のトサカ, 1 眠狗竜の爪, 2 バギィの皮, 2 シーブライト鉱石
+Baggi Guards : 2 眠狗竜の爪, 3 眠狗竜の皮, 2 バギィの皮, 2 アイシスメタル
+Baggi Coat : 2 眠狗竜の皮, 1 王者のトサカ, 3 睡眠袋, 2 シーブライト鉱石
+Baggi Leggings : 4 バギィの皮, 3 バギィの鱗, 6 竜骨【小】, 1 ライトクリスタル
+Urkusus Helm : 2 白兎獣の耳, 2 大きな骨, 4 バギィの皮, 2 アイシスメタル
+Urkusus Mail : 2 白兎獣の腹甲, 2 白兎獣の毛, 4 バギィの鱗, 3 キラビートル
+Urkusus Vambraces : 2 白兎獣の氷爪, 2 白兎獣の毛, 1 白兎獣の腹甲, 4 なめらかな皮
+Urkusus Faulds : 3 白兎獣の毛, 1 白兎獣の氷爪, 2 大きな骨, 3 キラビートル
+Urkusus Greaves : 2 白兎獣の毛, 2 白兎獣の腹甲, 1 白兎獣の氷爪, 8 セッチャクロアリ
+Urkusus Cap : 2 白兎獣の耳, 2 大きな骨, 4 バギィの皮, 2 アイシスメタル
+Urkusus Vest : 2 白兎獣の腹甲, 2 白兎獣の毛, 4 バギィの鱗, 3 キラビートル
+Urkusus Guards : 2 白兎獣の氷爪, 2 白兎獣の毛, 1 白兎獣の腹甲, 4 なめらかな皮
+Urkusus Coat : 3 白兎獣の毛, 1 白兎獣の氷爪, 2 大きな骨, 3 キラビートル
+Urkusus Leggings : 2 白兎獣の毛, 2 白兎獣の腹甲, 1 白兎獣の氷爪, 8 セッチャクロアリ
+Barroth Helm : 2 土砂竜の背甲, 1 土砂竜の甲殻, 1 土砂竜の頭殻, 2 草食竜の頭殻
+Barroth Mail : 1 土砂竜の頭殻, 2 土砂竜の背甲, 2 肥沃なドロ, 2 キラビートル
+Barroth Vambraces : 2 土砂竜の爪, 2 土砂竜の甲殻, 2 肥沃なドロ, 3 草食竜の甲殻
+Barroth Faulds : 2 土砂竜の甲殻, 1 土砂竜の爪, 2 土砂竜の背甲, 5 竜骨【中】
+Barroth Greaves : 2 土砂竜の甲殻, 1 土砂竜の尻尾, 2 竜骨【大】, 3 草食竜の甲殻
+Barroth Cap : 2 土砂竜の背甲, 1 土砂竜の甲殻, 1 土砂竜の頭殻, 2 草食竜の頭殻
+Barroth Vest : 1 土砂竜の頭殻, 2 土砂竜の背甲, 2 肥沃なドロ, 2 キラビートル
+Barroth Guards : 2 土砂竜の爪, 2 土砂竜の甲殻, 2 肥沃なドロ, 3 草食竜の甲殻
+Barroth Coat : 2 土砂竜の甲殻, 1 土砂竜の爪, 2 土砂竜の背甲, 5 竜骨【中】
+Barroth Leggings : 2 土砂竜の甲殻, 1 土砂竜の尻尾, 2 竜骨【大】, 3 草食竜の甲殻
+Ranguro Helm : 2 赤甲獣の爪, 2 赤甲獣の甲殻, 2 モンスターの体液, 4 ドラグライト鉱石
+Ranguro Mail : 3 赤甲獣の甲殻, 1 赤甲獣の蛇腹甲, 2 大きな骨, 4 溶岩獣の鱗
+Ranguro Vambraces : 2 赤甲獣の爪, 2 赤甲獣の蛇腹甲, 2 大きな骨, 4 溶岩獣の鱗
+Ranguro Faulds : 3 赤甲獣の甲殻, 4 麻痺袋, 1 モンスターの体液, 1 紅蓮石
+Ranguro Greaves : 2 赤甲獣の爪, 2 赤甲獣の甲殻, 1 赤甲獣の蛇腹甲, 4 大地の結晶
+Ranguro Cap : 2 赤甲獣の爪, 2 赤甲獣の甲殻, 2 モンスターの体液, 4 ドラグライト鉱石
+Ranguro Vest : 3 赤甲獣の甲殻, 1 赤甲獣の蛇腹甲, 2 大きな骨, 4 溶岩獣の鱗
+Ranguro Guards : 2 赤甲獣の爪, 2 赤甲獣の蛇腹甲, 2 大きな骨, 4 溶岩獣の鱗
+Ranguro Coat : 3 赤甲獣の甲殻, 4 麻痺袋, 1 モンスターの体液, 1 紅蓮石
+Ranguro Leggings : 2 赤甲獣の爪, 2 赤甲獣の甲殻, 1 赤甲獣の蛇腹甲, 4 大地の結晶
+Gobul Helm : 2 灯魚竜のヒゲ, 1 提灯球, 3 灯魚竜の皮, 4 竜骨【中】
+Gobul Mail : 3 灯魚竜の皮, 2 灯魚竜のヒレ, 2 灯魚竜の棘, 3 竜骨【大】
+Gobul Vambraces : 1 灯魚竜のヒレ, 2 灯魚竜の棘, 3 灯魚竜の皮, 3 麻痺袋
+Gobul Faulds : 1 灯魚竜のヒレ, 2 灯魚竜の棘, 1 灯魚竜のヒゲ, 1 提灯球
+Gobul Greaves : 2 灯魚竜の棘, 4 灯魚竜の皮, 1 当魚竜のヒレ, 5 竜骨【中】
+Gobul Cap : 2 灯魚竜のヒゲ, 1 提灯球, 3 灯魚竜の皮, 4 竜骨【中】
+Gobul Vest : 3 灯魚竜の皮, 2 灯魚竜のヒレ, 2 灯魚竜の棘, 3 竜骨【大】
+Gobul Guards : 1 灯魚竜のヒレ, 2 灯魚竜の棘, 3 灯魚竜の皮, 3 麻痺袋
+Gobul Coat : 1 灯魚竜のヒレ, 2 灯魚竜の棘, 1 灯魚竜のヒゲ, 1 提灯球
+Gobul Leggings : 2 灯魚竜の棘, 4 灯魚竜の皮, 1 当魚竜のヒレ, 5 竜骨【中】
+Rathian Helm : 1 雌火竜の棘, 4 雌火竜の鱗, 3 雌火竜の甲殻, 5 大地の結晶
+Rathian Mail : 4 雌火竜の鱗, 3 雌火竜の翼膜, 1 火竜の骨髄, 5 マカライト鉱石
+Rathian Vambraces : 2 火竜の翼爪, 2 雌火竜の甲殻, 1 雌火竜の棘, 5 大地の結晶
+Rathian Faulds : 2 雌火竜の翼膜, 1 雌火竜の逆鱗, 2 火炎袋, 5 マカライト鉱石
+Rathian Greaves : 3 雌火竜の甲殻, 4 雌火竜の鱗, 3 竜骨【大】, 1 ライトクリスタル
+Rathian Cap : 1 雌火竜の棘, 4 雌火竜の鱗, 3 雌火竜の甲殻, 5 大地の結晶
+Rathian Vest : 4 雌火竜の鱗, 3 雌火竜の翼膜, 1 火竜の骨髄, 5 マカライト鉱石
+Rathian Guards : 2 火竜の翼爪, 2 雌火竜の甲殻, 1 雌火竜の棘, 5 大地の結晶
+Rathian Coat : 2 雌火竜の翼膜, 1 雌火竜の逆鱗, 2 火炎袋, 5 マカライト鉱石
+Rathian Leggings : 3 雌火竜の甲殻, 4 雌火竜の鱗, 3 竜骨【大】, 1 ライトクリスタル
+Gigginox Helm : 2 不気味な皮, 3 毒怪竜の皮, 2 毒袋, 3 眠狗竜の皮
+Gigginox Mail : 2 毒怪竜の爪, 3 毒怪竜の皮, 3 不気味な毒腺, 4 アイシスメタル
+Gigginox Vambraces : 4 毒怪竜の皮, 1 毒怪竜の爪, 3 不気味な毒腺, 3 竜骨【大】
+Gigginox Faulds : 4 毒怪竜の皮, 1 不気味な皮, 4 なめらかな皮, 2 眠狗竜の皮
+Gigginox Greaves : 1 おそろしいクチ, 4 なめらかな皮, 2 アルビノエキス, 1 ライトクリスタル
+Gigginox Cap : 2 不気味な皮, 3 毒怪竜の皮, 2 毒袋, 3 眠狗竜の皮
+Gigginox Vest : 2 毒怪竜の爪, 3 毒怪竜の皮, 3 不気味な毒腺, 4 アイシスメタル
+Gigginox Guards : 4 毒怪竜の皮, 1 毒怪竜の爪, 3 不気味な毒腺, 3 竜骨【大】
+Gigginox Coat : 4 毒怪竜の皮, 1 不気味な皮, 4 なめらかな皮, 2 眠狗竜の皮
+Gigginox Leggings : 1 おそろしいクチ, 4 なめらかな皮, 2 アルビノエキス, 1 ライトクリスタル
+Ingot Helm : 2 ドラグライト鉱石, 2 アイシスメタル, 1 シーブライト鉱石, 1 ライトクリスタル
+Ingot Mail : 4 ドラグライト鉱石, 1 紅蓮石, 1 シーブライト鉱石, 1 ライトクリスタル
+Ingot Vambraces : 2 ドラグライト鉱石, 2 ライトクリスタル, 1 紅蓮石, 5 マカライト鉱石
+Ingot Coil : 4 ドラグライト鉱石, 1 紅蓮石, 3 アイシスメタル, 5 マカライト鉱石
+Ingot Greaves : 3 ドラグライト鉱石, 2 アイシスメタル, 2 シーブライト鉱石, 5 マカライト鉱石
+Ingot Cap : 2 ドラグライト鉱石, 2 アイシスメタル, 1 シーブライト鉱石, 1 ライトクリスタル
+Ingot Vest : 4 ドラグライト鉱石, 1 紅蓮石, 1 シーブライト鉱石, 1 ライトクリスタル
+Ingot Guards : 2 ドラグライト鉱石, 2 ライトクリスタル, 1 紅蓮石, 5 マカライト鉱石
+Ingot Coat : 4 ドラグライト鉱石, 1 紅蓮石, 3 アイシスメタル, 5 マカライト鉱石
+Ingot Leggings : 3 ドラグライト鉱石, 2 アイシスメタル, 2 シーブライト鉱石, 5 マカライト鉱石
+Barioth Helm : 2 琥珀色の牙, 3 氷牙竜の毛皮, 2 氷牙竜の甲殻, 6 キラビートル
+Barioth Mail : 3 氷牙竜の甲殻, 1 氷牙竜の尻尾, 1 氷牙竜の棘, 3 ドスヘラクレス
+Barioth Vambraces : 1 氷牙竜の爪, 3 氷牙竜の甲殻, 4 氷結袋, 6 なめらかな皮
+Barioth Faulds : 1 琥珀色の牙, 1 氷牙竜の棘, 2 上竜骨, 4 白兎獣の腹甲
+Barioth Greaves : 4 氷牙竜の毛皮, 2 氷牙竜の甲殻, 1 氷牙竜の爪, 6 白兎獣の毛
+Barioth Cap : 2 琥珀色の牙, 3 氷牙竜の毛皮, 2 氷牙竜の甲殻, 6 キラビートル
+Barioth Vest : 3 氷牙竜の甲殻, 1 氷牙竜の尻尾, 1 氷牙竜の棘, 3 ドスヘラクレス
+Barioth Guards : 1 氷牙竜の爪, 3 氷牙竜の甲殻, 4 氷結袋, 6 なめらかな皮
+Barioth Coat : 1 琥珀色の牙, 1 氷牙竜の棘, 2 上竜骨, 4 白兎獣の腹甲
+Barioth Leggings : 4 氷牙竜の毛皮, 2 氷牙竜の甲殻, 1 氷牙竜の爪, 6 白兎獣の毛
+Hapul Helm : 1 潜口竜の頭殻, 2 潜口竜の甲殻, 5 竜骨【中】, 2 狗竜の皮
+Hapul Mail : 4 潜口竜の皮, 1 潜口竜の爪, 3 潜口竜の甲殻, 4 鮮やかな体液
+Hapul Vambraces : 2 潜口竜の爪, 2 潜口竜の甲殻, 4 鮮やかな体液, 3 甲虫の大顎
+Hapul Faulds : 3 潜口竜の皮, 1 潜口竜の頭殻, 3 竜骨【大】, 4 甲虫の腹袋
+Hapul Greaves : 3 潜口竜の甲殻, 1 潜口竜の爪, 3 潜口竜の皮, 3 甲虫の大顎
+Hapul Cap : 1 潜口竜の頭殻, 2 潜口竜の甲殻, 5 竜骨【中】, 2 狗竜の皮
+Hapul Vest : 4 潜口竜の皮, 1 潜口竜の爪, 3 潜口竜の甲殻, 4 鮮やかな体液
+Hapul Guards : 2 潜口竜の爪, 2 潜口竜の甲殻, 4 鮮やかな体液, 3 甲虫の大顎
+Hapul Coat : 3 潜口竜の皮, 1 潜口竜の頭殻, 3 竜骨【大】, 4 甲虫の腹袋
+Hapul Leggings : 3 潜口竜の甲殻, 1 潜口竜の爪, 3 潜口竜の皮, 3 甲虫の大顎
+Guild Bard Lobos/Scholar's Beret : 2 飛竜のコイン, 3 海竜のコイン, 4 牙獣のコイン, 3 赤甲獣の蛇腹甲
+Guild Bard Bolero/Scholar's Blouse : 2 飛竜のコイン, 3 海竜のコイン, 4 牙獣のコイン, 2 火竜の翼膜
+Guild Bard Braces/Scholar's Gloves : 2 飛竜のコイン, 3 海竜のコイン, 4 牙獣のコイン, 2 爆鎚竜の耐熱殻
+Guild Bard Coil/Scholar's Skirt : 2 飛竜のコイン, 3 海竜のコイン, 4 牙獣のコイン, 4 鮮やかな体液
+Guild Bard Boots/Scholar's Socks : 2 飛竜のコイン, 3 海竜のコイン, 4 牙獣のコイン, 2 氷牙竜の棘
+Guild Bard Hat/Scholar's Cap : 2 飛竜のコイン, 3 海竜のコイン, 4 牙獣のコイン, 3 赤甲獣の蛇腹甲
+Guild Bard Vest/Scholar's Vest : 2 飛竜のコイン, 3 海竜のコイン, 4 牙獣のコイン, 2 火竜の翼膜
+Guild Bard Sleeves/Scholar's Sleeves : 2 飛竜のコイン, 3 海竜のコイン, 4 牙獣のコイン, 2 爆鎚竜の耐熱殻
+Guild Bard Coat/Scholar's Mini : 2 飛竜のコイン, 3 海竜のコイン, 4 牙獣のコイン, 4 鮮やかな体液
+Guild Bard Gaiters/Scholar's Sandals : 2 飛竜のコイン, 3 海竜のコイン, 4 牙獣のコイン, 2 氷牙竜の棘
+Lagiacrus Helm : 2 海竜の角, 3 海流の皮, 3 海竜の鱗, 2 アイシスメタル
+Lagiacrus Mail : 3 海竜の皮, 1 海竜の背電殻, 4 海竜の鱗, 6 ライトクリスタル
+Lagiacrus Vambraces : 2 海竜の爪, 2 海竜の皮, 4 海竜の鱗, 2 アイシスメタル
+Lagiacrus Faulds : 1 海竜の角, 2 海流の背電殻, 4 海流の鱗, 1 アイシスメタル
+Lagiacrus Greaves : 2 海竜の鱗, 1 海竜の皮, 1 海竜の逆鱗, 1 ライトクリスタル
+Lagiacrus Cap : 2 海竜の角, 3 海流の皮, 3 海竜の鱗, 2 アイシスメタル
+Lagiacrus Vest : 3 海竜の皮, 1 海竜の背電殻, 4 海竜の鱗, 6 ライトクリスタル
+Lagiacrus Guards : 2 海竜の爪, 2 海竜の皮, 4 海竜の鱗, 2 アイシスメタル
+Lagiacrus Coat : 1 海竜の角, 2 海流の背電殻, 4 海流の鱗, 1 アイシスメタル
+Lagiacrus Leggings : 2 海竜の鱗, 1 海竜の皮, 1 海竜の逆鱗, 1 ライトクリスタル
+Rathalos Helm : 3 火竜の鱗, 3 火竜の甲殻, 1 火竜の翼爪, 3 ドラグライト鉱石
+Rathalos Mail : 2 火竜の甲殻, 4 火竜の鱗, 3 火竜の翼膜, 3 ドラグライト鉱石
+Rathalos Vambraces : 1 火竜の尻尾, 1 火竜の翼爪, 2 火竜の骨髄, 3 ドラグライト鉱石
+Rathalos Faulds : 3 火竜の翼膜, 1 火竜の逆鱗, 3 上竜骨, 1 紅蓮石
+Rathalos Greaves : 3 火竜の甲殻, 4 火竜の鱗, 2 火炎袋, 3 ドラグライト鉱石
+Rathalos Cap : 3 火竜の鱗, 3 火竜の甲殻, 1 火竜の翼爪, 3 ドラグライト鉱石
+Rathalos Vest : 2 火竜の甲殻, 4 火竜の鱗, 3 火竜の翼膜, 3 ドラグライト鉱石
+Rathalos Guards : 1 火竜の尻尾, 1 火竜の翼爪, 2 火竜の骨髄, 3 ドラグライト鉱石
+Rathalos Coat : 3 火竜の翼膜, 1 火竜の逆鱗, 3 上竜骨, 1 紅蓮石
+Rathalos Leggings : 3 火竜の甲殻, 4 火竜の鱗, 2 火炎袋, 3 ドラグライト鉱石
+Dobol Helm : 2 尾槌竜の角, 4 尾槌竜の甲殻, 3 上竜骨, 3 草食竜の甲殻
+Dobol Mail : 3 尾槌竜のコブ, 2 尾槌竜の角, 4 尾槌竜の甲殻, 4 ファンゴの毛皮
+Dobol Vambraces : 4 尾槌竜の甲殻, 2 尾槌竜の尾甲, 4 尾槌竜の苔甲, 3 草食竜の甲殻
+Dobol Faulds : 4 尾槌竜の苔甲, 4 尾槌竜の甲殻, 1 尾槌竜の尾骨, 4 フロギィの皮
+Dobol Greaves : 2 尾槌竜の尾甲, 4 尾槌竜の苔甲, 2 尾槌竜のコブ, 4 ファンゴの毛皮
+Dobol Cap : 2 尾槌竜の角, 4 尾槌竜の甲殻, 3 上竜骨, 3 草食竜の甲殻
+Dobol Vest : 3 尾槌竜のコブ, 2 尾槌竜の角, 4 尾槌竜の甲殻, 4 ファンゴの毛皮
+Dobol Guards : 4 尾槌竜の甲殻, 2 尾槌竜の尾甲, 4 尾槌竜の苔甲, 3 草食竜の甲殻
+Dobol Coat : 4 尾槌竜の苔甲, 4 尾槌竜の甲殻, 1 尾槌竜の尾骨, 4 フロギィの皮
+Dobol Leggings : 2 尾槌竜の尾甲, 4 尾槌竜の苔甲, 2 尾槌竜のコブ, 4 ファンゴの毛皮
+Diablos Helm : 2 角竜の尾甲, 4 角竜の甲殻, 2 角竜の背甲, 5 毒狗竜の皮
+Diablos Mail : 2 ねじれた角, 3 角竜の背甲, 2 角竜の甲殻, 3 毒狗竜の腕甲
+Diablos Vambraces : 3 角竜の牙, 1 角竜の骨髄, 2 ねじれた角, 3 草食竜の甲殻
+Diablos Faulds : 4 角竜の甲殻, 4 角竜の牙, 1 上質なねじれた角, 4 草食竜の頭殻
+Diablos Greaves : 3 角竜の背甲, 3 角竜の甲殻, 3 角竜の牙, 3 草食竜の甲殻
+Diablos Cap : 2 角竜の尾甲, 4 角竜の甲殻, 2 角竜の背甲, 5 毒狗竜の皮
+Diablos Vest : 2 ねじれた角, 3 角竜の背甲, 2 角竜の甲殻, 3 毒狗竜の腕甲
+Diablos Guards : 3 角竜の牙, 1 角竜の骨髄, 2 ねじれた角, 3 草食竜の甲殻
+Diablos Coat : 4 角竜の甲殻, 4 角竜の牙, 1 上質なねじれた角, 4 草食竜の頭殻
+Diablos Leggings : 3 角竜の背甲, 3 角竜の甲殻, 3 角竜の牙, 3 草食竜の甲殻
+Uragaan Helm : 3 爆鎚竜の甲殻, 1 爆鎚竜の骨髄, 4 爆鎚竜の鱗, 3 ドラグライト鉱石
+Uragaan Mail : 1 爆鎚竜の顎, 1 爆鎚竜の耐熱殻, 3 爆鎚竜の甲殻, 2 赤甲獣の甲殻
+Uragaan Vambraces : 3 爆鎚竜の鱗, 1 爆鎚竜の顎, 3 溶岩塊, 1 紅蓮石
+Uragaan Faulds : 2 爆鎚竜の耐熱殻, 3 爆鎚竜の鱗, 2 上竜骨, 3 赤甲獣の甲殻
+Uragaan Greaves : 4 爆鎚竜の甲殻, 4 爆鎚竜の鱗, 3 溶岩塊, 3 赤甲獣の蛇腹甲
+Uragaan Cap : 3 爆鎚竜の甲殻, 1 爆鎚竜の骨髄, 4 爆鎚竜の鱗, 3 ドラグライト鉱石
+Uragaan Vest : 1 爆鎚竜の顎, 1 爆鎚竜の耐熱殻, 3 爆鎚竜の甲殻, 2 赤甲獣の甲殻
+Uragaan Guards : 3 爆鎚竜の鱗, 1 爆鎚竜の顎, 3 溶岩塊, 1 紅蓮石
+Uragaan Coat : 2 爆鎚竜の耐熱殻, 3 爆鎚竜の鱗, 2 上竜骨, 3 赤甲獣の甲殻
+Uragaan Leggings : 4 爆鎚竜の甲殻, 4 爆鎚竜の鱗, 3 溶岩塊, 3 赤甲獣の蛇腹甲
+Agnaktor Helm : 5 炎戈竜の甲殻, 1 炎戈竜の碇口, 3 炎戈竜の皮, 5 ドラグライト鉱石
+Agnaktor Mail : 4 炎戈竜の皮, 2 炎戈竜のヒレ, 5 炎戈竜の甲殻, 5 毒狗竜の皮
+Agnaktor Vambraces : 8 溶岩獣の鱗, 4 竜骨【中】, 8 溶岩塊, 1 紅蓮石
+Agnaktor Faulds : 6 炎戈竜の燃鱗, 2 炎戈竜のヒレ, 1 炎戈竜の爪, 1 炎戈竜の尻尾
+Agnaktor Greaves : 1 炎戈竜の爪, 4 赤熱した胸殻, 3 炎戈竜の皮, 3 毒狗竜の腕甲
+Agnaktor Cap : 5 炎戈竜の甲殻, 1 炎戈竜の碇口, 3 炎戈竜の皮, 5 ドラグライト鉱石
+Agnaktor Vest : 4 炎戈竜の皮, 2 炎戈竜のヒレ, 5 炎戈竜の甲殻, 5 毒狗竜の皮
+Agnaktor Guards : 8 溶岩獣の鱗, 4 竜骨【中】, 8 溶岩塊, 1 紅蓮石
+Agnaktor Coat : 6 炎戈竜の燃鱗, 2 炎戈竜のヒレ, 1 炎戈竜の爪, 1 炎戈竜の尻尾
+Agnaktor Leggings : 1 炎戈竜の爪, 4 赤熱した胸殻, 3 炎戈竜の皮, 3 毒狗竜の腕甲
+Helios Helm/Selene Helm : 2 大海龍の甲皮, 2 湾曲した龍角, 2 神秘の発光体
+Helios Mail/Selene Mail : 2 大海龍の鱗, 2 大海龍の鎧毛, 1 深淵の龍玉
+Helios Vambraces/Selene Vambraces : 2 大海龍の甲皮, 2 大海龍の鱗, 1 神秘の発光体
+Helios Coil/Selene Coil : 2 大海龍の鱗, 2 大海龍の鎧毛, 1 神秘の発光体
+Helios Greaves/Selene Greaves : 2 大海龍の甲皮, 2 大海龍の鱗, 1 海竜の逆鱗
+Helios Cap/Selene Cap : 2 大海龍の甲皮, 2 湾曲した龍角, 2 神秘の発光体
+Helios Vest/Selene Vest : 2 大海龍の鱗, 2 大海龍の鎧毛, 1 深淵の龍玉
+Helios Guards/Selene Guards : 2 大海龍の甲皮, 2 大海龍の鱗, 1 神秘の発光体
+Helios Coat/Selene Coat : 2 大海龍の鱗, 2 大海龍の鎧毛, 1 神秘の発光体
+Helios Leggings/Selene Leggings : 2 大海龍の甲皮, 2 大海龍の鱗, 1 海竜の逆鱗
+Leather S Helm : 1 カブレライト鉱石, 2 暖かい毛皮, 3 ファンゴの毛皮
+Leather S Mail : 1 上質な毛皮, 1 カブレライト鉱石, 3 ファンゴの毛皮
+Leather S Vambraces : 2 上質な毛皮, 2 暖かい毛皮, 4 なめらかな皮
+Leather S Faulds : 1 カブレライト鉱石, 2 ファンゴの頭, 3 ファンゴの毛皮
+Leather S Greaves : 2 上質な毛皮, 2 暖かい毛皮, 4 なめらかな皮
+Leather S Cap : 1 カブレライト鉱石, 2 暖かい毛皮, 3 ファンゴの毛皮
+Leather S Vest : 1 上質な毛皮, 1 カブレライト鉱石, 3 ファンゴの毛皮
+Leather S Guards : 2 上質な毛皮, 2 暖かい毛皮, 4 なめらかな皮
+Leather S Coat : 1 カブレライト鉱石, 2 ファンゴの頭, 3 ファンゴの毛皮
+Leather S Legging : 2 上質な毛皮, 2 暖かい毛皮, 4 なめらかな皮
+Yukumo - Sky Kasa : 1 王族カナブン, 5 暖かい毛皮, 5 丸鳥の羽
+Yukumo - Sky Dogi : 2 王族カナブン, 3 暖かい毛皮, 3 丸鳥の羽
+Yukumo - Sky Kote : 2 王族カナブン, 3 暖かい毛皮, 3 丸鳥の羽
+Yukumo - Sky Obi : 1 王族カナブン, 5 暖かい毛皮, 2 カブレライト鉱石
+Yukumo - Sky Hakama : 2 王族カナブン, 3 ファンゴの毛皮, 2 暖かい毛皮
+Yukumo - Earth Kasa : 1 王族カナブン, 5 暖かい毛皮, 5 丸鳥の羽
+Yukumo - Earth Dogi : 2 王族カナブン, 3 暖かい毛皮, 3 丸鳥の羽
+Yukumo - Earth Kote : 2 王族カナブン, 3 暖かい毛皮, 3 丸鳥の羽
+Yukumo - Earth Obi : 1 王族カナブン, 5 暖かい毛皮, 2 カブレライト鉱石
+Yukumo - Earth Hakama : 2 王族カナブン, 3 ファンゴの毛皮, 2 暖かい毛皮
+Chainmail S Helm : 1 カブレライト鉱石, 2 マカライト鉱石, 5 鉄鉱石
+Chainmail S Armor : 2 カブレライト鉱石, 1 シーブライト鉱石, 2 大地の結晶, 2 王族カナブン
+Chainmail S Vambraces : 2 カブレライト鉱石, 2 アイシスメタル, 2 大地の結晶
+Chainmail S Faulds : 1 カブレライト鉱石, 1 シーブライト鉱石, 2 大地の結晶, 2 王族カナブン
+Chainmail S Greaves : 2 カブレライト鉱石, 2 マカライト鉱石, 5 鉄鉱石
+Chainmail S Cap : 1 カブレライト鉱石, 2 マカライト鉱石, 5 鉄鉱石
+Chainmail S Vest : 2 カブレライト鉱石, 1 シーブライト鉱石, 2 大地の結晶, 2 王族カナブン
+Chainmail S Guards : 2 カブレライト鉱石, 2 アイシスメタル, 2 大地の結晶
+Chainmail S Coat : 1 カブレライト鉱石, 1 シーブライト鉱石, 2 大地の結晶, 2 王族カナブン
+Chainmail S Leggings : 2 カブレライト鉱石, 2 マカライト鉱石, 5 鉄鉱石
+Loc Lac S Shawl : 1 上質な腹袋, 2 モンスターの濃汁, 5 氷結晶
+Loc Lac S Kilt : 2 上質な腹袋, 3 甲虫の大顎, 4 モンスターの体液
+Loc Lac S Boots : 3 上質な腹袋, 3 甲虫の大顎, 3 アイシスメタル
+Loc Lac S Vest : 1 上質な腹袋, 2 モンスターの濃汁, 5 氷結晶
+Loc Lac S Coat : 2 上質な腹袋, 3 甲虫の大顎, 4 モンスターの体液
+Loc Lac S Gaiters : 3 上質な腹袋, 3 甲虫の大顎, 3 アイシスメタル
+Hunter's S Helm : 2 デプスライト鉱石, 2 王族カナブン, 5 マカライト鉱石, 5 鉄鉱石
+Hunter's S Mail : 1 カブレライト鉱石, 3 ジャギィの上鱗, 3 アイシスメタル, 5 鉄鉱石
+Hunter's S Vambraces : 2 デプスライト鉱石, 2 ジャギィの上鱗, 2 大地の結晶, 2 竜骨【大】
+Hunter's S Faulds : 3 上質な毛皮, 1 ファンゴの頭, 5 ファンゴの毛皮, 5 ドラグライト鉱石
+Hunter's S Greaves : 1 カブレライト鉱石, 2 ファンゴの毛皮, 3 アイシスメタル, 2 大地の結晶
+Hunter's S Cap : 2 デプスライト鉱石, 2 王族カナブン, 5 マカライト鉱石, 5 鉄鉱石
+Hunter's S Vest : 1 カブレライト鉱石, 3 ジャギィの上鱗, 3 アイシスメタル, 5 鉄鉱石
+Hunter's S Guards : 2 デプスライト鉱石, 2 ジャギィの上鱗, 2 大地の結晶, 2 竜骨【大】
+Hunter's S Coat : 3 上質な毛皮, 1 ファンゴの頭, 5 ファンゴの毛皮, 5 ドラグライト鉱石
+Hunter's S Leggings : 1 カブレライト鉱石, 2 ファンゴの毛皮, 3 アイシスメタル, 2 大地の結晶
+Piscine S Mask : 5 上質な鳥竜骨, 3 ケルビの蒼角, 10 イキツギ藻
+Piscine S Blet : 2 上質なヒレ, 3 未熟な海綿質, 2 シーブライト鉱石
+Piscine S Leggings : 4 上質なヒレ, 5 水生獣の皮, 5 カブレライト鉱石
+Piscine S Snorkel : 5 上質な鳥竜骨, 3 ケルビの蒼角, 10 イキツギ藻
+Piscine S Tank : 2 上質なヒレ, 3 未熟な海綿質, 2 シーブライト鉱石
+Piscine S Pants : 4 上質なヒレ, 5 水生獣の皮, 5 カブレライト鉱石
+Bone S Helm : 2 上質な鳥竜骨, 3 上質なヒレ, 3 なぞの頭骨
+Bone S Mail : 1 堅牢な骨, 5 竜骨【小】, 5 とがった牙
+Bone S Vambraces : 2 上質な鳥竜骨, 1 竜骨【大】, 5 とがった牙
+Bone S Faulds : 1 堅牢な骨, 2 竜骨【中】, 10 なぞの骨
+Bone S Greaves : 2 上質な鳥竜骨, 3 上質なヒレ, 2 上竜骨
+Bone S Cap : 2 上質な鳥竜骨, 3 上質なヒレ, 3 なぞの頭骨
+Bone S Vest : 1 堅牢な骨, 5 竜骨【小】, 5 とがった牙
+Bone S Guards : 2 上質な鳥竜骨, 1 竜骨【大】, 5 とがった牙
+Bone S Coat : 1 堅牢な骨, 2 竜骨【中】, 10 なぞの骨
+Bone S Leggings : 2 上質な鳥竜骨, 3 上質なヒレ, 2 上竜骨
+Alloy S Helm : 1 デプスライト鉱石, 1 カブレライト鉱石, 5 ドラグライト鉱石, 3 シーブライト鉱石
+Alloy S Mail : 2 デプスライト鉱石, 2 カブレライト鉱石, 7 マカライト鉱石, 10 鉄鉱石
+Alloy S Vambraces : 2 デプスライト鉱石, 3 カブレライト鉱石, 7 マカライト鉱石, 7 大地の結晶
+Alloy S Coil : 1 デプスライト鉱石, 2 カブレライト鉱石, 5 ドラグライト鉱石, 5 シーブライト鉱石
+Alloy S Greaves : 3 デプスライト鉱石, 3 カブレライト鉱石, 3 紅蓮石, 5 アイシスメタル
+Alloy S Cap : 1 デプスライト鉱石, 1 カブレライト鉱石, 5 ドラグライト鉱石, 3 シーブライト鉱石
+Alloy S Vest : 2 デプスライト鉱石, 2 カブレライト鉱石, 7 マカライト鉱石, 10 鉄鉱石
+Alloy S Guards : 2 デプスライト鉱石, 3 カブレライト鉱石, 7 マカライト鉱石, 7 大地の結晶
+Alloy S Coat : 1 デプスライト鉱石, 2 カブレライト鉱石, 5 ドラグライト鉱石, 5 シーブライト鉱石
+Alloy S Leggings : 3 デプスライト鉱石, 3 カブレライト鉱石, 3 紅蓮石, 5 アイシスメタル
+Bnahabra S Hat : 2 飛甲虫の堅殻, 3 飛甲虫の甲殻, 2 飛甲虫の麻痺針, 2 王族カナブン
+Bnahabra S Suit : 2 飛甲虫の堅殻, 3 飛甲虫の甲殻, 2 モンスターの濃汁, 2 王族カナブン
+Bnahabra S Glove : 2 飛甲虫の堅殻, -2 飛甲虫の羽, 2 上質な腹袋, 3 モンスターの体液
+Bnahabra S Coil : 2 飛甲虫の堅殻, 4 飛甲虫の羽, 1 モンスターの濃汁, 2 王族カナブン
+Bnahabra S Boots : 2 飛甲虫の堅殻, 4 飛甲虫の羽, 1 上質な腹袋, 3 モンスターの体液
+Bnahabra S Cap : 2 飛甲虫の堅殻, 3 飛甲虫の甲殻, 2 飛甲虫の麻痺針, 2 王族カナブン
+Bnahabra S Vest : 2 飛甲虫の堅殻, 3 飛甲虫の甲殻, 2 モンスターの濃汁, 2 王族カナブン
+Bnahabra S Cuffs : 2 飛甲虫の堅殻, -2 飛甲虫の羽, 2 上質な腹袋, 3 モンスターの体液
+Bnahabra S Coat : 2 飛甲虫の堅殻, 4 飛甲虫の羽, 1 モンスターの濃汁, 2 王族カナブン
+Bnahabra S Pants : 2 飛甲虫の堅殻, 4 飛甲虫の羽, 1 上質な腹袋, 3 モンスターの体液
+Rhenoplos S Helm : 3 草食竜の堅殻, 1 草食竜の頭殻, 3 氷結晶
+Rhenoplos S Mail : 1 草食竜の堅殻, 1 草食竜の頭殻, 2 カブレライト鉱石
+Rhenoplos S Vambraces : 3 草食竜の堅殻, 4 竜骨【中】, 3 氷結晶
+Rhenoplos S Coil : 1 草食竜の堅殻, 1 草食竜の頭殻, 3 氷結晶
+Rhenoplos S Greaves : 3 草食竜の堅殻, 6 竜骨【小】, 2 カブレライト鉱石
+Rhenoplos S Cap : 3 草食竜の堅殻, 1 草食竜の頭殻, 3 氷結晶
+Rhenoplos S Vest : 1 草食竜の堅殻, 1 草食竜の頭殻, 2 カブレライト鉱石
+Rhenoplos S Guards : 3 草食竜の堅殻, 4 竜骨【中】, 3 氷結晶
+Rhenoplos S Coat : 1 草食竜の堅殻, 1 草食竜の頭殻, 3 氷結晶
+Rhenoplos S Leggings : 3 草食竜の堅殻, 6 竜骨【小】, 2 カブレライト鉱石
+Zuwaroposu Hood : 2 垂皮竜の上皮, 2 デプスライト鉱石, 3 ファンゴの毛皮
+Zuwaroposu Mantle : 4 垂皮竜の皮, 1 デプスライト鉱石, 3 ファンゴの毛皮
+Zuwaroposu Cap : 2 垂皮竜の上皮, 2 デプスライト鉱石, 3 ファンゴの毛皮
+Zuwaroposu Vest : 4 垂皮竜の皮, 1 デプスライト鉱石, 3 ファンゴの毛皮
+Nadeshiko Cap : 1 落陽草の花, 3 マンドラゴラ, 5 丸鳥の羽, 3 ペピポパンプキン
+Nadeshiko Vest : 1 落陽草の花, 3 マンドラゴラ, 6 ライトクリスタル, 1 アイシスメタル
+Nadeshiko Sleeves : 1 落陽草の花, 3 ユニオン鉱石, 1 高級お食事券, 3 イチノタチウオ
+Nadeshiko Waist : 1 落陽草の花, 3 マンドラゴラ, 3 お食事券, 3 うなりうねり貝
+Nadeshiko Skirt : 1 落陽草の花, 3 ユニオン鉱石, 4 ライトクリスタル, 1 デプスライト鉱石
+Kikyo Cap : 1 落陽草の花, 3 マンドラゴラ, 5 丸鳥の羽, 3 ペピポパンプキン
+Kikyo Vest : 1 落陽草の花, 3 マンドラゴラ, 6 ライトクリスタル, 1 アイシスメタル
+Kikyo Sleeves : 1 落陽草の花, 3 ユニオン鉱石, 1 高級お食事券, 3 イチノタチウオ
+Kikyo Waist : 1 落陽草の花, 3 マンドラゴラ, 3 お食事券, 3 うなりうねり貝
+Kikyo Skirt : 1 落陽草の花, 3 ユニオン鉱石, 4 ライトクリスタル, 1 デプスライト鉱石
+Jaggi S Helm : 4 狗竜の上皮, 2 狗竜の爪, 2 狗竜の皮, 2 シーブライト鉱石
+Jaggi S Mail : 4 狗竜の尖爪, 4 狗竜の上皮, 3 ジャギィの皮, 2 カブレライト鉱石
+Jaggi S Vambraces : 4 狗竜の尖爪, 1 王者のエリマキ, 1 鳥竜玉, 2 シーブライト鉱石
+Jaggi S Faulds : 4 狗竜の上皮, 2 王者のエリマキ, 4 ジャギィの上鱗, 2 ドラグライト鉱石
+Jaggi S Greaves : 4 ジャギィの上鱗, 4 ジャギィの皮, 7 上質な鳥竜骨, 2 ドラグライト鉱石
+Jaggi S Cap : 4 狗竜の上皮, 2 狗竜の爪, 2 狗竜の皮, 2 シーブライト鉱石
+Jaggi S Vest : 4 狗竜の尖爪, 4 狗竜の上皮, 3 ジャギィの皮, 2 カブレライト鉱石
+Jaggi S Guards : 4 狗竜の尖爪, 1 王者のエリマキ, 1 鳥竜玉, 2 シーブライト鉱石
+Jaggi S Coat : 4 狗竜の上皮, 2 王者のエリマキ, 4 ジャギィの上鱗, 2 ドラグライト鉱石
+Jaggi S Leggings : 4 ジャギィの上鱗, 4 ジャギィの皮, 7 上質な鳥竜骨, 2 ドラグライト鉱石
+Aoashira S Helm : 3 青熊獣の堅殻, 2 堅牢な骨, 3 青熊獣の毛, 3 ドスヘラクレス
+Aoashira S Mail : 5 青熊獣の剛毛, 2 青熊獣の堅殻, 3 飛甲虫の堅殻, 2 王族カナブン
+Aoashira S Vambraces : 3 青熊獣の堅殻, 3 青熊獣の堅腕甲, 3 青熊獣の毛, 2 上質な腹袋
+Aoashira S Faulds : 5 青熊獣の剛毛, 2 堅牢な骨, 3 青熊獣の甲殻, 3 ドスヘラクレス
+Aoashira S Greaves : 2 青熊獣の堅腕甲, 4 青熊獣の剛毛, 3 飛甲虫の甲殻, 2 王族カナブン
+Aoashira S Cap : 3 青熊獣の堅殻, 2 堅牢な骨, 3 青熊獣の毛, 3 ドスヘラクレス
+Aoashira S Vest : 5 青熊獣の剛毛, 2 青熊獣の堅殻, 3 飛甲虫の堅殻, 2 王族カナブン
+Aoashira S Guards : 3 青熊獣の堅殻, 3 青熊獣の堅腕甲, 3 青熊獣の毛, 2 上質な腹袋
+Aoashira S Coat : 5 青熊獣の剛毛, 2 堅牢な骨, 3 青熊獣の甲殻, 3 ドスヘラクレス
+Aoashira S Leggings : 2 青熊獣の堅腕甲, 4 青熊獣の剛毛, 3 飛甲虫の甲殻, 2 王族カナブン
+Froggi S Helm : 3 毒狗竜の上皮, 2 王者のクチバシ, 1 鳥竜玉, 6 ドスヘラクレス
+Froggi S Mail : 2 猛毒袋, 2 毒狗竜の腕甲, 2 フロギィの上鱗, 6 ドスヘラクレス
+Froggi S Vambraces : 3 毒狗竜の堅腕甲, 3 毒狗竜の上皮, 4 猛毒袋, 1 デプスライト鉱石
+Froggi S Faulds : 4 フロギィの上鱗, 7 フロギィの皮, 5 上質な鳥竜骨, 3 デプスライト鉱石
+Froggi S Greaves : 4 毒狗竜の堅腕甲, 3 毒狗竜の上皮, 3 毒狗竜の皮, 4 王族カナブン
+Froggi S Cap : 3 毒狗竜の上皮, 2 王者のクチバシ, 1 鳥竜玉, 6 ドスヘラクレス
+Froggi S Vest : 2 猛毒袋, 2 毒狗竜の腕甲, 2 フロギィの上鱗, 6 ドスヘラクレス
+Froggi S Guards : 3 毒狗竜の堅腕甲, 3 毒狗竜の上皮, 4 猛毒袋, 1 デプスライト鉱石
+Froggi S Coat : 4 フロギィの上鱗, 7 フロギィの皮, 5 上質な鳥竜骨, 3 デプスライト鉱石
+Froggi S Leggings : 4 毒狗竜の堅腕甲, 3 毒狗竜の上皮, 3 毒狗竜の皮, 4 王族カナブン
+Baggi S Helm : 4 眠狗竜の上皮, 2 眠狗竜の爪, 2 眠狗竜の皮, 3 グラシスメタル
+Baggi S Mail : 4 眠狗竜の尖爪, 1 王者のトサカ, 3 鳥竜玉, 4 アイシスメタル
+Baggi S Vambraces : 3 眠狗竜の尖爪, 3 眠狗竜の上皮, 4 昏睡袋, 4 アイシスメタル
+Baggi S Coil : 3 眠狗竜の上皮, 1 王者のトサカ, 6 バギィの上鱗, 2 ライトクリスタル
+Baggi S Greaves : 2 バギィの上鱗, 6 バギィの皮, 7 上質な鳥竜骨, 3 グラシスメタル
+Baggi S Cap : 4 眠狗竜の上皮, 2 眠狗竜の爪, 2 眠狗竜の皮, 3 グラシスメタル
+Baggi S Vest : 4 眠狗竜の尖爪, 1 王者のトサカ, 3 鳥竜玉, 4 アイシスメタル
+Baggi S Guards : 3 眠狗竜の尖爪, 3 眠狗竜の上皮, 4 昏睡袋, 4 アイシスメタル
+Baggi S Coat : 3 眠狗竜の上皮, 1 王者のトサカ, 6 バギィの上鱗, 2 ライトクリスタル
+Baggi S Leggings : 2 バギィの上鱗, 6 バギィの皮, 7 上質な鳥竜骨, 3 グラシスメタル
+Urkusus S Helm : 2 白兎獣の大耳, 2 堅牢な骨, 5 バギィの皮, 3 グラシスメタル
+Urkusus S Mail : 3 白兎獣の堅腹甲, 3 白獣獣の剛毛, 6 バギィの上鱗, 2 王族カナブン
+Urkusus S Vambraces : 2 白兎獣の凍爪, 3 白兎獣の毛, 3 白兎獣の堅腹甲, 2 王族カナブン
+Urkusus S Faulds : 3 白兎獣の剛毛, 2 白兎獣の凍爪, 3 堅牢な骨, 8 ドスヘラクレス
+Urkusus S Greaves : 3 白兎獣の剛毛, 3 白兎獣の堅腹甲, 1 白兎獣の凍爪, 8 なめらかな皮
+Urkusus S Cap : 2 白兎獣の大耳, 2 堅牢な骨, 5 バギィの皮, 3 グラシスメタル
+Urkusus S Vest : 3 白兎獣の堅腹甲, 3 白獣獣の剛毛, 6 バギィの上鱗, 2 王族カナブン
+Urkusus S Guards : 2 白兎獣の凍爪, 3 白兎獣の毛, 3 白兎獣の堅腹甲, 2 王族カナブン
+Urkusus S Coat : 3 白兎獣の剛毛, 2 白兎獣の凍爪, 3 堅牢な骨, 8 ドスヘラクレス
+Urkusus S Leggings : 3 白兎獣の剛毛, 3 白兎獣の堅腹甲, 1 白兎獣の凍爪, 8 なめらかな皮
+Qurupeco S Helm : 2 ステキなクチバシ, 2 彩鳥の翼, 1 上竜骨, 3 ドスヘラクレス
+Qurupeco S Mail : 3 彩鳥の上鱗, 2 極彩色の羽根, 1 上竜骨, 2 王族カナブン
+Qurupeco S Vambraces : 3 彩鳥の上鱗, 1 火打石, 4 彩鳥の羽根, 2 王族カナブン
+Qurupeco S Coil : 2 彩鳥の翼, 3 彩鳥の上鱗, 1 尖竜骨, 5 キラビートル
+Qurupeco S Greaves : 3 彩鳥の翼, 3 彩鳥の上鱗, 2 極彩色の羽根, 3 ドスヘラクレス
+Qurupeco S Cap : 2 ステキなクチバシ, 2 彩鳥の翼, 1 上竜骨, 3 ドスヘラクレス
+Qurupeco S Vest : 3 彩鳥の上鱗, 2 極彩色の羽根, 1 上竜骨, 2 王族カナブン
+Qurupeco S Guards : 3 彩鳥の上鱗, 1 火打石, 4 彩鳥の羽根, 2 王族カナブン
+Qurupeco S Coat : 2 彩鳥の翼, 3 彩鳥の上鱗, 1 尖竜骨, 5 キラビートル
+Qurupeco S Leggings : 3 彩鳥の翼, 3 彩鳥の上鱗, 2 極彩色の羽根, 3 ドスヘラクレス
+Qurupeco U Helm : 1 紅彩鳥の翼, 3 ステキなクチバシ, 2 上竜骨, 2 王族カナブン
+Qurupeco U Mail : 3 紅彩鳥の上鱗, 2 極彩色の羽根, 1 尖竜骨, 2 王族カナブン
+Qurupeco U Vambraces : 3 電気石, 3 紅彩鳥の上鱗, 2 極彩色の羽根, 3 ドスヘラクレス
+Qurupeco U Coil : 3 紅彩鳥の翼, 3 紅彩鳥の上鱗, 1 尖竜骨, 3 ドスヘラクレス
+Qurupeco U Greaves : 3 紅彩鳥の上鱗, 2 紅彩鳥の翼, 1 竜玉, 5 キラビートル
+Qurupeco U Cap : 1 紅彩鳥の翼, 3 ステキなクチバシ, 2 上竜骨, 2 王族カナブン
+Qurupeco U Vest : 3 紅彩鳥の上鱗, 2 極彩色の羽根, 1 尖竜骨, 2 王族カナブン
+Qurupeco U Guards : 3 電気石, 3 紅彩鳥の上鱗, 2 極彩色の羽根, 3 ドスヘラクレス
+Qurupeco U Coat : 3 紅彩鳥の翼, 3 紅彩鳥の上鱗, 1 尖竜骨, 3 ドスヘラクレス
+Qurupeco U Leggings : 3 紅彩鳥の上鱗, 2 紅彩鳥の翼, 1 竜玉, 5 キラビートル
+Ludroth S Helm : 2 高級なトサカ, 3 水獣の上鱗, 1 水獣の尻尾, 2 大水袋
+Ludroth S Mail : 3 海綿質の上皮, 3 水生獣の上皮, 6 水生獣の皮, 2 王族カナブン
+Ludroth S Vambraces : 3 水獣の鋭爪, 4 水獣の上鱗, 2 海綿質の上皮, 5 ドスヘラクレス
+Ludroth S Faulds : 4 水生獣の上皮, 6 未熟な海綿質, 2 尖竜骨, 2 王族カナブン
+Ludroth S Greaves : 2 水獣の鋭爪, 3 水獣の上鱗, 3 海綿質の上皮, 5 キラビートル
+Ludroth S Cap : 2 高級なトサカ, 3 水獣の上鱗, 1 水獣の尻尾, 2 大水袋
+Ludroth S Vest : 3 海綿質の上皮, 3 水生獣の上皮, 6 水生獣の皮, 2 王族カナブン
+Ludroth S Guards : 3 水獣の鋭爪, 4 水獣の上鱗, 2 海綿質の上皮, 5 ドスヘラクレス
+Ludroth S Coat : 4 水生獣の上皮, 6 未熟な海綿質, 2 尖竜骨, 2 王族カナブン
+Ludroth S Leggings : 2 水獣の鋭爪, 3 水獣の上鱗, 3 海綿質の上皮, 5 キラビートル
+Ludroth U Helm : 3 紫水獣の上鱗, 3 高級なトサカ, 1 水獣の尻尾, 5 ドスヘラクレス
+Ludroth U Mail : 3 海綿質の紫皮, 3 水生獣の上皮, 6 水生獣の皮, 2 王族カナブン
+Ludroth U Vambraces : 4 紫水獣の鋭爪, 2 海綿質の紫皮, 2 紫水獣の上鱗, 2 大水袋
+Ludroth U Faulds : 3 海綿質の紫皮, 6 未熟な海綿質, 2 尖竜骨, 2 王族カナブン
+Ludroth U Greaves : 3 紫水獣の鋭爪, 3 紫水獣の上鱗, 3 水生獣の上皮, 5 キラビートル
+Ludroth U Cap : 3 紫水獣の上鱗, 3 高級なトサカ, 1 水獣の尻尾, 5 ドスヘラクレス
+Ludroth U Vest : 3 海綿質の紫皮, 3 水生獣の上皮, 6 水生獣の皮, 2 王族カナブン
+Ludroth U Guards : 4 紫水獣の鋭爪, 2 海綿質の紫皮, 2 紫水獣の上鱗, 2 大水袋
+Ludroth U Coat : 3 海綿質の紫皮, 6 未熟な海綿質, 2 尖竜骨, 2 王族カナブン
+Ludroth U Leggings : 3 紫水獣の鋭爪, 3 紫水獣の上鱗, 3 水生獣の上皮, 5 キラビートル
+Ranguro S Helm : 3 赤甲獣の尖爪, 3 赤甲獣の堅殻, 3 モンスターの濃汁, 2 紅蓮石
+Ranguro S Mail : 3 赤甲獣の堅殻, 4 赤甲獣の蛇腹甲, 2 堅牢な骨, 3 カブレライト鉱石
+Ranguro S Vambraces : 3 赤甲獣の尖爪, 6 強力麻痺袋, 3 堅牢な骨, 5 ドラグライト鉱石
+Ranguro S Faulds : 3 赤甲獣の堅殻, 4 赤甲獣の蛇腹甲, 3 モンスターの濃汁, 2 紅蓮石
+Ranguro S Greaves : 3 赤甲獣の尖爪, 3 赤甲獣の堅殻, 1 赤甲獣の蛇腹甲, 2 ユニオン鉱石
+Ranguro S Cap : 3 赤甲獣の尖爪, 3 赤甲獣の堅殻, 3 モンスターの濃汁, 2 紅蓮石
+Ranguro S Vest : 3 赤甲獣の堅殻, 4 赤甲獣の蛇腹甲, 2 堅牢な骨, 3 カブレライト鉱石
+Ranguro S Guards : 3 赤甲獣の尖爪, 6 強力麻痺袋, 3 堅牢な骨, 5 ドラグライト鉱石
+Ranguro S Coat : 3 赤甲獣の堅殻, 4 赤甲獣の蛇腹甲, 3 モンスターの濃汁, 2 紅蓮石
+Ranguro S Leggings : 3 赤甲獣の尖爪, 3 赤甲獣の堅殻, 1 赤甲獣の蛇腹甲, 2 ユニオン鉱石
+Obituary Testa/Butterfly Testa : 3 マレコガネ, 1 オオクワアゲハ, 3 超電雷光虫, 10 不死虫
+Obituary Petto/Butterfly Petto : 2 マレコガネ, 2 オオクワアゲハ, 2 ハナスズムシ, 10 セッチャクロアリ
+Obituary Mano/Butterfly Mano : 3 マレコガネ, 1 オオクワアゲハ, 5 アルビノエキス, 10 にが虫
+Obituary Anca/Butterfly Anca : 2 マレコガネ, 2 オオクワアゲハ, 10 光蟲, 10 ボンバッタ
+Obituary Gamba/Butterfly Gamba : 3 マレコガネ, 1 オオクワアゲハ, 3 モンスターの濃汁, 10 ツチハチノコ
+Obituary Caput/Butterfly Caput : 3 マレコガネ, 1 オオクワアゲハ, 3 超電雷光虫, 10 不死虫
+Obituary Pectus/Butterfly Pectus : 2 マレコガネ, 2 オオクワアゲハ, 2 ハナスズムシ, 10 セッチャクロアリ
+Obituary Brasso/Butterfly Brasso : 3 マレコガネ, 1 オオクワアゲハ, 5 アルビノエキス, 10 にが虫
+Obituary Cocusa/Butterfly Cocusa : 2 マレコガネ, 2 オオクワアゲハ, 10 光蟲, 10 ボンバッタ
+Obituary Femur/Butterfly Femur : 3 マレコガネ, 1 オオクワアゲハ, 3 モンスターの濃汁, 10 ツチハチノコ
+Barroth S Helm : 4 土砂竜の堅甲, 2 土砂竜の堅殻, 5 肥沃なドロ, 4 ジャギィの鱗
+Barroth S Mail : 4 土砂竜の堅甲, 3 土砂竜の頭殻, 5 肥沃なドロ, 3 草食竜の堅殻
+Barroth S Vambraces : 4 土砂竜の鋭爪, 2 土砂竜の堅殻, 2 上竜骨, 4 ジャギィの鱗
+Barroth S Faulds : 2 土砂竜の堅殻, 3 土砂竜の堅甲, 2 上竜骨, 5 草食竜の堅殻
+Barroth S Greaves : 3 土砂竜の堅殻, 1 土砂竜の尻尾, 3 尖竜骨, 4 ジャギィの上鱗
+Barroth S Cap : 4 土砂竜の堅甲, 2 土砂竜の堅殻, 5 肥沃なドロ, 4 ジャギィの鱗
+Barroth S Vest : 4 土砂竜の堅甲, 3 土砂竜の頭殻, 5 肥沃なドロ, 3 草食竜の堅殻
+Barroth S Guards : 4 土砂竜の鋭爪, 2 土砂竜の堅殻, 2 上竜骨, 4 ジャギィの鱗
+Barroth S Coat : 2 土砂竜の堅殻, 3 土砂竜の堅甲, 2 上竜骨, 5 草食竜の堅殻
+Barroth S Leggings : 3 土砂竜の堅殻, 1 土砂竜の尻尾, 3 尖竜骨, 4 ジャギィの上鱗
+Barroth U Helm : 5 氷砕竜の堅甲, 3 氷砕竜の堅殻, 5 凍った粘液塊, 5 白兎獣の毛
+Barroth U Mail : 3 氷砕竜の頭殻, 4 氷砕竜の堅甲, 5 凍った粘液塊, 4 白兎獣の腹甲
+Barroth U Vambraces : 4 氷砕竜の鋭爪, 2 氷砕竜の堅殻, 2 上竜骨, 3 眠狗竜の上皮
+Barroth U Faulds : 3 氷砕竜の堅殻, 4 氷砕竜の堅甲, 2 尖竜骨, 4 白兎獣の剛毛
+Barroth U Greaves : 3 氷砕竜の堅殻, 1 氷砕竜の尻尾, 3 氷砕竜の鋭爪, 3 白兎獣の堅腹甲
+Barroth U Cap : 5 氷砕竜の堅甲, 3 氷砕竜の堅殻, 5 凍った粘液塊, 5 白兎獣の毛
+Barroth U Vest : 3 氷砕竜の頭殻, 4 氷砕竜の堅甲, 5 凍った粘液塊, 4 白兎獣の腹甲
+Barroth U Guards : 4 氷砕竜の鋭爪, 2 氷砕竜の堅殻, 2 上竜骨, 3 眠狗竜の上皮
+Barroth U Coat : 3 氷砕竜の堅殻, 4 氷砕竜の堅甲, 2 尖竜骨, 4 白兎獣の剛毛
+Barroth U Leggings : 3 氷砕竜の堅殻, 1 氷砕竜の尻尾, 3 氷砕竜の鋭爪, 3 白兎獣の堅腹甲
+Gobul S Helm : 2 灯魚竜の上棘, 4 灯魚竜の上皮, 2 灯魚竜のヒゲ, 3 上竜骨
+Gobul S Mail : 2 灯魚竜の上ヒレ, 2 灯魚竜の上棘, 3 灯魚竜の皮, 3 鳥竜玉
+Gobul S Vambraces : 4 灯魚竜の上皮, 2 灯魚竜の上棘, 3 灯魚竜の棘, 5 竜骨【中】
+Gobul S Faulds : 4 灯魚竜の上皮, 2 灯魚竜の上ヒレ, 2 灯魚竜のヒレ, 5 麻痺袋
+Gobul S Greaves : 2 灯魚竜の上棘, 4 灯魚竜の上皮, 2 灯魚竜の上ヒレ, 1 高級提灯球
+Gobul S Cap : 2 灯魚竜の上棘, 4 灯魚竜の上皮, 2 灯魚竜のヒゲ, 3 上竜骨
+Gobul S Vest : 2 灯魚竜の上ヒレ, 2 灯魚竜の上棘, 3 灯魚竜の皮, 3 鳥竜玉
+Gobul S Guards : 4 灯魚竜の上皮, 2 灯魚竜の上棘, 3 灯魚竜の棘, 5 竜骨【中】
+Gobul S Coat : 4 灯魚竜の上皮, 2 灯魚竜の上ヒレ, 2 灯魚竜のヒレ, 5 麻痺袋
+Gobul S Leggings : 2 灯魚竜の上棘, 4 灯魚竜の上皮, 2 灯魚竜の上ヒレ, 1 高級提灯球
+Pumpkin Helm : 3 王族カナブン, 4 ペピポパンプキン, 1 いにしえの秘薬, 15 マタタビ
+Pumpkin Mail : 3 王族カナブン, 4 ペピポパンプキン, 2 秘薬, 15 サボテンの花
+Pumpkin Vambraces : 4 王族カナブン, 5 ペピポパンプキン, 3 モンスターの濃汁, 15 トウガラシ
+Pumpkin Faulds : 4 王族カナブン, 5 ペピポパンプキン, 4 飛甲虫の堅殻, 15 火薬草
+Pumpkin Greaves : 4 王族カナブン, 4 ペピポパンプキン, 3 上質な腹袋, 15 ネムリ草
+Pumpkin Cap : 3 王族カナブン, 4 ペピポパンプキン, 1 いにしえの秘薬, 15 マタタビ
+Pumpkin Vest : 3 王族カナブン, 4 ペピポパンプキン, 2 秘薬, 15 サボテンの花
+Pumpkin Guards : 4 王族カナブン, 5 ペピポパンプキン, 3 モンスターの濃汁, 15 トウガラシ
+Pumpkin Coat : 4 王族カナブン, 5 ペピポパンプキン, 4 飛甲虫の堅殻, 15 火薬草
+Pumpkin Leggings : 4 王族カナブン, 4 ペピポパンプキン, 3 上質な腹袋, 15 ネムリ草
+Guild Bard S Lobos/Scholar's S Beret : 2 闘技王のコイン, 3 水竜のコイン, 3 飛竜のコイン, 2 勇気の証
+Guild Bard S Bolero/Scholar's S Blouse : 2 闘技王のコイン, 3 水竜のコイン, 3 海竜のコイン, 2 勇気の証
+Guild Bard S Braces/Scholar's S Gloves : 2 闘技王のコイン, 3 牙獣のコイン, 2 海竜のコイン, 2 勇気の証
+Guild Bard S Coil/Scholar's S Skirt : 2 闘技王のコイン, 3 牙獣のコイン, 2 飛竜のコイン, 2 勇気の証
+Guild Bard S Boots/Scholar's S Socks : 2 闘技王のコイン, 3 飛竜のコイン, 2 海竜のコイン, 2 勇気の証
+Guild Bard S Hat/Scholar's S Cap : 2 闘技王のコイン, 3 水竜のコイン, 3 飛竜のコイン, 2 勇気の証
+Guild Bard S Vest/Scholar's S Vest : 2 闘技王のコイン, 3 水竜のコイン, 3 海竜のコイン, 2 勇気の証
+Guild Bard S Sleeves/Scholar's S Sleeves : 2 闘技王のコイン, 3 牙獣のコイン, 2 海竜のコイン, 2 勇気の証
+Guild Bard S Coat/Scholar's S Mini : 2 闘技王のコイン, 3 牙獣のコイン, 2 飛竜のコイン, 2 勇気の証
+Guild Bard S Gaiters/Scholar's S Sandals : 2 闘技王のコイン, 3 飛竜のコイン, 2 海竜のコイン, 2 勇気の証
+Ingot S Helm : 2 ユニオン鉱石, 3 グラシスメタル, 2 デプスライト鉱石, 5 カブレライト鉱石
+Ingot S Mail : 3 ユニオン鉱石, 2 極炎石, 2 デプスライト鉱石, 5 カブレライト鉱石
+Ingot S Vambraces : 2 ユニオン鉱石, 3 グラシスメタル, 2 デプスライト鉱石, 2 溶岩塊
+Ingot S Coil : 2 ユニオン鉱石, 2 獄炎石, 5 カブレライト鉱石, 2 溶岩塊
+Ingot S Greaves : 3 ユニオン鉱石, 3 グラシスメタル, 1 デプスライト鉱石, 5 カブレライト鉱石
+Ingot S Cap : 2 ユニオン鉱石, 3 グラシスメタル, 2 デプスライト鉱石, 5 カブレライト鉱石
+Ingot S Vest : 3 ユニオン鉱石, 2 極炎石, 2 デプスライト鉱石, 5 カブレライト鉱石
+Ingot S Guards : 2 ユニオン鉱石, 3 グラシスメタル, 2 デプスライト鉱石, 2 溶岩塊
+Ingot S Coat : 2 ユニオン鉱石, 2 獄炎石, 5 カブレライト鉱石, 2 溶岩塊
+Ingot S Leggings : 3 ユニオン鉱石, 3 グラシスメタル, 1 デプスライト鉱石, 5 カブレライト鉱石
+Rathian S Helm : 2 雌火竜の上棘, 4 雌火竜の堅殻, 2 火竜の骨髄, 3 爆炎袋
+Rathian S Mail : 4 雌火竜の上鱗, 1 火竜の延髄, 1 雌火竜の逆鱗, 2 紅蓮石
+Rathian S Vambraces : 4 雌火竜の堅殻, 3 火竜の翼爪, 2 雌火竜の棘, 3 紅蓮石
+Rathian S Faulds : 3 雌火竜の上鱗, 4 雌火竜の翼膜, 1 雌火竜の紅玉, 2 紅蓮石
+Rathian S Greaves : 4 雌火竜の堅殻, 4 雌火竜の上鱗, 3 尖竜骨, 5 ドラグライト鉱石
+Rathian S Cap : 2 雌火竜の上棘, 4 雌火竜の堅殻, 2 火竜の骨髄, 3 爆炎袋
+Rathian S Vest : 4 雌火竜の上鱗, 1 火竜の延髄, 1 雌火竜の逆鱗, 2 紅蓮石
+Rathian S Guards : 4 雌火竜の堅殻, 3 火竜の翼爪, 2 雌火竜の棘, 3 紅蓮石
+Rathian S Coat : 3 雌火竜の上鱗, 4 雌火竜の翼膜, 1 雌火竜の紅玉, 2 紅蓮石
+Rathian S Leggings : 4 雌火竜の堅殻, 4 雌火竜の上鱗, 3 尖竜骨, 5 ドラグライト鉱石
+RioHeart Helm : 2 桜火竜の堅殻, 3 桜火竜の上鱗, 2 尖竜骨, 2 雌火竜の上鱗
+RioHeart Mail : 3 桜火竜の上鱗, 2 桜火竜の堅殻, 4 カブレライト鉱石, 1 雌火竜の紅玉
+RioHeart Vambraces : 2 桜火竜の堅殻, 4 桜火竜の上鱗, 3 尖竜骨, 1 雌火竜の逆鱗
+RioHeart Faulds : 3 桜火竜の上鱗, 2 桜火竜の堅殻, 2 爆炎袋, 1 雌火竜の紅玉
+RioHeart Greaves : 2 桜火竜の堅殻, 4 桜火竜の上鱗, 3 尖竜骨, 5 カブレライト鉱石
+RioHeart Cap : 2 桜火竜の堅殻, 3 桜火竜の上鱗, 2 尖竜骨, 2 雌火竜の上鱗
+RioHeart Vest : 3 桜火竜の上鱗, 2 桜火竜の堅殻, 4 カブレライト鉱石, 1 雌火竜の紅玉
+RioHeart Guards : 2 桜火竜の堅殻, 4 桜火竜の上鱗, 3 尖竜骨, 1 雌火竜の逆鱗
+RioHeart Coat : 3 桜火竜の上鱗, 2 桜火竜の堅殻, 2 爆炎袋, 1 雌火竜の紅玉
+RioHeart Leggings : 2 桜火竜の堅殻, 4 桜火竜の上鱗, 3 尖竜骨, 5 カブレライト鉱石
+Gigginox S Helm : 3 不気味な上皮, 2 猛毒袋, 5 毒怪竜の皮, 5 眠狗竜の皮
+Gigginox S Mail : 2 毒怪鳥の鋭爪, 4 毒怪鳥の上皮, 3 不気味な毒線, 2 ライトクリスタル
+Gigginox S Vambraces : 5 毒怪竜の上皮, 2 毒怪竜の鋭爪, 2 毒怪竜の爪, 4 グラシスメタル
+Gigginox S Faulds : 5 毒怪竜の上皮, 3 不気味な猛毒腺, 2 不気味な皮, 6 アイシスメタル
+Gigginox S Greaves : 3 不気味な猛毒腺, 2 不気味な上皮, 2 おそろしいクチ, 4 眠狗竜の上皮
+Gigginox S Cap : 3 不気味な上皮, 2 猛毒袋, 5 毒怪竜の皮, 5 眠狗竜の皮
+Gigginox S Vest : 2 毒怪鳥の鋭爪, 4 毒怪鳥の上皮, 3 不気味な毒線, 2 ライトクリスタル
+Gigginox S Guards : 5 毒怪竜の上皮, 2 毒怪竜の鋭爪, 2 毒怪竜の爪, 4 グラシスメタル
+Gigginox S Coat : 5 毒怪竜の上皮, 3 不気味な猛毒腺, 2 不気味な皮, 6 アイシスメタル
+Gigginox S Leggings : 3 不気味な猛毒腺, 2 不気味な上皮, 2 おそろしいクチ, 4 眠狗竜の上皮
+Gigginox U Helm : 4 電怪竜の上皮, 2 不気味な上皮, 5 アルビノエキス, 4 眠狗竜の上皮
+Gigginox U Mail : 2 電怪鳥の鋭爪, 4 電怪鳥の上皮, 1 竜玉, 5 眠狗竜の皮
+Gigginox U Vambraces : 1 電怪竜の鋭爪, 2 おそろしいクチ, 2 尖竜骨, 4 グラシスメタル
+Gigginox U Faulds : 4 電怪竜の上皮, 1 電怪竜の鋭爪, 4 電撃袋, 6 アイシスメタル
+Gigginox U Greaves : 4 電怪竜の上皮, 2 不気味な上皮, 2 尖竜骨, 2 ライトクリスタル
+Gigginox U Cap : 4 電怪竜の上皮, 2 不気味な上皮, 5 アルビノエキス, 4 眠狗竜の上皮
+Gigginox U Vest : 2 電怪竜の鋭爪, 4 電怪竜の上皮, 1 竜玉, 5 眠狗竜の皮
+Gigginox U Guards : 1 電怪竜の鋭爪, 2 おそろしいクチ, 2 尖竜骨, 4 グラシスメタル
+Gigginox U Coat : 4 電怪竜の上皮, 1 電怪竜の鋭爪, 4 電撃袋, 6 アイシスメタル
+Gigginox U Leggings : 4 電怪竜の上皮, 2 不気味な上皮, 2 尖竜骨, 2 ライトクリスタル
+Plesioth Helm : 3 水竜の上鱗, 2 水竜の上ビレ, 2 水竜のお頭, 2 灯魚竜の皮
+Plesioth Mail : 3 水竜の上ビレ, 2 水竜の翼膜, 2 モンスターの濃汁, 3 王族カナブン
+Plesioth Vambraces : 2 水竜の上鱗, 2 水竜の翼膜, 1 モンスターの濃汁, 3 水竜の鋭牙
+Plesioth Greaves : 4 水竜の上鱗, 2 水竜の上ビレ, 3 カブレライト鉱石, 1 竜玉
+Plesioth Cap : 3 水竜の上鱗, 2 水竜の上ビレ, 2 水竜のお頭, 2 灯魚竜の皮
+Plesioth Vest : 3 水竜の上ビレ, 2 水竜の翼膜, 2 モンスターの濃汁, 3 王族カナブン
+Plesioth Guards : 2 水竜の上鱗, 2 水竜の翼膜, 1 モンスターの濃汁, 3 水竜の鋭牙
+Plesioth Leggings : 4 水竜の上鱗, 2 水竜の上ビレ, 3 カブレライト鉱石, 1 竜玉
+Barioth S Helm : 2 琥珀色の鋭牙, 5 氷牙竜の上毛皮, 4 氷牙竜の甲殻, 5 凍結袋
+Barioth S Mail : 4 氷牙竜の堅殻, 1 氷牙竜の尻尾, 1 竜玉, 6 白兎獣の毛
+Barioth S Vambraces : 2 氷牙竜の鋭爪, 3 氷牙竜の堅殻, 4 氷牙竜の毛皮, 3 白兎獣の堅腹甲
+Barioth S Faulds : 2 琥珀色の鋭牙, 4 氷牙竜の棘, 4 尖竜骨, 4 白兎獣の腹甲
+Barioth S Greaves : 5 氷牙竜の上毛皮, 3 氷牙竜の堅殻, 1 氷牙竜の爪, 4 白兎獣の剛毛
+Barioth S Cap : 2 琥珀色の鋭牙, 5 氷牙竜の上毛皮, 4 氷牙竜の甲殻, 5 凍結袋
+Barioth S Vest : 4 氷牙竜の堅殻, 1 氷牙竜の尻尾, 1 竜玉, 6 白兎獣の毛
+Barioth S Guards : 2 氷牙竜の鋭爪, 3 氷牙竜の堅殻, 4 氷牙竜の毛皮, 3 白兎獣の堅腹甲
+Barioth S Coat : 2 琥珀色の鋭牙, 4 氷牙竜の棘, 4 尖竜骨, 4 白兎獣の腹甲
+Barioth S Leggings : 5 氷牙竜の上毛皮, 3 氷牙竜の堅殻, 1 氷牙竜の爪, 4 白兎獣の剛毛
+Barioth U Helm : 2 群青色の鋭牙, 4 風牙竜の上毛皮, 2 風牙竜の堅殻, 4 青熊獣の堅殻
+Barioth U Mail : 3 風牙竜の堅殻, 1 風牙竜の尻尾, 5 尖竜骨, 2 マレコガネ
+Barioth U Vambraces : 1 風牙竜の鋭爪, 3 風牙竜の堅殻, 4 風牙竜の上毛皮, 6 青熊獣の剛毛
+Barioth U Faulds : 2 群青色の鋭牙, 5 強靭な胸膜, 1 竜玉, 6 草食竜の堅殻
+Barioth U Greaves : 4 風牙竜の上毛皮, 3 風牙竜の堅殻, 1 風牙竜の鋭爪, 3 青熊獣の腕甲
+Barioth U Cap : 2 群青色の鋭牙, 4 風牙竜の上毛皮, 2 風牙竜の堅殻, 4 青熊獣の堅殻
+Barioth U Vest : 3 風牙竜の堅殻, 1 風牙竜の尻尾, 5 尖竜骨, 2 マレコガネ
+Barioth U Guards : 1 風牙竜の鋭爪, 3 風牙竜の堅殻, 4 風牙竜の上毛皮, 6 青熊獣の剛毛
+Barioth U Coat : 2 群青色の鋭牙, 5 強靭な胸膜, 1 竜玉, 6 草食竜の堅殻
+Barioth U Leggings : 4 風牙竜の上毛皮, 3 風牙竜の堅殻, 1 風牙竜の鋭爪, 3 青熊獣の腕甲
+Hapul S Helm : 4 潜口竜の堅殻, 4 潜口竜の頭殻, 2 潜口竜の上皮, 5 フロギィの上鱗
+Hapul S Mail : 4 潜口竜の上皮, 4 潜口竜の堅殻, 4 極彩色の体液, 5 フロギィの皮
+Hapul S Vambraces : 3 潜口竜の尖爪, 3 潜口竜の堅殻, 4 極彩色の体液, 5 毒狗竜の皮
+Hapul S Faulds : 2 潜口竜の尖爪, 3 潜口竜の上皮, 4 鮮やかな体液, 3 毒狗竜の堅腕甲
+Hapul S Greaves : 4 潜口竜の堅殻, 1 竜玉, 3 尖竜骨, 4 毒狗竜の上皮
+Hapul S Cap : 4 潜口竜の堅殻, 4 潜口竜の頭殻, 2 潜口竜の上皮, 5 フロギィの上鱗
+Hapul S Vest : 4 潜口竜の上皮, 4 潜口竜の堅殻, 4 極彩色の体液, 5 フロギィの皮
+Hapul S Guards : 3 潜口竜の尖爪, 3 潜口竜の堅殻, 4 極彩色の体液, 5 毒狗竜の皮
+Hapul S Coat : 2 潜口竜の尖爪, 3 潜口竜の上皮, 4 鮮やかな体液, 3 毒狗竜の堅腕甲
+Hapul S Leggings : 4 潜口竜の堅殻, 1 竜玉, 3 尖竜骨, 4 毒狗竜の上皮
+Nargacuga Helm : 5 迅竜の上黒毛, 5 迅竜の尾棘, 1 竜玉, 6 青熊獣の剛毛
+Nargacuga Mail : 4 迅竜の上鱗, 5 迅竜の鋭牙, 1 迅竜の延髄, 6 王族カナブン
+Nargacuga Vambraces : 3 迅竜の鋭刃翼, 5 迅竜の上鱗, 5 迅竜の尾棘, 5 垂皮竜の上皮
+Nargacuga Faulds : 5 迅竜の上黒毛, 1 迅竜の尻尾, 3 迅竜の鋭刃翼, 4 青熊獣の堅殻
+Nargacuga Greaves : 5 迅竜の鋭牙, 5 迅竜の上鱗, 1 迅竜の延髄, 3 マレコガネ
+Nargacuga Cap : 5 迅竜の上黒毛, 5 迅竜の尾棘, 1 竜玉, 6 青熊獣の剛毛
+Nargacuga Vest : 4 迅竜の上鱗, 5 迅竜の鋭牙, 1 迅竜の延髄, 6 王族カナブン
+Nargacuga Guards : 3 迅竜の鋭刃翼, 5 迅竜の上鱗, 5 迅竜の尾棘, 5 垂皮竜の上皮
+Nargacuga Coat : 5 迅竜の上黒毛, 1 迅竜の尻尾, 3 迅竜の鋭刃翼, 4 青熊獣の堅殻
+Nargacuga Leggings : 5 迅竜の鋭牙, 5 迅竜の上鱗, 1 迅竜の延髄, 3 マレコガネ
+Lagiacrus S Helm : 2 海竜の尖角, 4 海竜の上皮, 2 海竜の角, 4 海流の鱗
+Lagiacrus S Mail : 4 海竜の上皮, 1 海竜の蒼玉, 1 海竜の逆鱗, 2 氷牙竜の上毛皮
+Lagiacrus S Vambraces : 5 海竜の鋭爪, 2 海竜の高電殻, 5 海竜の上鱗, 2 海竜の背電殻
+Lagiacrus S Faulds : 2 海竜の高電殻, 5 海竜の上鱗, 1 海竜の逆鱗, 1 海竜の尻尾
+Lagiacrus S Greaves : 5 海竜の上鱗, 4 海竜の上皮, 5 海竜の鋭爪, 3 氷牙竜の棘
+Lagiacrus S Cap : 2 海竜の尖角, 4 海竜の上皮, 2 海竜の角, 4 海流の鱗
+Lagiacrus S Vest : 4 海竜の上皮, 1 海竜の蒼玉, 1 海竜の逆鱗, 2 氷牙竜の上毛皮
+Lagiacrus S Guards : 5 海竜の鋭爪, 2 海竜の高電殻, 5 海竜の上鱗, 2 海竜の背電殻
+Lagiacrus S Coat : 2 海竜の高電殻, 5 海竜の上鱗, 1 海竜の逆鱗, 1 海竜の尻尾
+Lagiacrus S Leggings : 5 海竜の上鱗, 4 海竜の上皮, 5 海竜の鋭爪, 3 氷牙竜の棘
+Lagiacrus U Helm : 2 白海竜の尖角, 5 白海竜の上皮, 4 海竜の尖角, 2 尾槌竜の尖角
+Lagiacrus U Mail : 5 白海竜の上皮, 1 海竜の蒼玉, 1 海竜の逆鱗, 1 風牙竜の尻尾
+Lagiacrus U Vambraces : 3 白海竜の上皮, 3 白海竜の高電殻, 4 海竜の鋭爪, 3 海竜の高電殻
+Lagiacrus U Faulds : 3 白海竜の高電殻, 4 白海竜の上鱗, 1 海竜の逆鱗, 2 海竜の尻尾
+Lagiacrus U Greaves : 4 白海竜の上鱗, 3 白海竜の上皮, 2 海竜の鋭爪, 2 氷牙竜の棘
+Lagiacrus U Cap : 2 白海竜の尖角, 5 白海竜の上皮, 4 海竜の尖角, 2 尾槌竜の尖角
+Lagiacrus U Vest : 5 白海竜の上皮, 1 海竜の蒼玉, 1 海竜の逆鱗, 1 風牙竜の尻尾
+Lagiacrus U Guards : 3 白海竜の上皮, 3 白海竜の高電殻, 4 海竜の鋭爪, 3 海竜の高電殻
+Lagiacrus U Coat : 3 白海竜の高電殻, 4 白海竜の上鱗, 1 海竜の逆鱗, 2 海竜の尻尾
+Lagiacrus U Leggings : 4 白海竜の上鱗, 3 白海竜の上皮, 2 海竜の鋭爪, 2 氷牙竜の棘
+Rathalos S Helm : 4 火竜の上鱗, 1 火竜の紅玉, 3 爆炎袋, 3 尖竜骨
+Rathalos S Mail : 5 火竜の上鱗, 4 火竜の甲殻, 4 火竜の翼膜, 2 ユニオン鉱石
+Rathalos S Vambraces : 4 火竜の上鱗, 2 火竜の翼爪, 1 火竜の尻尾, 2 獄炎石
+Rathalos S Faulds : 6 火竜の堅殻, 4 火竜の翼膜, 1 火竜の逆鱗, 2 ユニオン鉱石
+Rathalos S Greaves : 6 火竜の堅殻, 2 火竜の延髄, 6 火竜の鱗, 4 紅蓮石
+Rathalos S Cap : 4 火竜の上鱗, 1 火竜の紅玉, 3 爆炎袋, 3 尖竜骨
+Rathalos S Vest : 5 火竜の上鱗, 4 火竜の甲殻, 4 火竜の翼膜, 2 ユニオン鉱石
+Rathalos S Guards : 4 火竜の上鱗, 2 火竜の翼爪, 1 火竜の尻尾, 2 獄炎石
+Rathalos S Coat : 6 火竜の堅殻, 4 火竜の翼膜, 1 火竜の逆鱗, 2 ユニオン鉱石
+Rathalos S Leggings : 6 火竜の堅殻, 2 火竜の延髄, 6 火竜の鱗, 4 紅蓮石
+RioSoul Helm : 2 蒼火竜の堅殻, 1 蒼火竜の翼, 1 火竜の紅玉, 3 王族カナブン
+RioSoul Mail : 3 蒼火竜の堅殻, 3 蒼火竜の上鱗, 3 爆炎袋, 2 堅竜骨
+RioSoul Vambraces : 2 蒼火竜の堅殻, 3 蒼火竜の尻尾, 3 堅竜骨, 3 カブレライト鉱石
+RioSoul Faulds : 2 蒼火竜の堅殻, 4 蒼火竜の上鱗, 3 カブレライト鉱石, 2 爆炎袋
+RioSoul Greaves : 2 蒼火竜の堅殻, 3 蒼火竜の上鱗, 1 火竜の紅玉, 2 獄炎石
+RioSoul Cap : 2 蒼火竜の堅殻, 1 蒼火竜の翼, 1 火竜の紅玉, 3 王族カナブン
+RioSoul Vest : 3 蒼火竜の堅殻, 3 蒼火竜の上鱗, 3 爆炎袋, 2 堅竜骨
+RioSoul Guards : 2 蒼火竜の堅殻, 3 蒼火竜の尻尾, 3 堅竜骨, 3 カブレライト鉱石
+RioSoul Coat : 2 蒼火竜の堅殻, 4 蒼火竜の上鱗, 3 カブレライト鉱石, 2 爆炎袋
+RioSoul Leggings : 2 蒼火竜の堅殻, 3 蒼火竜の上鱗, 1 火竜の紅玉, 2 獄炎石
+Jinouga Helm : 2 雷狼竜の尖角, 4 雷狼竜の高電毛, 3 雷狼竜の堅殻, 1 竜玉
+Jinouga Mail : 4 雷狼竜の高電毛, 5 雷狼竜の堅殻, 1 雷狼竜の碧玉, 20 雷光虫
+Jinouga Vambraces : 5 雷狼竜の尖爪, 4 雷狼竜の高電殻, 3 雷狼竜の高電毛, 6 ファンゴの毛皮
+Jinouga Faulds : 5 雷狼竜の堅殻, 3 雷狼竜の高電毛, 1 雷狼竜の尻尾, 1 雷狼竜の碧玉
+Jinouga Greaves : 5 雷狼竜の堅殻, 5 雷狼竜の尖爪, 3 雷狼竜の高電殻, 10 超電雷光虫
+Jinouga Cap : 2 雷狼竜の尖角, 4 雷狼竜の高電毛, 3 雷狼竜の堅殻, 1 竜玉
+Jinouga Vest : 4 雷狼竜の高電毛, 5 雷狼竜の堅殻, 1 雷狼竜の碧玉, 20 雷光虫
+Jinouga Guards : 5 雷狼竜の尖爪, 4 雷狼竜の高電殻, 3 雷狼竜の高電毛, 6 ファンゴの毛皮
+Jinouga Coat : 5 雷狼竜の堅殻, 3 雷狼竜の高電毛, 1 雷狼竜の尻尾, 1 雷狼竜の碧玉
+Jinouga Leggings : 5 雷狼竜の堅殻, 5 雷狼竜の尖爪, 3 雷狼竜の高電殻, 10 超電雷光虫
+Bracchidios Helm : 3 砕竜の黒曜甲, 1 砕竜の頭殻, 3 なぞの粘菌, 2 獄炎石
+Bracchidios Mail : 4 砕竜の堅殻, 3 砕竜の黒曜甲, 4 ユニオン鉱石, 3 赤熱した堅胸殻
+Bracchidios Vambraces : 3 砕竜の黒曜甲, 2 砕竜の剛拳, 3 なぞの粘菌, 4 溶岩塊
+Bracchidios Faulds : 2 砕竜の黒曜甲, 1 砕竜の尻尾, 1 砕竜の宝玉, 4 砕竜の堅殻
+Bracchidios Greaves : 4 砕竜の堅殻, 2 なぞの粘菌, 2 砕竜の剛拳, 5 カブレライト鉱石
+Bracchidios Cap : 3 砕竜の黒曜甲, 1 砕竜の頭殻, 3 なぞの粘菌, 2 獄炎石
+Bracchidios Vest : 4 砕竜の堅殻, 3 砕竜の黒曜甲, 4 ユニオン鉱石, 3 赤熱した堅胸殻
+Bracchidios Guards : 3 砕竜の黒曜甲, 2 砕竜の剛拳, 3 なぞの粘菌, 4 溶岩塊
+Bracchidios Coat : 2 砕竜の黒曜甲, 1 砕竜の尻尾, 1 砕竜の宝玉, 4 砕竜の堅殻
+Bracchidios Leggings : 4 砕竜の堅殻, 2 なぞの粘菌, 2 砕竜の剛拳, 5 カブレライト鉱石
+Dobol S Helm : 2 尾槌竜の尖角, 6 尾槌竜の堅殻, 1 尾槌竜の尾骨, 3 ファンゴの毛皮
+Dobol S Mail : 2 尾槌竜の尖角, 4 尾槌竜のコブ, 1 竜玉, 6 ファンゴの毛皮
+Dobol S Vambraces : 6 尾槌竜の堅殻, 2 尾槌竜の堅尾甲, 5 尾槌竜の堅苔甲, 6 垂皮竜の上皮
+Dobol S Faulds : 4 尾槌竜の堅苔甲, 6 尾槌竜の堅殻, 1 尾槌竜の仙骨, 4 垂皮竜の上皮
+Dobol S Greaves : 3 尾槌竜の堅尾甲, 5 尾槌竜の堅苔甲, 4 尾槌竜のコブ, 5 堅竜骨
+Dobol S Cap : 2 尾槌竜の尖角, 6 尾槌竜の堅殻, 1 尾槌竜の尾骨, 3 ファンゴの毛皮
+Dobol S Vest : 2 尾槌竜の尖角, 4 尾槌竜のコブ, 1 竜玉, 6 ファンゴの毛皮
+Dobol S Guards : 6 尾槌竜の堅殻, 2 尾槌竜の堅尾甲, 5 尾槌竜の堅苔甲, 6 垂皮竜の上皮
+Dobol S Coat : 4 尾槌竜の堅苔甲, 6 尾槌竜の堅殻, 1 尾槌竜の仙骨, 4 垂皮竜の上皮
+Dobol S Leggings : 3 尾槌竜の堅尾甲, 5 尾槌竜の堅苔甲, 4 尾槌竜のコブ, 5 堅竜骨
+Ranger's Headgear : 2 闘技王のコイン, 3 水竜のコイン, 4 爆炎袋, 3 勇気の証
+Ranger's Girdle : 2 闘技王のコイン, 3 飛竜のコイン, 4 電撃袋, 3 勇気の証
+Ranger's Gauntlets : 2 闘技王のコイン, 3 海竜のコイン, 4 凍結袋, 3 勇気の証
+Ranger's Faulds : 2 闘技王のコイン, 3 牙獣のコイン, 4 大水袋, 3 勇気の証
+Ranger's Espadrilles : 2 闘技王のコイン, 2 牙獣のコイン, 1 大地の龍玉, 3 勇気の証
+Archer's Turban : 2 闘技王のコイン, 3 水竜のコイン, 4 爆炎袋, 3 勇気の証
+Archer's Girdle : 2 闘技王のコイン, 3 飛竜のコイン, 4 電撃袋, 3 勇気の証
+Archer's Gauntlets : 2 闘技王のコイン, 3 海竜のコイン, 4 凍結袋, 3 勇気の証
+Archer's Bandolier : 2 闘技王のコイン, 3 牙獣のコイン, 4 大水袋, 3 勇気の証
+Archer's Espadrilles : 2 闘技王のコイン, 2 牙獣のコイン, 1 大地の龍玉, 3 勇気の証
+Ancient Mail : 3 大きな太古の破片, 5 さびた破片, 3 ユニオン鉱石, 6 カブレライト鉱石
+Ancient Vambraces : 3 細い太古の破片, 5 さびた破片, 3 ユニオン鉱石, 9 ドラグライト鉱石
+Ancient Greaves : 3 長い太古の破片, 5 さびた破片, 4 グラシスメタル, 9 ドラグライト鉱石
+Ancient Vest : 3 大きな太古の破片, 5 さびた破片, 3 ユニオン鉱石, 6 カブレライト鉱石
+Ancient Guards : 3 細い太古の破片, 5 さびた破片, 3 ユニオン鉱石, 9 ドラグライト鉱石
+Ancient Leggings : 3 長い太古の破片, 5 さびた破片, 4 グラシスメタル, 9 ドラグライト鉱石
+Dober Helm : 4 いにしえの龍骨, 1 迅竜の鋭牙, 10 上質な鳥竜骨, 8 上竜骨
+Dober Mail : 3 いにしえの龍骨, 4 黒角竜の堅甲, 3 堅竜骨, 20 竜骨【小】
+Dober Vambraces : 3 いにしえの龍骨, 3 風牙竜の鋭爪, 2 古龍の血, 5 竜骨【大】
+Dober Coil : 3 いにしえの龍骨, 3 雷狼竜の尖爪, 5 堅牢な骨, 10 竜骨【中】
+Dober Greaves : 3 いにしえの龍骨, 2 凍戈竜の鋭爪, 5 尖竜骨, 10 大きな骨
+Dober Cap : 4 いにしえの龍骨, 1 迅竜の鋭牙, 10 上質な鳥竜骨, 8 上竜骨
+Dober Vest : 3 いにしえの龍骨, 4 黒角竜の堅甲, 3 堅竜骨, 20 竜骨【小】
+Dober Guards : 3 いにしえの龍骨, 3 風牙竜の鋭爪, 2 古龍の血, 5 竜骨【大】
+Dober Coat : 3 いにしえの龍骨, 3 雷狼竜の尖爪, 5 堅牢な骨, 10 竜骨【中】
+Dober Leggings : 3 いにしえの龍骨, 2 凍戈竜の鋭爪, 5 尖竜骨, 10 大きな骨
+Diablos S Helm : 5 角竜の堅殻, 4 角竜の尾甲, 1 竜玉, 4 毒狗竜の上皮
+Diablos S Mail : 5 角竜の堅甲, 3 上質なねじれた角, 3 角竜の背甲, 7 草食竜の甲殻
+Diablos S Vambraces : 6 角竜の堅殻, 5 角竜の牙, 6 角竜の甲殻, 3 毒狗竜の腕甲
+Diablos S Faulds : 6 角竜の堅甲, 6 角竜の牙, 1 角竜の延髄, 6 草食竜の堅殻
+Diablos S Greaves : 6 角竜の堅殻, 5 ねじれた角, 3 堅竜骨, 3 草食竜の頭殻
+Diablos S Cap : 5 角竜の堅殻, 4 角竜の尾甲, 1 竜玉, 4 毒狗竜の上皮
+Diablos S Vest : 5 角竜の堅甲, 3 上質なねじれた角, 3 角竜の背甲, 7 草食竜の甲殻
+Diablos S Guards : 6 角竜の堅殻, 5 角竜の牙, 6 角竜の甲殻, 3 毒狗竜の腕甲
+Diablos S Coat : 6 角竜の堅甲, 6 角竜の牙, 1 角竜の延髄, 6 草食竜の堅殻
+Diablos S Leggings : 6 角竜の堅殻, 5 ねじれた角, 3 堅竜骨, 3 草食竜の頭殻
+Diablos U Helm : 4 黒角竜の堅殻, 4 角竜の尾甲, 1 竜玉, 4 甲虫の腹袋
+Diablos U Mail : 2 上質な黒巻き角, 5 黒角竜の堅甲, 2 角竜の骨髄, 4 狗竜の尖爪
+Diablos U Vambraces : 4 黒角竜の堅殻, 5 角竜の牙, 1 角竜の延髄, 4 狗竜の爪
+Diablos U Faulds : 6 黒角竜の堅甲, 5 黒角竜の堅殻, 6 角竜の牙, 3 上質な腹袋
+Diablos U Greaves : 5 黒角竜の堅殻, 5 ねじれた角, 4 堅竜骨, 4 甲虫の大顎
+Diablos U Cap : 4 黒角竜の堅殻, 4 角竜の尾甲, 1 竜玉, 4 甲虫の腹袋
+Diablos U Vest : 2 上質な黒巻き角, 5 黒角竜の堅甲, 2 角竜の骨髄, 4 狗竜の尖爪
+Diablos U Guards : 4 黒角竜の堅殻, 5 角竜の牙, 1 角竜の延髄, 4 狗竜の爪
+Diablos U Coat : 6 黒角竜の堅甲, 5 黒角竜の堅殻, 6 角竜の牙, 3 上質な腹袋
+Diablos U Leggings : 5 黒角竜の堅殻, 5 ねじれた角, 4 堅竜骨, 4 甲虫の大顎
+Agnaktor S Helm : 5 炎戈竜の堅殻, 2 炎戈竜の碇口, 4 炎戈竜の上皮, 4 毒狗竜の上皮
+Agnaktor S Mail : 4 炎戈竜の上皮, 2 炎戈竜の上ヒレ, 5 炎戈竜の堅殻, 2 獄炎石
+Agnaktor S Vambraces : 5 炎戈竜の鋭爪, 5 炎戈竜の堅殻, 1 炎戈竜の尻尾, 6 溶岩塊
+Agnaktor S Faulds : 3 炎戈竜の上ヒレ, 5 炎戈竜の燃鱗, 8 溶岩獣の上鱗, 5 毒狗竜の皮
+Agnaktor S Greaves : 5 赤熱した堅胸殻, 4 炎戈竜の上皮, 1 竜玉, 3 毒狗竜の腕甲
+Agnaktor S Cap : 5 炎戈竜の堅殻, 2 炎戈竜の碇口, 4 炎戈竜の上皮, 4 毒狗竜の上皮
+Agnaktor S Vest : 4 炎戈竜の上皮, 2 炎戈竜の上ヒレ, 5 炎戈竜の堅殻, 2 獄炎石
+Agnaktor S Guards : 5 炎戈竜の鋭爪, 5 炎戈竜の堅殻, 1 炎戈竜の尻尾, 6 溶岩塊
+Agnaktor S Coat : 3 炎戈竜の上ヒレ, 5 炎戈竜の燃鱗, 8 溶岩獣の上鱗, 5 毒狗竜の皮
+Agnaktor S Leggings : 5 赤熱した堅胸殻, 4 炎戈竜の上皮, 1 竜玉, 3 毒狗竜の腕甲
+Agnaktor U Helm : 5 凍戈竜の堅殻, 2 凍戈竜の碇口, 3 凍戈竜の上皮, 8 なめらかな皮
+Agnaktor U Mail : 4 凍戈竜の上皮, 3 凍戈竜の上ヒレ, 5 凍戈竜の堅殻, 4 眠狗竜の皮
+Agnaktor U Vambraces : 3 凍戈竜の鋭爪, 5 凍戈竜の堅殻, 1 竜玉, 3 眠狗竜の鋭爪
+Agnaktor U Faulds : 2 凍戈竜の上ヒレ, 1 凍戈竜の尻尾, 4 凍戈竜の上皮, 3 眠狗竜の爪
+Agnaktor U Greaves : 5 潤った堅胸殻, 2 凍戈竜の上ヒレ, 3 凍戈竜の鋭爪, 4 眠狗竜の上皮
+Agnaktor U Cap : 5 凍戈竜の堅殻, 2 凍戈竜の碇口, 3 凍戈竜の上皮, 8 なめらかな皮
+Agnaktor U Vest : 4 凍戈竜の上皮, 3 凍戈竜の上ヒレ, 5 凍戈竜の堅殻, 4 眠狗竜の皮
+Agnaktor U Guards : 3 凍戈竜の鋭爪, 5 凍戈竜の堅殻, 1 竜玉, 3 眠狗竜の鋭爪
+Agnaktor U Coat : 2 凍戈竜の上ヒレ, 1 凍戈竜の尻尾, 4 凍戈竜の上皮, 3 眠狗竜の爪
+Agnaktor U Leggings : 5 潤った堅胸殻, 2 凍戈竜の上ヒレ, 3 凍戈竜の鋭爪, 4 眠狗竜の上皮
+Uragaan S Helm : 4 爆鎚竜の堅殻, 4 爆鎚竜の骨髄, 3 溶岩塊, 3 赤甲獣の堅殻
+Uragaan S Mail : 5 爆槌竜の堅殻, 3 爆槌竜の顎, 6 爆槌竜の鱗, 1 獄炎石
+Uragaan S Vambraces : 5 爆鎚竜の上鱗, 5 爆鎚竜の耐熱殻, 3 尖竜骨, 3 ユニオン鉱石
+Uragaan S Faulds : 6 爆鎚竜の上鱗, 1 爆鎚竜の紅玉, 4 爆鎚竜の甲殻, 5 赤甲獣の甲殻
+Uragaan S Greaves : 5 爆鎚竜の堅殻, 6 爆鎚竜の上鱗, 1 竜玉, 2 赤甲獣の蛇腹甲
+Uragaan S Cap : 4 爆鎚竜の堅殻, 4 爆鎚竜の骨髄, 3 溶岩塊, 3 赤甲獣の堅殻
+Uragaan S Vest : 5 爆槌竜の堅殻, 3 爆槌竜の顎, 6 爆槌竜の鱗, 1 獄炎石
+Uragaan S Guards : 5 爆鎚竜の上鱗, 5 爆鎚竜の耐熱殻, 3 尖竜骨, 3 ユニオン鉱石
+Uragaan S Coat : 6 爆鎚竜の上鱗, 1 爆鎚竜の紅玉, 4 爆鎚竜の甲殻, 5 赤甲獣の甲殻
+Uragaan S Leggings : 5 爆鎚竜の堅殻, 6 爆鎚竜の上鱗, 1 竜玉, 2 赤甲獣の蛇腹甲
+Uragaan U Helm : 5 鋼鎚竜の堅殻, 2 爆鎚竜の骨髄, 1 竜玉, 3 赤甲獣の爪
+Uragaan U Mail : 3 鋼槌竜の剛顎, 2 鋼槌竜の耐熱殻, 5 鋼槌竜の上鱗, 3 ユニオン鉱石
+Uragaan U Vambraces : 4 鋼鎚竜の上鱗, 1 爆鎚竜の紅玉, 5 溶岩塊, 3 赤甲獣の尖爪
+Uragaan U Faulds : 3 鋼鎚竜の耐熱殻, 4 鋼鎚竜の上鱗, 4 鋼鎚竜の堅殻, 1 獄炎石
+Uragaan U Greaves : 5 鋼鎚竜の堅殻, 4 鋼鎚竜の上鱗, 2 鋼鎚竜の剛顎, 2 赤甲獣の蛇腹甲
+Uragaan U Cap : 5 鋼鎚竜の堅殻, 2 爆鎚竜の骨髄, 1 竜玉, 3 赤甲獣の爪
+Uragaan U Vest : 3 鋼槌竜の剛顎, 2 鋼槌竜の耐熱殻, 5 鋼槌竜の上鱗, 3 ユニオン鉱石
+Uragaan U Guards : 4 鋼鎚竜の上鱗, 1 爆鎚竜の紅玉, 5 溶岩塊, 3 赤甲獣の尖爪
+Uragaan U Coat : 3 鋼鎚竜の耐熱殻, 4 鋼鎚竜の上鱗, 4 鋼鎚竜の堅殻, 1 獄炎石
+Uragaan U Leggings : 5 鋼鎚竜の堅殻, 4 鋼鎚竜の上鱗, 2 鋼鎚竜の剛顎, 2 赤甲獣の蛇腹甲
+Damascus Helm : 4 峯山龍の上蒼鱗, 4 桜火竜の上鱗, 2 雌火竜の上棘, 2 勇気の証
+Damascus Mail : 4 猛々しい龍鋭牙, 6 蒼火竜の堅殻, 2 恐暴竜の唾液, 2 勇気の証
+Damascus Vambraces : 4 峯山龍の上蒼鱗, 4 蒼火竜の上鱗, 2 恐暴竜の唾液, 2 勇気の証
+Damascus Coil : 6 峯山龍の堅岩殻, 4 桜火竜の上鱗, 4 蒼火竜の上鱗, 2 勇気の証
+Damascus Greaves : 6 峯山龍の堅岩殻, 6 桜火竜の堅殻, 1 蒼火竜の尻尾, 2 勇気の証
+Damascus Cap : 4 峯山龍の上蒼鱗, 4 桜火竜の上鱗, 2 雌火竜の上棘, 2 勇気の証
+Damascus Vest : 4 猛々しい龍鋭牙, 6 蒼火竜の堅殻, 2 恐暴竜の唾液, 2 勇気の証
+Damascus Guards : 4 峯山龍の上蒼鱗, 4 蒼火竜の上鱗, 2 恐暴竜の唾液, 2 勇気の証
+Damascus Coat : 6 峯山龍の堅岩殻, 4 桜火竜の上鱗, 4 蒼火竜の上鱗, 2 勇気の証
+Damascus Leggings : 6 峯山龍の堅岩殻, 6 桜火竜の堅殻, 1 蒼火竜の尻尾, 2 勇気の証
+Yamato Kabuto/Hinata Hachigane : 4 猛々しい龍鋭牙, 5 峯山龍の上蒼鱗, 3 峯山龍の堅岩殻, 1 雌火竜の逆鱗
+Yamato Muneate/Hinata Muneate : 6 峯山龍の堅岩殻, 4 猛々しい龍鋭牙, 1 古龍の血, 6 上質なヒレ
+Yamato Kote/Hinata Kote : 6 峯山龍の上蒼鱗, 1 峯山龍の上腕甲, 1 大地の龍玉, 3 デプスライト鉱石
+Yamato Koshiate/Hinata Koshiate : 4 峯山龍の上腕甲, 6 峯山龍の堅岩殻, 2 峯山龍の上蒼鱗, 1 火竜の逆鱗
+Yamato Gusoku/Hinata Hakama : 5 峯山龍の上蒼鱗, 6 峯山龍の堅岩殻, 1 大地の龍玉, 10 大きなヒレ
+Mutsu Eboshi/Amagi Hachigane : 4 猛々しい龍鋭牙, 5 峯山龍の上蒼鱗, 3 峯山龍の堅岩殻, 1 雌火竜の逆鱗
+Mutsu Muneate/Amagi Muneate : 6 峯山龍の堅岩殻, 4 猛々しい龍鋭牙, 1 古龍の血, 6 上質なヒレ
+Mutsu Kote/Amagi Kote : 6 峯山龍の上蒼鱗, 1 峯山龍の上腕甲, 1 大地の龍玉, 3 デプスライト鉱石
+Mutsu Koshiate/Amagi Koshiate : 4 峯山龍の上腕甲, 6 峯山龍の堅岩殻, 2 峯山龍の上蒼鱗, 1 火竜の逆鱗
+Mutsu Gusoku/Amagi Hakama : 5 峯山龍の上蒼鱗, 6 峯山龍の堅岩殻, 1 大地の龍玉, 10 大きなヒレ
+Vangis Helm : 2 恐暴竜の頭殻, 4 恐暴竜の黒皮, 3 恐暴竜の唾液, 1 氷牙竜の棘
+Vangis Mail : 5 恐暴竜の大牙, 4 恐暴竜の鉤爪, 5 恐暴竜の黒皮, 1 雷狼竜の碧玉
+Vangis Vambraces : 6 恐暴竜の黒鱗, 5 恐暴竜の大牙, 3 恐暴竜の唾液, 1 迅竜の延髄
+Vangis Coil : 4 恐暴竜の黒皮, 1 恐暴竜の宝玉, 6 恐暴竜の黒鱗, 1 尾槌竜の尾骨
+Vangis Greaves : 4 恐暴竜の鉤爪, 6 恐暴竜の黒鱗, 3 恐暴竜の唾液, 1 爆鎚竜の骨髄
+Vangis Cap : 2 恐暴竜の頭殻, 4 恐暴竜の黒皮, 3 恐暴竜の唾液, 1 氷牙竜の棘
+Vangis Vest : 5 恐暴竜の大牙, 4 恐暴竜の鉤爪, 5 恐暴竜の黒皮, 1 雷狼竜の碧玉
+Vangis Guards : 6 恐暴竜の黒鱗, 5 恐暴竜の大牙, 3 恐暴竜の唾液, 1 迅竜の延髄
+Vangis Coat : 4 恐暴竜の黒皮, 1 恐暴竜の宝玉, 6 恐暴竜の黒鱗, 1 尾槌竜の尾骨
+Vangis Leggings : 4 恐暴竜の鉤爪, 6 恐暴竜の黒鱗, 3 恐暴竜の唾液, 1 爆鎚竜の骨髄
+Escadora Wisdom : 4 砕けた天角, 1 天をつらぬく角, 6 煌黒龍の逆鱗, 1 風牙竜の鋭爪
+Escadora Soul : 6 煌黒龍の堅逆鱗, 6 煌黒龍の尖爪, 4 砕けた天角, 3 潜口竜の頭殻
+Escadora Arms : 6 煌黒龍の尖爪, 6 煌黒龍の堅逆殻, 1 古龍の血, 1 上質な黒巻き角
+Escadora Might : 1 煌黒龍の翼膜, 1 煌黒龍の尻尾, 5 煌黒龍の逆鱗, 2 恐暴竜の頭殻
+Escadora Scale : 6 煌黒龍の逆鱗, 6 煌黒龍の堅逆殻, 1 瑠璃色の龍玉, 2 上質なねじれた角
+Escadora Sagesse : 4 砕けた天角, 1 天をつらぬく角, 6 煌黒龍の逆鱗, 1 風牙竜の鋭爪
+Escadora Seele : 6 煌黒龍の堅逆鱗, 6 煌黒龍の尖爪, 4 砕けた天角, 3 潜口竜の頭殻
+Escadora Arma : 6 煌黒龍の尖爪, 6 煌黒龍の堅逆殻, 1 古龍の血, 1 上質な黒巻き角
+Escadora Force : 1 煌黒龍の翼膜, 1 煌黒龍の尻尾, 5 煌黒龍の逆鱗, 2 恐暴竜の頭殻
+Escadora Scala : 6 煌黒龍の逆鱗, 6 煌黒龍の堅逆殻, 1 瑠璃色の龍玉, 2 上質なねじれた角
+Pirate J Hat : 1 海賊Ｊチケット, 3 赤甲獣の甲殻, 5 火竜の上鱗, 6 鋼鎚竜の上鱗
+Pirate J Suit : 1 海賊Ｊチケット, 2 赤甲獣の尖爪, 2 不気味な上皮, 3 赤熱した堅胸殻
+Pirate J Gloves : 1 海賊Ｊチケット, 4 赤甲獣の堅殻, 1 火竜の紅玉, 5 炎戈竜の堅殻
+Pirate J Coil : 1 海賊Ｊチケット, 3 赤甲獣の堅殻, 3 鋼鎚竜の耐熱殻, 4 炎戈竜の上皮
+Pirate J Boots : 1 海賊Ｊチケット, 4 赤甲獣の蛇腹甲, 4 火竜の堅殻, 4 鋼鎚竜の堅殻
+Pirate J Cap : 1 海賊Ｊチケット, 3 赤甲獣の甲殻, 5 火竜の上鱗, 6 鋼鎚竜の上鱗
+Pirate J Jacket : 1 海賊Ｊチケット, 2 赤甲獣の尖爪, 2 不気味な上皮, 3 赤熱した堅胸殻
+Pirate J Cuffs : 1 海賊Ｊチケット, 4 赤甲獣の堅殻, 1 火竜の紅玉, 5 炎戈竜の堅殻
+Pirate J Coat : 1 海賊Ｊチケット, 3 赤甲獣の堅殻, 3 鋼鎚竜の耐熱殻, 4 炎戈竜の上皮
+Pirate J Pants : 1 海賊Ｊチケット, 4 赤甲獣の蛇腹甲, 4 火竜の堅殻, 4 鋼鎚竜の堅殻
+Bnahabra X Hat : 2 飛甲虫の斬羽, 3 飛甲虫の堅殻, 2 飛甲虫の麻痺針, 2 皇帝バッタ
+Bnahabra X Suit : 2 飛甲虫の斬羽, 3 飛甲虫の堅殻, 2 モンスターの特濃, 2 皇帝バッタ
+Bnahabra X Glove : 2 飛甲虫の斬羽, 5 飛甲虫の羽, 2 極上の腹袋, 3 モンスターの特濃
+Bnahabra X Coil : 2 飛甲虫の斬羽, 5 飛甲虫の羽, 1 モンスターの特濃, 1 マボロシチョウ
+Bnahabra X Boots : 2 飛甲虫の斬羽, 3 飛甲虫の羽, 1 極上の腹袋, 3 モンスターの特濃
+Bnahabra X Cap : 2 飛甲虫の斬羽, 3 飛甲虫の堅殻, 2 飛甲虫の麻痺針, 2 皇帝バッタ
+Bnahabra X Vest : 2 飛甲虫の斬羽, 3 飛甲虫の堅殻, 2 モンスターの特濃, 2 皇帝バッタ
+Bnahabra X Cuffs : 2 飛甲虫の斬羽, 5 飛甲虫の羽, 2 極上の腹袋, 3 モンスターの特濃
+Bnahabra X Coat : 2 飛甲虫の斬羽, 5 飛甲虫の羽, 1 モンスターの特濃, 1 マボロシチョウ
+Bnahabra X Pants : 2 飛甲虫の斬羽, 3 飛甲虫の羽, 1 極上の腹袋, 3 モンスターの特濃
+Rhenoplos X Helm : 2 草食竜の重骨, 3 重厚な骨, 4 グラシスメタル
+Rhenoplos X Mail : 2 草食竜の重骨, 3 竜骨【大】, 2 エルトライト鉱石
+Rhenoplos X Vambraces : 3 草食竜の重骨, 6 堅牢な鳥竜骨, 4 グラシスメタル
+Rhenoplos X Coil : 1 草食竜の重骨, 4 重厚な骨, 4 グラシスメタル
+Rhenoplos X Greaves : 3 草食獣の重骨, 8 竜骨【大】, 2 エルトライト鉱石
+Rhenoplos X Cap : 2 草食竜の重骨, 3 重厚な骨, 4 グラシスメタル
+Rhenoplos X Vest : 2 草食竜の重骨, 3 竜骨【大】, 2 エルトライト鉱石
+Rhenoplos X Guards : 3 草食竜の重骨, 6 堅牢な鳥竜骨, 4 グラシスメタル
+Rhenoplos X Coat : 1 草食竜の重骨, 4 重厚な骨, 4 グラシスメタル
+Rhenoplos X Leggings : 3 草食獣の重骨, 8 竜骨【大】, 2 エルトライト鉱石
+Zuwaroposu X Hood : 4 柔軟な厚皮, 3 垂皮竜の上皮, 2 極上の毛皮
+Zuwaroposu X Mantle : 2 柔軟な厚皮, 5 垂皮竜の上皮, 2 極上の毛皮
+Zuwaroposu X Cap : 5 柔軟な厚皮, 4 垂皮竜の上皮, 3 極上の毛皮
+Zuwaroposu X Vest : 2 柔軟な厚皮, 5 垂皮竜の上皮, 2 極上の毛皮
+Pumpkin X Helm : 1 尾鎚竜の重苔甲, 4 ペピポパンプキン, 2 いにしえの秘薬, 20 マタタビ
+Pumpkin X Mail : 1 尾槌竜の重苔甲, 4 ペピポパンプキン, 1 落陽草の花, 20 サボテンの花
+Pumpkin X Vambraces : 1 尾槌竜の重苔甲, 5 ペピポパンプキン, 4 モンスターの特濃, 20 トウガラシ
+Pumpkin X Faulds : 1 尾鎚竜の重苔甲, 5 ペピポパンプキン, 4 飛甲虫の斬羽, 20 火薬草
+Pumpkin X Greaves : 1 尾槌竜の重苔甲, 4 ペピポパンプキン, 3 極上の腹袋, 20 ネムリ草
+Pumpkin X Cap : 1 尾鎚竜の重苔甲, 4 ペピポパンプキン, 2 いにしえの秘薬, 20 マタタビ
+Pumpkin X Vest : 1 尾槌竜の重苔甲, 4 ペピポパンプキン, 1 落陽草の花, 20 サボテンの花
+Pumpkin X Guards : 1 尾槌竜の重苔甲, 5 ペピポパンプキン, 4 モンスターの特濃, 20 トウガラシ
+Pumpkin X Coat : 1 尾鎚竜の重苔甲, 5 ペピポパンプキン, 4 飛甲虫の斬羽, 20 火薬草
+Pumpkin X Leggings : 1 尾槌竜の重苔甲, 4 ペピポパンプキン, 3 極上の腹袋, 20 ネムリ草
+Jaggi X Helm : 2 偉大なエリマキ, 2 拘竜の尖爪, 2 ジャギィの上鱗, 3 エルトライト鉱石
+Jaggi X Mail : 4 狗竜の厚皮, 4 狗竜の上皮, 3 堅牢な鳥竜骨, 2 ユニオン鉱石
+Jaggi X Vambraces : 1 幻鳥竜玉, 5 狗竜の尖爪, 1 狗竜の頭, 3 エルトライト鉱石
+Jaggi X Faulds : 4 狗竜の厚皮, 2 偉大なエリマキ, 4 ジャギィの上鱗, 5 エルトライト鉱石
+Jaggi X Greaves : 3 狗竜の厚皮, 4 狗竜の上皮, 4 堅牢な鳥竜骨, 5 ユニオン鉱石
+Jaggi X Cap : 2 偉大なエリマキ, 2 拘竜の尖爪, 2 ジャギィの上鱗, 3 エルトライト鉱石
+Jaggi X Vest : 4 狗竜の厚皮, 4 狗竜の上皮, 3 堅牢な鳥竜骨, 2 ユニオン鉱石
+Jaggi X Guards : 1 幻鳥竜玉, 5 狗竜の尖爪, 1 狗竜の頭, 3 エルトライト鉱石
+Jaggi X Coat : 4 狗竜の厚皮, 2 偉大なエリマキ, 4 ジャギィの上鱗, 5 エルトライト鉱石
+Jaggi X Leggings : 3 狗竜の厚皮, 4 狗竜の上皮, 4 堅牢な鳥竜骨, 5 ユニオン鉱石
+Baggi X Helm : 2 偉大なトサカ, 2 眠狗竜の尖爪, 2 眠狗竜の上皮, 3 グラシスメタル
+Baggi X Mail : 4 眠狗竜の厚皮, 4 眠狗竜の上皮, 3 堅牢な鳥竜骨, 2 皇帝バッタ
+Baggi X Vambraces : 1 幻鳥竜玉, 5 眠狗竜の尖爪, 1 昏睡袋, 3 グラシスメタル
+Baggi X Faulds : 3 眠狗竜の厚皮, 2 偉大なトサカ, 4 バギィの上鱗, 5 グラシスメタル
+Baggi X Greaves : 2 眠狗竜の厚皮, 4 眠狗竜の上皮, 4 堅牢な鳥竜骨, 5 皇帝バッタ
+Baggi X Cap : 2 偉大なトサカ, 2 眠狗竜の尖爪, 2 眠狗竜の上皮, 3 グラシスメタル
+Baggi X Vest : 4 眠狗竜の厚皮, 4 眠狗竜の上皮, 3 堅牢な鳥竜骨, 2 皇帝バッタ
+Baggi X Guards : 1 幻鳥竜玉, 5 眠狗竜の尖爪, 1 昏睡袋, 3 グラシスメタル
+Baggi X Coat : 3 眠狗竜の厚皮, 2 偉大なトサカ, 4 バギィの上鱗, 5 グラシスメタル
+Baggi X Leggings : 2 眠狗竜の厚皮, 4 眠狗竜の上皮, 4 堅牢な鳥竜骨, 5 皇帝バッタ
+Froggi X Helm : 2 偉大なクチバシ, 2 毒拘竜の堅腕甲, 2 フロギィの上鱗, 3 デプスライト鉱石
+Froggi X Mail : 4 毒狗竜の厚皮, 4 毒狗竜の上皮, 3 堅牢な鳥竜骨, 2 メランジェ鉱石
+Froggi X Vambraces : 1 幻鳥竜玉, 5 毒狗竜の堅腕甲, 1 猛毒袋, 3 デプスライト鉱石
+Froggi X Faulds : 3 毒狗竜の厚皮, 2 王者のクチバシ, 4 フロギィの上鱗, 5 デプスライト鉱石
+Froggi X Greaves : 2 毒狗竜の厚皮, 4 毒狗竜の上皮, 4 堅牢な鳥竜骨, 2 メランジェ鉱石
+Froggi X Cap : 2 偉大なクチバシ, 2 毒拘竜の堅腕甲, 2 フロギィの上鱗, 3 デプスライト鉱石
+Froggi X Vest : 4 毒狗竜の厚皮, 4 毒狗竜の上皮, 3 堅牢な鳥竜骨, 2 メランジェ鉱石
+Froggi X Guards : 1 幻鳥竜玉, 5 毒狗竜の堅腕甲, 1 猛毒袋, 3 デプスライト鉱石
+Froggi X Coat : 3 毒狗竜の厚皮, 2 王者のクチバシ, 4 フロギィの上鱗, 5 デプスライト鉱石
+Froggi X Leggings : 2 毒狗竜の厚皮, 4 毒狗竜の上皮, 4 堅牢な鳥竜骨, 2 メランジェ鉱石
+Aoashira X Helm : 3 青熊獣の重殻, 2 重厚な骨, 3 青熊獣の剛毛, 6 エルトライト鉱石
+Aoashira X Mail : 2 青熊獣の重腕甲, 2 青熊獣の重殻, 3 飛甲虫の斬羽, 4 皇帝バッタ
+Aoashira X Vambraces : 3 青熊獣の重殻, 3 青熊獣の重腕甲, 3 青熊獣の剛毛, 2 極上の腹袋
+Aoashira X Faulds : 2 青熊獣の重腕甲, 2 重厚な骨, 3 青熊獣の堅殻, 6 エルトライト鉱石
+Aoashira X Greaves : 2 青熊獣の重腕甲, 2 重厚な牙, 3 飛甲虫の堅殻, 4 皇帝バッタ
+Aoashira X Cap : 3 青熊獣の重殻, 2 重厚な骨, 3 青熊獣の剛毛, 6 エルトライト鉱石
+Aoashira X Vest : 2 青熊獣の重腕甲, 2 青熊獣の重殻, 3 飛甲虫の斬羽, 4 皇帝バッタ
+Aoashira X Guards : 3 青熊獣の重殻, 3 青熊獣の重腕甲, 3 青熊獣の剛毛, 2 極上の腹袋
+Aoashira X Coat : 2 青熊獣の重腕甲, 2 重厚な骨, 3 青熊獣の堅殻, 6 エルトライト鉱石
+Aoashira X Leggings : 2 青熊獣の重腕甲, 2 重厚な牙, 3 飛甲虫の堅殻, 4 皇帝バッタ
+Urkusus X Helm : 2 白兎獣の地獄耳, 2 白兎獣の豪剛毛, 4 眠狗竜の厚皮, 1 マボロシチョウ
+Urkusus X Mail : 3 白兎獣の豪剛毛, 3 白兎獣の堅腹甲, 4 偉大なトサカ, 3 皇帝バッタ
+Urkusus X Vambraces : 1 白兎獣の地獄耳, 2 白兎獣の豪剛毛, 2 重厚な牙, 6 柔軟な厚皮
+Urkusus X Faulds : 3 白兎獣の豪剛毛, 1 白兎獣の凍爪, 2 堅牢な骨, 3 皇帝バッタ
+Urkusus X Greaves : 3 白兎獣の豪剛毛, 4 白兎獣の堅腹甲, 3 白兎獣の凍爪, 8 エルトライト鉱石
+Urkusus X Cap : 2 白兎獣の地獄耳, 2 白兎獣の豪剛毛, 4 眠狗竜の厚皮, 1 マボロシチョウ
+Urkusus X Vest : 3 白兎獣の豪剛毛, 3 白兎獣の堅腹甲, 4 偉大なトサカ, 3 皇帝バッタ
+Urkusus X Guards : 1 白兎獣の地獄耳, 2 白兎獣の豪剛毛, 2 重厚な牙, 6 柔軟な厚皮
+Urkusus X Coat : 3 白兎獣の豪剛毛, 1 白兎獣の凍爪, 2 堅牢な骨, 3 皇帝バッタ
+Urkusus X Leggings : 3 白兎獣の豪剛毛, 4 白兎獣の堅腹甲, 3 白兎獣の凍爪, 8 エルトライト鉱石
+Ranguro X Helm : 3 赤甲獣の剛爪, 3 赤甲獣の重殻, 3 モンスターの特濃, 2 獄炎石
+Ranguro X Mail : 3 赤甲獣の重殻, 3 毒狗竜の厚皮, 2 重厚な骨, 3 獄炎石
+Ranguro X Vambraces : 3 赤甲獣の剛爪, 6 強力麻痺袋, 3 重厚な骨, 5 エルトライト鉱石
+Ranguro X Faulds : 3 赤甲獣の重殻, 5 赤甲獣の蛇腹甲, 3 モンスターの特濃, 2 獄炎石
+Ranguro X Greaves : 3 赤甲獣の剛爪, 3 赤甲獣の重殻, 2 重厚な牙, 2 エルトライト鉱石
+Ranguro X Cap : 3 赤甲獣の剛爪, 3 赤甲獣の重殻, 3 モンスターの特濃, 2 獄炎石
+Ranguro X Vest : 3 赤甲獣の重殻, 3 毒狗竜の厚皮, 2 重厚な骨, 3 獄炎石
+Ranguro X Guards : 3 赤甲獣の剛爪, 6 強力麻痺袋, 3 重厚な骨, 5 エルトライト鉱石
+Ranguro X Coat : 3 赤甲獣の重殻, 5 赤甲獣の蛇腹甲, 3 モンスターの特濃, 2 獄炎石
+Ranguro X Leggings : 3 赤甲獣の剛爪, 3 赤甲獣の重殻, 2 重厚な牙, 2 エルトライト鉱石
+Ingot X Helm : 2 真紅蓮石, 2 グラシスメタル, 2 エルトライト鉱石, 5 カブレライト鉱石
+Ingot X Mail : 3 真紅蓮石, 3 獄炎石, 2 エルトライト鉱石, 5 カブレライト鉱石
+Ingot X Vambraces : 2 真紅蓮石, 4 グラシスメタル, 2 エルトライト鉱石, 2 溶岩塊
+Ingot X Coil : 2 真紅蓮石, 3 獄炎石, 2 エルトライト鉱石, 2 溶岩塊
+Ingot X Greaves : 3 真紅蓮石, 2 グラシスメタル, 1 エルトライト鉱石, 5 カブレライト鉱石
+Ingot X Cap : 2 真紅蓮石, 2 グラシスメタル, 2 エルトライト鉱石, 5 カブレライト鉱石
+Ingot X Vest : 3 真紅蓮石, 3 獄炎石, 2 エルトライト鉱石, 5 カブレライト鉱石
+Ingot X Guards : 2 真紅蓮石, 4 グラシスメタル, 2 エルトライト鉱石, 2 溶岩塊
+Ingot X Coat : 2 真紅蓮石, 3 獄炎石, 2 エルトライト鉱石, 2 溶岩塊
+Ingot X Leggings : 3 真紅蓮石, 2 グラシスメタル, 1 エルトライト鉱石, 5 カブレライト鉱石
+Nadeshiko Cap+ : 3 メランジェ鉱石, 1 落陽草の花, 10 さびた破片, 3 ペピポパンプキン
+Nadeshiko Vest+ : 2 メランジェ鉱石, 1 落陽草の花, 3 イチノタチウオ, 4 大きな太古の破片
+Nadeshiko Sleeves+ : 3 メランジェ鉱石, 1 落陽草の花, 3 うなりうねり貝, 4 細い太古の破片
+Nadeshiko Waist+ : 2 メランジェ鉱石, 1 落陽草の花, 3 トモダチケット, 3 高級お食事券
+Nadeshiko Skirt+ : 3 メランジェ鉱石, 1 落陽草の花, 2 オオマヒシメジ, 4 長い太古の破片
+Kikyo Cap+ : 3 メランジェ鉱石, 1 落陽草の花, 10 さびた破片, 3 ペピポパンプキン
+Kikyo Vest+ : 2 メランジェ鉱石, 1 落陽草の花, 3 イチノタチウオ, 4 大きな太古の破片
+Kikyo Sleeves+ : 3 メランジェ鉱石, 1 落陽草の花, 3 うなりうねり貝, 4 細い太古の破片
+Kikyo Waist+ : 2 メランジェ鉱石, 1 落陽草の花, 3 トモダチケット, 3 高級お食事券
+Kikyo Skirt+ : 3 メランジェ鉱石, 1 落陽草の花, 2 オオマヒシメジ, 4 長い太古の破片
+Sailer's Beret : 3 狩猟王のコイン, 5 闘技王のコイン, 5 ピュアクリスタル, 3 覇王の証
+Sailer's Blouse : 3 狩猟王のコイン, 5 飛竜のコイン, 5 マボロシチョウ, 3 覇王の証
+Sailer's Gloves : 3 狩猟王のコイン, 5 海竜のコイン, 6 真紅蓮石, 3 覇王の証
+Sailer's Skirt : 3 狩猟王のコイン, 5 獣竜のコイン, 8 エルトライト鉱石, 3 覇王の証
+Sailer's Socks : 3 狩猟王のコイン, 5 水竜のコイン, 4 メランジェ鉱石, 3 覇王の証
+Sailer's Cap : 3 狩猟王のコイン, 5 闘技王のコイン, 5 ピュアクリスタル, 3 覇王の証
+Sailer's Vest : 3 狩猟王のコイン, 5 飛竜のコイン, 5 マボロシチョウ, 3 覇王の証
+Sailer's Sleeves : 3 狩猟王のコイン, 5 海竜のコイン, 6 真紅蓮石, 3 覇王の証
+Sailer's Mini : 3 狩猟王のコイン, 5 獣竜のコイン, 8 エルトライト鉱石, 3 覇王の証
+Sailer's Sandals : 3 狩猟王のコイン, 5 水竜のコイン, 4 メランジェ鉱石, 3 覇王の証
+Qurupeco X Helm : 2 魅惑のクチバシ, 2 彩鳥の剛翼, 3 堅牢な鳥竜骨, 3 皇帝バッタ
+Qurupeco X Mail : 3 彩鳥の厚鱗, 2 極彩色の艶羽根, 3 堅牢な鳥竜骨, 1 マボロシチョウ
+Qurupeco X Vambraces : 3 彩鳥の厚鱗, 1 高級火打石, 4 極彩色の艶羽根, 1 マボロシチョウ
+Qurupeco X Coil : 2 彩鳥の剛翼, 3 彩鳥の厚鱗, 2 重厚な骨, 5 王族カナブン
+Qurupeco X Greaves : 2 彩鳥の剛翼, 3 彩鳥の厚鱗, 2 極彩色の艶羽根, 3 皇帝バッタ
+Qurupeco X Cap : 2 魅惑のクチバシ, 2 彩鳥の剛翼, 3 堅牢な鳥竜骨, 3 皇帝バッタ
+Qurupeco X Vest : 3 彩鳥の厚鱗, 2 極彩色の艶羽根, 3 堅牢な鳥竜骨, 1 マボロシチョウ
+Qurupeco X Guards : 3 彩鳥の厚鱗, 1 高級火打石, 4 極彩色の艶羽根, 1 マボロシチョウ
+Qurupeco X Coat : 2 彩鳥の剛翼, 3 彩鳥の厚鱗, 2 重厚な骨, 5 王族カナブン
+Qurupeco X Leggings : 2 彩鳥の剛翼, 3 彩鳥の厚鱗, 2 極彩色の艶羽根, 3 皇帝バッタ
+Qurupeco Z Helm : 1 紅彩鳥の剛翼, 3 魅惑のクチバシ, 2 堅牢な鳥竜骨, 1 マボロシチョウ
+Qurupeco Z Mail : 3 紅彩鳥の厚鱗, 2 極彩色の艶羽根, 1 重厚な骨, 1 マボロシチョウ
+Qurupeco Z Vambraces : 3 高圧電気石, 3 紅彩鳥の厚鱗, 2 極彩色の艶羽根, 3 皇帝バッタ
+Qurupeco Z Coil : 3 紅彩鳥の剛翼, 3 紅彩鳥の厚鱗, 1 重竜骨, 3 皇帝バッタ
+Qurupeco Z Greaves : 3 紅彩鳥の厚鱗, 2 紅彩鳥の剛翼, 1 大竜玉, 5 ドスヘラクレス
+Qurupeco Z Cap : 1 紅彩鳥の剛翼, 3 魅惑のクチバシ, 2 堅牢な鳥竜骨, 1 マボロシチョウ
+Qurupeco Z Vest : 3 紅彩鳥の厚鱗, 2 極彩色の艶羽根, 1 重厚な骨, 1 マボロシチョウ
+Qurupeco Z Guards : 3 高圧電気石, 3 紅彩鳥の厚鱗, 2 極彩色の艶羽根, 3 皇帝バッタ
+Qurupeco Z Coat : 3 紅彩鳥の剛翼, 3 紅彩鳥の厚鱗, 1 重竜骨, 3 皇帝バッタ
+Qurupeco Z Leggings : 3 紅彩鳥の厚鱗, 2 紅彩鳥の剛翼, 1 大竜玉, 5 ドスヘラクレス
+Ludroth X Helm : 2 イカしたトサカ, 3 水獣の厚鱗, 1 水獣の靭尾, 2 特大水袋
+Ludroth X Mail : 3 海綿質の厚皮, 4 柔軟な厚皮, 6 水生獣の上皮, 1 マボロシチョウ
+Ludroth X Vambraces : 3 水獣の剛爪, 4 水獣の厚鱗, 2 海綿質の厚皮, 5 皇帝バッタ
+Ludroth X Faulds : 4 水獣の厚鱗, 6 柔軟な厚皮, 2 重厚な骨, 1 水獣の靭尾
+Ludroth X Greaves : 2 水獣の剛爪, 3 水獣の厚鱗, 3 海綿質の上皮, 5 皇帝バッタ
+Ludroth X Cap : 2 イカしたトサカ, 3 水獣の厚鱗, 1 水獣の靭尾, 2 特大水袋
+Ludroth X Vest : 3 海綿質の厚皮, 4 柔軟な厚皮, 6 水生獣の上皮, 1 マボロシチョウ
+Ludroth X Guards : 3 水獣の剛爪, 4 水獣の厚鱗, 2 海綿質の厚皮, 5 皇帝バッタ
+Ludroth X Coat : 4 水獣の厚鱗, 6 柔軟な厚皮, 2 重厚な骨, 1 水獣の靭尾
+Ludroth X Leggings : 2 水獣の剛爪, 3 水獣の厚鱗, 3 海綿質の上皮, 5 皇帝バッタ
+Ludroth Z Helm : 3 紫水獣の厚鱗, 2 イカしたトサカ, 1 水獣の靭尾, 5 皇帝バッタ
+Ludroth Z Mail : 3 海綿質の紫厚皮, 4 柔軟な厚皮, 6 水生獣の上皮, 1 水獣の靭尾
+Ludroth Z Vambraces : 4 紫水獣の剛爪, 2 海綿質の紫厚皮, 2 紫水獣の厚鱗, 2 特大水袋
+Ludroth Z Faulds : 2 海綿質の紫厚皮, 6 柔軟な厚皮, 2 重厚な骨, 1 マボロシチョウ
+Ludroth Z Greaves : 3 紫水獣の剛爪, 3 紫水獣の厚鱗, 3 海綿質の上皮, 5 エルトライト鉱石
+Ludroth Z Cap : 3 紫水獣の厚鱗, 2 イカしたトサカ, 1 水獣の靭尾, 5 皇帝バッタ
+Ludroth Z Vest : 3 海綿質の紫厚皮, 4 柔軟な厚皮, 6 水生獣の上皮, 1 水獣の靭尾
+Ludroth Z Guards : 4 紫水獣の剛爪, 2 海綿質の紫厚皮, 2 紫水獣の厚鱗, 2 特大水袋
+Ludroth Z Coat : 2 海綿質の紫厚皮, 6 柔軟な厚皮, 2 重厚な骨, 1 マボロシチョウ
+Ludroth Z Leggings : 3 紫水獣の剛爪, 3 紫水獣の厚鱗, 3 海綿質の上皮, 5 エルトライト鉱石
+Plesioth X jHelm : 3 水竜の厚鱗, 2 水竜の特上ビレ, 2 水竜の重牙, 3 モンスターの特濃
+Plesioth X jMail : 3 水竜の特上ビレ, 2 水竜の厚鱗, 2 水竜の剛翼膜, 2 柔軟な厚皮
+Plesioth X jVambraces : 1 水竜の厚鱗, 3 水竜の特上ビレ, 1 水竜の絶品お頭, 3 皇帝バッタ
+Plesioth X jGreaves : 4 水竜の厚鱗, 2 水竜の特上ビレ, 1 大竜玉, 2 エルトライト鉱石
+Plesioth X jCap : 3 水竜の厚鱗, 2 水竜の特上ビレ, 2 水竜の重牙, 3 モンスターの特濃
+Plesioth X jVest : 3 水竜の特上ビレ, 2 水竜の厚鱗, 2 水竜の剛翼膜, 2 柔軟な厚皮
+Plesioth X jGuards : 1 水竜の厚鱗, 3 水竜の特上ビレ, 1 水竜の絶品お頭, 3 皇帝バッタ
+Plesioth X jLeggings : 4 水竜の厚鱗, 2 水竜の特上ビレ, 1 大竜玉, 2 エルトライト鉱石
+Plesioth Z jHelm : 3 翠水竜の厚鱗, 2 翠水竜の特上ビレ, 2 水竜の重牙, 1 幻鳥竜玉
+Plesioth Z jMail : 3 翠水竜の特上ビレ, 2 翠水竜の厚鱗, 2 水竜の剛翼膜, 10 皇帝バッタ
+Plesioth Z jVambraces : 1 翆水竜の厚鱗, 3 翆水竜の特上ビレ, 1 水竜の絶品お頭, 5 モンスターの特濃
+Plesioth Z jGreaves : 4 翆水竜の厚鱗, 2 翆水竜の特上ビレ, 1 大竜玉, 3 メランジェ鉱石
+Plesioth Z jCap : 3 翠水竜の厚鱗, 2 翠水竜の特上ビレ, 2 水竜の重牙, 1 幻鳥竜玉
+Plesioth Z jVest : 3 翠水竜の特上ビレ, 2 翠水竜の厚鱗, 2 水竜の剛翼膜, 10 皇帝バッタ
+Plesioth Z jGuards : 1 翆水竜の厚鱗, 3 翆水竜の特上ビレ, 1 水竜の絶品お頭, 5 モンスターの特濃
+Plesioth Z jLeggings : 4 翆水竜の厚鱗, 2 翆水竜の特上ビレ, 1 大竜玉, 3 メランジェ鉱石
+Rathian X Helm : 2 雌火竜の秘棘, 4 雌火竜の重殻, 1 雌火竜の紅玉, 3 業炎袋
+Rathian X Mail : 4 雌火竜の厚鱗, 1 雌火竜の紅玉, 1 火竜の延髄, 2 獄炎石
+Rathian X Vambraces : 4 雌火竜の重殻, 3 火竜の剛翼爪, 2 雌火竜の上棘, 2 獄炎石
+Rathian X Faulds : 3 雌火竜の厚鱗, 3 火竜の剛翼爪, 1 雌火竜の天鱗, 4 エルトライト鉱石
+Rathian X Greaves : 4 雌火竜の重殻, 4 雌火竜の厚鱗, 3 重竜骨, 4 エルトライト鉱石
+Rathian X Cap : 2 雌火竜の秘棘, 4 雌火竜の重殻, 1 雌火竜の紅玉, 3 業炎袋
+Rathian X Vest : 4 雌火竜の厚鱗, 1 雌火竜の紅玉, 1 火竜の延髄, 2 獄炎石
+Rathian X Guards : 4 雌火竜の重殻, 3 火竜の剛翼爪, 2 雌火竜の上棘, 2 獄炎石
+Rathian X Coat : 3 雌火竜の厚鱗, 3 火竜の剛翼爪, 1 雌火竜の天鱗, 4 エルトライト鉱石
+Rathian X Leggings : 4 雌火竜の重殻, 4 雌火竜の厚鱗, 3 重竜骨, 4 エルトライト鉱石
+RioHeart Z Helm : 2 桜火竜の重殻, 3 桜下流の厚鱗, 2 重竜骨, 2 雌火竜の秘棘
+RioHeart Z Mail : 3 桜火竜の厚鱗, 2 桜火竜の重殻, 4 エルトライト鉱石, 1 雌火竜の天鱗
+RioHeart Z Vambraces : 2 桜火竜の重殻, 4 桜火竜の厚鱗, 3 重竜骨, 1 火竜の延髄
+RioHeart Z Faulds : 3 桜火竜の厚鱗, 2 桜火竜の重殻, 2 業炎袋, 1 雌火竜の紅玉
+RioHeart Z Greaves : 2 桜火竜の重殻, 4 桜火竜の厚鱗, 3 重竜骨, 1 ピュアクリスタル
+RioHeart Z Cap : 2 桜火竜の重殻, 3 桜下流の厚鱗, 2 重竜骨, 2 雌火竜の秘棘
+RioHeart Z Vest : 3 桜火竜の厚鱗, 2 桜火竜の重殻, 4 エルトライト鉱石, 1 雌火竜の天鱗
+RioHeart Z Guards : 2 桜火竜の重殻, 4 桜火竜の厚鱗, 3 重竜骨, 1 火竜の延髄
+RioHeart Z Coat : 3 桜火竜の厚鱗, 2 桜火竜の重殻, 2 業炎袋, 1 雌火竜の紅玉
+RioHeart Z Leggings : 2 桜火竜の重殻, 4 桜火竜の厚鱗, 3 重竜骨, 1 ピュアクリスタル
+Guild Bard X Lobos/Scholar's X Beret : 2 狩猟王のコイン, 4 闘技王のコイン, 3 凍戈竜の特上ビレ, 1 覇王の証
+Guild Bard X Bolero/Scholar's X Blouse : 2 狩猟王のコイン, 3 飛竜のコイン, 3 電怪竜の剛爪, 1 覇王の証
+Guild Bard X Braces/Scholar's X Gloves : 2 狩猟王のコイン, 4 海竜のコイン, 3 紫水獣の剛爪, 1 覇王の証
+Guild Bard X Coil/Scholar's X Skirt : 2 狩猟王のコイン, 3 水竜のコイン, 3 高圧電気石, 1 覇王の証
+Guild Bard X Boots/Scholar's X Socks : 2 狩猟王のコイン, 4 獣竜のコイン, 3 黒角竜の重甲, 1 覇王の証
+Guild Bard X Hat/Scholar's X Cap : 2 狩猟王のコイン, 4 闘技王のコイン, 3 凍戈竜の特上ビレ, 1 覇王の証
+Guild Bard X Vest/Scholar's X Vest : 2 狩猟王のコイン, 3 飛竜のコイン, 3 電怪竜の剛爪, 1 覇王の証
+Guild Bard X Sleeves/Scholar's X Sleeves : 2 狩猟王のコイン, 4 海竜のコイン, 3 紫水獣の剛爪, 1 覇王の証
+Guild Bard X Coat/Scholar's X Mini : 2 狩猟王のコイン, 3 水竜のコイン, 3 高圧電気石, 1 覇王の証
+Guild Bard X Gaiters/Scholar's X Sandals : 2 狩猟王のコイン, 4 獣竜のコイン, 3 黒角竜の重甲, 1 覇王の証
+Comando's Headgear : 3 狩猟王のコイン, 2 飛竜のコイン, 3 氷砕竜の重頭殻, 1 覇王の証
+Comando's Girdle : 3 狩猟王のコイン, 3 海竜のコイン, 3 翠水竜の特上ビレ, 1 覇王の証
+Comando's Gauntlets : 3 狩猟王のコイン, 3 獣竜のコイン, 3 緑迅竜の剛刃翼, 1 覇王の証
+Comando's Faulds : 3 狩猟王のコイン, 3 水竜のコイン, 3 風牙竜の靭尾, 1 覇王の証
+Comando's Espadrilles : 3 狩猟王のコイン, 2 飛竜のコイン, 3 尾斧竜の重尾甲, 1 覇王の証
+Spy's Turban : 3 狩猟王のコイン, 2 飛竜のコイン, 3 氷砕竜の重頭殻, 1 覇王の証
+Spy's Girdle : 3 狩猟王のコイン, 3 海竜のコイン, 3 翠水竜の特上ビレ, 1 覇王の証
+Spy's Gauntlets : 3 狩猟王のコイン, 3 獣竜のコイン, 3 緑迅竜の剛刃翼, 1 覇王の証
+Spy's Bandolier : 3 狩猟王のコイン, 3 水竜のコイン, 3 風牙竜の靭尾, 1 覇王の証
+Spy's Espadrilles : 3 狩猟王のコイン, 2 飛竜のコイン, 3 尾斧竜の重尾甲, 1 覇王の証
+Ancient X Mail : 5 エルトライト鉱石, 5 さびた破片, 3 大きな太古の破片, 4 ピュアクリスタル
+Ancient X Vambraces : 5 エルトライト鉱石, 5 さびた破片, 3 細い太古の破片, 8 ユニオン鉱石
+Ancient X Greaves : 5 エルトライト鉱石, 5 さびた破片, 3 長い太古の破片, 4 メランジェ鉱石
+Ancient X Vest : 5 エルトライト鉱石, 5 さびた破片, 3 大きな太古の破片, 4 ピュアクリスタル
+Ancient X Guards : 5 エルトライト鉱石, 5 さびた破片, 3 細い太古の破片, 8 ユニオン鉱石
+Ancient X Leggings : 5 エルトライト鉱石, 5 さびた破片, 3 長い太古の破片, 4 メランジェ鉱石
+Barioth X Helm : 2 琥珀色の重牙, 5 氷牙竜の厚毛皮, 4 氷牙竜の重殻, 3 瞬間凍結袋
+Barioth X Mail : 4 氷牙竜の重殻, 1 氷牙竜の靭尾, 1 大竜玉, 6 白兎獣の豪剛毛
+Barioth X Vambraces : 2 氷牙竜の剛爪, 3 氷牙竜の重殻, 3 重竜骨, 3 瞬間凍結袋
+Barioth X Faulds : 2 琥珀色の重牙, 4 氷牙竜の靭尾, 4 氷牙竜の厚毛皮, 4 白兎獣の地獄耳
+Barioth X Greaves : 5 氷牙竜の厚毛皮, 3 氷牙竜の重殻, 2 氷牙竜の剛爪, 2 重厚な牙
+Barioth X Cap : 2 琥珀色の重牙, 5 氷牙竜の厚毛皮, 4 氷牙竜の重殻, 3 瞬間凍結袋
+Barioth X Vest : 4 氷牙竜の重殻, 1 氷牙竜の靭尾, 1 大竜玉, 6 白兎獣の豪剛毛
+Barioth X Guards : 2 氷牙竜の剛爪, 3 氷牙竜の重殻, 3 重竜骨, 3 瞬間凍結袋
+Barioth X Coat : 2 琥珀色の重牙, 4 氷牙竜の靭尾, 4 氷牙竜の厚毛皮, 4 白兎獣の地獄耳
+Barioth X Leggings : 5 氷牙竜の厚毛皮, 3 氷牙竜の重殻, 2 氷牙竜の剛爪, 2 重厚な牙
+Barioth Z Helm : 2 群青色の重牙, 3 風牙竜の厚毛皮, 2 風牙竜の重殻, 3 青熊獣の重殻
+Barioth Z Mail : 3 風牙竜の重殻, 1 風牙竜の靭尾, 3 重竜骨, 2 皇帝バッタ
+Barioth Z Vambraces : 2 風牙竜の剛爪, 3 風牙竜の重殻, 3 風牙竜の厚毛皮, 3 重厚な牙
+Barioth Z Faulds : 2 群青色の重牙, 4 強靭な大胸膜, 1 大竜玉, 2 風牙竜の剛爪
+Barioth Z Greaves : 4 風牙竜の厚毛皮, 3 風牙竜の重殻, 1 群青色の重牙, 3 青熊獣の重腕甲
+Barioth Z Cap : 2 群青色の重牙, 3 風牙竜の厚毛皮, 2 風牙竜の重殻, 3 青熊獣の重殻
+Barioth Z Vest : 3 風牙竜の重殻, 1 風牙竜の靭尾, 3 重竜骨, 2 皇帝バッタ
+Barioth Z Guards : 2 風牙竜の剛爪, 3 風牙竜の重殻, 3 風牙竜の厚毛皮, 3 重厚な牙
+Barioth Z Coat : 2 群青色の重牙, 4 強靭な大胸膜, 1 大竜玉, 2 風牙竜の剛爪
+Barioth Z Leggings : 4 風牙竜の厚毛皮, 3 風牙竜の重殻, 1 群青色の重牙, 3 青熊獣の重腕甲
+Barroth X Helm : 4 土砂竜の重甲, 2 土砂竜の重殻, 1 土砂竜の重頭殻, 2 堅牢な鳥竜骨
+Barroth X Mail : 4 土砂竜の重甲, 3 土砂竜の重頭殻, 2 土砂竜の剛爪, 3 極上の毛皮
+Barroth X Vambraces : 4 土砂竜の剛爪, 2 土砂竜の重殻, 2 重竜骨, 2 堅牢な鳥竜骨
+Barroth X Faulds : 2 土砂竜の重殻, 3 土砂竜の重甲, 2 重竜骨, 3 極上の毛皮
+Barroth X Greaves : 3 土砂竜の重殻, 1 土砂竜の靱尾, 3 重厚な骨, 2 狗竜の厚皮
+Barroth X Cap : 4 土砂竜の重甲, 2 土砂竜の重殻, 1 土砂竜の重頭殻, 2 堅牢な鳥竜骨
+Barroth X Vest : 4 土砂竜の重甲, 3 土砂竜の重頭殻, 2 土砂竜の剛爪, 3 極上の毛皮
+Barroth X Guards : 4 土砂竜の剛爪, 2 土砂竜の重殻, 2 重竜骨, 2 堅牢な鳥竜骨
+Barroth X Coat : 2 土砂竜の重殻, 3 土砂竜の重甲, 2 重竜骨, 3 極上の毛皮
+Barroth X Leggings : 3 土砂竜の重殻, 1 土砂竜の靱尾, 3 重厚な骨, 2 狗竜の厚皮
+Barroth Z Helm : 5 氷砕竜の重甲, 3 氷砕竜の重殻, 5 凍った粘液塊, 5 白兎獣の豪剛毛
+Barroth Z Mail : 3 氷砕竜の重頭殻, 4 氷砕竜の重甲, 2 氷砕竜の剛爪, 2 白兎獣の地獄耳
+Barroth Z Vambraces : 4 氷砕竜の剛爪, 2 氷砕竜の重殻, 2 重竜骨, 3 極上の毛皮
+Barroth Z Faulds : 3 氷砕竜の重殻, 4 氷砕竜の重甲, 2 重厚な骨, 4 白兎獣の豪剛毛
+Barroth Z Greaves : 3 氷砕竜の重殻, 1 氷砕竜の靱尾, 3 氷砕竜の剛爪, 3 極上の毛皮
+Barroth Z Cap : 5 氷砕竜の重甲, 3 氷砕竜の重殻, 5 凍った粘液塊, 5 白兎獣の豪剛毛
+Barroth Z Vest : 3 氷砕竜の重頭殻, 4 氷砕竜の重甲, 2 氷砕竜の剛爪, 2 白兎獣の地獄耳
+Barroth Z Guards : 4 氷砕竜の剛爪, 2 氷砕竜の重殻, 2 重竜骨, 3 極上の毛皮
+Barroth Z Coat : 3 氷砕竜の重殻, 4 氷砕竜の重甲, 2 重厚な骨, 4 白兎獣の豪剛毛
+Barroth Z Leggings : 3 氷砕竜の重殻, 1 氷砕竜の靱尾, 3 氷砕竜の剛爪, 3 極上の毛皮
+Gobul X Helm : 2 灯魚竜の秘棘, 6 灯魚竜の厚皮, 4 灯魚竜の大王ヒゲ, 3 重竜骨
+Gobul X Mail : 2 灯魚竜の特上ビレ, 3 灯魚竜の秘棘, 4 灯魚竜の厚皮, 2 幻鳥竜玉
+Gobul X Vambraces : 1 灯魚竜の厚皮, 3 灯魚竜の秘棘, 4 灯魚竜の上棘, 4 堅牢な鳥竜骨
+Gobul X Faulds : 6 灯魚竜の厚皮, 2 灯魚竜の特上ビレ, 3 灯魚竜の大王ヒゲ, 5 強力麻痺袋
+Gobul X Greaves : 6 灯魚竜の秘棘, 6 灯魚竜の厚皮, 4 灯魚竜の特上ビレ, 1 最高級提灯球
+Gobul X Cap : 2 灯魚竜の秘棘, 6 灯魚竜の厚皮, 4 灯魚竜の大王ヒゲ, 3 重竜骨
+Gobul X Vest : 2 灯魚竜の特上ビレ, 3 灯魚竜の秘棘, 4 灯魚竜の厚皮, 2 幻鳥竜玉
+Gobul X Guards : 1 灯魚竜の厚皮, 3 灯魚竜の秘棘, 4 灯魚竜の上棘, 4 堅牢な鳥竜骨
+Gobul X Coat : 6 灯魚竜の厚皮, 2 灯魚竜の特上ビレ, 3 灯魚竜の大王ヒゲ, 5 強力麻痺袋
+Gobul X Leggings : 6 灯魚竜の秘棘, 6 灯魚竜の厚皮, 4 灯魚竜の特上ビレ, 1 最高級提灯球
+Gigginox X Helm : 3 おぞましい厚皮, 1 悪夢のクチ, 5 毒怪竜の厚皮, 5 猛毒袋
+Gigginox X Mail : 2 毒怪竜の剛爪, 4 毒怪竜の厚皮, 3 おぞましい毒腺, 1 ピュアクリスタル
+Gigginox X Vambraces : 4 毒怪竜の厚皮, 2 毒怪竜の剛爪, 2 毒怪竜の鋭爪, 1 幻鳥竜玉
+Gigginox X Faulds : 4 毒怪竜の厚皮, 3 おぞましい毒腺, 2 おぞましい厚皮, 6 モンスターの特濃
+Gigginox X Greaves : 3 おぞましい毒腺, 2 毒怪竜の厚皮, 2 悪夢のクチ, 4 眠狗竜の厚皮
+Gigginox X Cap : 3 おぞましい厚皮, 1 悪夢のクチ, 5 毒怪竜の厚皮, 5 猛毒袋
+Gigginox X Vest : 2 毒怪竜の剛爪, 4 毒怪竜の厚皮, 3 おぞましい毒腺, 1 ピュアクリスタル
+Gigginox X Guards : 4 毒怪竜の厚皮, 2 毒怪竜の剛爪, 2 毒怪竜の鋭爪, 1 幻鳥竜玉
+Gigginox X Coat : 4 毒怪竜の厚皮, 3 おぞましい毒腺, 2 おぞましい厚皮, 6 モンスターの特濃
+Gigginox X Leggings : 3 おぞましい毒腺, 2 毒怪竜の厚皮, 2 悪夢のクチ, 4 眠狗竜の厚皮
+Gigginox Z Helm : 4 電怪竜の厚皮, 2 おぞましい厚皮, 7 アルビノエキス, 4 眠拘竜の厚皮
+Gigginox Z Mail : 2 雷怪竜の剛爪, 4 雷怪竜の厚皮, 1 大竜玉, 5 堅牢な鳥竜骨
+Gigginox Z Vambraces : 1 電怪竜の剛爪, 2 悪夢のクチ, 2 重竜骨, 2 雷電袋
+Gigginox Z Faulds : 4 電怪竜の厚皮, 1 電怪竜の剛爪, 4 雷電袋, 6 グラシスメタル
+Gigginox Z Greaves : 4 電怪竜の厚皮, 2 おぞましい厚皮, 2 重竜骨, 1 ピュアクリスタル
+Gigginox Z Cap : 4 電怪竜の厚皮, 2 おぞましい厚皮, 7 アルビノエキス, 4 眠拘竜の厚皮
+Gigginox Z Vest : 2 雷怪竜の剛爪, 4 雷怪竜の厚皮, 1 大竜玉, 5 堅牢な鳥竜骨
+Gigginox Z Guards : 1 電怪竜の剛爪, 2 悪夢のクチ, 2 重竜骨, 2 雷電袋
+Gigginox Z Coat : 4 電怪竜の厚皮, 1 電怪竜の剛爪, 4 雷電袋, 6 グラシスメタル
+Gigginox Z Leggings : 4 電怪竜の厚皮, 2 おぞましい厚皮, 2 重竜骨, 1 ピュアクリスタル
+Hapul X Helm : 4 潜口竜の重殻, 2 潜口竜の剛爪, 2 潜口竜の厚皮, 2 巨大なヒレ
+Hapul X Mail : 4 潜口竜の厚皮, 4 潜口竜の重殻, 4 光り輝く体液, 2 堅牢な鳥竜骨
+Hapul X Vambraces : 3 潜口竜の剛爪, 3 潜口竜の重殻, 4 光り輝く体液, 3 毒狗竜の上皮
+Hapul X Faulds : 2 潜口竜の剛爪, 3 潜口竜の厚皮, 4 極彩色の体液, 2 偉大なクチバシ
+Hapul X Greaves : 4 潜口竜の重殻, 1 大竜玉, 3 重竜骨, 4 毒狗竜の厚皮
+Hapul X Cap : 4 潜口竜の重殻, 2 潜口竜の剛爪, 2 潜口竜の厚皮, 2 巨大なヒレ
+Hapul X Vest : 4 潜口竜の厚皮, 4 潜口竜の重殻, 4 光り輝く体液, 2 堅牢な鳥竜骨
+Hapul X Guards : 3 潜口竜の剛爪, 3 潜口竜の重殻, 4 光り輝く体液, 3 毒狗竜の上皮
+Hapul X Coat : 2 潜口竜の剛爪, 3 潜口竜の厚皮, 4 極彩色の体液, 2 偉大なクチバシ
+Hapul X Leggings : 4 潜口竜の重殻, 1 大竜玉, 3 重竜骨, 4 毒狗竜の厚皮
+Dobol X Helm : 2 尾槌竜の剛角, 6 尾槌竜の重殻, 1 尾槌竜の仙骨, 5 エルトライト鉱石
+Dobol X Mail : 2 尾槌竜の剛角, 4 霜降りのコブ, 1 大竜玉, 3 極上の毛皮
+Dobol X Vambraces : 6 尾槌竜の重殻, 2 尾槌竜の重尾甲, 5 尾槌竜の堅苔甲, 5 重厚な骨
+Dobol X Faulds : 4 尾槌竜の重苔甲, 6 尾槌竜の重殻, 1 ドボルストーン, 3 青熊獣の重殻
+Dobol X Greaves : 3 尾槌竜の重殻, 5 尾槌竜の重苔甲, 4 霜降りのコブ, 3 草食竜の重骨
+Dobol X Cap : 2 尾槌竜の剛角, 6 尾槌竜の重殻, 1 尾槌竜の仙骨, 5 エルトライト鉱石
+Dobol X Vest : 2 尾槌竜の剛角, 4 霜降りのコブ, 1 大竜玉, 3 極上の毛皮
+Dobol X Guards : 6 尾槌竜の重殻, 2 尾槌竜の重尾甲, 5 尾槌竜の堅苔甲, 5 重厚な骨
+Dobol X Coat : 4 尾槌竜の重苔甲, 6 尾槌竜の重殻, 1 ドボルストーン, 3 青熊獣の重殻
+Dobol X Leggings : 3 尾槌竜の重殻, 5 尾槌竜の重苔甲, 4 霜降りのコブ, 3 草食竜の重骨
+Dobol Z Helm : 2 尾槌竜の剛角, 6 尾斧竜の赤銅殻, 1 尾槌竜の仙骨, 1 ピュアクリスタル
+Dobol Z Mail : 2 尾槌竜の剛角, 4 霜降りのコブ, 1 大竜玉, 3 極上の腹袋
+Dobol Z Vambraces : 6 尾斧竜の赤銅殻, 2 尾斧竜の重尾甲, 5 尾槌竜の堅苔甲, 5 重厚な牙
+Dobol Z Faulds : 4 尾斧竜の赤銅甲, 6 尾斧竜の赤銅殻, 1 ドボルストーン, 3 青熊獣の重腕甲
+Dobol Z Greaves : 3 尾斧竜の赤銅甲, 5 尾斧竜の赤銅殻, 4 霜降りのコブ, 3 重竜骨
+Dobol Z Cap : 2 尾槌竜の剛角, 6 尾斧竜の赤銅殻, 1 尾槌竜の仙骨, 1 ピュアクリスタル
+Dobol Z Vest : 2 尾槌竜の剛角, 4 霜降りのコブ, 1 大竜玉, 3 極上の腹袋
+Dobol Z Guards : 6 尾斧竜の赤銅殻, 2 尾斧竜の重尾甲, 5 尾槌竜の堅苔甲, 5 重厚な牙
+Dobol Z Coat : 4 尾斧竜の赤銅甲, 6 尾斧竜の赤銅殻, 1 ドボルストーン, 3 青熊獣の重腕甲
+Dobol Z Leggings : 3 尾斧竜の赤銅甲, 5 尾斧竜の赤銅殻, 4 霜降りのコブ, 3 重竜骨
+Nargacuga X Helm : 2 迅竜の重尾棘, 3 迅竜の豪黒毛, 2 迅竜の剛刃翼, 4 青熊獣の重殻
+Nargacuga X Mail : 3 迅竜の厚鱗, 4 迅竜の重牙, 3 迅竜の豪黒毛, 3 狗竜の厚皮
+Nargacuga X Vambraces : 3 迅竜の剛刃翼, 1 迅竜の天鱗, 3 迅竜の延髄, 5 青熊獣の重腕甲
+Nargacuga X Faulds : 3 迅竜の豪黒毛, 1 迅竜の靭尾, 1 迅竜の天鱗, 3 マボロシチョウ
+Nargacuga X Greaves : 6 迅竜の重牙, 3 迅竜の厚鱗, 2 迅竜の重尾棘, 6 皇帝バッタ
+Nargacuga X Cap : 2 迅竜の重尾棘, 3 迅竜の豪黒毛, 2 迅竜の剛刃翼, 4 青熊獣の重殻
+Nargacuga X Vest : 3 迅竜の厚鱗, 4 迅竜の重牙, 3 迅竜の豪黒毛, 3 狗竜の厚皮
+Nargacuga X Guards : 3 迅竜の剛刃翼, 1 迅竜の天鱗, 3 迅竜の延髄, 5 青熊獣の重腕甲
+Nargacuga X Coat : 3 迅竜の豪黒毛, 1 迅竜の靭尾, 1 迅竜の天鱗, 3 マボロシチョウ
+Nargacuga X Leggings : 6 迅竜の重牙, 3 迅竜の厚鱗, 2 迅竜の重尾棘, 6 皇帝バッタ
+Nargacuga Z Helm : 6 緑迅竜の豪斑毛, 3 緑迅竜の剛刃翼, 4 迅竜の延髄, 4 柔軟な厚皮
+Nargacuga Z Mail : 5 緑迅竜の厚鱗, 5 緑迅竜の重牙, 1 迅竜の天鱗, 3 重厚な牙
+Nargacuga Z Vambraces : 4 緑迅竜の剛刃翼, 5 緑迅竜の厚鱗, 4 緑迅竜の重尾棘, 2 幻鳥竜玉
+Nargacuga Z Faulds : 6 緑迅竜の豪斑毛, 5 緑迅竜の重尾棘, 1 大竜玉, 1 ピュアクリスタル
+Nargacuga Z Greaves : 5 緑迅竜の重牙, 5 緑迅竜の厚鱗, 1 迅竜の靭尾, 3 重竜骨
+Nargacuga Z Cap : 6 緑迅竜の豪斑毛, 3 緑迅竜の剛刃翼, 4 迅竜の延髄, 4 柔軟な厚皮
+Nargacuga Z Vest : 5 緑迅竜の厚鱗, 5 緑迅竜の重牙, 1 迅竜の天鱗, 3 重厚な牙
+Nargacuga Z Guards : 4 緑迅竜の剛刃翼, 5 緑迅竜の厚鱗, 4 緑迅竜の重尾棘, 2 幻鳥竜玉
+Nargacuga Z Coat : 6 緑迅竜の豪斑毛, 5 緑迅竜の重尾棘, 1 大竜玉, 1 ピュアクリスタル
+Nargacuga Z Leggings : 5 緑迅竜の重牙, 5 緑迅竜の厚鱗, 1 迅竜の靭尾, 3 重竜骨
+Helios X Helm/Selene X Helm : 2 湾曲した剛龍角, 4 湾曲した龍角, 1 深淵の龍玉, 1 覇王の証
+Helios X Mail/Selene X Mail : 5 皇海竜の豪鎧毛, 6 大海龍の鎧毛, 5 大地の龍玉, 1 覇王の証
+Helios X Vambraces/Selene X Vambraces : 3 皇海龍の豪鎧毛, 6 大海龍の甲皮, 5 神秘の発光体, 1 覇王の証
+Helios X Coil/Selene X Coil : 1 深淵の皇龍玉, 3 大海龍の尻尾, 2 海竜の蒼玉, 1 覇王の証
+Helios X Greaves/Selene X Greaves : 5 皇海龍の豪鎧毛, 7 大海龍の鱗, 4 古龍の血, 1 覇王の証
+Helios X Cap/Selene X Cap : 2 湾曲した剛龍角, 4 湾曲した龍角, 1 深淵の龍玉, 1 覇王の証
+Helios X Vest/Selene X Vest : 5 皇海竜の豪鎧毛, 6 大海龍の鎧毛, 5 大地の龍玉, 1 覇王の証
+Helios X Guards/Selene X Guards : 3 皇海龍の豪鎧毛, 6 大海龍の甲皮, 5 神秘の発光体, 1 覇王の証
+Helios X Coat/Selene X Coat : 1 深淵の皇龍玉, 3 大海龍の尻尾, 2 海竜の蒼玉, 1 覇王の証
+Helios X Leggings/Selene X Leggings : 5 皇海龍の豪鎧毛, 7 大海龍の鱗, 4 古龍の血, 1 覇王の証
+Helios Z Helm/Selene Z Helm : 2 湾曲した剛龍角, 2 皇海龍の厚鱗, 1 深淵の皇龍玉, 1 覇王の証
+Helios Z Mail/Selene Z Mail : 4 皇海龍の豪鎧毛, 5 皇海龍の重甲皮, 2 湾曲した剛龍角, 1 覇王の証
+Helios Z Vambraces/Selene Z Vambraces : 5 皇海龍の重甲皮, 2 湾曲した剛龍角, 4 古龍の血, 1 覇王の証
+Helios Z Coil/Selene Z Coil : 4 皇海龍の厚鱗, 5 皇海龍の豪鎧毛, 1 深淵の皇龍玉, 1 覇王の証
+Helios Z Greaves/Selene Z Greaves : 5 皇海龍の厚鱗, 5 皇海龍の重甲皮, 6 神秘の発光体, 1 覇王の証
+Helios Z Cap/Selene Z Cap : 2 湾曲した剛龍角, 2 皇海龍の厚鱗, 1 深淵の皇龍玉, 1 覇王の証
+Helios Z Vest/Selene Z Vest : 4 皇海龍の豪鎧毛, 5 皇海龍の重甲皮, 2 湾曲した剛龍角, 1 覇王の証
+Helios Z Guards/Selene Z Guards : 5 皇海龍の重甲皮, 2 湾曲した剛龍角, 4 古龍の血, 1 覇王の証
+Helios Z Coat/Selene Z Coat : 4 皇海龍の厚鱗, 5 皇海龍の豪鎧毛, 1 深淵の皇龍玉, 1 覇王の証
+Helios Z Leggings/Selene Z Leggings : 5 皇海龍の厚鱗, 5 皇海龍の重甲皮, 6 神秘の発光体, 1 覇王の証
+Obituary X Testa/Butterfly X Testa : 1 ピュアアゲハ, 1 マボロシチョウ, 6 蝕龍蟲, 20 不死虫
+Obituary X Petto/Butterfly X Petto : 2 ピュアアゲハ, 1 マボロシチョウ, 8 皇帝バッタ, 20 セッチャクロアリ
+Obituary X Mano/Butterfly X Mano : 1 ピュアアゲハ, 1 マボロシチョウ, 4 飛甲虫の斬羽, 20 にが虫
+Obituary X Anca/Butterfly X Anca : 2 ピュアアゲハ, 1 マボロシチョウ, 4 極上の腹袋, 20 ボンバッタ
+Obituary X Gamba/Butterfly X Gamba : 1 ピュアアゲハ, 1 マボロシチョウ, 3 モンスターの特濃, 20 ツチハチノコ
+Obituary X Caput/Butterfly X Caput : 1 ピュアアゲハ, 1 マボロシチョウ, 6 蝕龍蟲, 20 不死虫
+Obituary X Pectus/Butterfly X Pectus : 2 ピュアアゲハ, 1 マボロシチョウ, 8 皇帝バッタ, 20 セッチャクロアリ
+Obituary X Brasso/Butterfly X Brasso : 1 ピュアアゲハ, 1 マボロシチョウ, 4 飛甲虫の斬羽, 20 にが虫
+Obituary X Cocusa/Butterfly X Cocusa : 2 ピュアアゲハ, 1 マボロシチョウ, 4 極上の腹袋, 20 ボンバッタ
+Obituary X Femur/Butterfly X Femur : 1 ピュアアゲハ, 1 マボロシチョウ, 3 モンスターの特濃, 20 ツチハチノコ
+Rathalos X Helm : 4 火竜の厚鱗, 1 火竜の天鱗, 3 業炎袋, 3 重竜骨
+Rathalos X Mail : 5 火竜の厚鱗, 4 火竜の重殻, 2 火竜の剛翼, 2 メランジェ鉱石
+Rathalos X Vambraces : 4 火竜の厚鱗, 2 火竜の剛翼爪, 1 火竜の靭尾, 2 真紅蓮石
+Rathalos X Faulds : 6 火竜の重殻, 4 火竜の剛翼, 1 火竜の延髄, 2 メランジェ鉱石
+Rathalos X Greaves : 6 火竜の重殻, 2 火竜の紅玉, 6 火竜の厚鱗, 1 大竜玉
+Rathalos X Cap : 4 火竜の厚鱗, 1 火竜の天鱗, 3 業炎袋, 3 重竜骨
+Rathalos X Vest : 5 火竜の厚鱗, 4 火竜の重殻, 2 火竜の剛翼, 2 メランジェ鉱石
+Rathalos X Guards : 4 火竜の厚鱗, 2 火竜の剛翼爪, 1 火竜の靭尾, 2 真紅蓮石
+Rathalos X Coat : 6 火竜の重殻, 4 火竜の剛翼, 1 火竜の延髄, 2 メランジェ鉱石
+Rathalos X Leggings : 6 火竜の重殻, 2 火竜の紅玉, 6 火竜の厚鱗, 1 大竜玉
+RioSoul Z Helm : 2 蒼火竜の厚鱗, 2 火竜の剛翼, 1 火竜の天鱗, 2 マボロシチョウ
+RioSoul Z Mail : 3 蒼火竜の厚鱗, 3 蒼火竜の重殻, 3 業炎袋, 3 重竜骨
+RioSoul Z Vambraces : 2 蒼火竜の重殻, 2 蒼火竜の靭尾, 3 重竜骨, 5 エルトライト鉱石
+RioSoul Z Faulds : 2 蒼火竜の重殻, 4 蒼火竜の厚鱗, 5 エルトライト鉱石, 2 業炎袋
+RioSoul Z Greaves : 2 蒼火竜の重殻, 3 蒼火竜の厚鱗, 1 火竜の天鱗, 1 ピュアクリスタル
+RioSoul Z Cap : 2 蒼火竜の厚鱗, 2 火竜の剛翼, 1 火竜の天鱗, 2 マボロシチョウ
+RioSoul Z Vest : 3 蒼火竜の厚鱗, 3 蒼火竜の重殻, 3 業炎袋, 3 重竜骨
+RioSoul Z Guards : 2 蒼火竜の重殻, 2 蒼火竜の靭尾, 3 重竜骨, 5 エルトライト鉱石
+RioSoul Z Coat : 2 蒼火竜の重殻, 4 蒼火竜の厚鱗, 5 エルトライト鉱石, 2 業炎袋
+RioSoul Z Leggings : 2 蒼火竜の重殻, 3 蒼火竜の厚鱗, 1 火竜の天鱗, 1 ピュアクリスタル
+Diablos X Helm : 5 角竜の重殻, 1 大地を穿つ剛角, 1 大竜玉, 4 毒拘竜の厚皮
+Diablos X Mail : 5 角竜の重甲, 1 大地を穿つ剛角, 3 角竜の堅甲, 4 赤甲獣の重殻
+Diablos X Vambraces : 6 角竜の重殻, 5 角竜の重甲, 6 角竜の堅殻, 3 狗竜の厚皮
+Diablos X Faulds : 6 角竜の重甲, 6 角竜の重尾甲, 3 角竜の延髄, 4 草食竜の獣骨
+Diablos X Greaves : 6 角竜の重殻, 5 堅牢なねじれた角, 3 重竜骨, 1 角竜の重尾甲
+Diablos X Cap : 5 角竜の重殻, 1 大地を穿つ剛角, 1 大竜玉, 4 毒拘竜の厚皮
+Diablos X Vest : 5 角竜の重甲, 1 大地を穿つ剛角, 3 角竜の堅甲, 4 赤甲獣の重殻
+Diablos X Guards : 6 角竜の重殻, 5 角竜の重甲, 6 角竜の堅殻, 3 狗竜の厚皮
+Diablos X Coat : 6 角竜の重甲, 6 角竜の重尾甲, 3 角竜の延髄, 4 草食竜の獣骨
+Diablos X Leggings : 6 角竜の重殻, 5 堅牢なねじれた角, 3 重竜骨, 1 角竜の重尾甲
+Diablos Z Helm : 4 黒角竜の重殻, 2 大地を穿つ剛角, 1 大竜玉, 3 極上の腹袋
+Diablos Z Mail : 2 堅牢な黒巻き角, 5 黒角竜の重甲, 2 角竜の延髄, 2 偉大なエリマキ
+Diablos Z Vambraces : 4 黒角竜の重殻, 5 上質な黒巻き角, 3 黒角竜の重甲, 1 幻鳥竜玉
+Diablos Z Faulds : 6 黒角竜の重甲, 5 黒角竜の重殻, 1 堅牢な黒巻き角, 1 ピュアクリスタル
+Diablos Z Greaves : 5 黒角竜の重殻, 2 角竜の重尾甲, 4 重竜骨, 2 草食竜の重骨
+Diablos Z Cap : 5 黒角竜の重殻, 3 大地を穿つ剛角, 2 大竜玉, 4 極上の腹袋
+Diablos Z Vest : 2 堅牢な黒巻き角, 5 黒角竜の重甲, 2 角竜の延髄, 2 偉大なエリマキ
+Diablos Z Guards : 4 黒角竜の重殻, 5 上質な黒巻き角, 3 黒角竜の重甲, 1 幻鳥竜玉
+Diablos Z Coat : 6 黒角竜の重甲, 5 黒角竜の重殻, 1 堅牢な黒巻き角, 1 ピュアクリスタル
+Diablos Z Leggings : 5 黒角竜の重殻, 2 角竜の重尾甲, 4 重竜骨, 2 草食竜の重骨
+Agnaktor X Helm : 5 炎戈竜の重殻, 3 炎戈竜の碇口, 4 炎戈竜の厚皮, 2 炎戈竜の剛爪
+Agnaktor X Mail : 4 炎戈竜の厚皮, 2 炎戈竜の特上ビレ, 5 炎戈竜の重殻, 2 真紅蓮石
+Agnaktor X Vambraces : 3 炎戈竜の剛爪, 3 炎戈竜の重殻, 2 炎戈竜の尻尾, 4 重竜骨
+Agnaktor X Faulds : 3 炎戈竜の特上ビレ, 4 赤熱した重胸殻, 5 柔軟な厚皮, 1 幻鳥竜玉
+Agnaktor X Greaves : 5 赤熱した重胸殻, 4 炎戈竜の厚皮, 1 大竜玉, 3 毒狗竜の厚皮
+Agnaktor X Cap : 5 炎戈竜の重殻, 3 炎戈竜の碇口, 4 炎戈竜の厚皮, 2 炎戈竜の剛爪
+Agnaktor X Vest : 4 炎戈竜の厚皮, 2 炎戈竜の特上ビレ, 5 炎戈竜の重殻, 2 真紅蓮石
+Agnaktor X Guards : 3 炎戈竜の剛爪, 3 炎戈竜の重殻, 2 炎戈竜の尻尾, 4 重竜骨
+Agnaktor X Coat : 3 炎戈竜の特上ビレ, 4 赤熱した重胸殻, 5 柔軟な厚皮, 1 幻鳥竜玉
+Agnaktor X Leggings : 5 赤熱した重胸殻, 4 炎戈竜の厚皮, 1 大竜玉, 3 毒狗竜の厚皮
+Agnaktor Z Helm : 5 凍戈竜の重殻, 3 凍戈竜の碇口, 3 凍戈竜の厚皮, 6 モンスターの特濃
+Agnaktor Z Mail : 4 凍戈竜の厚皮, 3 凍戈竜の特上ビレ, 5 凍戈竜の重殻, 4 凍った粘液塊
+Agnaktor Z Vambraces : 3 凍戈竜の剛爪, 5 凍戈竜の重殻, 1 大竜玉, 2 偉大なトサカ
+Agnaktor Z Faulds : 2 凍戈竜の特上ビレ, 2 凍戈竜の尻尾, 4 凍戈竜の厚皮, 5 白兎獣の豪剛毛
+Agnaktor Z Greaves : 5 潤った重胸殻, 2 凍戈竜の特上ビレ, 3 凍戈竜の剛爪, 2 眠狗竜の厚皮
+Agnaktor Z Cap : 5 凍戈竜の重殻, 3 凍戈竜の碇口, 3 凍戈竜の厚皮, 6 モンスターの特濃
+Agnaktor Z Vest : 4 凍戈竜の厚皮, 3 凍戈竜の特上ビレ, 5 凍戈竜の重殻, 4 凍った粘液塊
+Agnaktor Z Guards : 3 凍戈竜の剛爪, 5 凍戈竜の重殻, 1 大竜玉, 2 偉大なトサカ
+Agnaktor Z Coat : 2 凍戈竜の特上ビレ, 2 凍戈竜の尻尾, 4 凍戈竜の厚皮, 5 白兎獣の豪剛毛
+Agnaktor Z Leggings : 5 潤った重胸殻, 2 凍戈竜の特上ビレ, 3 凍戈竜の剛爪, 2 眠狗竜の厚皮
+Bracchidios X Helm : 3 砕竜の重黒曜甲, 2 砕竜の尖頭殻, 3 光る粘液, 4 真紅蓮石
+Bracchidios X Mail : 4 砕竜の重殻, 3 砕竜の重黒曜甲, 2 砕竜の宝玉, 2 重竜骨
+Bracchidios X Vambraces : 3 砕竜の重黒曜甲, 1 砕竜の剛鉄拳, 3 光る粘菌, 1 ピュアクリスタル
+Bracchidios X Faulds : 2 砕竜の剛鉄拳, 1 砕竜の尻尾, 1 砕竜の天殻, 4 砕竜の重殻
+Bracchidios X Greaves : 4 砕竜の重殻, 2 砕竜の重黒曜甲, 2 砕竜の剛鉄拳, 3 メランジェ鉱石
+Bracchidios X Cap : 3 砕竜の重黒曜甲, 2 砕竜の尖頭殻, 3 光る粘液, 4 真紅蓮石
+Bracchidios X Vest : 4 砕竜の重殻, 3 砕竜の重黒曜甲, 2 砕竜の宝玉, 2 重竜骨
+Bracchidios X Guards : 3 砕竜の重黒曜甲, 1 砕竜の剛鉄拳, 3 光る粘菌, 1 ピュアクリスタル
+Bracchidios X Coat : 2 砕竜の剛鉄拳, 1 砕竜の尻尾, 1 砕竜の天殻, 4 砕竜の重殻
+Bracchidios X Leggings : 4 砕竜の重殻, 2 砕竜の重黒曜甲, 2 砕竜の剛鉄拳, 3 メランジェ鉱石
+Lagiacrus X Helm : 2 海竜の剛角, 5 海竜の厚皮, 1 海竜の蒼玉, 6 水獣の厚鱗
+Lagiacrus X Mail : 4 海竜の厚皮, 1 海竜の蒼天鱗, 1 海竜の剛尾, 4 氷牙竜の厚毛皮
+Lagiacrus X Vambraces : 3 海竜の剛爪, 4 海竜の蓄電殻, 4 海竜の厚鱗, 5 雷電袋
+Lagiacrus X Faulds : 4 海竜の雷電殻, 5 海竜の厚鱗, 1 海竜の蒼玉, 2 海竜の剛尾
+Lagiacrus X Greaves : 5 海竜の厚鱗, 4 海竜の厚皮, 3 海竜の剛爪, 1 ピュアクリスタル
+Lagiacrus X Cap : 2 海竜の剛角, 5 海竜の厚皮, 1 海竜の蒼玉, 6 水獣の厚鱗
+Lagiacrus X Vest : 4 海竜の厚皮, 1 海竜の蒼天鱗, 1 海竜の剛尾, 4 氷牙竜の厚毛皮
+Lagiacrus X Guards : 3 海竜の剛爪, 4 海竜の蓄電殻, 4 海竜の厚鱗, 5 雷電袋
+Lagiacrus X Coat : 4 海竜の雷電殻, 5 海竜の厚鱗, 1 海竜の蒼玉, 2 海竜の剛尾
+Lagiacrus X Leggings : 5 海竜の厚鱗, 4 海竜の厚皮, 3 海竜の剛爪, 1 ピュアクリスタル
+Lagiacrus Z Helm : 2 白海竜の剛角, 4 白海竜の厚皮, 1 海竜の蒼天鱗, 3 海竜の逆鱗
+Lagiacrus Z Mail : 4 白海竜の厚皮, 1 海竜の剛爪, 1 海竜の蒼玉, 5 風牙竜の厚毛皮
+Lagiacrus Z Vambraces : 5 白海竜の厚鱗, 3 海竜の剛爪, 3 白海竜の雷電殻, 3 高圧電気石
+Lagiacrus Z Faulds : 4 白海竜の雷電殻, 5 白海竜の厚鱗, 1 海竜の蒼玉, 1 海竜の剛尾
+Lagiacrus Z Greaves : 5 白海竜の厚鱗, 4 白海竜の厚皮, 3 海竜の剛爪, 3 メランジェ鉱石
+Lagiacrus Z Cap : 2 白海竜の剛角, 4 白海竜の厚皮, 1 海竜の蒼天鱗, 3 海竜の逆鱗
+Lagiacrus Z Vest : 4 白海竜の厚皮, 1 海竜の剛爪, 1 海竜の蒼玉, 5 風牙竜の厚毛皮
+Lagiacrus Z Guards : 5 白海竜の厚鱗, 3 海竜の剛爪, 3 白海竜の雷電殻, 3 高圧電気石
+Lagiacrus Z Coat : 4 白海竜の雷電殻, 5 白海竜の厚鱗, 1 海竜の蒼玉, 1 海竜の剛尾
+Lagiacrus Z Leggings : 5 白海竜の厚鱗, 4 白海竜の厚皮, 3 海竜の剛爪, 3 メランジェ鉱石
+Uragaan X Helm : 4 爆鎚竜の重殻, 1 爆鎚竜の紅玉, 8 溶岩塊, 3 爆鎚竜の重耐熱殻
+Uragaan X Mail : 5 爆鎚竜の重殻, 1 爆鎚竜の重顎, 6 爆鎚竜の骨髄, 2 真紅蓮石
+Uragaan X Vambraces : 5 爆鎚竜の厚鱗, 2 爆鎚竜の重耐熱殻, 3 重竜骨, 3 メランジェ鉱石
+Uragaan X Faulds : 6 爆鎚竜の厚鱗, 1 爆鎚竜の天殻, 1 爆鎚竜の重殻, 4 赤甲獣の重殻
+Uragaan X Greaves : 5 爆鎚竜の重殻, 3 爆鎚竜の厚鱗, 1 大竜玉, 3 重厚な牙
+Uragaan X Cap : 4 爆鎚竜の重殻, 1 爆鎚竜の紅玉, 8 溶岩塊, 3 爆鎚竜の重耐熱殻
+Uragaan X Vest : 5 爆鎚竜の重殻, 1 爆鎚竜の重顎, 6 爆鎚竜の骨髄, 2 真紅蓮石
+Uragaan X Guards : 5 爆鎚竜の厚鱗, 2 爆鎚竜の重耐熱殻, 3 重竜骨, 3 メランジェ鉱石
+Uragaan X Coat : 6 爆鎚竜の厚鱗, 1 爆鎚竜の天殻, 1 爆鎚竜の重殻, 4 赤甲獣の重殻
+Uragaan X Leggings : 5 爆鎚竜の重殻, 3 爆鎚竜の厚鱗, 1 大竜玉, 3 重厚な牙
+Uragaan Z Helm : 5 鋼鎚竜の重殻, 2 爆鎚竜の紅玉, 1 大竜玉, 2 マボロシチョウ
+Uragaan Z Mail : 2 鋼鎚竜の重顎, 2 鋼鎚竜の重耐熱殻, 5 鋼鎚竜の厚鱗, 3 メランジェ鉱石
+Uragaan Z Vambraces : 4 鋼鎚竜の厚鱗, 1 爆鎚竜の天殻, 5 鋼鎚竜の重殻, 3 赤甲獣の剛爪
+Uragaan Z Faulds : 3 鋼鎚竜の重耐熱殻, 4 鋼鎚竜の厚鱗, 4 鋼鎚竜の重殻, 2 真紅蓮石
+Uragaan Z Greaves : 5 鋼鎚竜の重殻, 4 鋼鎚竜の厚鱗, 1 鋼鎚竜の重顎, 1 ピュアクリスタル
+Uragaan Z Cap : 5 鋼鎚竜の重殻, 2 爆鎚竜の紅玉, 1 大竜玉, 2 マボロシチョウ
+Uragaan Z Vest : 2 鋼鎚竜の重顎, 2 鋼鎚竜の重耐熱殻, 5 鋼鎚竜の厚鱗, 3 メランジェ鉱石
+Uragaan Z Guards : 4 鋼鎚竜の厚鱗, 1 爆鎚竜の天殻, 5 鋼鎚竜の重殻, 3 赤甲獣の剛爪
+Uragaan Z Coat : 3 鋼鎚竜の重耐熱殻, 4 鋼鎚竜の厚鱗, 4 鋼鎚竜の重殻, 2 真紅蓮石
+Uragaan Z Leggings : 5 鋼鎚竜の重殻, 4 鋼鎚竜の厚鱗, 1 鋼鎚竜の重顎, 1 ピュアクリスタル
+Jinouga X Helm : 2 雷狼竜の剛角, 2 雷狼竜の雷電殻, 2 雷狼竜の重殻, 1 大竜玉
+Jinouga X Mail : 4 雷狼竜の雷電毛, 3 雷狼竜の重殻, 1 雷狼竜の天玉, 10 超電雷光虫
+Jinouga X Vambraces : 3 雷狼竜の剛爪, 2 雷狼竜の雷電殻, 2 雷狼竜の雷電毛, 2 極上の毛皮
+Jinouga X Faulds : 3 雷狼竜の重殻, 2 雷狼竜の雷電毛, 1 雷狼竜の靭尾, 1 雷狼竜の天玉
+Jinouga X Greaves : 3 雷狼竜の重殻, 3 雷狼竜の剛爪, 3 雷狼竜の雷電殻, 3 雷電袋
+Jinouga X Cap : 2 雷狼竜の剛角, 2 雷狼竜の雷電殻, 2 雷狼竜の重殻, 1 大竜玉
+Jinouga X Vest : 4 雷狼竜の雷電毛, 3 雷狼竜の重殻, 1 雷狼竜の天玉, 10 超電雷光虫
+Jinouga X Guards : 3 雷狼竜の剛爪, 2 雷狼竜の雷電殻, 2 雷狼竜の雷電毛, 2 極上の毛皮
+Jinouga X Coat : 3 雷狼竜の重殻, 2 雷狼竜の雷電毛, 1 雷狼竜の靭尾, 1 雷狼竜の天玉
+Jinouga X Leggings : 3 雷狼竜の重殻, 3 雷狼竜の剛爪, 3 雷狼竜の雷電殻, 3 雷電袋
+Jinouga Z Helm : 3 獄狼竜の剛角, 4 獄狼竜の重殻, 3 獄狼竜の龍毛, 3 古龍の血
+Jinouga Z Mail : 4 獄狼竜の重殻, 3 獄狼竜の龍殻, 1 獄狼竜の天玉, 5 蝕龍蟲
+Jinouga Z Vambraces : 5 獄狼竜の剛爪, 4 獄狼竜の龍殻, 3 獄狼竜の龍毛, 3 飛甲虫の斬羽
+Jinouga Z Faulds : 4 獄狼竜の重殻, 1 獄狼竜の靭尾, 4 獄狼竜の龍毛, 1 獄狼竜の天玉
+Jinouga Z Greaves : 4 獄狼竜の剛爪, 4 獄狼竜の重殻, 5 獄狼竜の龍殻, 5 蝕龍蟲
+Jinouga Z Cap : 3 獄狼竜の剛角, 4 獄狼竜の重殻, 3 獄狼竜の龍毛, 3 古龍の血
+Jinouga Z Vest : 4 獄狼竜の重殻, 3 獄狼竜の龍殻, 1 獄狼竜の天玉, 5 蝕龍蟲
+Jinouga Z Guards : 5 獄狼竜の剛爪, 4 獄狼竜の龍殻, 3 獄狼竜の龍毛, 3 飛甲虫の斬羽
+Jinouga Z Coat : 4 獄狼竜の重殻, 1 獄狼竜の靭尾, 4 獄狼竜の龍毛, 1 獄狼竜の天玉
+Jinouga Z Leggings : 4 獄狼竜の剛爪, 4 獄狼竜の重殻, 5 獄狼竜の龍殻, 5 蝕龍蟲
+Dober X Helm : 3 太古の龍骨, 1 尾槌竜の剛角, 4 重竜骨, 3 古龍の血
+Dober X Mail : 3 太古の龍骨, 2 堅牢な黒巻き角, 5 堅牢な鳥竜骨, 5 重厚な牙
+Dober X Vambraces : 3 太古の龍骨, 2 白海竜の上鱗, 5 草食竜の重骨, 2 大竜玉
+Dober X Coil : 3 太古の龍骨, 3 獄狼竜の剛爪, 3 重竜骨, 3 幻鳥竜玉
+Dober X Greaves : 3 太古の龍骨, 2 凍戈竜の剛爪, 5 堅牢な鳥竜骨, 10 重厚な骨
+Dober X Cap : 3 太古の龍骨, 1 尾槌竜の剛角, 4 重竜骨, 3 古龍の血
+Dober X Vest : 3 太古の龍骨, 2 堅牢な黒巻き角, 5 堅牢な鳥竜骨, 5 重厚な牙
+Dober X Guards : 3 太古の龍骨, 2 白海竜の上鱗, 5 草食竜の重骨, 2 大竜玉
+Dober X Coat : 3 太古の龍骨, 3 獄狼竜の剛爪, 3 重竜骨, 3 幻鳥竜玉
+Dober X Leggings : 3 太古の龍骨, 2 凍戈竜の剛爪, 5 堅牢な鳥竜骨, 10 重厚な骨
+Damascus X Helm : 4 霊山龍の重蒼鱗, 4 桜火竜の厚鱗, 2 雌火竜の秘棘, 3 峯山龍の堅岩殻
+Damascus X Mail : 2 神々しい龍牙, 3 蒼火竜の重殻, 2 恐暴竜の唾液, 4 峯山龍の上蒼鱗
+Damascus X Vambraces : 4 霊山龍の重蒼鱗, 4 蒼火竜の厚鱗, 3 恐暴竜の厚黒鱗, 3 峯山龍の堅岩殻
+Damascus X Coil : 3 霊山龍の重岩殻, 4 桜火竜の厚鱗, 4 蒼火竜の厚鱗, 2 猛々しい龍鋭牙
+Damascus X Greaves : 3 霊山龍の重岩殻, 3 桜火竜の重殻, 2 蒼火竜の靭尾, 4 峯山龍の上蒼鱗
+Damascus X Cap : 4 霊山龍の重蒼鱗, 4 桜火竜の厚鱗, 2 雌火竜の秘棘, 3 峯山龍の堅岩殻
+Damascus X Vest : 2 神々しい龍牙, 3 蒼火竜の重殻, 2 恐暴竜の唾液, 4 峯山龍の上蒼鱗
+Damascus X Guards : 4 霊山龍の重蒼鱗, 4 蒼火竜の厚鱗, 3 恐暴竜の厚黒鱗, 3 峯山龍の堅岩殻
+Damascus X Coat : 3 霊山龍の重岩殻, 4 桜火竜の厚鱗, 4 蒼火竜の厚鱗, 2 猛々しい龍鋭牙
+Damascus Leggings : 3 霊山龍の重岩殻, 3 桜火竜の重殻, 2 蒼火竜の靭尾, 4 峯山龍の上蒼鱗
+Vangis X Helm : 2 恐暴竜の厚黒鱗, 4 恐暴竜の厚黒皮, 2 恐暴竜の頭殻, 2 琥珀色の重牙
+Vangis X Mail : 2 極悪な牙, 4 恐暴竜の剛鉤爪, 5 恐暴竜の厚黒皮, 1 雷狼竜の天玉
+Vangis X Vambraces : 6 恐暴竜の厚黒鱗, 2 極悪な牙, 1 恐暴竜の滅鱗, 2 迅竜の靱尾
+Vangis X Coil : 4 恐暴竜の厚黒皮, 4 ドス黒い血, 2 恐暴竜の重尾, 2 尾鎚竜の仙骨
+Vangis X Greaves : 4 恐暴竜の剛鉤爪, 6 恐暴竜の厚黒鱗, 2 恐暴竜の厚黒皮, 1 爆鎚竜の紅玉
+Vangis X Cap : 2 恐暴竜の厚黒鱗, 4 恐暴竜の厚黒皮, 2 恐暴竜の頭殻, 2 琥珀色の重牙
+Vangis X Vest : 2 極悪な牙, 4 恐暴竜の剛鉤爪, 5 恐暴竜の厚黒皮, 1 雷狼竜の天玉
+Vangis X Guards : 6 恐暴竜の厚黒鱗, 2 極悪な牙, 1 恐暴竜の滅鱗, 2 迅竜の靱尾
+Vangis X Coat : 4 恐暴竜の厚黒皮, 4 ドス黒い血, 2 恐暴竜の重尾, 2 尾鎚竜の仙骨
+Vangis X Leggings : 4 恐暴竜の剛鉤爪, 6 恐暴竜の厚黒鱗, 2 恐暴竜の厚黒皮, 1 爆鎚竜の紅玉
+Moonlight Crown : 3 月迅竜の重牙, 3 月迅竜の豪斑毛, 1 朧月の欠片, 2 霊水晶
+Moonlight Garment : 4 月迅竜の厚鱗, 4 月迅竜の透刃翼, 3 月迅竜の豪斑毛, 2 迅竜の天鱗
+Moonlight Gauntlets : 6 月迅竜の豪斑毛, 4 月迅竜の重尾棘, 4 月迅竜の透刃翼, 4 ピュアクリスタル
+Moonlight Obi : 3 月迅竜の厚鱗, 3 月迅竜の重牙, 2 迅竜の靭尾, 1 ドボルストーン
+Moonlight Gosuku : 2 月迅竜の厚鱗, 4 月迅竜の重尾棘, 1 朧月の欠片, 5 マボロシチョウ
+White Shadow Crown : 3 月迅竜の重牙, 3 月迅竜の豪斑毛, 1 朧月の欠片, 2 霊水晶
+White Shadow Garment : 4 月迅竜の厚鱗, 4 月迅竜の透刃翼, 3 月迅竜の豪斑毛, 2 迅竜の天鱗
+White Shadow Guantlets : 6 月迅竜の豪斑毛, 4 月迅竜の重尾棘, 4 月迅竜の透刃翼, 4 ピュアクリスタル
+White Shadow Obi : 3 月迅竜の厚鱗, 3 月迅竜の重牙, 2 迅竜の靭尾, 1 ドボルストーン
+White Shadow Gosuku : 2 月迅竜の厚鱗, 4 月迅竜の重尾棘, 1 朧月の欠片, 5 マボロシチョウ
+Silver Sol Helm : 5 銀火竜の厚鱗, 1 火竜の天鱗, 3 火竜の煌液, 1 ピュアクリスタル
+Silver Sol Mail : 5 銀火竜の重殻, 6 銀火竜の厚鱗, 3 火竜の剛翼, 3 重竜骨
+Silver Sol Vambraces : 1 銀火竜の靭尾, 2 火竜の延髄, 4 火竜の剛翼爪, 3 真紅蓮石
+Silver Sol Faulds : 5 銀火竜の重殻, 3 火竜の剛翼, 2 火竜の紅玉, 3 業炎袋
+Silver Sol Greaves : 5 銀火竜の重殻, 5 銀火竜の厚鱗, 4 火竜の煌液, 1 ピュアクリスタル
+Silver Sol Cap : 5 銀火竜の厚鱗, 1 火竜の天鱗, 3 火竜の煌液, 1 ピュアクリスタル
+Silver Sol Vest : 5 銀火竜の重殻, 6 銀火竜の厚鱗, 3 火竜の剛翼, 3 重竜骨
+Silver Sol Guards : 1 銀火竜の靭尾, 2 火竜の延髄, 4 火竜の剛翼爪, 3 真紅蓮石
+Silver Sol Coat : 5 銀火竜の重殻, 3 火竜の剛翼, 2 火竜の紅玉, 3 業炎袋
+Silver Sol Leggings : 5 銀火竜の重殻, 5 銀火竜の厚鱗, 4 火竜の煌液, 1 ピュアクリスタル
+Gold Luna Helm : 3 金火竜の秘棘, 5 金火竜の重殻, 3 火竜の煌液, 3 業炎袋
+Gold Luna Mail : 5 金火竜の厚鱗, 5 火竜の延髄, 2 雌火竜の紅玉, 4 メランジェ鉱石
+Gold Luna Vambraces : 5 金火竜の重殻, 4 火竜の剛翼爪, 1 雌火竜の天鱗, 4 獄炎石
+Gold Luna Faulds : 5 金火竜の厚鱗, 1 雌火竜の天鱗, 3 火竜の煌液, 3 真紅蓮石
+Gold Luna Greaves : 5 金火竜の重殻, 4 金火竜の厚鱗, 5 重竜骨, 2 大竜玉
+Gold Luna Cap : 3 金火竜の秘棘, 5 金火竜の重殻, 3 火竜の煌液, 3 業炎袋
+Gold Luna Vest : 5 金火竜の厚鱗, 5 火竜の延髄, 2 雌火竜の紅玉, 4 メランジェ鉱石
+Gold Luna Guards : 5 金火竜の重殻, 4 火竜の剛翼爪, 1 雌火竜の天鱗, 4 獄炎石
+Gold Luna Coat : 5 金火竜の厚鱗, 1 雌火竜の天鱗, 3 火竜の煌液, 3 真紅蓮石
+Gold Luna Leggings : 5 金火竜の重殻, 4 金火竜の厚鱗, 5 重竜骨, 2 大竜玉
+Yamato Kabuto+/Hinata Hachigane+ : 4 霊山龍の重岩殻, 4 皇海龍の豪鎧毛, 2 霊水晶, 1 恐暴竜の剛鉤爪
+Yamato Muneate+/Hinata Muneate+ : 2 神々しい龍牙, 6 皇海龍の厚鱗, 1 大地の龍神玉, 4 巨大なヒレ
+Yamato Kote+/Hinata Kote+ : 4 霊山龍の重腕甲, 3 神々しい龍牙, 5 獄狼竜の重殻, 5 メランジェ鉱石
+Yamato Koshiate+/Hinata Koshiate+ : 4 霊山龍の重岩殻, 5 皇海龍の重甲皮, 4 古龍の血, 1 極悪な牙
+Yamato Gusoku+/Hinata Hakama+ : 5 霊山龍の重蒼鱗, 2 霊水晶, 4 獄狼竜の剛爪, 2 ピュアクリスタル
+Mutsu Eboshi+/Amagi Hachigane+ : 4 霊山龍の重岩殻, 4 皇海龍の豪鎧毛, 2 霊水晶, 1 恐暴竜の剛鉤爪
+Mutsu Muneate+/Amagi Muneate+ : 2 神々しい龍牙, 6 皇海龍の厚鱗, 1 大地の龍神玉, 4 巨大なヒレ
+Mutsu Kote+/Amagi Kote+ : 4 霊山龍の重腕甲, 3 神々しい龍牙, 5 獄狼竜の重殻, 5 メランジェ鉱石
+Mutsu Koshiate+/Amagi Koshiate+ : 4 霊山龍の重岩殻, 5 皇海龍の重甲皮, 4 古龍の血, 1 極悪な牙
+Mutsu Gosuku+/Amagi Hakama+ : 5 霊山龍の重蒼鱗, 2 霊水晶, 4 獄狼竜の剛爪, 2 ピュアクリスタル
+Abyss Helm : 2 冥海竜の剛角, 4 冥海竜の厚鱗, 1 冥海竜の雷魂, 1 海竜の蒼天鱗
+Abyss Mail : 4 冥海竜の厚皮, 3 冥海竜の剛角, 2 海竜の剛尾, 1 大地の龍神玉
+Abyss Vambraces : 5 冥海竜の厚鱗, 3 海竜の剛爪, 1 冥海竜の雷魂, 1 雷狼竜の天玉
+Abyss Faulds : 4 冥海竜の厚皮, 4 冥海竜の雷電殻, 2 海竜の剛尾, 1 深淵の皇龍玉
+Abyss Greaves : 5 冥海竜の厚鱗, 2 冥海竜の雷電殻, 1 霊水晶, 1 朧月の欠片
+Abyss Cap : 2 冥海竜の剛角, 4 冥海竜の厚鱗, 1 冥海竜の雷魂, 1 海竜の蒼天鱗
+Abyss Vest : 4 冥海竜の厚皮, 3 冥海竜の剛角, 2 海竜の剛尾, 1 大地の龍神玉
+Abyss Guards : 5 冥海竜の厚鱗, 3 海竜の剛爪, 1 冥海竜の雷魂, 1 雷狼竜の天玉
+Abyss Coat : 4 冥海竜の厚皮, 4 冥海竜の雷電殻, 2 海竜の剛尾, 1 深淵の皇龍玉
+Abyss Leggings : 5 冥海竜の厚鱗, 2 冥海竜の雷電殻, 1 霊水晶, 1 朧月の欠片
+Miraruma Head : 4 煉黒龍の燃殻, 2 煉黒龍の凶眼, 4 ほとばしるマグマ, 1 大地を穿つ剛角
+Miraruma Hide : 5 煉黒龍の黒鱗, 3 不死の心臓, 2 煉黒龍の重翼, 1 砕竜の天殻
+Miraruma Claws : 4 煉黒龍の燃殻, 4 煉黒龍の灼熱核, 1 光炎の大龍玉, 10 蒼火竜の重殻
+Miraruma Spine : 5 煉黒龍の黒鱗, 4 煉黒龍の燃殻, 2 煉黒龍の炎爪, 5 大竜玉
+Miraruma Feet : 4 煉黒龍の燃殻, 3 煉黒龍の炎爪, 1 光炎の大龍玉, 10 桜火竜の重殻
+Miraruma Face : 4 煉黒龍の燃殻, 2 煉黒龍の凶眼, 4 ほとばしるマグマ, 1 大地を穿つ剛角
+Miraruma Skin : 5 煉黒龍の黒鱗, 3 不死の心臓, 2 煉黒龍の重翼, 1 砕竜の天殻
+Miraruma Fists : 4 煉黒龍の燃殻, 4 煉黒龍の灼熱核, 1 光炎の大龍玉, 10 蒼火竜の重殻
+Miraruma Scale : 5 煉黒龍の黒鱗, 4 煉黒龍の燃殻, 2 煉黒龍の炎爪, 5 大竜玉
+Miraruma Legs : 4 煉黒龍の燃殻, 3 煉黒龍の炎爪, 1 光炎の大龍玉, 10 桜火竜の重殻
+Crow Lily Jacket : 1 武装への招待状, 4 土砂竜の堅殻, 4 白海竜の厚皮, 4 迅竜の上黒毛
+Crow Lily Belt : 1 武装への招待状, 2 土砂竜の尻尾, 2 海竜の尻尾, 2 迅竜の尻尾
+Crow Lily Jeans : 1 武装への招待状, 5 土砂竜の鋭爪, 5 白海竜の上鱗, 6 迅竜の上鱗
+Crow Lily Jumper : 1 武装への招待状, 4 土砂竜の堅殻, 4 白海竜の厚皮, 4 迅竜の上黒毛
+Crow Lily Buckle : 1 武装への招待状, 2 土砂竜の尻尾, 2 海竜の尻尾, 2 迅竜の尻尾
+Crow Lily Denim : 1 武装への招待状, 5 土砂竜の鋭爪, 5 白海竜の上鱗, 6 迅竜の上鱗
+Chakra Earring : 3 エルトライト鉱石, 2 ピュアクリスタル
+Chakra Necklace : 3 エルトライト鉱石, 2 ピュアクリスタル
+Chakra Bracelet : 3 エルトライト鉱石, 2 ピュアクリスタル
+Chakra Waistlet : 3 エルトライト鉱石, 2 ピュアクリスタル
+Chakra Anklet : 3 エルトライト鉱石, 2 ピュアクリスタル
+Jaggi Mask : 1 狗竜の頭, 3 狗竜の皮, 1 王者のエリマキ, 2 紅蓮石
+Gagua Mask : 7 丸鳥の羽, 5 カブレライト鉱石
+Bullfango Mask : 6 上質な毛皮, 1 ファンゴの頭, 1 ファンゴの毛皮, 2 竜骨【大】
+Skull Mask : 5 太古の龍骨, 3 真紅蓮石, 10 なぞの骨, 1 覇王の証
+Skull Head : 5 太古の龍骨, 3 真紅蓮石, 10 なぞの骨, 1 覇王の証
+Shadow Shades : 4 モンハン部入部届, 3 恐暴竜の黒鱗, 1 上質な黒巻き角, 1 勇気の証
+HellHunter Jacket : 2 武装への招待状, 5 土砂竜の鋭爪, 6 上質な毛皮, 1 勇気の証
+HellHunter Leather : 2 武装への招待状, 5 土砂竜の鋭爪, 6 上質な毛皮, 1 勇気の証
+SoulHunter Jacket : 2 モンハン部入部届, 5 水獣の鋭爪, 5 海竜の上皮, 3 高級提灯球
+SoulHunter Leather : 2 モンハン部入部届, 5 水獣の鋭爪, 5 海竜の上皮, 3 高級提灯球
+MH Division Jacket : 2 モンハン部入部届, 3 高級なトサカ, 5 海竜の高電殻, 5 灯魚竜の上棘
+MH Division Jersey : 2 モンハン部入部届, 3 高級なトサカ, 5 海竜の高電殻, 5 灯魚竜の上棘
+Black Leather Legs : 2 モンハン部入部届, 4 海竜の上皮, 5 海綿質の上皮, 5 灯魚竜の上皮
+Black Leather Pants : 2 モンハン部入部届, 4 海竜の上皮, 5 海綿質の上皮, 5 灯魚竜の上皮
+Keroro Mask : 4 ケロン軍人の魂, 1 水竜の絶品お頭, 5 翠水竜の特上ビレ, 5 水竜の重牙
