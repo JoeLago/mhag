@@ -1,5 +1,5 @@
 # Complete Armor Skill List (83)
-# Format ^Skill : Class : Skill 1 : Points 1 : Skill 2 : Points 2 ... 
+# Format ^Skill : Class : [max skill points] : Skill 1 : Points 1 : Skill 2 : Points 2 ... 
 # Note : 1. Torso up is not included
 #        2. skill point for lr+0/1/2/3 slots; hr+ 0/1/2/3 slots
 #        3. auto-guard : 10 0 0 0 10 0 0 0 (only no slot 10 max) ; survivor : 0 0 0 0 0 0 0 0 (nonexist)

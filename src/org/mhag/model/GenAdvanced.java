@@ -349,7 +349,8 @@ public class GenAdvanced extends javax.swing.JDialog {
 		menuE2.setSelectedIndex(3);
 		menuE3.setSelectedIndex(3);
 		menuE4.setSelectedIndex(3);
-		menuE5.setSelectedIndex(3);
+		menuE5.setSelectedIndex(0);  // no weapon slot penalty by default
+		//menuE5.setSelectedIndex(3);
 		methodMenu.setSelectedIndex(0);
 		numberMenu.setSelectedIndex(2);
 	}

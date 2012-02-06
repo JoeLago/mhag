@@ -1,5 +1,5 @@
 MHAG: Monster Hunter Armor Generator 
-Desktop 2.1
+Desktop 2.2
 Author : Tifa@mh3, Gondor
 MHAG Project: code.google.com/mhag
 
@@ -28,11 +28,10 @@ Features:
 4. Support Games
    a. Monster Hunter Tri (Wii)
    b. Monster Hunter Portable 3rd (PSP/PS3)
-   c. (future) Monster Hunter Tri G (3DS)*
-   d. (future) Monster Hunter Freedom Unite (PSP)**
+   c. (Beta) Monster Hunter Tri G (3DS)
+   d. (future) Monster Hunter Freedom Unite (PSP)*
 
 (Notes)
-*   When MHTri G comes to the west, or if many users request it
 **  If any user can provide MHFU data
 
 System Requirements:
@@ -45,6 +44,9 @@ System Requirements:
   b. Web browser (Google Chrome, Mozilla Firefox, Safari, Internet Explorer, Opera etc.)
 
 History (MHAG Desktop):
+v.2.2 2/06/2011
+   1. new feature: MH3G support (beta version)  All names were translated except for the material names.  Maximum skill points for talismans were mostly taken from MHP3rd and Japanese Wiki page (www10.atwiki.jp/mh3g/pages/72.html).  Armor names, skill names/points, slot info, resist data were taken from multiple sources and the previous games.  Materials and maximum defense will be checked in the future version, once data are available.
+   2. erros (adjust) : guard up jewel skill error (MHP3rd), Coat jewel names changed (MHP3rd & MH3G), some japanese armor names fixed (MHP3rd & MH3G), poison skill effect name (Negate Poison) fixed (all games)
 v.2.1 1/26/2011
    1. new look and feel. 
    2. new feature: Now all games are integrated into a single package.  Users can choose a game at the beginning.  All user data are saved in sub-dir.

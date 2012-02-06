@@ -26,7 +26,7 @@ public class Generator {
 		scoreParaDefault[1] = -20;  // negative skill
 		scoreParaDefault[2] = 50;  // postive skill 
 		scoreParaDefault[3] = 3;  // unused slots
-		scoreParaDefault[4] = -10; // weapon slots in use
+		scoreParaDefault[4] = 0; //-10; weapon slots in use  (no penalty in current version)
 
 		for(int i = 0; i < 5; i++)
 			scorePara[i] = scoreParaDefault[i];
@@ -328,10 +328,13 @@ public class Generator {
 		if(genMode == 2)  // jewel optimization
 		{
 			initJewel(aSet.getRank());
-			//System.out.println(numEffectOpt);
-			//System.out.println(Arrays.toString(skills));
-			//System.out.println(Arrays.toString(effects));
-			//System.out.println(Arrays.toString(triggers));
+			/*
+			System.out.println(numEffectOpt);
+			System.out.println(Arrays.toString(skills));
+			System.out.println(Arrays.toString(effects));
+			System.out.println(Arrays.toString(triggers));
+			System.out.println(aSet.getRank());
+			 */
 			int score = 0;
 			//int progress = 1;
 			Set genSet = new Set();
