@@ -24,7 +24,7 @@ public class Skill {
 		Arrays.fill(effectTrigger, 0);
 		Arrays.fill(effectName, "");
 		Arrays.fill(effectNameJP, "");
-		for(int i = 0; i < 2; i++)
+		for(int i = 0; i < 3; i++)
 		{
 			Arrays.fill(jewelID[i], -1);
 			Arrays.fill(jewelSkillPoint[i], 0);
@@ -43,9 +43,18 @@ public class Skill {
 		int wordIndex = 0;
 		skill.numEffect = 0;
 		String word = "";
+
 		int addJP = 0;
-		if((game == 1) || (game == 3)) //mhp3rd, mh3g
+		boolean addG = false;
+		if(game == 1) //mhp3rd
 			addJP = 1;
+		else if(game == 3) //mh3g
+		{
+			addJP = 1;
+			addG = true;
+		}
+		else if(game == 2) //mhfu, placeholder
+			addG = true;
 
 		while(line != null )
 		{
@@ -73,17 +82,31 @@ public class Skill {
 			else if(wordIndex == 3 + addJP)
 			{
 				// read Skill Class
-				int[] numbers = new int [8];
-				int nMax = 0;
+				if(addG)
+				{
+					int[] numbers = new int [12];
+					int nMax = 0;
 
-				MhagUtil.extractInt(word, nMax, numbers);
-				for ( int i = 0; i < 2; i++)
+					MhagUtil.extractInt(word, nMax, numbers);
+					for ( int i = 0; i < 3; i++)
+						for ( int j = 0; j < 4; j++)
+							skill.maxSkillPoint[i][j] = numbers[i*4+j];
+				}
+				else
+				{
+					int[] numbers = new int [8];
+					int nMax = 0;
+
+					MhagUtil.extractInt(word, nMax, numbers);
+					for ( int i = 0; i < 2; i++)
+						for ( int j = 0; j < 4; j++)
+							skill.maxSkillPoint[i][j] = numbers[i*4+j];
+
+					// g rank data copied from high rank for mhtri and mhp3rd
 					for ( int j = 0; j < 4; j++)
-						skill.maxSkillPoint[i][j] = numbers[i*4+j];
+						skill.maxSkillPoint[2][j] = skill.maxSkillPoint[1][j];
+				}
 
-				// g rank data copied from high rank for mhtri and mhp3rd
-				for ( int j = 0; j < 4; j++)
-					skill.maxSkillPoint[2][j] = skill.maxSkillPoint[1][j];
 
 			}
 			else
