@@ -320,7 +320,7 @@ Yukumo - Sky Hakama   : ユクモノハカマ・天    : B : A : L :  -- : 101 :
 Yukumo - Earth Kasa   : ユクモノカサ・地      : A : A : H :  -- :  57 :  57 : 0 :  0 :  1 :  1 :  3 :  1 : Protection :  2 : Sense :  3 : Precision :  3 : Wide-Range :  2
 Yukumo - Earth Dogi   : ユクモノドウギ・地    : G : A : C :  -- :  57 :  57 : 1 :  0 :  1 :  1 :  3 :  1 : Protection :  2 : Sense :  2 : Precision :  1 : Wide-Range :  2
 Yukumo - Earth Kote   : ユクモノコテ・地      : G : A : A :  -- :  57 :  57 : 2 :  0 :  1 :  1 :  3 :  1 : Protection :  2 : Sense :  1 : Precision :  1 : Wide-Range :  1
-Yukumo - Earth Obi    : ユクモノオビ・地      : G : A : W :  -- :  57 :  57 : 1 :  0 :  1 :  1 :  3 :  1 : Protection :  3 : Sense :  2 : Precision :  3 : Wide-Range :  2
+Yukumo - Earth Obi    : ユクモノオビ・地      : G : A : W :  -- :  57 :  57 : 1 :  0 :  1 :  1 :  3 :  1 : Protection :  2 : Sense :  2 : Precision :  3 : Wide-Range :  2
 Yukumo - Earth Hakama : ユクモノハカマ・地    : G : A : L :  -- :  57 :  57 : 0 :  0 :  1 :  1 :  3 :  1 : Protection :  2 : Sense :  2 : Precision :  2 : Wide-Range :  3
 Chainmail S Helm      : チェーンＳヘルム      : A : A : H :  -- : 101 : 101 : 1 :  2 :  2 :  1 : -3 :  0 : Health :  2 : Combo Rate :  3 : Combo Plus :  3
 Chainmail S Armor     : チェーンＳメイル      : B : A : C :  -- : 101 : 101 : 2 :  2 :  2 :  1 : -3 :  0 : Health :  2 : Combo Rate :  3 : Combo Plus :  1
@@ -405,7 +405,7 @@ Nadeshiko Waist       : 撫子【枝垂】          : B : F : W :  -- : 102 : 10
 Nadeshiko Skirt       : 撫子【球袴】          : B : F : L :  -- : 102 : 102 : 0 :  0 :  0 :  0 :  0 :  0 : Poison : -2 : Wide-Range :  4 : Perception :  2 : Psychic :  3
 Kikyo Cap             : 桔梗【布冠】          : A : F : H :  -- :  58 :  58 : 1 :  1 :  1 :  1 :  1 :  1 : Poison : -2 : Wide-Range :  3 : Perception :  2 : Psychic :  3
 Kikyo Vest            : 桔梗【花衣】          : G : F : C :  -- :  58 :  58 : 0 :  1 :  1 :  1 :  1 :  1 : Poison : -2 : Wide-Range :  3 : Perception :  1 : Psychic :  3
-Kikyo Sleeves         : 桔梗【蕾袖】          : G : F : A :  -- :  58 :  58 : 1 :  1 :  1 :  1 :  1 :  1 : Poison : -2 : Wide-Range :  3 : Perception :  4 : Psychic :  3
+Kikyo Sleeves         : 桔梗【蕾袖】          : G : F : A :  -- :  58 :  58 : 1 :  1 :  1 :  1 :  1 :  1 : Poison : -2 : Wide-Range :  2 : Perception :  4 : Psychic :  3
 Kikyo Waist           : 桔梗【枝垂】          : G : F : W :  -- :  58 :  58 : 1 :  1 :  1 :  1 :  1 :  1 : Poison : -2 : Wide-Range :  4 : Perception :  1 : Psychic :  3
 Kikyo Skirt           : 桔梗【球袴】          : G : F : L :  -- :  58 :  58 : 0 :  1 :  1 :  1 :  1 :  1 : Poison : -2 : Wide-Range :  4 : Perception :  2 : Psychic :  3
 Jaggi S Helm          : ジャギィＳヘルム      : A : A : H :  -- : 101 : 101 : 1 : -4 :  0 :  0 :  0 :  2 : Stun :  4 : Attack :  2 : LastingPwr : -2 : Gluttony :  2
@@ -447,7 +447,7 @@ Baggi S Cap           : バギィＳキャップ      : A : A : H :  -- :  58 : 
 Baggi S Vest          : バギィＳレジスト      : G : A : C :  -- :  58 :  58 : 0 : -3 :  1 :  3 :  1 :  2 : Sleep :  1 : Rec Speed :  2 : Fire Atk : -2 : Ice Atk :  4 : Order :  2
 Baggi S Guards        : バギィＳガード        : G : A : A :  -- :  58 :  58 : 1 : -3 :  1 :  3 :  1 :  2 : Sleep :  2 : Rec Speed :  1 : Fire Atk : -2 : Ice Atk :  3 : Order :  3
 Baggi S Coat          : バギィＳコート        : G : A : W :  -- :  58 :  58 : 2 : -3 :  1 :  3 :  1 :  2 : Sleep :  3 : Rec Speed :  2 : Fire Atk : -2 : Ice Atk :  1 : Order :  1
-Baggi S Leggings      : バギィＳレギンス      : G : A : L :  -- :  58 :  58 : 0 : -3 :  1 :  3 :  1 :  2 : Sleep :  3 : Rec Speed :  3 : Fire Atk : -2 : Ice Atk :  2 : Order :  3
+Baggi S Leggings      : バギィＳレギンス      : G : A : L :  -- :  58 :  58 : 0 : -3 :  1 :  3 :  1 :  2 : Sleep :  3 : Rec Speed :  2 : Fire Atk : -2 : Ice Atk :  2 : Order :  3
 Urkusus S Helm        : ウルクＳヘルム        : A : A : H :  -- : 103 : 103 : 1 : -3 :  0 :  2 : -1 :  0 : Expert :  3 : Heat Res : -2 : Cold Res :  2 : Evade Dist :  2 : LastingPwr :  3
 Urkusus S Mail        : ウルクＳメイル        : B : A : C :  -- : 103 : 103 : 1 : -3 :  0 :  2 : -1 :  0 : Expert :  1 : Heat Res : -2 : Cold Res :  1 : Evade Dist :  3 : LastingPwr :  2
 Urkusus S Vambraces   : ウルクＳアーム        : B : A : A :  -- : 103 : 103 : 1 : -3 :  0 :  2 : -1 :  0 : Expert :  2 : Heat Res : -2 : Cold Res :  3 : Evade Dist :  2 : LastingPwr :  1
@@ -533,7 +533,7 @@ Barroth U Mail        : ボロスＵメイル        : B : A : C :  -- : 105 : 1
 Barroth U Vambraces   : ボロスＵアーム        : B : A : A :  -- : 105 : 105 : 3 : -4 :  1 :  3 : -2 :  0 : Defense :  1 : Fire Atk : -2 : Ice Atk :  2 : Potential :  2
 Barroth U Faulds      : ボロスＵフォールド    : B : A : W :  -- : 105 : 105 : 0 : -4 :  1 :  3 : -2 :  0 : Defense :  4 : Fire Atk : -2 : Ice Atk :  3 : Potential :  4
 Barroth U Greaves     : ボロスＵグリーヴ      : B : A : L :  -- : 105 : 105 : 1 : -4 :  1 :  3 : -2 :  0 : Defense :  3 : Fire Atk : -2 : Ice Atk :  1 : Potential :  3
-Barroth U Cap         : ボロスＵキャップ      : A : A : H :  -- :  59 :  59 : 2 : -3 :  2 :  4 : -1 :  1 : Defense :  2 : Fire Atk : -2 : Ice Atk :  3 : Potential :  3
+Barroth U Cap         : ボロスＵキャップ      : A : A : H :  -- :  59 :  59 : 2 : -3 :  2 :  4 : -1 :  1 : Defense :  3 : Fire Atk : -2 : Ice Atk :  3 : Potential :  2
 Barroth U Vest        : ボロスＵレジスト      : G : A : C :  -- :  59 :  59 : 0 : -3 :  2 :  4 : -1 :  1 : Defense :  4 : Fire Atk : -2 : Ice Atk :  2 : Potential :  3
 Barroth U Guards      : ボロスＵガード        : G : A : A :  -- :  59 :  59 : 3 : -3 :  2 :  4 : -1 :  1 : Defense :  1 : Fire Atk : -2 : Ice Atk :  2 : Potential :  1
 Barroth U Coat        : ボロスＵコート        : G : A : W :  -- :  59 :  59 : 1 : -3 :  2 :  4 : -1 :  1 : Defense :  3 : Fire Atk : -2 : Ice Atk :  2 : Potential :  3
@@ -613,8 +613,8 @@ Gigginox U Mail       : ネブラＵメイル        : B : A : C :  -- : 104 : 1
 Gigginox U Vambraces  : ネブラＵアーム        : B : A : A :  -- : 104 : 104 : 1 :  0 : -5 :  1 :  3 : -1 : FastCharge :  1 : Exhaust :  2 : ThunderAtk :  3 : Ice Atk : -2
 Gigginox U Faulds     : ネブラＵフォールド    : B : A : W :  -- : 104 : 104 : 1 :  0 : -5 :  1 :  3 : -1 : FastCharge :  3 : Exhaust :  2 : ThunderAtk :  2 : Ice Atk : -2
 Gigginox U Greaves    : ネブラＵグリーヴ      : B : A : L :  -- : 104 : 104 : 1 :  0 : -5 :  1 :  3 : -1 : FastCharge :  2 : Exhaust :  3 : ThunderAtk :  2 : Ice Atk : -2
-Gigginox U Cap        : ネブラＵキャップ      : A : A : H :  -- :  59 :  59 : 1 :  1 : -4 :  2 :  4 :  0 : FastCharge :  4 : Exhaust :  2 : ThunderAtk :  3 : Ice Atk : -2
-Gigginox U Vest       : ネブラＵレジスト      : G : A : C :  -- :  59 :  59 : 1 :  1 : -4 :  2 :  4 :  0 : FastCharge :  1 : Exhaust :  1 : ThunderAtk :  1 : Ice Atk : -3
+Gigginox U Cap        : ネブラＵキャップ      : A : A : H :  -- :  59 :  59 : 1 :  1 : -4 :  2 :  4 :  0 : FastCharge :  4 : Exhaust :  2 : ThunderAtk :  3 : Ice Atk : -1
+Gigginox U Vest       : ネブラＵレジスト      : G : A : C :  -- :  59 :  59 : 2 :  1 : -4 :  2 :  4 :  0 : FastCharge :  1 : Exhaust :  1 : ThunderAtk :  1 : Ice Atk : -3
 Gigginox U Guards     : ネブラＵガード        : G : A : A :  -- :  59 :  59 : 1 :  1 : -4 :  2 :  4 :  0 : FastCharge :  1 : Exhaust :  2 : ThunderAtk :  3 : Ice Atk : -2
 Gigginox U Coat       : ネブラＵコート        : G : A : W :  -- :  59 :  59 : 1 :  1 : -4 :  2 :  4 :  0 : FastCharge :  3 : Exhaust :  2 : ThunderAtk :  1 : Ice Atk : -2
 Gigginox U Leggings   : ネブラＵレギンス      : G : A : L :  -- :  59 :  59 : 1 :  1 : -4 :  2 :  4 :  0 : FastCharge :  1 : Exhaust :  3 : ThunderAtk :  2 : Ice Atk : -2
@@ -767,7 +767,7 @@ Diablos S Mail        : ディアブロＳメイル    : B : A : C :  -- : 109 :
 Diablos S Vambraces   : ディアブロＳアーム    : B : A : A :  -- : 109 : 109 : 1 :  3 :  0 : -5 :  0 :  0 : FastCharge :  3 : Expert :  4 : Tremor Res :  1 : Sharpener : -2
 Diablos S Faulds      : ディアブロＳコイル    : B : A : W :  -- : 109 : 109 : 1 :  3 :  0 : -5 :  0 :  0 : FastCharge :  2 : Expert :  4 : Tremor Res :  2 : Sharpener : -2
 Diablos S Greaves     : ディアブロＳグリーヴ  : B : A : L :  -- : 109 : 109 : 2 :  3 :  0 : -5 :  0 :  0 : FastCharge :  1 : Expert :  3 : Tremor Res :  2 : Sharpener : -2
-Diablos S Cap         : ディアブロＳキャップ  : A : A : H :  -- :  61 :  61 : 0 :  4 :  1 : -4 :  1 :  1 : PierceS Up :  2 : Expert :  2 : Tremor Res :  2 : Precision : -2
+Diablos S Cap         : ディアブロＳキャップ  : A : A : H :  -- :  61 :  61 : 1 :  4 :  1 : -4 :  1 :  1 : PierceS Up :  2 : Expert :  2 : Tremor Res :  2 : Precision : -2
 Diablos S Vest        : ディアブロＳレジスト  : G : A : C :  -- :  61 :  61 : 0 :  4 :  1 : -4 :  1 :  1 : Expert :  3 : Tremor Res :  3 : Precision : -2 : PierceS Up :  2
 Diablos S Guards      : ディアブロＳガード    : G : A : A :  -- :  61 :  61 : 1 :  4 :  1 : -4 :  1 :  1 : Expert :  5 : Tremor Res :  1 : Precision : -2 : PierceS Up :  1
 Diablos S Coat        : ディアブロＳコート    : G : A : W :  -- :  61 :  61 : 1 :  4 :  1 : -4 :  1 :  1 : Expert :  2 : Tremor Res :  3 : Precision : -2 : PierceS Up :  3
