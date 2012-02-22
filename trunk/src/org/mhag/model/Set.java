@@ -569,8 +569,12 @@ public class Set {
 		StringBuilder file = new StringBuilder("/mh");
 		if(mhag.getGame() == 0)
 			file.append("tri");
-		else
+		else if(mhag.getGame() == 1)
 			file.append("p3rd");
+		else if(mhag.getGame() == 2)
+			file.append("fu");
+		else if(mhag.getGame() == 3)
+			file.append("trig");
 		file.append("/viewset.htm");
 
 		StringBuilder newCode = new StringBuilder("s=");
