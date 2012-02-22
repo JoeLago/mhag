@@ -62,7 +62,7 @@ public class MhagGui extends javax.swing.JFrame {
 		}
 
 		// set title
-		String title =  "MHAG (Monster Hunter Armor Generator) Desktop 2.2";
+		String title =  "MHAG (Monster Hunter Armor Generator) Desktop 2.2a";
 		if(game == 0)
 			setTitle(title + " for Monster Hunter Tri");
 		else if(game == 1)
@@ -70,7 +70,7 @@ public class MhagGui extends javax.swing.JFrame {
 		else if (game == 2)
 			setTitle(title + " for Monster Hunter Freedom Unite");
 		else if (game == 3)
-			setTitle(title + " for Monster Hunter Tri G (Beta)");
+			setTitle(title + " for Monster Hunter Tri G");
 
 		// set icon
 		setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("pic/logo.png")));
