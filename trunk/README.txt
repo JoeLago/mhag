@@ -47,6 +47,7 @@ History (MHAG Desktop):
 v.2.2a 2/26/2011
    1. a few armor data errors were fixed.
    2. Set URL links were corrected, so it links directed to the new MHAG Online Server for MH3G
+   3. add Sword Saint Earring and Barrage Earring
 v.2.2 2/06/2011
    1. new feature: MH3G support (beta version)  All names were translated except for the material names.  Maximum skill points for talismans were mostly taken from MHP3rd and Japanese Wiki page (www10.atwiki.jp/mh3g/pages/72.html).  Armor names, skill names/points, slot info, resist data were taken from multiple sources and the previous games.  Materials and maximum defense will be checked in the future version, once data are available.
    2. erros (adjust) : guard up jewel skill error (MHP3rd), Coat jewel names changed (MHP3rd & MH3G), some japanese armor names fixed (MHP3rd & MH3G), poison skill effect name (Negate Poison) fixed (all games)

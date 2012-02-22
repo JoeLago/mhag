@@ -1,4 +1,4 @@
-#Armor List (1493)
+#Armor List (1495)
 #Format ^Piece Name : Blade/Gun/All : Male/Female/All : Part(Head/Chest/Arm/Waist/Leg) : LR Defense : HR Defense : GR Defense : # of Slots : Fir Res : Wat Res : Ice Res : Thn Res : Drg Res : Skill 1 : Point 1 : Skill 2 : Point 2 ...
 #In current version defense values are not reliable
 Leather Headgear      : レザーヘッド          : A : A : H :  53 :  53 :  53 : 1 : -1 :  0 :  0 :  0 :  1 : Gathering :  1 : Spd Gather :  2 : Whim :  2
@@ -1494,3 +1494,5 @@ MH Division Jersey    : モンハン部ジャージ    : G : A : C :  -- :  26 :
 Black Leather Legs    : ブラックレザーレグス  : B : A : L :  -- :  51 :  51 : 1 :  2 :  2 :  2 :  2 :  2 : Potential : 10
 Black Leather Pants   : ブラックレザーパンツ  : G : A : L :  -- :  26 :  26 : 1 :  3 :  3 :  3 :  3 :  3 : Potential : 10
 Keroro Mask           : ギロロフェイク        : A : A : H :  -- :  -- :  60 : 0 :  0 :  0 :  0 :  0 :  0 : Bomb Boost : 10 : Guts : 4
+Sword Saint Earring   : 剣聖のピアス          : A : A : H :  -- :  -- :  50 : 0 :  0 :  0 :  0 :  0 :  0 : Fencing : 10
+Barrage Earring       : 増弾のピアス          : A : A : H :  -- :  -- :  30 : 0 :  0 :  0 :  0 :  0 :  0 : Loading : 10
