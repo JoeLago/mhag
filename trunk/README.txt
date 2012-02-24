@@ -44,7 +44,7 @@ System Requirements:
   b. Web browser (Google Chrome, Mozilla Firefox, Safari, Internet Explorer, Opera etc.)
 
 History (MHAG Desktop):
-v.2.2a 2/25/2011
+v.2.2a 2/24/2011
    1. a few armor data errors were fixed.
    2. Set URL links were corrected, so it links directed to the new MHAG Online Server for MH3G
    3. add Sword Saint Earring and Barrage Earring

@@ -1137,7 +1137,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        optLabel.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        optLabel.setFont(new java.awt.Font("Monospaced", 0, 12));
         optLabel.setLabelFor(jComboBoxOpt);
         optLabel.setText("Mode");
         optLabel.setToolTipText("Search method");
@@ -1166,7 +1166,7 @@ public class MhagGui extends javax.swing.JFrame {
         jLabelArmorRank.setToolTipText("Rank of armor pieces");
         jLabelArmorRank.setOpaque(true);
 
-        jComboBoxRank.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jComboBoxRank.setFont(new java.awt.Font("Monospaced", 0, 12));
         jComboBoxRank.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Any", "Low Rank Only", "High Rank Only", "G Rank Only", "No G Rank", "No Low Rank" }));
         jComboBoxRank.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1187,7 +1187,7 @@ public class MhagGui extends javax.swing.JFrame {
         jLabelArmorType.setToolTipText("Hunter type (for full search)");
         jLabelArmorType.setOpaque(true);
 
-        jComboBoxType.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jComboBoxType.setFont(new java.awt.Font("Monospaced", 0, 12));
         jComboBoxType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Melee", "Gunner" }));
         jComboBoxType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1305,7 +1305,7 @@ public class MhagGui extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jButtonSearch.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonSearch.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonSearch.setText("Search");
         jButtonSearch.setToolTipText("Start search");
         jButtonSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -1314,9 +1314,9 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jProgressOpt.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jProgressOpt.setFont(new java.awt.Font("Monospaced", 0, 12));
 
-        loadToCalcGen.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        loadToCalcGen.setFont(new java.awt.Font("Monospaced", 1, 12));
         loadToCalcGen.setText("Load to Calculator");
         loadToCalcGen.setToolTipText("Load the selected set");
         loadToCalcGen.addActionListener(new java.awt.event.ActionListener() {
@@ -1326,7 +1326,7 @@ public class MhagGui extends javax.swing.JFrame {
         });
 
         jListOptSets.setBorder(javax.swing.BorderFactory.createTitledBorder("Search Results"));
-        jListOptSets.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jListOptSets.setFont(new java.awt.Font("Monospaced", 0, 12));
         jListOptSets.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jListOptSets.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
@@ -1335,7 +1335,7 @@ public class MhagGui extends javax.swing.JFrame {
         });
         jScrollOptSets.setViewportView(jListOptSets);
 
-        jButtonAbort.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonAbort.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonAbort.setText("Abort");
         jButtonAbort.setToolTipText("Abort search");
         jButtonAbort.addActionListener(new java.awt.event.ActionListener() {
@@ -1344,7 +1344,7 @@ public class MhagGui extends javax.swing.JFrame {
             }
         });
 
-        jButtonMyCharms.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jButtonMyCharms.setFont(new java.awt.Font("Monospaced", 1, 12));
         jButtonMyCharms.setText("Charms");
         jButtonMyCharms.setToolTipText("Customized charms");
         jButtonMyCharms.addActionListener(new java.awt.event.ActionListener() {
@@ -1414,7 +1414,7 @@ public class MhagGui extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollOptSets, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPreview3, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         jTabbedPane.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;Generator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/generator.png")), generator, ""); // NOI18N
@@ -1614,7 +1614,7 @@ public class MhagGui extends javax.swing.JFrame {
                             .addComponent(codeBook, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(convert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(loadSetInteract)
@@ -1622,7 +1622,7 @@ public class MhagGui extends javax.swing.JFrame {
                             .addComponent(deleteInteract)
                             .addComponent(undoInteract)))
                     .addComponent(jScrollPreview2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         jTabbedPane.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;Viewer</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/viewer.png")), viewer, ""); // NOI18N
