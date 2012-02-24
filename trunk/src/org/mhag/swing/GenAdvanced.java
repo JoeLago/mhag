@@ -5,7 +5,8 @@
  * @author Tifa@mh3
  *
  */
-package org.mhag.model;
+package org.mhag.swing;
+import org.mhag.model.*;
 /**
  *
  * @author lvmy

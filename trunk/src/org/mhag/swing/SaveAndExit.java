@@ -1,4 +1,4 @@
-package org.mhag.model;
+package org.mhag.swing;
 
 /*
  * To change this template, choose Tools | Templates

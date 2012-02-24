@@ -19,7 +19,7 @@ public class MhagData {
 
 	public MhagData()
 	{
-		for (int i = 0; i < CharmDialog.numMax; i++)
+		for (int i = 0; i < nMaxCharm; i++)
 			charmList[i] = new Charm();
 	}
 
@@ -527,9 +527,9 @@ public class MhagData {
 	public void readCharm(int game) 
 	{
 		try {
-			Scanner filein = new Scanner(new File(getDirSave(game) + CharmDialog.fileCharm));
+			Scanner filein = new Scanner(new File(getDirSave(game) + fileCharm));
 
-			int numMax = CharmDialog.numMax;
+			int numMax = nMaxCharm;
 			int ind = 0;
 			while(filein.hasNext())
 			{
@@ -550,7 +550,7 @@ public class MhagData {
 
 	public void readCharmDefault()
 	{
-		int numMax = CharmDialog.numMax;
+		int numMax = nMaxCharm;
 
 		Charm aCharm = new Charm();
 		aCharm.setCharmFromLine("Auto-Guard +10", this);
@@ -1252,6 +1252,10 @@ public class MhagData {
 
 	public boolean getIfItem() {return ifItem;}
 
+	public static int getNMaxCharm() {return nMaxCharm;}
+
+	public static String getFileCharm() {return fileCharm;}
+
 	// Constants for file names
 	private final String[] dirSave = {"mhtri/", "mhp3rd/", "mhfu/", "mh3g/"};
 	private final String fileArmor = "armor.dat";
@@ -1269,23 +1273,26 @@ public class MhagData {
 //	private final String fileRefSkillClass = dirRef+"ref_skill_class.dat";
 	private final String fileCompleteBlade = dirRef+"blade_sets.input";
 	private final String fileCompleteGunner = dirRef+"gunner_sets.input";
+
+  	static String fileCharm = "mycharm.dat";
 	
 	private final int[] maxRank = {1, 1, 2, 2}; //max rank: high for mhtri and mhp3rd, G for mhfu and mh3g
+
+	// Some Constants
+	static String emptyName = "-----";
+	static int nMaxCharm = 255;
 
 	// data
 	private Armor[][] armorList;
 	private Skill[] skillList;
 	private Jewel[] jewelList;
 	private Effect[] effectList;
-	private Charm[] charmList = new Charm[CharmDialog.numMax];
+	private Charm[] charmList = new Charm[nMaxCharm];
 	private int numCharm = 0;
 	private boolean ifItem = true;
 
 	// indeces
 //	private int[][] indexSkillInClass;  // skill id list
 //	private int[] numSkillInClass;  // number skill in class
-
-	// Some Constants
-	static String emptyName = "-----";
 
 }

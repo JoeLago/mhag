@@ -1,4 +1,4 @@
-package org.mhag.model;
+package org.mhag.swing;
 
 import java.awt.Component;
 import java.util.ArrayList;

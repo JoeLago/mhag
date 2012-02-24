@@ -8,7 +8,7 @@
  *
  * Created on Nov 21, 2011, 3:34:10 PM
  */
-package org.mhag.model;
+package org.mhag.swing;
 
 import javax.swing.WindowConstants;
 

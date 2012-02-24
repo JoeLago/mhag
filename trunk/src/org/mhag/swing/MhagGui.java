@@ -1,4 +1,4 @@
-package org.mhag.model;
+package org.mhag.swing;
 
 import java.awt.BorderLayout;
 import java.awt.Cursor;
@@ -28,6 +28,7 @@ import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingWorker;
 import javax.swing.UIManager;
+import org.mhag.model.*;
 
 /**
  * @program MHAG
@@ -73,7 +74,7 @@ public class MhagGui extends javax.swing.JFrame {
 			setTitle(title + " for Monster Hunter Tri G");
 
 		// set icon
-		setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("pic/logo.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/org/mhag/model/pic/logo.png")));
 
 		// align list
 		DefaultListCellRenderer rendererNew = (DefaultListCellRenderer)jListSkillList.getCellRenderer();
@@ -2179,7 +2180,7 @@ public class MhagGui extends javax.swing.JFrame {
 
 	private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
     	initGUISet();
-	    jTextSetName.setText(Set.unNamedSet);
+	    jTextSetName.setText(Set.getDefaultSetName());
 
 		rankMenu.setSelectedIndex(mhagData.getMaxRank(game));
 		//lowRank.setSelected(false);
@@ -2453,7 +2454,7 @@ public class MhagGui extends javax.swing.JFrame {
 
 	public void mainTask(Task task)
 	{
-		setCodeGUI = gen.genMainGui(task, this, set);
+		setCodeGUI = new GenGUI(gen, mhag, mhagData).genMainGui(task, this, set);
 	}
 
 	private void disableGen(boolean ifDisable)
@@ -4040,37 +4041,37 @@ public class MhagGui extends javax.swing.JFrame {
 	// add auto-complete to all applicable jComboBox
 	private void setupAutoCompleteAll()
 	{
-		MhagUtil.setupAutoComplete(skillTree);
-		MhagUtil.setupAutoComplete(skillName);
-		MhagUtil.setupAutoComplete(headMenu);
-		MhagUtil.setupAutoComplete(chestMenu);
-		MhagUtil.setupAutoComplete(armsMenu);
-		MhagUtil.setupAutoComplete(waistMenu);
-		MhagUtil.setupAutoComplete(legsMenu);
-		MhagUtil.setupAutoComplete(weaponSlot1);
-		MhagUtil.setupAutoComplete(weaponSlot2);
-		MhagUtil.setupAutoComplete(weaponSlot3);
-		MhagUtil.setupAutoComplete(headSlot1);
-		MhagUtil.setupAutoComplete(headSlot2);
-		MhagUtil.setupAutoComplete(headSlot3);
-		MhagUtil.setupAutoComplete(chestSlot1);
-		MhagUtil.setupAutoComplete(chestSlot2);
-		MhagUtil.setupAutoComplete(chestSlot3);
-		MhagUtil.setupAutoComplete(armSlot1);
-		MhagUtil.setupAutoComplete(armSlot2);
-		MhagUtil.setupAutoComplete(armSlot3);
-		MhagUtil.setupAutoComplete(waistSlot1);
-		MhagUtil.setupAutoComplete(waistSlot2);
-		MhagUtil.setupAutoComplete(waistSlot3);
-		MhagUtil.setupAutoComplete(legSlot1);
-		MhagUtil.setupAutoComplete(legSlot2);
-		MhagUtil.setupAutoComplete(legSlot3);
-		MhagUtil.setupAutoComplete(charmSlot1);
-		MhagUtil.setupAutoComplete(charmSlot2);
-		MhagUtil.setupAutoComplete(charmSlot3);
-		MhagUtil.setupAutoComplete(charmSlot3);
-		MhagUtil.setupAutoComplete(charmSkill1);
-		MhagUtil.setupAutoComplete(charmSkill2);
+		LAFGUI.setupAutoComplete(skillTree);
+		LAFGUI.setupAutoComplete(skillName);
+		LAFGUI.setupAutoComplete(headMenu);
+		LAFGUI.setupAutoComplete(chestMenu);
+		LAFGUI.setupAutoComplete(armsMenu);
+		LAFGUI.setupAutoComplete(waistMenu);
+		LAFGUI.setupAutoComplete(legsMenu);
+		LAFGUI.setupAutoComplete(weaponSlot1);
+		LAFGUI.setupAutoComplete(weaponSlot2);
+		LAFGUI.setupAutoComplete(weaponSlot3);
+		LAFGUI.setupAutoComplete(headSlot1);
+		LAFGUI.setupAutoComplete(headSlot2);
+		LAFGUI.setupAutoComplete(headSlot3);
+		LAFGUI.setupAutoComplete(chestSlot1);
+		LAFGUI.setupAutoComplete(chestSlot2);
+		LAFGUI.setupAutoComplete(chestSlot3);
+		LAFGUI.setupAutoComplete(armSlot1);
+		LAFGUI.setupAutoComplete(armSlot2);
+		LAFGUI.setupAutoComplete(armSlot3);
+		LAFGUI.setupAutoComplete(waistSlot1);
+		LAFGUI.setupAutoComplete(waistSlot2);
+		LAFGUI.setupAutoComplete(waistSlot3);
+		LAFGUI.setupAutoComplete(legSlot1);
+		LAFGUI.setupAutoComplete(legSlot2);
+		LAFGUI.setupAutoComplete(legSlot3);
+		LAFGUI.setupAutoComplete(charmSlot1);
+		LAFGUI.setupAutoComplete(charmSlot2);
+		LAFGUI.setupAutoComplete(charmSlot3);
+		LAFGUI.setupAutoComplete(charmSlot3);
+		LAFGUI.setupAutoComplete(charmSkill1);
+		LAFGUI.setupAutoComplete(charmSkill2);
 	}
 
 	public void adjustRankMenu()
@@ -4139,7 +4140,7 @@ public class MhagGui extends javax.swing.JFrame {
 
 			try{
 				UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
-				MhagUtil.setupLAF(); //edit metal LAF
+			  	LAFGUI.setupLAF(); //edit metal LAF
 			} catch (Exception e) {System.out.println("error!");}
 
 			ChooseGame chooseGame = new ChooseGame(new javax.swing.JFrame(), true);
@@ -4147,6 +4148,7 @@ public class MhagGui extends javax.swing.JFrame {
 			chooseGame.setVisible(true);   
 
 			MhagGui mhagGui = new MhagGui(chooseGame.getGameOpt());
+			System.out.println("here");
 			chooseGame.dispose();
 
 			try {
