@@ -5,7 +5,7 @@
  * @author Tifa@mh3
  *
  */
-package org.mhag.model;
+package org.mhag.swing;
 
 /**
  *
@@ -19,6 +19,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
+import org.mhag.model.*;
 
 public class CharmDialog extends javax.swing.JDialog {
 
@@ -35,8 +36,8 @@ public class CharmDialog extends javax.swing.JDialog {
 		mhag = aMhag;
 		gen = aGen;
 		charmReload();
-		MhagUtil.setupAutoComplete(charmSkill1);
-		MhagUtil.setupAutoComplete(charmSkill2);
+		LAFGUI.setupAutoComplete(charmSkill1);
+		LAFGUI.setupAutoComplete(charmSkill2);
     }
 
     /** This method is called from within the constructor to
@@ -699,8 +700,9 @@ public class CharmDialog extends javax.swing.JDialog {
 	private int numTot = 0;
 	private DefaultListModel listModel =  new DefaultListModel(); //generator skill list
 	private boolean adjust = false;
-	static String fileCharm = "mycharm.dat";
-	static int numMax = 255;  //maximum number of charms
+
+	private int numMax = MhagData.getNMaxCharm();  //maximum number of charms
+	private String fileCharm = MhagData.getFileCharm();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonAdd;

@@ -1,4 +1,4 @@
-package org.mhag.model;
+package org.mhag.swing;
 
 //Code from: http://www.orbital-computer.de/JComboBox/
 /*

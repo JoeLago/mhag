@@ -2108,6 +2108,11 @@ public class Set {
 	}
 	*/
 
+	public static String getDefaultSetName()
+	{
+		return unNamedSet;
+	}
+
 	//Inputs
 	private String setName = unNamedSet;  // User-defined Set Name
 	private int rank = 2; // lr 0 / hr 1/ gr 2

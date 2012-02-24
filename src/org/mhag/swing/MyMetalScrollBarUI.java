@@ -1,4 +1,4 @@
-package org.mhag.model;
+package org.mhag.swing;
 
 import java.awt.Color;
 import java.awt.Graphics;
