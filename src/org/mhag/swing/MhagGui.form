@@ -126,13 +126,13 @@
                           <Group type="102" attributes="0">
                               <Component id="output" min="-2" pref="57" max="-2" attributes="1"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="sex" min="-2" pref="80" max="-2" attributes="1"/>
-                                  <Component id="rank" min="-2" max="-2" attributes="1"/>
-                                  <Component id="hunterType" min="-2" pref="80" max="-2" attributes="1"/>
-                                  <Component id="setNamePanel" min="-2" max="-2" attributes="1"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="setNamePanel" max="32767" attributes="1"/>
+                                  <Component id="rank" alignment="0" max="32767" attributes="1"/>
+                                  <Component id="hunterType" alignment="0" pref="84" max="32767" attributes="1"/>
+                                  <Component id="sex" alignment="0" max="32767" attributes="1"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace pref="12" max="32767" attributes="0"/>
                               <Component id="setup" min="-2" pref="345" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -174,7 +174,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="rankMenu" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="19" max="32767" attributes="0"/>
+                          <EmptySpace pref="20" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -292,6 +292,7 @@
                           <Component id="male" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="female" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1234,7 +1235,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jTextSetName" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="24" max="32767" attributes="0"/>
+                          <EmptySpace pref="25" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1368,7 +1369,7 @@
                           </Group>
                           <Component id="jScrollPreview3" alignment="0" min="-2" pref="535" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace pref="25" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2131,7 +2132,7 @@
                                   <Component id="convert" min="-2" max="-2" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" pref="437" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" pref="435" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="loadSetInteract" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2142,7 +2143,7 @@
                           </Group>
                           <Component id="jScrollPreview2" alignment="0" min="-2" pref="535" max="-2" attributes="1"/>
                       </Group>
-                      <EmptySpace pref="29" max="32767" attributes="0"/>
+                      <EmptySpace pref="26" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
