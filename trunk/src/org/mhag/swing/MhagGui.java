@@ -270,7 +270,7 @@ public class MhagGui extends javax.swing.JFrame {
             .addGroup(rankLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(rankMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         hunterType.setBorder(javax.swing.BorderFactory.createTitledBorder("Hunter Type"));
@@ -351,7 +351,8 @@ public class MhagGui extends javax.swing.JFrame {
             .addGroup(sexLayout.createSequentialGroup()
                 .addComponent(male)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(female))
+                .addComponent(female)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         setup.setBorder(javax.swing.BorderFactory.createTitledBorder("Setup"));
@@ -887,7 +888,7 @@ public class MhagGui extends javax.swing.JFrame {
             .addGroup(setNamePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTextSetName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         buttonLink.setFont(new java.awt.Font("Monospaced", 1, 12));
@@ -951,12 +952,12 @@ public class MhagGui extends javax.swing.JFrame {
                     .addGroup(calculatorLayout.createSequentialGroup()
                         .addComponent(output, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(sex, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rank, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(hunterType, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(setNamePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(setNamePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rank, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(hunterType, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
+                            .addComponent(sex, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                         .addComponent(setup, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1414,7 +1415,7 @@ public class MhagGui extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollOptSets, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPreview3, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jTabbedPane.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;Generator</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/generator.png")), generator, ""); // NOI18N
@@ -1614,7 +1615,7 @@ public class MhagGui extends javax.swing.JFrame {
                             .addComponent(codeBook, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(convert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(viewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(loadSetInteract)
@@ -1622,7 +1623,7 @@ public class MhagGui extends javax.swing.JFrame {
                             .addComponent(deleteInteract)
                             .addComponent(undoInteract)))
                     .addComponent(jScrollPreview2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         jTabbedPane.addTab("<html><body><table width=\"100\">&nbsp;&nbsp;&nbsp;Viewer</table></body></html>", new javax.swing.ImageIcon(getClass().getResource("/org/mhag/model/pic/viewer.png")), viewer, ""); // NOI18N
