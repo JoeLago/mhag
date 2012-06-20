@@ -45,7 +45,7 @@ System Requirements:
 
 History (MHAG Desktop):
 v.2.2a 2/24/2011
-   1. a few armor data errors were fixed.
+   1. a few armor data errors were fixed. (Credit to Vuze from mh3g wetpaint site)
    2. Set URL links were corrected, so it links directed to the new MHAG Online Server for MH3G
    3. add Sword Saint Earring and Barrage Earring
    4. mhag model code is seperated from swing code (for future mobile port)

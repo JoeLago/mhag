@@ -530,14 +530,14 @@ Ludroth S Vest        : ルドロスＳレジスト      : G : A : C :  -- :  41
 Ludroth S Guards      : ルドロスＳガード        : G : A : A :  -- :  41 : 1 : -2 :  4 : -1 : -1 :  2 : Stamina :  2 : Stun :  4 : ThunderAtk : -3 : Water Atk :  2
 Ludroth S Coat        : ルドロスＳコート        : G : A : W :  -- :  41 : 2 : -2 :  4 : -1 : -1 :  2 : Stamina :  2 : Stun :  3 : ThunderAtk : -2 : Water Atk :  2
 Ludroth S Leggings    : ルドロスＳレギンス      : G : A : L :  -- :  41 : 1 : -2 :  4 : -1 : -1 :  2 : Stamina :  1 : KO   :  4 : ThunderAtk : -2 : Water Atk :  4
-Vaiku S Helm          : ヴァイクＳヘルム        : A : A : H :  -- :  70 : 2 :  0 :  3 : -2 : -2 :  0 : Sheathe :  3 : Sharpness :  3 : Sharpener : -2 : Water Res :  1
-Vaiku S Mail          : ヴァイクＳメイル        : B : A : C :  -- :  70 : 2 :  0 :  3 : -2 : -2 :  0 : Sheathe :  1 : Sharpness :  1 : Sharpener : -1 : Water Res :  4
-Vaiku S Vambraces     : ヴァイクＳアーム        : B : A : A :  -- :  70 : 1 :  0 :  3 : -2 : -2 :  0 : Sheathe :  3 : Sharpness :  3 : Sharpener : -1 : Water Res :  4
+Vaiku S Helm          : ヴァイクＳヘルム        : A : A : H :  -- :  70 : 2 :  0 :  3 : -2 : -2 :  0 : Sheathe :  3 : Sharpness :  3 : Sharpener : -2 : Water Atk :  1
+Vaiku S Mail          : ヴァイクＳメイル        : B : A : C :  -- :  70 : 2 :  0 :  3 : -2 : -2 :  0 : Sheathe :  1 : Sharpness :  1 : Sharpener : -1 : Water Atk :  4
+Vaiku S Vambraces     : ヴァイクＳアーム        : B : A : A :  -- :  70 : 1 :  0 :  3 : -2 : -2 :  0 : Sheathe :  3 : Sharpness :  3 : Sharpener : -1 : Water Atk :  4
 Vaiku S Faulds        : ヴァイクＳフォールド    : B : A : W :  -- :  70 : 1 :  0 :  3 : -2 : -2 :  0 : Sheathe :  1 : Sharpness :  2 : Sharpener : -3 : Rec Speed :  5
 Vaiku S Greaves       : ヴァイクＳグリーヴ      : B : A : L :  -- :  70 : 2 :  0 :  3 : -2 : -2 :  0 : Sheathe :  2 : Sharpness :  1 : Sharpener : -3 : Rec Speed :  3
-Vaiku S Cap           : ヴァイクＳキャップ      : A : A : H :  -- :  41 : 2 :  0 :  5 : -4 : -1 :  0 : Sheathe :  4 : NormalS Up :  3 : Reload Spd : -2 : Water Res :  2
-Vaiku S Vest          : ヴァイクＳレジスト      : G : A : C :  -- :  41 : 2 :  0 :  5 : -4 : -1 :  0 : Sheathe :  1 : NormalS Up :  1 : Reload Spd : -2 : Water Res :  3
-Vaiku S Guards        : ヴァイクＳガード        : G : A : A :  -- :  41 : 1 :  0 :  5 : -4 : -1 :  0 : Sheathe :  1 : NormalS Up :  4 : Reload Spd : -2 : Water Res :  4
+Vaiku S Cap           : ヴァイクＳキャップ      : A : A : H :  -- :  41 : 2 :  0 :  5 : -4 : -1 :  0 : Sheathe :  4 : NormalS Up :  3 : Reload Spd : -2 : Water Atk :  2
+Vaiku S Vest          : ヴァイクＳレジスト      : G : A : C :  -- :  41 : 2 :  0 :  5 : -4 : -1 :  0 : Sheathe :  1 : NormalS Up :  1 : Reload Spd : -2 : Water Atk :  3
+Vaiku S Guards        : ヴァイクＳガード        : G : A : A :  -- :  41 : 1 :  0 :  5 : -4 : -1 :  0 : Sheathe :  1 : NormalS Up :  4 : Reload Spd : -2 : Water Atk :  4
 Vaiku S Coat          : ヴァイクＳコート        : G : A : W :  -- :  41 : 1 :  0 :  5 : -4 : -1 :  0 : Sheathe :  3 : NormalS Up :  2 : Reload Spd : -1 : Rec Speed :  5
 Vaiku S Leggings      : ヴァイクＳレギンス      : G : A : L :  -- :  41 : 2 :  0 :  5 : -4 : -1 :  0 : Sheathe :  2 : NormalS Up :  1 : Reload Spd : -3 : Rec Speed :  3
 Nadeshiko Cap         : 撫子【布冠】            : A : F : H :  -- :  70 : 1 :  0 :  0 :  0 :  0 :  0 : Wide-Range :  4 : Psychic :  2 : Perception :  2 : Poison : -3
