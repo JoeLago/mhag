@@ -412,8 +412,9 @@ public class MhagData {
 			{
 				String lineItem = inItem.nextLine();
 				int startPos = MhagUtil.extractWordPos(lineItem, 0) + 1;
+			        int endPos = MhagUtil.extractWordPos(lineItem, startPos);
 				jewelList[jewelIndex].setItem(
-					MhagUtil.extractWord(lineItem, startPos, -1));
+					MhagUtil.extractWord(lineItem, startPos, endPos));
 			}
 
 			jewelIndex++;
@@ -507,8 +508,9 @@ public class MhagData {
 			{
 				String lineItem = inItem.nextLine();
 				int startPos = MhagUtil.extractWordPos(lineItem, 0) + 1;
+			        int endPos = MhagUtil.extractWordPos(lineItem, startPos);
 				armorList[nBodyPart][armorIndex[nBodyPart]].setItem(
-					MhagUtil.extractWord(lineItem, startPos, -1));
+					MhagUtil.extractWord(lineItem, startPos, endPos));
 			}
 
 			if(ioErr != 0)
@@ -1280,7 +1282,7 @@ public class MhagData {
 
 	// Some Constants
 	static String emptyName = "-----";
-	static int nMaxCharm = 255;
+	static int nMaxCharm = 5000;
 
 	// data
 	private Armor[][] armorList;
