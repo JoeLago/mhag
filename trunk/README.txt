@@ -1,5 +1,5 @@
 MHAG: Monster Hunter Armor Generator 
-Desktop 2.2a
+Desktop 2.3
 Author : Tifa@mh3, Gondor
 MHAG Project: code.google.com/mhag
 
@@ -28,7 +28,7 @@ Features:
 4. Support Games
    a. Monster Hunter Tri (Wii)
    b. Monster Hunter Portable 3rd (PSP/PS3)
-   c. (Beta) Monster Hunter Tri G (3DS)
+   c. Monster Hunter 3 Ultimate (3DS/Wii U)
    d. (future) Monster Hunter Freedom Unite (PSP)*
 
 (Notes)
@@ -44,6 +44,10 @@ System Requirements:
   b. Web browser (Google Chrome, Mozilla Firefox, Safari, Internet Explorer, Opera etc.)
 
 History (MHAG Desktop):
+v.2.3 7/21/2011
+   1. Overwrite translations for MH3G to the  MH3U data 
+   2. Add Jhen G and Ala G armor
+   3. Maximum number of Charms is now 5000
 v.2.2a 2/24/2011
    1. a few armor data errors were fixed. (Credit to Vuze from mh3g wetpaint site)
    2. Set URL links were corrected, so it links directed to the new MHAG Online Server for MH3G

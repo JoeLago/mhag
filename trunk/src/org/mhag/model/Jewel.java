@@ -132,6 +132,7 @@ public class Jewel {
 	public String getJewelNameShort()
 	{
 		int pos = jewelName.indexOf("Jewel");
+		if(pos == -1) pos = jewelName.indexOf("Jwl");
 		String jewelShort = jewelName.substring(0, pos - 1).trim();
 
 		if(jewelName.indexOf("+") != -1)

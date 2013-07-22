@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
@@ -24,6 +24,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <Events>
     <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowClosing"/>
@@ -124,15 +125,15 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="output" min="-2" pref="57" max="-2" attributes="1"/>
+                              <Component id="output" min="-2" max="-2" attributes="1"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="setNamePanel" max="32767" attributes="1"/>
                                   <Component id="rank" alignment="0" max="32767" attributes="1"/>
-                                  <Component id="hunterType" alignment="0" pref="84" max="32767" attributes="1"/>
+                                  <Component id="hunterType" alignment="0" max="32767" attributes="1"/>
                                   <Component id="sex" alignment="0" max="32767" attributes="1"/>
                               </Group>
-                              <EmptySpace pref="12" max="32767" attributes="0"/>
+                              <EmptySpace pref="26" max="32767" attributes="0"/>
                               <Component id="setup" min="-2" pref="345" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -143,7 +144,7 @@
                           </Group>
                           <Component id="jScrollPreview" alignment="0" min="-2" pref="535" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="30" max="32767" attributes="0"/>
+                      <EmptySpace pref="45" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -292,7 +293,7 @@
                           <Component id="male" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="female" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="8" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -434,7 +435,7 @@
                                   <Component id="charmSkill2" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="skillPoint2" min="-2" pref="60" max="-2" attributes="0"/>
-                                  <EmptySpace pref="44" max="32767" attributes="0"/>
+                                  <EmptySpace pref="49" max="32767" attributes="0"/>
                                   <Component id="materials" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -523,7 +524,7 @@
                               <Component id="skillPoint2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               <Component id="materials" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="12" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1113,7 +1114,7 @@
                               <Component id="langMenu" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               <Component id="aboutButton" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="8" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1190,8 +1191,8 @@
               <SubComponents>
                 <Component class="javax.swing.JTextArea" name="jTextPreview">
                   <Properties>
-                    <Property name="columns" type="int" value="20"/>
                     <Property name="editable" type="boolean" value="false"/>
+                    <Property name="columns" type="int" value="20"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Monospaced" size="12" style="0"/>
                     </Property>
@@ -1310,7 +1311,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="optionPanel" min="-2" pref="419" max="-2" attributes="0"/>
+                              <Component id="optionPanel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
@@ -1334,7 +1335,7 @@
                           <Component id="jScrollOptSets" min="-2" pref="623" max="-2" attributes="1"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jScrollPreview3" pref="604" max="32767" attributes="0"/>
+                      <Component id="jScrollPreview3" pref="594" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1369,7 +1370,7 @@
                           </Group>
                           <Component id="jScrollPreview3" alignment="0" min="-2" pref="535" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                      <EmptySpace pref="58" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1392,8 +1393,8 @@
               <SubComponents>
                 <Component class="javax.swing.JTextArea" name="jTextPreview3">
                   <Properties>
-                    <Property name="columns" type="int" value="20"/>
                     <Property name="editable" type="boolean" value="false"/>
+                    <Property name="columns" type="int" value="20"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Monospaced" size="12" style="0"/>
                     </Property>
@@ -1711,7 +1712,7 @@
                                   <Component id="jCheckBoxGun" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="9" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2104,14 +2105,14 @@
                               <Component id="deleteInteract" min="-2" pref="135" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="undoInteract" min="-2" pref="135" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jScrollPane1" alignment="0" pref="645" max="32767" attributes="1"/>
+                                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="1"/>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="codeBook" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="31" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                       <Component id="convert" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -2132,7 +2133,7 @@
                                   <Component id="convert" min="-2" max="-2" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" pref="435" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" pref="451" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="loadSetInteract" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2143,7 +2144,7 @@
                           </Group>
                           <Component id="jScrollPreview2" alignment="0" min="-2" pref="535" max="-2" attributes="1"/>
                       </Group>
-                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <EmptySpace pref="43" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2166,8 +2167,8 @@
               <SubComponents>
                 <Component class="javax.swing.JTextArea" name="jTextPreview2">
                   <Properties>
-                    <Property name="columns" type="int" value="20"/>
                     <Property name="editable" type="boolean" value="false"/>
+                    <Property name="columns" type="int" value="20"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Monospaced" size="12" style="0"/>
                     </Property>
