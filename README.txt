@@ -1,5 +1,5 @@
 MHAG: Monster Hunter Armor Generator 
-Desktop 2.3
+Desktop 2.3a
 Author : Tifa@mh3, Gondor
 MHAG Project: code.google.com/mhag
 
@@ -44,7 +44,9 @@ System Requirements:
   b. Web browser (Google Chrome, Mozilla Firefox, Safari, Internet Explorer, Opera etc.)
 
 History (MHAG Desktop):
-v.2.3 7/21/2011
+v.2.3a 8/23/2013
+   1. Error: data for the Grand Yamoto Set.
+v.2.3 7/21/2013
    1. Overwrite translations for MH3G to the  MH3U data 
    2. Add Jhen G and Ala G armor
    3. Maximum number of Charms is now 5000
