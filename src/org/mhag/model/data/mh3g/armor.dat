@@ -1496,11 +1496,11 @@ Black Leather Pants   : ブラックレザーパンツ  : G : A : L :  -- :  16 
 Keroro Mask           : ギロロフェイク        : A : A : H :  -- :  -- :  60 : 0 :  0 :  0 :  0 :  0 :  0 : Bomb Boost : 10 : Guts : 4
 Sword Saint Earring   : 剣聖のピアス          : A : A : H :  -- :  -- :  50 : 0 :  0 :  0 :  0 :  0 :  0 : Fencing : 10
 Barrage Earring       : 増弾のピアス          : A : A : H :  -- :  -- :  30 : 0 :  0 :  0 :  0 :  0 :  0 : Loading : 10
-Grand Yamato Kabuto/Grand Hyuga Hachigane       : 大和・真【兜】/日向・真【鉢金】         : A : A : H :  -- :  -- : 120 : 0 : -7 :  3 :  3 : -2 : -2 : Health :  4 : Stamina : -2 : Sharpness :  3 : Handicraft :  3
-Grand Yamato Doate/Grand Hyuga Muneate          : 大和・真【胴当て】/日向・真【胸当て】   : B : A : C :  -- :  -- : 120 : 3 : -7 :  3 :  3 : -2 : -2 : Health :  1 : Stamina : -2 : Sharpness :  1 : Handicraft :  1
-Grand Yamato Kote/Grand Hyuga Kote              : 大和・真【篭手】/日向・真【篭手】       : B : A : A :  -- :  -- : 120 : 0 : -7 :  3 :  3 : -2 : -2 : Health :  4 : Stamina : -2 : Sharpness :  3 : Handicraft :  2
-Grand Yamato Koshiate/Grand Hyuga Koshiate      : 大和・真【腰当て】/日向・真【腰当て】   : B : A : W :  -- :  -- : 120 : 3 : -7 :  3 :  3 : -2 : -2 : Health :  3 : Stamina : -2 : Sharpness :  1 : Handicraft :  2
-Grand Yamato Gusoku/Grand Hyuga Hakama          : 大和・真【具足】/日向・真【袴】         : B : A : L :  -- :  -- : 120 : 2 : -7 :  3 :  3 : -2 : -2 : Health :  3 : Stamina : -2 : Sharpness :  2 : Handicraft :  2
+Grand Yamato Kabuto/Grand Hyuga Hachigane       : 大和・真【兜】/日向・真【鉢金】         : A : A : H :  -- :  -- : 120 : 0 :  4 :  1 : -5 :  0 : -5 : Unshakable :  1 : Potential : -2 : Fencing :  1 : FastCharge :  2
+Grand Yamato Doate/Grand Hyuga Muneate          : 大和・真【胴当て】/日向・真【胸当て】   : B : A : C :  -- :  -- : 120 : 3 :  4 :  1 : -5 :  0 : -5 : Unshakable :  2 : Potential : -2 : Fencing :  1 : FastCharge :  1 : Unscathed :  2
+Grand Yamato Kote/Grand Hyuga Kote              : 大和・真【篭手】/日向・真【篭手】       : B : A : A :  -- :  -- : 120 : 0 :  4 :  1 : -5 :  0 : -5 : Unshakable :  2 : Potential : -2 : Fencing :  2 : FastCharge :  2 : Crit Draw :  2
+Grand Yamato Koshiate/Grand Hyuga Koshiate      : 大和・真【腰当て】/日向・真【腰当て】   : B : A : W :  -- :  -- : 120 : 3 :  4 :  1 : -5 :  0 : -5 : Unshakable :  2 : Potential : -2 : Fencing :  4 : FastCharge :  4 : Handicraft :  2
+Grand Yamato Gusoku/Grand Hyuga Hakama          : 大和・真【具足】/日向・真【袴】         : B : A : L :  -- :  -- : 120 : 2 :  4 :  1 : -5 :  0 : -5 : Unshakable :  3 : Potential : -2 : Fencing :  2 : FastCharge :  1
 Grand Mutsu Eboshi/Grand Amagi Jingasa           : 陸奥・真【烏帽子】/天城・真【陣笠】     : A : A : H :  -- :  -- :  66 : 0 :  5 :  2 : -4 :  1 : -4 : Unshakable :  2 : Pierce Up :  1 : Reload Speed : -2 : Recoil :  3
 Grand Mutsu Doate/Grand Amagi Muneate            : 陸奥・真【胴当て】/天城・真【胸当て】   : G : A : C :  -- :  -- :  66 : 3 :  5 :  2 : -4 :  1 : -4 : Unshakable :  1 : Pierce Up :  3 : Reload Speed : -2 : Recoil :  1 : FreeElemnt :  2
 Grand Mutsu Kote/Grand Amagi Kote                : 陸奥・真【篭手】/天城・真【篭手】       : G : A : A :  -- :  -- :  66 : 0 :  5 :  2 : -4 :  1 : -4 : Unshakable :  2 : Pierce Up :  1 : Reload Speed : -2 : Recoil :  2 : Loading :  2
