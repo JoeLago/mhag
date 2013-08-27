@@ -1,5 +1,5 @@
 MHAG: Monster Hunter Armor Generator 
-Desktop 2.3a
+Desktop 2.3b
 Author : Tifa@mh3, Gondor
 MHAG Project: code.google.com/mhag
 
@@ -44,6 +44,8 @@ System Requirements:
   b. Web browser (Google Chrome, Mozilla Firefox, Safari, Internet Explorer, Opera etc.)
 
 History (MHAG Desktop):
+v.2.3b 8/27/2013
+   1. Error: Reload Spd skill for the Grand Mutsu Set.
 v.2.3a 8/23/2013
    1. Error: data for the Grand Yamoto Set.
 v.2.3 7/21/2013

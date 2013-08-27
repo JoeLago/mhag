@@ -153,7 +153,7 @@ public class Mhag
 	{
 		if(logOpt == 2)return;
 		outLog.println(Output.splitter1);
-		outLog.println("MHAG: ver 2.3a");
+		outLog.println("MHAG: ver 2.3b");
 		outLog.println("Monster Hunter Armor Generator");
 		outLog.println("By Tifa@mh3, Aug 2013");
 		outLog.println("http://www.youtube.com/mh3journey");
