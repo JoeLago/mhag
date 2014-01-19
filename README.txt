@@ -44,6 +44,8 @@ System Requirements:
   b. Web browser (Google Chrome, Mozilla Firefox, Safari, Internet Explorer, Opera etc.)
 
 History (MHAG Desktop):
+v.2.3c 1/19/2014
+   1. Error: Slots for the Grand Yamoto Set.
 v.2.3b 8/27/2013
    1. Error: Reload Spd skill for the Grand Mutsu Set.
 v.2.3a 8/23/2013

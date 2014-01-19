@@ -63,7 +63,7 @@ public class MhagGui extends javax.swing.JFrame {
 		}
 
 		// set title
-		String title =  "MHAG (Monster Hunter Armor Generator) Desktop 2.3b";
+		String title =  "MHAG (Monster Hunter Armor Generator) Desktop 2.3c";
 		if(game == 0)
 			setTitle(title + " for Monster Hunter Tri");
 		else if(game == 1)
