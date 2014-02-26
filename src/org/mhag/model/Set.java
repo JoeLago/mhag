@@ -575,6 +575,8 @@ public class Set {
 			file.append("fu");
 		else if(mhag.getGame() == 3)
 			file.append("trig");
+        else if(mhag.getGame() == 4)
+			file.append("4");
 		file.append("/viewset.htm");
 
 		StringBuilder newCode = new StringBuilder("s=");

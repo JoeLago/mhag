@@ -123,6 +123,7 @@ public class MhagData {
 			}
 			skillIndex++;
 		}
+        System.out.println("check skills");
 
 	}
 
@@ -517,7 +518,7 @@ public class MhagData {
 			{
 				MhagUtil.logLine(mhag,
 					"Error Found in Armor File");
-				return;
+				//return;
 			}
 			armorIndex[nBodyPart]++;
 
@@ -1196,6 +1197,10 @@ public class MhagData {
 		return indFinal;
 	}
 
+    public Skill[] getSkillList() {
+        return skillList;
+    }
+
 	// get skill (effect) list based on skill type
 	public int[] getEffectList(int id)
 	{
@@ -1218,6 +1223,10 @@ public class MhagData {
 
 		return ind;
 	}
+    
+    public Effect[] getEffectList() {
+        return effectList;
+    }
 
 	/*
 	public int[] getCharmList(boolean lowRank)
@@ -1259,7 +1268,7 @@ public class MhagData {
 	public static String getFileCharm() {return fileCharm;}
 
 	// Constants for file names
-	private final String[] dirSave = {"mhtri/", "mhp3rd/", "mhfu/", "mh3g/"};
+	private final String[] dirSave = {"mhtri/", "mhp3rd/", "mhfu/", "mh3g/", "mh4/"};
 	private final String fileArmor = "armor.dat";
 	private final String fileJewel = "jewel.dat";
 	private final String fileSkill = "skill.dat";
@@ -1278,7 +1287,7 @@ public class MhagData {
 
   	static String fileCharm = "mycharm.dat";
 	
-	private final int[] maxRank = {1, 1, 2, 2}; //max rank: high for mhtri and mhp3rd, G for mhfu and mh3g
+	private final int[] maxRank = {1, 1, 2, 2, 1}; //max rank: high for mhtri and mhp3rd, G for mhfu and mh3g
 
 	// Some Constants
 	static String emptyName = "-----";
