@@ -173,7 +173,7 @@ Stopflow Jewel : 抑水珠 : H : 2 : CurrentRes : 3 : Wind Res : -1
 Swimmer Jewel : 水泳珠 : L : 1 : Swimming : 1 : Oxygen : -1
 Diver Jewel : 遠泳珠 : H : 1 : Swimming : 2 : Oxygen : -1
 Fish Jewel : 水心珠 : G : 1 : Sea Legs : 1 : Stamina : -1
-Fish Jewel : 水心珠 : G : 2 : Water God : 3 : Stamina : -1
+Fish Jewel : 水心珠 : G : 2 : Sea Legs : 3 : Stamina : -1
 Potential Jwl : 底力珠 : L : 1 : Potential : 1 : Protection : -1
 Potential Jwl : 底力珠 : G : 2 : Potential : 3 : Protection : -1
 Fortitude Jwl : 逆境珠 : L : 1 : Survivor : 1 : Rec Level : -1
