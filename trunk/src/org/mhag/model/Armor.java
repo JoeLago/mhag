@@ -82,6 +82,8 @@ public class Armor {
 		}
 		else if(game == 2) //mhfu
 			addDef = 1;
+        else if(game == 4) //mhfu
+            addJP = 1;
 
 		while(line != null )
 		{
@@ -303,8 +305,13 @@ public class Armor {
 			pos = armorName.lastIndexOf(" ");
 			if(armorName.contains("+"))
 				return  armorName.substring(0, pos).trim() + "+ Set";
-			else
-				return  armorName.substring(0, pos).trim() + " Set";
+			else {
+                try {
+                    return armorName.substring(0, pos).trim() + " Set";
+                } catch (Exception e) {
+                    return armorName;
+                }
+            }
 		}
 		else
 		{

@@ -15,10 +15,10 @@ public class Skill {
 
 	public Skill()
 	{
-		effectID = new int[6];
-		effectTrigger = new int[6];
-		effectName = new String[6];
-		effectNameJP = new String[6];
+		effectID = new int[7];
+		effectTrigger = new int[7];
+		effectName = new String[7];
+		effectNameJP = new String[7];
 
 		Arrays.fill(effectID, 0);
 		Arrays.fill(effectTrigger, 0);
@@ -55,6 +55,8 @@ public class Skill {
 		}
 		else if(game == 2) //mhfu, placeholder
 			addG = true;
+        else if (game == 4)
+            addJP = 1;
 
 		while(line != null )
 		{
@@ -114,7 +116,7 @@ public class Skill {
 				// read effects name/trigger points
 
 				if(endPos == -1)return 1; //error no skill point
-				if(skill.numEffect == 6)return 1; // effect <= 6
+				if(skill.numEffect == 7)return 1; // effect <= 6
 
 
 				// read effects
@@ -274,7 +276,7 @@ public class Skill {
 	private int skillType = 0; // 1 - 7
 	private int[][] maxSkillPoint = new int [3][4]; //max point (1st index: low rank 0, high rank 1, g rank 2)
 							// 2nd index: 0 - 3 slots
-	private int numEffect = 0;  // # Effects , 6 max, 3 pos ,3 neg
+	private int numEffect = 0;  // # Effects , 6 max, 3 pos ,3 neg now 7
 	private String[] effectName;   // Effect Name
 	private String[] effectNameJP;   // Effect Name japanese name
 	private int[] effectID;   // Effect IDs
